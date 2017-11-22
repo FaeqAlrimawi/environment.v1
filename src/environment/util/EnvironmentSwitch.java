@@ -6,6 +6,7 @@ import environment.AccessControlDevice;
 import environment.Actor;
 import environment.Application;
 import environment.Asset;
+import environment.Building;
 import environment.CCTV;
 import environment.ComputingDevice;
 import environment.Connection;
@@ -16,6 +17,7 @@ import environment.DigitalConnection;
 import environment.EnvironmentDiagram;
 import environment.EnvironmentPackage;
 import environment.File;
+import environment.Floor;
 import environment.HVAC;
 import environment.Intangible;
 import environment.Intellectual;
@@ -305,6 +307,24 @@ public class EnvironmentSwitch<T> extends Switch<T> {
 				if (result == null) result = casePhysicalStructure(room);
 				if (result == null) result = caseTangible(room);
 				if (result == null) result = caseAsset(room);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case EnvironmentPackage.FLOOR: {
+				Floor floor = (Floor)theEObject;
+				T result = caseFloor(floor);
+				if (result == null) result = casePhysicalStructure(floor);
+				if (result == null) result = caseTangible(floor);
+				if (result == null) result = caseAsset(floor);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case EnvironmentPackage.BUILDING: {
+				Building building = (Building)theEObject;
+				T result = caseBuilding(building);
+				if (result == null) result = casePhysicalStructure(building);
+				if (result == null) result = caseTangible(building);
+				if (result == null) result = caseAsset(building);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -729,6 +749,36 @@ public class EnvironmentSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseRoom(Room object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Floor</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Floor</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFloor(Floor object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Building</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Building</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseBuilding(Building object) {
 		return null;
 	}
 

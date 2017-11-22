@@ -247,6 +247,24 @@ public interface EnvironmentFactory extends EFactory {
 	Room createRoom();
 
 	/**
+	 * Returns a new object of class '<em>Floor</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Floor</em>'.
+	 * @generated
+	 */
+	Floor createFloor();
+
+	/**
+	 * Returns a new object of class '<em>Building</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Building</em>'.
+	 * @generated
+	 */
+	Building createBuilding();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

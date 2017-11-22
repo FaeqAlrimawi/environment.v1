@@ -3083,6 +3083,224 @@ public interface EnvironmentPackage extends EPackage {
 	int ROOM_OPERATION_COUNT = PHYSICAL_STRUCTURE_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link environment.impl.FloorImpl <em>Floor</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see environment.impl.FloorImpl
+	 * @see environment.impl.EnvironmentPackageImpl#getFloor()
+	 * @generated
+	 */
+	int FLOOR = 28;
+
+	/**
+	 * The feature id for the '<em><b>Connections</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FLOOR__CONNECTIONS = PHYSICAL_STRUCTURE__CONNECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FLOOR__NAME = PHYSICAL_STRUCTURE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Property</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FLOOR__PROPERTY = PHYSICAL_STRUCTURE__PROPERTY;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FLOOR__VALUE = PHYSICAL_STRUCTURE__VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Rules</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FLOOR__RULES = PHYSICAL_STRUCTURE__RULES;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FLOOR__TYPE = PHYSICAL_STRUCTURE__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FLOOR__DESCRIPTION = PHYSICAL_STRUCTURE__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FLOOR__CONTAINED_ASSETS = PHYSICAL_STRUCTURE__CONTAINED_ASSETS;
+
+	/**
+	 * The feature id for the '<em><b>Parent Asset</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FLOOR__PARENT_ASSET = PHYSICAL_STRUCTURE__PARENT_ASSET;
+
+	/**
+	 * The number of structural features of the '<em>Floor</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FLOOR_FEATURE_COUNT = PHYSICAL_STRUCTURE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Floor</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FLOOR_OPERATION_COUNT = PHYSICAL_STRUCTURE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link environment.impl.BuildingImpl <em>Building</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see environment.impl.BuildingImpl
+	 * @see environment.impl.EnvironmentPackageImpl#getBuilding()
+	 * @generated
+	 */
+	int BUILDING = 29;
+
+	/**
+	 * The feature id for the '<em><b>Connections</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUILDING__CONNECTIONS = PHYSICAL_STRUCTURE__CONNECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUILDING__NAME = PHYSICAL_STRUCTURE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Property</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUILDING__PROPERTY = PHYSICAL_STRUCTURE__PROPERTY;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUILDING__VALUE = PHYSICAL_STRUCTURE__VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Rules</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUILDING__RULES = PHYSICAL_STRUCTURE__RULES;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUILDING__TYPE = PHYSICAL_STRUCTURE__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUILDING__DESCRIPTION = PHYSICAL_STRUCTURE__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUILDING__CONTAINED_ASSETS = PHYSICAL_STRUCTURE__CONTAINED_ASSETS;
+
+	/**
+	 * The feature id for the '<em><b>Parent Asset</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUILDING__PARENT_ASSET = PHYSICAL_STRUCTURE__PARENT_ASSET;
+
+	/**
+	 * The number of structural features of the '<em>Building</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUILDING_FEATURE_COUNT = PHYSICAL_STRUCTURE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Building</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUILDING_OPERATION_COUNT = PHYSICAL_STRUCTURE_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link environment.Status <em>Status</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3090,7 +3308,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @see environment.impl.EnvironmentPackageImpl#getStatus()
 	 * @generated
 	 */
-	int STATUS = 28;
+	int STATUS = 30;
 
 	/**
 	 * The meta object id for the '{@link environment.ProcessStatus <em>Process Status</em>}' enum.
@@ -3100,7 +3318,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @see environment.impl.EnvironmentPackageImpl#getProcessStatus()
 	 * @generated
 	 */
-	int PROCESS_STATUS = 29;
+	int PROCESS_STATUS = 31;
 
 	/**
 	 * The meta object id for the '{@link environment.FileStatus <em>File Status</em>}' enum.
@@ -3110,7 +3328,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @see environment.impl.EnvironmentPackageImpl#getFileStatus()
 	 * @generated
 	 */
-	int FILE_STATUS = 30;
+	int FILE_STATUS = 32;
 
 
 	/**
@@ -3944,6 +4162,26 @@ public interface EnvironmentPackage extends EPackage {
 	EClass getRoom();
 
 	/**
+	 * Returns the meta object for class '{@link environment.Floor <em>Floor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Floor</em>'.
+	 * @see environment.Floor
+	 * @generated
+	 */
+	EClass getFloor();
+
+	/**
+	 * Returns the meta object for class '{@link environment.Building <em>Building</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Building</em>'.
+	 * @see environment.Building
+	 * @generated
+	 */
+	EClass getBuilding();
+
+	/**
 	 * Returns the meta object for enum '{@link environment.Status <em>Status</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4675,6 +4913,26 @@ public interface EnvironmentPackage extends EPackage {
 		 * @generated
 		 */
 		EClass ROOM = eINSTANCE.getRoom();
+
+		/**
+		 * The meta object literal for the '{@link environment.impl.FloorImpl <em>Floor</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see environment.impl.FloorImpl
+		 * @see environment.impl.EnvironmentPackageImpl#getFloor()
+		 * @generated
+		 */
+		EClass FLOOR = eINSTANCE.getFloor();
+
+		/**
+		 * The meta object literal for the '{@link environment.impl.BuildingImpl <em>Building</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see environment.impl.BuildingImpl
+		 * @see environment.impl.EnvironmentPackageImpl#getBuilding()
+		 * @generated
+		 */
+		EClass BUILDING = eINSTANCE.getBuilding();
 
 		/**
 		 * The meta object literal for the '{@link environment.Status <em>Status</em>}' enum.

@@ -6,6 +6,7 @@ import environment.AccessControlDevice;
 import environment.Actor;
 import environment.Application;
 import environment.Asset;
+import environment.Building;
 import environment.CCTV;
 import environment.ComputingDevice;
 import environment.Connection;
@@ -16,6 +17,7 @@ import environment.DigitalConnection;
 import environment.EnvironmentDiagram;
 import environment.EnvironmentPackage;
 import environment.File;
+import environment.Floor;
 import environment.HVAC;
 import environment.Intangible;
 import environment.Intellectual;
@@ -205,6 +207,14 @@ public class EnvironmentAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseRoom(Room object) {
 				return createRoomAdapter();
+			}
+			@Override
+			public Adapter caseFloor(Floor object) {
+				return createFloorAdapter();
+			}
+			@Override
+			public Adapter caseBuilding(Building object) {
+				return createBuildingAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -615,6 +625,34 @@ public class EnvironmentAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createRoomAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link environment.Floor <em>Floor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see environment.Floor
+	 * @generated
+	 */
+	public Adapter createFloorAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link environment.Building <em>Building</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see environment.Building
+	 * @generated
+	 */
+	public Adapter createBuildingAdapter() {
 		return null;
 	}
 

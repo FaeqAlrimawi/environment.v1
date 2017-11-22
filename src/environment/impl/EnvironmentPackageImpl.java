@@ -6,6 +6,7 @@ import environment.AccessControlDevice;
 import environment.Actor;
 import environment.Application;
 import environment.Asset;
+import environment.Building;
 import environment.ComputingDevice;
 import environment.Connection;
 import environment.Credential;
@@ -17,6 +18,7 @@ import environment.EnvironmentFactory;
 import environment.EnvironmentPackage;
 import environment.File;
 import environment.FileStatus;
+import environment.Floor;
 import environment.Intangible;
 import environment.Intellectual;
 import environment.Laptop;
@@ -243,6 +245,20 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 	 * @generated
 	 */
 	private EClass roomEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass floorEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass buildingEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1033,6 +1049,24 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getFloor() {
+		return floorEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getBuilding() {
+		return buildingEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getStatus() {
 		return statusEEnum;
 	}
@@ -1189,6 +1223,10 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 
 		roomEClass = createEClass(ROOM);
 
+		floorEClass = createEClass(FLOOR);
+
+		buildingEClass = createEClass(BUILDING);
+
 		// Create enums
 		statusEEnum = createEEnum(STATUS);
 		processStatusEEnum = createEEnum(PROCESS_STATUS);
@@ -1243,6 +1281,8 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 		intellectualEClass.getESuperTypes().add(this.getIntangible());
 		accessControlDeviceEClass.getESuperTypes().add(this.getComputingDevice());
 		roomEClass.getESuperTypes().add(this.getPhysicalStructure());
+		floorEClass.getESuperTypes().add(this.getPhysicalStructure());
+		buildingEClass.getESuperTypes().add(this.getPhysicalStructure());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(tangibleEClass, Tangible.class, "Tangible", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1350,6 +1390,10 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 		initEReference(getType_SuperType(), this.getType(), null, "superType", null, 0, -1, Type.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(roomEClass, Room.class, "Room", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(floorEClass, Floor.class, "Floor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(buildingEClass, Building.class, "Building", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals
 		initEEnum(statusEEnum, Status.class, "Status");

@@ -135,4 +135,6 @@
         eType="#//Type" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Room" eSuperTypes="#//PhysicalStructure"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Floor" eSuperTypes="#//PhysicalStructure"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Building" eSuperTypes="#//PhysicalStructure"/>
 </ecore:EPackage>

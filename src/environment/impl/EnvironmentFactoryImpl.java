@@ -5,6 +5,7 @@ package environment.impl;
 import environment.AccessControlDevice;
 import environment.Actor;
 import environment.Application;
+import environment.Building;
 import environment.CCTV;
 import environment.ComputingDevice;
 import environment.Credential;
@@ -16,6 +17,7 @@ import environment.EnvironmentFactory;
 import environment.EnvironmentPackage;
 import environment.File;
 import environment.FileStatus;
+import environment.Floor;
 import environment.HVAC;
 import environment.Intellectual;
 import environment.Laptop;
@@ -110,6 +112,8 @@ public class EnvironmentFactoryImpl extends EFactoryImpl implements EnvironmentF
 			case EnvironmentPackage.ACCESS_CONTROL_DEVICE: return createAccessControlDevice();
 			case EnvironmentPackage.TYPE: return createType();
 			case EnvironmentPackage.ROOM: return createRoom();
+			case EnvironmentPackage.FLOOR: return createFloor();
+			case EnvironmentPackage.BUILDING: return createBuilding();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -401,6 +405,26 @@ public class EnvironmentFactoryImpl extends EFactoryImpl implements EnvironmentF
 	public Room createRoom() {
 		RoomImpl room = new RoomImpl();
 		return room;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Floor createFloor() {
+		FloorImpl floor = new FloorImpl();
+		return floor;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Building createBuilding() {
+		BuildingImpl building = new BuildingImpl();
+		return building;
 	}
 
 	/**
