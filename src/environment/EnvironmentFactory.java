@@ -220,15 +220,6 @@ public interface EnvironmentFactory extends EFactory {
 	Rule createRule();
 
 	/**
-	 * Returns a new object of class '<em>Access Control Device</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Access Control Device</em>'.
-	 * @generated
-	 */
-	AccessControlDevice createAccessControlDevice();
-
-	/**
 	 * Returns a new object of class '<em>Type</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

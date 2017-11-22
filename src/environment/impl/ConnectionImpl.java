@@ -7,8 +7,6 @@ import environment.Connection;
 import environment.EnvironmentPackage;
 import environment.Port;
 import environment.Property;
-import environment.Rule;
-
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -40,7 +38,6 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link environment.impl.ConnectionImpl#getConstraints <em>Constraints</em>}</li>
  *   <li>{@link environment.impl.ConnectionImpl#isIsBidirectional <em>Is Bidirectional</em>}</li>
  *   <li>{@link environment.impl.ConnectionImpl#getPort <em>Port</em>}</li>
- *   <li>{@link environment.impl.ConnectionImpl#getRules <em>Rules</em>}</li>
  *   <li>{@link environment.impl.ConnectionImpl#getProperties <em>Properties</em>}</li>
  *   <li>{@link environment.impl.ConnectionImpl#getDescription <em>Description</em>}</li>
  * </ul>
@@ -147,16 +144,6 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 	 * @ordered
 	 */
 	protected Port port;
-
-	/**
-	 * The cached value of the '{@link #getRules() <em>Rules</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRules()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Rule> rules;
 
 	/**
 	 * The cached value of the '{@link #getProperties() <em>Properties</em>}' reference list.
@@ -406,18 +393,6 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Rule> getRules() {
-		if (rules == null) {
-			rules = new EObjectResolvingEList<Rule>(Rule.class, this, EnvironmentPackage.CONNECTION__RULES);
-		}
-		return rules;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EList<Property> getProperties() {
 		if (properties == null) {
 			properties = new EObjectResolvingEList<Property>(Property.class, this, EnvironmentPackage.CONNECTION__PROPERTIES);
@@ -484,8 +459,6 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 				return isIsBidirectional();
 			case EnvironmentPackage.CONNECTION__PORT:
 				return getPort();
-			case EnvironmentPackage.CONNECTION__RULES:
-				return getRules();
 			case EnvironmentPackage.CONNECTION__PROPERTIES:
 				return getProperties();
 			case EnvironmentPackage.CONNECTION__DESCRIPTION:
@@ -524,10 +497,6 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 				return;
 			case EnvironmentPackage.CONNECTION__PORT:
 				setPort((Port)newValue);
-				return;
-			case EnvironmentPackage.CONNECTION__RULES:
-				getRules().clear();
-				getRules().addAll((Collection<? extends Rule>)newValue);
 				return;
 			case EnvironmentPackage.CONNECTION__PROPERTIES:
 				getProperties().clear();
@@ -569,9 +538,6 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 			case EnvironmentPackage.CONNECTION__PORT:
 				setPort((Port)null);
 				return;
-			case EnvironmentPackage.CONNECTION__RULES:
-				getRules().clear();
-				return;
 			case EnvironmentPackage.CONNECTION__PROPERTIES:
 				getProperties().clear();
 				return;
@@ -604,8 +570,6 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 				return isBidirectional != IS_BIDIRECTIONAL_EDEFAULT;
 			case EnvironmentPackage.CONNECTION__PORT:
 				return port != null;
-			case EnvironmentPackage.CONNECTION__RULES:
-				return rules != null && !rules.isEmpty();
 			case EnvironmentPackage.CONNECTION__PROPERTIES:
 				return properties != null && !properties.isEmpty();
 			case EnvironmentPackage.CONNECTION__DESCRIPTION:

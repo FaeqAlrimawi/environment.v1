@@ -19,7 +19,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link environment.Asset#getName <em>Name</em>}</li>
  *   <li>{@link environment.Asset#getProperty <em>Property</em>}</li>
  *   <li>{@link environment.Asset#getValue <em>Value</em>}</li>
- *   <li>{@link environment.Asset#getRules <em>Rules</em>}</li>
  *   <li>{@link environment.Asset#getType <em>Type</em>}</li>
  *   <li>{@link environment.Asset#getDescription <em>Description</em>}</li>
  * </ul>
@@ -112,22 +111,6 @@ public interface Asset extends EObject {
 	 * @generated
 	 */
 	void setValue(int value);
-
-	/**
-	 * Returns the value of the '<em><b>Rules</b></em>' reference list.
-	 * The list contents are of type {@link environment.Rule}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Rules</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Rules</em>' reference list.
-	 * @see environment.EnvironmentPackage#getAsset_Rules()
-	 * @model
-	 * @generated
-	 */
-	EList<Rule> getRules();
 
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' containment reference list.

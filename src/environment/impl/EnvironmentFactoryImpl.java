@@ -2,7 +2,6 @@
  */
 package environment.impl;
 
-import environment.AccessControlDevice;
 import environment.Actor;
 import environment.Application;
 import environment.Building;
@@ -109,7 +108,6 @@ public class EnvironmentFactoryImpl extends EFactoryImpl implements EnvironmentF
 			case EnvironmentPackage.PHYSICAL_STRUCTURE: return createPhysicalStructure();
 			case EnvironmentPackage.INTELLECTUAL: return createIntellectual();
 			case EnvironmentPackage.RULE: return createRule();
-			case EnvironmentPackage.ACCESS_CONTROL_DEVICE: return createAccessControlDevice();
 			case EnvironmentPackage.TYPE: return createType();
 			case EnvironmentPackage.ROOM: return createRoom();
 			case EnvironmentPackage.FLOOR: return createFloor();
@@ -375,16 +373,6 @@ public class EnvironmentFactoryImpl extends EFactoryImpl implements EnvironmentF
 	public Rule createRule() {
 		RuleImpl rule = new RuleImpl();
 		return rule;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public AccessControlDevice createAccessControlDevice() {
-		AccessControlDeviceImpl accessControlDevice = new AccessControlDeviceImpl();
-		return accessControlDevice;
 	}
 
 	/**

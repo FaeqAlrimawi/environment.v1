@@ -104,22 +104,13 @@ public interface EnvironmentPackage extends EPackage {
 	int ASSET__VALUE = 3;
 
 	/**
-	 * The feature id for the '<em><b>Rules</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSET__RULES = 4;
-
-	/**
 	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ASSET__TYPE = 5;
+	int ASSET__TYPE = 4;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -128,7 +119,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSET__DESCRIPTION = 6;
+	int ASSET__DESCRIPTION = 5;
 
 	/**
 	 * The number of structural features of the '<em>Asset</em>' class.
@@ -137,7 +128,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSET_FEATURE_COUNT = 7;
+	int ASSET_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>Asset</em>' class.
@@ -193,15 +184,6 @@ public interface EnvironmentPackage extends EPackage {
 	 * @ordered
 	 */
 	int TANGIBLE__VALUE = ASSET__VALUE;
-
-	/**
-	 * The feature id for the '<em><b>Rules</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TANGIBLE__RULES = ASSET__RULES;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
@@ -302,15 +284,6 @@ public interface EnvironmentPackage extends EPackage {
 	 * @ordered
 	 */
 	int COMPUTING_DEVICE__VALUE = TANGIBLE__VALUE;
-
-	/**
-	 * The feature id for the '<em><b>Rules</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPUTING_DEVICE__RULES = TANGIBLE__RULES;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
@@ -440,15 +413,6 @@ public interface EnvironmentPackage extends EPackage {
 	int HVAC__VALUE = COMPUTING_DEVICE__VALUE;
 
 	/**
-	 * The feature id for the '<em><b>Rules</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HVAC__RULES = COMPUTING_DEVICE__RULES;
-
-	/**
 	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -574,15 +538,6 @@ public interface EnvironmentPackage extends EPackage {
 	 * @ordered
 	 */
 	int SMART_LIGHT__VALUE = COMPUTING_DEVICE__VALUE;
-
-	/**
-	 * The feature id for the '<em><b>Rules</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SMART_LIGHT__RULES = COMPUTING_DEVICE__RULES;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
@@ -712,15 +667,6 @@ public interface EnvironmentPackage extends EPackage {
 	int LAPTOP__VALUE = COMPUTING_DEVICE__VALUE;
 
 	/**
-	 * The feature id for the '<em><b>Rules</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LAPTOP__RULES = COMPUTING_DEVICE__RULES;
-
-	/**
 	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -846,15 +792,6 @@ public interface EnvironmentPackage extends EPackage {
 	 * @ordered
 	 */
 	int DESKTOP__VALUE = COMPUTING_DEVICE__VALUE;
-
-	/**
-	 * The feature id for the '<em><b>Rules</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DESKTOP__RULES = COMPUTING_DEVICE__RULES;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
@@ -984,15 +921,6 @@ public interface EnvironmentPackage extends EPackage {
 	int CCTV__VALUE = COMPUTING_DEVICE__VALUE;
 
 	/**
-	 * The feature id for the '<em><b>Rules</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CCTV__RULES = COMPUTING_DEVICE__RULES;
-
-	/**
 	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1118,15 +1046,6 @@ public interface EnvironmentPackage extends EPackage {
 	 * @ordered
 	 */
 	int SERVER__VALUE = COMPUTING_DEVICE__VALUE;
-
-	/**
-	 * The feature id for the '<em><b>Rules</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVER__RULES = COMPUTING_DEVICE__RULES;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
@@ -1256,15 +1175,6 @@ public interface EnvironmentPackage extends EPackage {
 	int INTANGIBLE__VALUE = ASSET__VALUE;
 
 	/**
-	 * The feature id for the '<em><b>Rules</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INTANGIBLE__RULES = ASSET__RULES;
-
-	/**
 	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1365,15 +1275,6 @@ public interface EnvironmentPackage extends EPackage {
 	int DIGITAL__VALUE = INTANGIBLE__VALUE;
 
 	/**
-	 * The feature id for the '<em><b>Rules</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DIGITAL__RULES = INTANGIBLE__RULES;
-
-	/**
 	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1472,15 +1373,6 @@ public interface EnvironmentPackage extends EPackage {
 	 * @ordered
 	 */
 	int FILE__VALUE = DIGITAL__VALUE;
-
-	/**
-	 * The feature id for the '<em><b>Rules</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FILE__RULES = DIGITAL__RULES;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
@@ -1601,15 +1493,6 @@ public interface EnvironmentPackage extends EPackage {
 	int PROCESS__VALUE = DIGITAL__VALUE;
 
 	/**
-	 * The feature id for the '<em><b>Rules</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROCESS__RULES = DIGITAL__RULES;
-
-	/**
 	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1717,15 +1600,6 @@ public interface EnvironmentPackage extends EPackage {
 	 * @ordered
 	 */
 	int APPLICATION__VALUE = DIGITAL__VALUE;
-
-	/**
-	 * The feature id for the '<em><b>Rules</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APPLICATION__RULES = DIGITAL__RULES;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
@@ -1873,22 +1747,13 @@ public interface EnvironmentPackage extends EPackage {
 	int CONNECTION__PORT = 6;
 
 	/**
-	 * The feature id for the '<em><b>Rules</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONNECTION__RULES = 7;
-
-	/**
 	 * The feature id for the '<em><b>Properties</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION__PROPERTIES = 8;
+	int CONNECTION__PROPERTIES = 7;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1897,7 +1762,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION__DESCRIPTION = 9;
+	int CONNECTION__DESCRIPTION = 8;
 
 	/**
 	 * The number of structural features of the '<em>Connection</em>' class.
@@ -1906,7 +1771,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_FEATURE_COUNT = 10;
+	int CONNECTION_FEATURE_COUNT = 9;
 
 	/**
 	 * The number of operations of the '<em>Connection</em>' class.
@@ -1989,15 +1854,6 @@ public interface EnvironmentPackage extends EPackage {
 	 * @ordered
 	 */
 	int DIGITAL_CONNECTION__PORT = CONNECTION__PORT;
-
-	/**
-	 * The feature id for the '<em><b>Rules</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DIGITAL_CONNECTION__RULES = CONNECTION__RULES;
 
 	/**
 	 * The feature id for the '<em><b>Properties</b></em>' reference list.
@@ -2107,15 +1963,6 @@ public interface EnvironmentPackage extends EPackage {
 	 * @ordered
 	 */
 	int PHYSICAL_CONNECTION__PORT = CONNECTION__PORT;
-
-	/**
-	 * The feature id for the '<em><b>Rules</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PHYSICAL_CONNECTION__RULES = CONNECTION__RULES;
 
 	/**
 	 * The feature id for the '<em><b>Properties</b></em>' reference list.
@@ -2438,15 +2285,6 @@ public interface EnvironmentPackage extends EPackage {
 	int ACTOR__VALUE = TANGIBLE__VALUE;
 
 	/**
-	 * The feature id for the '<em><b>Rules</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTOR__RULES = TANGIBLE__RULES;
-
-	/**
 	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2556,15 +2394,6 @@ public interface EnvironmentPackage extends EPackage {
 	int PHYSICAL_STRUCTURE__VALUE = TANGIBLE__VALUE;
 
 	/**
-	 * The feature id for the '<em><b>Rules</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PHYSICAL_STRUCTURE__RULES = TANGIBLE__RULES;
-
-	/**
 	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2663,15 +2492,6 @@ public interface EnvironmentPackage extends EPackage {
 	 * @ordered
 	 */
 	int INTELLECTUAL__VALUE = INTANGIBLE__VALUE;
-
-	/**
-	 * The feature id for the '<em><b>Rules</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INTELLECTUAL__RULES = INTANGIBLE__RULES;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
@@ -2792,142 +2612,6 @@ public interface EnvironmentPackage extends EPackage {
 	int RULE_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link environment.impl.AccessControlDeviceImpl <em>Access Control Device</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see environment.impl.AccessControlDeviceImpl
-	 * @see environment.impl.EnvironmentPackageImpl#getAccessControlDevice()
-	 * @generated
-	 */
-	int ACCESS_CONTROL_DEVICE = 25;
-
-	/**
-	 * The feature id for the '<em><b>Connections</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACCESS_CONTROL_DEVICE__CONNECTIONS = COMPUTING_DEVICE__CONNECTIONS;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACCESS_CONTROL_DEVICE__NAME = COMPUTING_DEVICE__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Property</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACCESS_CONTROL_DEVICE__PROPERTY = COMPUTING_DEVICE__PROPERTY;
-
-	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACCESS_CONTROL_DEVICE__VALUE = COMPUTING_DEVICE__VALUE;
-
-	/**
-	 * The feature id for the '<em><b>Rules</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACCESS_CONTROL_DEVICE__RULES = COMPUTING_DEVICE__RULES;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACCESS_CONTROL_DEVICE__TYPE = COMPUTING_DEVICE__TYPE;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACCESS_CONTROL_DEVICE__DESCRIPTION = COMPUTING_DEVICE__DESCRIPTION;
-
-	/**
-	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACCESS_CONTROL_DEVICE__CONTAINED_ASSETS = COMPUTING_DEVICE__CONTAINED_ASSETS;
-
-	/**
-	 * The feature id for the '<em><b>Parent Asset</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACCESS_CONTROL_DEVICE__PARENT_ASSET = COMPUTING_DEVICE__PARENT_ASSET;
-
-	/**
-	 * The feature id for the '<em><b>Status</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACCESS_CONTROL_DEVICE__STATUS = COMPUTING_DEVICE__STATUS;
-
-	/**
-	 * The feature id for the '<em><b>Can Connect</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACCESS_CONTROL_DEVICE__CAN_CONNECT = COMPUTING_DEVICE__CAN_CONNECT;
-
-	/**
-	 * The feature id for the '<em><b>Model</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACCESS_CONTROL_DEVICE__MODEL = COMPUTING_DEVICE__MODEL;
-
-	/**
-	 * The number of structural features of the '<em>Access Control Device</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACCESS_CONTROL_DEVICE_FEATURE_COUNT = COMPUTING_DEVICE_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Access Control Device</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACCESS_CONTROL_DEVICE_OPERATION_COUNT = COMPUTING_DEVICE_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link environment.impl.TypeImpl <em>Type</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2935,7 +2619,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @see environment.impl.EnvironmentPackageImpl#getType()
 	 * @generated
 	 */
-	int TYPE = 26;
+	int TYPE = 25;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2981,7 +2665,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @see environment.impl.EnvironmentPackageImpl#getRoom()
 	 * @generated
 	 */
-	int ROOM = 27;
+	int ROOM = 26;
 
 	/**
 	 * The feature id for the '<em><b>Connections</b></em>' reference list.
@@ -3018,15 +2702,6 @@ public interface EnvironmentPackage extends EPackage {
 	 * @ordered
 	 */
 	int ROOM__VALUE = PHYSICAL_STRUCTURE__VALUE;
-
-	/**
-	 * The feature id for the '<em><b>Rules</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM__RULES = PHYSICAL_STRUCTURE__RULES;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
@@ -3090,7 +2765,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @see environment.impl.EnvironmentPackageImpl#getFloor()
 	 * @generated
 	 */
-	int FLOOR = 28;
+	int FLOOR = 27;
 
 	/**
 	 * The feature id for the '<em><b>Connections</b></em>' reference list.
@@ -3127,15 +2802,6 @@ public interface EnvironmentPackage extends EPackage {
 	 * @ordered
 	 */
 	int FLOOR__VALUE = PHYSICAL_STRUCTURE__VALUE;
-
-	/**
-	 * The feature id for the '<em><b>Rules</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FLOOR__RULES = PHYSICAL_STRUCTURE__RULES;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
@@ -3199,7 +2865,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @see environment.impl.EnvironmentPackageImpl#getBuilding()
 	 * @generated
 	 */
-	int BUILDING = 29;
+	int BUILDING = 28;
 
 	/**
 	 * The feature id for the '<em><b>Connections</b></em>' reference list.
@@ -3236,15 +2902,6 @@ public interface EnvironmentPackage extends EPackage {
 	 * @ordered
 	 */
 	int BUILDING__VALUE = PHYSICAL_STRUCTURE__VALUE;
-
-	/**
-	 * The feature id for the '<em><b>Rules</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BUILDING__RULES = PHYSICAL_STRUCTURE__RULES;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
@@ -3308,7 +2965,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @see environment.impl.EnvironmentPackageImpl#getStatus()
 	 * @generated
 	 */
-	int STATUS = 30;
+	int STATUS = 29;
 
 	/**
 	 * The meta object id for the '{@link environment.ProcessStatus <em>Process Status</em>}' enum.
@@ -3318,7 +2975,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @see environment.impl.EnvironmentPackageImpl#getProcessStatus()
 	 * @generated
 	 */
-	int PROCESS_STATUS = 31;
+	int PROCESS_STATUS = 30;
 
 	/**
 	 * The meta object id for the '{@link environment.FileStatus <em>File Status</em>}' enum.
@@ -3328,7 +2985,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @see environment.impl.EnvironmentPackageImpl#getFileStatus()
 	 * @generated
 	 */
-	int FILE_STATUS = 32;
+	int FILE_STATUS = 31;
 
 
 	/**
@@ -3649,17 +3306,6 @@ public interface EnvironmentPackage extends EPackage {
 	EReference getConnection_Port();
 
 	/**
-	 * Returns the meta object for the reference list '{@link environment.Connection#getRules <em>Rules</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Rules</em>'.
-	 * @see environment.Connection#getRules()
-	 * @see #getConnection()
-	 * @generated
-	 */
-	EReference getConnection_Rules();
-
-	/**
 	 * Returns the meta object for the reference list '{@link environment.Connection#getProperties <em>Properties</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3754,17 +3400,6 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getAsset_Value();
-
-	/**
-	 * Returns the meta object for the reference list '{@link environment.Asset#getRules <em>Rules</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Rules</em>'.
-	 * @see environment.Asset#getRules()
-	 * @see #getAsset()
-	 * @generated
-	 */
-	EReference getAsset_Rules();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link environment.Asset#getType <em>Type</em>}'.
@@ -4108,16 +3743,6 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getRule_Description();
-
-	/**
-	 * Returns the meta object for class '{@link environment.AccessControlDevice <em>Access Control Device</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Access Control Device</em>'.
-	 * @see environment.AccessControlDevice
-	 * @generated
-	 */
-	EClass getAccessControlDevice();
 
 	/**
 	 * Returns the meta object for class '{@link environment.Type <em>Type</em>}'.
@@ -4501,14 +4126,6 @@ public interface EnvironmentPackage extends EPackage {
 		EReference CONNECTION__PORT = eINSTANCE.getConnection_Port();
 
 		/**
-		 * The meta object literal for the '<em><b>Rules</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CONNECTION__RULES = eINSTANCE.getConnection_Rules();
-
-		/**
 		 * The meta object literal for the '<em><b>Properties</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4585,14 +4202,6 @@ public interface EnvironmentPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ASSET__VALUE = eINSTANCE.getAsset_Value();
-
-		/**
-		 * The meta object literal for the '<em><b>Rules</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ASSET__RULES = eINSTANCE.getAsset_Rules();
 
 		/**
 		 * The meta object literal for the '<em><b>Type</b></em>' containment reference list feature.
@@ -4867,16 +4476,6 @@ public interface EnvironmentPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute RULE__DESCRIPTION = eINSTANCE.getRule_Description();
-
-		/**
-		 * The meta object literal for the '{@link environment.impl.AccessControlDeviceImpl <em>Access Control Device</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see environment.impl.AccessControlDeviceImpl
-		 * @see environment.impl.EnvironmentPackageImpl#getAccessControlDevice()
-		 * @generated
-		 */
-		EClass ACCESS_CONTROL_DEVICE = eINSTANCE.getAccessControlDevice();
 
 		/**
 		 * The meta object literal for the '{@link environment.impl.TypeImpl <em>Type</em>}' class.

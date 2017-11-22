@@ -2,7 +2,6 @@
  */
 package environment.util;
 
-import environment.AccessControlDevice;
 import environment.Actor;
 import environment.Application;
 import environment.Asset;
@@ -283,15 +282,6 @@ public class EnvironmentSwitch<T> extends Switch<T> {
 			case EnvironmentPackage.RULE: {
 				Rule rule = (Rule)theEObject;
 				T result = caseRule(rule);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case EnvironmentPackage.ACCESS_CONTROL_DEVICE: {
-				AccessControlDevice accessControlDevice = (AccessControlDevice)theEObject;
-				T result = caseAccessControlDevice(accessControlDevice);
-				if (result == null) result = caseComputingDevice(accessControlDevice);
-				if (result == null) result = caseTangible(accessControlDevice);
-				if (result == null) result = caseAsset(accessControlDevice);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -704,21 +694,6 @@ public class EnvironmentSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseRule(Rule object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Access Control Device</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Access Control Device</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseAccessControlDevice(AccessControlDevice object) {
 		return null;
 	}
 

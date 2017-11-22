@@ -6,7 +6,6 @@ import environment.Asset;
 import environment.Connection;
 import environment.EnvironmentPackage;
 import environment.Property;
-import environment.Rule;
 import environment.Type;
 
 import java.util.Collection;
@@ -38,7 +37,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link environment.impl.AssetImpl#getName <em>Name</em>}</li>
  *   <li>{@link environment.impl.AssetImpl#getProperty <em>Property</em>}</li>
  *   <li>{@link environment.impl.AssetImpl#getValue <em>Value</em>}</li>
- *   <li>{@link environment.impl.AssetImpl#getRules <em>Rules</em>}</li>
  *   <li>{@link environment.impl.AssetImpl#getType <em>Type</em>}</li>
  *   <li>{@link environment.impl.AssetImpl#getDescription <em>Description</em>}</li>
  * </ul>
@@ -105,16 +103,6 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 	 * @ordered
 	 */
 	protected int value = VALUE_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getRules() <em>Rules</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRules()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Rule> rules;
 
 	/**
 	 * The cached value of the '{@link #getType() <em>Type</em>}' containment reference list.
@@ -236,18 +224,6 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Rule> getRules() {
-		if (rules == null) {
-			rules = new EObjectResolvingEList<Rule>(Rule.class, this, EnvironmentPackage.ASSET__RULES);
-		}
-		return rules;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EList<Type> getType() {
 		if (type == null) {
 			type = new EObjectContainmentEList<Type>(Type.class, this, EnvironmentPackage.ASSET__TYPE);
@@ -308,8 +284,6 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 				return getProperty();
 			case EnvironmentPackage.ASSET__VALUE:
 				return getValue();
-			case EnvironmentPackage.ASSET__RULES:
-				return getRules();
 			case EnvironmentPackage.ASSET__TYPE:
 				return getType();
 			case EnvironmentPackage.ASSET__DESCRIPTION:
@@ -340,10 +314,6 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 				return;
 			case EnvironmentPackage.ASSET__VALUE:
 				setValue((Integer)newValue);
-				return;
-			case EnvironmentPackage.ASSET__RULES:
-				getRules().clear();
-				getRules().addAll((Collection<? extends Rule>)newValue);
 				return;
 			case EnvironmentPackage.ASSET__TYPE:
 				getType().clear();
@@ -376,9 +346,6 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 			case EnvironmentPackage.ASSET__VALUE:
 				setValue(VALUE_EDEFAULT);
 				return;
-			case EnvironmentPackage.ASSET__RULES:
-				getRules().clear();
-				return;
 			case EnvironmentPackage.ASSET__TYPE:
 				getType().clear();
 				return;
@@ -405,8 +372,6 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 				return property != null && !property.isEmpty();
 			case EnvironmentPackage.ASSET__VALUE:
 				return value != VALUE_EDEFAULT;
-			case EnvironmentPackage.ASSET__RULES:
-				return rules != null && !rules.isEmpty();
 			case EnvironmentPackage.ASSET__TYPE:
 				return type != null && !type.isEmpty();
 			case EnvironmentPackage.ASSET__DESCRIPTION:

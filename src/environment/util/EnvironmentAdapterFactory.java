@@ -2,7 +2,6 @@
  */
 package environment.util;
 
-import environment.AccessControlDevice;
 import environment.Actor;
 import environment.Application;
 import environment.Asset;
@@ -195,10 +194,6 @@ public class EnvironmentAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseRule(Rule object) {
 				return createRuleAdapter();
-			}
-			@Override
-			public Adapter caseAccessControlDevice(AccessControlDevice object) {
-				return createAccessControlDeviceAdapter();
 			}
 			@Override
 			public Adapter caseType(Type object) {
@@ -583,20 +578,6 @@ public class EnvironmentAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createRuleAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link environment.AccessControlDevice <em>Access Control Device</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see environment.AccessControlDevice
-	 * @generated
-	 */
-	public Adapter createAccessControlDeviceAdapter() {
 		return null;
 	}
 

@@ -2,7 +2,6 @@
  */
 package environment.impl;
 
-import environment.AccessControlDevice;
 import environment.Actor;
 import environment.Application;
 import environment.Asset;
@@ -224,13 +223,6 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 	 * @generated
 	 */
 	private EClass ruleEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass accessControlDeviceEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -617,7 +609,7 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getConnection_Rules() {
+	public EReference getConnection_Properties() {
 		return (EReference)connectionEClass.getEStructuralFeatures().get(7);
 	}
 
@@ -626,17 +618,8 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getConnection_Properties() {
-		return (EReference)connectionEClass.getEStructuralFeatures().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getConnection_Description() {
-		return (EAttribute)connectionEClass.getEStructuralFeatures().get(9);
+		return (EAttribute)connectionEClass.getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -707,7 +690,7 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getAsset_Rules() {
+	public EReference getAsset_Type() {
 		return (EReference)assetEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -716,17 +699,8 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getAsset_Type() {
-		return (EReference)assetEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getAsset_Description() {
-		return (EAttribute)assetEClass.getEStructuralFeatures().get(6);
+		return (EAttribute)assetEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -1004,15 +978,6 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getAccessControlDevice() {
-		return accessControlDeviceEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getType() {
 		return typeEClass;
 	}
@@ -1159,7 +1124,6 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 		createEAttribute(connectionEClass, CONNECTION__CONSTRAINTS);
 		createEAttribute(connectionEClass, CONNECTION__IS_BIDIRECTIONAL);
 		createEReference(connectionEClass, CONNECTION__PORT);
-		createEReference(connectionEClass, CONNECTION__RULES);
 		createEReference(connectionEClass, CONNECTION__PROPERTIES);
 		createEAttribute(connectionEClass, CONNECTION__DESCRIPTION);
 
@@ -1172,7 +1136,6 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 		createEAttribute(assetEClass, ASSET__NAME);
 		createEReference(assetEClass, ASSET__PROPERTY);
 		createEAttribute(assetEClass, ASSET__VALUE);
-		createEReference(assetEClass, ASSET__RULES);
 		createEReference(assetEClass, ASSET__TYPE);
 		createEAttribute(assetEClass, ASSET__DESCRIPTION);
 
@@ -1214,8 +1177,6 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 		createEAttribute(ruleEClass, RULE__PRECONDITIONS);
 		createEAttribute(ruleEClass, RULE__POSTCONDITIONS);
 		createEAttribute(ruleEClass, RULE__DESCRIPTION);
-
-		accessControlDeviceEClass = createEClass(ACCESS_CONTROL_DEVICE);
 
 		typeEClass = createEClass(TYPE);
 		createEAttribute(typeEClass, TYPE__NAME);
@@ -1279,7 +1240,6 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 		physicalStructureEClass.getESuperTypes().add(this.getTangible());
 		intangibleEClass.getESuperTypes().add(this.getAsset());
 		intellectualEClass.getESuperTypes().add(this.getIntangible());
-		accessControlDeviceEClass.getESuperTypes().add(this.getComputingDevice());
 		roomEClass.getESuperTypes().add(this.getPhysicalStructure());
 		floorEClass.getESuperTypes().add(this.getPhysicalStructure());
 		buildingEClass.getESuperTypes().add(this.getPhysicalStructure());
@@ -1327,7 +1287,6 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 		initEAttribute(getConnection_Constraints(), ecorePackage.getEString(), "constraints", null, 0, -1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getConnection_IsBidirectional(), ecorePackage.getEBoolean(), "isBidirectional", "true", 0, 1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getConnection_Port(), this.getPort(), null, "port", null, 0, 1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getConnection_Rules(), this.getRule(), null, "rules", null, 0, -1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getConnection_Properties(), this.getProperty(), null, "properties", null, 0, -1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getConnection_Description(), ecorePackage.getEString(), "description", null, 0, 1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -1340,7 +1299,6 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 		initEAttribute(getAsset_Name(), ecorePackage.getEString(), "name", null, 0, 1, Asset.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAsset_Property(), this.getProperty(), null, "property", null, 0, -1, Asset.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAsset_Value(), ecorePackage.getEInt(), "value", null, 0, 1, Asset.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAsset_Rules(), this.getRule(), null, "rules", null, 0, -1, Asset.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAsset_Type(), this.getType(), null, "type", null, 0, -1, Asset.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAsset_Description(), ecorePackage.getEString(), "description", null, 0, 1, Asset.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -1382,8 +1340,6 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 		initEAttribute(getRule_Preconditions(), ecorePackage.getEString(), "preconditions", null, 0, -1, Rule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRule_Postconditions(), ecorePackage.getEString(), "postconditions", null, 0, -1, Rule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRule_Description(), ecorePackage.getEString(), "description", null, 0, 1, Rule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(accessControlDeviceEClass, AccessControlDevice.class, "AccessControlDevice", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(typeEClass, Type.class, "Type", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getType_Name(), ecorePackage.getEString(), "name", null, 0, 1, Type.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

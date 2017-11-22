@@ -22,7 +22,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link environment.Connection#getConstraints <em>Constraints</em>}</li>
  *   <li>{@link environment.Connection#isIsBidirectional <em>Is Bidirectional</em>}</li>
  *   <li>{@link environment.Connection#getPort <em>Port</em>}</li>
- *   <li>{@link environment.Connection#getRules <em>Rules</em>}</li>
  *   <li>{@link environment.Connection#getProperties <em>Properties</em>}</li>
  *   <li>{@link environment.Connection#getDescription <em>Description</em>}</li>
  * </ul>
@@ -204,22 +203,6 @@ public interface Connection extends EObject {
 	 * @generated
 	 */
 	void setPort(Port value);
-
-	/**
-	 * Returns the value of the '<em><b>Rules</b></em>' reference list.
-	 * The list contents are of type {@link environment.Rule}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Rules</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Rules</em>' reference list.
-	 * @see environment.EnvironmentPackage#getConnection_Rules()
-	 * @model
-	 * @generated
-	 */
-	EList<Rule> getRules();
 
 	/**
 	 * Returns the value of the '<em><b>Properties</b></em>' reference list.
