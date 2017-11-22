@@ -7,6 +7,7 @@ import environment.Connection;
 import environment.EnvironmentPackage;
 import environment.Port;
 import environment.Property;
+
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
