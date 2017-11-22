@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<environment:EnvironmentDiagram
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:environment="http://www.example.org/environment"
+    xsi:schemaLocation="http://www.example.org/environment environment.ecore">
+  <asset xsi:type="environment:TangibleAsset"
+      name="t1"/>
+  <asset xsi:type="environment:TangibleAsset"
+      name="t2"
+      actions="//@action.0"/>
+  <asset xsi:type="environment:TangibleAsset"
+      name="t3"/>
+  <action name="enter-t1">
+    <preconditions>t3.contains(t2)</preconditions>
+    <effects>t1.add(t2)</effects>
+    <effects>t3.remove(t2)</effects>
+  </action>
+</environment:EnvironmentDiagram>
