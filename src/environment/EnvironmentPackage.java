@@ -65,7 +65,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @see environment.impl.EnvironmentPackageImpl#getAsset()
 	 * @generated
 	 */
-	int ASSET = 18;
+	int ASSET = 15;
 
 	/**
 	 * The feature id for the '<em><b>Connections</b></em>' reference list.
@@ -1217,7 +1217,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @see environment.impl.EnvironmentPackageImpl#getIntangible()
 	 * @generated
 	 */
-	int INTANGIBLE = 25;
+	int INTANGIBLE = 22;
 
 	/**
 	 * The feature id for the '<em><b>Connections</b></em>' reference list.
@@ -1800,505 +1800,6 @@ public interface EnvironmentPackage extends EPackage {
 	int APPLICATION_OPERATION_COUNT = DIGITAL_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link environment.impl.PhysicalStructureImpl <em>Physical Structure</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see environment.impl.PhysicalStructureImpl
-	 * @see environment.impl.EnvironmentPackageImpl#getPhysicalStructure()
-	 * @generated
-	 */
-	int PHYSICAL_STRUCTURE = 24;
-
-	/**
-	 * The feature id for the '<em><b>Connections</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PHYSICAL_STRUCTURE__CONNECTIONS = TANGIBLE__CONNECTIONS;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PHYSICAL_STRUCTURE__NAME = TANGIBLE__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Property</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PHYSICAL_STRUCTURE__PROPERTY = TANGIBLE__PROPERTY;
-
-	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PHYSICAL_STRUCTURE__VALUE = TANGIBLE__VALUE;
-
-	/**
-	 * The feature id for the '<em><b>Rules</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PHYSICAL_STRUCTURE__RULES = TANGIBLE__RULES;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PHYSICAL_STRUCTURE__TYPE = TANGIBLE__TYPE;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PHYSICAL_STRUCTURE__DESCRIPTION = TANGIBLE__DESCRIPTION;
-
-	/**
-	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PHYSICAL_STRUCTURE__CONTAINED_ASSETS = TANGIBLE__CONTAINED_ASSETS;
-
-	/**
-	 * The feature id for the '<em><b>Parent Asset</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PHYSICAL_STRUCTURE__PARENT_ASSET = TANGIBLE__PARENT_ASSET;
-
-	/**
-	 * The feature id for the '<em><b>Bounding Walls</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PHYSICAL_STRUCTURE__BOUNDING_WALLS = TANGIBLE_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Physical Structure</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PHYSICAL_STRUCTURE_FEATURE_COUNT = TANGIBLE_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Physical Structure</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PHYSICAL_STRUCTURE_OPERATION_COUNT = TANGIBLE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link environment.impl.WallImpl <em>Wall</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see environment.impl.WallImpl
-	 * @see environment.impl.EnvironmentPackageImpl#getWall()
-	 * @generated
-	 */
-	int WALL = 12;
-
-	/**
-	 * The feature id for the '<em><b>Connections</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WALL__CONNECTIONS = PHYSICAL_STRUCTURE__CONNECTIONS;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WALL__NAME = PHYSICAL_STRUCTURE__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Property</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WALL__PROPERTY = PHYSICAL_STRUCTURE__PROPERTY;
-
-	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WALL__VALUE = PHYSICAL_STRUCTURE__VALUE;
-
-	/**
-	 * The feature id for the '<em><b>Rules</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WALL__RULES = PHYSICAL_STRUCTURE__RULES;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WALL__TYPE = PHYSICAL_STRUCTURE__TYPE;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WALL__DESCRIPTION = PHYSICAL_STRUCTURE__DESCRIPTION;
-
-	/**
-	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WALL__CONTAINED_ASSETS = PHYSICAL_STRUCTURE__CONTAINED_ASSETS;
-
-	/**
-	 * The feature id for the '<em><b>Parent Asset</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WALL__PARENT_ASSET = PHYSICAL_STRUCTURE__PARENT_ASSET;
-
-	/**
-	 * The feature id for the '<em><b>Bounding Walls</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WALL__BOUNDING_WALLS = PHYSICAL_STRUCTURE__BOUNDING_WALLS;
-
-	/**
-	 * The feature id for the '<em><b>Doors</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WALL__DOORS = PHYSICAL_STRUCTURE_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Windows</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WALL__WINDOWS = PHYSICAL_STRUCTURE_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Related Space</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WALL__RELATED_SPACE = PHYSICAL_STRUCTURE_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of structural features of the '<em>Wall</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WALL_FEATURE_COUNT = PHYSICAL_STRUCTURE_FEATURE_COUNT + 3;
-
-	/**
-	 * The number of operations of the '<em>Wall</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WALL_OPERATION_COUNT = PHYSICAL_STRUCTURE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link environment.impl.DoorImpl <em>Door</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see environment.impl.DoorImpl
-	 * @see environment.impl.EnvironmentPackageImpl#getDoor()
-	 * @generated
-	 */
-	int DOOR = 13;
-
-	/**
-	 * The feature id for the '<em><b>Connections</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOOR__CONNECTIONS = PHYSICAL_STRUCTURE__CONNECTIONS;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOOR__NAME = PHYSICAL_STRUCTURE__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Property</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOOR__PROPERTY = PHYSICAL_STRUCTURE__PROPERTY;
-
-	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOOR__VALUE = PHYSICAL_STRUCTURE__VALUE;
-
-	/**
-	 * The feature id for the '<em><b>Rules</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOOR__RULES = PHYSICAL_STRUCTURE__RULES;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOOR__TYPE = PHYSICAL_STRUCTURE__TYPE;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOOR__DESCRIPTION = PHYSICAL_STRUCTURE__DESCRIPTION;
-
-	/**
-	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOOR__CONTAINED_ASSETS = PHYSICAL_STRUCTURE__CONTAINED_ASSETS;
-
-	/**
-	 * The feature id for the '<em><b>Parent Asset</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOOR__PARENT_ASSET = PHYSICAL_STRUCTURE__PARENT_ASSET;
-
-	/**
-	 * The feature id for the '<em><b>Bounding Walls</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOOR__BOUNDING_WALLS = PHYSICAL_STRUCTURE__BOUNDING_WALLS;
-
-	/**
-	 * The number of structural features of the '<em>Door</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOOR_FEATURE_COUNT = PHYSICAL_STRUCTURE_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Door</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOOR_OPERATION_COUNT = PHYSICAL_STRUCTURE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link environment.impl.WindowImpl <em>Window</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see environment.impl.WindowImpl
-	 * @see environment.impl.EnvironmentPackageImpl#getWindow()
-	 * @generated
-	 */
-	int WINDOW = 14;
-
-	/**
-	 * The feature id for the '<em><b>Connections</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WINDOW__CONNECTIONS = PHYSICAL_STRUCTURE__CONNECTIONS;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WINDOW__NAME = PHYSICAL_STRUCTURE__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Property</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WINDOW__PROPERTY = PHYSICAL_STRUCTURE__PROPERTY;
-
-	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WINDOW__VALUE = PHYSICAL_STRUCTURE__VALUE;
-
-	/**
-	 * The feature id for the '<em><b>Rules</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WINDOW__RULES = PHYSICAL_STRUCTURE__RULES;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WINDOW__TYPE = PHYSICAL_STRUCTURE__TYPE;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WINDOW__DESCRIPTION = PHYSICAL_STRUCTURE__DESCRIPTION;
-
-	/**
-	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WINDOW__CONTAINED_ASSETS = PHYSICAL_STRUCTURE__CONTAINED_ASSETS;
-
-	/**
-	 * The feature id for the '<em><b>Parent Asset</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WINDOW__PARENT_ASSET = PHYSICAL_STRUCTURE__PARENT_ASSET;
-
-	/**
-	 * The feature id for the '<em><b>Bounding Walls</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WINDOW__BOUNDING_WALLS = PHYSICAL_STRUCTURE__BOUNDING_WALLS;
-
-	/**
-	 * The number of structural features of the '<em>Window</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WINDOW_FEATURE_COUNT = PHYSICAL_STRUCTURE_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Window</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WINDOW_OPERATION_COUNT = PHYSICAL_STRUCTURE_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link environment.impl.ConnectionImpl <em>Connection</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2306,7 +1807,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @see environment.impl.EnvironmentPackageImpl#getConnection()
 	 * @generated
 	 */
-	int CONNECTION = 15;
+	int CONNECTION = 12;
 
 	/**
 	 * The feature id for the '<em><b>Asset Des</b></em>' reference.
@@ -2424,7 +1925,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @see environment.impl.EnvironmentPackageImpl#getDigitalConnection()
 	 * @generated
 	 */
-	int DIGITAL_CONNECTION = 16;
+	int DIGITAL_CONNECTION = 13;
 
 	/**
 	 * The feature id for the '<em><b>Asset Des</b></em>' reference.
@@ -2542,7 +2043,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @see environment.impl.EnvironmentPackageImpl#getPhysicalConnection()
 	 * @generated
 	 */
-	int PHYSICAL_CONNECTION = 17;
+	int PHYSICAL_CONNECTION = 14;
 
 	/**
 	 * The feature id for the '<em><b>Asset Des</b></em>' reference.
@@ -2660,7 +2161,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @see environment.impl.EnvironmentPackageImpl#getEnvironmentDiagram()
 	 * @generated
 	 */
-	int ENVIRONMENT_DIAGRAM = 19;
+	int ENVIRONMENT_DIAGRAM = 16;
 
 	/**
 	 * The feature id for the '<em><b>Asset</b></em>' containment reference list.
@@ -2742,7 +2243,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @see environment.impl.EnvironmentPackageImpl#getPort()
 	 * @generated
 	 */
-	int PORT = 20;
+	int PORT = 17;
 
 	/**
 	 * The feature id for the '<em><b>Asset</b></em>' reference.
@@ -2806,7 +2307,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @see environment.impl.EnvironmentPackageImpl#getProperty()
 	 * @generated
 	 */
-	int PROPERTY = 21;
+	int PROPERTY = 18;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2852,7 +2353,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @see environment.impl.EnvironmentPackageImpl#getCredential()
 	 * @generated
 	 */
-	int CREDENTIAL = 22;
+	int CREDENTIAL = 19;
 
 	/**
 	 * The feature id for the '<em><b>Key</b></em>' attribute.
@@ -2898,7 +2399,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @see environment.impl.EnvironmentPackageImpl#getActor()
 	 * @generated
 	 */
-	int ACTOR = 23;
+	int ACTOR = 20;
 
 	/**
 	 * The feature id for the '<em><b>Connections</b></em>' reference list.
@@ -2991,22 +2492,13 @@ public interface EnvironmentPackage extends EPackage {
 	int ACTOR__ROLE = TANGIBLE_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Knowledge</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTOR__KNOWLEDGE = TANGIBLE_FEATURE_COUNT + 1;
-
-	/**
 	 * The number of structural features of the '<em>Actor</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACTOR_FEATURE_COUNT = TANGIBLE_FEATURE_COUNT + 2;
+	int ACTOR_FEATURE_COUNT = TANGIBLE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Actor</em>' class.
@@ -3018,6 +2510,115 @@ public interface EnvironmentPackage extends EPackage {
 	int ACTOR_OPERATION_COUNT = TANGIBLE_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link environment.impl.PhysicalStructureImpl <em>Physical Structure</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see environment.impl.PhysicalStructureImpl
+	 * @see environment.impl.EnvironmentPackageImpl#getPhysicalStructure()
+	 * @generated
+	 */
+	int PHYSICAL_STRUCTURE = 21;
+
+	/**
+	 * The feature id for the '<em><b>Connections</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PHYSICAL_STRUCTURE__CONNECTIONS = TANGIBLE__CONNECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PHYSICAL_STRUCTURE__NAME = TANGIBLE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Property</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PHYSICAL_STRUCTURE__PROPERTY = TANGIBLE__PROPERTY;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PHYSICAL_STRUCTURE__VALUE = TANGIBLE__VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Rules</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PHYSICAL_STRUCTURE__RULES = TANGIBLE__RULES;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PHYSICAL_STRUCTURE__TYPE = TANGIBLE__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PHYSICAL_STRUCTURE__DESCRIPTION = TANGIBLE__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PHYSICAL_STRUCTURE__CONTAINED_ASSETS = TANGIBLE__CONTAINED_ASSETS;
+
+	/**
+	 * The feature id for the '<em><b>Parent Asset</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PHYSICAL_STRUCTURE__PARENT_ASSET = TANGIBLE__PARENT_ASSET;
+
+	/**
+	 * The number of structural features of the '<em>Physical Structure</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PHYSICAL_STRUCTURE_FEATURE_COUNT = TANGIBLE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Physical Structure</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PHYSICAL_STRUCTURE_OPERATION_COUNT = TANGIBLE_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link environment.impl.IntellectualImpl <em>Intellectual</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3025,7 +2626,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @see environment.impl.EnvironmentPackageImpl#getIntellectual()
 	 * @generated
 	 */
-	int INTELLECTUAL = 26;
+	int INTELLECTUAL = 23;
 
 	/**
 	 * The feature id for the '<em><b>Connections</b></em>' reference list.
@@ -3134,7 +2735,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @see environment.impl.EnvironmentPackageImpl#getRule()
 	 * @generated
 	 */
-	int RULE = 27;
+	int RULE = 24;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3198,7 +2799,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @see environment.impl.EnvironmentPackageImpl#getAccessControlDevice()
 	 * @generated
 	 */
-	int ACCESS_CONTROL_DEVICE = 28;
+	int ACCESS_CONTROL_DEVICE = 25;
 
 	/**
 	 * The feature id for the '<em><b>Connections</b></em>' reference list.
@@ -3334,7 +2935,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @see environment.impl.EnvironmentPackageImpl#getType()
 	 * @generated
 	 */
-	int TYPE = 29;
+	int TYPE = 26;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3373,14 +2974,14 @@ public interface EnvironmentPackage extends EPackage {
 	int TYPE_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link environment.impl.PersonImpl <em>Person</em>}' class.
+	 * The meta object id for the '{@link environment.impl.RoomImpl <em>Room</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see environment.impl.PersonImpl
-	 * @see environment.impl.EnvironmentPackageImpl#getPerson()
+	 * @see environment.impl.RoomImpl
+	 * @see environment.impl.EnvironmentPackageImpl#getRoom()
 	 * @generated
 	 */
-	int PERSON = 30;
+	int ROOM = 27;
 
 	/**
 	 * The feature id for the '<em><b>Connections</b></em>' reference list.
@@ -3389,7 +2990,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PERSON__CONNECTIONS = ACTOR__CONNECTIONS;
+	int ROOM__CONNECTIONS = PHYSICAL_STRUCTURE__CONNECTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3398,7 +2999,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PERSON__NAME = ACTOR__NAME;
+	int ROOM__NAME = PHYSICAL_STRUCTURE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Property</b></em>' containment reference list.
@@ -3407,7 +3008,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PERSON__PROPERTY = ACTOR__PROPERTY;
+	int ROOM__PROPERTY = PHYSICAL_STRUCTURE__PROPERTY;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -3416,7 +3017,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PERSON__VALUE = ACTOR__VALUE;
+	int ROOM__VALUE = PHYSICAL_STRUCTURE__VALUE;
 
 	/**
 	 * The feature id for the '<em><b>Rules</b></em>' reference list.
@@ -3425,7 +3026,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PERSON__RULES = ACTOR__RULES;
+	int ROOM__RULES = PHYSICAL_STRUCTURE__RULES;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
@@ -3434,7 +3035,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PERSON__TYPE = ACTOR__TYPE;
+	int ROOM__TYPE = PHYSICAL_STRUCTURE__TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -3443,7 +3044,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PERSON__DESCRIPTION = ACTOR__DESCRIPTION;
+	int ROOM__DESCRIPTION = PHYSICAL_STRUCTURE__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
@@ -3452,7 +3053,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PERSON__CONTAINED_ASSETS = ACTOR__CONTAINED_ASSETS;
+	int ROOM__CONTAINED_ASSETS = PHYSICAL_STRUCTURE__CONTAINED_ASSETS;
 
 	/**
 	 * The feature id for the '<em><b>Parent Asset</b></em>' reference.
@@ -3461,43 +3062,25 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PERSON__PARENT_ASSET = ACTOR__PARENT_ASSET;
+	int ROOM__PARENT_ASSET = PHYSICAL_STRUCTURE__PARENT_ASSET;
 
 	/**
-	 * The feature id for the '<em><b>Role</b></em>' attribute.
+	 * The number of structural features of the '<em>Room</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PERSON__ROLE = ACTOR__ROLE;
+	int ROOM_FEATURE_COUNT = PHYSICAL_STRUCTURE_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Knowledge</b></em>' attribute list.
+	 * The number of operations of the '<em>Room</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PERSON__KNOWLEDGE = ACTOR__KNOWLEDGE;
-
-	/**
-	 * The number of structural features of the '<em>Person</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PERSON_FEATURE_COUNT = ACTOR_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Person</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PERSON_OPERATION_COUNT = ACTOR_OPERATION_COUNT + 0;
+	int ROOM_OPERATION_COUNT = PHYSICAL_STRUCTURE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link environment.Status <em>Status</em>}' enum.
@@ -3507,7 +3090,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @see environment.impl.EnvironmentPackageImpl#getStatus()
 	 * @generated
 	 */
-	int STATUS = 31;
+	int STATUS = 28;
 
 	/**
 	 * The meta object id for the '{@link environment.ProcessStatus <em>Process Status</em>}' enum.
@@ -3517,7 +3100,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @see environment.impl.EnvironmentPackageImpl#getProcessStatus()
 	 * @generated
 	 */
-	int PROCESS_STATUS = 32;
+	int PROCESS_STATUS = 29;
 
 	/**
 	 * The meta object id for the '{@link environment.FileStatus <em>File Status</em>}' enum.
@@ -3527,7 +3110,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @see environment.impl.EnvironmentPackageImpl#getFileStatus()
 	 * @generated
 	 */
-	int FILE_STATUS = 33;
+	int FILE_STATUS = 30;
 
 
 	/**
@@ -3759,69 +3342,6 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getApplication_Url();
-
-	/**
-	 * Returns the meta object for class '{@link environment.Wall <em>Wall</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Wall</em>'.
-	 * @see environment.Wall
-	 * @generated
-	 */
-	EClass getWall();
-
-	/**
-	 * Returns the meta object for the reference list '{@link environment.Wall#getDoors <em>Doors</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Doors</em>'.
-	 * @see environment.Wall#getDoors()
-	 * @see #getWall()
-	 * @generated
-	 */
-	EReference getWall_Doors();
-
-	/**
-	 * Returns the meta object for the reference list '{@link environment.Wall#getWindows <em>Windows</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Windows</em>'.
-	 * @see environment.Wall#getWindows()
-	 * @see #getWall()
-	 * @generated
-	 */
-	EReference getWall_Windows();
-
-	/**
-	 * Returns the meta object for the reference '{@link environment.Wall#getRelatedSpace <em>Related Space</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Related Space</em>'.
-	 * @see environment.Wall#getRelatedSpace()
-	 * @see #getWall()
-	 * @generated
-	 */
-	EReference getWall_RelatedSpace();
-
-	/**
-	 * Returns the meta object for class '{@link environment.Door <em>Door</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Door</em>'.
-	 * @see environment.Door
-	 * @generated
-	 */
-	EClass getDoor();
-
-	/**
-	 * Returns the meta object for class '{@link environment.Window <em>Window</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Window</em>'.
-	 * @see environment.Window
-	 * @generated
-	 */
-	EClass getWindow();
 
 	/**
 	 * Returns the meta object for class '{@link environment.Connection <em>Connection</em>}'.
@@ -4266,17 +3786,6 @@ public interface EnvironmentPackage extends EPackage {
 	EAttribute getActor_Role();
 
 	/**
-	 * Returns the meta object for the attribute list '{@link environment.Actor#getKnowledge <em>Knowledge</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Knowledge</em>'.
-	 * @see environment.Actor#getKnowledge()
-	 * @see #getActor()
-	 * @generated
-	 */
-	EAttribute getActor_Knowledge();
-
-	/**
 	 * Returns the meta object for class '{@link environment.PhysicalStructure <em>Physical Structure</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4285,17 +3794,6 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getPhysicalStructure();
-
-	/**
-	 * Returns the meta object for the reference list '{@link environment.PhysicalStructure#getBoundingWalls <em>Bounding Walls</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Bounding Walls</em>'.
-	 * @see environment.PhysicalStructure#getBoundingWalls()
-	 * @see #getPhysicalStructure()
-	 * @generated
-	 */
-	EReference getPhysicalStructure_BoundingWalls();
 
 	/**
 	 * Returns the meta object for class '{@link environment.Intangible <em>Intangible</em>}'.
@@ -4436,14 +3934,14 @@ public interface EnvironmentPackage extends EPackage {
 	EReference getType_SuperType();
 
 	/**
-	 * Returns the meta object for class '{@link environment.Person <em>Person</em>}'.
+	 * Returns the meta object for class '{@link environment.Room <em>Room</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Person</em>'.
-	 * @see environment.Person
+	 * @return the meta object for class '<em>Room</em>'.
+	 * @see environment.Room
 	 * @generated
 	 */
-	EClass getPerson();
+	EClass getRoom();
 
 	/**
 	 * Returns the meta object for enum '{@link environment.Status <em>Status</em>}'.
@@ -4697,60 +4195,6 @@ public interface EnvironmentPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute APPLICATION__URL = eINSTANCE.getApplication_Url();
-
-		/**
-		 * The meta object literal for the '{@link environment.impl.WallImpl <em>Wall</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see environment.impl.WallImpl
-		 * @see environment.impl.EnvironmentPackageImpl#getWall()
-		 * @generated
-		 */
-		EClass WALL = eINSTANCE.getWall();
-
-		/**
-		 * The meta object literal for the '<em><b>Doors</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference WALL__DOORS = eINSTANCE.getWall_Doors();
-
-		/**
-		 * The meta object literal for the '<em><b>Windows</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference WALL__WINDOWS = eINSTANCE.getWall_Windows();
-
-		/**
-		 * The meta object literal for the '<em><b>Related Space</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference WALL__RELATED_SPACE = eINSTANCE.getWall_RelatedSpace();
-
-		/**
-		 * The meta object literal for the '{@link environment.impl.DoorImpl <em>Door</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see environment.impl.DoorImpl
-		 * @see environment.impl.EnvironmentPackageImpl#getDoor()
-		 * @generated
-		 */
-		EClass DOOR = eINSTANCE.getDoor();
-
-		/**
-		 * The meta object literal for the '{@link environment.impl.WindowImpl <em>Window</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see environment.impl.WindowImpl
-		 * @see environment.impl.EnvironmentPackageImpl#getWindow()
-		 * @generated
-		 */
-		EClass WINDOW = eINSTANCE.getWindow();
 
 		/**
 		 * The meta object literal for the '{@link environment.impl.ConnectionImpl <em>Connection</em>}' class.
@@ -5099,14 +4543,6 @@ public interface EnvironmentPackage extends EPackage {
 		EAttribute ACTOR__ROLE = eINSTANCE.getActor_Role();
 
 		/**
-		 * The meta object literal for the '<em><b>Knowledge</b></em>' attribute list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ACTOR__KNOWLEDGE = eINSTANCE.getActor_Knowledge();
-
-		/**
 		 * The meta object literal for the '{@link environment.impl.PhysicalStructureImpl <em>Physical Structure</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5115,14 +4551,6 @@ public interface EnvironmentPackage extends EPackage {
 		 * @generated
 		 */
 		EClass PHYSICAL_STRUCTURE = eINSTANCE.getPhysicalStructure();
-
-		/**
-		 * The meta object literal for the '<em><b>Bounding Walls</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PHYSICAL_STRUCTURE__BOUNDING_WALLS = eINSTANCE.getPhysicalStructure_BoundingWalls();
 
 		/**
 		 * The meta object literal for the '{@link environment.impl.IntangibleImpl <em>Intangible</em>}' class.
@@ -5239,14 +4667,14 @@ public interface EnvironmentPackage extends EPackage {
 		EReference TYPE__SUPER_TYPE = eINSTANCE.getType_SuperType();
 
 		/**
-		 * The meta object literal for the '{@link environment.impl.PersonImpl <em>Person</em>}' class.
+		 * The meta object literal for the '{@link environment.impl.RoomImpl <em>Room</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see environment.impl.PersonImpl
-		 * @see environment.impl.EnvironmentPackageImpl#getPerson()
+		 * @see environment.impl.RoomImpl
+		 * @see environment.impl.EnvironmentPackageImpl#getRoom()
 		 * @generated
 		 */
-		EClass PERSON = eINSTANCE.getPerson();
+		EClass ROOM = eINSTANCE.getRoom();
 
 		/**
 		 * The meta object literal for the '{@link environment.Status <em>Status</em>}' enum.

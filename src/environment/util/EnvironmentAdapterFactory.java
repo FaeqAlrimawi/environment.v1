@@ -13,7 +13,6 @@ import environment.Credential;
 import environment.Desktop;
 import environment.Digital;
 import environment.DigitalConnection;
-import environment.Door;
 import environment.EnvironmentDiagram;
 import environment.EnvironmentPackage;
 import environment.File;
@@ -21,18 +20,16 @@ import environment.HVAC;
 import environment.Intangible;
 import environment.Intellectual;
 import environment.Laptop;
-import environment.Person;
 import environment.PhysicalConnection;
 import environment.PhysicalStructure;
 import environment.Port;
 import environment.Property;
+import environment.Room;
 import environment.Rule;
 import environment.Server;
 import environment.SmartLight;
 import environment.Tangible;
 import environment.Type;
-import environment.Wall;
-import environment.Window;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
@@ -146,18 +143,6 @@ public class EnvironmentAdapterFactory extends AdapterFactoryImpl {
 				return createApplicationAdapter();
 			}
 			@Override
-			public Adapter caseWall(Wall object) {
-				return createWallAdapter();
-			}
-			@Override
-			public Adapter caseDoor(Door object) {
-				return createDoorAdapter();
-			}
-			@Override
-			public Adapter caseWindow(Window object) {
-				return createWindowAdapter();
-			}
-			@Override
 			public Adapter caseConnection(Connection object) {
 				return createConnectionAdapter();
 			}
@@ -218,8 +203,8 @@ public class EnvironmentAdapterFactory extends AdapterFactoryImpl {
 				return createTypeAdapter();
 			}
 			@Override
-			public Adapter casePerson(Person object) {
-				return createPersonAdapter();
+			public Adapter caseRoom(Room object) {
+				return createRoomAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -406,48 +391,6 @@ public class EnvironmentAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createApplicationAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link environment.Wall <em>Wall</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see environment.Wall
-	 * @generated
-	 */
-	public Adapter createWallAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link environment.Door <em>Door</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see environment.Door
-	 * @generated
-	 */
-	public Adapter createDoorAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link environment.Window <em>Window</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see environment.Window
-	 * @generated
-	 */
-	public Adapter createWindowAdapter() {
 		return null;
 	}
 
@@ -662,16 +605,16 @@ public class EnvironmentAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link environment.Person <em>Person</em>}'.
+	 * Creates a new adapter for an object of class '{@link environment.Room <em>Room</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see environment.Person
+	 * @see environment.Room
 	 * @generated
 	 */
-	public Adapter createPersonAdapter() {
+	public Adapter createRoomAdapter() {
 		return null;
 	}
 

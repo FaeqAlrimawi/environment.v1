@@ -130,33 +130,6 @@ public interface EnvironmentFactory extends EFactory {
 	Application createApplication();
 
 	/**
-	 * Returns a new object of class '<em>Wall</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Wall</em>'.
-	 * @generated
-	 */
-	Wall createWall();
-
-	/**
-	 * Returns a new object of class '<em>Door</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Door</em>'.
-	 * @generated
-	 */
-	Door createDoor();
-
-	/**
-	 * Returns a new object of class '<em>Window</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Window</em>'.
-	 * @generated
-	 */
-	Window createWindow();
-
-	/**
 	 * Returns a new object of class '<em>Digital Connection</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -265,13 +238,13 @@ public interface EnvironmentFactory extends EFactory {
 	Type createType();
 
 	/**
-	 * Returns a new object of class '<em>Person</em>'.
+	 * Returns a new object of class '<em>Room</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Person</em>'.
+	 * @return a new object of class '<em>Room</em>'.
 	 * @generated
 	 */
-	Person createPerson();
+	Room createRoom();
 
 	/**
 	 * Returns the package supported by this factory.

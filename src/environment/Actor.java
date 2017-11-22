@@ -2,7 +2,6 @@
  */
 package environment;
 
-import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,7 +13,6 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  * <ul>
  *   <li>{@link environment.Actor#getRole <em>Role</em>}</li>
- *   <li>{@link environment.Actor#getKnowledge <em>Knowledge</em>}</li>
  * </ul>
  *
  * @see environment.EnvironmentPackage#getActor()
@@ -47,21 +45,5 @@ public interface Actor extends Tangible {
 	 * @generated
 	 */
 	void setRole(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Knowledge</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.String}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Knowledge</em>' attribute list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Knowledge</em>' attribute list.
-	 * @see environment.EnvironmentPackage#getActor_Knowledge()
-	 * @model
-	 * @generated
-	 */
-	EList<String> getKnowledge();
 
 } // Actor

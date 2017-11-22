@@ -5,17 +5,11 @@ package environment.impl;
 import environment.Actor;
 import environment.EnvironmentPackage;
 
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
-import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,7 +20,6 @@ import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
  * </p>
  * <ul>
  *   <li>{@link environment.impl.ActorImpl#getRole <em>Role</em>}</li>
- *   <li>{@link environment.impl.ActorImpl#getKnowledge <em>Knowledge</em>}</li>
  * </ul>
  *
  * @generated
@@ -51,16 +44,6 @@ public class ActorImpl extends TangibleImpl implements Actor {
 	 * @ordered
 	 */
 	protected String role = ROLE_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getKnowledge() <em>Knowledge</em>}' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getKnowledge()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<String> knowledge;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -107,25 +90,11 @@ public class ActorImpl extends TangibleImpl implements Actor {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<String> getKnowledge() {
-		if (knowledge == null) {
-			knowledge = new EDataTypeUniqueEList<String>(String.class, this, EnvironmentPackage.ACTOR__KNOWLEDGE);
-		}
-		return knowledge;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case EnvironmentPackage.ACTOR__ROLE:
 				return getRole();
-			case EnvironmentPackage.ACTOR__KNOWLEDGE:
-				return getKnowledge();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -135,16 +104,11 @@ public class ActorImpl extends TangibleImpl implements Actor {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case EnvironmentPackage.ACTOR__ROLE:
 				setRole((String)newValue);
-				return;
-			case EnvironmentPackage.ACTOR__KNOWLEDGE:
-				getKnowledge().clear();
-				getKnowledge().addAll((Collection<? extends String>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -161,9 +125,6 @@ public class ActorImpl extends TangibleImpl implements Actor {
 			case EnvironmentPackage.ACTOR__ROLE:
 				setRole(ROLE_EDEFAULT);
 				return;
-			case EnvironmentPackage.ACTOR__KNOWLEDGE:
-				getKnowledge().clear();
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -178,8 +139,6 @@ public class ActorImpl extends TangibleImpl implements Actor {
 		switch (featureID) {
 			case EnvironmentPackage.ACTOR__ROLE:
 				return ROLE_EDEFAULT == null ? role != null : !ROLE_EDEFAULT.equals(role);
-			case EnvironmentPackage.ACTOR__KNOWLEDGE:
-				return knowledge != null && !knowledge.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -196,8 +155,6 @@ public class ActorImpl extends TangibleImpl implements Actor {
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (role: ");
 		result.append(role);
-		result.append(", knowledge: ");
-		result.append(knowledge);
 		result.append(')');
 		return result.toString();
 	}

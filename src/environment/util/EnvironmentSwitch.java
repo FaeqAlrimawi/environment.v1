@@ -13,7 +13,6 @@ import environment.Credential;
 import environment.Desktop;
 import environment.Digital;
 import environment.DigitalConnection;
-import environment.Door;
 import environment.EnvironmentDiagram;
 import environment.EnvironmentPackage;
 import environment.File;
@@ -21,18 +20,16 @@ import environment.HVAC;
 import environment.Intangible;
 import environment.Intellectual;
 import environment.Laptop;
-import environment.Person;
 import environment.PhysicalConnection;
 import environment.PhysicalStructure;
 import environment.Port;
 import environment.Property;
+import environment.Room;
 import environment.Rule;
 import environment.Server;
 import environment.SmartLight;
 import environment.Tangible;
 import environment.Type;
-import environment.Wall;
-import environment.Window;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
@@ -200,33 +197,6 @@ public class EnvironmentSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case EnvironmentPackage.WALL: {
-				Wall wall = (Wall)theEObject;
-				T result = caseWall(wall);
-				if (result == null) result = casePhysicalStructure(wall);
-				if (result == null) result = caseTangible(wall);
-				if (result == null) result = caseAsset(wall);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case EnvironmentPackage.DOOR: {
-				Door door = (Door)theEObject;
-				T result = caseDoor(door);
-				if (result == null) result = casePhysicalStructure(door);
-				if (result == null) result = caseTangible(door);
-				if (result == null) result = caseAsset(door);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case EnvironmentPackage.WINDOW: {
-				Window window = (Window)theEObject;
-				T result = caseWindow(window);
-				if (result == null) result = casePhysicalStructure(window);
-				if (result == null) result = caseTangible(window);
-				if (result == null) result = caseAsset(window);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case EnvironmentPackage.CONNECTION: {
 				Connection connection = (Connection)theEObject;
 				T result = caseConnection(connection);
@@ -329,12 +299,12 @@ public class EnvironmentSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case EnvironmentPackage.PERSON: {
-				Person person = (Person)theEObject;
-				T result = casePerson(person);
-				if (result == null) result = caseActor(person);
-				if (result == null) result = caseTangible(person);
-				if (result == null) result = caseAsset(person);
+			case EnvironmentPackage.ROOM: {
+				Room room = (Room)theEObject;
+				T result = caseRoom(room);
+				if (result == null) result = casePhysicalStructure(room);
+				if (result == null) result = caseTangible(room);
+				if (result == null) result = caseAsset(room);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -519,51 +489,6 @@ public class EnvironmentSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseApplication(Application object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Wall</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Wall</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseWall(Wall object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Door</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Door</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseDoor(Door object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Window</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Window</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseWindow(Window object) {
 		return null;
 	}
 
@@ -793,17 +718,17 @@ public class EnvironmentSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Person</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Room</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Person</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Room</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casePerson(Person object) {
+	public T caseRoom(Room object) {
 		return null;
 	}
 

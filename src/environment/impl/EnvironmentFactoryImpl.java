@@ -11,7 +11,6 @@ import environment.Credential;
 import environment.Desktop;
 import environment.Digital;
 import environment.DigitalConnection;
-import environment.Door;
 import environment.EnvironmentDiagram;
 import environment.EnvironmentFactory;
 import environment.EnvironmentPackage;
@@ -20,20 +19,18 @@ import environment.FileStatus;
 import environment.HVAC;
 import environment.Intellectual;
 import environment.Laptop;
-import environment.Person;
 import environment.PhysicalConnection;
 import environment.PhysicalStructure;
 import environment.Port;
 import environment.ProcessStatus;
 import environment.Property;
+import environment.Room;
 import environment.Rule;
 import environment.Server;
 import environment.SmartLight;
 import environment.Status;
 import environment.Tangible;
 import environment.Type;
-import environment.Wall;
-import environment.Window;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -100,9 +97,6 @@ public class EnvironmentFactoryImpl extends EFactoryImpl implements EnvironmentF
 			case EnvironmentPackage.FILE: return createFile();
 			case EnvironmentPackage.PROCESS: return createProcess();
 			case EnvironmentPackage.APPLICATION: return createApplication();
-			case EnvironmentPackage.WALL: return createWall();
-			case EnvironmentPackage.DOOR: return createDoor();
-			case EnvironmentPackage.WINDOW: return createWindow();
 			case EnvironmentPackage.DIGITAL_CONNECTION: return createDigitalConnection();
 			case EnvironmentPackage.PHYSICAL_CONNECTION: return createPhysicalConnection();
 			case EnvironmentPackage.ENVIRONMENT_DIAGRAM: return createEnvironmentDiagram();
@@ -115,7 +109,7 @@ public class EnvironmentFactoryImpl extends EFactoryImpl implements EnvironmentF
 			case EnvironmentPackage.RULE: return createRule();
 			case EnvironmentPackage.ACCESS_CONTROL_DEVICE: return createAccessControlDevice();
 			case EnvironmentPackage.TYPE: return createType();
-			case EnvironmentPackage.PERSON: return createPerson();
+			case EnvironmentPackage.ROOM: return createRoom();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -284,36 +278,6 @@ public class EnvironmentFactoryImpl extends EFactoryImpl implements EnvironmentF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Wall createWall() {
-		WallImpl wall = new WallImpl();
-		return wall;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Door createDoor() {
-		DoorImpl door = new DoorImpl();
-		return door;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Window createWindow() {
-		WindowImpl window = new WindowImpl();
-		return window;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public DigitalConnection createDigitalConnection() {
 		DigitalConnectionImpl digitalConnection = new DigitalConnectionImpl();
 		return digitalConnection;
@@ -434,9 +398,9 @@ public class EnvironmentFactoryImpl extends EFactoryImpl implements EnvironmentF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Person createPerson() {
-		PersonImpl person = new PersonImpl();
-		return person;
+	public Room createRoom() {
+		RoomImpl room = new RoomImpl();
+		return room;
 	}
 
 	/**

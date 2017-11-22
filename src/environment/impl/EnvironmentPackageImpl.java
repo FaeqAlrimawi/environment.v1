@@ -12,7 +12,6 @@ import environment.Credential;
 import environment.Desktop;
 import environment.Digital;
 import environment.DigitalConnection;
-import environment.Door;
 import environment.EnvironmentDiagram;
 import environment.EnvironmentFactory;
 import environment.EnvironmentPackage;
@@ -21,20 +20,18 @@ import environment.FileStatus;
 import environment.Intangible;
 import environment.Intellectual;
 import environment.Laptop;
-import environment.Person;
 import environment.PhysicalConnection;
 import environment.PhysicalStructure;
 import environment.Port;
 import environment.ProcessStatus;
 import environment.Property;
+import environment.Room;
 import environment.Rule;
 import environment.Server;
 import environment.SmartLight;
 import environment.Status;
 import environment.Tangible;
 import environment.Type;
-import environment.Wall;
-import environment.Window;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -134,27 +131,6 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 	 * @generated
 	 */
 	private EClass applicationEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass wallEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass doorEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass windowEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -266,7 +242,7 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass personEClass = null;
+	private EClass roomEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -546,60 +522,6 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 	 */
 	public EAttribute getApplication_Url() {
 		return (EAttribute)applicationEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getWall() {
-		return wallEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getWall_Doors() {
-		return (EReference)wallEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getWall_Windows() {
-		return (EReference)wallEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getWall_RelatedSpace() {
-		return (EReference)wallEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getDoor() {
-		return doorEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getWindow() {
-		return windowEClass;
 	}
 
 	/**
@@ -976,26 +898,8 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getActor_Knowledge() {
-		return (EAttribute)actorEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getPhysicalStructure() {
 		return physicalStructureEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getPhysicalStructure_BoundingWalls() {
-		return (EReference)physicalStructureEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1120,8 +1024,8 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getPerson() {
-		return personEClass;
+	public EClass getRoom() {
+		return roomEClass;
 	}
 
 	/**
@@ -1213,15 +1117,6 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 		createEAttribute(applicationEClass, APPLICATION__STATUS);
 		createEAttribute(applicationEClass, APPLICATION__URL);
 
-		wallEClass = createEClass(WALL);
-		createEReference(wallEClass, WALL__DOORS);
-		createEReference(wallEClass, WALL__WINDOWS);
-		createEReference(wallEClass, WALL__RELATED_SPACE);
-
-		doorEClass = createEClass(DOOR);
-
-		windowEClass = createEClass(WINDOW);
-
 		connectionEClass = createEClass(CONNECTION);
 		createEReference(connectionEClass, CONNECTION__ASSET_DES);
 		createEReference(connectionEClass, CONNECTION__ASSET_SRC);
@@ -1271,10 +1166,8 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 
 		actorEClass = createEClass(ACTOR);
 		createEAttribute(actorEClass, ACTOR__ROLE);
-		createEAttribute(actorEClass, ACTOR__KNOWLEDGE);
 
 		physicalStructureEClass = createEClass(PHYSICAL_STRUCTURE);
-		createEReference(physicalStructureEClass, PHYSICAL_STRUCTURE__BOUNDING_WALLS);
 
 		intangibleEClass = createEClass(INTANGIBLE);
 		createEReference(intangibleEClass, INTANGIBLE__PARENT_ASSET);
@@ -1294,7 +1187,7 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 		createEAttribute(typeEClass, TYPE__NAME);
 		createEReference(typeEClass, TYPE__SUPER_TYPE);
 
-		personEClass = createEClass(PERSON);
+		roomEClass = createEClass(ROOM);
 
 		// Create enums
 		statusEEnum = createEEnum(STATUS);
@@ -1342,9 +1235,6 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 		fileEClass.getESuperTypes().add(this.getDigital());
 		processEClass.getESuperTypes().add(this.getDigital());
 		applicationEClass.getESuperTypes().add(this.getDigital());
-		wallEClass.getESuperTypes().add(this.getPhysicalStructure());
-		doorEClass.getESuperTypes().add(this.getPhysicalStructure());
-		windowEClass.getESuperTypes().add(this.getPhysicalStructure());
 		digitalConnectionEClass.getESuperTypes().add(this.getConnection());
 		physicalConnectionEClass.getESuperTypes().add(this.getConnection());
 		actorEClass.getESuperTypes().add(this.getTangible());
@@ -1352,7 +1242,7 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 		intangibleEClass.getESuperTypes().add(this.getAsset());
 		intellectualEClass.getESuperTypes().add(this.getIntangible());
 		accessControlDeviceEClass.getESuperTypes().add(this.getComputingDevice());
-		personEClass.getESuperTypes().add(this.getActor());
+		roomEClass.getESuperTypes().add(this.getPhysicalStructure());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(tangibleEClass, Tangible.class, "Tangible", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1388,15 +1278,6 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 		initEClass(applicationEClass, Application.class, "Application", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getApplication_Status(), this.getProcessStatus(), "status", null, 0, 1, Application.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getApplication_Url(), ecorePackage.getEString(), "url", null, 0, 1, Application.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(wallEClass, Wall.class, "Wall", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getWall_Doors(), this.getDoor(), null, "doors", null, 0, -1, Wall.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getWall_Windows(), this.getWindow(), null, "windows", null, 0, -1, Wall.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getWall_RelatedSpace(), this.getPhysicalStructure(), null, "relatedSpace", null, 0, 1, Wall.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(doorEClass, Door.class, "Door", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(windowEClass, Window.class, "Window", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(connectionEClass, Connection.class, "Connection", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getConnection_AssetDes(), this.getAsset(), null, "assetDes", null, 0, 1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1447,10 +1328,8 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 
 		initEClass(actorEClass, Actor.class, "Actor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getActor_Role(), ecorePackage.getEString(), "role", null, 0, 1, Actor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getActor_Knowledge(), ecorePackage.getEString(), "knowledge", null, 0, -1, Actor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(physicalStructureEClass, PhysicalStructure.class, "PhysicalStructure", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPhysicalStructure_BoundingWalls(), this.getWall(), null, "boundingWalls", null, 0, -1, PhysicalStructure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(intangibleEClass, Intangible.class, "Intangible", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getIntangible_ParentAsset(), this.getAsset(), null, "parentAsset", null, 0, 1, Intangible.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1470,7 +1349,7 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 		initEAttribute(getType_Name(), ecorePackage.getEString(), "name", null, 0, 1, Type.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getType_SuperType(), this.getType(), null, "superType", null, 0, -1, Type.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(personEClass, Person.class, "Person", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(roomEClass, Room.class, "Room", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals
 		initEEnum(statusEEnum, Status.class, "Status");

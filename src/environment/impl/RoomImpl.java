@@ -2,25 +2,25 @@
  */
 package environment.impl;
 
-import environment.Door;
 import environment.EnvironmentPackage;
+import environment.Room;
 
 import org.eclipse.emf.ecore.EClass;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Door</b></em>'.
+ * An implementation of the model object '<em><b>Room</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class DoorImpl extends PhysicalStructureImpl implements Door {
+public class RoomImpl extends PhysicalStructureImpl implements Room {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected DoorImpl() {
+	protected RoomImpl() {
 		super();
 	}
 
@@ -31,7 +31,7 @@ public class DoorImpl extends PhysicalStructureImpl implements Door {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return EnvironmentPackage.Literals.DOOR;
+		return EnvironmentPackage.Literals.ROOM;
 	}
 
-} //DoorImpl
+} //RoomImpl

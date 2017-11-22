@@ -43,15 +43,6 @@
     <eLiterals name="OPEN"/>
     <eLiterals name="CLOSED" value="1"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Wall" eSuperTypes="#//PhysicalStructure">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="doors" upperBound="-1"
-        eType="#//Door"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="windows" upperBound="-1"
-        eType="#//Window"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="relatedSpace" eType="#//PhysicalStructure"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Door" eSuperTypes="#//PhysicalStructure"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Window" eSuperTypes="#//PhysicalStructure"/>
   <eClassifiers xsi:type="ecore:EClass" name="Connection" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EReference" name="assetDes" eType="#//Asset"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="assetSrc" eType="#//Asset"/>
@@ -119,13 +110,8 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Actor" eSuperTypes="#//Tangible">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="role" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="knowledge" upperBound="-1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="PhysicalStructure" eSuperTypes="#//Tangible">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="boundingWalls" upperBound="-1"
-        eType="#//Wall"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PhysicalStructure" eSuperTypes="#//Tangible"/>
   <eClassifiers xsi:type="ecore:EClass" name="Intangible" abstract="true" eSuperTypes="#//Asset">
     <eStructuralFeatures xsi:type="ecore:EReference" name="parentAsset" eType="#//Asset"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="containedAssets" upperBound="-1"
@@ -148,5 +134,5 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="superType" upperBound="-1"
         eType="#//Type" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Person" eSuperTypes="#//Actor"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Room" eSuperTypes="#//PhysicalStructure"/>
 </ecore:EPackage>
