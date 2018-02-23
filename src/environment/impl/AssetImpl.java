@@ -39,6 +39,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link environment.impl.AssetImpl#getValue <em>Value</em>}</li>
  *   <li>{@link environment.impl.AssetImpl#getType <em>Type</em>}</li>
  *   <li>{@link environment.impl.AssetImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link environment.impl.AssetImpl#getControl <em>Control</em>}</li>
  * </ul>
  *
  * @generated
@@ -133,6 +134,26 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 	 * @ordered
 	 */
 	protected String description = DESCRIPTION_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getControl() <em>Control</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getControl()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CONTROL_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getControl() <em>Control</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getControl()
+	 * @generated
+	 * @ordered
+	 */
+	protected String control = CONTROL_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -257,6 +278,27 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getControl() {
+		return control;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setControl(String newControl) {
+		String oldControl = control;
+		control = newControl;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, EnvironmentPackage.ASSET__CONTROL, oldControl, control));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -288,6 +330,8 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 				return getType();
 			case EnvironmentPackage.ASSET__DESCRIPTION:
 				return getDescription();
+			case EnvironmentPackage.ASSET__CONTROL:
+				return getControl();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -322,6 +366,9 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 			case EnvironmentPackage.ASSET__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
+			case EnvironmentPackage.ASSET__CONTROL:
+				setControl((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -352,6 +399,9 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 			case EnvironmentPackage.ASSET__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
+			case EnvironmentPackage.ASSET__CONTROL:
+				setControl(CONTROL_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -376,6 +426,8 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 				return type != null && !type.isEmpty();
 			case EnvironmentPackage.ASSET__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
+			case EnvironmentPackage.ASSET__CONTROL:
+				return CONTROL_EDEFAULT == null ? control != null : !CONTROL_EDEFAULT.equals(control);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -396,6 +448,8 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 		result.append(value);
 		result.append(", description: ");
 		result.append(description);
+		result.append(", control: ");
+		result.append(control);
 		result.append(')');
 		return result.toString();
 	}

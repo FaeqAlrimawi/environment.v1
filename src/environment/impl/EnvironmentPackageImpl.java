@@ -708,6 +708,15 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getAsset_Control() {
+		return (EAttribute)assetEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getEnvironmentDiagram() {
 		return environmentDiagramEClass;
 	}
@@ -1138,6 +1147,7 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 		createEAttribute(assetEClass, ASSET__VALUE);
 		createEReference(assetEClass, ASSET__TYPE);
 		createEAttribute(assetEClass, ASSET__DESCRIPTION);
+		createEAttribute(assetEClass, ASSET__CONTROL);
 
 		environmentDiagramEClass = createEClass(ENVIRONMENT_DIAGRAM);
 		createEReference(environmentDiagramEClass, ENVIRONMENT_DIAGRAM__ASSET);
@@ -1301,6 +1311,7 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 		initEAttribute(getAsset_Value(), ecorePackage.getEInt(), "value", null, 0, 1, Asset.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAsset_Type(), this.getType(), null, "type", null, 0, -1, Asset.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAsset_Description(), ecorePackage.getEString(), "description", null, 0, 1, Asset.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAsset_Control(), ecorePackage.getEString(), "control", null, 0, 1, Asset.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(environmentDiagramEClass, EnvironmentDiagram.class, "EnvironmentDiagram", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getEnvironmentDiagram_Asset(), this.getAsset(), null, "asset", null, 0, -1, EnvironmentDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

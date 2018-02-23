@@ -122,13 +122,22 @@ public interface EnvironmentPackage extends EPackage {
 	int ASSET__DESCRIPTION = 5;
 
 	/**
+	 * The feature id for the '<em><b>Control</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSET__CONTROL = 6;
+
+	/**
 	 * The number of structural features of the '<em>Asset</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ASSET_FEATURE_COUNT = 6;
+	int ASSET_FEATURE_COUNT = 7;
 
 	/**
 	 * The number of operations of the '<em>Asset</em>' class.
@@ -202,6 +211,15 @@ public interface EnvironmentPackage extends EPackage {
 	 * @ordered
 	 */
 	int TANGIBLE__DESCRIPTION = ASSET__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Control</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TANGIBLE__CONTROL = ASSET__CONTROL;
 
 	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
@@ -302,6 +320,15 @@ public interface EnvironmentPackage extends EPackage {
 	 * @ordered
 	 */
 	int COMPUTING_DEVICE__DESCRIPTION = TANGIBLE__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Control</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPUTING_DEVICE__CONTROL = TANGIBLE__CONTROL;
 
 	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
@@ -431,6 +458,15 @@ public interface EnvironmentPackage extends EPackage {
 	int HVAC__DESCRIPTION = COMPUTING_DEVICE__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Control</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HVAC__CONTROL = COMPUTING_DEVICE__CONTROL;
+
+	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -556,6 +592,15 @@ public interface EnvironmentPackage extends EPackage {
 	 * @ordered
 	 */
 	int SMART_LIGHT__DESCRIPTION = COMPUTING_DEVICE__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Control</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SMART_LIGHT__CONTROL = COMPUTING_DEVICE__CONTROL;
 
 	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
@@ -685,6 +730,15 @@ public interface EnvironmentPackage extends EPackage {
 	int LAPTOP__DESCRIPTION = COMPUTING_DEVICE__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Control</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAPTOP__CONTROL = COMPUTING_DEVICE__CONTROL;
+
+	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -810,6 +864,15 @@ public interface EnvironmentPackage extends EPackage {
 	 * @ordered
 	 */
 	int DESKTOP__DESCRIPTION = COMPUTING_DEVICE__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Control</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DESKTOP__CONTROL = COMPUTING_DEVICE__CONTROL;
 
 	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
@@ -939,6 +1002,15 @@ public interface EnvironmentPackage extends EPackage {
 	int CCTV__DESCRIPTION = COMPUTING_DEVICE__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Control</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CCTV__CONTROL = COMPUTING_DEVICE__CONTROL;
+
+	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1064,6 +1136,15 @@ public interface EnvironmentPackage extends EPackage {
 	 * @ordered
 	 */
 	int SERVER__DESCRIPTION = COMPUTING_DEVICE__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Control</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SERVER__CONTROL = COMPUTING_DEVICE__CONTROL;
 
 	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
@@ -1193,6 +1274,15 @@ public interface EnvironmentPackage extends EPackage {
 	int INTANGIBLE__DESCRIPTION = ASSET__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Control</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTANGIBLE__CONTROL = ASSET__CONTROL;
+
+	/**
 	 * The feature id for the '<em><b>Parent Asset</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1293,6 +1383,15 @@ public interface EnvironmentPackage extends EPackage {
 	int DIGITAL__DESCRIPTION = INTANGIBLE__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Control</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIGITAL__CONTROL = INTANGIBLE__CONTROL;
+
+	/**
 	 * The feature id for the '<em><b>Parent Asset</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1391,6 +1490,15 @@ public interface EnvironmentPackage extends EPackage {
 	 * @ordered
 	 */
 	int FILE__DESCRIPTION = DIGITAL__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Control</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILE__CONTROL = DIGITAL__CONTROL;
 
 	/**
 	 * The feature id for the '<em><b>Parent Asset</b></em>' reference.
@@ -1511,6 +1619,15 @@ public interface EnvironmentPackage extends EPackage {
 	int PROCESS__DESCRIPTION = DIGITAL__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Control</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS__CONTROL = DIGITAL__CONTROL;
+
+	/**
 	 * The feature id for the '<em><b>Parent Asset</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1618,6 +1735,15 @@ public interface EnvironmentPackage extends EPackage {
 	 * @ordered
 	 */
 	int APPLICATION__DESCRIPTION = DIGITAL__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Control</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APPLICATION__CONTROL = DIGITAL__CONTROL;
 
 	/**
 	 * The feature id for the '<em><b>Parent Asset</b></em>' reference.
@@ -2303,6 +2429,15 @@ public interface EnvironmentPackage extends EPackage {
 	int ACTOR__DESCRIPTION = TANGIBLE__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Control</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTOR__CONTROL = TANGIBLE__CONTROL;
+
+	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2412,6 +2547,15 @@ public interface EnvironmentPackage extends EPackage {
 	int PHYSICAL_STRUCTURE__DESCRIPTION = TANGIBLE__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Control</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PHYSICAL_STRUCTURE__CONTROL = TANGIBLE__CONTROL;
+
+	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2510,6 +2654,15 @@ public interface EnvironmentPackage extends EPackage {
 	 * @ordered
 	 */
 	int INTELLECTUAL__DESCRIPTION = INTANGIBLE__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Control</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTELLECTUAL__CONTROL = INTANGIBLE__CONTROL;
 
 	/**
 	 * The feature id for the '<em><b>Parent Asset</b></em>' reference.
@@ -2722,6 +2875,15 @@ public interface EnvironmentPackage extends EPackage {
 	int ROOM__DESCRIPTION = PHYSICAL_STRUCTURE__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Control</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM__CONTROL = PHYSICAL_STRUCTURE__CONTROL;
+
+	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2822,6 +2984,15 @@ public interface EnvironmentPackage extends EPackage {
 	int FLOOR__DESCRIPTION = PHYSICAL_STRUCTURE__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Control</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FLOOR__CONTROL = PHYSICAL_STRUCTURE__CONTROL;
+
+	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2920,6 +3091,15 @@ public interface EnvironmentPackage extends EPackage {
 	 * @ordered
 	 */
 	int BUILDING__DESCRIPTION = PHYSICAL_STRUCTURE__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Control</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUILDING__CONTROL = PHYSICAL_STRUCTURE__CONTROL;
 
 	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
@@ -3422,6 +3602,17 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getAsset_Description();
+
+	/**
+	 * Returns the meta object for the attribute '{@link environment.Asset#getControl <em>Control</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Control</em>'.
+	 * @see environment.Asset#getControl()
+	 * @see #getAsset()
+	 * @generated
+	 */
+	EAttribute getAsset_Control();
 
 	/**
 	 * Returns the meta object for class '{@link environment.EnvironmentDiagram <em>Diagram</em>}'.
@@ -4218,6 +4409,14 @@ public interface EnvironmentPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ASSET__DESCRIPTION = eINSTANCE.getAsset_Description();
+
+		/**
+		 * The meta object literal for the '<em><b>Control</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ASSET__CONTROL = eINSTANCE.getAsset_Control();
 
 		/**
 		 * The meta object literal for the '{@link environment.impl.EnvironmentDiagramImpl <em>Diagram</em>}' class.
