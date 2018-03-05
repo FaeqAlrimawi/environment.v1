@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="environment" nsURI="http://www.example.org/environment" nsPrefix="environment">
-  <eClassifiers xsi:type="ecore:EClass" name="Tangible" eSuperTypes="#//Asset">
+  <eClassifiers xsi:type="ecore:EClass" name="PhysicalAsset" eSuperTypes="#//Asset">
     <eStructuralFeatures xsi:type="ecore:EReference" name="containedAssets" upperBound="-1"
         eType="#//Asset"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="parentAsset" eType="#//Tangible"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parentAsset" eType="#//PhysicalAsset"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ComputingDevice" eSuperTypes="#//Tangible">
+  <eClassifiers xsi:type="ecore:EClass" name="ComputingDevice" eSuperTypes="#//PhysicalAsset">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="status" eType="#//Status"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="canConnect" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="model" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -23,15 +23,14 @@
   <eClassifiers xsi:type="ecore:EClass" name="Desktop" eSuperTypes="#//ComputingDevice"/>
   <eClassifiers xsi:type="ecore:EClass" name="CCTV" eSuperTypes="#//ComputingDevice"/>
   <eClassifiers xsi:type="ecore:EClass" name="Server" eSuperTypes="#//ComputingDevice"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Digital" eSuperTypes="#//Intangible"/>
-  <eClassifiers xsi:type="ecore:EClass" name="File" eSuperTypes="#//Digital">
+  <eClassifiers xsi:type="ecore:EClass" name="File" eSuperTypes="#//DigitalAsset">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="status" eType="#//FileStatus"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="url" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Process" eSuperTypes="#//Digital">
+  <eClassifiers xsi:type="ecore:EClass" name="Process" eSuperTypes="#//DigitalAsset">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="status" eType="#//ProcessStatus"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Application" eSuperTypes="#//Digital">
+  <eClassifiers xsi:type="ecore:EClass" name="Application" eSuperTypes="#//DigitalAsset">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="status" eType="#//ProcessStatus"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="url" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
@@ -44,8 +43,8 @@
     <eLiterals name="CLOSED" value="1"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Connection" abstract="true">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="assetDes" eType="#//Asset"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="assetSrc" eType="#//Asset"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="asset1" eType="#//Asset"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="asset2" eType="#//Asset"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         iD="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -84,7 +83,7 @@
         eType="#//Property" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="credential" upperBound="-1"
         eType="#//Credential" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="rule" upperBound="-1" eType="#//Rule"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rule" upperBound="-1" eType="#//Action"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Port">
@@ -105,17 +104,16 @@
         iD="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Actor" eSuperTypes="#//Tangible">
+  <eClassifiers xsi:type="ecore:EClass" name="Actor" eSuperTypes="#//PhysicalAsset">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="role" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="PhysicalStructure" eSuperTypes="#//Tangible"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Intangible" abstract="true" eSuperTypes="#//Asset">
+  <eClassifiers xsi:type="ecore:EClass" name="PhysicalStructure" eSuperTypes="#//PhysicalAsset"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DigitalAsset" eSuperTypes="#//Asset">
     <eStructuralFeatures xsi:type="ecore:EReference" name="parentAsset" eType="#//Asset"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="containedAssets" upperBound="-1"
-        eType="#//Intangible"/>
+        eType="#//DigitalAsset"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Intellectual" eSuperTypes="#//Intangible"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Rule">
+  <eClassifiers xsi:type="ecore:EClass" name="Action">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         iD="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="preconditions" upperBound="-1"
@@ -133,4 +131,6 @@
   <eClassifiers xsi:type="ecore:EClass" name="Room" eSuperTypes="#//PhysicalStructure"/>
   <eClassifiers xsi:type="ecore:EClass" name="Floor" eSuperTypes="#//PhysicalStructure"/>
   <eClassifiers xsi:type="ecore:EClass" name="Building" eSuperTypes="#//PhysicalStructure"/>
+  <eClassifiers xsi:type="ecore:EClass" name="FireAlarm" eSuperTypes="#//ComputingDevice"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Workstation" eSuperTypes="#//ComputingDevice"/>
 </ecore:EPackage>

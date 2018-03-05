@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class PhysicalStructureImpl extends TangibleImpl implements PhysicalStructure {
+public class PhysicalStructureImpl extends PhysicalAssetImpl implements PhysicalStructure {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

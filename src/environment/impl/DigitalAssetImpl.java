@@ -3,8 +3,8 @@
 package environment.impl;
 
 import environment.Asset;
+import environment.DigitalAsset;
 import environment.EnvironmentPackage;
-import environment.Tangible;
 
 import java.util.Collection;
 
@@ -21,29 +21,19 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Tangible</b></em>'.
+ * An implementation of the model object '<em><b>Digital Asset</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link environment.impl.TangibleImpl#getContainedAssets <em>Contained Assets</em>}</li>
- *   <li>{@link environment.impl.TangibleImpl#getParentAsset <em>Parent Asset</em>}</li>
+ *   <li>{@link environment.impl.DigitalAssetImpl#getParentAsset <em>Parent Asset</em>}</li>
+ *   <li>{@link environment.impl.DigitalAssetImpl#getContainedAssets <em>Contained Assets</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class TangibleImpl extends AssetImpl implements Tangible {
-	/**
-	 * The cached value of the '{@link #getContainedAssets() <em>Contained Assets</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getContainedAssets()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Asset> containedAssets;
-
+public class DigitalAssetImpl extends AssetImpl implements DigitalAsset {
 	/**
 	 * The cached value of the '{@link #getParentAsset() <em>Parent Asset</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -52,14 +42,24 @@ public class TangibleImpl extends AssetImpl implements Tangible {
 	 * @generated
 	 * @ordered
 	 */
-	protected Tangible parentAsset;
+	protected Asset parentAsset;
+
+	/**
+	 * The cached value of the '{@link #getContainedAssets() <em>Contained Assets</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getContainedAssets()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<DigitalAsset> containedAssets;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected TangibleImpl() {
+	protected DigitalAssetImpl() {
 		super();
 	}
 
@@ -70,7 +70,7 @@ public class TangibleImpl extends AssetImpl implements Tangible {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return EnvironmentPackage.Literals.TANGIBLE;
+		return EnvironmentPackage.Literals.DIGITAL_ASSET;
 	}
 
 	/**
@@ -78,25 +78,13 @@ public class TangibleImpl extends AssetImpl implements Tangible {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Asset> getContainedAssets() {
-		if (containedAssets == null) {
-			containedAssets = new EObjectResolvingEList<Asset>(Asset.class, this, EnvironmentPackage.TANGIBLE__CONTAINED_ASSETS);
-		}
-		return containedAssets;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Tangible getParentAsset() {
+	public Asset getParentAsset() {
 		if (parentAsset != null && parentAsset.eIsProxy()) {
 			InternalEObject oldParentAsset = (InternalEObject)parentAsset;
-			parentAsset = (Tangible)eResolveProxy(oldParentAsset);
+			parentAsset = (Asset)eResolveProxy(oldParentAsset);
 			if (parentAsset != oldParentAsset) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, EnvironmentPackage.TANGIBLE__PARENT_ASSET, oldParentAsset, parentAsset));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, EnvironmentPackage.DIGITAL_ASSET__PARENT_ASSET, oldParentAsset, parentAsset));
 			}
 		}
 		return parentAsset;
@@ -107,7 +95,7 @@ public class TangibleImpl extends AssetImpl implements Tangible {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Tangible basicGetParentAsset() {
+	public Asset basicGetParentAsset() {
 		return parentAsset;
 	}
 
@@ -116,11 +104,23 @@ public class TangibleImpl extends AssetImpl implements Tangible {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setParentAsset(Tangible newParentAsset) {
-		Tangible oldParentAsset = parentAsset;
+	public void setParentAsset(Asset newParentAsset) {
+		Asset oldParentAsset = parentAsset;
 		parentAsset = newParentAsset;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EnvironmentPackage.TANGIBLE__PARENT_ASSET, oldParentAsset, parentAsset));
+			eNotify(new ENotificationImpl(this, Notification.SET, EnvironmentPackage.DIGITAL_ASSET__PARENT_ASSET, oldParentAsset, parentAsset));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<DigitalAsset> getContainedAssets() {
+		if (containedAssets == null) {
+			containedAssets = new EObjectResolvingEList<DigitalAsset>(DigitalAsset.class, this, EnvironmentPackage.DIGITAL_ASSET__CONTAINED_ASSETS);
+		}
+		return containedAssets;
 	}
 
 	/**
@@ -131,11 +131,11 @@ public class TangibleImpl extends AssetImpl implements Tangible {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case EnvironmentPackage.TANGIBLE__CONTAINED_ASSETS:
-				return getContainedAssets();
-			case EnvironmentPackage.TANGIBLE__PARENT_ASSET:
+			case EnvironmentPackage.DIGITAL_ASSET__PARENT_ASSET:
 				if (resolve) return getParentAsset();
 				return basicGetParentAsset();
+			case EnvironmentPackage.DIGITAL_ASSET__CONTAINED_ASSETS:
+				return getContainedAssets();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -149,12 +149,12 @@ public class TangibleImpl extends AssetImpl implements Tangible {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case EnvironmentPackage.TANGIBLE__CONTAINED_ASSETS:
-				getContainedAssets().clear();
-				getContainedAssets().addAll((Collection<? extends Asset>)newValue);
+			case EnvironmentPackage.DIGITAL_ASSET__PARENT_ASSET:
+				setParentAsset((Asset)newValue);
 				return;
-			case EnvironmentPackage.TANGIBLE__PARENT_ASSET:
-				setParentAsset((Tangible)newValue);
+			case EnvironmentPackage.DIGITAL_ASSET__CONTAINED_ASSETS:
+				getContainedAssets().clear();
+				getContainedAssets().addAll((Collection<? extends DigitalAsset>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -168,11 +168,11 @@ public class TangibleImpl extends AssetImpl implements Tangible {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case EnvironmentPackage.TANGIBLE__CONTAINED_ASSETS:
-				getContainedAssets().clear();
+			case EnvironmentPackage.DIGITAL_ASSET__PARENT_ASSET:
+				setParentAsset((Asset)null);
 				return;
-			case EnvironmentPackage.TANGIBLE__PARENT_ASSET:
-				setParentAsset((Tangible)null);
+			case EnvironmentPackage.DIGITAL_ASSET__CONTAINED_ASSETS:
+				getContainedAssets().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -186,12 +186,12 @@ public class TangibleImpl extends AssetImpl implements Tangible {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case EnvironmentPackage.TANGIBLE__CONTAINED_ASSETS:
-				return containedAssets != null && !containedAssets.isEmpty();
-			case EnvironmentPackage.TANGIBLE__PARENT_ASSET:
+			case EnvironmentPackage.DIGITAL_ASSET__PARENT_ASSET:
 				return parentAsset != null;
+			case EnvironmentPackage.DIGITAL_ASSET__CONTAINED_ASSETS:
+				return containedAssets != null && !containedAssets.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
 
-} //TangibleImpl
+} //DigitalAssetImpl

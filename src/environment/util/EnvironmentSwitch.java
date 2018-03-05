@@ -2,6 +2,7 @@
  */
 package environment.util;
 
+import environment.Action;
 import environment.Actor;
 import environment.Application;
 import environment.Asset;
@@ -11,26 +12,25 @@ import environment.ComputingDevice;
 import environment.Connection;
 import environment.Credential;
 import environment.Desktop;
-import environment.Digital;
+import environment.DigitalAsset;
 import environment.DigitalConnection;
 import environment.EnvironmentDiagram;
 import environment.EnvironmentPackage;
 import environment.File;
+import environment.FireAlarm;
 import environment.Floor;
 import environment.HVAC;
-import environment.Intangible;
-import environment.Intellectual;
 import environment.Laptop;
+import environment.PhysicalAsset;
 import environment.PhysicalConnection;
 import environment.PhysicalStructure;
 import environment.Port;
 import environment.Property;
 import environment.Room;
-import environment.Rule;
 import environment.Server;
 import environment.SmartLight;
-import environment.Tangible;
 import environment.Type;
+import environment.Workstation;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
@@ -94,17 +94,17 @@ public class EnvironmentSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case EnvironmentPackage.TANGIBLE: {
-				Tangible tangible = (Tangible)theEObject;
-				T result = caseTangible(tangible);
-				if (result == null) result = caseAsset(tangible);
+			case EnvironmentPackage.PHYSICAL_ASSET: {
+				PhysicalAsset physicalAsset = (PhysicalAsset)theEObject;
+				T result = casePhysicalAsset(physicalAsset);
+				if (result == null) result = caseAsset(physicalAsset);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case EnvironmentPackage.COMPUTING_DEVICE: {
 				ComputingDevice computingDevice = (ComputingDevice)theEObject;
 				T result = caseComputingDevice(computingDevice);
-				if (result == null) result = caseTangible(computingDevice);
+				if (result == null) result = casePhysicalAsset(computingDevice);
 				if (result == null) result = caseAsset(computingDevice);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -113,7 +113,7 @@ public class EnvironmentSwitch<T> extends Switch<T> {
 				HVAC hvac = (HVAC)theEObject;
 				T result = caseHVAC(hvac);
 				if (result == null) result = caseComputingDevice(hvac);
-				if (result == null) result = caseTangible(hvac);
+				if (result == null) result = casePhysicalAsset(hvac);
 				if (result == null) result = caseAsset(hvac);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -122,7 +122,7 @@ public class EnvironmentSwitch<T> extends Switch<T> {
 				SmartLight smartLight = (SmartLight)theEObject;
 				T result = caseSmartLight(smartLight);
 				if (result == null) result = caseComputingDevice(smartLight);
-				if (result == null) result = caseTangible(smartLight);
+				if (result == null) result = casePhysicalAsset(smartLight);
 				if (result == null) result = caseAsset(smartLight);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -131,7 +131,7 @@ public class EnvironmentSwitch<T> extends Switch<T> {
 				Laptop laptop = (Laptop)theEObject;
 				T result = caseLaptop(laptop);
 				if (result == null) result = caseComputingDevice(laptop);
-				if (result == null) result = caseTangible(laptop);
+				if (result == null) result = casePhysicalAsset(laptop);
 				if (result == null) result = caseAsset(laptop);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -140,7 +140,7 @@ public class EnvironmentSwitch<T> extends Switch<T> {
 				Desktop desktop = (Desktop)theEObject;
 				T result = caseDesktop(desktop);
 				if (result == null) result = caseComputingDevice(desktop);
-				if (result == null) result = caseTangible(desktop);
+				if (result == null) result = casePhysicalAsset(desktop);
 				if (result == null) result = caseAsset(desktop);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -149,7 +149,7 @@ public class EnvironmentSwitch<T> extends Switch<T> {
 				CCTV cctv = (CCTV)theEObject;
 				T result = caseCCTV(cctv);
 				if (result == null) result = caseComputingDevice(cctv);
-				if (result == null) result = caseTangible(cctv);
+				if (result == null) result = casePhysicalAsset(cctv);
 				if (result == null) result = caseAsset(cctv);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -158,24 +158,15 @@ public class EnvironmentSwitch<T> extends Switch<T> {
 				Server server = (Server)theEObject;
 				T result = caseServer(server);
 				if (result == null) result = caseComputingDevice(server);
-				if (result == null) result = caseTangible(server);
+				if (result == null) result = casePhysicalAsset(server);
 				if (result == null) result = caseAsset(server);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case EnvironmentPackage.DIGITAL: {
-				Digital digital = (Digital)theEObject;
-				T result = caseDigital(digital);
-				if (result == null) result = caseIntangible(digital);
-				if (result == null) result = caseAsset(digital);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case EnvironmentPackage.FILE: {
 				File file = (File)theEObject;
 				T result = caseFile(file);
-				if (result == null) result = caseDigital(file);
-				if (result == null) result = caseIntangible(file);
+				if (result == null) result = caseDigitalAsset(file);
 				if (result == null) result = caseAsset(file);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -183,8 +174,7 @@ public class EnvironmentSwitch<T> extends Switch<T> {
 			case EnvironmentPackage.PROCESS: {
 				environment.Process process = (environment.Process)theEObject;
 				T result = caseProcess(process);
-				if (result == null) result = caseDigital(process);
-				if (result == null) result = caseIntangible(process);
+				if (result == null) result = caseDigitalAsset(process);
 				if (result == null) result = caseAsset(process);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -192,8 +182,7 @@ public class EnvironmentSwitch<T> extends Switch<T> {
 			case EnvironmentPackage.APPLICATION: {
 				Application application = (Application)theEObject;
 				T result = caseApplication(application);
-				if (result == null) result = caseDigital(application);
-				if (result == null) result = caseIntangible(application);
+				if (result == null) result = caseDigitalAsset(application);
 				if (result == null) result = caseAsset(application);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -251,7 +240,7 @@ public class EnvironmentSwitch<T> extends Switch<T> {
 			case EnvironmentPackage.ACTOR: {
 				Actor actor = (Actor)theEObject;
 				T result = caseActor(actor);
-				if (result == null) result = caseTangible(actor);
+				if (result == null) result = casePhysicalAsset(actor);
 				if (result == null) result = caseAsset(actor);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -259,29 +248,21 @@ public class EnvironmentSwitch<T> extends Switch<T> {
 			case EnvironmentPackage.PHYSICAL_STRUCTURE: {
 				PhysicalStructure physicalStructure = (PhysicalStructure)theEObject;
 				T result = casePhysicalStructure(physicalStructure);
-				if (result == null) result = caseTangible(physicalStructure);
+				if (result == null) result = casePhysicalAsset(physicalStructure);
 				if (result == null) result = caseAsset(physicalStructure);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case EnvironmentPackage.INTANGIBLE: {
-				Intangible intangible = (Intangible)theEObject;
-				T result = caseIntangible(intangible);
-				if (result == null) result = caseAsset(intangible);
+			case EnvironmentPackage.DIGITAL_ASSET: {
+				DigitalAsset digitalAsset = (DigitalAsset)theEObject;
+				T result = caseDigitalAsset(digitalAsset);
+				if (result == null) result = caseAsset(digitalAsset);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case EnvironmentPackage.INTELLECTUAL: {
-				Intellectual intellectual = (Intellectual)theEObject;
-				T result = caseIntellectual(intellectual);
-				if (result == null) result = caseIntangible(intellectual);
-				if (result == null) result = caseAsset(intellectual);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case EnvironmentPackage.RULE: {
-				Rule rule = (Rule)theEObject;
-				T result = caseRule(rule);
+			case EnvironmentPackage.ACTION: {
+				Action action = (Action)theEObject;
+				T result = caseAction(action);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -295,7 +276,7 @@ public class EnvironmentSwitch<T> extends Switch<T> {
 				Room room = (Room)theEObject;
 				T result = caseRoom(room);
 				if (result == null) result = casePhysicalStructure(room);
-				if (result == null) result = caseTangible(room);
+				if (result == null) result = casePhysicalAsset(room);
 				if (result == null) result = caseAsset(room);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -304,7 +285,7 @@ public class EnvironmentSwitch<T> extends Switch<T> {
 				Floor floor = (Floor)theEObject;
 				T result = caseFloor(floor);
 				if (result == null) result = casePhysicalStructure(floor);
-				if (result == null) result = caseTangible(floor);
+				if (result == null) result = casePhysicalAsset(floor);
 				if (result == null) result = caseAsset(floor);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -313,8 +294,26 @@ public class EnvironmentSwitch<T> extends Switch<T> {
 				Building building = (Building)theEObject;
 				T result = caseBuilding(building);
 				if (result == null) result = casePhysicalStructure(building);
-				if (result == null) result = caseTangible(building);
+				if (result == null) result = casePhysicalAsset(building);
 				if (result == null) result = caseAsset(building);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case EnvironmentPackage.FIRE_ALARM: {
+				FireAlarm fireAlarm = (FireAlarm)theEObject;
+				T result = caseFireAlarm(fireAlarm);
+				if (result == null) result = caseComputingDevice(fireAlarm);
+				if (result == null) result = casePhysicalAsset(fireAlarm);
+				if (result == null) result = caseAsset(fireAlarm);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case EnvironmentPackage.WORKSTATION: {
+				Workstation workstation = (Workstation)theEObject;
+				T result = caseWorkstation(workstation);
+				if (result == null) result = caseComputingDevice(workstation);
+				if (result == null) result = casePhysicalAsset(workstation);
+				if (result == null) result = caseAsset(workstation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -323,17 +322,17 @@ public class EnvironmentSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Tangible</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Physical Asset</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Tangible</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Physical Asset</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseTangible(Tangible object) {
+	public T casePhysicalAsset(PhysicalAsset object) {
 		return null;
 	}
 
@@ -439,21 +438,6 @@ public class EnvironmentSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseServer(Server object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Digital</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Digital</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseDigital(Digital object) {
 		return null;
 	}
 
@@ -653,47 +637,32 @@ public class EnvironmentSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Intangible</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Digital Asset</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Intangible</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Digital Asset</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseIntangible(Intangible object) {
+	public T caseDigitalAsset(DigitalAsset object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Intellectual</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Action</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Intellectual</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Action</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseIntellectual(Intellectual object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Rule</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Rule</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseRule(Rule object) {
+	public T caseAction(Action object) {
 		return null;
 	}
 
@@ -754,6 +723,36 @@ public class EnvironmentSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseBuilding(Building object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Fire Alarm</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Fire Alarm</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFireAlarm(FireAlarm object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Workstation</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Workstation</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseWorkstation(Workstation object) {
 		return null;
 	}
 

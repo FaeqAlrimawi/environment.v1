@@ -6,22 +6,22 @@ import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Tangible</b></em>'.
+ * A representation of the model object '<em><b>Physical Asset</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link environment.Tangible#getContainedAssets <em>Contained Assets</em>}</li>
- *   <li>{@link environment.Tangible#getParentAsset <em>Parent Asset</em>}</li>
+ *   <li>{@link environment.PhysicalAsset#getContainedAssets <em>Contained Assets</em>}</li>
+ *   <li>{@link environment.PhysicalAsset#getParentAsset <em>Parent Asset</em>}</li>
  * </ul>
  *
- * @see environment.EnvironmentPackage#getTangible()
+ * @see environment.EnvironmentPackage#getPhysicalAsset()
  * @model
  * @generated
  */
-public interface Tangible extends Asset {
+public interface PhysicalAsset extends Asset {
 	/**
 	 * Returns the value of the '<em><b>Contained Assets</b></em>' reference list.
 	 * The list contents are of type {@link environment.Asset}.
@@ -32,7 +32,7 @@ public interface Tangible extends Asset {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Contained Assets</em>' reference list.
-	 * @see environment.EnvironmentPackage#getTangible_ContainedAssets()
+	 * @see environment.EnvironmentPackage#getPhysicalAsset_ContainedAssets()
 	 * @model
 	 * @generated
 	 */
@@ -47,21 +47,21 @@ public interface Tangible extends Asset {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Parent Asset</em>' reference.
-	 * @see #setParentAsset(Tangible)
-	 * @see environment.EnvironmentPackage#getTangible_ParentAsset()
+	 * @see #setParentAsset(PhysicalAsset)
+	 * @see environment.EnvironmentPackage#getPhysicalAsset_ParentAsset()
 	 * @model
 	 * @generated
 	 */
-	Tangible getParentAsset();
+	PhysicalAsset getParentAsset();
 
 	/**
-	 * Sets the value of the '{@link environment.Tangible#getParentAsset <em>Parent Asset</em>}' reference.
+	 * Sets the value of the '{@link environment.PhysicalAsset#getParentAsset <em>Parent Asset</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Parent Asset</em>' reference.
 	 * @see #getParentAsset()
 	 * @generated
 	 */
-	void setParentAsset(Tangible value);
+	void setParentAsset(PhysicalAsset value);
 
-} // Tangible
+} // PhysicalAsset

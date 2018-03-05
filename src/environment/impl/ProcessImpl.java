@@ -24,7 +24,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class ProcessImpl extends DigitalImpl implements environment.Process {
+public class ProcessImpl extends DigitalAssetImpl implements environment.Process {
 	/**
 	 * The default value of the '{@link #getStatus() <em>Status</em>}' attribute.
 	 * <!-- begin-user-doc -->

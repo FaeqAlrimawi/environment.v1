@@ -2,6 +2,7 @@
  */
 package environment.impl;
 
+import environment.Action;
 import environment.Actor;
 import environment.Application;
 import environment.Building;
@@ -9,29 +10,29 @@ import environment.CCTV;
 import environment.ComputingDevice;
 import environment.Credential;
 import environment.Desktop;
-import environment.Digital;
+import environment.DigitalAsset;
 import environment.DigitalConnection;
 import environment.EnvironmentDiagram;
 import environment.EnvironmentFactory;
 import environment.EnvironmentPackage;
 import environment.File;
 import environment.FileStatus;
+import environment.FireAlarm;
 import environment.Floor;
 import environment.HVAC;
-import environment.Intellectual;
 import environment.Laptop;
+import environment.PhysicalAsset;
 import environment.PhysicalConnection;
 import environment.PhysicalStructure;
 import environment.Port;
 import environment.ProcessStatus;
 import environment.Property;
 import environment.Room;
-import environment.Rule;
 import environment.Server;
 import environment.SmartLight;
 import environment.Status;
-import environment.Tangible;
 import environment.Type;
+import environment.Workstation;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -86,7 +87,7 @@ public class EnvironmentFactoryImpl extends EFactoryImpl implements EnvironmentF
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case EnvironmentPackage.TANGIBLE: return createTangible();
+			case EnvironmentPackage.PHYSICAL_ASSET: return createPhysicalAsset();
 			case EnvironmentPackage.COMPUTING_DEVICE: return createComputingDevice();
 			case EnvironmentPackage.HVAC: return createHVAC();
 			case EnvironmentPackage.SMART_LIGHT: return createSmartLight();
@@ -94,7 +95,6 @@ public class EnvironmentFactoryImpl extends EFactoryImpl implements EnvironmentF
 			case EnvironmentPackage.DESKTOP: return createDesktop();
 			case EnvironmentPackage.CCTV: return createCCTV();
 			case EnvironmentPackage.SERVER: return createServer();
-			case EnvironmentPackage.DIGITAL: return createDigital();
 			case EnvironmentPackage.FILE: return createFile();
 			case EnvironmentPackage.PROCESS: return createProcess();
 			case EnvironmentPackage.APPLICATION: return createApplication();
@@ -106,12 +106,14 @@ public class EnvironmentFactoryImpl extends EFactoryImpl implements EnvironmentF
 			case EnvironmentPackage.CREDENTIAL: return createCredential();
 			case EnvironmentPackage.ACTOR: return createActor();
 			case EnvironmentPackage.PHYSICAL_STRUCTURE: return createPhysicalStructure();
-			case EnvironmentPackage.INTELLECTUAL: return createIntellectual();
-			case EnvironmentPackage.RULE: return createRule();
+			case EnvironmentPackage.DIGITAL_ASSET: return createDigitalAsset();
+			case EnvironmentPackage.ACTION: return createAction();
 			case EnvironmentPackage.TYPE: return createType();
 			case EnvironmentPackage.ROOM: return createRoom();
 			case EnvironmentPackage.FLOOR: return createFloor();
 			case EnvironmentPackage.BUILDING: return createBuilding();
+			case EnvironmentPackage.FIRE_ALARM: return createFireAlarm();
+			case EnvironmentPackage.WORKSTATION: return createWorkstation();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -160,9 +162,9 @@ public class EnvironmentFactoryImpl extends EFactoryImpl implements EnvironmentF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Tangible createTangible() {
-		TangibleImpl tangible = new TangibleImpl();
-		return tangible;
+	public PhysicalAsset createPhysicalAsset() {
+		PhysicalAssetImpl physicalAsset = new PhysicalAssetImpl();
+		return physicalAsset;
 	}
 
 	/**
@@ -233,16 +235,6 @@ public class EnvironmentFactoryImpl extends EFactoryImpl implements EnvironmentF
 	public Server createServer() {
 		ServerImpl server = new ServerImpl();
 		return server;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Digital createDigital() {
-		DigitalImpl digital = new DigitalImpl();
-		return digital;
 	}
 
 	/**
@@ -360,9 +352,9 @@ public class EnvironmentFactoryImpl extends EFactoryImpl implements EnvironmentF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Intellectual createIntellectual() {
-		IntellectualImpl intellectual = new IntellectualImpl();
-		return intellectual;
+	public DigitalAsset createDigitalAsset() {
+		DigitalAssetImpl digitalAsset = new DigitalAssetImpl();
+		return digitalAsset;
 	}
 
 	/**
@@ -370,9 +362,9 @@ public class EnvironmentFactoryImpl extends EFactoryImpl implements EnvironmentF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Rule createRule() {
-		RuleImpl rule = new RuleImpl();
-		return rule;
+	public Action createAction() {
+		ActionImpl action = new ActionImpl();
+		return action;
 	}
 
 	/**
@@ -413,6 +405,26 @@ public class EnvironmentFactoryImpl extends EFactoryImpl implements EnvironmentF
 	public Building createBuilding() {
 		BuildingImpl building = new BuildingImpl();
 		return building;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FireAlarm createFireAlarm() {
+		FireAlarmImpl fireAlarm = new FireAlarmImpl();
+		return fireAlarm;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Workstation createWorkstation() {
+		WorkstationImpl workstation = new WorkstationImpl();
+		return workstation;
 	}
 
 	/**

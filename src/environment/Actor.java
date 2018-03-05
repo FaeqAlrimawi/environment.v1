@@ -19,7 +19,7 @@ package environment;
  * @model
  * @generated
  */
-public interface Actor extends Tangible {
+public interface Actor extends PhysicalAsset {
 	/**
 	 * Returns the value of the '<em><b>Role</b></em>' attribute.
 	 * <!-- begin-user-doc -->

@@ -4,7 +4,7 @@ package environment.impl;
 
 import environment.Asset;
 import environment.EnvironmentPackage;
-import environment.Intangible;
+import environment.PhysicalAsset;
 
 import java.util.Collection;
 
@@ -21,29 +21,19 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Intangible</b></em>'.
+ * An implementation of the model object '<em><b>Physical Asset</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link environment.impl.IntangibleImpl#getParentAsset <em>Parent Asset</em>}</li>
- *   <li>{@link environment.impl.IntangibleImpl#getContainedAssets <em>Contained Assets</em>}</li>
+ *   <li>{@link environment.impl.PhysicalAssetImpl#getContainedAssets <em>Contained Assets</em>}</li>
+ *   <li>{@link environment.impl.PhysicalAssetImpl#getParentAsset <em>Parent Asset</em>}</li>
  * </ul>
  *
  * @generated
  */
-public abstract class IntangibleImpl extends AssetImpl implements Intangible {
-	/**
-	 * The cached value of the '{@link #getParentAsset() <em>Parent Asset</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getParentAsset()
-	 * @generated
-	 * @ordered
-	 */
-	protected Asset parentAsset;
-
+public class PhysicalAssetImpl extends AssetImpl implements PhysicalAsset {
 	/**
 	 * The cached value of the '{@link #getContainedAssets() <em>Contained Assets</em>}' reference list.
 	 * <!-- begin-user-doc -->
@@ -52,14 +42,24 @@ public abstract class IntangibleImpl extends AssetImpl implements Intangible {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Intangible> containedAssets;
+	protected EList<Asset> containedAssets;
+
+	/**
+	 * The cached value of the '{@link #getParentAsset() <em>Parent Asset</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getParentAsset()
+	 * @generated
+	 * @ordered
+	 */
+	protected PhysicalAsset parentAsset;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected IntangibleImpl() {
+	protected PhysicalAssetImpl() {
 		super();
 	}
 
@@ -70,7 +70,7 @@ public abstract class IntangibleImpl extends AssetImpl implements Intangible {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return EnvironmentPackage.Literals.INTANGIBLE;
+		return EnvironmentPackage.Literals.PHYSICAL_ASSET;
 	}
 
 	/**
@@ -78,13 +78,25 @@ public abstract class IntangibleImpl extends AssetImpl implements Intangible {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Asset getParentAsset() {
+	public EList<Asset> getContainedAssets() {
+		if (containedAssets == null) {
+			containedAssets = new EObjectResolvingEList<Asset>(Asset.class, this, EnvironmentPackage.PHYSICAL_ASSET__CONTAINED_ASSETS);
+		}
+		return containedAssets;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PhysicalAsset getParentAsset() {
 		if (parentAsset != null && parentAsset.eIsProxy()) {
 			InternalEObject oldParentAsset = (InternalEObject)parentAsset;
-			parentAsset = (Asset)eResolveProxy(oldParentAsset);
+			parentAsset = (PhysicalAsset)eResolveProxy(oldParentAsset);
 			if (parentAsset != oldParentAsset) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, EnvironmentPackage.INTANGIBLE__PARENT_ASSET, oldParentAsset, parentAsset));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, EnvironmentPackage.PHYSICAL_ASSET__PARENT_ASSET, oldParentAsset, parentAsset));
 			}
 		}
 		return parentAsset;
@@ -95,7 +107,7 @@ public abstract class IntangibleImpl extends AssetImpl implements Intangible {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Asset basicGetParentAsset() {
+	public PhysicalAsset basicGetParentAsset() {
 		return parentAsset;
 	}
 
@@ -104,23 +116,11 @@ public abstract class IntangibleImpl extends AssetImpl implements Intangible {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setParentAsset(Asset newParentAsset) {
-		Asset oldParentAsset = parentAsset;
+	public void setParentAsset(PhysicalAsset newParentAsset) {
+		PhysicalAsset oldParentAsset = parentAsset;
 		parentAsset = newParentAsset;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EnvironmentPackage.INTANGIBLE__PARENT_ASSET, oldParentAsset, parentAsset));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<Intangible> getContainedAssets() {
-		if (containedAssets == null) {
-			containedAssets = new EObjectResolvingEList<Intangible>(Intangible.class, this, EnvironmentPackage.INTANGIBLE__CONTAINED_ASSETS);
-		}
-		return containedAssets;
+			eNotify(new ENotificationImpl(this, Notification.SET, EnvironmentPackage.PHYSICAL_ASSET__PARENT_ASSET, oldParentAsset, parentAsset));
 	}
 
 	/**
@@ -131,11 +131,11 @@ public abstract class IntangibleImpl extends AssetImpl implements Intangible {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case EnvironmentPackage.INTANGIBLE__PARENT_ASSET:
+			case EnvironmentPackage.PHYSICAL_ASSET__CONTAINED_ASSETS:
+				return getContainedAssets();
+			case EnvironmentPackage.PHYSICAL_ASSET__PARENT_ASSET:
 				if (resolve) return getParentAsset();
 				return basicGetParentAsset();
-			case EnvironmentPackage.INTANGIBLE__CONTAINED_ASSETS:
-				return getContainedAssets();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -149,12 +149,12 @@ public abstract class IntangibleImpl extends AssetImpl implements Intangible {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case EnvironmentPackage.INTANGIBLE__PARENT_ASSET:
-				setParentAsset((Asset)newValue);
-				return;
-			case EnvironmentPackage.INTANGIBLE__CONTAINED_ASSETS:
+			case EnvironmentPackage.PHYSICAL_ASSET__CONTAINED_ASSETS:
 				getContainedAssets().clear();
-				getContainedAssets().addAll((Collection<? extends Intangible>)newValue);
+				getContainedAssets().addAll((Collection<? extends Asset>)newValue);
+				return;
+			case EnvironmentPackage.PHYSICAL_ASSET__PARENT_ASSET:
+				setParentAsset((PhysicalAsset)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -168,11 +168,11 @@ public abstract class IntangibleImpl extends AssetImpl implements Intangible {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case EnvironmentPackage.INTANGIBLE__PARENT_ASSET:
-				setParentAsset((Asset)null);
-				return;
-			case EnvironmentPackage.INTANGIBLE__CONTAINED_ASSETS:
+			case EnvironmentPackage.PHYSICAL_ASSET__CONTAINED_ASSETS:
 				getContainedAssets().clear();
+				return;
+			case EnvironmentPackage.PHYSICAL_ASSET__PARENT_ASSET:
+				setParentAsset((PhysicalAsset)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -186,12 +186,12 @@ public abstract class IntangibleImpl extends AssetImpl implements Intangible {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case EnvironmentPackage.INTANGIBLE__PARENT_ASSET:
-				return parentAsset != null;
-			case EnvironmentPackage.INTANGIBLE__CONTAINED_ASSETS:
+			case EnvironmentPackage.PHYSICAL_ASSET__CONTAINED_ASSETS:
 				return containedAssets != null && !containedAssets.isEmpty();
+			case EnvironmentPackage.PHYSICAL_ASSET__PARENT_ASSET:
+				return parentAsset != null;
 		}
 		return super.eIsSet(featureID);
 	}
 
-} //IntangibleImpl
+} //PhysicalAssetImpl

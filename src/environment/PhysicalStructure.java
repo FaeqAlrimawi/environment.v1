@@ -13,5 +13,5 @@ package environment;
  * @model
  * @generated
  */
-public interface PhysicalStructure extends Tangible {
+public interface PhysicalStructure extends PhysicalAsset {
 } // PhysicalStructure

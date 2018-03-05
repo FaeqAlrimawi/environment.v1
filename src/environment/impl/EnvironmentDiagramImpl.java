@@ -2,6 +2,7 @@
  */
 package environment.impl;
 
+import environment.Action;
 import environment.Asset;
 import environment.Connection;
 import environment.Credential;
@@ -9,7 +10,6 @@ import environment.EnvironmentDiagram;
 import environment.EnvironmentPackage;
 import environment.Port;
 import environment.Property;
-import environment.Rule;
 
 import java.util.Collection;
 
@@ -102,7 +102,7 @@ public class EnvironmentDiagramImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Rule> rule;
+	protected EList<Action> rule;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -188,9 +188,9 @@ public class EnvironmentDiagramImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Rule> getRule() {
+	public EList<Action> getRule() {
 		if (rule == null) {
-			rule = new EObjectContainmentEList<Rule>(Rule.class, this, EnvironmentPackage.ENVIRONMENT_DIAGRAM__RULE);
+			rule = new EObjectContainmentEList<Action>(Action.class, this, EnvironmentPackage.ENVIRONMENT_DIAGRAM__RULE);
 		}
 		return rule;
 	}
@@ -274,7 +274,7 @@ public class EnvironmentDiagramImpl extends MinimalEObjectImpl.Container impleme
 				return;
 			case EnvironmentPackage.ENVIRONMENT_DIAGRAM__RULE:
 				getRule().clear();
-				getRule().addAll((Collection<? extends Rule>)newValue);
+				getRule().addAll((Collection<? extends Action>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

@@ -27,7 +27,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class ComputingDeviceImpl extends TangibleImpl implements ComputingDevice {
+public class ComputingDeviceImpl extends PhysicalAssetImpl implements ComputingDevice {
 	/**
 	 * The default value of the '{@link #getStatus() <em>Status</em>}' attribute.
 	 * <!-- begin-user-doc -->

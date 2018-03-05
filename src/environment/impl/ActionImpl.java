@@ -2,8 +2,8 @@
  */
 package environment.impl;
 
+import environment.Action;
 import environment.EnvironmentPackage;
-import environment.Rule;
 
 import java.util.Collection;
 
@@ -20,21 +20,21 @@ import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Rule</b></em>'.
+ * An implementation of the model object '<em><b>Action</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link environment.impl.RuleImpl#getName <em>Name</em>}</li>
- *   <li>{@link environment.impl.RuleImpl#getPreconditions <em>Preconditions</em>}</li>
- *   <li>{@link environment.impl.RuleImpl#getPostconditions <em>Postconditions</em>}</li>
- *   <li>{@link environment.impl.RuleImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link environment.impl.ActionImpl#getName <em>Name</em>}</li>
+ *   <li>{@link environment.impl.ActionImpl#getPreconditions <em>Preconditions</em>}</li>
+ *   <li>{@link environment.impl.ActionImpl#getPostconditions <em>Postconditions</em>}</li>
+ *   <li>{@link environment.impl.ActionImpl#getDescription <em>Description</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class RuleImpl extends MinimalEObjectImpl.Container implements Rule {
+public class ActionImpl extends MinimalEObjectImpl.Container implements Action {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -100,7 +100,7 @@ public class RuleImpl extends MinimalEObjectImpl.Container implements Rule {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected RuleImpl() {
+	protected ActionImpl() {
 		super();
 	}
 
@@ -111,7 +111,7 @@ public class RuleImpl extends MinimalEObjectImpl.Container implements Rule {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return EnvironmentPackage.Literals.RULE;
+		return EnvironmentPackage.Literals.ACTION;
 	}
 
 	/**
@@ -132,7 +132,7 @@ public class RuleImpl extends MinimalEObjectImpl.Container implements Rule {
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EnvironmentPackage.RULE__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, EnvironmentPackage.ACTION__NAME, oldName, name));
 	}
 
 	/**
@@ -142,7 +142,7 @@ public class RuleImpl extends MinimalEObjectImpl.Container implements Rule {
 	 */
 	public EList<String> getPreconditions() {
 		if (preconditions == null) {
-			preconditions = new EDataTypeUniqueEList<String>(String.class, this, EnvironmentPackage.RULE__PRECONDITIONS);
+			preconditions = new EDataTypeUniqueEList<String>(String.class, this, EnvironmentPackage.ACTION__PRECONDITIONS);
 		}
 		return preconditions;
 	}
@@ -154,7 +154,7 @@ public class RuleImpl extends MinimalEObjectImpl.Container implements Rule {
 	 */
 	public EList<String> getPostconditions() {
 		if (postconditions == null) {
-			postconditions = new EDataTypeUniqueEList<String>(String.class, this, EnvironmentPackage.RULE__POSTCONDITIONS);
+			postconditions = new EDataTypeUniqueEList<String>(String.class, this, EnvironmentPackage.ACTION__POSTCONDITIONS);
 		}
 		return postconditions;
 	}
@@ -177,7 +177,7 @@ public class RuleImpl extends MinimalEObjectImpl.Container implements Rule {
 		String oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EnvironmentPackage.RULE__DESCRIPTION, oldDescription, description));
+			eNotify(new ENotificationImpl(this, Notification.SET, EnvironmentPackage.ACTION__DESCRIPTION, oldDescription, description));
 	}
 
 	/**
@@ -188,13 +188,13 @@ public class RuleImpl extends MinimalEObjectImpl.Container implements Rule {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case EnvironmentPackage.RULE__NAME:
+			case EnvironmentPackage.ACTION__NAME:
 				return getName();
-			case EnvironmentPackage.RULE__PRECONDITIONS:
+			case EnvironmentPackage.ACTION__PRECONDITIONS:
 				return getPreconditions();
-			case EnvironmentPackage.RULE__POSTCONDITIONS:
+			case EnvironmentPackage.ACTION__POSTCONDITIONS:
 				return getPostconditions();
-			case EnvironmentPackage.RULE__DESCRIPTION:
+			case EnvironmentPackage.ACTION__DESCRIPTION:
 				return getDescription();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -209,18 +209,18 @@ public class RuleImpl extends MinimalEObjectImpl.Container implements Rule {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case EnvironmentPackage.RULE__NAME:
+			case EnvironmentPackage.ACTION__NAME:
 				setName((String)newValue);
 				return;
-			case EnvironmentPackage.RULE__PRECONDITIONS:
+			case EnvironmentPackage.ACTION__PRECONDITIONS:
 				getPreconditions().clear();
 				getPreconditions().addAll((Collection<? extends String>)newValue);
 				return;
-			case EnvironmentPackage.RULE__POSTCONDITIONS:
+			case EnvironmentPackage.ACTION__POSTCONDITIONS:
 				getPostconditions().clear();
 				getPostconditions().addAll((Collection<? extends String>)newValue);
 				return;
-			case EnvironmentPackage.RULE__DESCRIPTION:
+			case EnvironmentPackage.ACTION__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
 		}
@@ -235,16 +235,16 @@ public class RuleImpl extends MinimalEObjectImpl.Container implements Rule {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case EnvironmentPackage.RULE__NAME:
+			case EnvironmentPackage.ACTION__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case EnvironmentPackage.RULE__PRECONDITIONS:
+			case EnvironmentPackage.ACTION__PRECONDITIONS:
 				getPreconditions().clear();
 				return;
-			case EnvironmentPackage.RULE__POSTCONDITIONS:
+			case EnvironmentPackage.ACTION__POSTCONDITIONS:
 				getPostconditions().clear();
 				return;
-			case EnvironmentPackage.RULE__DESCRIPTION:
+			case EnvironmentPackage.ACTION__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
 		}
@@ -259,13 +259,13 @@ public class RuleImpl extends MinimalEObjectImpl.Container implements Rule {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case EnvironmentPackage.RULE__NAME:
+			case EnvironmentPackage.ACTION__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case EnvironmentPackage.RULE__PRECONDITIONS:
+			case EnvironmentPackage.ACTION__PRECONDITIONS:
 				return preconditions != null && !preconditions.isEmpty();
-			case EnvironmentPackage.RULE__POSTCONDITIONS:
+			case EnvironmentPackage.ACTION__POSTCONDITIONS:
 				return postconditions != null && !postconditions.isEmpty();
-			case EnvironmentPackage.RULE__DESCRIPTION:
+			case EnvironmentPackage.ACTION__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 		}
 		return super.eIsSet(featureID);
@@ -293,4 +293,4 @@ public class RuleImpl extends MinimalEObjectImpl.Container implements Rule {
 		return result.toString();
 	}
 
-} //RuleImpl
+} //ActionImpl

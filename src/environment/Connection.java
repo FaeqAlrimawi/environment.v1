@@ -15,8 +15,8 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link environment.Connection#getAssetDes <em>Asset Des</em>}</li>
- *   <li>{@link environment.Connection#getAssetSrc <em>Asset Src</em>}</li>
+ *   <li>{@link environment.Connection#getAsset1 <em>Asset1</em>}</li>
+ *   <li>{@link environment.Connection#getAsset2 <em>Asset2</em>}</li>
  *   <li>{@link environment.Connection#getName <em>Name</em>}</li>
  *   <li>{@link environment.Connection#getType <em>Type</em>}</li>
  *   <li>{@link environment.Connection#getConstraints <em>Constraints</em>}</li>
@@ -32,56 +32,56 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Connection extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Asset Des</b></em>' reference.
+	 * Returns the value of the '<em><b>Asset1</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Asset Des</em>' reference isn't clear,
+	 * If the meaning of the '<em>Asset1</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Asset Des</em>' reference.
-	 * @see #setAssetDes(Asset)
-	 * @see environment.EnvironmentPackage#getConnection_AssetDes()
+	 * @return the value of the '<em>Asset1</em>' reference.
+	 * @see #setAsset1(Asset)
+	 * @see environment.EnvironmentPackage#getConnection_Asset1()
 	 * @model
 	 * @generated
 	 */
-	Asset getAssetDes();
+	Asset getAsset1();
 
 	/**
-	 * Sets the value of the '{@link environment.Connection#getAssetDes <em>Asset Des</em>}' reference.
+	 * Sets the value of the '{@link environment.Connection#getAsset1 <em>Asset1</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Asset Des</em>' reference.
-	 * @see #getAssetDes()
+	 * @param value the new value of the '<em>Asset1</em>' reference.
+	 * @see #getAsset1()
 	 * @generated
 	 */
-	void setAssetDes(Asset value);
+	void setAsset1(Asset value);
 
 	/**
-	 * Returns the value of the '<em><b>Asset Src</b></em>' reference.
+	 * Returns the value of the '<em><b>Asset2</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Asset Src</em>' reference isn't clear,
+	 * If the meaning of the '<em>Asset2</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Asset Src</em>' reference.
-	 * @see #setAssetSrc(Asset)
-	 * @see environment.EnvironmentPackage#getConnection_AssetSrc()
+	 * @return the value of the '<em>Asset2</em>' reference.
+	 * @see #setAsset2(Asset)
+	 * @see environment.EnvironmentPackage#getConnection_Asset2()
 	 * @model
 	 * @generated
 	 */
-	Asset getAssetSrc();
+	Asset getAsset2();
 
 	/**
-	 * Sets the value of the '{@link environment.Connection#getAssetSrc <em>Asset Src</em>}' reference.
+	 * Sets the value of the '{@link environment.Connection#getAsset2 <em>Asset2</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Asset Src</em>' reference.
-	 * @see #getAssetSrc()
+	 * @param value the new value of the '<em>Asset2</em>' reference.
+	 * @see #getAsset2()
 	 * @generated
 	 */
-	void setAssetSrc(Asset value);
+	void setAsset2(Asset value);
 
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.

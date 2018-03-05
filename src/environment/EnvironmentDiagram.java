@@ -110,7 +110,7 @@ public interface EnvironmentDiagram extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Rule</b></em>' containment reference list.
-	 * The list contents are of type {@link environment.Rule}.
+	 * The list contents are of type {@link environment.Action}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Rule</em>' containment reference list isn't clear,
@@ -122,6 +122,6 @@ public interface EnvironmentDiagram extends EObject {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Rule> getRule();
+	EList<Action> getRule();
 
 } // EnvironmentDiagram

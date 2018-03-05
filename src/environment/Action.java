@@ -8,24 +8,24 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Rule</b></em>'.
+ * A representation of the model object '<em><b>Action</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link environment.Rule#getName <em>Name</em>}</li>
- *   <li>{@link environment.Rule#getPreconditions <em>Preconditions</em>}</li>
- *   <li>{@link environment.Rule#getPostconditions <em>Postconditions</em>}</li>
- *   <li>{@link environment.Rule#getDescription <em>Description</em>}</li>
+ *   <li>{@link environment.Action#getName <em>Name</em>}</li>
+ *   <li>{@link environment.Action#getPreconditions <em>Preconditions</em>}</li>
+ *   <li>{@link environment.Action#getPostconditions <em>Postconditions</em>}</li>
+ *   <li>{@link environment.Action#getDescription <em>Description</em>}</li>
  * </ul>
  *
- * @see environment.EnvironmentPackage#getRule()
+ * @see environment.EnvironmentPackage#getAction()
  * @model
  * @generated
  */
-public interface Rule extends EObject {
+public interface Action extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -36,14 +36,14 @@ public interface Rule extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see environment.EnvironmentPackage#getRule_Name()
+	 * @see environment.EnvironmentPackage#getAction_Name()
 	 * @model id="true"
 	 * @generated
 	 */
 	String getName();
 
 	/**
-	 * Sets the value of the '{@link environment.Rule#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link environment.Action#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Name</em>' attribute.
@@ -62,7 +62,7 @@ public interface Rule extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Preconditions</em>' attribute list.
-	 * @see environment.EnvironmentPackage#getRule_Preconditions()
+	 * @see environment.EnvironmentPackage#getAction_Preconditions()
 	 * @model
 	 * @generated
 	 */
@@ -78,7 +78,7 @@ public interface Rule extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Postconditions</em>' attribute list.
-	 * @see environment.EnvironmentPackage#getRule_Postconditions()
+	 * @see environment.EnvironmentPackage#getAction_Postconditions()
 	 * @model
 	 * @generated
 	 */
@@ -94,14 +94,14 @@ public interface Rule extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Description</em>' attribute.
 	 * @see #setDescription(String)
-	 * @see environment.EnvironmentPackage#getRule_Description()
+	 * @see environment.EnvironmentPackage#getAction_Description()
 	 * @model
 	 * @generated
 	 */
 	String getDescription();
 
 	/**
-	 * Sets the value of the '{@link environment.Rule#getDescription <em>Description</em>}' attribute.
+	 * Sets the value of the '{@link environment.Action#getDescription <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Description</em>' attribute.
@@ -110,4 +110,4 @@ public interface Rule extends EObject {
 	 */
 	void setDescription(String value);
 
-} // Rule
+} // Action

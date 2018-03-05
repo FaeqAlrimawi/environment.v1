@@ -19,7 +19,7 @@ package environment;
  * @model
  * @generated
  */
-public interface Process extends Digital {
+public interface Process extends DigitalAsset {
 	/**
 	 * Returns the value of the '<em><b>Status</b></em>' attribute.
 	 * The literals are from the enumeration {@link environment.ProcessStatus}.

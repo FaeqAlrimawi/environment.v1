@@ -21,7 +21,7 @@ package environment;
  * @model
  * @generated
  */
-public interface ComputingDevice extends Tangible {
+public interface ComputingDevice extends PhysicalAsset {
 	/**
 	 * Returns the value of the '<em><b>Status</b></em>' attribute.
 	 * The literals are from the enumeration {@link environment.Status}.

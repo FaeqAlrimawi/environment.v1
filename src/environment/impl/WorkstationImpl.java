@@ -3,24 +3,24 @@
 package environment.impl;
 
 import environment.EnvironmentPackage;
-import environment.Intellectual;
+import environment.Workstation;
 
 import org.eclipse.emf.ecore.EClass;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Intellectual</b></em>'.
+ * An implementation of the model object '<em><b>Workstation</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class IntellectualImpl extends IntangibleImpl implements Intellectual {
+public class WorkstationImpl extends ComputingDeviceImpl implements Workstation {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected IntellectualImpl() {
+	protected WorkstationImpl() {
 		super();
 	}
 
@@ -31,7 +31,7 @@ public class IntellectualImpl extends IntangibleImpl implements Intellectual {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return EnvironmentPackage.Literals.INTELLECTUAL;
+		return EnvironmentPackage.Literals.WORKSTATION;
 	}
 
-} //IntellectualImpl
+} //WorkstationImpl

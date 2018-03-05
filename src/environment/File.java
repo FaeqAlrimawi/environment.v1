@@ -20,7 +20,7 @@ package environment;
  * @model
  * @generated
  */
-public interface File extends Digital {
+public interface File extends DigitalAsset {
 	/**
 	 * Returns the value of the '<em><b>Status</b></em>' attribute.
 	 * The literals are from the enumeration {@link environment.FileStatus}.

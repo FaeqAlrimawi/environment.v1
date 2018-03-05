@@ -32,8 +32,8 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link environment.impl.ConnectionImpl#getAssetDes <em>Asset Des</em>}</li>
- *   <li>{@link environment.impl.ConnectionImpl#getAssetSrc <em>Asset Src</em>}</li>
+ *   <li>{@link environment.impl.ConnectionImpl#getAsset1 <em>Asset1</em>}</li>
+ *   <li>{@link environment.impl.ConnectionImpl#getAsset2 <em>Asset2</em>}</li>
  *   <li>{@link environment.impl.ConnectionImpl#getName <em>Name</em>}</li>
  *   <li>{@link environment.impl.ConnectionImpl#getType <em>Type</em>}</li>
  *   <li>{@link environment.impl.ConnectionImpl#getConstraints <em>Constraints</em>}</li>
@@ -47,24 +47,24 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  */
 public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implements Connection {
 	/**
-	 * The cached value of the '{@link #getAssetDes() <em>Asset Des</em>}' reference.
+	 * The cached value of the '{@link #getAsset1() <em>Asset1</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAssetDes()
+	 * @see #getAsset1()
 	 * @generated
 	 * @ordered
 	 */
-	protected Asset assetDes;
+	protected Asset asset1;
 
 	/**
-	 * The cached value of the '{@link #getAssetSrc() <em>Asset Src</em>}' reference.
+	 * The cached value of the '{@link #getAsset2() <em>Asset2</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAssetSrc()
+	 * @see #getAsset2()
 	 * @generated
 	 * @ordered
 	 */
-	protected Asset assetSrc;
+	protected Asset asset2;
 
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -200,16 +200,16 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Asset getAssetDes() {
-		if (assetDes != null && assetDes.eIsProxy()) {
-			InternalEObject oldAssetDes = (InternalEObject)assetDes;
-			assetDes = (Asset)eResolveProxy(oldAssetDes);
-			if (assetDes != oldAssetDes) {
+	public Asset getAsset1() {
+		if (asset1 != null && asset1.eIsProxy()) {
+			InternalEObject oldAsset1 = (InternalEObject)asset1;
+			asset1 = (Asset)eResolveProxy(oldAsset1);
+			if (asset1 != oldAsset1) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, EnvironmentPackage.CONNECTION__ASSET_DES, oldAssetDes, assetDes));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, EnvironmentPackage.CONNECTION__ASSET1, oldAsset1, asset1));
 			}
 		}
-		return assetDes;
+		return asset1;
 	}
 
 	/**
@@ -217,8 +217,8 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Asset basicGetAssetDes() {
-		return assetDes;
+	public Asset basicGetAsset1() {
+		return asset1;
 	}
 
 	/**
@@ -226,11 +226,11 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAssetDes(Asset newAssetDes) {
-		Asset oldAssetDes = assetDes;
-		assetDes = newAssetDes;
+	public void setAsset1(Asset newAsset1) {
+		Asset oldAsset1 = asset1;
+		asset1 = newAsset1;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EnvironmentPackage.CONNECTION__ASSET_DES, oldAssetDes, assetDes));
+			eNotify(new ENotificationImpl(this, Notification.SET, EnvironmentPackage.CONNECTION__ASSET1, oldAsset1, asset1));
 	}
 
 	/**
@@ -238,16 +238,16 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Asset getAssetSrc() {
-		if (assetSrc != null && assetSrc.eIsProxy()) {
-			InternalEObject oldAssetSrc = (InternalEObject)assetSrc;
-			assetSrc = (Asset)eResolveProxy(oldAssetSrc);
-			if (assetSrc != oldAssetSrc) {
+	public Asset getAsset2() {
+		if (asset2 != null && asset2.eIsProxy()) {
+			InternalEObject oldAsset2 = (InternalEObject)asset2;
+			asset2 = (Asset)eResolveProxy(oldAsset2);
+			if (asset2 != oldAsset2) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, EnvironmentPackage.CONNECTION__ASSET_SRC, oldAssetSrc, assetSrc));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, EnvironmentPackage.CONNECTION__ASSET2, oldAsset2, asset2));
 			}
 		}
-		return assetSrc;
+		return asset2;
 	}
 
 	/**
@@ -255,8 +255,8 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Asset basicGetAssetSrc() {
-		return assetSrc;
+	public Asset basicGetAsset2() {
+		return asset2;
 	}
 
 	/**
@@ -264,11 +264,11 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAssetSrc(Asset newAssetSrc) {
-		Asset oldAssetSrc = assetSrc;
-		assetSrc = newAssetSrc;
+	public void setAsset2(Asset newAsset2) {
+		Asset oldAsset2 = asset2;
+		asset2 = newAsset2;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EnvironmentPackage.CONNECTION__ASSET_SRC, oldAssetSrc, assetSrc));
+			eNotify(new ENotificationImpl(this, Notification.SET, EnvironmentPackage.CONNECTION__ASSET2, oldAsset2, asset2));
 	}
 
 	/**
@@ -444,12 +444,12 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case EnvironmentPackage.CONNECTION__ASSET_DES:
-				if (resolve) return getAssetDes();
-				return basicGetAssetDes();
-			case EnvironmentPackage.CONNECTION__ASSET_SRC:
-				if (resolve) return getAssetSrc();
-				return basicGetAssetSrc();
+			case EnvironmentPackage.CONNECTION__ASSET1:
+				if (resolve) return getAsset1();
+				return basicGetAsset1();
+			case EnvironmentPackage.CONNECTION__ASSET2:
+				if (resolve) return getAsset2();
+				return basicGetAsset2();
 			case EnvironmentPackage.CONNECTION__NAME:
 				return getName();
 			case EnvironmentPackage.CONNECTION__TYPE:
@@ -477,11 +477,11 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case EnvironmentPackage.CONNECTION__ASSET_DES:
-				setAssetDes((Asset)newValue);
+			case EnvironmentPackage.CONNECTION__ASSET1:
+				setAsset1((Asset)newValue);
 				return;
-			case EnvironmentPackage.CONNECTION__ASSET_SRC:
-				setAssetSrc((Asset)newValue);
+			case EnvironmentPackage.CONNECTION__ASSET2:
+				setAsset2((Asset)newValue);
 				return;
 			case EnvironmentPackage.CONNECTION__NAME:
 				setName((String)newValue);
@@ -518,11 +518,11 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case EnvironmentPackage.CONNECTION__ASSET_DES:
-				setAssetDes((Asset)null);
+			case EnvironmentPackage.CONNECTION__ASSET1:
+				setAsset1((Asset)null);
 				return;
-			case EnvironmentPackage.CONNECTION__ASSET_SRC:
-				setAssetSrc((Asset)null);
+			case EnvironmentPackage.CONNECTION__ASSET2:
+				setAsset2((Asset)null);
 				return;
 			case EnvironmentPackage.CONNECTION__NAME:
 				setName(NAME_EDEFAULT);
@@ -557,10 +557,10 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case EnvironmentPackage.CONNECTION__ASSET_DES:
-				return assetDes != null;
-			case EnvironmentPackage.CONNECTION__ASSET_SRC:
-				return assetSrc != null;
+			case EnvironmentPackage.CONNECTION__ASSET1:
+				return asset1 != null;
+			case EnvironmentPackage.CONNECTION__ASSET2:
+				return asset2 != null;
 			case EnvironmentPackage.CONNECTION__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case EnvironmentPackage.CONNECTION__TYPE:

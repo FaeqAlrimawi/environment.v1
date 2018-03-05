@@ -22,13 +22,13 @@ public interface EnvironmentFactory extends EFactory {
 	EnvironmentFactory eINSTANCE = environment.impl.EnvironmentFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>Tangible</em>'.
+	 * Returns a new object of class '<em>Physical Asset</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Tangible</em>'.
+	 * @return a new object of class '<em>Physical Asset</em>'.
 	 * @generated
 	 */
-	Tangible createTangible();
+	PhysicalAsset createPhysicalAsset();
 
 	/**
 	 * Returns a new object of class '<em>Computing Device</em>'.
@@ -92,15 +92,6 @@ public interface EnvironmentFactory extends EFactory {
 	 * @generated
 	 */
 	Server createServer();
-
-	/**
-	 * Returns a new object of class '<em>Digital</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Digital</em>'.
-	 * @generated
-	 */
-	Digital createDigital();
 
 	/**
 	 * Returns a new object of class '<em>File</em>'.
@@ -202,22 +193,22 @@ public interface EnvironmentFactory extends EFactory {
 	PhysicalStructure createPhysicalStructure();
 
 	/**
-	 * Returns a new object of class '<em>Intellectual</em>'.
+	 * Returns a new object of class '<em>Digital Asset</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Intellectual</em>'.
+	 * @return a new object of class '<em>Digital Asset</em>'.
 	 * @generated
 	 */
-	Intellectual createIntellectual();
+	DigitalAsset createDigitalAsset();
 
 	/**
-	 * Returns a new object of class '<em>Rule</em>'.
+	 * Returns a new object of class '<em>Action</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Rule</em>'.
+	 * @return a new object of class '<em>Action</em>'.
 	 * @generated
 	 */
-	Rule createRule();
+	Action createAction();
 
 	/**
 	 * Returns a new object of class '<em>Type</em>'.
@@ -254,6 +245,24 @@ public interface EnvironmentFactory extends EFactory {
 	 * @generated
 	 */
 	Building createBuilding();
+
+	/**
+	 * Returns a new object of class '<em>Fire Alarm</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Fire Alarm</em>'.
+	 * @generated
+	 */
+	FireAlarm createFireAlarm();
+
+	/**
+	 * Returns a new object of class '<em>Workstation</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Workstation</em>'.
+	 * @generated
+	 */
+	Workstation createWorkstation();
 
 	/**
 	 * Returns the package supported by this factory.

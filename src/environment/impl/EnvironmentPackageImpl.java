@@ -2,6 +2,7 @@
  */
 package environment.impl;
 
+import environment.Action;
 import environment.Actor;
 import environment.Application;
 import environment.Asset;
@@ -10,29 +11,28 @@ import environment.ComputingDevice;
 import environment.Connection;
 import environment.Credential;
 import environment.Desktop;
-import environment.Digital;
+import environment.DigitalAsset;
 import environment.DigitalConnection;
 import environment.EnvironmentDiagram;
 import environment.EnvironmentFactory;
 import environment.EnvironmentPackage;
 import environment.File;
 import environment.FileStatus;
+import environment.FireAlarm;
 import environment.Floor;
-import environment.Intangible;
-import environment.Intellectual;
 import environment.Laptop;
+import environment.PhysicalAsset;
 import environment.PhysicalConnection;
 import environment.PhysicalStructure;
 import environment.Port;
 import environment.ProcessStatus;
 import environment.Property;
 import environment.Room;
-import environment.Rule;
 import environment.Server;
 import environment.SmartLight;
 import environment.Status;
-import environment.Tangible;
 import environment.Type;
+import environment.Workstation;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -54,7 +54,7 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass tangibleEClass = null;
+	private EClass physicalAssetEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -104,13 +104,6 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 	 * @generated
 	 */
 	private EClass serverEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass digitalEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -208,21 +201,14 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass intangibleEClass = null;
+	private EClass digitalAssetEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass intellectualEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass ruleEClass = null;
+	private EClass actionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -251,6 +237,20 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 	 * @generated
 	 */
 	private EClass buildingEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass fireAlarmEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass workstationEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -339,8 +339,8 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getTangible() {
-		return tangibleEClass;
+	public EClass getPhysicalAsset() {
+		return physicalAssetEClass;
 	}
 
 	/**
@@ -348,8 +348,8 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getTangible_ContainedAssets() {
-		return (EReference)tangibleEClass.getEStructuralFeatures().get(0);
+	public EReference getPhysicalAsset_ContainedAssets() {
+		return (EReference)physicalAssetEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -357,8 +357,8 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getTangible_ParentAsset() {
-		return (EReference)tangibleEClass.getEStructuralFeatures().get(1);
+	public EReference getPhysicalAsset_ParentAsset() {
+		return (EReference)physicalAssetEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -456,15 +456,6 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getDigital() {
-		return digitalEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getFile() {
 		return fileEClass;
 	}
@@ -546,7 +537,7 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getConnection_AssetDes() {
+	public EReference getConnection_Asset1() {
 		return (EReference)connectionEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -555,7 +546,7 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getConnection_AssetSrc() {
+	public EReference getConnection_Asset2() {
 		return (EReference)connectionEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -906,8 +897,8 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getIntangible() {
-		return intangibleEClass;
+	public EClass getDigitalAsset() {
+		return digitalAssetEClass;
 	}
 
 	/**
@@ -915,8 +906,8 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getIntangible_ParentAsset() {
-		return (EReference)intangibleEClass.getEStructuralFeatures().get(0);
+	public EReference getDigitalAsset_ParentAsset() {
+		return (EReference)digitalAssetEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -924,8 +915,8 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getIntangible_ContainedAssets() {
-		return (EReference)intangibleEClass.getEStructuralFeatures().get(1);
+	public EReference getDigitalAsset_ContainedAssets() {
+		return (EReference)digitalAssetEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -933,8 +924,8 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getIntellectual() {
-		return intellectualEClass;
+	public EClass getAction() {
+		return actionEClass;
 	}
 
 	/**
@@ -942,8 +933,8 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getRule() {
-		return ruleEClass;
+	public EAttribute getAction_Name() {
+		return (EAttribute)actionEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -951,8 +942,8 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getRule_Name() {
-		return (EAttribute)ruleEClass.getEStructuralFeatures().get(0);
+	public EAttribute getAction_Preconditions() {
+		return (EAttribute)actionEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -960,8 +951,8 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getRule_Preconditions() {
-		return (EAttribute)ruleEClass.getEStructuralFeatures().get(1);
+	public EAttribute getAction_Postconditions() {
+		return (EAttribute)actionEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -969,17 +960,8 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getRule_Postconditions() {
-		return (EAttribute)ruleEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getRule_Description() {
-		return (EAttribute)ruleEClass.getEStructuralFeatures().get(3);
+	public EAttribute getAction_Description() {
+		return (EAttribute)actionEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -1041,6 +1023,24 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getFireAlarm() {
+		return fireAlarmEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getWorkstation() {
+		return workstationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getStatus() {
 		return statusEEnum;
 	}
@@ -1091,9 +1091,9 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 		isCreated = true;
 
 		// Create classes and their features
-		tangibleEClass = createEClass(TANGIBLE);
-		createEReference(tangibleEClass, TANGIBLE__CONTAINED_ASSETS);
-		createEReference(tangibleEClass, TANGIBLE__PARENT_ASSET);
+		physicalAssetEClass = createEClass(PHYSICAL_ASSET);
+		createEReference(physicalAssetEClass, PHYSICAL_ASSET__CONTAINED_ASSETS);
+		createEReference(physicalAssetEClass, PHYSICAL_ASSET__PARENT_ASSET);
 
 		computingDeviceEClass = createEClass(COMPUTING_DEVICE);
 		createEAttribute(computingDeviceEClass, COMPUTING_DEVICE__STATUS);
@@ -1112,8 +1112,6 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 
 		serverEClass = createEClass(SERVER);
 
-		digitalEClass = createEClass(DIGITAL);
-
 		fileEClass = createEClass(FILE);
 		createEAttribute(fileEClass, FILE__STATUS);
 		createEAttribute(fileEClass, FILE__URL);
@@ -1126,8 +1124,8 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 		createEAttribute(applicationEClass, APPLICATION__URL);
 
 		connectionEClass = createEClass(CONNECTION);
-		createEReference(connectionEClass, CONNECTION__ASSET_DES);
-		createEReference(connectionEClass, CONNECTION__ASSET_SRC);
+		createEReference(connectionEClass, CONNECTION__ASSET1);
+		createEReference(connectionEClass, CONNECTION__ASSET2);
 		createEAttribute(connectionEClass, CONNECTION__NAME);
 		createEAttribute(connectionEClass, CONNECTION__TYPE);
 		createEAttribute(connectionEClass, CONNECTION__CONSTRAINTS);
@@ -1176,17 +1174,15 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 
 		physicalStructureEClass = createEClass(PHYSICAL_STRUCTURE);
 
-		intangibleEClass = createEClass(INTANGIBLE);
-		createEReference(intangibleEClass, INTANGIBLE__PARENT_ASSET);
-		createEReference(intangibleEClass, INTANGIBLE__CONTAINED_ASSETS);
+		digitalAssetEClass = createEClass(DIGITAL_ASSET);
+		createEReference(digitalAssetEClass, DIGITAL_ASSET__PARENT_ASSET);
+		createEReference(digitalAssetEClass, DIGITAL_ASSET__CONTAINED_ASSETS);
 
-		intellectualEClass = createEClass(INTELLECTUAL);
-
-		ruleEClass = createEClass(RULE);
-		createEAttribute(ruleEClass, RULE__NAME);
-		createEAttribute(ruleEClass, RULE__PRECONDITIONS);
-		createEAttribute(ruleEClass, RULE__POSTCONDITIONS);
-		createEAttribute(ruleEClass, RULE__DESCRIPTION);
+		actionEClass = createEClass(ACTION);
+		createEAttribute(actionEClass, ACTION__NAME);
+		createEAttribute(actionEClass, ACTION__PRECONDITIONS);
+		createEAttribute(actionEClass, ACTION__POSTCONDITIONS);
+		createEAttribute(actionEClass, ACTION__DESCRIPTION);
 
 		typeEClass = createEClass(TYPE);
 		createEAttribute(typeEClass, TYPE__NAME);
@@ -1197,6 +1193,10 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 		floorEClass = createEClass(FLOOR);
 
 		buildingEClass = createEClass(BUILDING);
+
+		fireAlarmEClass = createEClass(FIRE_ALARM);
+
+		workstationEClass = createEClass(WORKSTATION);
 
 		// Create enums
 		statusEEnum = createEEnum(STATUS);
@@ -1232,32 +1232,32 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		tangibleEClass.getESuperTypes().add(this.getAsset());
-		computingDeviceEClass.getESuperTypes().add(this.getTangible());
+		physicalAssetEClass.getESuperTypes().add(this.getAsset());
+		computingDeviceEClass.getESuperTypes().add(this.getPhysicalAsset());
 		hvacEClass.getESuperTypes().add(this.getComputingDevice());
 		smartLightEClass.getESuperTypes().add(this.getComputingDevice());
 		laptopEClass.getESuperTypes().add(this.getComputingDevice());
 		desktopEClass.getESuperTypes().add(this.getComputingDevice());
 		cctvEClass.getESuperTypes().add(this.getComputingDevice());
 		serverEClass.getESuperTypes().add(this.getComputingDevice());
-		digitalEClass.getESuperTypes().add(this.getIntangible());
-		fileEClass.getESuperTypes().add(this.getDigital());
-		processEClass.getESuperTypes().add(this.getDigital());
-		applicationEClass.getESuperTypes().add(this.getDigital());
+		fileEClass.getESuperTypes().add(this.getDigitalAsset());
+		processEClass.getESuperTypes().add(this.getDigitalAsset());
+		applicationEClass.getESuperTypes().add(this.getDigitalAsset());
 		digitalConnectionEClass.getESuperTypes().add(this.getConnection());
 		physicalConnectionEClass.getESuperTypes().add(this.getConnection());
-		actorEClass.getESuperTypes().add(this.getTangible());
-		physicalStructureEClass.getESuperTypes().add(this.getTangible());
-		intangibleEClass.getESuperTypes().add(this.getAsset());
-		intellectualEClass.getESuperTypes().add(this.getIntangible());
+		actorEClass.getESuperTypes().add(this.getPhysicalAsset());
+		physicalStructureEClass.getESuperTypes().add(this.getPhysicalAsset());
+		digitalAssetEClass.getESuperTypes().add(this.getAsset());
 		roomEClass.getESuperTypes().add(this.getPhysicalStructure());
 		floorEClass.getESuperTypes().add(this.getPhysicalStructure());
 		buildingEClass.getESuperTypes().add(this.getPhysicalStructure());
+		fireAlarmEClass.getESuperTypes().add(this.getComputingDevice());
+		workstationEClass.getESuperTypes().add(this.getComputingDevice());
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(tangibleEClass, Tangible.class, "Tangible", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTangible_ContainedAssets(), this.getAsset(), null, "containedAssets", null, 0, -1, Tangible.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTangible_ParentAsset(), this.getTangible(), null, "parentAsset", null, 0, 1, Tangible.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(physicalAssetEClass, PhysicalAsset.class, "PhysicalAsset", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getPhysicalAsset_ContainedAssets(), this.getAsset(), null, "containedAssets", null, 0, -1, PhysicalAsset.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPhysicalAsset_ParentAsset(), this.getPhysicalAsset(), null, "parentAsset", null, 0, 1, PhysicalAsset.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(computingDeviceEClass, ComputingDevice.class, "ComputingDevice", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getComputingDevice_Status(), this.getStatus(), "status", null, 0, 1, ComputingDevice.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1276,8 +1276,6 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 
 		initEClass(serverEClass, Server.class, "Server", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(digitalEClass, Digital.class, "Digital", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
 		initEClass(fileEClass, File.class, "File", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getFile_Status(), this.getFileStatus(), "status", null, 0, 1, File.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getFile_Url(), ecorePackage.getEString(), "url", null, 0, 1, File.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1290,8 +1288,8 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 		initEAttribute(getApplication_Url(), ecorePackage.getEString(), "url", null, 0, 1, Application.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(connectionEClass, Connection.class, "Connection", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getConnection_AssetDes(), this.getAsset(), null, "assetDes", null, 0, 1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getConnection_AssetSrc(), this.getAsset(), null, "assetSrc", null, 0, 1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getConnection_Asset1(), this.getAsset(), null, "asset1", null, 0, 1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getConnection_Asset2(), this.getAsset(), null, "asset2", null, 0, 1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getConnection_Name(), ecorePackage.getEString(), "name", null, 0, 1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getConnection_Type(), ecorePackage.getEString(), "type", null, 0, 1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getConnection_Constraints(), ecorePackage.getEString(), "constraints", null, 0, -1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1319,7 +1317,7 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 		initEReference(getEnvironmentDiagram_Port(), this.getPort(), null, "port", null, 0, -1, EnvironmentDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEnvironmentDiagram_Property(), this.getProperty(), null, "property", null, 0, -1, EnvironmentDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEnvironmentDiagram_Credential(), this.getCredential(), null, "credential", null, 0, -1, EnvironmentDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getEnvironmentDiagram_Rule(), this.getRule(), null, "rule", null, 0, -1, EnvironmentDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEnvironmentDiagram_Rule(), this.getAction(), null, "rule", null, 0, -1, EnvironmentDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(portEClass, Port.class, "Port", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getPort_Asset(), this.getAsset(), null, "asset", null, 0, 1, Port.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1340,17 +1338,15 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 
 		initEClass(physicalStructureEClass, PhysicalStructure.class, "PhysicalStructure", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(intangibleEClass, Intangible.class, "Intangible", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getIntangible_ParentAsset(), this.getAsset(), null, "parentAsset", null, 0, 1, Intangible.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getIntangible_ContainedAssets(), this.getIntangible(), null, "containedAssets", null, 0, -1, Intangible.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(digitalAssetEClass, DigitalAsset.class, "DigitalAsset", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getDigitalAsset_ParentAsset(), this.getAsset(), null, "parentAsset", null, 0, 1, DigitalAsset.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDigitalAsset_ContainedAssets(), this.getDigitalAsset(), null, "containedAssets", null, 0, -1, DigitalAsset.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(intellectualEClass, Intellectual.class, "Intellectual", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(ruleEClass, Rule.class, "Rule", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getRule_Name(), ecorePackage.getEString(), "name", null, 0, 1, Rule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getRule_Preconditions(), ecorePackage.getEString(), "preconditions", null, 0, -1, Rule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getRule_Postconditions(), ecorePackage.getEString(), "postconditions", null, 0, -1, Rule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getRule_Description(), ecorePackage.getEString(), "description", null, 0, 1, Rule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(actionEClass, Action.class, "Action", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getAction_Name(), ecorePackage.getEString(), "name", null, 0, 1, Action.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAction_Preconditions(), ecorePackage.getEString(), "preconditions", null, 0, -1, Action.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAction_Postconditions(), ecorePackage.getEString(), "postconditions", null, 0, -1, Action.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAction_Description(), ecorePackage.getEString(), "description", null, 0, 1, Action.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(typeEClass, Type.class, "Type", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getType_Name(), ecorePackage.getEString(), "name", null, 0, 1, Type.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1361,6 +1357,10 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 		initEClass(floorEClass, Floor.class, "Floor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(buildingEClass, Building.class, "Building", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(fireAlarmEClass, FireAlarm.class, "FireAlarm", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(workstationEClass, Workstation.class, "Workstation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals
 		initEEnum(statusEEnum, Status.class, "Status");

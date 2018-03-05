@@ -2,6 +2,7 @@
  */
 package environment.util;
 
+import environment.Action;
 import environment.Actor;
 import environment.Application;
 import environment.Asset;
@@ -11,26 +12,25 @@ import environment.ComputingDevice;
 import environment.Connection;
 import environment.Credential;
 import environment.Desktop;
-import environment.Digital;
+import environment.DigitalAsset;
 import environment.DigitalConnection;
 import environment.EnvironmentDiagram;
 import environment.EnvironmentPackage;
 import environment.File;
+import environment.FireAlarm;
 import environment.Floor;
 import environment.HVAC;
-import environment.Intangible;
-import environment.Intellectual;
 import environment.Laptop;
+import environment.PhysicalAsset;
 import environment.PhysicalConnection;
 import environment.PhysicalStructure;
 import environment.Port;
 import environment.Property;
 import environment.Room;
-import environment.Rule;
 import environment.Server;
 import environment.SmartLight;
-import environment.Tangible;
 import environment.Type;
+import environment.Workstation;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
@@ -96,8 +96,8 @@ public class EnvironmentAdapterFactory extends AdapterFactoryImpl {
 	protected EnvironmentSwitch<Adapter> modelSwitch =
 		new EnvironmentSwitch<Adapter>() {
 			@Override
-			public Adapter caseTangible(Tangible object) {
-				return createTangibleAdapter();
+			public Adapter casePhysicalAsset(PhysicalAsset object) {
+				return createPhysicalAssetAdapter();
 			}
 			@Override
 			public Adapter caseComputingDevice(ComputingDevice object) {
@@ -126,10 +126,6 @@ public class EnvironmentAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseServer(Server object) {
 				return createServerAdapter();
-			}
-			@Override
-			public Adapter caseDigital(Digital object) {
-				return createDigitalAdapter();
 			}
 			@Override
 			public Adapter caseFile(File object) {
@@ -184,16 +180,12 @@ public class EnvironmentAdapterFactory extends AdapterFactoryImpl {
 				return createPhysicalStructureAdapter();
 			}
 			@Override
-			public Adapter caseIntangible(Intangible object) {
-				return createIntangibleAdapter();
+			public Adapter caseDigitalAsset(DigitalAsset object) {
+				return createDigitalAssetAdapter();
 			}
 			@Override
-			public Adapter caseIntellectual(Intellectual object) {
-				return createIntellectualAdapter();
-			}
-			@Override
-			public Adapter caseRule(Rule object) {
-				return createRuleAdapter();
+			public Adapter caseAction(Action object) {
+				return createActionAdapter();
 			}
 			@Override
 			public Adapter caseType(Type object) {
@@ -210,6 +202,14 @@ public class EnvironmentAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseBuilding(Building object) {
 				return createBuildingAdapter();
+			}
+			@Override
+			public Adapter caseFireAlarm(FireAlarm object) {
+				return createFireAlarmAdapter();
+			}
+			@Override
+			public Adapter caseWorkstation(Workstation object) {
+				return createWorkstationAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -232,16 +232,16 @@ public class EnvironmentAdapterFactory extends AdapterFactoryImpl {
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link environment.Tangible <em>Tangible</em>}'.
+	 * Creates a new adapter for an object of class '{@link environment.PhysicalAsset <em>Physical Asset</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see environment.Tangible
+	 * @see environment.PhysicalAsset
 	 * @generated
 	 */
-	public Adapter createTangibleAdapter() {
+	public Adapter createPhysicalAssetAdapter() {
 		return null;
 	}
 
@@ -340,20 +340,6 @@ public class EnvironmentAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createServerAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link environment.Digital <em>Digital</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see environment.Digital
-	 * @generated
-	 */
-	public Adapter createDigitalAdapter() {
 		return null;
 	}
 
@@ -540,44 +526,30 @@ public class EnvironmentAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link environment.Intangible <em>Intangible</em>}'.
+	 * Creates a new adapter for an object of class '{@link environment.DigitalAsset <em>Digital Asset</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see environment.Intangible
+	 * @see environment.DigitalAsset
 	 * @generated
 	 */
-	public Adapter createIntangibleAdapter() {
+	public Adapter createDigitalAssetAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link environment.Intellectual <em>Intellectual</em>}'.
+	 * Creates a new adapter for an object of class '{@link environment.Action <em>Action</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see environment.Intellectual
+	 * @see environment.Action
 	 * @generated
 	 */
-	public Adapter createIntellectualAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link environment.Rule <em>Rule</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see environment.Rule
-	 * @generated
-	 */
-	public Adapter createRuleAdapter() {
+	public Adapter createActionAdapter() {
 		return null;
 	}
 
@@ -634,6 +606,34 @@ public class EnvironmentAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createBuildingAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link environment.FireAlarm <em>Fire Alarm</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see environment.FireAlarm
+	 * @generated
+	 */
+	public Adapter createFireAlarmAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link environment.Workstation <em>Workstation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see environment.Workstation
+	 * @generated
+	 */
+	public Adapter createWorkstationAdapter() {
 		return null;
 	}
 

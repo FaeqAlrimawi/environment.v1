@@ -65,7 +65,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @see environment.impl.EnvironmentPackageImpl#getAsset()
 	 * @generated
 	 */
-	int ASSET = 15;
+	int ASSET = 14;
 
 	/**
 	 * The feature id for the '<em><b>Connections</b></em>' reference list.
@@ -149,14 +149,14 @@ public interface EnvironmentPackage extends EPackage {
 	int ASSET_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link environment.impl.TangibleImpl <em>Tangible</em>}' class.
+	 * The meta object id for the '{@link environment.impl.PhysicalAssetImpl <em>Physical Asset</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see environment.impl.TangibleImpl
-	 * @see environment.impl.EnvironmentPackageImpl#getTangible()
+	 * @see environment.impl.PhysicalAssetImpl
+	 * @see environment.impl.EnvironmentPackageImpl#getPhysicalAsset()
 	 * @generated
 	 */
-	int TANGIBLE = 0;
+	int PHYSICAL_ASSET = 0;
 
 	/**
 	 * The feature id for the '<em><b>Connections</b></em>' reference list.
@@ -165,7 +165,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TANGIBLE__CONNECTIONS = ASSET__CONNECTIONS;
+	int PHYSICAL_ASSET__CONNECTIONS = ASSET__CONNECTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -174,7 +174,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TANGIBLE__NAME = ASSET__NAME;
+	int PHYSICAL_ASSET__NAME = ASSET__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Property</b></em>' containment reference list.
@@ -183,7 +183,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TANGIBLE__PROPERTY = ASSET__PROPERTY;
+	int PHYSICAL_ASSET__PROPERTY = ASSET__PROPERTY;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -192,7 +192,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TANGIBLE__VALUE = ASSET__VALUE;
+	int PHYSICAL_ASSET__VALUE = ASSET__VALUE;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
@@ -201,7 +201,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TANGIBLE__TYPE = ASSET__TYPE;
+	int PHYSICAL_ASSET__TYPE = ASSET__TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -210,7 +210,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TANGIBLE__DESCRIPTION = ASSET__DESCRIPTION;
+	int PHYSICAL_ASSET__DESCRIPTION = ASSET__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Control</b></em>' attribute.
@@ -219,7 +219,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TANGIBLE__CONTROL = ASSET__CONTROL;
+	int PHYSICAL_ASSET__CONTROL = ASSET__CONTROL;
 
 	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
@@ -228,7 +228,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TANGIBLE__CONTAINED_ASSETS = ASSET_FEATURE_COUNT + 0;
+	int PHYSICAL_ASSET__CONTAINED_ASSETS = ASSET_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Parent Asset</b></em>' reference.
@@ -237,25 +237,25 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TANGIBLE__PARENT_ASSET = ASSET_FEATURE_COUNT + 1;
+	int PHYSICAL_ASSET__PARENT_ASSET = ASSET_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of structural features of the '<em>Tangible</em>' class.
+	 * The number of structural features of the '<em>Physical Asset</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TANGIBLE_FEATURE_COUNT = ASSET_FEATURE_COUNT + 2;
+	int PHYSICAL_ASSET_FEATURE_COUNT = ASSET_FEATURE_COUNT + 2;
 
 	/**
-	 * The number of operations of the '<em>Tangible</em>' class.
+	 * The number of operations of the '<em>Physical Asset</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TANGIBLE_OPERATION_COUNT = ASSET_OPERATION_COUNT + 0;
+	int PHYSICAL_ASSET_OPERATION_COUNT = ASSET_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link environment.impl.ComputingDeviceImpl <em>Computing Device</em>}' class.
@@ -274,7 +274,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPUTING_DEVICE__CONNECTIONS = TANGIBLE__CONNECTIONS;
+	int COMPUTING_DEVICE__CONNECTIONS = PHYSICAL_ASSET__CONNECTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -283,7 +283,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPUTING_DEVICE__NAME = TANGIBLE__NAME;
+	int COMPUTING_DEVICE__NAME = PHYSICAL_ASSET__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Property</b></em>' containment reference list.
@@ -292,7 +292,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPUTING_DEVICE__PROPERTY = TANGIBLE__PROPERTY;
+	int COMPUTING_DEVICE__PROPERTY = PHYSICAL_ASSET__PROPERTY;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -301,7 +301,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPUTING_DEVICE__VALUE = TANGIBLE__VALUE;
+	int COMPUTING_DEVICE__VALUE = PHYSICAL_ASSET__VALUE;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
@@ -310,7 +310,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPUTING_DEVICE__TYPE = TANGIBLE__TYPE;
+	int COMPUTING_DEVICE__TYPE = PHYSICAL_ASSET__TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -319,7 +319,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPUTING_DEVICE__DESCRIPTION = TANGIBLE__DESCRIPTION;
+	int COMPUTING_DEVICE__DESCRIPTION = PHYSICAL_ASSET__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Control</b></em>' attribute.
@@ -328,7 +328,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPUTING_DEVICE__CONTROL = TANGIBLE__CONTROL;
+	int COMPUTING_DEVICE__CONTROL = PHYSICAL_ASSET__CONTROL;
 
 	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
@@ -337,7 +337,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPUTING_DEVICE__CONTAINED_ASSETS = TANGIBLE__CONTAINED_ASSETS;
+	int COMPUTING_DEVICE__CONTAINED_ASSETS = PHYSICAL_ASSET__CONTAINED_ASSETS;
 
 	/**
 	 * The feature id for the '<em><b>Parent Asset</b></em>' reference.
@@ -346,7 +346,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPUTING_DEVICE__PARENT_ASSET = TANGIBLE__PARENT_ASSET;
+	int COMPUTING_DEVICE__PARENT_ASSET = PHYSICAL_ASSET__PARENT_ASSET;
 
 	/**
 	 * The feature id for the '<em><b>Status</b></em>' attribute.
@@ -355,7 +355,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPUTING_DEVICE__STATUS = TANGIBLE_FEATURE_COUNT + 0;
+	int COMPUTING_DEVICE__STATUS = PHYSICAL_ASSET_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Can Connect</b></em>' attribute.
@@ -364,7 +364,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPUTING_DEVICE__CAN_CONNECT = TANGIBLE_FEATURE_COUNT + 1;
+	int COMPUTING_DEVICE__CAN_CONNECT = PHYSICAL_ASSET_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Model</b></em>' attribute.
@@ -373,7 +373,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPUTING_DEVICE__MODEL = TANGIBLE_FEATURE_COUNT + 2;
+	int COMPUTING_DEVICE__MODEL = PHYSICAL_ASSET_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Computing Device</em>' class.
@@ -382,7 +382,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPUTING_DEVICE_FEATURE_COUNT = TANGIBLE_FEATURE_COUNT + 3;
+	int COMPUTING_DEVICE_FEATURE_COUNT = PHYSICAL_ASSET_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Computing Device</em>' class.
@@ -391,7 +391,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPUTING_DEVICE_OPERATION_COUNT = TANGIBLE_OPERATION_COUNT + 0;
+	int COMPUTING_DEVICE_OPERATION_COUNT = PHYSICAL_ASSET_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link environment.impl.HVACImpl <em>HVAC</em>}' class.
@@ -1210,14 +1210,14 @@ public interface EnvironmentPackage extends EPackage {
 	int SERVER_OPERATION_COUNT = COMPUTING_DEVICE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link environment.impl.IntangibleImpl <em>Intangible</em>}' class.
+	 * The meta object id for the '{@link environment.impl.DigitalAssetImpl <em>Digital Asset</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see environment.impl.IntangibleImpl
-	 * @see environment.impl.EnvironmentPackageImpl#getIntangible()
+	 * @see environment.impl.DigitalAssetImpl
+	 * @see environment.impl.EnvironmentPackageImpl#getDigitalAsset()
 	 * @generated
 	 */
-	int INTANGIBLE = 22;
+	int DIGITAL_ASSET = 21;
 
 	/**
 	 * The feature id for the '<em><b>Connections</b></em>' reference list.
@@ -1226,7 +1226,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTANGIBLE__CONNECTIONS = ASSET__CONNECTIONS;
+	int DIGITAL_ASSET__CONNECTIONS = ASSET__CONNECTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1235,7 +1235,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTANGIBLE__NAME = ASSET__NAME;
+	int DIGITAL_ASSET__NAME = ASSET__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Property</b></em>' containment reference list.
@@ -1244,7 +1244,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTANGIBLE__PROPERTY = ASSET__PROPERTY;
+	int DIGITAL_ASSET__PROPERTY = ASSET__PROPERTY;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1253,7 +1253,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTANGIBLE__VALUE = ASSET__VALUE;
+	int DIGITAL_ASSET__VALUE = ASSET__VALUE;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
@@ -1262,7 +1262,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTANGIBLE__TYPE = ASSET__TYPE;
+	int DIGITAL_ASSET__TYPE = ASSET__TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1271,7 +1271,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTANGIBLE__DESCRIPTION = ASSET__DESCRIPTION;
+	int DIGITAL_ASSET__DESCRIPTION = ASSET__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Control</b></em>' attribute.
@@ -1280,7 +1280,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTANGIBLE__CONTROL = ASSET__CONTROL;
+	int DIGITAL_ASSET__CONTROL = ASSET__CONTROL;
 
 	/**
 	 * The feature id for the '<em><b>Parent Asset</b></em>' reference.
@@ -1289,7 +1289,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTANGIBLE__PARENT_ASSET = ASSET_FEATURE_COUNT + 0;
+	int DIGITAL_ASSET__PARENT_ASSET = ASSET_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
@@ -1298,134 +1298,25 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTANGIBLE__CONTAINED_ASSETS = ASSET_FEATURE_COUNT + 1;
+	int DIGITAL_ASSET__CONTAINED_ASSETS = ASSET_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of structural features of the '<em>Intangible</em>' class.
+	 * The number of structural features of the '<em>Digital Asset</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INTANGIBLE_FEATURE_COUNT = ASSET_FEATURE_COUNT + 2;
+	int DIGITAL_ASSET_FEATURE_COUNT = ASSET_FEATURE_COUNT + 2;
 
 	/**
-	 * The number of operations of the '<em>Intangible</em>' class.
+	 * The number of operations of the '<em>Digital Asset</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INTANGIBLE_OPERATION_COUNT = ASSET_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link environment.impl.DigitalImpl <em>Digital</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see environment.impl.DigitalImpl
-	 * @see environment.impl.EnvironmentPackageImpl#getDigital()
-	 * @generated
-	 */
-	int DIGITAL = 8;
-
-	/**
-	 * The feature id for the '<em><b>Connections</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DIGITAL__CONNECTIONS = INTANGIBLE__CONNECTIONS;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DIGITAL__NAME = INTANGIBLE__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Property</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DIGITAL__PROPERTY = INTANGIBLE__PROPERTY;
-
-	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DIGITAL__VALUE = INTANGIBLE__VALUE;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DIGITAL__TYPE = INTANGIBLE__TYPE;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DIGITAL__DESCRIPTION = INTANGIBLE__DESCRIPTION;
-
-	/**
-	 * The feature id for the '<em><b>Control</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DIGITAL__CONTROL = INTANGIBLE__CONTROL;
-
-	/**
-	 * The feature id for the '<em><b>Parent Asset</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DIGITAL__PARENT_ASSET = INTANGIBLE__PARENT_ASSET;
-
-	/**
-	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DIGITAL__CONTAINED_ASSETS = INTANGIBLE__CONTAINED_ASSETS;
-
-	/**
-	 * The number of structural features of the '<em>Digital</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DIGITAL_FEATURE_COUNT = INTANGIBLE_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Digital</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DIGITAL_OPERATION_COUNT = INTANGIBLE_OPERATION_COUNT + 0;
+	int DIGITAL_ASSET_OPERATION_COUNT = ASSET_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link environment.impl.FileImpl <em>File</em>}' class.
@@ -1435,7 +1326,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @see environment.impl.EnvironmentPackageImpl#getFile()
 	 * @generated
 	 */
-	int FILE = 9;
+	int FILE = 8;
 
 	/**
 	 * The feature id for the '<em><b>Connections</b></em>' reference list.
@@ -1444,7 +1335,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FILE__CONNECTIONS = DIGITAL__CONNECTIONS;
+	int FILE__CONNECTIONS = DIGITAL_ASSET__CONNECTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1453,7 +1344,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FILE__NAME = DIGITAL__NAME;
+	int FILE__NAME = DIGITAL_ASSET__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Property</b></em>' containment reference list.
@@ -1462,7 +1353,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FILE__PROPERTY = DIGITAL__PROPERTY;
+	int FILE__PROPERTY = DIGITAL_ASSET__PROPERTY;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1471,7 +1362,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FILE__VALUE = DIGITAL__VALUE;
+	int FILE__VALUE = DIGITAL_ASSET__VALUE;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
@@ -1480,7 +1371,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FILE__TYPE = DIGITAL__TYPE;
+	int FILE__TYPE = DIGITAL_ASSET__TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1489,7 +1380,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FILE__DESCRIPTION = DIGITAL__DESCRIPTION;
+	int FILE__DESCRIPTION = DIGITAL_ASSET__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Control</b></em>' attribute.
@@ -1498,7 +1389,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FILE__CONTROL = DIGITAL__CONTROL;
+	int FILE__CONTROL = DIGITAL_ASSET__CONTROL;
 
 	/**
 	 * The feature id for the '<em><b>Parent Asset</b></em>' reference.
@@ -1507,7 +1398,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FILE__PARENT_ASSET = DIGITAL__PARENT_ASSET;
+	int FILE__PARENT_ASSET = DIGITAL_ASSET__PARENT_ASSET;
 
 	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
@@ -1516,7 +1407,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FILE__CONTAINED_ASSETS = DIGITAL__CONTAINED_ASSETS;
+	int FILE__CONTAINED_ASSETS = DIGITAL_ASSET__CONTAINED_ASSETS;
 
 	/**
 	 * The feature id for the '<em><b>Status</b></em>' attribute.
@@ -1525,7 +1416,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FILE__STATUS = DIGITAL_FEATURE_COUNT + 0;
+	int FILE__STATUS = DIGITAL_ASSET_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Url</b></em>' attribute.
@@ -1534,7 +1425,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FILE__URL = DIGITAL_FEATURE_COUNT + 1;
+	int FILE__URL = DIGITAL_ASSET_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>File</em>' class.
@@ -1543,7 +1434,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FILE_FEATURE_COUNT = DIGITAL_FEATURE_COUNT + 2;
+	int FILE_FEATURE_COUNT = DIGITAL_ASSET_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>File</em>' class.
@@ -1552,7 +1443,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FILE_OPERATION_COUNT = DIGITAL_OPERATION_COUNT + 0;
+	int FILE_OPERATION_COUNT = DIGITAL_ASSET_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link environment.impl.ProcessImpl <em>Process</em>}' class.
@@ -1562,7 +1453,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @see environment.impl.EnvironmentPackageImpl#getProcess()
 	 * @generated
 	 */
-	int PROCESS = 10;
+	int PROCESS = 9;
 
 	/**
 	 * The feature id for the '<em><b>Connections</b></em>' reference list.
@@ -1571,7 +1462,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS__CONNECTIONS = DIGITAL__CONNECTIONS;
+	int PROCESS__CONNECTIONS = DIGITAL_ASSET__CONNECTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1580,7 +1471,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS__NAME = DIGITAL__NAME;
+	int PROCESS__NAME = DIGITAL_ASSET__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Property</b></em>' containment reference list.
@@ -1589,7 +1480,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS__PROPERTY = DIGITAL__PROPERTY;
+	int PROCESS__PROPERTY = DIGITAL_ASSET__PROPERTY;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1598,7 +1489,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS__VALUE = DIGITAL__VALUE;
+	int PROCESS__VALUE = DIGITAL_ASSET__VALUE;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
@@ -1607,7 +1498,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS__TYPE = DIGITAL__TYPE;
+	int PROCESS__TYPE = DIGITAL_ASSET__TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1616,7 +1507,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS__DESCRIPTION = DIGITAL__DESCRIPTION;
+	int PROCESS__DESCRIPTION = DIGITAL_ASSET__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Control</b></em>' attribute.
@@ -1625,7 +1516,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS__CONTROL = DIGITAL__CONTROL;
+	int PROCESS__CONTROL = DIGITAL_ASSET__CONTROL;
 
 	/**
 	 * The feature id for the '<em><b>Parent Asset</b></em>' reference.
@@ -1634,7 +1525,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS__PARENT_ASSET = DIGITAL__PARENT_ASSET;
+	int PROCESS__PARENT_ASSET = DIGITAL_ASSET__PARENT_ASSET;
 
 	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
@@ -1643,7 +1534,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS__CONTAINED_ASSETS = DIGITAL__CONTAINED_ASSETS;
+	int PROCESS__CONTAINED_ASSETS = DIGITAL_ASSET__CONTAINED_ASSETS;
 
 	/**
 	 * The feature id for the '<em><b>Status</b></em>' attribute.
@@ -1652,7 +1543,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS__STATUS = DIGITAL_FEATURE_COUNT + 0;
+	int PROCESS__STATUS = DIGITAL_ASSET_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Process</em>' class.
@@ -1661,7 +1552,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS_FEATURE_COUNT = DIGITAL_FEATURE_COUNT + 1;
+	int PROCESS_FEATURE_COUNT = DIGITAL_ASSET_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Process</em>' class.
@@ -1670,7 +1561,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS_OPERATION_COUNT = DIGITAL_OPERATION_COUNT + 0;
+	int PROCESS_OPERATION_COUNT = DIGITAL_ASSET_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link environment.impl.ApplicationImpl <em>Application</em>}' class.
@@ -1680,7 +1571,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @see environment.impl.EnvironmentPackageImpl#getApplication()
 	 * @generated
 	 */
-	int APPLICATION = 11;
+	int APPLICATION = 10;
 
 	/**
 	 * The feature id for the '<em><b>Connections</b></em>' reference list.
@@ -1689,7 +1580,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APPLICATION__CONNECTIONS = DIGITAL__CONNECTIONS;
+	int APPLICATION__CONNECTIONS = DIGITAL_ASSET__CONNECTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1698,7 +1589,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APPLICATION__NAME = DIGITAL__NAME;
+	int APPLICATION__NAME = DIGITAL_ASSET__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Property</b></em>' containment reference list.
@@ -1707,7 +1598,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APPLICATION__PROPERTY = DIGITAL__PROPERTY;
+	int APPLICATION__PROPERTY = DIGITAL_ASSET__PROPERTY;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1716,7 +1607,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APPLICATION__VALUE = DIGITAL__VALUE;
+	int APPLICATION__VALUE = DIGITAL_ASSET__VALUE;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
@@ -1725,7 +1616,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APPLICATION__TYPE = DIGITAL__TYPE;
+	int APPLICATION__TYPE = DIGITAL_ASSET__TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1734,7 +1625,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APPLICATION__DESCRIPTION = DIGITAL__DESCRIPTION;
+	int APPLICATION__DESCRIPTION = DIGITAL_ASSET__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Control</b></em>' attribute.
@@ -1743,7 +1634,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APPLICATION__CONTROL = DIGITAL__CONTROL;
+	int APPLICATION__CONTROL = DIGITAL_ASSET__CONTROL;
 
 	/**
 	 * The feature id for the '<em><b>Parent Asset</b></em>' reference.
@@ -1752,7 +1643,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APPLICATION__PARENT_ASSET = DIGITAL__PARENT_ASSET;
+	int APPLICATION__PARENT_ASSET = DIGITAL_ASSET__PARENT_ASSET;
 
 	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
@@ -1761,7 +1652,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APPLICATION__CONTAINED_ASSETS = DIGITAL__CONTAINED_ASSETS;
+	int APPLICATION__CONTAINED_ASSETS = DIGITAL_ASSET__CONTAINED_ASSETS;
 
 	/**
 	 * The feature id for the '<em><b>Status</b></em>' attribute.
@@ -1770,7 +1661,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APPLICATION__STATUS = DIGITAL_FEATURE_COUNT + 0;
+	int APPLICATION__STATUS = DIGITAL_ASSET_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Url</b></em>' attribute.
@@ -1779,7 +1670,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APPLICATION__URL = DIGITAL_FEATURE_COUNT + 1;
+	int APPLICATION__URL = DIGITAL_ASSET_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Application</em>' class.
@@ -1788,7 +1679,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APPLICATION_FEATURE_COUNT = DIGITAL_FEATURE_COUNT + 2;
+	int APPLICATION_FEATURE_COUNT = DIGITAL_ASSET_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Application</em>' class.
@@ -1797,7 +1688,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APPLICATION_OPERATION_COUNT = DIGITAL_OPERATION_COUNT + 0;
+	int APPLICATION_OPERATION_COUNT = DIGITAL_ASSET_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link environment.impl.ConnectionImpl <em>Connection</em>}' class.
@@ -1807,25 +1698,25 @@ public interface EnvironmentPackage extends EPackage {
 	 * @see environment.impl.EnvironmentPackageImpl#getConnection()
 	 * @generated
 	 */
-	int CONNECTION = 12;
+	int CONNECTION = 11;
 
 	/**
-	 * The feature id for the '<em><b>Asset Des</b></em>' reference.
+	 * The feature id for the '<em><b>Asset1</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION__ASSET_DES = 0;
+	int CONNECTION__ASSET1 = 0;
 
 	/**
-	 * The feature id for the '<em><b>Asset Src</b></em>' reference.
+	 * The feature id for the '<em><b>Asset2</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION__ASSET_SRC = 1;
+	int CONNECTION__ASSET2 = 1;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1916,25 +1807,25 @@ public interface EnvironmentPackage extends EPackage {
 	 * @see environment.impl.EnvironmentPackageImpl#getDigitalConnection()
 	 * @generated
 	 */
-	int DIGITAL_CONNECTION = 13;
+	int DIGITAL_CONNECTION = 12;
 
 	/**
-	 * The feature id for the '<em><b>Asset Des</b></em>' reference.
+	 * The feature id for the '<em><b>Asset1</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DIGITAL_CONNECTION__ASSET_DES = CONNECTION__ASSET_DES;
+	int DIGITAL_CONNECTION__ASSET1 = CONNECTION__ASSET1;
 
 	/**
-	 * The feature id for the '<em><b>Asset Src</b></em>' reference.
+	 * The feature id for the '<em><b>Asset2</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DIGITAL_CONNECTION__ASSET_SRC = CONNECTION__ASSET_SRC;
+	int DIGITAL_CONNECTION__ASSET2 = CONNECTION__ASSET2;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2025,25 +1916,25 @@ public interface EnvironmentPackage extends EPackage {
 	 * @see environment.impl.EnvironmentPackageImpl#getPhysicalConnection()
 	 * @generated
 	 */
-	int PHYSICAL_CONNECTION = 14;
+	int PHYSICAL_CONNECTION = 13;
 
 	/**
-	 * The feature id for the '<em><b>Asset Des</b></em>' reference.
+	 * The feature id for the '<em><b>Asset1</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PHYSICAL_CONNECTION__ASSET_DES = CONNECTION__ASSET_DES;
+	int PHYSICAL_CONNECTION__ASSET1 = CONNECTION__ASSET1;
 
 	/**
-	 * The feature id for the '<em><b>Asset Src</b></em>' reference.
+	 * The feature id for the '<em><b>Asset2</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PHYSICAL_CONNECTION__ASSET_SRC = CONNECTION__ASSET_SRC;
+	int PHYSICAL_CONNECTION__ASSET2 = CONNECTION__ASSET2;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2134,7 +2025,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @see environment.impl.EnvironmentPackageImpl#getEnvironmentDiagram()
 	 * @generated
 	 */
-	int ENVIRONMENT_DIAGRAM = 16;
+	int ENVIRONMENT_DIAGRAM = 15;
 
 	/**
 	 * The feature id for the '<em><b>Asset</b></em>' containment reference list.
@@ -2216,7 +2107,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @see environment.impl.EnvironmentPackageImpl#getPort()
 	 * @generated
 	 */
-	int PORT = 17;
+	int PORT = 16;
 
 	/**
 	 * The feature id for the '<em><b>Asset</b></em>' reference.
@@ -2280,7 +2171,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @see environment.impl.EnvironmentPackageImpl#getProperty()
 	 * @generated
 	 */
-	int PROPERTY = 18;
+	int PROPERTY = 17;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2326,7 +2217,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @see environment.impl.EnvironmentPackageImpl#getCredential()
 	 * @generated
 	 */
-	int CREDENTIAL = 19;
+	int CREDENTIAL = 18;
 
 	/**
 	 * The feature id for the '<em><b>Key</b></em>' attribute.
@@ -2372,7 +2263,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @see environment.impl.EnvironmentPackageImpl#getActor()
 	 * @generated
 	 */
-	int ACTOR = 20;
+	int ACTOR = 19;
 
 	/**
 	 * The feature id for the '<em><b>Connections</b></em>' reference list.
@@ -2381,7 +2272,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTOR__CONNECTIONS = TANGIBLE__CONNECTIONS;
+	int ACTOR__CONNECTIONS = PHYSICAL_ASSET__CONNECTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2390,7 +2281,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTOR__NAME = TANGIBLE__NAME;
+	int ACTOR__NAME = PHYSICAL_ASSET__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Property</b></em>' containment reference list.
@@ -2399,7 +2290,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTOR__PROPERTY = TANGIBLE__PROPERTY;
+	int ACTOR__PROPERTY = PHYSICAL_ASSET__PROPERTY;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -2408,7 +2299,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTOR__VALUE = TANGIBLE__VALUE;
+	int ACTOR__VALUE = PHYSICAL_ASSET__VALUE;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
@@ -2417,7 +2308,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTOR__TYPE = TANGIBLE__TYPE;
+	int ACTOR__TYPE = PHYSICAL_ASSET__TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -2426,7 +2317,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTOR__DESCRIPTION = TANGIBLE__DESCRIPTION;
+	int ACTOR__DESCRIPTION = PHYSICAL_ASSET__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Control</b></em>' attribute.
@@ -2435,7 +2326,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTOR__CONTROL = TANGIBLE__CONTROL;
+	int ACTOR__CONTROL = PHYSICAL_ASSET__CONTROL;
 
 	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
@@ -2444,7 +2335,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTOR__CONTAINED_ASSETS = TANGIBLE__CONTAINED_ASSETS;
+	int ACTOR__CONTAINED_ASSETS = PHYSICAL_ASSET__CONTAINED_ASSETS;
 
 	/**
 	 * The feature id for the '<em><b>Parent Asset</b></em>' reference.
@@ -2453,7 +2344,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTOR__PARENT_ASSET = TANGIBLE__PARENT_ASSET;
+	int ACTOR__PARENT_ASSET = PHYSICAL_ASSET__PARENT_ASSET;
 
 	/**
 	 * The feature id for the '<em><b>Role</b></em>' attribute.
@@ -2462,7 +2353,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTOR__ROLE = TANGIBLE_FEATURE_COUNT + 0;
+	int ACTOR__ROLE = PHYSICAL_ASSET_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Actor</em>' class.
@@ -2471,7 +2362,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTOR_FEATURE_COUNT = TANGIBLE_FEATURE_COUNT + 1;
+	int ACTOR_FEATURE_COUNT = PHYSICAL_ASSET_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Actor</em>' class.
@@ -2480,7 +2371,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTOR_OPERATION_COUNT = TANGIBLE_OPERATION_COUNT + 0;
+	int ACTOR_OPERATION_COUNT = PHYSICAL_ASSET_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link environment.impl.PhysicalStructureImpl <em>Physical Structure</em>}' class.
@@ -2490,7 +2381,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @see environment.impl.EnvironmentPackageImpl#getPhysicalStructure()
 	 * @generated
 	 */
-	int PHYSICAL_STRUCTURE = 21;
+	int PHYSICAL_STRUCTURE = 20;
 
 	/**
 	 * The feature id for the '<em><b>Connections</b></em>' reference list.
@@ -2499,7 +2390,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PHYSICAL_STRUCTURE__CONNECTIONS = TANGIBLE__CONNECTIONS;
+	int PHYSICAL_STRUCTURE__CONNECTIONS = PHYSICAL_ASSET__CONNECTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2508,7 +2399,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PHYSICAL_STRUCTURE__NAME = TANGIBLE__NAME;
+	int PHYSICAL_STRUCTURE__NAME = PHYSICAL_ASSET__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Property</b></em>' containment reference list.
@@ -2517,7 +2408,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PHYSICAL_STRUCTURE__PROPERTY = TANGIBLE__PROPERTY;
+	int PHYSICAL_STRUCTURE__PROPERTY = PHYSICAL_ASSET__PROPERTY;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -2526,7 +2417,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PHYSICAL_STRUCTURE__VALUE = TANGIBLE__VALUE;
+	int PHYSICAL_STRUCTURE__VALUE = PHYSICAL_ASSET__VALUE;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
@@ -2535,7 +2426,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PHYSICAL_STRUCTURE__TYPE = TANGIBLE__TYPE;
+	int PHYSICAL_STRUCTURE__TYPE = PHYSICAL_ASSET__TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -2544,7 +2435,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PHYSICAL_STRUCTURE__DESCRIPTION = TANGIBLE__DESCRIPTION;
+	int PHYSICAL_STRUCTURE__DESCRIPTION = PHYSICAL_ASSET__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Control</b></em>' attribute.
@@ -2553,7 +2444,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PHYSICAL_STRUCTURE__CONTROL = TANGIBLE__CONTROL;
+	int PHYSICAL_STRUCTURE__CONTROL = PHYSICAL_ASSET__CONTROL;
 
 	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
@@ -2562,7 +2453,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PHYSICAL_STRUCTURE__CONTAINED_ASSETS = TANGIBLE__CONTAINED_ASSETS;
+	int PHYSICAL_STRUCTURE__CONTAINED_ASSETS = PHYSICAL_ASSET__CONTAINED_ASSETS;
 
 	/**
 	 * The feature id for the '<em><b>Parent Asset</b></em>' reference.
@@ -2571,7 +2462,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PHYSICAL_STRUCTURE__PARENT_ASSET = TANGIBLE__PARENT_ASSET;
+	int PHYSICAL_STRUCTURE__PARENT_ASSET = PHYSICAL_ASSET__PARENT_ASSET;
 
 	/**
 	 * The number of structural features of the '<em>Physical Structure</em>' class.
@@ -2580,7 +2471,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PHYSICAL_STRUCTURE_FEATURE_COUNT = TANGIBLE_FEATURE_COUNT + 0;
+	int PHYSICAL_STRUCTURE_FEATURE_COUNT = PHYSICAL_ASSET_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Physical Structure</em>' class.
@@ -2589,26 +2480,17 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PHYSICAL_STRUCTURE_OPERATION_COUNT = TANGIBLE_OPERATION_COUNT + 0;
+	int PHYSICAL_STRUCTURE_OPERATION_COUNT = PHYSICAL_ASSET_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link environment.impl.IntellectualImpl <em>Intellectual</em>}' class.
+	 * The meta object id for the '{@link environment.impl.ActionImpl <em>Action</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see environment.impl.IntellectualImpl
-	 * @see environment.impl.EnvironmentPackageImpl#getIntellectual()
+	 * @see environment.impl.ActionImpl
+	 * @see environment.impl.EnvironmentPackageImpl#getAction()
 	 * @generated
 	 */
-	int INTELLECTUAL = 23;
-
-	/**
-	 * The feature id for the '<em><b>Connections</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INTELLECTUAL__CONNECTIONS = INTANGIBLE__CONNECTIONS;
+	int ACTION = 22;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2617,107 +2499,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTELLECTUAL__NAME = INTANGIBLE__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Property</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INTELLECTUAL__PROPERTY = INTANGIBLE__PROPERTY;
-
-	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INTELLECTUAL__VALUE = INTANGIBLE__VALUE;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INTELLECTUAL__TYPE = INTANGIBLE__TYPE;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INTELLECTUAL__DESCRIPTION = INTANGIBLE__DESCRIPTION;
-
-	/**
-	 * The feature id for the '<em><b>Control</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INTELLECTUAL__CONTROL = INTANGIBLE__CONTROL;
-
-	/**
-	 * The feature id for the '<em><b>Parent Asset</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INTELLECTUAL__PARENT_ASSET = INTANGIBLE__PARENT_ASSET;
-
-	/**
-	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INTELLECTUAL__CONTAINED_ASSETS = INTANGIBLE__CONTAINED_ASSETS;
-
-	/**
-	 * The number of structural features of the '<em>Intellectual</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INTELLECTUAL_FEATURE_COUNT = INTANGIBLE_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Intellectual</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INTELLECTUAL_OPERATION_COUNT = INTANGIBLE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link environment.impl.RuleImpl <em>Rule</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see environment.impl.RuleImpl
-	 * @see environment.impl.EnvironmentPackageImpl#getRule()
-	 * @generated
-	 */
-	int RULE = 24;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RULE__NAME = 0;
+	int ACTION__NAME = 0;
 
 	/**
 	 * The feature id for the '<em><b>Preconditions</b></em>' attribute list.
@@ -2726,7 +2508,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RULE__PRECONDITIONS = 1;
+	int ACTION__PRECONDITIONS = 1;
 
 	/**
 	 * The feature id for the '<em><b>Postconditions</b></em>' attribute list.
@@ -2735,7 +2517,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RULE__POSTCONDITIONS = 2;
+	int ACTION__POSTCONDITIONS = 2;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -2744,25 +2526,25 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RULE__DESCRIPTION = 3;
+	int ACTION__DESCRIPTION = 3;
 
 	/**
-	 * The number of structural features of the '<em>Rule</em>' class.
+	 * The number of structural features of the '<em>Action</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RULE_FEATURE_COUNT = 4;
+	int ACTION_FEATURE_COUNT = 4;
 
 	/**
-	 * The number of operations of the '<em>Rule</em>' class.
+	 * The number of operations of the '<em>Action</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RULE_OPERATION_COUNT = 0;
+	int ACTION_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link environment.impl.TypeImpl <em>Type</em>}' class.
@@ -2772,7 +2554,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @see environment.impl.EnvironmentPackageImpl#getType()
 	 * @generated
 	 */
-	int TYPE = 25;
+	int TYPE = 23;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2818,7 +2600,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @see environment.impl.EnvironmentPackageImpl#getRoom()
 	 * @generated
 	 */
-	int ROOM = 26;
+	int ROOM = 24;
 
 	/**
 	 * The feature id for the '<em><b>Connections</b></em>' reference list.
@@ -2927,7 +2709,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @see environment.impl.EnvironmentPackageImpl#getFloor()
 	 * @generated
 	 */
-	int FLOOR = 27;
+	int FLOOR = 25;
 
 	/**
 	 * The feature id for the '<em><b>Connections</b></em>' reference list.
@@ -3036,7 +2818,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @see environment.impl.EnvironmentPackageImpl#getBuilding()
 	 * @generated
 	 */
-	int BUILDING = 28;
+	int BUILDING = 26;
 
 	/**
 	 * The feature id for the '<em><b>Connections</b></em>' reference list.
@@ -3138,6 +2920,278 @@ public interface EnvironmentPackage extends EPackage {
 	int BUILDING_OPERATION_COUNT = PHYSICAL_STRUCTURE_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link environment.impl.FireAlarmImpl <em>Fire Alarm</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see environment.impl.FireAlarmImpl
+	 * @see environment.impl.EnvironmentPackageImpl#getFireAlarm()
+	 * @generated
+	 */
+	int FIRE_ALARM = 27;
+
+	/**
+	 * The feature id for the '<em><b>Connections</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FIRE_ALARM__CONNECTIONS = COMPUTING_DEVICE__CONNECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FIRE_ALARM__NAME = COMPUTING_DEVICE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Property</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FIRE_ALARM__PROPERTY = COMPUTING_DEVICE__PROPERTY;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FIRE_ALARM__VALUE = COMPUTING_DEVICE__VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FIRE_ALARM__TYPE = COMPUTING_DEVICE__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FIRE_ALARM__DESCRIPTION = COMPUTING_DEVICE__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Control</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FIRE_ALARM__CONTROL = COMPUTING_DEVICE__CONTROL;
+
+	/**
+	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FIRE_ALARM__CONTAINED_ASSETS = COMPUTING_DEVICE__CONTAINED_ASSETS;
+
+	/**
+	 * The feature id for the '<em><b>Parent Asset</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FIRE_ALARM__PARENT_ASSET = COMPUTING_DEVICE__PARENT_ASSET;
+
+	/**
+	 * The feature id for the '<em><b>Status</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FIRE_ALARM__STATUS = COMPUTING_DEVICE__STATUS;
+
+	/**
+	 * The feature id for the '<em><b>Can Connect</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FIRE_ALARM__CAN_CONNECT = COMPUTING_DEVICE__CAN_CONNECT;
+
+	/**
+	 * The feature id for the '<em><b>Model</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FIRE_ALARM__MODEL = COMPUTING_DEVICE__MODEL;
+
+	/**
+	 * The number of structural features of the '<em>Fire Alarm</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FIRE_ALARM_FEATURE_COUNT = COMPUTING_DEVICE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Fire Alarm</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FIRE_ALARM_OPERATION_COUNT = COMPUTING_DEVICE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link environment.impl.WorkstationImpl <em>Workstation</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see environment.impl.WorkstationImpl
+	 * @see environment.impl.EnvironmentPackageImpl#getWorkstation()
+	 * @generated
+	 */
+	int WORKSTATION = 28;
+
+	/**
+	 * The feature id for the '<em><b>Connections</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORKSTATION__CONNECTIONS = COMPUTING_DEVICE__CONNECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORKSTATION__NAME = COMPUTING_DEVICE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Property</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORKSTATION__PROPERTY = COMPUTING_DEVICE__PROPERTY;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORKSTATION__VALUE = COMPUTING_DEVICE__VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORKSTATION__TYPE = COMPUTING_DEVICE__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORKSTATION__DESCRIPTION = COMPUTING_DEVICE__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Control</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORKSTATION__CONTROL = COMPUTING_DEVICE__CONTROL;
+
+	/**
+	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORKSTATION__CONTAINED_ASSETS = COMPUTING_DEVICE__CONTAINED_ASSETS;
+
+	/**
+	 * The feature id for the '<em><b>Parent Asset</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORKSTATION__PARENT_ASSET = COMPUTING_DEVICE__PARENT_ASSET;
+
+	/**
+	 * The feature id for the '<em><b>Status</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORKSTATION__STATUS = COMPUTING_DEVICE__STATUS;
+
+	/**
+	 * The feature id for the '<em><b>Can Connect</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORKSTATION__CAN_CONNECT = COMPUTING_DEVICE__CAN_CONNECT;
+
+	/**
+	 * The feature id for the '<em><b>Model</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORKSTATION__MODEL = COMPUTING_DEVICE__MODEL;
+
+	/**
+	 * The number of structural features of the '<em>Workstation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORKSTATION_FEATURE_COUNT = COMPUTING_DEVICE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Workstation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORKSTATION_OPERATION_COUNT = COMPUTING_DEVICE_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link environment.Status <em>Status</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3169,36 +3223,36 @@ public interface EnvironmentPackage extends EPackage {
 
 
 	/**
-	 * Returns the meta object for class '{@link environment.Tangible <em>Tangible</em>}'.
+	 * Returns the meta object for class '{@link environment.PhysicalAsset <em>Physical Asset</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Tangible</em>'.
-	 * @see environment.Tangible
+	 * @return the meta object for class '<em>Physical Asset</em>'.
+	 * @see environment.PhysicalAsset
 	 * @generated
 	 */
-	EClass getTangible();
+	EClass getPhysicalAsset();
 
 	/**
-	 * Returns the meta object for the reference list '{@link environment.Tangible#getContainedAssets <em>Contained Assets</em>}'.
+	 * Returns the meta object for the reference list '{@link environment.PhysicalAsset#getContainedAssets <em>Contained Assets</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Contained Assets</em>'.
-	 * @see environment.Tangible#getContainedAssets()
-	 * @see #getTangible()
+	 * @see environment.PhysicalAsset#getContainedAssets()
+	 * @see #getPhysicalAsset()
 	 * @generated
 	 */
-	EReference getTangible_ContainedAssets();
+	EReference getPhysicalAsset_ContainedAssets();
 
 	/**
-	 * Returns the meta object for the reference '{@link environment.Tangible#getParentAsset <em>Parent Asset</em>}'.
+	 * Returns the meta object for the reference '{@link environment.PhysicalAsset#getParentAsset <em>Parent Asset</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Parent Asset</em>'.
-	 * @see environment.Tangible#getParentAsset()
-	 * @see #getTangible()
+	 * @see environment.PhysicalAsset#getParentAsset()
+	 * @see #getPhysicalAsset()
 	 * @generated
 	 */
-	EReference getTangible_ParentAsset();
+	EReference getPhysicalAsset_ParentAsset();
 
 	/**
 	 * Returns the meta object for class '{@link environment.ComputingDevice <em>Computing Device</em>}'.
@@ -3304,16 +3358,6 @@ public interface EnvironmentPackage extends EPackage {
 	EClass getServer();
 
 	/**
-	 * Returns the meta object for class '{@link environment.Digital <em>Digital</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Digital</em>'.
-	 * @see environment.Digital
-	 * @generated
-	 */
-	EClass getDigital();
-
-	/**
 	 * Returns the meta object for class '{@link environment.File <em>File</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3409,26 +3453,26 @@ public interface EnvironmentPackage extends EPackage {
 	EClass getConnection();
 
 	/**
-	 * Returns the meta object for the reference '{@link environment.Connection#getAssetDes <em>Asset Des</em>}'.
+	 * Returns the meta object for the reference '{@link environment.Connection#getAsset1 <em>Asset1</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Asset Des</em>'.
-	 * @see environment.Connection#getAssetDes()
+	 * @return the meta object for the reference '<em>Asset1</em>'.
+	 * @see environment.Connection#getAsset1()
 	 * @see #getConnection()
 	 * @generated
 	 */
-	EReference getConnection_AssetDes();
+	EReference getConnection_Asset1();
 
 	/**
-	 * Returns the meta object for the reference '{@link environment.Connection#getAssetSrc <em>Asset Src</em>}'.
+	 * Returns the meta object for the reference '{@link environment.Connection#getAsset2 <em>Asset2</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Asset Src</em>'.
-	 * @see environment.Connection#getAssetSrc()
+	 * @return the meta object for the reference '<em>Asset2</em>'.
+	 * @see environment.Connection#getAsset2()
 	 * @see #getConnection()
 	 * @generated
 	 */
-	EReference getConnection_AssetSrc();
+	EReference getConnection_Asset2();
 
 	/**
 	 * Returns the meta object for the attribute '{@link environment.Connection#getName <em>Name</em>}'.
@@ -3840,100 +3884,90 @@ public interface EnvironmentPackage extends EPackage {
 	EClass getPhysicalStructure();
 
 	/**
-	 * Returns the meta object for class '{@link environment.Intangible <em>Intangible</em>}'.
+	 * Returns the meta object for class '{@link environment.DigitalAsset <em>Digital Asset</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Intangible</em>'.
-	 * @see environment.Intangible
+	 * @return the meta object for class '<em>Digital Asset</em>'.
+	 * @see environment.DigitalAsset
 	 * @generated
 	 */
-	EClass getIntangible();
+	EClass getDigitalAsset();
 
 	/**
-	 * Returns the meta object for the reference '{@link environment.Intangible#getParentAsset <em>Parent Asset</em>}'.
+	 * Returns the meta object for the reference '{@link environment.DigitalAsset#getParentAsset <em>Parent Asset</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Parent Asset</em>'.
-	 * @see environment.Intangible#getParentAsset()
-	 * @see #getIntangible()
+	 * @see environment.DigitalAsset#getParentAsset()
+	 * @see #getDigitalAsset()
 	 * @generated
 	 */
-	EReference getIntangible_ParentAsset();
+	EReference getDigitalAsset_ParentAsset();
 
 	/**
-	 * Returns the meta object for the reference list '{@link environment.Intangible#getContainedAssets <em>Contained Assets</em>}'.
+	 * Returns the meta object for the reference list '{@link environment.DigitalAsset#getContainedAssets <em>Contained Assets</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Contained Assets</em>'.
-	 * @see environment.Intangible#getContainedAssets()
-	 * @see #getIntangible()
+	 * @see environment.DigitalAsset#getContainedAssets()
+	 * @see #getDigitalAsset()
 	 * @generated
 	 */
-	EReference getIntangible_ContainedAssets();
+	EReference getDigitalAsset_ContainedAssets();
 
 	/**
-	 * Returns the meta object for class '{@link environment.Intellectual <em>Intellectual</em>}'.
+	 * Returns the meta object for class '{@link environment.Action <em>Action</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Intellectual</em>'.
-	 * @see environment.Intellectual
+	 * @return the meta object for class '<em>Action</em>'.
+	 * @see environment.Action
 	 * @generated
 	 */
-	EClass getIntellectual();
+	EClass getAction();
 
 	/**
-	 * Returns the meta object for class '{@link environment.Rule <em>Rule</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Rule</em>'.
-	 * @see environment.Rule
-	 * @generated
-	 */
-	EClass getRule();
-
-	/**
-	 * Returns the meta object for the attribute '{@link environment.Rule#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link environment.Action#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see environment.Rule#getName()
-	 * @see #getRule()
+	 * @see environment.Action#getName()
+	 * @see #getAction()
 	 * @generated
 	 */
-	EAttribute getRule_Name();
+	EAttribute getAction_Name();
 
 	/**
-	 * Returns the meta object for the attribute list '{@link environment.Rule#getPreconditions <em>Preconditions</em>}'.
+	 * Returns the meta object for the attribute list '{@link environment.Action#getPreconditions <em>Preconditions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute list '<em>Preconditions</em>'.
-	 * @see environment.Rule#getPreconditions()
-	 * @see #getRule()
+	 * @see environment.Action#getPreconditions()
+	 * @see #getAction()
 	 * @generated
 	 */
-	EAttribute getRule_Preconditions();
+	EAttribute getAction_Preconditions();
 
 	/**
-	 * Returns the meta object for the attribute list '{@link environment.Rule#getPostconditions <em>Postconditions</em>}'.
+	 * Returns the meta object for the attribute list '{@link environment.Action#getPostconditions <em>Postconditions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute list '<em>Postconditions</em>'.
-	 * @see environment.Rule#getPostconditions()
-	 * @see #getRule()
+	 * @see environment.Action#getPostconditions()
+	 * @see #getAction()
 	 * @generated
 	 */
-	EAttribute getRule_Postconditions();
+	EAttribute getAction_Postconditions();
 
 	/**
-	 * Returns the meta object for the attribute '{@link environment.Rule#getDescription <em>Description</em>}'.
+	 * Returns the meta object for the attribute '{@link environment.Action#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Description</em>'.
-	 * @see environment.Rule#getDescription()
-	 * @see #getRule()
+	 * @see environment.Action#getDescription()
+	 * @see #getAction()
 	 * @generated
 	 */
-	EAttribute getRule_Description();
+	EAttribute getAction_Description();
 
 	/**
 	 * Returns the meta object for class '{@link environment.Type <em>Type</em>}'.
@@ -3998,6 +4032,26 @@ public interface EnvironmentPackage extends EPackage {
 	EClass getBuilding();
 
 	/**
+	 * Returns the meta object for class '{@link environment.FireAlarm <em>Fire Alarm</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Fire Alarm</em>'.
+	 * @see environment.FireAlarm
+	 * @generated
+	 */
+	EClass getFireAlarm();
+
+	/**
+	 * Returns the meta object for class '{@link environment.Workstation <em>Workstation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Workstation</em>'.
+	 * @see environment.Workstation
+	 * @generated
+	 */
+	EClass getWorkstation();
+
+	/**
 	 * Returns the meta object for enum '{@link environment.Status <em>Status</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4051,14 +4105,14 @@ public interface EnvironmentPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link environment.impl.TangibleImpl <em>Tangible</em>}' class.
+		 * The meta object literal for the '{@link environment.impl.PhysicalAssetImpl <em>Physical Asset</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see environment.impl.TangibleImpl
-		 * @see environment.impl.EnvironmentPackageImpl#getTangible()
+		 * @see environment.impl.PhysicalAssetImpl
+		 * @see environment.impl.EnvironmentPackageImpl#getPhysicalAsset()
 		 * @generated
 		 */
-		EClass TANGIBLE = eINSTANCE.getTangible();
+		EClass PHYSICAL_ASSET = eINSTANCE.getPhysicalAsset();
 
 		/**
 		 * The meta object literal for the '<em><b>Contained Assets</b></em>' reference list feature.
@@ -4066,7 +4120,7 @@ public interface EnvironmentPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TANGIBLE__CONTAINED_ASSETS = eINSTANCE.getTangible_ContainedAssets();
+		EReference PHYSICAL_ASSET__CONTAINED_ASSETS = eINSTANCE.getPhysicalAsset_ContainedAssets();
 
 		/**
 		 * The meta object literal for the '<em><b>Parent Asset</b></em>' reference feature.
@@ -4074,7 +4128,7 @@ public interface EnvironmentPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TANGIBLE__PARENT_ASSET = eINSTANCE.getTangible_ParentAsset();
+		EReference PHYSICAL_ASSET__PARENT_ASSET = eINSTANCE.getPhysicalAsset_ParentAsset();
 
 		/**
 		 * The meta object literal for the '{@link environment.impl.ComputingDeviceImpl <em>Computing Device</em>}' class.
@@ -4171,16 +4225,6 @@ public interface EnvironmentPackage extends EPackage {
 		EClass SERVER = eINSTANCE.getServer();
 
 		/**
-		 * The meta object literal for the '{@link environment.impl.DigitalImpl <em>Digital</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see environment.impl.DigitalImpl
-		 * @see environment.impl.EnvironmentPackageImpl#getDigital()
-		 * @generated
-		 */
-		EClass DIGITAL = eINSTANCE.getDigital();
-
-		/**
 		 * The meta object literal for the '{@link environment.impl.FileImpl <em>File</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4261,20 +4305,20 @@ public interface EnvironmentPackage extends EPackage {
 		EClass CONNECTION = eINSTANCE.getConnection();
 
 		/**
-		 * The meta object literal for the '<em><b>Asset Des</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Asset1</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CONNECTION__ASSET_DES = eINSTANCE.getConnection_AssetDes();
+		EReference CONNECTION__ASSET1 = eINSTANCE.getConnection_Asset1();
 
 		/**
-		 * The meta object literal for the '<em><b>Asset Src</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Asset2</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CONNECTION__ASSET_SRC = eINSTANCE.getConnection_AssetSrc();
+		EReference CONNECTION__ASSET2 = eINSTANCE.getConnection_Asset2();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -4599,14 +4643,14 @@ public interface EnvironmentPackage extends EPackage {
 		EClass PHYSICAL_STRUCTURE = eINSTANCE.getPhysicalStructure();
 
 		/**
-		 * The meta object literal for the '{@link environment.impl.IntangibleImpl <em>Intangible</em>}' class.
+		 * The meta object literal for the '{@link environment.impl.DigitalAssetImpl <em>Digital Asset</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see environment.impl.IntangibleImpl
-		 * @see environment.impl.EnvironmentPackageImpl#getIntangible()
+		 * @see environment.impl.DigitalAssetImpl
+		 * @see environment.impl.EnvironmentPackageImpl#getDigitalAsset()
 		 * @generated
 		 */
-		EClass INTANGIBLE = eINSTANCE.getIntangible();
+		EClass DIGITAL_ASSET = eINSTANCE.getDigitalAsset();
 
 		/**
 		 * The meta object literal for the '<em><b>Parent Asset</b></em>' reference feature.
@@ -4614,7 +4658,7 @@ public interface EnvironmentPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference INTANGIBLE__PARENT_ASSET = eINSTANCE.getIntangible_ParentAsset();
+		EReference DIGITAL_ASSET__PARENT_ASSET = eINSTANCE.getDigitalAsset_ParentAsset();
 
 		/**
 		 * The meta object literal for the '<em><b>Contained Assets</b></em>' reference list feature.
@@ -4622,27 +4666,17 @@ public interface EnvironmentPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference INTANGIBLE__CONTAINED_ASSETS = eINSTANCE.getIntangible_ContainedAssets();
+		EReference DIGITAL_ASSET__CONTAINED_ASSETS = eINSTANCE.getDigitalAsset_ContainedAssets();
 
 		/**
-		 * The meta object literal for the '{@link environment.impl.IntellectualImpl <em>Intellectual</em>}' class.
+		 * The meta object literal for the '{@link environment.impl.ActionImpl <em>Action</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see environment.impl.IntellectualImpl
-		 * @see environment.impl.EnvironmentPackageImpl#getIntellectual()
+		 * @see environment.impl.ActionImpl
+		 * @see environment.impl.EnvironmentPackageImpl#getAction()
 		 * @generated
 		 */
-		EClass INTELLECTUAL = eINSTANCE.getIntellectual();
-
-		/**
-		 * The meta object literal for the '{@link environment.impl.RuleImpl <em>Rule</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see environment.impl.RuleImpl
-		 * @see environment.impl.EnvironmentPackageImpl#getRule()
-		 * @generated
-		 */
-		EClass RULE = eINSTANCE.getRule();
+		EClass ACTION = eINSTANCE.getAction();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -4650,7 +4684,7 @@ public interface EnvironmentPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute RULE__NAME = eINSTANCE.getRule_Name();
+		EAttribute ACTION__NAME = eINSTANCE.getAction_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>Preconditions</b></em>' attribute list feature.
@@ -4658,7 +4692,7 @@ public interface EnvironmentPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute RULE__PRECONDITIONS = eINSTANCE.getRule_Preconditions();
+		EAttribute ACTION__PRECONDITIONS = eINSTANCE.getAction_Preconditions();
 
 		/**
 		 * The meta object literal for the '<em><b>Postconditions</b></em>' attribute list feature.
@@ -4666,7 +4700,7 @@ public interface EnvironmentPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute RULE__POSTCONDITIONS = eINSTANCE.getRule_Postconditions();
+		EAttribute ACTION__POSTCONDITIONS = eINSTANCE.getAction_Postconditions();
 
 		/**
 		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
@@ -4674,7 +4708,7 @@ public interface EnvironmentPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute RULE__DESCRIPTION = eINSTANCE.getRule_Description();
+		EAttribute ACTION__DESCRIPTION = eINSTANCE.getAction_Description();
 
 		/**
 		 * The meta object literal for the '{@link environment.impl.TypeImpl <em>Type</em>}' class.
@@ -4731,6 +4765,26 @@ public interface EnvironmentPackage extends EPackage {
 		 * @generated
 		 */
 		EClass BUILDING = eINSTANCE.getBuilding();
+
+		/**
+		 * The meta object literal for the '{@link environment.impl.FireAlarmImpl <em>Fire Alarm</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see environment.impl.FireAlarmImpl
+		 * @see environment.impl.EnvironmentPackageImpl#getFireAlarm()
+		 * @generated
+		 */
+		EClass FIRE_ALARM = eINSTANCE.getFireAlarm();
+
+		/**
+		 * The meta object literal for the '{@link environment.impl.WorkstationImpl <em>Workstation</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see environment.impl.WorkstationImpl
+		 * @see environment.impl.EnvironmentPackageImpl#getWorkstation()
+		 * @generated
+		 */
+		EClass WORKSTATION = eINSTANCE.getWorkstation();
 
 		/**
 		 * The meta object literal for the '{@link environment.Status <em>Status</em>}' enum.
