@@ -203,18 +203,25 @@ public class PhysicalAssetImpl extends AssetImpl implements PhysicalAsset {
 			return Asset.NO_COMMON_TYPE;
 		}
 		
+		PhysicalAsset physAsset = ((PhysicalAsset)asset);
+		
 		//check if they both are contained by the same parent
+		if(this.getParentAsset() != null && 
+				physAsset.getParentAsset() != null &&
+				this.getParentAsset().equals(physAsset.getParentAsset())) {
+			similarityPercentage += Asset.COMMON_PARENT;
+		}
 		
 		//next, check number and type of contained assets
 		EList<Asset> thisAssets;
 		EList<Asset> argAssets;
 
 		thisAssets = this.getContainedAssets();
-		argAssets = ((PhysicalAsset)asset).getContainedAssets();
+		argAssets = physAsset.getContainedAssets();
 		
 		//if both have exactly the same number and type of assets
 		if(thisAssets.size() == argAssets.size()) {
-			
+			//to be implemented
 		}
 	
 		return similarityPercentage;

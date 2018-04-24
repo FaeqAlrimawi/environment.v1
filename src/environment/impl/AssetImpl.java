@@ -401,8 +401,8 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 		}
 			
 		//compare type as attribute if specified
-		if(this.getType().getName() != null && this.getType().getName().isEmpty() &&
-				asset.getType().getName() != null && !asset.getType().getName().isEmpty() &&
+		if(this.getType() != null && !this.getType().getName().isEmpty() &&
+				asset.getType() != null && !asset.getType().getName().isEmpty() &&
 				this.getType().getName().equalsIgnoreCase(asset.getType().getName()) ) {
 			similarityPercentage = 10;
 		}
@@ -460,7 +460,31 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 		return similarityPercentage;
 	}
 	
-	
+	  @Override
+	    public boolean equals(Object o) {
+	 
+	        // If the object is compared with itself then return true  
+	        if (o == this) {
+	            return true;
+	        }
+	 
+	        /* Check if o is an instance of Complex or not
+	          "null instanceof [type]" also returns false */
+	        if (!(o instanceof Asset)) {
+	            return false;
+	        }
+	         
+	        // typecast o to Complex so that we can compare data members 
+	        Asset c = (Asset) o;
+	        
+	        //compare based on having the same name
+	        if(this.getName().equalsIgnoreCase(c.getName())) {
+	        	return true;
+	        }
+	        
+	        return false;
+	  }
+	  
 	public void mergeConnections() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT

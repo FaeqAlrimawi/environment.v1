@@ -47,7 +47,7 @@ public interface Asset extends EObject {
 
 	static final int SHARE_EXACT_TYPE = 20;
 	static final int SHARE_EXACT_SUPER_TYPE = 10;
-	static final int SHARE_ASSIGNABLE_TYPE = 15;
+	static final int SHARE_ASSIGNABLE_TYPE = 14;
 	static final int SHARE_ABSTRACT_TYPE = 1;
 	static final int NO_COMMON_TYPE = 0;
 	static final int COMMON_PARENT = 10;
