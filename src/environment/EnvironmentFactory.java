@@ -265,6 +265,78 @@ public interface EnvironmentFactory extends EFactory {
 	Workstation createWorkstation();
 
 	/**
+	 * Returns a new object of class '<em>Lab</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Lab</em>'.
+	 * @generated
+	 */
+	Lab createLab();
+
+	/**
+	 * Returns a new object of class '<em>Toilet</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Toilet</em>'.
+	 * @generated
+	 */
+	Toilet createToilet();
+
+	/**
+	 * Returns a new object of class '<em>Lounge</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Lounge</em>'.
+	 * @generated
+	 */
+	Lounge createLounge();
+
+	/**
+	 * Returns a new object of class '<em>Dish Washer</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Dish Washer</em>'.
+	 * @generated
+	 */
+	DishWasher createDishWasher();
+
+	/**
+	 * Returns a new object of class '<em>Coffee Machine</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Coffee Machine</em>'.
+	 * @generated
+	 */
+	CoffeeMachine createCoffeeMachine();
+
+	/**
+	 * Returns a new object of class '<em>Elevator</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Elevator</em>'.
+	 * @generated
+	 */
+	Elevator createElevator();
+
+	/**
+	 * Returns a new object of class '<em>Hallway</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Hallway</em>'.
+	 * @generated
+	 */
+	Hallway createHallway();
+
+	/**
+	 * Returns a new object of class '<em>Elevators Area</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Elevators Area</em>'.
+	 * @generated
+	 */
+	ElevatorsArea createElevatorsArea();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

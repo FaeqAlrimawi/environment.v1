@@ -23,7 +23,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link environment.EnvironmentDiagram#getRule <em>Rule</em>}</li>
  * </ul>
  *
- * @see environment.EnvironmentPackage#getEnvironmentDiagram()
+ * @see environment.smartbuildingPackage#getEnvironmentDiagram()
  * @model
  * @generated
  */
@@ -38,7 +38,7 @@ public interface EnvironmentDiagram extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Asset</em>' containment reference list.
-	 * @see environment.EnvironmentPackage#getEnvironmentDiagram_Asset()
+	 * @see environment.smartbuildingPackage#getEnvironmentDiagram_Asset()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -54,7 +54,7 @@ public interface EnvironmentDiagram extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Connection</em>' containment reference list.
-	 * @see environment.EnvironmentPackage#getEnvironmentDiagram_Connection()
+	 * @see environment.smartbuildingPackage#getEnvironmentDiagram_Connection()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -70,7 +70,7 @@ public interface EnvironmentDiagram extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Port</em>' containment reference list.
-	 * @see environment.EnvironmentPackage#getEnvironmentDiagram_Port()
+	 * @see environment.smartbuildingPackage#getEnvironmentDiagram_Port()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -86,7 +86,7 @@ public interface EnvironmentDiagram extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Property</em>' containment reference list.
-	 * @see environment.EnvironmentPackage#getEnvironmentDiagram_Property()
+	 * @see environment.smartbuildingPackage#getEnvironmentDiagram_Property()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -102,7 +102,7 @@ public interface EnvironmentDiagram extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Credential</em>' containment reference list.
-	 * @see environment.EnvironmentPackage#getEnvironmentDiagram_Credential()
+	 * @see environment.smartbuildingPackage#getEnvironmentDiagram_Credential()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -118,7 +118,7 @@ public interface EnvironmentDiagram extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Rule</em>' containment reference list.
-	 * @see environment.EnvironmentPackage#getEnvironmentDiagram_Rule()
+	 * @see environment.smartbuildingPackage#getEnvironmentDiagram_Rule()
 	 * @model containment="true"
 	 * @generated
 	 */

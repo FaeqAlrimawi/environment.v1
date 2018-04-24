@@ -2,8 +2,6 @@
  */
 package environment;
 
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -19,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link environment.Type#getSuperType <em>Super Type</em>}</li>
  * </ul>
  *
- * @see environment.EnvironmentPackage#getType()
+ * @see environment.smartbuildingPackage#getType()
  * @model
  * @generated
  */
@@ -34,7 +32,7 @@ public interface Type extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see environment.EnvironmentPackage#getType_Name()
+	 * @see environment.smartbuildingPackage#getType_Name()
 	 * @model id="true"
 	 * @generated
 	 */
@@ -51,19 +49,29 @@ public interface Type extends EObject {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Super Type</b></em>' containment reference list.
-	 * The list contents are of type {@link environment.Type}.
+	 * Returns the value of the '<em><b>Super Type</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Super Type</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Super Type</em>' containment reference list.
-	 * @see environment.EnvironmentPackage#getType_SuperType()
+	 * @return the value of the '<em>Super Type</em>' containment reference.
+	 * @see #setSuperType(Type)
+	 * @see environment.smartbuildingPackage#getType_SuperType()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Type> getSuperType();
+	Type getSuperType();
+
+	/**
+	 * Sets the value of the '{@link environment.Type#getSuperType <em>Super Type</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Super Type</em>' containment reference.
+	 * @see #getSuperType()
+	 * @generated
+	 */
+	void setSuperType(Type value);
 
 } // Type

@@ -9,7 +9,7 @@ package environment;
  * <!-- end-user-doc -->
  *
  *
- * @see environment.EnvironmentPackage#getSmartLight()
+ * @see environment.smartbuildingPackage#getSmartLight()
  * @model
  * @generated
  */

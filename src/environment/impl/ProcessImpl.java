@@ -2,9 +2,9 @@
  */
 package environment.impl;
 
-import environment.EnvironmentPackage;
 import environment.ProcessStatus;
 
+import environment.smartbuildingPackage;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -61,7 +61,7 @@ public class ProcessImpl extends DigitalAssetImpl implements environment.Process
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return EnvironmentPackage.Literals.PROCESS;
+		return smartbuildingPackage.Literals.PROCESS;
 	}
 
 	/**
@@ -82,7 +82,7 @@ public class ProcessImpl extends DigitalAssetImpl implements environment.Process
 		ProcessStatus oldStatus = status;
 		status = newStatus == null ? STATUS_EDEFAULT : newStatus;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EnvironmentPackage.PROCESS__STATUS, oldStatus, status));
+			eNotify(new ENotificationImpl(this, Notification.SET, smartbuildingPackage.PROCESS__STATUS, oldStatus, status));
 	}
 
 	/**
@@ -93,7 +93,7 @@ public class ProcessImpl extends DigitalAssetImpl implements environment.Process
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case EnvironmentPackage.PROCESS__STATUS:
+			case smartbuildingPackage.PROCESS__STATUS:
 				return getStatus();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -107,7 +107,7 @@ public class ProcessImpl extends DigitalAssetImpl implements environment.Process
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case EnvironmentPackage.PROCESS__STATUS:
+			case smartbuildingPackage.PROCESS__STATUS:
 				setStatus((ProcessStatus)newValue);
 				return;
 		}
@@ -122,7 +122,7 @@ public class ProcessImpl extends DigitalAssetImpl implements environment.Process
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case EnvironmentPackage.PROCESS__STATUS:
+			case smartbuildingPackage.PROCESS__STATUS:
 				setStatus(STATUS_EDEFAULT);
 				return;
 		}
@@ -137,7 +137,7 @@ public class ProcessImpl extends DigitalAssetImpl implements environment.Process
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case EnvironmentPackage.PROCESS__STATUS:
+			case smartbuildingPackage.PROCESS__STATUS:
 				return status != STATUS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

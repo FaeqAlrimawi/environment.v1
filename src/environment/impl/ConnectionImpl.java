@@ -4,10 +4,11 @@ package environment.impl;
 
 import environment.Asset;
 import environment.Connection;
-import environment.EnvironmentPackage;
 import environment.Port;
 import environment.Property;
 
+import environment.smartbuildingPackage;
+import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -192,7 +193,7 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return EnvironmentPackage.Literals.CONNECTION;
+		return smartbuildingPackage.Literals.CONNECTION;
 	}
 
 	/**
@@ -206,7 +207,7 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 			asset1 = (Asset)eResolveProxy(oldAsset1);
 			if (asset1 != oldAsset1) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, EnvironmentPackage.CONNECTION__ASSET1, oldAsset1, asset1));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, smartbuildingPackage.CONNECTION__ASSET1, oldAsset1, asset1));
 			}
 		}
 		return asset1;
@@ -230,7 +231,7 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 		Asset oldAsset1 = asset1;
 		asset1 = newAsset1;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EnvironmentPackage.CONNECTION__ASSET1, oldAsset1, asset1));
+			eNotify(new ENotificationImpl(this, Notification.SET, smartbuildingPackage.CONNECTION__ASSET1, oldAsset1, asset1));
 	}
 
 	/**
@@ -244,7 +245,7 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 			asset2 = (Asset)eResolveProxy(oldAsset2);
 			if (asset2 != oldAsset2) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, EnvironmentPackage.CONNECTION__ASSET2, oldAsset2, asset2));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, smartbuildingPackage.CONNECTION__ASSET2, oldAsset2, asset2));
 			}
 		}
 		return asset2;
@@ -268,7 +269,7 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 		Asset oldAsset2 = asset2;
 		asset2 = newAsset2;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EnvironmentPackage.CONNECTION__ASSET2, oldAsset2, asset2));
+			eNotify(new ENotificationImpl(this, Notification.SET, smartbuildingPackage.CONNECTION__ASSET2, oldAsset2, asset2));
 	}
 
 	/**
@@ -289,7 +290,7 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EnvironmentPackage.CONNECTION__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, smartbuildingPackage.CONNECTION__NAME, oldName, name));
 	}
 
 	/**
@@ -310,7 +311,7 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 		String oldType = type;
 		type = newType;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EnvironmentPackage.CONNECTION__TYPE, oldType, type));
+			eNotify(new ENotificationImpl(this, Notification.SET, smartbuildingPackage.CONNECTION__TYPE, oldType, type));
 	}
 
 	/**
@@ -320,7 +321,7 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 	 */
 	public EList<String> getConstraints() {
 		if (constraints == null) {
-			constraints = new EDataTypeUniqueEList<String>(String.class, this, EnvironmentPackage.CONNECTION__CONSTRAINTS);
+			constraints = new EDataTypeUniqueEList<String>(String.class, this, smartbuildingPackage.CONNECTION__CONSTRAINTS);
 		}
 		return constraints;
 	}
@@ -343,7 +344,7 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 		boolean oldIsBidirectional = isBidirectional;
 		isBidirectional = newIsBidirectional;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EnvironmentPackage.CONNECTION__IS_BIDIRECTIONAL, oldIsBidirectional, isBidirectional));
+			eNotify(new ENotificationImpl(this, Notification.SET, smartbuildingPackage.CONNECTION__IS_BIDIRECTIONAL, oldIsBidirectional, isBidirectional));
 	}
 
 	/**
@@ -364,7 +365,7 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 		Port oldPort = port;
 		port = newPort;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EnvironmentPackage.CONNECTION__PORT, oldPort, newPort);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, smartbuildingPackage.CONNECTION__PORT, oldPort, newPort);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -379,14 +380,14 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 		if (newPort != port) {
 			NotificationChain msgs = null;
 			if (port != null)
-				msgs = ((InternalEObject)port).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EnvironmentPackage.CONNECTION__PORT, null, msgs);
+				msgs = ((InternalEObject)port).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - smartbuildingPackage.CONNECTION__PORT, null, msgs);
 			if (newPort != null)
-				msgs = ((InternalEObject)newPort).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EnvironmentPackage.CONNECTION__PORT, null, msgs);
+				msgs = ((InternalEObject)newPort).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - smartbuildingPackage.CONNECTION__PORT, null, msgs);
 			msgs = basicSetPort(newPort, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EnvironmentPackage.CONNECTION__PORT, newPort, newPort));
+			eNotify(new ENotificationImpl(this, Notification.SET, smartbuildingPackage.CONNECTION__PORT, newPort, newPort));
 	}
 
 	/**
@@ -396,7 +397,7 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 	 */
 	public EList<Property> getProperties() {
 		if (properties == null) {
-			properties = new EObjectResolvingEList<Property>(Property.class, this, EnvironmentPackage.CONNECTION__PROPERTIES);
+			properties = new EObjectResolvingEList<Property>(Property.class, this, smartbuildingPackage.CONNECTION__PROPERTIES);
 		}
 		return properties;
 	}
@@ -419,7 +420,20 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 		String oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EnvironmentPackage.CONNECTION__DESCRIPTION, oldDescription, description));
+			eNotify(new ENotificationImpl(this, Notification.SET, smartbuildingPackage.CONNECTION__DESCRIPTION, oldDescription, description));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public boolean isSimilarTo(Connection connection) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		//compares current connection with the parameter one
+		//criteria for comparison:?
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -430,7 +444,7 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case EnvironmentPackage.CONNECTION__PORT:
+			case smartbuildingPackage.CONNECTION__PORT:
 				return basicSetPort(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -444,25 +458,25 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case EnvironmentPackage.CONNECTION__ASSET1:
+			case smartbuildingPackage.CONNECTION__ASSET1:
 				if (resolve) return getAsset1();
 				return basicGetAsset1();
-			case EnvironmentPackage.CONNECTION__ASSET2:
+			case smartbuildingPackage.CONNECTION__ASSET2:
 				if (resolve) return getAsset2();
 				return basicGetAsset2();
-			case EnvironmentPackage.CONNECTION__NAME:
+			case smartbuildingPackage.CONNECTION__NAME:
 				return getName();
-			case EnvironmentPackage.CONNECTION__TYPE:
+			case smartbuildingPackage.CONNECTION__TYPE:
 				return getType();
-			case EnvironmentPackage.CONNECTION__CONSTRAINTS:
+			case smartbuildingPackage.CONNECTION__CONSTRAINTS:
 				return getConstraints();
-			case EnvironmentPackage.CONNECTION__IS_BIDIRECTIONAL:
+			case smartbuildingPackage.CONNECTION__IS_BIDIRECTIONAL:
 				return isIsBidirectional();
-			case EnvironmentPackage.CONNECTION__PORT:
+			case smartbuildingPackage.CONNECTION__PORT:
 				return getPort();
-			case EnvironmentPackage.CONNECTION__PROPERTIES:
+			case smartbuildingPackage.CONNECTION__PROPERTIES:
 				return getProperties();
-			case EnvironmentPackage.CONNECTION__DESCRIPTION:
+			case smartbuildingPackage.CONNECTION__DESCRIPTION:
 				return getDescription();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -477,33 +491,33 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case EnvironmentPackage.CONNECTION__ASSET1:
+			case smartbuildingPackage.CONNECTION__ASSET1:
 				setAsset1((Asset)newValue);
 				return;
-			case EnvironmentPackage.CONNECTION__ASSET2:
+			case smartbuildingPackage.CONNECTION__ASSET2:
 				setAsset2((Asset)newValue);
 				return;
-			case EnvironmentPackage.CONNECTION__NAME:
+			case smartbuildingPackage.CONNECTION__NAME:
 				setName((String)newValue);
 				return;
-			case EnvironmentPackage.CONNECTION__TYPE:
+			case smartbuildingPackage.CONNECTION__TYPE:
 				setType((String)newValue);
 				return;
-			case EnvironmentPackage.CONNECTION__CONSTRAINTS:
+			case smartbuildingPackage.CONNECTION__CONSTRAINTS:
 				getConstraints().clear();
 				getConstraints().addAll((Collection<? extends String>)newValue);
 				return;
-			case EnvironmentPackage.CONNECTION__IS_BIDIRECTIONAL:
+			case smartbuildingPackage.CONNECTION__IS_BIDIRECTIONAL:
 				setIsBidirectional((Boolean)newValue);
 				return;
-			case EnvironmentPackage.CONNECTION__PORT:
+			case smartbuildingPackage.CONNECTION__PORT:
 				setPort((Port)newValue);
 				return;
-			case EnvironmentPackage.CONNECTION__PROPERTIES:
+			case smartbuildingPackage.CONNECTION__PROPERTIES:
 				getProperties().clear();
 				getProperties().addAll((Collection<? extends Property>)newValue);
 				return;
-			case EnvironmentPackage.CONNECTION__DESCRIPTION:
+			case smartbuildingPackage.CONNECTION__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
 		}
@@ -518,31 +532,31 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case EnvironmentPackage.CONNECTION__ASSET1:
+			case smartbuildingPackage.CONNECTION__ASSET1:
 				setAsset1((Asset)null);
 				return;
-			case EnvironmentPackage.CONNECTION__ASSET2:
+			case smartbuildingPackage.CONNECTION__ASSET2:
 				setAsset2((Asset)null);
 				return;
-			case EnvironmentPackage.CONNECTION__NAME:
+			case smartbuildingPackage.CONNECTION__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case EnvironmentPackage.CONNECTION__TYPE:
+			case smartbuildingPackage.CONNECTION__TYPE:
 				setType(TYPE_EDEFAULT);
 				return;
-			case EnvironmentPackage.CONNECTION__CONSTRAINTS:
+			case smartbuildingPackage.CONNECTION__CONSTRAINTS:
 				getConstraints().clear();
 				return;
-			case EnvironmentPackage.CONNECTION__IS_BIDIRECTIONAL:
+			case smartbuildingPackage.CONNECTION__IS_BIDIRECTIONAL:
 				setIsBidirectional(IS_BIDIRECTIONAL_EDEFAULT);
 				return;
-			case EnvironmentPackage.CONNECTION__PORT:
+			case smartbuildingPackage.CONNECTION__PORT:
 				setPort((Port)null);
 				return;
-			case EnvironmentPackage.CONNECTION__PROPERTIES:
+			case smartbuildingPackage.CONNECTION__PROPERTIES:
 				getProperties().clear();
 				return;
-			case EnvironmentPackage.CONNECTION__DESCRIPTION:
+			case smartbuildingPackage.CONNECTION__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
 		}
@@ -557,26 +571,40 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case EnvironmentPackage.CONNECTION__ASSET1:
+			case smartbuildingPackage.CONNECTION__ASSET1:
 				return asset1 != null;
-			case EnvironmentPackage.CONNECTION__ASSET2:
+			case smartbuildingPackage.CONNECTION__ASSET2:
 				return asset2 != null;
-			case EnvironmentPackage.CONNECTION__NAME:
+			case smartbuildingPackage.CONNECTION__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case EnvironmentPackage.CONNECTION__TYPE:
+			case smartbuildingPackage.CONNECTION__TYPE:
 				return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
-			case EnvironmentPackage.CONNECTION__CONSTRAINTS:
+			case smartbuildingPackage.CONNECTION__CONSTRAINTS:
 				return constraints != null && !constraints.isEmpty();
-			case EnvironmentPackage.CONNECTION__IS_BIDIRECTIONAL:
+			case smartbuildingPackage.CONNECTION__IS_BIDIRECTIONAL:
 				return isBidirectional != IS_BIDIRECTIONAL_EDEFAULT;
-			case EnvironmentPackage.CONNECTION__PORT:
+			case smartbuildingPackage.CONNECTION__PORT:
 				return port != null;
-			case EnvironmentPackage.CONNECTION__PROPERTIES:
+			case smartbuildingPackage.CONNECTION__PROPERTIES:
 				return properties != null && !properties.isEmpty();
-			case EnvironmentPackage.CONNECTION__DESCRIPTION:
+			case smartbuildingPackage.CONNECTION__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case smartbuildingPackage.CONNECTION___IS_SIMILAR_TO__CONNECTION:
+				return isSimilarTo((Connection)arguments.get(0));
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 	/**

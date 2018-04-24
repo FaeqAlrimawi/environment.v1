@@ -3,8 +3,7 @@
 package environment.impl;
 
 import environment.Building;
-import environment.EnvironmentPackage;
-
+import environment.smartbuildingPackage;
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -31,7 +30,7 @@ public class BuildingImpl extends PhysicalStructureImpl implements Building {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return EnvironmentPackage.Literals.BUILDING;
+		return smartbuildingPackage.Literals.BUILDING;
 	}
 
 } //BuildingImpl

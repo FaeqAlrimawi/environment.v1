@@ -4,9 +4,9 @@ package environment.impl;
 
 import environment.Asset;
 import environment.Credential;
-import environment.EnvironmentPackage;
 import environment.Port;
 
+import environment.smartbuildingPackage;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -116,7 +116,7 @@ public class PortImpl extends MinimalEObjectImpl.Container implements Port {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return EnvironmentPackage.Literals.PORT;
+		return smartbuildingPackage.Literals.PORT;
 	}
 
 	/**
@@ -130,7 +130,7 @@ public class PortImpl extends MinimalEObjectImpl.Container implements Port {
 			asset = (Asset)eResolveProxy(oldAsset);
 			if (asset != oldAsset) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, EnvironmentPackage.PORT__ASSET, oldAsset, asset));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, smartbuildingPackage.PORT__ASSET, oldAsset, asset));
 			}
 		}
 		return asset;
@@ -154,7 +154,7 @@ public class PortImpl extends MinimalEObjectImpl.Container implements Port {
 		Asset oldAsset = asset;
 		asset = newAsset;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EnvironmentPackage.PORT__ASSET, oldAsset, asset));
+			eNotify(new ENotificationImpl(this, Notification.SET, smartbuildingPackage.PORT__ASSET, oldAsset, asset));
 	}
 
 	/**
@@ -175,7 +175,7 @@ public class PortImpl extends MinimalEObjectImpl.Container implements Port {
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EnvironmentPackage.PORT__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, smartbuildingPackage.PORT__NAME, oldName, name));
 	}
 
 	/**
@@ -185,7 +185,7 @@ public class PortImpl extends MinimalEObjectImpl.Container implements Port {
 	 */
 	public EList<Credential> getCredential() {
 		if (credential == null) {
-			credential = new EObjectContainmentEList<Credential>(Credential.class, this, EnvironmentPackage.PORT__CREDENTIAL);
+			credential = new EObjectContainmentEList<Credential>(Credential.class, this, smartbuildingPackage.PORT__CREDENTIAL);
 		}
 		return credential;
 	}
@@ -208,7 +208,7 @@ public class PortImpl extends MinimalEObjectImpl.Container implements Port {
 		String oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EnvironmentPackage.PORT__DESCRIPTION, oldDescription, description));
+			eNotify(new ENotificationImpl(this, Notification.SET, smartbuildingPackage.PORT__DESCRIPTION, oldDescription, description));
 	}
 
 	/**
@@ -219,7 +219,7 @@ public class PortImpl extends MinimalEObjectImpl.Container implements Port {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case EnvironmentPackage.PORT__CREDENTIAL:
+			case smartbuildingPackage.PORT__CREDENTIAL:
 				return ((InternalEList<?>)getCredential()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -233,14 +233,14 @@ public class PortImpl extends MinimalEObjectImpl.Container implements Port {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case EnvironmentPackage.PORT__ASSET:
+			case smartbuildingPackage.PORT__ASSET:
 				if (resolve) return getAsset();
 				return basicGetAsset();
-			case EnvironmentPackage.PORT__NAME:
+			case smartbuildingPackage.PORT__NAME:
 				return getName();
-			case EnvironmentPackage.PORT__CREDENTIAL:
+			case smartbuildingPackage.PORT__CREDENTIAL:
 				return getCredential();
-			case EnvironmentPackage.PORT__DESCRIPTION:
+			case smartbuildingPackage.PORT__DESCRIPTION:
 				return getDescription();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -255,17 +255,17 @@ public class PortImpl extends MinimalEObjectImpl.Container implements Port {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case EnvironmentPackage.PORT__ASSET:
+			case smartbuildingPackage.PORT__ASSET:
 				setAsset((Asset)newValue);
 				return;
-			case EnvironmentPackage.PORT__NAME:
+			case smartbuildingPackage.PORT__NAME:
 				setName((String)newValue);
 				return;
-			case EnvironmentPackage.PORT__CREDENTIAL:
+			case smartbuildingPackage.PORT__CREDENTIAL:
 				getCredential().clear();
 				getCredential().addAll((Collection<? extends Credential>)newValue);
 				return;
-			case EnvironmentPackage.PORT__DESCRIPTION:
+			case smartbuildingPackage.PORT__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
 		}
@@ -280,16 +280,16 @@ public class PortImpl extends MinimalEObjectImpl.Container implements Port {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case EnvironmentPackage.PORT__ASSET:
+			case smartbuildingPackage.PORT__ASSET:
 				setAsset((Asset)null);
 				return;
-			case EnvironmentPackage.PORT__NAME:
+			case smartbuildingPackage.PORT__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case EnvironmentPackage.PORT__CREDENTIAL:
+			case smartbuildingPackage.PORT__CREDENTIAL:
 				getCredential().clear();
 				return;
-			case EnvironmentPackage.PORT__DESCRIPTION:
+			case smartbuildingPackage.PORT__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
 		}
@@ -304,13 +304,13 @@ public class PortImpl extends MinimalEObjectImpl.Container implements Port {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case EnvironmentPackage.PORT__ASSET:
+			case smartbuildingPackage.PORT__ASSET:
 				return asset != null;
-			case EnvironmentPackage.PORT__NAME:
+			case smartbuildingPackage.PORT__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case EnvironmentPackage.PORT__CREDENTIAL:
+			case smartbuildingPackage.PORT__CREDENTIAL:
 				return credential != null && !credential.isEmpty();
-			case EnvironmentPackage.PORT__DESCRIPTION:
+			case smartbuildingPackage.PORT__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 		}
 		return super.eIsSet(featureID);

@@ -9,7 +9,7 @@ package environment;
  * <!-- end-user-doc -->
  *
  *
- * @see environment.EnvironmentPackage#getPhysicalStructure()
+ * @see environment.smartbuildingPackage#getPhysicalStructure()
  * @model
  * @generated
  */

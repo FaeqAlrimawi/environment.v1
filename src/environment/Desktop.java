@@ -9,7 +9,7 @@ package environment;
  * <!-- end-user-doc -->
  *
  *
- * @see environment.EnvironmentPackage#getDesktop()
+ * @see environment.smartbuildingPackage#getDesktop()
  * @model
  * @generated
  */

@@ -26,7 +26,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link environment.Connection#getDescription <em>Description</em>}</li>
  * </ul>
  *
- * @see environment.EnvironmentPackage#getConnection()
+ * @see environment.smartbuildingPackage#getConnection()
  * @model abstract="true"
  * @generated
  */
@@ -41,7 +41,7 @@ public interface Connection extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Asset1</em>' reference.
 	 * @see #setAsset1(Asset)
-	 * @see environment.EnvironmentPackage#getConnection_Asset1()
+	 * @see environment.smartbuildingPackage#getConnection_Asset1()
 	 * @model
 	 * @generated
 	 */
@@ -67,7 +67,7 @@ public interface Connection extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Asset2</em>' reference.
 	 * @see #setAsset2(Asset)
-	 * @see environment.EnvironmentPackage#getConnection_Asset2()
+	 * @see environment.smartbuildingPackage#getConnection_Asset2()
 	 * @model
 	 * @generated
 	 */
@@ -93,7 +93,7 @@ public interface Connection extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see environment.EnvironmentPackage#getConnection_Name()
+	 * @see environment.smartbuildingPackage#getConnection_Name()
 	 * @model id="true"
 	 * @generated
 	 */
@@ -119,7 +119,7 @@ public interface Connection extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type</em>' attribute.
 	 * @see #setType(String)
-	 * @see environment.EnvironmentPackage#getConnection_Type()
+	 * @see environment.smartbuildingPackage#getConnection_Type()
 	 * @model
 	 * @generated
 	 */
@@ -145,7 +145,7 @@ public interface Connection extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Constraints</em>' attribute list.
-	 * @see environment.EnvironmentPackage#getConnection_Constraints()
+	 * @see environment.smartbuildingPackage#getConnection_Constraints()
 	 * @model
 	 * @generated
 	 */
@@ -162,7 +162,7 @@ public interface Connection extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Is Bidirectional</em>' attribute.
 	 * @see #setIsBidirectional(boolean)
-	 * @see environment.EnvironmentPackage#getConnection_IsBidirectional()
+	 * @see environment.smartbuildingPackage#getConnection_IsBidirectional()
 	 * @model default="true"
 	 * @generated
 	 */
@@ -188,7 +188,7 @@ public interface Connection extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Port</em>' containment reference.
 	 * @see #setPort(Port)
-	 * @see environment.EnvironmentPackage#getConnection_Port()
+	 * @see environment.smartbuildingPackage#getConnection_Port()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -214,7 +214,7 @@ public interface Connection extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Properties</em>' reference list.
-	 * @see environment.EnvironmentPackage#getConnection_Properties()
+	 * @see environment.smartbuildingPackage#getConnection_Properties()
 	 * @model
 	 * @generated
 	 */
@@ -230,7 +230,7 @@ public interface Connection extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Description</em>' attribute.
 	 * @see #setDescription(String)
-	 * @see environment.EnvironmentPackage#getConnection_Description()
+	 * @see environment.smartbuildingPackage#getConnection_Description()
 	 * @model
 	 * @generated
 	 */
@@ -245,5 +245,13 @@ public interface Connection extends EObject {
 	 * @generated
 	 */
 	void setDescription(String value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	boolean isSimilarTo(Connection connection);
 
 } // Connection

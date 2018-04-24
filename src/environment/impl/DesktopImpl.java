@@ -3,8 +3,7 @@
 package environment.impl;
 
 import environment.Desktop;
-import environment.EnvironmentPackage;
-
+import environment.smartbuildingPackage;
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -31,7 +30,7 @@ public class DesktopImpl extends ComputingDeviceImpl implements Desktop {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return EnvironmentPackage.Literals.DESKTOP;
+		return smartbuildingPackage.Literals.DESKTOP;
 	}
 
 } //DesktopImpl

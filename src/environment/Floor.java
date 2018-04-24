@@ -9,7 +9,7 @@ package environment;
  * <!-- end-user-doc -->
  *
  *
- * @see environment.EnvironmentPackage#getFloor()
+ * @see environment.smartbuildingPackage#getFloor()
  * @model
  * @generated
  */

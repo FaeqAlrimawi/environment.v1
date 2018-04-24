@@ -7,6 +7,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="parentAsset" eType="#//PhysicalAsset"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ComputingDevice" eSuperTypes="#//PhysicalAsset">
+    <eOperations name="isAbstractable" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="status" eType="#//Status"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="canConnect" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="model" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -43,6 +44,9 @@
     <eLiterals name="CLOSED" value="1"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Connection" abstract="true">
+    <eOperations name="isSimilarTo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="connection" eType="#//Connection"/>
+    </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="asset1" eType="#//Asset"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="asset2" eType="#//Asset"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
@@ -57,9 +61,25 @@
         eType="#//Property"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DigitalConnection" eSuperTypes="#//Connection"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DigitalConnection" eSuperTypes="#//Connection">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="protocol" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PhysicalConnection" eSuperTypes="#//Connection"/>
   <eClassifiers xsi:type="ecore:EClass" name="Asset" abstract="true">
+    <eOperations name="abstractAsset" eType="#//Asset"/>
+    <eOperations name="isSimilarTo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eParameters name="asset" eType="#//Asset"/>
+    </eOperations>
+    <eOperations name="mergeConnections"/>
+    <eOperations name="canMergeConnections" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eOperations name="canMergeContainedAssets" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eOperations name="mergeContainedAssets"/>
+    <eOperations name="mergeConnections" unique="false">
+      <eParameters name="connections" upperBound="-1" eType="#//Connection"/>
+    </eOperations>
+    <eOperations name="canMergeConnections" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="connections" upperBound="-1" eType="#//Connection"/>
+    </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="connections" upperBound="-1"
         eType="#//Connection"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
@@ -67,8 +87,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="property" upperBound="-1"
         eType="#//Property" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="type" upperBound="-1" eType="#//Type"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//Type" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="control" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
@@ -98,6 +117,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         iD="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="abstractable" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Credential">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="key" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
@@ -125,12 +145,33 @@
   <eClassifiers xsi:type="ecore:EClass" name="Type">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         iD="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="superType" upperBound="-1"
-        eType="#//Type" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="superType" eType="#//Type"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Room" eSuperTypes="#//PhysicalStructure"/>
   <eClassifiers xsi:type="ecore:EClass" name="Floor" eSuperTypes="#//PhysicalStructure"/>
   <eClassifiers xsi:type="ecore:EClass" name="Building" eSuperTypes="#//PhysicalStructure"/>
   <eClassifiers xsi:type="ecore:EClass" name="FireAlarm" eSuperTypes="#//ComputingDevice"/>
   <eClassifiers xsi:type="ecore:EClass" name="Workstation" eSuperTypes="#//ComputingDevice"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Lab" eSuperTypes="#//Room"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Toilet" eSuperTypes="#//Room"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Lounge" eSuperTypes="#//Room"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DishWasher" eSuperTypes="#//ComputingDevice"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CoffeeMachine" eSuperTypes="#//ComputingDevice"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Elevator" eSuperTypes="#//ComputingDevice"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Hallway" eSuperTypes="#//PhysicalStructure"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ElevatorsArea" eSuperTypes="#//Room"/>
+  <eClassifiers xsi:type="ecore:EClass" name="IPNetwork" eSuperTypes="#//DigitalNetwork"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DigitalNetwork" eSuperTypes="#//DigitalAsset">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Protocol" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="encryption" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BusNetwork" eSuperTypes="#//DigitalNetwork"/>
+  <eClassifiers xsi:type="ecore:EClass" name="IPConnection" eSuperTypes="#//DigitalConnection"/>
+  <eClassifiers xsi:type="ecore:EClass" name="BusConnection" eSuperTypes="#//DigitalConnection"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Kitchen" eSuperTypes="#//Room"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Stairs" eSuperTypes="#//PhysicalStructure"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CardReader" eSuperTypes="#//ComputingDevice"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Employee" eSuperTypes="#//Actor"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Visitor" eSuperTypes="#//Actor"/>
 </ecore:EPackage>

@@ -9,7 +9,7 @@ package environment;
  * <!-- end-user-doc -->
  *
  *
- * @see environment.EnvironmentPackage#getFireAlarm()
+ * @see environment.smartbuildingPackage#getFireAlarm()
  * @model
  * @generated
  */

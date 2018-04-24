@@ -15,9 +15,10 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link environment.Property#getName <em>Name</em>}</li>
  *   <li>{@link environment.Property#getValue <em>Value</em>}</li>
+ *   <li>{@link environment.Property#isAbstractable <em>Abstractable</em>}</li>
  * </ul>
  *
- * @see environment.EnvironmentPackage#getProperty()
+ * @see environment.smartbuildingPackage#getProperty()
  * @model
  * @generated
  */
@@ -32,7 +33,7 @@ public interface Property extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see environment.EnvironmentPackage#getProperty_Name()
+	 * @see environment.smartbuildingPackage#getProperty_Name()
 	 * @model id="true"
 	 * @generated
 	 */
@@ -58,7 +59,7 @@ public interface Property extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Value</em>' attribute.
 	 * @see #setValue(String)
-	 * @see environment.EnvironmentPackage#getProperty_Value()
+	 * @see environment.smartbuildingPackage#getProperty_Value()
 	 * @model
 	 * @generated
 	 */
@@ -73,5 +74,31 @@ public interface Property extends EObject {
 	 * @generated
 	 */
 	void setValue(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Abstractable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Abstractable</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Abstractable</em>' attribute.
+	 * @see #setAbstractable(boolean)
+	 * @see environment.smartbuildingPackage#getProperty_Abstractable()
+	 * @model
+	 * @generated
+	 */
+	boolean isAbstractable();
+
+	/**
+	 * Sets the value of the '{@link environment.Property#isAbstractable <em>Abstractable</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Abstractable</em>' attribute.
+	 * @see #isAbstractable()
+	 * @generated
+	 */
+	void setAbstractable(boolean value);
 
 } // Property

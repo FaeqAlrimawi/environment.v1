@@ -7,12 +7,16 @@ import environment.Actor;
 import environment.Application;
 import environment.Asset;
 import environment.Building;
+import environment.CoffeeMachine;
 import environment.ComputingDevice;
 import environment.Connection;
 import environment.Credential;
 import environment.Desktop;
 import environment.DigitalAsset;
 import environment.DigitalConnection;
+import environment.DishWasher;
+import environment.Elevator;
+import environment.ElevatorsArea;
 import environment.EnvironmentDiagram;
 import environment.EnvironmentFactory;
 import environment.EnvironmentPackage;
@@ -20,7 +24,10 @@ import environment.File;
 import environment.FileStatus;
 import environment.FireAlarm;
 import environment.Floor;
+import environment.Hallway;
+import environment.Lab;
 import environment.Laptop;
+import environment.Lounge;
 import environment.PhysicalAsset;
 import environment.PhysicalConnection;
 import environment.PhysicalStructure;
@@ -31,6 +38,7 @@ import environment.Room;
 import environment.Server;
 import environment.SmartLight;
 import environment.Status;
+import environment.Toilet;
 import environment.Type;
 import environment.Workstation;
 
@@ -251,6 +259,62 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 	 * @generated
 	 */
 	private EClass workstationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass labEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass toiletEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass loungeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass dishWasherEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass coffeeMachineEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass elevatorEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass hallwayEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass elevatorsAreaEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1041,6 +1105,78 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getLab() {
+		return labEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getToilet() {
+		return toiletEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getLounge() {
+		return loungeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getDishWasher() {
+		return dishWasherEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getCoffeeMachine() {
+		return coffeeMachineEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getElevator() {
+		return elevatorEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getHallway() {
+		return hallwayEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getElevatorsArea() {
+		return elevatorsAreaEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getStatus() {
 		return statusEEnum;
 	}
@@ -1198,6 +1334,22 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 
 		workstationEClass = createEClass(WORKSTATION);
 
+		labEClass = createEClass(LAB);
+
+		toiletEClass = createEClass(TOILET);
+
+		loungeEClass = createEClass(LOUNGE);
+
+		dishWasherEClass = createEClass(DISH_WASHER);
+
+		coffeeMachineEClass = createEClass(COFFEE_MACHINE);
+
+		elevatorEClass = createEClass(ELEVATOR);
+
+		hallwayEClass = createEClass(HALLWAY);
+
+		elevatorsAreaEClass = createEClass(ELEVATORS_AREA);
+
 		// Create enums
 		statusEEnum = createEEnum(STATUS);
 		processStatusEEnum = createEEnum(PROCESS_STATUS);
@@ -1253,6 +1405,14 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 		buildingEClass.getESuperTypes().add(this.getPhysicalStructure());
 		fireAlarmEClass.getESuperTypes().add(this.getComputingDevice());
 		workstationEClass.getESuperTypes().add(this.getComputingDevice());
+		labEClass.getESuperTypes().add(this.getRoom());
+		toiletEClass.getESuperTypes().add(this.getRoom());
+		loungeEClass.getESuperTypes().add(this.getRoom());
+		dishWasherEClass.getESuperTypes().add(this.getComputingDevice());
+		coffeeMachineEClass.getESuperTypes().add(this.getComputingDevice());
+		elevatorEClass.getESuperTypes().add(this.getComputingDevice());
+		hallwayEClass.getESuperTypes().add(this.getPhysicalStructure());
+		elevatorsAreaEClass.getESuperTypes().add(this.getRoom());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(physicalAssetEClass, PhysicalAsset.class, "PhysicalAsset", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1361,6 +1521,22 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 		initEClass(fireAlarmEClass, FireAlarm.class, "FireAlarm", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(workstationEClass, Workstation.class, "Workstation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(labEClass, Lab.class, "Lab", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(toiletEClass, Toilet.class, "Toilet", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(loungeEClass, Lounge.class, "Lounge", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(dishWasherEClass, DishWasher.class, "DishWasher", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(coffeeMachineEClass, CoffeeMachine.class, "CoffeeMachine", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(elevatorEClass, Elevator.class, "Elevator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(hallwayEClass, Hallway.class, "Hallway", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(elevatorsAreaEClass, ElevatorsArea.class, "ElevatorsArea", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals
 		initEEnum(statusEEnum, Status.class, "Status");

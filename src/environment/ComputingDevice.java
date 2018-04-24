@@ -17,7 +17,7 @@ package environment;
  *   <li>{@link environment.ComputingDevice#getModel <em>Model</em>}</li>
  * </ul>
  *
- * @see environment.EnvironmentPackage#getComputingDevice()
+ * @see environment.smartbuildingPackage#getComputingDevice()
  * @model
  * @generated
  */
@@ -34,7 +34,7 @@ public interface ComputingDevice extends PhysicalAsset {
 	 * @return the value of the '<em>Status</em>' attribute.
 	 * @see environment.Status
 	 * @see #setStatus(Status)
-	 * @see environment.EnvironmentPackage#getComputingDevice_Status()
+	 * @see environment.smartbuildingPackage#getComputingDevice_Status()
 	 * @model
 	 * @generated
 	 */
@@ -61,11 +61,27 @@ public interface ComputingDevice extends PhysicalAsset {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Can Connect</em>' attribute.
 	 * @see #setCanConnect(boolean)
-	 * @see environment.EnvironmentPackage#getComputingDevice_CanConnect()
+	 * @see environment.smartbuildingPackage#getComputingDevice_CanConnect()
 	 * @model
 	 * @generated
 	 */
 	boolean isCanConnect();
+
+	/**
+	 * Returns the value of the '<em><b>Can Connect</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Can Connect</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Can Connect</em>' attribute.
+	 * @see #setCanConnect(boolean)
+	 * @see environment.smartbuildingPackage#getComputingDevice_CanConnect()
+	 * @model
+
+	 */
+	boolean canConnect();
 
 	/**
 	 * Sets the value of the '{@link environment.ComputingDevice#isCanConnect <em>Can Connect</em>}' attribute.
@@ -87,7 +103,7 @@ public interface ComputingDevice extends PhysicalAsset {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Model</em>' attribute.
 	 * @see #setModel(String)
-	 * @see environment.EnvironmentPackage#getComputingDevice_Model()
+	 * @see environment.smartbuildingPackage#getComputingDevice_Model()
 	 * @model
 	 * @generated
 	 */
@@ -102,5 +118,13 @@ public interface ComputingDevice extends PhysicalAsset {
 	 * @generated
 	 */
 	void setModel(String value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model kind="operation"
+	 * @generated
+	 */
+	boolean isAbstractable();
 
 } // ComputingDevice

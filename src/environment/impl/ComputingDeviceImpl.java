@@ -2,15 +2,19 @@
  */
 package environment.impl;
 
-import environment.ComputingDevice;
-import environment.EnvironmentPackage;
-import environment.Status;
+import java.lang.reflect.InvocationTargetException;
 
 import org.eclipse.emf.common.notify.Notification;
-
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+import environment.Asset;
+import environment.ComputingDevice;
+import environment.Connection;
+import environment.PhysicalAsset;
+import environment.Status;
+import environment.smartbuildingPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -104,7 +108,7 @@ public class ComputingDeviceImpl extends PhysicalAssetImpl implements ComputingD
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return EnvironmentPackage.Literals.COMPUTING_DEVICE;
+		return smartbuildingPackage.Literals.COMPUTING_DEVICE;
 	}
 
 	/**
@@ -125,15 +129,15 @@ public class ComputingDeviceImpl extends PhysicalAssetImpl implements ComputingD
 		Status oldStatus = status;
 		status = newStatus == null ? STATUS_EDEFAULT : newStatus;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EnvironmentPackage.COMPUTING_DEVICE__STATUS, oldStatus, status));
+			eNotify(new ENotificationImpl(this, Notification.SET, smartbuildingPackage.COMPUTING_DEVICE__STATUS, oldStatus, status));
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+
 	 */
-	public boolean isCanConnect() {
+	public boolean canConnect() {
 		return canConnect;
 	}
 
@@ -146,7 +150,7 @@ public class ComputingDeviceImpl extends PhysicalAssetImpl implements ComputingD
 		boolean oldCanConnect = canConnect;
 		canConnect = newCanConnect;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EnvironmentPackage.COMPUTING_DEVICE__CAN_CONNECT, oldCanConnect, canConnect));
+			eNotify(new ENotificationImpl(this, Notification.SET, smartbuildingPackage.COMPUTING_DEVICE__CAN_CONNECT, oldCanConnect, canConnect));
 	}
 
 	/**
@@ -167,9 +171,57 @@ public class ComputingDeviceImpl extends PhysicalAssetImpl implements ComputingD
 		String oldModel = model;
 		model = newModel;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EnvironmentPackage.COMPUTING_DEVICE__MODEL, oldModel, model));
+			eNotify(new ENotificationImpl(this, Notification.SET, smartbuildingPackage.COMPUTING_DEVICE__MODEL, oldModel, model));
 	}
 
+
+	public ComputingDevice abstractAsset() {
+		
+		// TODO: implement this method
+		//abstracting an asset includes:
+		//1-abstracting attributes (name, type, status, etc.)
+		//2-contained assets 
+		//3-connections
+		ComputingDevice abstractedAsset = environment.smartbuildingFactory.eINSTANCE.createComputingDevice();
+		
+		//get an abstracted asset from parent
+		PhysicalAsset aset = (PhysicalAsset)super.abstractAsset();
+		
+		
+		//set attributes
+		//set name...can be just left for the super
+		abstractedAsset.setName(aset.getName());//give a unique name
+		abstractedAsset.setValue(aset.getValue());
+		
+		//copy abstracted connections
+		for(Connection con : aset.getConnections()) {
+			abstractedAsset.getConnections().add(con);
+		}
+		
+		//copy abstracted assets
+		for(Asset ast : aset.getContainedAssets()) {
+			abstractedAsset.getContainedAssets().add(ast);
+		}
+		
+		//a-status
+		abstractedAsset.setStatus(this.getStatus());
+		//b-canConect
+		abstractedAsset.setCanConnect(this.canConnect());
+		//c-model is not abstracted at the moment as it can be private info. maybe a field can indicate if it can be included or not when abstracting
+		//abstractedAsset.setModel(this.getModel());
+		
+		
+		//2-abstract contained assets (can be done by merging/aggregating assets if possible)
+		//shallow abstraction of contained assets might be needed
+		//mergeContainedAssets();
+	
+		//3-abstract connections (can be done by merging/aggregating connections if possible)
+		//shallow abstraction of connections might be needed
+		//mergeConnections();
+			
+		return abstractedAsset;
+	}
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -178,11 +230,11 @@ public class ComputingDeviceImpl extends PhysicalAssetImpl implements ComputingD
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case EnvironmentPackage.COMPUTING_DEVICE__STATUS:
+			case smartbuildingPackage.COMPUTING_DEVICE__STATUS:
 				return getStatus();
-			case EnvironmentPackage.COMPUTING_DEVICE__CAN_CONNECT:
+			case smartbuildingPackage.COMPUTING_DEVICE__CAN_CONNECT:
 				return isCanConnect();
-			case EnvironmentPackage.COMPUTING_DEVICE__MODEL:
+			case smartbuildingPackage.COMPUTING_DEVICE__MODEL:
 				return getModel();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -196,13 +248,13 @@ public class ComputingDeviceImpl extends PhysicalAssetImpl implements ComputingD
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case EnvironmentPackage.COMPUTING_DEVICE__STATUS:
+			case smartbuildingPackage.COMPUTING_DEVICE__STATUS:
 				setStatus((Status)newValue);
 				return;
-			case EnvironmentPackage.COMPUTING_DEVICE__CAN_CONNECT:
+			case smartbuildingPackage.COMPUTING_DEVICE__CAN_CONNECT:
 				setCanConnect((Boolean)newValue);
 				return;
-			case EnvironmentPackage.COMPUTING_DEVICE__MODEL:
+			case smartbuildingPackage.COMPUTING_DEVICE__MODEL:
 				setModel((String)newValue);
 				return;
 		}
@@ -217,13 +269,13 @@ public class ComputingDeviceImpl extends PhysicalAssetImpl implements ComputingD
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case EnvironmentPackage.COMPUTING_DEVICE__STATUS:
+			case smartbuildingPackage.COMPUTING_DEVICE__STATUS:
 				setStatus(STATUS_EDEFAULT);
 				return;
-			case EnvironmentPackage.COMPUTING_DEVICE__CAN_CONNECT:
+			case smartbuildingPackage.COMPUTING_DEVICE__CAN_CONNECT:
 				setCanConnect(CAN_CONNECT_EDEFAULT);
 				return;
-			case EnvironmentPackage.COMPUTING_DEVICE__MODEL:
+			case smartbuildingPackage.COMPUTING_DEVICE__MODEL:
 				setModel(MODEL_EDEFAULT);
 				return;
 		}
@@ -238,14 +290,28 @@ public class ComputingDeviceImpl extends PhysicalAssetImpl implements ComputingD
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case EnvironmentPackage.COMPUTING_DEVICE__STATUS:
+			case smartbuildingPackage.COMPUTING_DEVICE__STATUS:
 				return status != STATUS_EDEFAULT;
-			case EnvironmentPackage.COMPUTING_DEVICE__CAN_CONNECT:
+			case smartbuildingPackage.COMPUTING_DEVICE__CAN_CONNECT:
 				return canConnect != CAN_CONNECT_EDEFAULT;
-			case EnvironmentPackage.COMPUTING_DEVICE__MODEL:
+			case smartbuildingPackage.COMPUTING_DEVICE__MODEL:
 				return MODEL_EDEFAULT == null ? model != null : !MODEL_EDEFAULT.equals(model);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case smartbuildingPackage.COMPUTING_DEVICE___IS_ABSTRACTABLE:
+				return isAbstractable();
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 	/**
@@ -266,6 +332,18 @@ public class ComputingDeviceImpl extends PhysicalAssetImpl implements ComputingD
 		result.append(model);
 		result.append(')');
 		return result.toString();
+	}
+
+	@Override
+	public boolean isAbstractable() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean isCanConnect() {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 } //ComputingDeviceImpl

@@ -2,10 +2,10 @@
  */
 package environment.impl;
 
-import environment.EnvironmentPackage;
-import environment.SmartLight;
-
 import org.eclipse.emf.ecore.EClass;
+
+import environment.SmartLight;
+import environment.smartbuildingPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,6 +24,8 @@ public class SmartLightImpl extends ComputingDeviceImpl implements SmartLight {
 		super();
 	}
 
+	
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -31,7 +33,7 @@ public class SmartLightImpl extends ComputingDeviceImpl implements SmartLight {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return EnvironmentPackage.Literals.SMART_LIGHT;
+		return smartbuildingPackage.Literals.SMART_LIGHT;
 	}
 
 } //SmartLightImpl

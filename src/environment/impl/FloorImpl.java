@@ -2,9 +2,9 @@
  */
 package environment.impl;
 
-import environment.EnvironmentPackage;
 import environment.Floor;
 
+import environment.smartbuildingPackage;
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -31,7 +31,7 @@ public class FloorImpl extends PhysicalStructureImpl implements Floor {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return EnvironmentPackage.Literals.FLOOR;
+		return smartbuildingPackage.Literals.FLOOR;
 	}
 
 } //FloorImpl

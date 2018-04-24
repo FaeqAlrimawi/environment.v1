@@ -9,7 +9,7 @@ package environment;
  * <!-- end-user-doc -->
  *
  *
- * @see environment.EnvironmentPackage#getWorkstation()
+ * @see environment.smartbuildingPackage#getWorkstation()
  * @model
  * @generated
  */

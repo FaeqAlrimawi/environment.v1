@@ -9,7 +9,7 @@ package environment;
  * <!-- end-user-doc -->
  *
  *
- * @see environment.EnvironmentPackage#getHVAC()
+ * @see environment.smartbuildingPackage#getHVAC()
  * @model
  * @generated
  */

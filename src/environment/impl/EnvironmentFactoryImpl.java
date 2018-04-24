@@ -7,11 +7,15 @@ import environment.Actor;
 import environment.Application;
 import environment.Building;
 import environment.CCTV;
+import environment.CoffeeMachine;
 import environment.ComputingDevice;
 import environment.Credential;
 import environment.Desktop;
 import environment.DigitalAsset;
 import environment.DigitalConnection;
+import environment.DishWasher;
+import environment.Elevator;
+import environment.ElevatorsArea;
 import environment.EnvironmentDiagram;
 import environment.EnvironmentFactory;
 import environment.EnvironmentPackage;
@@ -20,7 +24,10 @@ import environment.FileStatus;
 import environment.FireAlarm;
 import environment.Floor;
 import environment.HVAC;
+import environment.Hallway;
+import environment.Lab;
 import environment.Laptop;
+import environment.Lounge;
 import environment.PhysicalAsset;
 import environment.PhysicalConnection;
 import environment.PhysicalStructure;
@@ -31,6 +38,7 @@ import environment.Room;
 import environment.Server;
 import environment.SmartLight;
 import environment.Status;
+import environment.Toilet;
 import environment.Type;
 import environment.Workstation;
 
@@ -114,6 +122,14 @@ public class EnvironmentFactoryImpl extends EFactoryImpl implements EnvironmentF
 			case EnvironmentPackage.BUILDING: return createBuilding();
 			case EnvironmentPackage.FIRE_ALARM: return createFireAlarm();
 			case EnvironmentPackage.WORKSTATION: return createWorkstation();
+			case EnvironmentPackage.LAB: return createLab();
+			case EnvironmentPackage.TOILET: return createToilet();
+			case EnvironmentPackage.LOUNGE: return createLounge();
+			case EnvironmentPackage.DISH_WASHER: return createDishWasher();
+			case EnvironmentPackage.COFFEE_MACHINE: return createCoffeeMachine();
+			case EnvironmentPackage.ELEVATOR: return createElevator();
+			case EnvironmentPackage.HALLWAY: return createHallway();
+			case EnvironmentPackage.ELEVATORS_AREA: return createElevatorsArea();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -425,6 +441,86 @@ public class EnvironmentFactoryImpl extends EFactoryImpl implements EnvironmentF
 	public Workstation createWorkstation() {
 		WorkstationImpl workstation = new WorkstationImpl();
 		return workstation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Lab createLab() {
+		LabImpl lab = new LabImpl();
+		return lab;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Toilet createToilet() {
+		ToiletImpl toilet = new ToiletImpl();
+		return toilet;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Lounge createLounge() {
+		LoungeImpl lounge = new LoungeImpl();
+		return lounge;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DishWasher createDishWasher() {
+		DishWasherImpl dishWasher = new DishWasherImpl();
+		return dishWasher;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CoffeeMachine createCoffeeMachine() {
+		CoffeeMachineImpl coffeeMachine = new CoffeeMachineImpl();
+		return coffeeMachine;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Elevator createElevator() {
+		ElevatorImpl elevator = new ElevatorImpl();
+		return elevator;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Hallway createHallway() {
+		HallwayImpl hallway = new HallwayImpl();
+		return hallway;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ElevatorsArea createElevatorsArea() {
+		ElevatorsAreaImpl elevatorsArea = new ElevatorsAreaImpl();
+		return elevatorsArea;
 	}
 
 	/**

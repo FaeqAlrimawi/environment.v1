@@ -15,7 +15,7 @@ package environment;
  *   <li>{@link environment.Process#getStatus <em>Status</em>}</li>
  * </ul>
  *
- * @see environment.EnvironmentPackage#getProcess()
+ * @see environment.smartbuildingPackage#getProcess()
  * @model
  * @generated
  */
@@ -32,7 +32,7 @@ public interface Process extends DigitalAsset {
 	 * @return the value of the '<em>Status</em>' attribute.
 	 * @see environment.ProcessStatus
 	 * @see #setStatus(ProcessStatus)
-	 * @see environment.EnvironmentPackage#getProcess_Status()
+	 * @see environment.smartbuildingPackage#getProcess_Status()
 	 * @model
 	 * @generated
 	 */

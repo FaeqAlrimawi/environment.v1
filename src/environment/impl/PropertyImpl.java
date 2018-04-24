@@ -2,9 +2,9 @@
  */
 package environment.impl;
 
-import environment.EnvironmentPackage;
 import environment.Property;
 
+import environment.smartbuildingPackage;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -22,6 +22,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link environment.impl.PropertyImpl#getName <em>Name</em>}</li>
  *   <li>{@link environment.impl.PropertyImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link environment.impl.PropertyImpl#isAbstractable <em>Abstractable</em>}</li>
  * </ul>
  *
  * @generated
@@ -68,6 +69,26 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
 	protected String value = VALUE_EDEFAULT;
 
 	/**
+	 * The default value of the '{@link #isAbstractable() <em>Abstractable</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isAbstractable()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean ABSTRACTABLE_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isAbstractable() <em>Abstractable</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isAbstractable()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean abstractable = ABSTRACTABLE_EDEFAULT;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -83,7 +104,7 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return EnvironmentPackage.Literals.PROPERTY;
+		return smartbuildingPackage.Literals.PROPERTY;
 	}
 
 	/**
@@ -104,7 +125,7 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EnvironmentPackage.PROPERTY__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, smartbuildingPackage.PROPERTY__NAME, oldName, name));
 	}
 
 	/**
@@ -125,7 +146,28 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
 		String oldValue = value;
 		value = newValue;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EnvironmentPackage.PROPERTY__VALUE, oldValue, value));
+			eNotify(new ENotificationImpl(this, Notification.SET, smartbuildingPackage.PROPERTY__VALUE, oldValue, value));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isAbstractable() {
+		return abstractable;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAbstractable(boolean newAbstractable) {
+		boolean oldAbstractable = abstractable;
+		abstractable = newAbstractable;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, smartbuildingPackage.PROPERTY__ABSTRACTABLE, oldAbstractable, abstractable));
 	}
 
 	/**
@@ -136,10 +178,12 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case EnvironmentPackage.PROPERTY__NAME:
+			case smartbuildingPackage.PROPERTY__NAME:
 				return getName();
-			case EnvironmentPackage.PROPERTY__VALUE:
+			case smartbuildingPackage.PROPERTY__VALUE:
 				return getValue();
+			case smartbuildingPackage.PROPERTY__ABSTRACTABLE:
+				return isAbstractable();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -152,11 +196,14 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case EnvironmentPackage.PROPERTY__NAME:
+			case smartbuildingPackage.PROPERTY__NAME:
 				setName((String)newValue);
 				return;
-			case EnvironmentPackage.PROPERTY__VALUE:
+			case smartbuildingPackage.PROPERTY__VALUE:
 				setValue((String)newValue);
+				return;
+			case smartbuildingPackage.PROPERTY__ABSTRACTABLE:
+				setAbstractable((Boolean)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -170,11 +217,14 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case EnvironmentPackage.PROPERTY__NAME:
+			case smartbuildingPackage.PROPERTY__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case EnvironmentPackage.PROPERTY__VALUE:
+			case smartbuildingPackage.PROPERTY__VALUE:
 				setValue(VALUE_EDEFAULT);
+				return;
+			case smartbuildingPackage.PROPERTY__ABSTRACTABLE:
+				setAbstractable(ABSTRACTABLE_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -188,10 +238,12 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case EnvironmentPackage.PROPERTY__NAME:
+			case smartbuildingPackage.PROPERTY__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case EnvironmentPackage.PROPERTY__VALUE:
+			case smartbuildingPackage.PROPERTY__VALUE:
 				return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
+			case smartbuildingPackage.PROPERTY__ABSTRACTABLE:
+				return abstractable != ABSTRACTABLE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -210,6 +262,8 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
 		result.append(name);
 		result.append(", value: ");
 		result.append(value);
+		result.append(", abstractable: ");
+		result.append(abstractable);
 		result.append(')');
 		return result.toString();
 	}

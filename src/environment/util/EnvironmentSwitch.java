@@ -8,19 +8,26 @@ import environment.Application;
 import environment.Asset;
 import environment.Building;
 import environment.CCTV;
+import environment.CoffeeMachine;
 import environment.ComputingDevice;
 import environment.Connection;
 import environment.Credential;
 import environment.Desktop;
 import environment.DigitalAsset;
 import environment.DigitalConnection;
+import environment.DishWasher;
+import environment.Elevator;
+import environment.ElevatorsArea;
 import environment.EnvironmentDiagram;
 import environment.EnvironmentPackage;
 import environment.File;
 import environment.FireAlarm;
 import environment.Floor;
 import environment.HVAC;
+import environment.Hallway;
+import environment.Lab;
 import environment.Laptop;
+import environment.Lounge;
 import environment.PhysicalAsset;
 import environment.PhysicalConnection;
 import environment.PhysicalStructure;
@@ -29,6 +36,7 @@ import environment.Property;
 import environment.Room;
 import environment.Server;
 import environment.SmartLight;
+import environment.Toilet;
 import environment.Type;
 import environment.Workstation;
 
@@ -314,6 +322,82 @@ public class EnvironmentSwitch<T> extends Switch<T> {
 				if (result == null) result = caseComputingDevice(workstation);
 				if (result == null) result = casePhysicalAsset(workstation);
 				if (result == null) result = caseAsset(workstation);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case EnvironmentPackage.LAB: {
+				Lab lab = (Lab)theEObject;
+				T result = caseLab(lab);
+				if (result == null) result = caseRoom(lab);
+				if (result == null) result = casePhysicalStructure(lab);
+				if (result == null) result = casePhysicalAsset(lab);
+				if (result == null) result = caseAsset(lab);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case EnvironmentPackage.TOILET: {
+				Toilet toilet = (Toilet)theEObject;
+				T result = caseToilet(toilet);
+				if (result == null) result = caseRoom(toilet);
+				if (result == null) result = casePhysicalStructure(toilet);
+				if (result == null) result = casePhysicalAsset(toilet);
+				if (result == null) result = caseAsset(toilet);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case EnvironmentPackage.LOUNGE: {
+				Lounge lounge = (Lounge)theEObject;
+				T result = caseLounge(lounge);
+				if (result == null) result = caseRoom(lounge);
+				if (result == null) result = casePhysicalStructure(lounge);
+				if (result == null) result = casePhysicalAsset(lounge);
+				if (result == null) result = caseAsset(lounge);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case EnvironmentPackage.DISH_WASHER: {
+				DishWasher dishWasher = (DishWasher)theEObject;
+				T result = caseDishWasher(dishWasher);
+				if (result == null) result = caseComputingDevice(dishWasher);
+				if (result == null) result = casePhysicalAsset(dishWasher);
+				if (result == null) result = caseAsset(dishWasher);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case EnvironmentPackage.COFFEE_MACHINE: {
+				CoffeeMachine coffeeMachine = (CoffeeMachine)theEObject;
+				T result = caseCoffeeMachine(coffeeMachine);
+				if (result == null) result = caseComputingDevice(coffeeMachine);
+				if (result == null) result = casePhysicalAsset(coffeeMachine);
+				if (result == null) result = caseAsset(coffeeMachine);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case EnvironmentPackage.ELEVATOR: {
+				Elevator elevator = (Elevator)theEObject;
+				T result = caseElevator(elevator);
+				if (result == null) result = caseComputingDevice(elevator);
+				if (result == null) result = casePhysicalAsset(elevator);
+				if (result == null) result = caseAsset(elevator);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case EnvironmentPackage.HALLWAY: {
+				Hallway hallway = (Hallway)theEObject;
+				T result = caseHallway(hallway);
+				if (result == null) result = casePhysicalStructure(hallway);
+				if (result == null) result = casePhysicalAsset(hallway);
+				if (result == null) result = caseAsset(hallway);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case EnvironmentPackage.ELEVATORS_AREA: {
+				ElevatorsArea elevatorsArea = (ElevatorsArea)theEObject;
+				T result = caseElevatorsArea(elevatorsArea);
+				if (result == null) result = caseRoom(elevatorsArea);
+				if (result == null) result = casePhysicalStructure(elevatorsArea);
+				if (result == null) result = casePhysicalAsset(elevatorsArea);
+				if (result == null) result = caseAsset(elevatorsArea);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -753,6 +837,126 @@ public class EnvironmentSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseWorkstation(Workstation object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Lab</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Lab</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLab(Lab object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Toilet</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Toilet</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseToilet(Toilet object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Lounge</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Lounge</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLounge(Lounge object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Dish Washer</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Dish Washer</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDishWasher(DishWasher object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Coffee Machine</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Coffee Machine</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCoffeeMachine(CoffeeMachine object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Elevator</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Elevator</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseElevator(Elevator object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Hallway</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Hallway</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseHallway(Hallway object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Elevators Area</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Elevators Area</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseElevatorsArea(ElevatorsArea object) {
 		return null;
 	}
 

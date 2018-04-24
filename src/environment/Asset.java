@@ -24,7 +24,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link environment.Asset#getControl <em>Control</em>}</li>
  * </ul>
  *
- * @see environment.EnvironmentPackage#getAsset()
+ * @see environment.smartbuildingPackage#getAsset()
  * @model abstract="true"
  * @generated
  */
@@ -39,12 +39,19 @@ public interface Asset extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Connections</em>' reference list.
-	 * @see environment.EnvironmentPackage#getAsset_Connections()
+	 * @see environment.smartbuildingPackage#getAsset_Connections()
 	 * @model
 	 * @generated
 	 */
 	EList<Connection> getConnections();
 
+	static final int SHARE_EXACT_TYPE = 20;
+	static final int SHARE_EXACT_SUPER_TYPE = 10;
+	static final int SHARE_ASSIGNABLE_TYPE = 15;
+	static final int SHARE_ABSTRACT_TYPE = 1;
+	static final int NO_COMMON_TYPE = 0;
+	static final int COMMON_PARENT = 10;
+	
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -55,7 +62,7 @@ public interface Asset extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see environment.EnvironmentPackage#getAsset_Name()
+	 * @see environment.smartbuildingPackage#getAsset_Name()
 	 * @model id="true"
 	 * @generated
 	 */
@@ -81,7 +88,7 @@ public interface Asset extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Property</em>' containment reference list.
-	 * @see environment.EnvironmentPackage#getAsset_Property()
+	 * @see environment.smartbuildingPackage#getAsset_Property()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -97,7 +104,7 @@ public interface Asset extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Value</em>' attribute.
 	 * @see #setValue(int)
-	 * @see environment.EnvironmentPackage#getAsset_Value()
+	 * @see environment.smartbuildingPackage#getAsset_Value()
 	 * @model
 	 * @generated
 	 */
@@ -114,20 +121,30 @@ public interface Asset extends EObject {
 	void setValue(int value);
 
 	/**
-	 * Returns the value of the '<em><b>Type</b></em>' containment reference list.
-	 * The list contents are of type {@link environment.Type}.
+	 * Returns the value of the '<em><b>Type</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Type</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Type</em>' containment reference list.
-	 * @see environment.EnvironmentPackage#getAsset_Type()
+	 * @return the value of the '<em>Type</em>' containment reference.
+	 * @see #setType(Type)
+	 * @see environment.smartbuildingPackage#getAsset_Type()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Type> getType();
+	Type getType();
+
+	/**
+	 * Sets the value of the '{@link environment.Asset#getType <em>Type</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Type</em>' containment reference.
+	 * @see #getType()
+	 * @generated
+	 */
+	void setType(Type value);
 
 	/**
 	 * Returns the value of the '<em><b>Description</b></em>' attribute.
@@ -139,7 +156,7 @@ public interface Asset extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Description</em>' attribute.
 	 * @see #setDescription(String)
-	 * @see environment.EnvironmentPackage#getAsset_Description()
+	 * @see environment.smartbuildingPackage#getAsset_Description()
 	 * @model
 	 * @generated
 	 */
@@ -165,7 +182,7 @@ public interface Asset extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Control</em>' attribute.
 	 * @see #setControl(String)
-	 * @see environment.EnvironmentPackage#getAsset_Control()
+	 * @see environment.smartbuildingPackage#getAsset_Control()
 	 * @model
 	 * @generated
 	 */
@@ -180,5 +197,69 @@ public interface Asset extends EObject {
 	 * @generated
 	 */
 	void setControl(String value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	Asset abstractAsset();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	int isSimilarTo(Asset asset);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	void mergeConnections();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	boolean canMergeConnections();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	boolean canMergeContainedAssets();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	void mergeContainedAssets();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model connectionsMany="true"
+	 * @generated
+	 */
+	void mergeConnections(EList<Connection> connections);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model connectionsMany="true"
+	 * @generated
+	 */
+	boolean canMergeConnections(EList<Connection> connections);
 
 } // Asset

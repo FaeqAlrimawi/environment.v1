@@ -3,8 +3,7 @@
 package environment.impl;
 
 import environment.Credential;
-import environment.EnvironmentPackage;
-
+import environment.smartbuildingPackage;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -83,7 +82,7 @@ public class CredentialImpl extends MinimalEObjectImpl.Container implements Cred
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return EnvironmentPackage.Literals.CREDENTIAL;
+		return smartbuildingPackage.Literals.CREDENTIAL;
 	}
 
 	/**
@@ -104,7 +103,7 @@ public class CredentialImpl extends MinimalEObjectImpl.Container implements Cred
 		String oldKey = key;
 		key = newKey;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EnvironmentPackage.CREDENTIAL__KEY, oldKey, key));
+			eNotify(new ENotificationImpl(this, Notification.SET, smartbuildingPackage.CREDENTIAL__KEY, oldKey, key));
 	}
 
 	/**
@@ -125,7 +124,7 @@ public class CredentialImpl extends MinimalEObjectImpl.Container implements Cred
 		String oldValue = value;
 		value = newValue;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EnvironmentPackage.CREDENTIAL__VALUE, oldValue, value));
+			eNotify(new ENotificationImpl(this, Notification.SET, smartbuildingPackage.CREDENTIAL__VALUE, oldValue, value));
 	}
 
 	/**
@@ -136,9 +135,9 @@ public class CredentialImpl extends MinimalEObjectImpl.Container implements Cred
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case EnvironmentPackage.CREDENTIAL__KEY:
+			case smartbuildingPackage.CREDENTIAL__KEY:
 				return getKey();
-			case EnvironmentPackage.CREDENTIAL__VALUE:
+			case smartbuildingPackage.CREDENTIAL__VALUE:
 				return getValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -152,10 +151,10 @@ public class CredentialImpl extends MinimalEObjectImpl.Container implements Cred
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case EnvironmentPackage.CREDENTIAL__KEY:
+			case smartbuildingPackage.CREDENTIAL__KEY:
 				setKey((String)newValue);
 				return;
-			case EnvironmentPackage.CREDENTIAL__VALUE:
+			case smartbuildingPackage.CREDENTIAL__VALUE:
 				setValue((String)newValue);
 				return;
 		}
@@ -170,10 +169,10 @@ public class CredentialImpl extends MinimalEObjectImpl.Container implements Cred
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case EnvironmentPackage.CREDENTIAL__KEY:
+			case smartbuildingPackage.CREDENTIAL__KEY:
 				setKey(KEY_EDEFAULT);
 				return;
-			case EnvironmentPackage.CREDENTIAL__VALUE:
+			case smartbuildingPackage.CREDENTIAL__VALUE:
 				setValue(VALUE_EDEFAULT);
 				return;
 		}
@@ -188,9 +187,9 @@ public class CredentialImpl extends MinimalEObjectImpl.Container implements Cred
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case EnvironmentPackage.CREDENTIAL__KEY:
+			case smartbuildingPackage.CREDENTIAL__KEY:
 				return KEY_EDEFAULT == null ? key != null : !KEY_EDEFAULT.equals(key);
-			case EnvironmentPackage.CREDENTIAL__VALUE:
+			case smartbuildingPackage.CREDENTIAL__VALUE:
 				return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
 		}
 		return super.eIsSet(featureID);

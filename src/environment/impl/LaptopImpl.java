@@ -2,9 +2,9 @@
  */
 package environment.impl;
 
-import environment.EnvironmentPackage;
 import environment.Laptop;
 
+import environment.smartbuildingPackage;
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -31,7 +31,7 @@ public class LaptopImpl extends ComputingDeviceImpl implements Laptop {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return EnvironmentPackage.Literals.LAPTOP;
+		return smartbuildingPackage.Literals.LAPTOP;
 	}
 
 } //LaptopImpl

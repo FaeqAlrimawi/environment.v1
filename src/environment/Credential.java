@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link environment.Credential#getValue <em>Value</em>}</li>
  * </ul>
  *
- * @see environment.EnvironmentPackage#getCredential()
+ * @see environment.smartbuildingPackage#getCredential()
  * @model
  * @generated
  */
@@ -32,7 +32,7 @@ public interface Credential extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Key</em>' attribute.
 	 * @see #setKey(String)
-	 * @see environment.EnvironmentPackage#getCredential_Key()
+	 * @see environment.smartbuildingPackage#getCredential_Key()
 	 * @model id="true"
 	 * @generated
 	 */
@@ -58,7 +58,7 @@ public interface Credential extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Value</em>' attribute.
 	 * @see #setValue(String)
-	 * @see environment.EnvironmentPackage#getCredential_Value()
+	 * @see environment.smartbuildingPackage#getCredential_Value()
 	 * @model
 	 * @generated
 	 */

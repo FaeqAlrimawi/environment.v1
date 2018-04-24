@@ -2,9 +2,9 @@
  */
 package environment.impl;
 
-import environment.EnvironmentPackage;
 import environment.Workstation;
 
+import environment.smartbuildingPackage;
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -31,7 +31,7 @@ public class WorkstationImpl extends ComputingDeviceImpl implements Workstation 
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return EnvironmentPackage.Literals.WORKSTATION;
+		return smartbuildingPackage.Literals.WORKSTATION;
 	}
 
 } //WorkstationImpl

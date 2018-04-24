@@ -21,7 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link environment.Port#getDescription <em>Description</em>}</li>
  * </ul>
  *
- * @see environment.EnvironmentPackage#getPort()
+ * @see environment.smartbuildingPackage#getPort()
  * @model
  * @generated
  */
@@ -36,7 +36,7 @@ public interface Port extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Asset</em>' reference.
 	 * @see #setAsset(Asset)
-	 * @see environment.EnvironmentPackage#getPort_Asset()
+	 * @see environment.smartbuildingPackage#getPort_Asset()
 	 * @model
 	 * @generated
 	 */
@@ -62,7 +62,7 @@ public interface Port extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see environment.EnvironmentPackage#getPort_Name()
+	 * @see environment.smartbuildingPackage#getPort_Name()
 	 * @model id="true"
 	 * @generated
 	 */
@@ -88,7 +88,7 @@ public interface Port extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Credential</em>' containment reference list.
-	 * @see environment.EnvironmentPackage#getPort_Credential()
+	 * @see environment.smartbuildingPackage#getPort_Credential()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -104,7 +104,7 @@ public interface Port extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Description</em>' attribute.
 	 * @see #setDescription(String)
-	 * @see environment.EnvironmentPackage#getPort_Description()
+	 * @see environment.smartbuildingPackage#getPort_Description()
 	 * @model
 	 * @generated
 	 */

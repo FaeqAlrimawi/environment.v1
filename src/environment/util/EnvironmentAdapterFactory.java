@@ -8,19 +8,26 @@ import environment.Application;
 import environment.Asset;
 import environment.Building;
 import environment.CCTV;
+import environment.CoffeeMachine;
 import environment.ComputingDevice;
 import environment.Connection;
 import environment.Credential;
 import environment.Desktop;
 import environment.DigitalAsset;
 import environment.DigitalConnection;
+import environment.DishWasher;
+import environment.Elevator;
+import environment.ElevatorsArea;
 import environment.EnvironmentDiagram;
 import environment.EnvironmentPackage;
 import environment.File;
 import environment.FireAlarm;
 import environment.Floor;
 import environment.HVAC;
+import environment.Hallway;
+import environment.Lab;
 import environment.Laptop;
+import environment.Lounge;
 import environment.PhysicalAsset;
 import environment.PhysicalConnection;
 import environment.PhysicalStructure;
@@ -29,6 +36,7 @@ import environment.Property;
 import environment.Room;
 import environment.Server;
 import environment.SmartLight;
+import environment.Toilet;
 import environment.Type;
 import environment.Workstation;
 
@@ -210,6 +218,38 @@ public class EnvironmentAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseWorkstation(Workstation object) {
 				return createWorkstationAdapter();
+			}
+			@Override
+			public Adapter caseLab(Lab object) {
+				return createLabAdapter();
+			}
+			@Override
+			public Adapter caseToilet(Toilet object) {
+				return createToiletAdapter();
+			}
+			@Override
+			public Adapter caseLounge(Lounge object) {
+				return createLoungeAdapter();
+			}
+			@Override
+			public Adapter caseDishWasher(DishWasher object) {
+				return createDishWasherAdapter();
+			}
+			@Override
+			public Adapter caseCoffeeMachine(CoffeeMachine object) {
+				return createCoffeeMachineAdapter();
+			}
+			@Override
+			public Adapter caseElevator(Elevator object) {
+				return createElevatorAdapter();
+			}
+			@Override
+			public Adapter caseHallway(Hallway object) {
+				return createHallwayAdapter();
+			}
+			@Override
+			public Adapter caseElevatorsArea(ElevatorsArea object) {
+				return createElevatorsAreaAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -634,6 +674,118 @@ public class EnvironmentAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createWorkstationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link environment.Lab <em>Lab</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see environment.Lab
+	 * @generated
+	 */
+	public Adapter createLabAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link environment.Toilet <em>Toilet</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see environment.Toilet
+	 * @generated
+	 */
+	public Adapter createToiletAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link environment.Lounge <em>Lounge</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see environment.Lounge
+	 * @generated
+	 */
+	public Adapter createLoungeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link environment.DishWasher <em>Dish Washer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see environment.DishWasher
+	 * @generated
+	 */
+	public Adapter createDishWasherAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link environment.CoffeeMachine <em>Coffee Machine</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see environment.CoffeeMachine
+	 * @generated
+	 */
+	public Adapter createCoffeeMachineAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link environment.Elevator <em>Elevator</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see environment.Elevator
+	 * @generated
+	 */
+	public Adapter createElevatorAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link environment.Hallway <em>Hallway</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see environment.Hallway
+	 * @generated
+	 */
+	public Adapter createHallwayAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link environment.ElevatorsArea <em>Elevators Area</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see environment.ElevatorsArea
+	 * @generated
+	 */
+	public Adapter createElevatorsAreaAdapter() {
 		return null;
 	}
 

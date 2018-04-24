@@ -3192,6 +3192,959 @@ public interface EnvironmentPackage extends EPackage {
 	int WORKSTATION_OPERATION_COUNT = COMPUTING_DEVICE_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link environment.impl.LabImpl <em>Lab</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see environment.impl.LabImpl
+	 * @see environment.impl.EnvironmentPackageImpl#getLab()
+	 * @generated
+	 */
+	int LAB = 29;
+
+	/**
+	 * The feature id for the '<em><b>Connections</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAB__CONNECTIONS = ROOM__CONNECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAB__NAME = ROOM__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Property</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAB__PROPERTY = ROOM__PROPERTY;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAB__VALUE = ROOM__VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAB__TYPE = ROOM__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAB__DESCRIPTION = ROOM__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Control</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAB__CONTROL = ROOM__CONTROL;
+
+	/**
+	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAB__CONTAINED_ASSETS = ROOM__CONTAINED_ASSETS;
+
+	/**
+	 * The feature id for the '<em><b>Parent Asset</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAB__PARENT_ASSET = ROOM__PARENT_ASSET;
+
+	/**
+	 * The number of structural features of the '<em>Lab</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAB_FEATURE_COUNT = ROOM_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Lab</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAB_OPERATION_COUNT = ROOM_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link environment.impl.ToiletImpl <em>Toilet</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see environment.impl.ToiletImpl
+	 * @see environment.impl.EnvironmentPackageImpl#getToilet()
+	 * @generated
+	 */
+	int TOILET = 30;
+
+	/**
+	 * The feature id for the '<em><b>Connections</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOILET__CONNECTIONS = ROOM__CONNECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOILET__NAME = ROOM__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Property</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOILET__PROPERTY = ROOM__PROPERTY;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOILET__VALUE = ROOM__VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOILET__TYPE = ROOM__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOILET__DESCRIPTION = ROOM__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Control</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOILET__CONTROL = ROOM__CONTROL;
+
+	/**
+	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOILET__CONTAINED_ASSETS = ROOM__CONTAINED_ASSETS;
+
+	/**
+	 * The feature id for the '<em><b>Parent Asset</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOILET__PARENT_ASSET = ROOM__PARENT_ASSET;
+
+	/**
+	 * The number of structural features of the '<em>Toilet</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOILET_FEATURE_COUNT = ROOM_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Toilet</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOILET_OPERATION_COUNT = ROOM_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link environment.impl.LoungeImpl <em>Lounge</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see environment.impl.LoungeImpl
+	 * @see environment.impl.EnvironmentPackageImpl#getLounge()
+	 * @generated
+	 */
+	int LOUNGE = 31;
+
+	/**
+	 * The feature id for the '<em><b>Connections</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOUNGE__CONNECTIONS = ROOM__CONNECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOUNGE__NAME = ROOM__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Property</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOUNGE__PROPERTY = ROOM__PROPERTY;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOUNGE__VALUE = ROOM__VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOUNGE__TYPE = ROOM__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOUNGE__DESCRIPTION = ROOM__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Control</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOUNGE__CONTROL = ROOM__CONTROL;
+
+	/**
+	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOUNGE__CONTAINED_ASSETS = ROOM__CONTAINED_ASSETS;
+
+	/**
+	 * The feature id for the '<em><b>Parent Asset</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOUNGE__PARENT_ASSET = ROOM__PARENT_ASSET;
+
+	/**
+	 * The number of structural features of the '<em>Lounge</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOUNGE_FEATURE_COUNT = ROOM_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Lounge</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOUNGE_OPERATION_COUNT = ROOM_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link environment.impl.DishWasherImpl <em>Dish Washer</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see environment.impl.DishWasherImpl
+	 * @see environment.impl.EnvironmentPackageImpl#getDishWasher()
+	 * @generated
+	 */
+	int DISH_WASHER = 32;
+
+	/**
+	 * The feature id for the '<em><b>Connections</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DISH_WASHER__CONNECTIONS = COMPUTING_DEVICE__CONNECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DISH_WASHER__NAME = COMPUTING_DEVICE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Property</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DISH_WASHER__PROPERTY = COMPUTING_DEVICE__PROPERTY;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DISH_WASHER__VALUE = COMPUTING_DEVICE__VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DISH_WASHER__TYPE = COMPUTING_DEVICE__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DISH_WASHER__DESCRIPTION = COMPUTING_DEVICE__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Control</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DISH_WASHER__CONTROL = COMPUTING_DEVICE__CONTROL;
+
+	/**
+	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DISH_WASHER__CONTAINED_ASSETS = COMPUTING_DEVICE__CONTAINED_ASSETS;
+
+	/**
+	 * The feature id for the '<em><b>Parent Asset</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DISH_WASHER__PARENT_ASSET = COMPUTING_DEVICE__PARENT_ASSET;
+
+	/**
+	 * The feature id for the '<em><b>Status</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DISH_WASHER__STATUS = COMPUTING_DEVICE__STATUS;
+
+	/**
+	 * The feature id for the '<em><b>Can Connect</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DISH_WASHER__CAN_CONNECT = COMPUTING_DEVICE__CAN_CONNECT;
+
+	/**
+	 * The feature id for the '<em><b>Model</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DISH_WASHER__MODEL = COMPUTING_DEVICE__MODEL;
+
+	/**
+	 * The number of structural features of the '<em>Dish Washer</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DISH_WASHER_FEATURE_COUNT = COMPUTING_DEVICE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Dish Washer</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DISH_WASHER_OPERATION_COUNT = COMPUTING_DEVICE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link environment.impl.CoffeeMachineImpl <em>Coffee Machine</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see environment.impl.CoffeeMachineImpl
+	 * @see environment.impl.EnvironmentPackageImpl#getCoffeeMachine()
+	 * @generated
+	 */
+	int COFFEE_MACHINE = 33;
+
+	/**
+	 * The feature id for the '<em><b>Connections</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COFFEE_MACHINE__CONNECTIONS = COMPUTING_DEVICE__CONNECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COFFEE_MACHINE__NAME = COMPUTING_DEVICE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Property</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COFFEE_MACHINE__PROPERTY = COMPUTING_DEVICE__PROPERTY;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COFFEE_MACHINE__VALUE = COMPUTING_DEVICE__VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COFFEE_MACHINE__TYPE = COMPUTING_DEVICE__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COFFEE_MACHINE__DESCRIPTION = COMPUTING_DEVICE__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Control</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COFFEE_MACHINE__CONTROL = COMPUTING_DEVICE__CONTROL;
+
+	/**
+	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COFFEE_MACHINE__CONTAINED_ASSETS = COMPUTING_DEVICE__CONTAINED_ASSETS;
+
+	/**
+	 * The feature id for the '<em><b>Parent Asset</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COFFEE_MACHINE__PARENT_ASSET = COMPUTING_DEVICE__PARENT_ASSET;
+
+	/**
+	 * The feature id for the '<em><b>Status</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COFFEE_MACHINE__STATUS = COMPUTING_DEVICE__STATUS;
+
+	/**
+	 * The feature id for the '<em><b>Can Connect</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COFFEE_MACHINE__CAN_CONNECT = COMPUTING_DEVICE__CAN_CONNECT;
+
+	/**
+	 * The feature id for the '<em><b>Model</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COFFEE_MACHINE__MODEL = COMPUTING_DEVICE__MODEL;
+
+	/**
+	 * The number of structural features of the '<em>Coffee Machine</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COFFEE_MACHINE_FEATURE_COUNT = COMPUTING_DEVICE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Coffee Machine</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COFFEE_MACHINE_OPERATION_COUNT = COMPUTING_DEVICE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link environment.impl.ElevatorImpl <em>Elevator</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see environment.impl.ElevatorImpl
+	 * @see environment.impl.EnvironmentPackageImpl#getElevator()
+	 * @generated
+	 */
+	int ELEVATOR = 34;
+
+	/**
+	 * The feature id for the '<em><b>Connections</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEVATOR__CONNECTIONS = COMPUTING_DEVICE__CONNECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEVATOR__NAME = COMPUTING_DEVICE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Property</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEVATOR__PROPERTY = COMPUTING_DEVICE__PROPERTY;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEVATOR__VALUE = COMPUTING_DEVICE__VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEVATOR__TYPE = COMPUTING_DEVICE__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEVATOR__DESCRIPTION = COMPUTING_DEVICE__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Control</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEVATOR__CONTROL = COMPUTING_DEVICE__CONTROL;
+
+	/**
+	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEVATOR__CONTAINED_ASSETS = COMPUTING_DEVICE__CONTAINED_ASSETS;
+
+	/**
+	 * The feature id for the '<em><b>Parent Asset</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEVATOR__PARENT_ASSET = COMPUTING_DEVICE__PARENT_ASSET;
+
+	/**
+	 * The feature id for the '<em><b>Status</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEVATOR__STATUS = COMPUTING_DEVICE__STATUS;
+
+	/**
+	 * The feature id for the '<em><b>Can Connect</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEVATOR__CAN_CONNECT = COMPUTING_DEVICE__CAN_CONNECT;
+
+	/**
+	 * The feature id for the '<em><b>Model</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEVATOR__MODEL = COMPUTING_DEVICE__MODEL;
+
+	/**
+	 * The number of structural features of the '<em>Elevator</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEVATOR_FEATURE_COUNT = COMPUTING_DEVICE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Elevator</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEVATOR_OPERATION_COUNT = COMPUTING_DEVICE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link environment.impl.HallwayImpl <em>Hallway</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see environment.impl.HallwayImpl
+	 * @see environment.impl.EnvironmentPackageImpl#getHallway()
+	 * @generated
+	 */
+	int HALLWAY = 35;
+
+	/**
+	 * The feature id for the '<em><b>Connections</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HALLWAY__CONNECTIONS = PHYSICAL_STRUCTURE__CONNECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HALLWAY__NAME = PHYSICAL_STRUCTURE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Property</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HALLWAY__PROPERTY = PHYSICAL_STRUCTURE__PROPERTY;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HALLWAY__VALUE = PHYSICAL_STRUCTURE__VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HALLWAY__TYPE = PHYSICAL_STRUCTURE__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HALLWAY__DESCRIPTION = PHYSICAL_STRUCTURE__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Control</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HALLWAY__CONTROL = PHYSICAL_STRUCTURE__CONTROL;
+
+	/**
+	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HALLWAY__CONTAINED_ASSETS = PHYSICAL_STRUCTURE__CONTAINED_ASSETS;
+
+	/**
+	 * The feature id for the '<em><b>Parent Asset</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HALLWAY__PARENT_ASSET = PHYSICAL_STRUCTURE__PARENT_ASSET;
+
+	/**
+	 * The number of structural features of the '<em>Hallway</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HALLWAY_FEATURE_COUNT = PHYSICAL_STRUCTURE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Hallway</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HALLWAY_OPERATION_COUNT = PHYSICAL_STRUCTURE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link environment.impl.ElevatorsAreaImpl <em>Elevators Area</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see environment.impl.ElevatorsAreaImpl
+	 * @see environment.impl.EnvironmentPackageImpl#getElevatorsArea()
+	 * @generated
+	 */
+	int ELEVATORS_AREA = 36;
+
+	/**
+	 * The feature id for the '<em><b>Connections</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEVATORS_AREA__CONNECTIONS = ROOM__CONNECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEVATORS_AREA__NAME = ROOM__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Property</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEVATORS_AREA__PROPERTY = ROOM__PROPERTY;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEVATORS_AREA__VALUE = ROOM__VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEVATORS_AREA__TYPE = ROOM__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEVATORS_AREA__DESCRIPTION = ROOM__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Control</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEVATORS_AREA__CONTROL = ROOM__CONTROL;
+
+	/**
+	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEVATORS_AREA__CONTAINED_ASSETS = ROOM__CONTAINED_ASSETS;
+
+	/**
+	 * The feature id for the '<em><b>Parent Asset</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEVATORS_AREA__PARENT_ASSET = ROOM__PARENT_ASSET;
+
+	/**
+	 * The number of structural features of the '<em>Elevators Area</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEVATORS_AREA_FEATURE_COUNT = ROOM_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Elevators Area</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEVATORS_AREA_OPERATION_COUNT = ROOM_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link environment.Status <em>Status</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3199,7 +4152,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @see environment.impl.EnvironmentPackageImpl#getStatus()
 	 * @generated
 	 */
-	int STATUS = 29;
+	int STATUS = 37;
 
 	/**
 	 * The meta object id for the '{@link environment.ProcessStatus <em>Process Status</em>}' enum.
@@ -3209,7 +4162,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @see environment.impl.EnvironmentPackageImpl#getProcessStatus()
 	 * @generated
 	 */
-	int PROCESS_STATUS = 30;
+	int PROCESS_STATUS = 38;
 
 	/**
 	 * The meta object id for the '{@link environment.FileStatus <em>File Status</em>}' enum.
@@ -3219,7 +4172,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @see environment.impl.EnvironmentPackageImpl#getFileStatus()
 	 * @generated
 	 */
-	int FILE_STATUS = 31;
+	int FILE_STATUS = 39;
 
 
 	/**
@@ -4052,6 +5005,86 @@ public interface EnvironmentPackage extends EPackage {
 	EClass getWorkstation();
 
 	/**
+	 * Returns the meta object for class '{@link environment.Lab <em>Lab</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Lab</em>'.
+	 * @see environment.Lab
+	 * @generated
+	 */
+	EClass getLab();
+
+	/**
+	 * Returns the meta object for class '{@link environment.Toilet <em>Toilet</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Toilet</em>'.
+	 * @see environment.Toilet
+	 * @generated
+	 */
+	EClass getToilet();
+
+	/**
+	 * Returns the meta object for class '{@link environment.Lounge <em>Lounge</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Lounge</em>'.
+	 * @see environment.Lounge
+	 * @generated
+	 */
+	EClass getLounge();
+
+	/**
+	 * Returns the meta object for class '{@link environment.DishWasher <em>Dish Washer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Dish Washer</em>'.
+	 * @see environment.DishWasher
+	 * @generated
+	 */
+	EClass getDishWasher();
+
+	/**
+	 * Returns the meta object for class '{@link environment.CoffeeMachine <em>Coffee Machine</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Coffee Machine</em>'.
+	 * @see environment.CoffeeMachine
+	 * @generated
+	 */
+	EClass getCoffeeMachine();
+
+	/**
+	 * Returns the meta object for class '{@link environment.Elevator <em>Elevator</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Elevator</em>'.
+	 * @see environment.Elevator
+	 * @generated
+	 */
+	EClass getElevator();
+
+	/**
+	 * Returns the meta object for class '{@link environment.Hallway <em>Hallway</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Hallway</em>'.
+	 * @see environment.Hallway
+	 * @generated
+	 */
+	EClass getHallway();
+
+	/**
+	 * Returns the meta object for class '{@link environment.ElevatorsArea <em>Elevators Area</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Elevators Area</em>'.
+	 * @see environment.ElevatorsArea
+	 * @generated
+	 */
+	EClass getElevatorsArea();
+
+	/**
 	 * Returns the meta object for enum '{@link environment.Status <em>Status</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4785,6 +5818,86 @@ public interface EnvironmentPackage extends EPackage {
 		 * @generated
 		 */
 		EClass WORKSTATION = eINSTANCE.getWorkstation();
+
+		/**
+		 * The meta object literal for the '{@link environment.impl.LabImpl <em>Lab</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see environment.impl.LabImpl
+		 * @see environment.impl.EnvironmentPackageImpl#getLab()
+		 * @generated
+		 */
+		EClass LAB = eINSTANCE.getLab();
+
+		/**
+		 * The meta object literal for the '{@link environment.impl.ToiletImpl <em>Toilet</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see environment.impl.ToiletImpl
+		 * @see environment.impl.EnvironmentPackageImpl#getToilet()
+		 * @generated
+		 */
+		EClass TOILET = eINSTANCE.getToilet();
+
+		/**
+		 * The meta object literal for the '{@link environment.impl.LoungeImpl <em>Lounge</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see environment.impl.LoungeImpl
+		 * @see environment.impl.EnvironmentPackageImpl#getLounge()
+		 * @generated
+		 */
+		EClass LOUNGE = eINSTANCE.getLounge();
+
+		/**
+		 * The meta object literal for the '{@link environment.impl.DishWasherImpl <em>Dish Washer</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see environment.impl.DishWasherImpl
+		 * @see environment.impl.EnvironmentPackageImpl#getDishWasher()
+		 * @generated
+		 */
+		EClass DISH_WASHER = eINSTANCE.getDishWasher();
+
+		/**
+		 * The meta object literal for the '{@link environment.impl.CoffeeMachineImpl <em>Coffee Machine</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see environment.impl.CoffeeMachineImpl
+		 * @see environment.impl.EnvironmentPackageImpl#getCoffeeMachine()
+		 * @generated
+		 */
+		EClass COFFEE_MACHINE = eINSTANCE.getCoffeeMachine();
+
+		/**
+		 * The meta object literal for the '{@link environment.impl.ElevatorImpl <em>Elevator</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see environment.impl.ElevatorImpl
+		 * @see environment.impl.EnvironmentPackageImpl#getElevator()
+		 * @generated
+		 */
+		EClass ELEVATOR = eINSTANCE.getElevator();
+
+		/**
+		 * The meta object literal for the '{@link environment.impl.HallwayImpl <em>Hallway</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see environment.impl.HallwayImpl
+		 * @see environment.impl.EnvironmentPackageImpl#getHallway()
+		 * @generated
+		 */
+		EClass HALLWAY = eINSTANCE.getHallway();
+
+		/**
+		 * The meta object literal for the '{@link environment.impl.ElevatorsAreaImpl <em>Elevators Area</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see environment.impl.ElevatorsAreaImpl
+		 * @see environment.impl.EnvironmentPackageImpl#getElevatorsArea()
+		 * @generated
+		 */
+		EClass ELEVATORS_AREA = eINSTANCE.getElevatorsArea();
 
 		/**
 		 * The meta object literal for the '{@link environment.Status <em>Status</em>}' enum.
