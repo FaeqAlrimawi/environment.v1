@@ -149,6 +149,7 @@ public class PhysicalAssetImpl extends AssetImpl implements PhysicalAsset {
 	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
+		
 		switch (featureID) {
 			case smartbuildingPackage.PHYSICAL_ASSET__CONTAINED_ASSETS:
 				getContainedAssets().clear();
@@ -157,6 +158,10 @@ public class PhysicalAssetImpl extends AssetImpl implements PhysicalAsset {
 			case smartbuildingPackage.PHYSICAL_ASSET__PARENT_ASSET:
 				setParentAsset((PhysicalAsset)newValue);
 				return;
+				
+				
+				
+				
 		}
 		super.eSet(featureID, newValue);
 	}
