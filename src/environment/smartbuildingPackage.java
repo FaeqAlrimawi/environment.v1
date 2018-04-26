@@ -2746,13 +2746,13 @@ public interface smartbuildingPackage extends EPackage {
 	int CONNECTION__CONSTRAINTS = 4;
 
 	/**
-	 * The feature id for the '<em><b>Is Bidirectional</b></em>' attribute.
+	 * The feature id for the '<em><b>Bidirectional</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION__IS_BIDIRECTIONAL = 5;
+	int CONNECTION__BIDIRECTIONAL = 5;
 
 	/**
 	 * The feature id for the '<em><b>Port</b></em>' containment reference.
@@ -2864,13 +2864,13 @@ public interface smartbuildingPackage extends EPackage {
 	int DIGITAL_CONNECTION__CONSTRAINTS = CONNECTION__CONSTRAINTS;
 
 	/**
-	 * The feature id for the '<em><b>Is Bidirectional</b></em>' attribute.
+	 * The feature id for the '<em><b>Bidirectional</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DIGITAL_CONNECTION__IS_BIDIRECTIONAL = CONNECTION__IS_BIDIRECTIONAL;
+	int DIGITAL_CONNECTION__BIDIRECTIONAL = CONNECTION__BIDIRECTIONAL;
 
 	/**
 	 * The feature id for the '<em><b>Port</b></em>' containment reference.
@@ -2991,13 +2991,13 @@ public interface smartbuildingPackage extends EPackage {
 	int PHYSICAL_CONNECTION__CONSTRAINTS = CONNECTION__CONSTRAINTS;
 
 	/**
-	 * The feature id for the '<em><b>Is Bidirectional</b></em>' attribute.
+	 * The feature id for the '<em><b>Bidirectional</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PHYSICAL_CONNECTION__IS_BIDIRECTIONAL = CONNECTION__IS_BIDIRECTIONAL;
+	int PHYSICAL_CONNECTION__BIDIRECTIONAL = CONNECTION__BIDIRECTIONAL;
 
 	/**
 	 * The feature id for the '<em><b>Port</b></em>' containment reference.
@@ -6967,13 +6967,13 @@ public interface smartbuildingPackage extends EPackage {
 	int IP_CONNECTION__CONSTRAINTS = DIGITAL_CONNECTION__CONSTRAINTS;
 
 	/**
-	 * The feature id for the '<em><b>Is Bidirectional</b></em>' attribute.
+	 * The feature id for the '<em><b>Bidirectional</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IP_CONNECTION__IS_BIDIRECTIONAL = DIGITAL_CONNECTION__IS_BIDIRECTIONAL;
+	int IP_CONNECTION__BIDIRECTIONAL = DIGITAL_CONNECTION__BIDIRECTIONAL;
 
 	/**
 	 * The feature id for the '<em><b>Port</b></em>' containment reference.
@@ -7094,13 +7094,13 @@ public interface smartbuildingPackage extends EPackage {
 	int BUS_CONNECTION__CONSTRAINTS = DIGITAL_CONNECTION__CONSTRAINTS;
 
 	/**
-	 * The feature id for the '<em><b>Is Bidirectional</b></em>' attribute.
+	 * The feature id for the '<em><b>Bidirectional</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BUS_CONNECTION__IS_BIDIRECTIONAL = DIGITAL_CONNECTION__IS_BIDIRECTIONAL;
+	int BUS_CONNECTION__BIDIRECTIONAL = DIGITAL_CONNECTION__BIDIRECTIONAL;
 
 	/**
 	 * The feature id for the '<em><b>Port</b></em>' containment reference.
@@ -8451,15 +8451,15 @@ public interface smartbuildingPackage extends EPackage {
 	EAttribute getConnection_Constraints();
 
 	/**
-	 * Returns the meta object for the attribute '{@link environment.Connection#isIsBidirectional <em>Is Bidirectional</em>}'.
+	 * Returns the meta object for the attribute '{@link environment.Connection#isBidirectional <em>Bidirectional</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Is Bidirectional</em>'.
-	 * @see environment.Connection#isIsBidirectional()
+	 * @return the meta object for the attribute '<em>Bidirectional</em>'.
+	 * @see environment.Connection#isBidirectional()
 	 * @see #getConnection()
 	 * @generated
 	 */
-	EAttribute getConnection_IsBidirectional();
+	EAttribute getConnection_Bidirectional();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link environment.Connection#getPort <em>Port</em>}'.
@@ -9610,12 +9610,12 @@ public interface smartbuildingPackage extends EPackage {
 		EAttribute CONNECTION__CONSTRAINTS = eINSTANCE.getConnection_Constraints();
 
 		/**
-		 * The meta object literal for the '<em><b>Is Bidirectional</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Bidirectional</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute CONNECTION__IS_BIDIRECTIONAL = eINSTANCE.getConnection_IsBidirectional();
+		EAttribute CONNECTION__BIDIRECTIONAL = eINSTANCE.getConnection_Bidirectional();
 
 		/**
 		 * The meta object literal for the '<em><b>Port</b></em>' containment reference feature.

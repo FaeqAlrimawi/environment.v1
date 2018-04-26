@@ -735,7 +735,7 @@ public class smartbuildingPackageImpl extends EPackageImpl implements smartbuild
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getConnection_IsBidirectional() {
+	public EAttribute getConnection_Bidirectional() {
 		return (EAttribute)connectionEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -1562,7 +1562,7 @@ public class smartbuildingPackageImpl extends EPackageImpl implements smartbuild
 		createEAttribute(connectionEClass, CONNECTION__NAME);
 		createEAttribute(connectionEClass, CONNECTION__TYPE);
 		createEAttribute(connectionEClass, CONNECTION__CONSTRAINTS);
-		createEAttribute(connectionEClass, CONNECTION__IS_BIDIRECTIONAL);
+		createEAttribute(connectionEClass, CONNECTION__BIDIRECTIONAL);
 		createEReference(connectionEClass, CONNECTION__PORT);
 		createEReference(connectionEClass, CONNECTION__PROPERTIES);
 		createEAttribute(connectionEClass, CONNECTION__DESCRIPTION);
@@ -1795,7 +1795,7 @@ public class smartbuildingPackageImpl extends EPackageImpl implements smartbuild
 		initEAttribute(getConnection_Name(), ecorePackage.getEString(), "name", null, 0, 1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getConnection_Type(), ecorePackage.getEString(), "type", null, 0, 1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getConnection_Constraints(), ecorePackage.getEString(), "constraints", null, 0, -1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getConnection_IsBidirectional(), ecorePackage.getEBoolean(), "isBidirectional", "true", 0, 1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getConnection_Bidirectional(), ecorePackage.getEBoolean(), "bidirectional", "true", 0, 1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getConnection_Port(), this.getPort(), null, "port", null, 0, 1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getConnection_Properties(), this.getProperty(), null, "properties", null, 0, -1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getConnection_Description(), ecorePackage.getEString(), "description", null, 0, 1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

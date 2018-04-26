@@ -1989,9 +1989,9 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_eZzzMCQdEeeDJ9Desf_HtQ" name="isBidirectional : EBoolean = true" tooltipText="">
-        <target xmi:type="ecore:EAttribute" href="environment.ecore#//Connection/isBidirectional"/>
-        <semanticElements xmi:type="ecore:EAttribute" href="environment.ecore#//Connection/isBidirectional"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_eZzzMCQdEeeDJ9Desf_HtQ" name="bidirectional : EBoolean = true" tooltipText="">
+        <target xmi:type="ecore:EAttribute" href="environment.ecore#//Connection/bidirectional"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="environment.ecore#//Connection/bidirectional"/>
         <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_kErEQSQdEeeDJ9Desf_HtQ" labelAlignment="LEFT">
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
         </ownedStyle>

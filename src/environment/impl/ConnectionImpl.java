@@ -4,9 +4,7 @@ package environment.impl;
 
 import environment.Asset;
 import environment.Connection;
-import environment.DigitalAsset;
 import environment.DigitalConnection;
-import environment.PhysicalAsset;
 import environment.PhysicalConnection;
 import environment.Port;
 import environment.Property;
@@ -42,7 +40,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link environment.impl.ConnectionImpl#getName <em>Name</em>}</li>
  *   <li>{@link environment.impl.ConnectionImpl#getType <em>Type</em>}</li>
  *   <li>{@link environment.impl.ConnectionImpl#getConstraints <em>Constraints</em>}</li>
- *   <li>{@link environment.impl.ConnectionImpl#isIsBidirectional <em>Is Bidirectional</em>}</li>
+ *   <li>{@link environment.impl.ConnectionImpl#isBidirectional <em>Bidirectional</em>}</li>
  *   <li>{@link environment.impl.ConnectionImpl#getPort <em>Port</em>}</li>
  *   <li>{@link environment.impl.ConnectionImpl#getProperties <em>Properties</em>}</li>
  *   <li>{@link environment.impl.ConnectionImpl#getDescription <em>Description</em>}</li>
@@ -122,24 +120,24 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 	protected EList<String> constraints;
 
 	/**
-	 * The default value of the '{@link #isIsBidirectional() <em>Is Bidirectional</em>}' attribute.
+	 * The default value of the '{@link #isBidirectional() <em>Bidirectional</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isIsBidirectional()
+	 * @see #isBidirectional()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final boolean IS_BIDIRECTIONAL_EDEFAULT = true;
+	protected static final boolean BIDIRECTIONAL_EDEFAULT = true;
 
 	/**
-	 * The cached value of the '{@link #isIsBidirectional() <em>Is Bidirectional</em>}' attribute.
+	 * The cached value of the '{@link #isBidirectional() <em>Bidirectional</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isIsBidirectional()
+	 * @see #isBidirectional()
 	 * @generated
 	 * @ordered
 	 */
-	protected boolean isBidirectional = IS_BIDIRECTIONAL_EDEFAULT;
+	protected boolean bidirectional = BIDIRECTIONAL_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getPort() <em>Port</em>}' containment reference.
@@ -335,8 +333,8 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isIsBidirectional() {
-		return isBidirectional;
+	public boolean isBidirectional() {
+		return bidirectional;
 	}
 
 	/**
@@ -344,11 +342,11 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setIsBidirectional(boolean newIsBidirectional) {
-		boolean oldIsBidirectional = isBidirectional;
-		isBidirectional = newIsBidirectional;
+	public void setBidirectional(boolean newBidirectional) {
+		boolean oldBidirectional = bidirectional;
+		bidirectional = newBidirectional;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, smartbuildingPackage.CONNECTION__IS_BIDIRECTIONAL, oldIsBidirectional, isBidirectional));
+			eNotify(new ENotificationImpl(this, Notification.SET, smartbuildingPackage.CONNECTION__BIDIRECTIONAL, oldBidirectional, bidirectional));
 	}
 
 	/**
@@ -443,7 +441,13 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 		
 		int similarity = 0;
 		
+		//compare connections types
 		similarity += compareType(connection);
+		
+		//compare direction. Default value for direction is true i.e. bidirectional
+		if((this.isBidirectional() == false) && (connection.isBidirectional() == false)) {
+			similarity += Connection.CONNECTION_DIRECTION;
+		}
 		
 		System.out.println(similarity);
 		
@@ -463,14 +467,18 @@ public int compareType(Connection connection) {
 		//if they have exactly the same class
 		if(this.getClass().equals(connection.getClass())) {
 			similarityPercentage += Connection.EXACT_TYPE;
-		////if one is a super class of another
+		
+		//if one is a super class of another
 		} else if (this.getClass().isAssignableFrom(connection.getClass())
 				|| connection.getClass().isAssignableFrom(this.getClass())) {
 			similarityPercentage += Connection.ASSIGNABLE_TYPE;
+		
 		//if they have a common super class
 		} else if(this.getClass().getSuperclass().equals(connection.getClass().getSuperclass())
-				&& (!Connection.class.isAssignableFrom(this.getClass()) || !Connection.class.isAssignableFrom(connection.getClass()))) {
+				&& (!this.getClass().getSuperclass().equals(ConnectionImpl.class) ||
+						!connection.getClass().getSuperclass().equals(ConnectionImpl.class))) {
 			similarityPercentage += Connection.EXACT_SUPER_TYPE;
+		
 		//final check is if both either digital or physical assets
 		} else if ((PhysicalConnection.class.isInstance(this) &&
 				PhysicalConnection.class.isInstance(connection))
@@ -480,7 +488,6 @@ public int compareType(Connection connection) {
 			similarityPercentage = Connection.ABSTRACT_TYPE;
 		}
 		
-		System.out.println(Connection.class.isAssignableFrom(this.getClass()));
 		return similarityPercentage;
 	}
 
@@ -518,8 +525,8 @@ public int compareType(Connection connection) {
 				return getType();
 			case smartbuildingPackage.CONNECTION__CONSTRAINTS:
 				return getConstraints();
-			case smartbuildingPackage.CONNECTION__IS_BIDIRECTIONAL:
-				return isIsBidirectional();
+			case smartbuildingPackage.CONNECTION__BIDIRECTIONAL:
+				return isBidirectional();
 			case smartbuildingPackage.CONNECTION__PORT:
 				return getPort();
 			case smartbuildingPackage.CONNECTION__PROPERTIES:
@@ -555,8 +562,8 @@ public int compareType(Connection connection) {
 				getConstraints().clear();
 				getConstraints().addAll((Collection<? extends String>)newValue);
 				return;
-			case smartbuildingPackage.CONNECTION__IS_BIDIRECTIONAL:
-				setIsBidirectional((Boolean)newValue);
+			case smartbuildingPackage.CONNECTION__BIDIRECTIONAL:
+				setBidirectional((Boolean)newValue);
 				return;
 			case smartbuildingPackage.CONNECTION__PORT:
 				setPort((Port)newValue);
@@ -595,8 +602,8 @@ public int compareType(Connection connection) {
 			case smartbuildingPackage.CONNECTION__CONSTRAINTS:
 				getConstraints().clear();
 				return;
-			case smartbuildingPackage.CONNECTION__IS_BIDIRECTIONAL:
-				setIsBidirectional(IS_BIDIRECTIONAL_EDEFAULT);
+			case smartbuildingPackage.CONNECTION__BIDIRECTIONAL:
+				setBidirectional(BIDIRECTIONAL_EDEFAULT);
 				return;
 			case smartbuildingPackage.CONNECTION__PORT:
 				setPort((Port)null);
@@ -629,8 +636,8 @@ public int compareType(Connection connection) {
 				return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
 			case smartbuildingPackage.CONNECTION__CONSTRAINTS:
 				return constraints != null && !constraints.isEmpty();
-			case smartbuildingPackage.CONNECTION__IS_BIDIRECTIONAL:
-				return isBidirectional != IS_BIDIRECTIONAL_EDEFAULT;
+			case smartbuildingPackage.CONNECTION__BIDIRECTIONAL:
+				return bidirectional != BIDIRECTIONAL_EDEFAULT;
 			case smartbuildingPackage.CONNECTION__PORT:
 				return port != null;
 			case smartbuildingPackage.CONNECTION__PROPERTIES:
@@ -671,8 +678,8 @@ public int compareType(Connection connection) {
 		result.append(type);
 		result.append(", constraints: ");
 		result.append(constraints);
-		result.append(", isBidirectional: ");
-		result.append(isBidirectional);
+		result.append(", bidirectional: ");
+		result.append(bidirectional);
 		result.append(", description: ");
 		result.append(description);
 		result.append(')');

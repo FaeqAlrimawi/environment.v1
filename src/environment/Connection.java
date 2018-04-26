@@ -20,7 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link environment.Connection#getName <em>Name</em>}</li>
  *   <li>{@link environment.Connection#getType <em>Type</em>}</li>
  *   <li>{@link environment.Connection#getConstraints <em>Constraints</em>}</li>
- *   <li>{@link environment.Connection#isIsBidirectional <em>Is Bidirectional</em>}</li>
+ *   <li>{@link environment.Connection#isBidirectional <em>Bidirectional</em>}</li>
  *   <li>{@link environment.Connection#getPort <em>Port</em>}</li>
  *   <li>{@link environment.Connection#getProperties <em>Properties</em>}</li>
  *   <li>{@link environment.Connection#getDescription <em>Description</em>}</li>
@@ -32,12 +32,18 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Connection extends EObject {
 	
+	// type 30%
 	static final int EXACT_TYPE = 30;
 	static final int ASSIGNABLE_TYPE = 15;
 	static final int EXACT_SUPER_TYPE = 10;
 	static final int ABSTRACT_TYPE = 1;
 	static final int TYPE_MISMATCH = 0;
 	
+	// direction 5%
+	static final int CONNECTION_DIRECTION = 5;
+	
+	static final int MAXIMUM_SIMILARITY_VALUE = EXACT_TYPE + CONNECTION_DIRECTION;
+	static final int SIMILARITY_THRESHOLD_VALUE =  MAXIMUM_SIMILARITY_VALUE/2;
 	
 	//maunally added methods
 	int compareType(Connection connection);
@@ -162,32 +168,30 @@ public interface Connection extends EObject {
 	EList<String> getConstraints();
 
 	/**
-	 * Returns the value of the '<em><b>Is Bidirectional</b></em>' attribute.
+	 * Returns the value of the '<em><b>Bidirectional</b></em>' attribute.
 	 * The default value is <code>"true"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Is Bidirectional</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Bidirectional</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Is Bidirectional</em>' attribute.
-	 * @see #setIsBidirectional(boolean)
-	 * @see environment.smartbuildingPackage#getConnection_IsBidirectional()
+	 * @return the value of the '<em>Bidirectional</em>' attribute.
+	 * @see #setBidirectional(boolean)
+	 * @see environment.smartbuildingPackage#getConnection_Bidirectional()
 	 * @model default="true"
 	 * @generated
 	 */
-	boolean isIsBidirectional();
-
+	boolean isBidirectional();
 	/**
-	 * Sets the value of the '{@link environment.Connection#isIsBidirectional <em>Is Bidirectional</em>}' attribute.
+	 * Sets the value of the '{@link environment.Connection#isBidirectional <em>Bidirectional</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Is Bidirectional</em>' attribute.
-	 * @see #isIsBidirectional()
+	 * @param value the new value of the '<em>Bidirectional</em>' attribute.
+	 * @see #isBidirectional()
 	 * @generated
 	 */
-	void setIsBidirectional(boolean value);
-
+	void setBidirectional(boolean value);
 	/**
 	 * Returns the value of the '<em><b>Port</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
