@@ -1800,7 +1800,7 @@ public class smartbuildingPackageImpl extends EPackageImpl implements smartbuild
 		initEReference(getConnection_Properties(), this.getProperty(), null, "properties", null, 0, -1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getConnection_Description(), ecorePackage.getEString(), "description", null, 0, 1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		EOperation op = initEOperation(getConnection__IsSimilarTo__Connection(), ecorePackage.getEBoolean(), "isSimilarTo", 0, 1, IS_UNIQUE, IS_ORDERED);
+		EOperation op = initEOperation(getConnection__IsSimilarTo__Connection(), ecorePackage.getEInt(), "isSimilarTo", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getConnection(), "connection", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(digitalConnectionEClass, DigitalConnection.class, "DigitalConnection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

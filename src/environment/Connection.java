@@ -31,6 +31,16 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Connection extends EObject {
+	
+	static final int EXACT_TYPE = 30;
+	static final int ASSIGNABLE_TYPE = 15;
+	static final int EXACT_SUPER_TYPE = 10;
+	static final int ABSTRACT_TYPE = 1;
+	static final int TYPE_MISMATCH = 0;
+	
+	
+	//maunally added methods
+	int compareType(Connection connection);
 	/**
 	 * Returns the value of the '<em><b>Asset1</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -252,6 +262,6 @@ public interface Connection extends EObject {
 	 * @model
 	 * @generated
 	 */
-	boolean isSimilarTo(Connection connection);
+	int isSimilarTo(Connection connection);
 
 } // Connection

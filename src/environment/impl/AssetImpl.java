@@ -629,6 +629,17 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 		return 0;
 	}
 	
+	public int compareConnections(Asset asset) {
+		
+		//connection type
+		
+		//direction
+		
+		//
+		
+		return 0;
+	}
+	
 	@Override
 	    public boolean equals(Object o) {
 	 

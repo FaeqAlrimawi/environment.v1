@@ -104,6 +104,7 @@ public interface Asset extends EObject {
 	int compareType(Asset asset);
 	int compareContainedAssets(Asset asset);
 	int compareParentAsset(Asset asset);
+	int compareConnections(Asset asset);
 	
 	/**
 	 * Returns the value of the '<em><b>Property</b></em>' containment reference list.

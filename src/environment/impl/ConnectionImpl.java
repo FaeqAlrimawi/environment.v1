@@ -4,6 +4,10 @@ package environment.impl;
 
 import environment.Asset;
 import environment.Connection;
+import environment.DigitalAsset;
+import environment.DigitalConnection;
+import environment.PhysicalAsset;
+import environment.PhysicalConnection;
 import environment.Port;
 import environment.Property;
 
@@ -428,12 +432,56 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public boolean isSimilarTo(Connection connection) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
+	public int isSimilarTo(Connection connection) {
+		
 		//compares current connection with the parameter one
-		//criteria for comparison:?
-		throw new UnsupportedOperationException();
+		//criteria for comparison:
+		//1-Type of connection e.g., physical or digital. Are they the sane? or of higher type
+		//2-direction. is it the same
+		//3-ports used, which include credentials required
+		
+		
+		int similarity = 0;
+		
+		similarity += compareType(connection);
+		
+		System.out.println(similarity);
+		
+		return similarity;
+	}
+
+public int compareType(Connection connection) {
+		
+		int similarityPercentage = 0; //goes from 0 (not similar) to 100 (equal)
+		
+		//similarity is based on:
+		//Type of assets being compared i.e. if both has the same class then they get some value
+		//if both has the same super class then they get [5]
+		//if type match on more abstract classes then they get no value
+		//if none of the above, then return 0 (execution of method stops)
+		
+		//if they have exactly the same class
+		if(this.getClass().equals(connection.getClass())) {
+			similarityPercentage += Connection.EXACT_TYPE;
+		////if one is a super class of another
+		} else if (this.getClass().isAssignableFrom(connection.getClass())
+				|| connection.getClass().isAssignableFrom(this.getClass())) {
+			similarityPercentage += Connection.ASSIGNABLE_TYPE;
+		//if they have a common super class
+		} else if(this.getClass().getSuperclass().equals(connection.getClass().getSuperclass())
+				&& (!Connection.class.isAssignableFrom(this.getClass()) || !Connection.class.isAssignableFrom(connection.getClass()))) {
+			similarityPercentage += Connection.EXACT_SUPER_TYPE;
+		//final check is if both either digital or physical assets
+		} else if ((PhysicalConnection.class.isInstance(this) &&
+				PhysicalConnection.class.isInstance(connection))
+				||
+				(DigitalConnection.class.isInstance(this) &&
+						DigitalConnection.class.isInstance(connection))) {
+			similarityPercentage = Connection.ABSTRACT_TYPE;
+		}
+		
+		System.out.println(Connection.class.isAssignableFrom(this.getClass()));
+		return similarityPercentage;
 	}
 
 	/**
