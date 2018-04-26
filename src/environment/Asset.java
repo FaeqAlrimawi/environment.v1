@@ -45,13 +45,35 @@ public interface Asset extends EObject {
 	 */
 	EList<Connection> getConnections();
 
-	static final int SHARE_EXACT_TYPE = 20;
-	static final int SHARE_EXACT_SUPER_TYPE = 10;
-	static final int SHARE_ASSIGNABLE_TYPE = 14;
-	static final int SHARE_ABSTRACT_TYPE = 1;
-	static final int NO_COMMON_TYPE = 0;
-	static final int COMMON_PARENT = 10;
+	//type similarity is given 30% (one of the following values will be assigned)
+	static final int EXACT_TYPE = 30; // best: both have the same type
+	static final int ASSIGNABLE_TYPE = 15; // very good: one is the super type of the other
+	static final int EXACT_SUPER_TYPE = 10; // good: both share the same super type (e.g., lab and kitchen are Rooms)
+	static final int ATTRIBUTE_TYPE = 5; // natching of the type as attribute
+	static final int ABSTRACT_TYPE = 1; // not so good: both either physical or digital
 	
+	//if one asset is digital and the other is physical, then their similarity would be zero
+	static final int NO_COMMON_TYPE = 0;
+	
+	//contained by the same parent 20%
+	static final int COMMON_PARENT = 20;
+	static final int COMMON_PARENT_TYPE = 10; //parents have the same type
+	
+	//similarity of contained assets 20%
+	static final int CONTAINEDASSETS_EXACT = 20; //same number and type of assets
+	static final int CONTAINEDASSETS_PARTIAL = 10; //some of the contained assets have the same type. some is set by CONTAINEDASSETS_PARTIAL_NUMBER PERCENTAGE
+	static final double CONTAINEDASSETS_PARTIAL_PERCENTAGE = 0.5; // 50% OF contained assets
+	static final int NO_CONTAINEDASSETS = 10; // both assets have no contained assets
+	//connectivity 
+	
+	// reference match
+	
+	//attributes match
+	
+	//properties match
+	
+	static final int SIMILARITY_MAXIMUM_VALUE = (EXACT_TYPE + ATTRIBUTE_TYPE) + COMMON_PARENT + CONTAINEDASSETS_EXACT; // currently 75
+	static final int SIMILARITY_THRESHOLD = SIMILARITY_MAXIMUM_VALUE/2; // currently 50%
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -78,6 +100,11 @@ public interface Asset extends EObject {
 	 */
 	void setName(String value);
 
+	//added manually
+	int compareType(Asset asset);
+	int compareContainedAssets(Asset asset);
+	int compareParentAsset(Asset asset);
+	
 	/**
 	 * Returns the value of the '<em><b>Property</b></em>' containment reference list.
 	 * The list contents are of type {@link environment.Property}.

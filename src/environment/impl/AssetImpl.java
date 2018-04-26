@@ -7,6 +7,7 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -392,33 +393,28 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 	public int isSimilarTo(Asset asset) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
-		int similarityPercentage = compareType(asset);
+		int similarityPercentage = 0;
 		
+		//compare types of assets
+		similarityPercentage += compareType(asset);
 		
 		//if non of the above type matching fits then they are not simialr at all
 		if(similarityPercentage == Asset.NO_COMMON_TYPE) {
-			return Asset.NO_COMMON_TYPE;
+			return 0;
 		}
 			
+		//compare parent types of assets
+		similarityPercentage += compareParentAsset(asset);
+		
+		//next, check number and type of contained assets
+		similarityPercentage += compareContainedAssets(asset);
+		
 		//compare type as attribute if specified
 		if(this.getType() != null && !this.getType().getName().isEmpty() &&
 				asset.getType() != null && !asset.getType().getName().isEmpty() &&
 				this.getType().getName().equalsIgnoreCase(asset.getType().getName()) ) {
-			similarityPercentage = 10;
+			similarityPercentage += Asset.ATTRIBUTE_TYPE;
 		}
-		
-		/*//next, check number and type of contained assets
-		EList<?> thisAssets;
-		EList<?> argAssets;
-	
-		if (PhysicalAsset.class.isInstance(this)) {
-			thisAssets = ((PhysicalAsset)this).getContainedAssets();
-			argAssets = ((PhysicalAsset)asset).getContainedAssets();
-		} else {
-			thisAssets =((DigitalAsset)this).getContainedAssets();
-			argAssets = ((DigitalAsset)asset).getContainedAssets();
-		} moved to their respecitve classes (digital and physical)*/
-		
 		
 		return similarityPercentage;
 	}
@@ -440,27 +436,200 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 		
 		//if they have exactly the same class
 		if(this.getClass().equals(asset.getClass())) {
-			similarityPercentage += Asset.SHARE_EXACT_TYPE;
+			similarityPercentage += Asset.EXACT_TYPE;
 		////if one is a super class of another
 		} else if (this.getClass().isAssignableFrom(asset.getClass())
 				|| asset.getClass().isAssignableFrom(this.getClass())) {
-			similarityPercentage += Asset.SHARE_ASSIGNABLE_TYPE;
+			similarityPercentage += Asset.ASSIGNABLE_TYPE;
 		//if they have a common super class
 		} else if(this.getClass().getSuperclass().equals(asset.getClass().getSuperclass())) {
-			similarityPercentage += Asset.SHARE_EXACT_SUPER_TYPE;
+			similarityPercentage += Asset.EXACT_SUPER_TYPE;
 		//final check is if both either digital or physical assets
 		} else if ((PhysicalAsset.class.isInstance(this) &&
 				PhysicalAsset.class.isInstance(asset))
 				||
 				(DigitalAsset.class.isInstance(this) &&
 				DigitalAsset.class.isInstance(asset))) {
-			similarityPercentage = Asset.SHARE_ABSTRACT_TYPE;
+			similarityPercentage = Asset.ABSTRACT_TYPE;
 		}
 		
 		return similarityPercentage;
 	}
 	
-	  @Override
+	@Override
+	public int compareContainedAssets(Asset asset) {
+		
+		EList<Asset> thisAssets = null;
+		EList<DigitalAsset> thisDigitalAssets = null;
+		EList<Asset> argAssets = null;
+		EList<DigitalAsset> argDigitalAssets = null;
+		
+		if(PhysicalAsset.class.isInstance(this)) {
+			thisAssets = ((PhysicalAsset)this).getContainedAssets();	
+		} else if(DigitalAsset.class.isInstance(this)) {
+			thisDigitalAssets = ((DigitalAsset)this).getContainedAssets();	
+		}
+		
+		if(PhysicalAsset.class.isInstance(asset)) {
+			argAssets = ((PhysicalAsset)asset).getContainedAssets();	
+		} else if(DigitalAsset.class.isInstance(asset)) {
+			argDigitalAssets = ((DigitalAsset)asset).getContainedAssets();	
+		}
+		
+		//move digital assets to the assets variable
+		if(thisDigitalAssets != null) {
+			thisAssets = new BasicEList<Asset>();
+			for(DigitalAsset ast : thisDigitalAssets) {
+				thisAssets.add(ast);
+			}
+		}
+
+		// move digital assets to the assets variable
+		if (argDigitalAssets != null) {
+			argAssets = new BasicEList<Asset>();
+			for (DigitalAsset ast : argDigitalAssets) {
+				argAssets.add(ast);
+			}
+		}
+		
+				
+		//if one of the assets has no contained assets then it returns 0
+		if((thisAssets == null || thisAssets.isEmpty()) &&
+				(argAssets != null && !argAssets.isEmpty())) {
+			return 0;
+		}
+		//if one of the assets has no contained assets then it returns 0
+		if((argAssets == null || argAssets.isEmpty()) &&
+				(thisAssets != null && !thisAssets.isEmpty())) {
+			return 0;
+		}
+		
+		//if both assets have no contained assets then it returns NO_CONTAINEDASSETS value
+		if((argAssets == null || argAssets.isEmpty()) &&
+				(thisAssets == null || thisAssets.isEmpty())) {
+			return Asset.NO_CONTAINEDASSETS;
+		}
+		
+		//find common contained assets (type & number are considered)
+		
+			
+		int matchesCount = 0;
+
+		EList<Asset> matchedAssets = new BasicEList<Asset>();
+		
+		for(Asset thisAst : thisAssets) {
+			for (Asset argAst: argAssets) {
+				if(!matchedAssets.contains(argAst)) {
+					if(thisAst.compareType(argAst) == Asset.EXACT_TYPE) {
+						matchesCount++;
+						matchedAssets.add(argAst);
+						break;
+					}
+				}
+			}
+		}
+		
+		//if there are no matches
+		if(matchesCount == 0) {
+			return 0;
+		}
+		
+		//if they have the same number and type of assets
+		if ((thisAssets.size() == argAssets.size()) && matchesCount == thisAssets.size()) {
+			return Asset.CONTAINEDASSETS_EXACT;
+		}
+		
+		double percentageOfMatchesInThis = (double)matchesCount/(double)thisAssets.size();
+		double percentageOfMatchesInArg =  (double)matchesCount/(double)argAssets.size();
+		
+		//to be partially matched both percentages should be above 50% (or as indicated by the Asset constant)
+		if((percentageOfMatchesInThis >= Asset.CONTAINEDASSETS_PARTIAL_PERCENTAGE) 
+				&& (percentageOfMatchesInArg >= Asset.CONTAINEDASSETS_PARTIAL_PERCENTAGE)) {
+			return Asset.CONTAINEDASSETS_PARTIAL;
+		}
+		
+		
+			//array defines the matching map. 0 is not visited, 1 is matched, 2 is visited
+			/*	int [][] isMatched = new int[thisAssets.size()][argAssets.size()];
+				
+				//initialise
+				for(int i=0;i<isMatched.length;i++) {// this asset contained assets
+					for(int j=0;j<isMatched[i].length;j++){ // argument asset contained assets
+						isMatched[i][j] = 0;
+					}
+				}*/
+				
+		/*		//find matches
+				for(int i=0;i<isMatched.length;i++) {
+					for(int j=0;j<isMatched[i].length;j++){
+						if(isMatched[i][j] == 0) { // not visited
+							if(thisAssets.get(i).compareType(argAssets.get(j)) == Asset.SHARE_EXACT_TYPE) {
+								isMatched[i][j] = 1; //matched
+								
+								//mark relevant postitions as visited (i.e. 2)
+								//first rows
+								for(int k=i+1;k<isMatched.length;k++) {
+									isMatched[k][j] = 2;
+								}
+								
+								//columns 
+								//first rows
+								for(int u=j+1;u<isMatched[i].length;u++) {
+									isMatched[i][u] = 2;
+								}
+								
+								break;
+							}	
+						} 
+						
+					}
+				}
+									
+	//count the number of 1 (i.e. matches)
+		for(int i=0;i<isMatched.length;i++) {
+			for(int j=0;j<isMatched[i].length;j++){
+				if(isMatched[i][j] == 1) { 
+					matchesCount++;
+				}
+			}
+		}
+			*/
+
+			
+		return 0;
+	}
+	
+	public int compareParentAsset(Asset asset) {
+		
+		Asset thisParentAsset = null;
+		Asset argParentAsset = null;
+		
+		if(PhysicalAsset.class.isInstance(this)) {
+			thisParentAsset = ((PhysicalAsset)this).getParentAsset();
+		} else if(DigitalAsset.class.isInstance(this)) {
+			thisParentAsset = ((DigitalAsset)this).getParentAsset();
+		}
+		
+		if(PhysicalAsset.class.isInstance(asset)) {
+			argParentAsset = ((PhysicalAsset)asset).getParentAsset();
+		} else if(DigitalAsset.class.isInstance(asset)) {
+			argParentAsset = ((DigitalAsset)asset).getParentAsset();
+		}
+		
+		if(thisParentAsset != null && 
+				argParentAsset != null) {
+			if(thisParentAsset.equals(argParentAsset)) {
+				return Asset.COMMON_PARENT;
+		//check if their both parents have the same type
+		} else if (thisParentAsset.compareType(argParentAsset) == Asset.EXACT_TYPE){
+			return Asset.COMMON_PARENT_TYPE;
+		}
+		} 
+		
+		return 0;
+	}
+	
+	@Override
 	    public boolean equals(Object o) {
 	 
 	        // If the object is compared with itself then return true  
@@ -477,7 +646,12 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 	        // typecast o to Complex so that we can compare data members 
 	        Asset c = (Asset) o;
 	        
-	        //compare based on having the same name
+	        
+	        if(this.getName() == null || c.getName() == null) {
+	        	return false;
+	        }
+	        
+	     // compare based on having the same name
 	        if(this.getName().equalsIgnoreCase(c.getName())) {
 	        	return true;
 	        }

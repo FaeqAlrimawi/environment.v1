@@ -2,23 +2,18 @@
  */
 package environment.impl;
 
-import environment.Asset;
-import environment.DigitalAsset;
-import environment.PhysicalAsset;
-
-import environment.smartbuildingPackage;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+
+import environment.Asset;
+import environment.PhysicalAsset;
+import environment.smartbuildingPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -159,9 +154,6 @@ public class PhysicalAssetImpl extends AssetImpl implements PhysicalAsset {
 				setParentAsset((PhysicalAsset)newValue);
 				return;
 				
-				
-				
-				
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -200,7 +192,7 @@ public class PhysicalAssetImpl extends AssetImpl implements PhysicalAsset {
 		return super.eIsSet(featureID);
 	}
 
-	public int isSimilarTo(Asset asset) {
+	/*public int isSimilarTo(Asset asset) {
 	
 		int similarityPercentage = super.isSimilarTo(asset);
 		
@@ -212,23 +204,30 @@ public class PhysicalAssetImpl extends AssetImpl implements PhysicalAsset {
 		
 		//check if they both are contained by the same parent
 		if(this.getParentAsset() != null && 
-				physAsset.getParentAsset() != null &&
-				this.getParentAsset().equals(physAsset.getParentAsset())) {
-			similarityPercentage += Asset.COMMON_PARENT;
+				physAsset.getParentAsset() != null) {
+			if(this.getParentAsset().equals(physAsset.getParentAsset())) {
+				similarityPercentage += Asset.COMMON_PARENT;
+		//check if their both parents have the same type
+		} else if (this.getParentAsset().compareType(physAsset.getParentAsset()) == Asset.EXACT_TYPE){
+			similarityPercentage += Asset.COMMON_PARENT_TYPE;
 		}
-		
-		//next, check number and type of contained assets
-		EList<Asset> thisAssets;
-		EList<Asset> argAssets;
-
-		thisAssets = this.getContainedAssets();
-		argAssets = physAsset.getContainedAssets();
-		
-		//if both have exactly the same number and type of assets
-		if(thisAssets.size() == argAssets.size()) {
-			//to be implemented
 		}
 	
 		return similarityPercentage;
-	}
+	}*/
+
+/*	@Override
+	public int compareContainedAssets(Asset asset) {
+		
+		EList<Asset> thisAssets = this.getContainedAssets();
+		EList<Asset> argAssets;
+		
+		if(PhysicalAsset.class.isAssignableFrom(asset.getClass())) {
+			argAssets = ((PhysicalAsset)asset).getContainedAssets();	
+		} else if(DigitalAsset.class.isAssignableFrom(asset.getClass())) {
+			argAssets = ((DigitalAsset)asset).getContainedAssets();	
+		}
+		
+		return 0;
+	}*/
 } //PhysicalAssetImpl
