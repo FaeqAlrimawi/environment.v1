@@ -241,6 +241,7 @@ public interface Asset extends EObject {
 	 * @generated
 	 */
 	int isSimilarTo(Asset asset);
+	
 
 	/**
 	 * <!-- begin-user-doc -->

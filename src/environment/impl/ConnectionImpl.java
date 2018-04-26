@@ -438,7 +438,6 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 		//2-direction. is it the same
 		//3-ports used, which include credentials required
 		
-		
 		int similarity = 0;
 		
 		//compare connections types
