@@ -390,33 +390,33 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 	 * Criteria: 1- type, 2- 
 	 * <!-- end-user-doc -->
 	 */
-	public int isSimilarTo(Asset asset) {
+	public int similarTo(Asset asset) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
-		int similarityPercentage = 0;
+		int similarity = 0;
 		
 		//compare types of assets
-		similarityPercentage += compareType(asset);
+		similarity += compareType(asset);
 		
 		//if non of the above type matching fits then they are not simialr at all
-		if(similarityPercentage == Asset.NO_COMMON_TYPE) {
+		if(similarity == Asset.NO_COMMON_TYPE) {
 			return 0;
 		}
 			
 		//compare parent types of assets
-		similarityPercentage += compareParentAsset(asset);
+		similarity += compareParentAsset(asset);
 		
 		//next, check number and type of contained assets
-		similarityPercentage += compareContainedAssets(asset);
+		similarity += compareContainedAssets(asset);
 		
 		//compare type as attribute if specified
 		if(this.getType() != null && !this.getType().getName().isEmpty() &&
 				asset.getType() != null && !asset.getType().getName().isEmpty() &&
 				this.getType().getName().equalsIgnoreCase(asset.getType().getName()) ) {
-			similarityPercentage += Asset.ATTRIBUTE_TYPE;
+			similarity += Asset.ATTRIBUTE_TYPE;
 		}
 		
-		return similarityPercentage;
+		return similarity;
 	}
 
 	/**

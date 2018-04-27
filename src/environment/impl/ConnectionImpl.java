@@ -445,8 +445,11 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 		// compare connections types
 		similarity += compareType(connection);
 		
-		// compare port: name, asset, and credential
-		// if all same
+		// compare ports
+		similarity += comparePort(connection);
+		
+		//compare ends of connections
+		similarity += compareEnds(connection);
 		
 		// compare direction. Default value for direction is true i.e. bidirectional
 		if((this.isBidirectional() == false) && (connection.isBidirectional() == false)) {
@@ -506,7 +509,6 @@ public int compareType(Connection connection) {
 
 		// if one or both DON'T have ports then return 0
 		if (thisPort == null || argPort == null) {
-			System.out.println("one or both null");
 			return 0;
 		}
 
@@ -517,14 +519,12 @@ public int compareType(Connection connection) {
 
 		// match name
 		if (thisPort.getName().equals(argPort.getName())) {
-			System.out.println("name matched");
 			isNameMatched = true;
 		}
 
 		// match asset
 		if (thisPort.getAsset() != null && argPort.getAsset() != null
 				&& thisPort.getAsset().compareType(argPort.getAsset()) == Asset.EXACT_TYPE) {
-			System.out.println("asset matched");
 			isAssetMatched = true;
 		}
 
@@ -561,7 +561,6 @@ public int compareType(Connection connection) {
 		// exact match of credentials number. Credentials should be the same
 		// size and all matched
 		if ((numOfMatches == thisPort.getCredential().size()) && (numOfMatches == argPort.getCredential().size())) {
-			System.out.println("credentials matched");
 			areCredentialsMatched = true;
 		}
 
@@ -575,6 +574,109 @@ public int compareType(Connection connection) {
 			return Connection.PARTIAL_PORT;
 		}
 
+		return 0;
+	}
+	
+	public int compareEnds(Connection connection) {
+		
+		Asset thisAsset1 = this.getAsset1();
+		Asset thisAsset2 = this.getAsset2();
+		Asset argAsset1 = connection.getAsset1();
+		Asset argAsset2 = connection.getAsset2();
+		
+		// if any the ends are null return 0
+		if (thisAsset1 == null || thisAsset2 == null || argAsset1 == null || argAsset2 == null) {
+			return 0;
+		}
+
+		// one end is the same and the other end is of same type
+		if ((thisAsset1.equals(argAsset1)) && (thisAsset2.compareType(argAsset2) == Asset.EXACT_TYPE)
+				|| (thisAsset1.equals(argAsset2)) && (thisAsset2.compareType(argAsset1) == Asset.EXACT_TYPE)
+				|| (thisAsset2.equals(argAsset1)) && (thisAsset1.compareType(argAsset2) == Asset.EXACT_TYPE)
+				|| (thisAsset2.equals(argAsset2)) && (thisAsset1.compareType(argAsset1) == Asset.EXACT_TYPE)) {
+			return Connection.END1_SAME_END2_TYPE;
+		}
+		
+		// one end is the same, the other shares a super type
+		if ((thisAsset1.equals(argAsset1)) && (thisAsset2.compareType(argAsset2) == Asset.EXACT_SUPER_TYPE)
+				|| (thisAsset1.equals(argAsset2)) && (thisAsset2.compareType(argAsset1) == Asset.EXACT_SUPER_TYPE)
+				|| (thisAsset2.equals(argAsset1)) && (thisAsset1.compareType(argAsset2) == Asset.EXACT_SUPER_TYPE)
+				|| (thisAsset2.equals(argAsset2)) && (thisAsset1.compareType(argAsset1) == Asset.EXACT_SUPER_TYPE)) {
+			return Connection.END1_SAME_END2_SUPERTYPE;
+		}
+		
+		// one end is the same, the other shares an assignable type
+		if ((thisAsset1.equals(argAsset1)) && (thisAsset2.compareType(argAsset2) == Asset.ASSIGNABLE_TYPE)
+				|| (thisAsset1.equals(argAsset2)) && (thisAsset2.compareType(argAsset1) == Asset.ASSIGNABLE_TYPE)
+				|| (thisAsset2.equals(argAsset1)) && (thisAsset1.compareType(argAsset2) == Asset.ASSIGNABLE_TYPE)
+				|| (thisAsset2.equals(argAsset2)) && (thisAsset1.compareType(argAsset1) == Asset.ASSIGNABLE_TYPE)) {
+			return Connection.END1_SAME_END2_ASSIGNABLETYPE;
+		}
+
+		// one end is the same, the other shares an abstract type
+		if ((thisAsset1.equals(argAsset1)) && (thisAsset2.compareType(argAsset2) == Asset.ABSTRACT_TYPE)
+				|| (thisAsset1.equals(argAsset2)) && (thisAsset2.compareType(argAsset1) == Asset.ABSTRACT_TYPE)
+				|| (thisAsset2.equals(argAsset1)) && (thisAsset1.compareType(argAsset2) == Asset.ABSTRACT_TYPE)
+				|| (thisAsset2.equals(argAsset2)) && (thisAsset1.compareType(argAsset1) == Asset.ABSTRACT_TYPE)) {
+			return Connection.END1_SAME_END2_ABSTRACTTYPE;
+		}
+		
+		//both ends on both connections have the same type
+		if ((thisAsset1.compareType(argAsset1) == Asset.EXACT_TYPE)
+				&& (thisAsset2.compareType(argAsset2) == Asset.EXACT_TYPE)
+				|| (thisAsset1.compareType(argAsset2) == Asset.EXACT_TYPE)
+						&& (thisAsset2.compareType(argAsset1) == Asset.EXACT_TYPE)
+				|| (thisAsset2.compareType(argAsset1) == Asset.EXACT_TYPE)
+						&& (thisAsset1.compareType(argAsset2) == Asset.EXACT_TYPE)
+				|| (thisAsset2.compareType(argAsset2) == Asset.EXACT_TYPE)
+						&& (thisAsset1.compareType(argAsset1) == Asset.EXACT_TYPE)) {
+			return Connection.END1_TYPE_END2_TYPE;
+		}
+		
+		// one end share a type, the other share super type
+		if ((thisAsset1.compareType(argAsset1) == Asset.EXACT_TYPE)
+				&& (thisAsset2.compareType(argAsset2) == Asset.EXACT_SUPER_TYPE)
+				|| (thisAsset1.compareType(argAsset2) == Asset.EXACT_TYPE)
+						&& (thisAsset2.compareType(argAsset1) == Asset.EXACT_SUPER_TYPE)
+				|| (thisAsset2.compareType(argAsset1) == Asset.EXACT_TYPE)
+						&& (thisAsset1.compareType(argAsset2) == Asset.EXACT_SUPER_TYPE)
+				|| (thisAsset2.compareType(argAsset2) == Asset.EXACT_TYPE)
+						&& (thisAsset1.compareType(argAsset1) == Asset.EXACT_SUPER_TYPE)) {
+			return Connection.END1_TYP1_END2_SUPERTYPE;
+		}
+
+		// one end share a type, the other share assignable type
+		if ((thisAsset1.compareType(argAsset1) == Asset.EXACT_TYPE)
+				&& (thisAsset2.compareType(argAsset2) == Asset.ASSIGNABLE_TYPE)
+				|| (thisAsset1.compareType(argAsset2) == Asset.EXACT_TYPE)
+						&& (thisAsset2.compareType(argAsset1) == Asset.ASSIGNABLE_TYPE)
+				|| (thisAsset2.compareType(argAsset1) == Asset.EXACT_TYPE)
+						&& (thisAsset1.compareType(argAsset2) == Asset.ASSIGNABLE_TYPE)
+				|| (thisAsset2.compareType(argAsset2) == Asset.EXACT_TYPE)
+						&& (thisAsset1.compareType(argAsset1) == Asset.ASSIGNABLE_TYPE)) {
+			return Connection.END1_TYP1_END2_ASSIGNABLETYPE;
+		}
+		
+		// one end share a type, the other share only abstract type (digital or physical)
+		if ((thisAsset1.compareType(argAsset1) == Asset.EXACT_TYPE)
+				&& (thisAsset2.compareType(argAsset2) == Asset.ABSTRACT_TYPE)
+				|| (thisAsset1.compareType(argAsset2) == Asset.EXACT_TYPE)
+						&& (thisAsset2.compareType(argAsset1) == Asset.ABSTRACT_TYPE)
+				|| (thisAsset2.compareType(argAsset1) == Asset.EXACT_TYPE)
+						&& (thisAsset1.compareType(argAsset2) == Asset.ABSTRACT_TYPE)
+				|| (thisAsset2.compareType(argAsset2) == Asset.EXACT_TYPE)
+						&& (thisAsset1.compareType(argAsset1) == Asset.ABSTRACT_TYPE)) {
+			return Connection.END1_TYPE_END2_ABSTRACTTYPE;
+		}
+
+		/*//one end is the same and the other could be anything
+		if((thisAsset1.equals(argAsset1) && !thisAsset2.equals(argAsset2))
+				|| (thisAsset1.equals(argAsset2) && !thisAsset2.equals(argAsset1))
+				|| (thisAsset2.equals(argAsset1) && !thisAsset1.equals(argAsset2))
+				|| (thisAsset2.equals(argAsset2) && !thisAsset1.equals(argAsset1))) {
+			return Connection.COMMON_END;
+		}*/
+		
 		return 0;
 	}
 

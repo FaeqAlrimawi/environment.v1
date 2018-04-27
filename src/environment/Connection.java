@@ -32,30 +32,37 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Connection extends EObject {
 	
-	// type 30%
-	static final int EXACT_TYPE = 30;
-	static final int ASSIGNABLE_TYPE = 15;
-	static final int EXACT_SUPER_TYPE = 10;
-	static final int ABSTRACT_TYPE = 1;
+	// type max. 50
+	static final int EXACT_TYPE = 50;
+	static final int ASSIGNABLE_TYPE = 30;
+	static final int EXACT_SUPER_TYPE = 25;
+	static final int ABSTRACT_TYPE = 5;
 	static final int TYPE_MISMATCH = 0;
 	
-	//port match 30%
+	//port max. 30
 	static final int EXACT_PORT = 30; // matches port name, asset linked to it, and credential
 	static final int PARTIAL_PORT = 15; // matches asset type associated with port
 	
-	// ends of the connection 20%
-	static final int COMMON_END_TYPE = 20; // one end of both connections share the same asset, the other end share the same type (direct type) of asset
-	static final int COMMON_END = 10; // one end of both connections share the same asset, the other end has different types of assets
+	// ends max. 40
+	static final int END1_SAME_END2_TYPE = 40; // one end of both connections share the same asset, the other end share the same type (direct type) of asset
+	static final int END1_TYPE_END2_TYPE = 35; // both ends of both connections have similar types
+	static final int END1_SAME_END2_ASSIGNABLETYPE = 30; // one end of both connections share the same asset, the other end share ASSIGNABLE type 
+	static final int END1_TYP1_END2_ASSIGNABLETYPE = 25; // one end on both connections share a common type, the other ends share ASSIGNABLE type
+	static final int END1_SAME_END2_SUPERTYPE = 20; // one end of both connections share the same asset, the other end share SAME SUPER type
+	static final int END1_TYP1_END2_SUPERTYPE = 15; // one end on both connections share a common type, the other ends share super type (i.e. physical or digital)
+	static final int END1_SAME_END2_ABSTRACTTYPE = 10; // one end of both connections share the same asset, the other end share ABSTRACT type (digital or physical)
+	static final int END1_TYPE_END2_ABSTRACTTYPE = 5; // one end on both connections share a common type, the other ends share an abstract type (i.e. physical or digital)
 	
-	// direction 5%
+	// direction max. 5
 	static final int CONNECTION_DIRECTION = 5;
 	
-	static final int MAXIMUM_SIMILARITY_VALUE = EXACT_TYPE + EXACT_PORT + COMMON_END_TYPE + CONNECTION_DIRECTION; //currently 85
-	static int SIMILARITY_THRESHOLD_VALUE =  MAXIMUM_SIMILARITY_VALUE/2; // currently 50% of above of the total
+	static final int MAXIMUM_SIMILARITY_VALUE = EXACT_TYPE + EXACT_PORT + END1_SAME_END2_TYPE + CONNECTION_DIRECTION; //currently 125
+	static int SIMILARITY_THRESHOLD_VALUE =  MAXIMUM_SIMILARITY_VALUE/2; // currently 50% of the total or above 
 	
 	// maunally added methods
 	int compareType(Connection connection);
 	int comparePort(Connection connection);
+	int compareEnds(Connection connection);
 	/**
 	 * Returns the value of the '<em><b>Asset1</b></em>' reference.
 	 * <!-- begin-user-doc -->
