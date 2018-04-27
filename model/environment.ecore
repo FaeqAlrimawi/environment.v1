@@ -44,7 +44,7 @@
     <eLiterals name="CLOSED" value="1"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Connection" abstract="true">
-    <eOperations name="isSimilarTo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+    <eOperations name="similarTo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
       <eParameters name="connection" eType="#//Connection"/>
     </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="asset1" eType="#//Asset"/>

@@ -150,13 +150,13 @@ public interface smartbuildingPackage extends EPackage {
 	int ASSET___ABSTRACT_ASSET = 0;
 
 	/**
-	 * The operation id for the '<em>Is Similar To</em>' operation.
+	 * The operation id for the '<em>Similar To</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ASSET___IS_SIMILAR_TO__ASSET = 1;
+	int ASSET___SIMILAR_TO__ASSET = 1;
 
 	/**
 	 * The operation id for the '<em>Merge Connections</em>' operation.
@@ -331,13 +331,13 @@ public interface smartbuildingPackage extends EPackage {
 	int PHYSICAL_ASSET___ABSTRACT_ASSET = ASSET___ABSTRACT_ASSET;
 
 	/**
-	 * The operation id for the '<em>Is Similar To</em>' operation.
+	 * The operation id for the '<em>Similar To</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PHYSICAL_ASSET___IS_SIMILAR_TO__ASSET = ASSET___IS_SIMILAR_TO__ASSET;
+	int PHYSICAL_ASSET___SIMILAR_TO__ASSET = ASSET___SIMILAR_TO__ASSET;
 
 	/**
 	 * The operation id for the '<em>Merge Connections</em>' operation.
@@ -539,13 +539,13 @@ public interface smartbuildingPackage extends EPackage {
 	int COMPUTING_DEVICE___ABSTRACT_ASSET = PHYSICAL_ASSET___ABSTRACT_ASSET;
 
 	/**
-	 * The operation id for the '<em>Is Similar To</em>' operation.
+	 * The operation id for the '<em>Similar To</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPUTING_DEVICE___IS_SIMILAR_TO__ASSET = PHYSICAL_ASSET___IS_SIMILAR_TO__ASSET;
+	int COMPUTING_DEVICE___SIMILAR_TO__ASSET = PHYSICAL_ASSET___SIMILAR_TO__ASSET;
 
 	/**
 	 * The operation id for the '<em>Merge Connections</em>' operation.
@@ -756,13 +756,13 @@ public interface smartbuildingPackage extends EPackage {
 	int HVAC___ABSTRACT_ASSET = COMPUTING_DEVICE___ABSTRACT_ASSET;
 
 	/**
-	 * The operation id for the '<em>Is Similar To</em>' operation.
+	 * The operation id for the '<em>Similar To</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int HVAC___IS_SIMILAR_TO__ASSET = COMPUTING_DEVICE___IS_SIMILAR_TO__ASSET;
+	int HVAC___SIMILAR_TO__ASSET = COMPUTING_DEVICE___SIMILAR_TO__ASSET;
 
 	/**
 	 * The operation id for the '<em>Merge Connections</em>' operation.
@@ -973,13 +973,13 @@ public interface smartbuildingPackage extends EPackage {
 	int SMART_LIGHT___ABSTRACT_ASSET = COMPUTING_DEVICE___ABSTRACT_ASSET;
 
 	/**
-	 * The operation id for the '<em>Is Similar To</em>' operation.
+	 * The operation id for the '<em>Similar To</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SMART_LIGHT___IS_SIMILAR_TO__ASSET = COMPUTING_DEVICE___IS_SIMILAR_TO__ASSET;
+	int SMART_LIGHT___SIMILAR_TO__ASSET = COMPUTING_DEVICE___SIMILAR_TO__ASSET;
 
 	/**
 	 * The operation id for the '<em>Merge Connections</em>' operation.
@@ -1190,13 +1190,13 @@ public interface smartbuildingPackage extends EPackage {
 	int LAPTOP___ABSTRACT_ASSET = COMPUTING_DEVICE___ABSTRACT_ASSET;
 
 	/**
-	 * The operation id for the '<em>Is Similar To</em>' operation.
+	 * The operation id for the '<em>Similar To</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LAPTOP___IS_SIMILAR_TO__ASSET = COMPUTING_DEVICE___IS_SIMILAR_TO__ASSET;
+	int LAPTOP___SIMILAR_TO__ASSET = COMPUTING_DEVICE___SIMILAR_TO__ASSET;
 
 	/**
 	 * The operation id for the '<em>Merge Connections</em>' operation.
@@ -1407,13 +1407,13 @@ public interface smartbuildingPackage extends EPackage {
 	int DESKTOP___ABSTRACT_ASSET = COMPUTING_DEVICE___ABSTRACT_ASSET;
 
 	/**
-	 * The operation id for the '<em>Is Similar To</em>' operation.
+	 * The operation id for the '<em>Similar To</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DESKTOP___IS_SIMILAR_TO__ASSET = COMPUTING_DEVICE___IS_SIMILAR_TO__ASSET;
+	int DESKTOP___SIMILAR_TO__ASSET = COMPUTING_DEVICE___SIMILAR_TO__ASSET;
 
 	/**
 	 * The operation id for the '<em>Merge Connections</em>' operation.
@@ -1624,13 +1624,13 @@ public interface smartbuildingPackage extends EPackage {
 	int CCTV___ABSTRACT_ASSET = COMPUTING_DEVICE___ABSTRACT_ASSET;
 
 	/**
-	 * The operation id for the '<em>Is Similar To</em>' operation.
+	 * The operation id for the '<em>Similar To</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CCTV___IS_SIMILAR_TO__ASSET = COMPUTING_DEVICE___IS_SIMILAR_TO__ASSET;
+	int CCTV___SIMILAR_TO__ASSET = COMPUTING_DEVICE___SIMILAR_TO__ASSET;
 
 	/**
 	 * The operation id for the '<em>Merge Connections</em>' operation.
@@ -1841,13 +1841,13 @@ public interface smartbuildingPackage extends EPackage {
 	int SERVER___ABSTRACT_ASSET = COMPUTING_DEVICE___ABSTRACT_ASSET;
 
 	/**
-	 * The operation id for the '<em>Is Similar To</em>' operation.
+	 * The operation id for the '<em>Similar To</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SERVER___IS_SIMILAR_TO__ASSET = COMPUTING_DEVICE___IS_SIMILAR_TO__ASSET;
+	int SERVER___SIMILAR_TO__ASSET = COMPUTING_DEVICE___SIMILAR_TO__ASSET;
 
 	/**
 	 * The operation id for the '<em>Merge Connections</em>' operation.
@@ -2031,13 +2031,13 @@ public interface smartbuildingPackage extends EPackage {
 	int DIGITAL_ASSET___ABSTRACT_ASSET = ASSET___ABSTRACT_ASSET;
 
 	/**
-	 * The operation id for the '<em>Is Similar To</em>' operation.
+	 * The operation id for the '<em>Similar To</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DIGITAL_ASSET___IS_SIMILAR_TO__ASSET = ASSET___IS_SIMILAR_TO__ASSET;
+	int DIGITAL_ASSET___SIMILAR_TO__ASSET = ASSET___SIMILAR_TO__ASSET;
 
 	/**
 	 * The operation id for the '<em>Merge Connections</em>' operation.
@@ -2230,13 +2230,13 @@ public interface smartbuildingPackage extends EPackage {
 	int FILE___ABSTRACT_ASSET = DIGITAL_ASSET___ABSTRACT_ASSET;
 
 	/**
-	 * The operation id for the '<em>Is Similar To</em>' operation.
+	 * The operation id for the '<em>Similar To</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FILE___IS_SIMILAR_TO__ASSET = DIGITAL_ASSET___IS_SIMILAR_TO__ASSET;
+	int FILE___SIMILAR_TO__ASSET = DIGITAL_ASSET___SIMILAR_TO__ASSET;
 
 	/**
 	 * The operation id for the '<em>Merge Connections</em>' operation.
@@ -2420,13 +2420,13 @@ public interface smartbuildingPackage extends EPackage {
 	int PROCESS___ABSTRACT_ASSET = DIGITAL_ASSET___ABSTRACT_ASSET;
 
 	/**
-	 * The operation id for the '<em>Is Similar To</em>' operation.
+	 * The operation id for the '<em>Similar To</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS___IS_SIMILAR_TO__ASSET = DIGITAL_ASSET___IS_SIMILAR_TO__ASSET;
+	int PROCESS___SIMILAR_TO__ASSET = DIGITAL_ASSET___SIMILAR_TO__ASSET;
 
 	/**
 	 * The operation id for the '<em>Merge Connections</em>' operation.
@@ -2619,13 +2619,13 @@ public interface smartbuildingPackage extends EPackage {
 	int APPLICATION___ABSTRACT_ASSET = DIGITAL_ASSET___ABSTRACT_ASSET;
 
 	/**
-	 * The operation id for the '<em>Is Similar To</em>' operation.
+	 * The operation id for the '<em>Similar To</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APPLICATION___IS_SIMILAR_TO__ASSET = DIGITAL_ASSET___IS_SIMILAR_TO__ASSET;
+	int APPLICATION___SIMILAR_TO__ASSET = DIGITAL_ASSET___SIMILAR_TO__ASSET;
 
 	/**
 	 * The operation id for the '<em>Merge Connections</em>' operation.
@@ -2791,13 +2791,13 @@ public interface smartbuildingPackage extends EPackage {
 	int CONNECTION_FEATURE_COUNT = 9;
 
 	/**
-	 * The operation id for the '<em>Is Similar To</em>' operation.
+	 * The operation id for the '<em>Similar To</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION___IS_SIMILAR_TO__CONNECTION = 0;
+	int CONNECTION___SIMILAR_TO__CONNECTION = 0;
 
 	/**
 	 * The number of operations of the '<em>Connection</em>' class.
@@ -2918,13 +2918,13 @@ public interface smartbuildingPackage extends EPackage {
 	int DIGITAL_CONNECTION_FEATURE_COUNT = CONNECTION_FEATURE_COUNT + 1;
 
 	/**
-	 * The operation id for the '<em>Is Similar To</em>' operation.
+	 * The operation id for the '<em>Similar To</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DIGITAL_CONNECTION___IS_SIMILAR_TO__CONNECTION = CONNECTION___IS_SIMILAR_TO__CONNECTION;
+	int DIGITAL_CONNECTION___SIMILAR_TO__CONNECTION = CONNECTION___SIMILAR_TO__CONNECTION;
 
 	/**
 	 * The number of operations of the '<em>Digital Connection</em>' class.
@@ -3036,13 +3036,13 @@ public interface smartbuildingPackage extends EPackage {
 	int PHYSICAL_CONNECTION_FEATURE_COUNT = CONNECTION_FEATURE_COUNT + 0;
 
 	/**
-	 * The operation id for the '<em>Is Similar To</em>' operation.
+	 * The operation id for the '<em>Similar To</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PHYSICAL_CONNECTION___IS_SIMILAR_TO__CONNECTION = CONNECTION___IS_SIMILAR_TO__CONNECTION;
+	int PHYSICAL_CONNECTION___SIMILAR_TO__CONNECTION = CONNECTION___SIMILAR_TO__CONNECTION;
 
 	/**
 	 * The number of operations of the '<em>Physical Connection</em>' class.
@@ -3419,13 +3419,13 @@ public interface smartbuildingPackage extends EPackage {
 	int ACTOR___ABSTRACT_ASSET = PHYSICAL_ASSET___ABSTRACT_ASSET;
 
 	/**
-	 * The operation id for the '<em>Is Similar To</em>' operation.
+	 * The operation id for the '<em>Similar To</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACTOR___IS_SIMILAR_TO__ASSET = PHYSICAL_ASSET___IS_SIMILAR_TO__ASSET;
+	int ACTOR___SIMILAR_TO__ASSET = PHYSICAL_ASSET___SIMILAR_TO__ASSET;
 
 	/**
 	 * The operation id for the '<em>Merge Connections</em>' operation.
@@ -3600,13 +3600,13 @@ public interface smartbuildingPackage extends EPackage {
 	int PHYSICAL_STRUCTURE___ABSTRACT_ASSET = PHYSICAL_ASSET___ABSTRACT_ASSET;
 
 	/**
-	 * The operation id for the '<em>Is Similar To</em>' operation.
+	 * The operation id for the '<em>Similar To</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PHYSICAL_STRUCTURE___IS_SIMILAR_TO__ASSET = PHYSICAL_ASSET___IS_SIMILAR_TO__ASSET;
+	int PHYSICAL_STRUCTURE___SIMILAR_TO__ASSET = PHYSICAL_ASSET___SIMILAR_TO__ASSET;
 
 	/**
 	 * The operation id for the '<em>Merge Connections</em>' operation.
@@ -3891,13 +3891,13 @@ public interface smartbuildingPackage extends EPackage {
 	int ROOM___ABSTRACT_ASSET = PHYSICAL_STRUCTURE___ABSTRACT_ASSET;
 
 	/**
-	 * The operation id for the '<em>Is Similar To</em>' operation.
+	 * The operation id for the '<em>Similar To</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM___IS_SIMILAR_TO__ASSET = PHYSICAL_STRUCTURE___IS_SIMILAR_TO__ASSET;
+	int ROOM___SIMILAR_TO__ASSET = PHYSICAL_STRUCTURE___SIMILAR_TO__ASSET;
 
 	/**
 	 * The operation id for the '<em>Merge Connections</em>' operation.
@@ -4072,13 +4072,13 @@ public interface smartbuildingPackage extends EPackage {
 	int FLOOR___ABSTRACT_ASSET = PHYSICAL_STRUCTURE___ABSTRACT_ASSET;
 
 	/**
-	 * The operation id for the '<em>Is Similar To</em>' operation.
+	 * The operation id for the '<em>Similar To</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FLOOR___IS_SIMILAR_TO__ASSET = PHYSICAL_STRUCTURE___IS_SIMILAR_TO__ASSET;
+	int FLOOR___SIMILAR_TO__ASSET = PHYSICAL_STRUCTURE___SIMILAR_TO__ASSET;
 
 	/**
 	 * The operation id for the '<em>Merge Connections</em>' operation.
@@ -4253,13 +4253,13 @@ public interface smartbuildingPackage extends EPackage {
 	int BUILDING___ABSTRACT_ASSET = PHYSICAL_STRUCTURE___ABSTRACT_ASSET;
 
 	/**
-	 * The operation id for the '<em>Is Similar To</em>' operation.
+	 * The operation id for the '<em>Similar To</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BUILDING___IS_SIMILAR_TO__ASSET = PHYSICAL_STRUCTURE___IS_SIMILAR_TO__ASSET;
+	int BUILDING___SIMILAR_TO__ASSET = PHYSICAL_STRUCTURE___SIMILAR_TO__ASSET;
 
 	/**
 	 * The operation id for the '<em>Merge Connections</em>' operation.
@@ -4461,13 +4461,13 @@ public interface smartbuildingPackage extends EPackage {
 	int FIRE_ALARM___ABSTRACT_ASSET = COMPUTING_DEVICE___ABSTRACT_ASSET;
 
 	/**
-	 * The operation id for the '<em>Is Similar To</em>' operation.
+	 * The operation id for the '<em>Similar To</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FIRE_ALARM___IS_SIMILAR_TO__ASSET = COMPUTING_DEVICE___IS_SIMILAR_TO__ASSET;
+	int FIRE_ALARM___SIMILAR_TO__ASSET = COMPUTING_DEVICE___SIMILAR_TO__ASSET;
 
 	/**
 	 * The operation id for the '<em>Merge Connections</em>' operation.
@@ -4678,13 +4678,13 @@ public interface smartbuildingPackage extends EPackage {
 	int WORKSTATION___ABSTRACT_ASSET = COMPUTING_DEVICE___ABSTRACT_ASSET;
 
 	/**
-	 * The operation id for the '<em>Is Similar To</em>' operation.
+	 * The operation id for the '<em>Similar To</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WORKSTATION___IS_SIMILAR_TO__ASSET = COMPUTING_DEVICE___IS_SIMILAR_TO__ASSET;
+	int WORKSTATION___SIMILAR_TO__ASSET = COMPUTING_DEVICE___SIMILAR_TO__ASSET;
 
 	/**
 	 * The operation id for the '<em>Merge Connections</em>' operation.
@@ -4868,13 +4868,13 @@ public interface smartbuildingPackage extends EPackage {
 	int LAB___ABSTRACT_ASSET = ROOM___ABSTRACT_ASSET;
 
 	/**
-	 * The operation id for the '<em>Is Similar To</em>' operation.
+	 * The operation id for the '<em>Similar To</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LAB___IS_SIMILAR_TO__ASSET = ROOM___IS_SIMILAR_TO__ASSET;
+	int LAB___SIMILAR_TO__ASSET = ROOM___SIMILAR_TO__ASSET;
 
 	/**
 	 * The operation id for the '<em>Merge Connections</em>' operation.
@@ -5049,13 +5049,13 @@ public interface smartbuildingPackage extends EPackage {
 	int TOILET___ABSTRACT_ASSET = ROOM___ABSTRACT_ASSET;
 
 	/**
-	 * The operation id for the '<em>Is Similar To</em>' operation.
+	 * The operation id for the '<em>Similar To</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TOILET___IS_SIMILAR_TO__ASSET = ROOM___IS_SIMILAR_TO__ASSET;
+	int TOILET___SIMILAR_TO__ASSET = ROOM___SIMILAR_TO__ASSET;
 
 	/**
 	 * The operation id for the '<em>Merge Connections</em>' operation.
@@ -5230,13 +5230,13 @@ public interface smartbuildingPackage extends EPackage {
 	int LOUNGE___ABSTRACT_ASSET = ROOM___ABSTRACT_ASSET;
 
 	/**
-	 * The operation id for the '<em>Is Similar To</em>' operation.
+	 * The operation id for the '<em>Similar To</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOUNGE___IS_SIMILAR_TO__ASSET = ROOM___IS_SIMILAR_TO__ASSET;
+	int LOUNGE___SIMILAR_TO__ASSET = ROOM___SIMILAR_TO__ASSET;
 
 	/**
 	 * The operation id for the '<em>Merge Connections</em>' operation.
@@ -5438,13 +5438,13 @@ public interface smartbuildingPackage extends EPackage {
 	int DISH_WASHER___ABSTRACT_ASSET = COMPUTING_DEVICE___ABSTRACT_ASSET;
 
 	/**
-	 * The operation id for the '<em>Is Similar To</em>' operation.
+	 * The operation id for the '<em>Similar To</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DISH_WASHER___IS_SIMILAR_TO__ASSET = COMPUTING_DEVICE___IS_SIMILAR_TO__ASSET;
+	int DISH_WASHER___SIMILAR_TO__ASSET = COMPUTING_DEVICE___SIMILAR_TO__ASSET;
 
 	/**
 	 * The operation id for the '<em>Merge Connections</em>' operation.
@@ -5655,13 +5655,13 @@ public interface smartbuildingPackage extends EPackage {
 	int COFFEE_MACHINE___ABSTRACT_ASSET = COMPUTING_DEVICE___ABSTRACT_ASSET;
 
 	/**
-	 * The operation id for the '<em>Is Similar To</em>' operation.
+	 * The operation id for the '<em>Similar To</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COFFEE_MACHINE___IS_SIMILAR_TO__ASSET = COMPUTING_DEVICE___IS_SIMILAR_TO__ASSET;
+	int COFFEE_MACHINE___SIMILAR_TO__ASSET = COMPUTING_DEVICE___SIMILAR_TO__ASSET;
 
 	/**
 	 * The operation id for the '<em>Merge Connections</em>' operation.
@@ -5872,13 +5872,13 @@ public interface smartbuildingPackage extends EPackage {
 	int ELEVATOR___ABSTRACT_ASSET = COMPUTING_DEVICE___ABSTRACT_ASSET;
 
 	/**
-	 * The operation id for the '<em>Is Similar To</em>' operation.
+	 * The operation id for the '<em>Similar To</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ELEVATOR___IS_SIMILAR_TO__ASSET = COMPUTING_DEVICE___IS_SIMILAR_TO__ASSET;
+	int ELEVATOR___SIMILAR_TO__ASSET = COMPUTING_DEVICE___SIMILAR_TO__ASSET;
 
 	/**
 	 * The operation id for the '<em>Merge Connections</em>' operation.
@@ -6062,13 +6062,13 @@ public interface smartbuildingPackage extends EPackage {
 	int HALLWAY___ABSTRACT_ASSET = PHYSICAL_STRUCTURE___ABSTRACT_ASSET;
 
 	/**
-	 * The operation id for the '<em>Is Similar To</em>' operation.
+	 * The operation id for the '<em>Similar To</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int HALLWAY___IS_SIMILAR_TO__ASSET = PHYSICAL_STRUCTURE___IS_SIMILAR_TO__ASSET;
+	int HALLWAY___SIMILAR_TO__ASSET = PHYSICAL_STRUCTURE___SIMILAR_TO__ASSET;
 
 	/**
 	 * The operation id for the '<em>Merge Connections</em>' operation.
@@ -6243,13 +6243,13 @@ public interface smartbuildingPackage extends EPackage {
 	int ELEVATORS_AREA___ABSTRACT_ASSET = ROOM___ABSTRACT_ASSET;
 
 	/**
-	 * The operation id for the '<em>Is Similar To</em>' operation.
+	 * The operation id for the '<em>Similar To</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ELEVATORS_AREA___IS_SIMILAR_TO__ASSET = ROOM___IS_SIMILAR_TO__ASSET;
+	int ELEVATORS_AREA___SIMILAR_TO__ASSET = ROOM___SIMILAR_TO__ASSET;
 
 	/**
 	 * The operation id for the '<em>Merge Connections</em>' operation.
@@ -6442,13 +6442,13 @@ public interface smartbuildingPackage extends EPackage {
 	int DIGITAL_NETWORK___ABSTRACT_ASSET = DIGITAL_ASSET___ABSTRACT_ASSET;
 
 	/**
-	 * The operation id for the '<em>Is Similar To</em>' operation.
+	 * The operation id for the '<em>Similar To</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DIGITAL_NETWORK___IS_SIMILAR_TO__ASSET = DIGITAL_ASSET___IS_SIMILAR_TO__ASSET;
+	int DIGITAL_NETWORK___SIMILAR_TO__ASSET = DIGITAL_ASSET___SIMILAR_TO__ASSET;
 
 	/**
 	 * The operation id for the '<em>Merge Connections</em>' operation.
@@ -6641,13 +6641,13 @@ public interface smartbuildingPackage extends EPackage {
 	int IP_NETWORK___ABSTRACT_ASSET = DIGITAL_NETWORK___ABSTRACT_ASSET;
 
 	/**
-	 * The operation id for the '<em>Is Similar To</em>' operation.
+	 * The operation id for the '<em>Similar To</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IP_NETWORK___IS_SIMILAR_TO__ASSET = DIGITAL_NETWORK___IS_SIMILAR_TO__ASSET;
+	int IP_NETWORK___SIMILAR_TO__ASSET = DIGITAL_NETWORK___SIMILAR_TO__ASSET;
 
 	/**
 	 * The operation id for the '<em>Merge Connections</em>' operation.
@@ -6840,13 +6840,13 @@ public interface smartbuildingPackage extends EPackage {
 	int BUS_NETWORK___ABSTRACT_ASSET = DIGITAL_NETWORK___ABSTRACT_ASSET;
 
 	/**
-	 * The operation id for the '<em>Is Similar To</em>' operation.
+	 * The operation id for the '<em>Similar To</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BUS_NETWORK___IS_SIMILAR_TO__ASSET = DIGITAL_NETWORK___IS_SIMILAR_TO__ASSET;
+	int BUS_NETWORK___SIMILAR_TO__ASSET = DIGITAL_NETWORK___SIMILAR_TO__ASSET;
 
 	/**
 	 * The operation id for the '<em>Merge Connections</em>' operation.
@@ -7021,13 +7021,13 @@ public interface smartbuildingPackage extends EPackage {
 	int IP_CONNECTION_FEATURE_COUNT = DIGITAL_CONNECTION_FEATURE_COUNT + 0;
 
 	/**
-	 * The operation id for the '<em>Is Similar To</em>' operation.
+	 * The operation id for the '<em>Similar To</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IP_CONNECTION___IS_SIMILAR_TO__CONNECTION = DIGITAL_CONNECTION___IS_SIMILAR_TO__CONNECTION;
+	int IP_CONNECTION___SIMILAR_TO__CONNECTION = DIGITAL_CONNECTION___SIMILAR_TO__CONNECTION;
 
 	/**
 	 * The number of operations of the '<em>IP Connection</em>' class.
@@ -7148,13 +7148,13 @@ public interface smartbuildingPackage extends EPackage {
 	int BUS_CONNECTION_FEATURE_COUNT = DIGITAL_CONNECTION_FEATURE_COUNT + 0;
 
 	/**
-	 * The operation id for the '<em>Is Similar To</em>' operation.
+	 * The operation id for the '<em>Similar To</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BUS_CONNECTION___IS_SIMILAR_TO__CONNECTION = DIGITAL_CONNECTION___IS_SIMILAR_TO__CONNECTION;
+	int BUS_CONNECTION___SIMILAR_TO__CONNECTION = DIGITAL_CONNECTION___SIMILAR_TO__CONNECTION;
 
 	/**
 	 * The number of operations of the '<em>Bus Connection</em>' class.
@@ -7275,13 +7275,13 @@ public interface smartbuildingPackage extends EPackage {
 	int KITCHEN___ABSTRACT_ASSET = ROOM___ABSTRACT_ASSET;
 
 	/**
-	 * The operation id for the '<em>Is Similar To</em>' operation.
+	 * The operation id for the '<em>Similar To</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int KITCHEN___IS_SIMILAR_TO__ASSET = ROOM___IS_SIMILAR_TO__ASSET;
+	int KITCHEN___SIMILAR_TO__ASSET = ROOM___SIMILAR_TO__ASSET;
 
 	/**
 	 * The operation id for the '<em>Merge Connections</em>' operation.
@@ -7456,13 +7456,13 @@ public interface smartbuildingPackage extends EPackage {
 	int STAIRS___ABSTRACT_ASSET = PHYSICAL_STRUCTURE___ABSTRACT_ASSET;
 
 	/**
-	 * The operation id for the '<em>Is Similar To</em>' operation.
+	 * The operation id for the '<em>Similar To</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STAIRS___IS_SIMILAR_TO__ASSET = PHYSICAL_STRUCTURE___IS_SIMILAR_TO__ASSET;
+	int STAIRS___SIMILAR_TO__ASSET = PHYSICAL_STRUCTURE___SIMILAR_TO__ASSET;
 
 	/**
 	 * The operation id for the '<em>Merge Connections</em>' operation.
@@ -7664,13 +7664,13 @@ public interface smartbuildingPackage extends EPackage {
 	int CARD_READER___ABSTRACT_ASSET = COMPUTING_DEVICE___ABSTRACT_ASSET;
 
 	/**
-	 * The operation id for the '<em>Is Similar To</em>' operation.
+	 * The operation id for the '<em>Similar To</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CARD_READER___IS_SIMILAR_TO__ASSET = COMPUTING_DEVICE___IS_SIMILAR_TO__ASSET;
+	int CARD_READER___SIMILAR_TO__ASSET = COMPUTING_DEVICE___SIMILAR_TO__ASSET;
 
 	/**
 	 * The operation id for the '<em>Merge Connections</em>' operation.
@@ -7863,13 +7863,13 @@ public interface smartbuildingPackage extends EPackage {
 	int EMPLOYEE___ABSTRACT_ASSET = ACTOR___ABSTRACT_ASSET;
 
 	/**
-	 * The operation id for the '<em>Is Similar To</em>' operation.
+	 * The operation id for the '<em>Similar To</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EMPLOYEE___IS_SIMILAR_TO__ASSET = ACTOR___IS_SIMILAR_TO__ASSET;
+	int EMPLOYEE___SIMILAR_TO__ASSET = ACTOR___SIMILAR_TO__ASSET;
 
 	/**
 	 * The operation id for the '<em>Merge Connections</em>' operation.
@@ -8053,13 +8053,13 @@ public interface smartbuildingPackage extends EPackage {
 	int VISITOR___ABSTRACT_ASSET = ACTOR___ABSTRACT_ASSET;
 
 	/**
-	 * The operation id for the '<em>Is Similar To</em>' operation.
+	 * The operation id for the '<em>Similar To</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VISITOR___IS_SIMILAR_TO__ASSET = ACTOR___IS_SIMILAR_TO__ASSET;
+	int VISITOR___SIMILAR_TO__ASSET = ACTOR___SIMILAR_TO__ASSET;
 
 	/**
 	 * The operation id for the '<em>Merge Connections</em>' operation.
@@ -8506,14 +8506,14 @@ public interface smartbuildingPackage extends EPackage {
 	EAttribute getConnection_Description();
 
 	/**
-	 * Returns the meta object for the '{@link environment.Connection#isSimilarTo(environment.Connection) <em>Is Similar To</em>}' operation.
+	 * Returns the meta object for the '{@link environment.Connection#similarTo(environment.Connection) <em>Similar To</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Similar To</em>' operation.
-	 * @see environment.Connection#isSimilarTo(environment.Connection)
+	 * @return the meta object for the '<em>Similar To</em>' operation.
+	 * @see environment.Connection#similarTo(environment.Connection)
 	 * @generated
 	 */
-	EOperation getConnection__IsSimilarTo__Connection();
+	EOperation getConnection__SimilarTo__Connection();
 
 	/**
 	 * Returns the meta object for class '{@link environment.DigitalConnection <em>Digital Connection</em>}'.
@@ -8644,14 +8644,14 @@ public interface smartbuildingPackage extends EPackage {
 	EOperation getAsset__AbstractAsset();
 
 	/**
-	 * Returns the meta object for the '{@link environment.Asset#isSimilarTo(environment.Asset) <em>Is Similar To</em>}' operation.
+	 * Returns the meta object for the '{@link environment.Asset#similarTo(environment.Asset) <em>Similar To</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Similar To</em>' operation.
-	 * @see environment.Asset#isSimilarTo(environment.Asset)
+	 * @return the meta object for the '<em>Similar To</em>' operation.
+	 * @see environment.Asset#similarTo(environment.Asset)
 	 * @generated
 	 */
-	EOperation getAsset__IsSimilarTo__Asset();
+	EOperation getAsset__SimilarTo__Asset();
 
 	/**
 	 * Returns the meta object for the '{@link environment.Asset#mergeConnections() <em>Merge Connections</em>}' operation.
@@ -9663,12 +9663,12 @@ public interface smartbuildingPackage extends EPackage {
 		EAttribute CONNECTION__DESCRIPTION = eINSTANCE.getConnection_Description();
 
 		/**
-		 * The meta object literal for the '<em><b>Is Similar To</b></em>' operation.
+		 * The meta object literal for the '<em><b>Similar To</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation CONNECTION___IS_SIMILAR_TO__CONNECTION = eINSTANCE.getConnection__IsSimilarTo__Connection();
+		EOperation CONNECTION___SIMILAR_TO__CONNECTION = eINSTANCE.getConnection__SimilarTo__Connection();
 
 		/**
 		 * The meta object literal for the '{@link environment.impl.DigitalConnectionImpl <em>Digital Connection</em>}' class.
@@ -9773,12 +9773,12 @@ public interface smartbuildingPackage extends EPackage {
 		EOperation ASSET___ABSTRACT_ASSET = eINSTANCE.getAsset__AbstractAsset();
 
 		/**
-		 * The meta object literal for the '<em><b>Is Similar To</b></em>' operation.
+		 * The meta object literal for the '<em><b>Similar To</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ASSET___IS_SIMILAR_TO__ASSET = eINSTANCE.getAsset__IsSimilarTo__Asset();
+		EOperation ASSET___SIMILAR_TO__ASSET = eINSTANCE.getAsset__SimilarTo__Asset();
 
 		/**
 		 * The meta object literal for the '<em><b>Merge Connections</b></em>' operation.

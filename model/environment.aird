@@ -2054,10 +2054,10 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_jSlTcEa5Eeit7cCjq5FoOA" name="isSimilarTo(connection Connection) : EInt" tooltipText="isSimilarTo(connection) : EInt">
-        <target xmi:type="ecore:EOperation" href="environment.ecore#//Connection/isSimilarTo"/>
-        <semanticElements xmi:type="ecore:EOperation" href="environment.ecore#//Connection/isSimilarTo"/>
-        <semanticElements xmi:type="ecore:EParameter" href="environment.ecore#//Connection/isSimilarTo/connection"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_jSlTcEa5Eeit7cCjq5FoOA" name="similarTo(connection Connection) : EInt" tooltipText="similarTo(connection) : EInt">
+        <target xmi:type="ecore:EOperation" href="environment.ecore#//Connection/similarTo"/>
+        <semanticElements xmi:type="ecore:EOperation" href="environment.ecore#//Connection/similarTo"/>
+        <semanticElements xmi:type="ecore:EParameter" href="environment.ecore#//Connection/similarTo/connection"/>
         <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_jSlTcUa5Eeit7cCjq5FoOA" labelAlignment="LEFT">
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='Operation']/@style"/>
         </ownedStyle>

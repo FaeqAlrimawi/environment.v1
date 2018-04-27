@@ -240,8 +240,7 @@ public interface Asset extends EObject {
 	 * @model
 	 * @generated
 	 */
-	int isSimilarTo(Asset asset);
-	
+	int similarTo(Asset asset);
 
 	/**
 	 * <!-- begin-user-doc -->

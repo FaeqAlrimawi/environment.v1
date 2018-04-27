@@ -282,6 +282,6 @@ public interface Connection extends EObject {
 	 * @model
 	 * @generated
 	 */
-	int isSimilarTo(Connection connection);
+	int similarTo(Connection connection);
 
 } // Connection

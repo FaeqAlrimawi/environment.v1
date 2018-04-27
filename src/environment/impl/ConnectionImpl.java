@@ -432,7 +432,7 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public int isSimilarTo(Connection connection) {
+	public int similarTo(Connection connection) {
 		
 		//compares current connection with the parameter one
 		//criteria for comparison:
@@ -845,8 +845,8 @@ public int compareType(Connection connection) {
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case smartbuildingPackage.CONNECTION___IS_SIMILAR_TO__CONNECTION:
-				return isSimilarTo((Connection)arguments.get(0));
+			case smartbuildingPackage.CONNECTION___SIMILAR_TO__CONNECTION:
+				return similarTo((Connection)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

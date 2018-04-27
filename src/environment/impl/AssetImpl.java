@@ -896,8 +896,8 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 		switch (operationID) {
 			case smartbuildingPackage.ASSET___ABSTRACT_ASSET:
 				return abstractAsset();
-			case smartbuildingPackage.ASSET___IS_SIMILAR_TO__ASSET:
-				return isSimilarTo((Asset)arguments.get(0));
+			case smartbuildingPackage.ASSET___SIMILAR_TO__ASSET:
+				return similarTo((Asset)arguments.get(0));
 			case smartbuildingPackage.ASSET___MERGE_CONNECTIONS:
 				mergeConnections();
 				return null;

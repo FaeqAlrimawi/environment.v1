@@ -779,7 +779,7 @@ public class smartbuildingPackageImpl extends EPackageImpl implements smartbuild
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getConnection__IsSimilarTo__Connection() {
+	public EOperation getConnection__SimilarTo__Connection() {
 		return connectionEClass.getEOperations().get(0);
 	}
 
@@ -896,7 +896,7 @@ public class smartbuildingPackageImpl extends EPackageImpl implements smartbuild
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getAsset__IsSimilarTo__Asset() {
+	public EOperation getAsset__SimilarTo__Asset() {
 		return assetEClass.getEOperations().get(1);
 	}
 
@@ -1583,7 +1583,7 @@ public class smartbuildingPackageImpl extends EPackageImpl implements smartbuild
 		createEReference(connectionEClass, CONNECTION__PORT);
 		createEReference(connectionEClass, CONNECTION__PROPERTIES);
 		createEAttribute(connectionEClass, CONNECTION__DESCRIPTION);
-		createEOperation(connectionEClass, CONNECTION___IS_SIMILAR_TO__CONNECTION);
+		createEOperation(connectionEClass, CONNECTION___SIMILAR_TO__CONNECTION);
 
 		digitalConnectionEClass = createEClass(DIGITAL_CONNECTION);
 		createEAttribute(digitalConnectionEClass, DIGITAL_CONNECTION__PROTOCOL);
@@ -1599,7 +1599,7 @@ public class smartbuildingPackageImpl extends EPackageImpl implements smartbuild
 		createEAttribute(assetEClass, ASSET__DESCRIPTION);
 		createEAttribute(assetEClass, ASSET__CONTROL);
 		createEOperation(assetEClass, ASSET___ABSTRACT_ASSET);
-		createEOperation(assetEClass, ASSET___IS_SIMILAR_TO__ASSET);
+		createEOperation(assetEClass, ASSET___SIMILAR_TO__ASSET);
 		createEOperation(assetEClass, ASSET___MERGE_CONNECTIONS);
 		createEOperation(assetEClass, ASSET___CAN_MERGE_CONNECTIONS);
 		createEOperation(assetEClass, ASSET___CAN_MERGE_CONTAINED_ASSETS);
@@ -1818,7 +1818,7 @@ public class smartbuildingPackageImpl extends EPackageImpl implements smartbuild
 		initEReference(getConnection_Properties(), this.getProperty(), null, "properties", null, 0, -1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getConnection_Description(), ecorePackage.getEString(), "description", null, 0, 1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		EOperation op = initEOperation(getConnection__IsSimilarTo__Connection(), ecorePackage.getEInt(), "isSimilarTo", 0, 1, IS_UNIQUE, IS_ORDERED);
+		EOperation op = initEOperation(getConnection__SimilarTo__Connection(), ecorePackage.getEInt(), "similarTo", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getConnection(), "connection", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(digitalConnectionEClass, DigitalConnection.class, "DigitalConnection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1837,7 +1837,7 @@ public class smartbuildingPackageImpl extends EPackageImpl implements smartbuild
 
 		initEOperation(getAsset__AbstractAsset(), this.getAsset(), "abstractAsset", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getAsset__IsSimilarTo__Asset(), ecorePackage.getEInt(), "isSimilarTo", 0, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getAsset__SimilarTo__Asset(), ecorePackage.getEInt(), "similarTo", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getAsset(), "asset", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEOperation(getAsset__MergeConnections(), null, "mergeConnections", 0, 1, IS_UNIQUE, IS_ORDERED);
