@@ -120,8 +120,9 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="abstractable" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Credential">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="#//CredentialType"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//CredentialType"
         iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="other" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Actor" eSuperTypes="#//PhysicalAsset">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="role" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -178,5 +179,6 @@
     <eLiterals name="PINCODE" value="1"/>
     <eLiterals name="CARD" value="2"/>
     <eLiterals name="FINGERPRINT" value="3"/>
+    <eLiterals name="OTHER" value="4"/>
   </eClassifiers>
 </ecore:EPackage>

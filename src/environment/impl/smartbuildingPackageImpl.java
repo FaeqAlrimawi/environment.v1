@@ -1112,8 +1112,17 @@ public class smartbuildingPackageImpl extends EPackageImpl implements smartbuild
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCredential_Name() {
+	public EAttribute getCredential_Type() {
 		return (EAttribute)credentialEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCredential_Other() {
+		return (EAttribute)credentialEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1618,7 +1627,8 @@ public class smartbuildingPackageImpl extends EPackageImpl implements smartbuild
 		createEAttribute(propertyEClass, PROPERTY__ABSTRACTABLE);
 
 		credentialEClass = createEClass(CREDENTIAL);
-		createEAttribute(credentialEClass, CREDENTIAL__NAME);
+		createEAttribute(credentialEClass, CREDENTIAL__TYPE);
+		createEAttribute(credentialEClass, CREDENTIAL__OTHER);
 
 		actorEClass = createEClass(ACTOR);
 		createEAttribute(actorEClass, ACTOR__ROLE);
@@ -1864,7 +1874,8 @@ public class smartbuildingPackageImpl extends EPackageImpl implements smartbuild
 		initEAttribute(getProperty_Abstractable(), ecorePackage.getEBoolean(), "abstractable", null, 0, 1, Property.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(credentialEClass, Credential.class, "Credential", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getCredential_Name(), this.getCredentialType(), "name", null, 0, 1, Credential.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCredential_Type(), this.getCredentialType(), "type", null, 0, 1, Credential.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCredential_Other(), ecorePackage.getEString(), "other", null, 0, 1, Credential.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(actorEClass, Actor.class, "Actor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getActor_Role(), ecorePackage.getEString(), "role", null, 0, 1, Actor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1953,6 +1964,7 @@ public class smartbuildingPackageImpl extends EPackageImpl implements smartbuild
 		addEEnumLiteral(credentialTypeEEnum, CredentialType.PINCODE);
 		addEEnumLiteral(credentialTypeEEnum, CredentialType.CARD);
 		addEEnumLiteral(credentialTypeEEnum, CredentialType.FINGERPRINT);
+		addEEnumLiteral(credentialTypeEEnum, CredentialType.OTHER);
 
 		// Create resource
 		createResource(eNS_URI);

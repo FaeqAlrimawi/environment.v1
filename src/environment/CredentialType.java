@@ -56,7 +56,15 @@ public enum CredentialType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	FINGERPRINT(3, "FINGERPRINT", "FINGERPRINT");
+	FINGERPRINT(3, "FINGERPRINT", "FINGERPRINT"), /**
+	 * The '<em><b>OTHER</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #OTHER_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	OTHER(4, "OTHER", "OTHER");
 
 	/**
 	 * The '<em><b>PASSWORD</b></em>' literal value.
@@ -119,6 +127,21 @@ public enum CredentialType implements Enumerator {
 	public static final int FINGERPRINT_VALUE = 3;
 
 	/**
+	 * The '<em><b>OTHER</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>OTHER</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #OTHER
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int OTHER_VALUE = 4;
+
+	/**
 	 * An array of all the '<em><b>Credential Type</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -130,6 +153,7 @@ public enum CredentialType implements Enumerator {
 			PINCODE,
 			CARD,
 			FINGERPRINT,
+			OTHER,
 		};
 
 	/**
@@ -190,6 +214,7 @@ public enum CredentialType implements Enumerator {
 			case PINCODE_VALUE: return PINCODE;
 			case CARD_VALUE: return CARD;
 			case FINGERPRINT_VALUE: return FINGERPRINT;
+			case OTHER_VALUE: return OTHER;
 		}
 		return null;
 	}

@@ -4,6 +4,8 @@ package environment.impl;
 
 import environment.Asset;
 import environment.Connection;
+import environment.Credential;
+import environment.CredentialType;
 import environment.DigitalConnection;
 import environment.PhysicalConnection;
 import environment.Port;
@@ -15,7 +17,7 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
+import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -440,10 +442,13 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 		
 		int similarity = 0;
 		
-		//compare connections types
+		// compare connections types
 		similarity += compareType(connection);
 		
-		//compare direction. Default value for direction is true i.e. bidirectional
+		// compare port: name, asset, and credential
+		// if all same
+		
+		// compare direction. Default value for direction is true i.e. bidirectional
 		if((this.isBidirectional() == false) && (connection.isBidirectional() == false)) {
 			similarity += Connection.CONNECTION_DIRECTION;
 		}
@@ -487,6 +492,90 @@ public int compareType(Connection connection) {
 		}
 		
 		return similarityPercentage;
+	}
+
+	public int comparePort(Connection connection) {
+
+		// compare ports: name, asset, and credential
+
+		Port thisPort = this.getPort();
+		Port argPort = connection.getPort();
+		boolean isNameMatched = false;
+		boolean isAssetMatched = false;
+		boolean areCredentialsMatched = false;
+
+		// if one or both DON'T have ports then return 0
+		if (thisPort == null || argPort == null) {
+			System.out.println("one or both null");
+			return 0;
+		}
+
+		// if the port is the same object for both connections. It is not likely as the model wouldn't allow the assignment of a port object to two different connection
+		if (thisPort.equals(argPort)) {
+			return Connection.EXACT_PORT;
+		}
+
+		// match name
+		if (thisPort.getName().equals(argPort.getName())) {
+			System.out.println("name matched");
+			isNameMatched = true;
+		}
+
+		// match asset
+		if (thisPort.getAsset() != null && argPort.getAsset() != null
+				&& thisPort.getAsset().compareType(argPort.getAsset()) == Asset.EXACT_TYPE) {
+			System.out.println("asset matched");
+			isAssetMatched = true;
+		}
+
+		BasicEList<Credential> matchedCredentials = new BasicEList<Credential>();
+		int numOfMatches = 0;
+
+		// match credentials
+		for (Credential thisCred : thisPort.getCredential()) {
+			for (Credential argCred : argPort.getCredential()) {
+
+				// if already matched, then continue to the next
+				if (matchedCredentials.contains(argCred)) {
+					continue;
+				}
+
+				// if other is selected for both, then compare the "other"
+				// attribute string value
+				if (thisCred.getType().equals(CredentialType.OTHER) && argCred.getType().equals(CredentialType.OTHER)) {
+					if (thisCred.getOther().equalsIgnoreCase(argCred.getOther())) {
+						numOfMatches++;
+						matchedCredentials.add(argCred);
+						break;
+					}
+
+					// compare types
+				} else if (thisCred.getType().equals(argCred.getType())) {
+					numOfMatches++;
+					matchedCredentials.add(argCred);
+					break;
+				}
+			}
+		}
+
+		// exact match of credentials number. Credentials should be the same
+		// size and all matched
+		if ((numOfMatches == thisPort.getCredential().size()) && (numOfMatches == argPort.getCredential().size())) {
+			System.out.println("credentials matched");
+			areCredentialsMatched = true;
+		}
+
+		// if all match
+		if (isNameMatched == true && isAssetMatched == true && areCredentialsMatched == true) {
+			return Connection.EXACT_PORT;
+		}
+
+		// if only asset type matches
+		if (isAssetMatched == true) {
+			return Connection.PARTIAL_PORT;
+		}
+
+		return 0;
 	}
 
 	/**

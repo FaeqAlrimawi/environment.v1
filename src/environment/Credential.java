@@ -13,7 +13,8 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link environment.Credential#getName <em>Name</em>}</li>
+ *   <li>{@link environment.Credential#getType <em>Type</em>}</li>
+ *   <li>{@link environment.Credential#getOther <em>Other</em>}</li>
  * </ul>
  *
  * @see environment.smartbuildingPackage#getCredential()
@@ -22,32 +23,58 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Credential extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * Returns the value of the '<em><b>Type</b></em>' attribute.
 	 * The literals are from the enumeration {@link environment.CredentialType}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Type</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
+	 * @return the value of the '<em>Type</em>' attribute.
 	 * @see environment.CredentialType
-	 * @see #setName(CredentialType)
-	 * @see environment.smartbuildingPackage#getCredential_Name()
+	 * @see #setType(CredentialType)
+	 * @see environment.smartbuildingPackage#getCredential_Type()
 	 * @model id="true"
 	 * @generated
 	 */
-	CredentialType getName();
+	CredentialType getType();
 
 	/**
-	 * Sets the value of the '{@link environment.Credential#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link environment.Credential#getType <em>Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @param value the new value of the '<em>Type</em>' attribute.
 	 * @see environment.CredentialType
-	 * @see #getName()
+	 * @see #getType()
 	 * @generated
 	 */
-	void setName(CredentialType value);
+	void setType(CredentialType value);
+
+	/**
+	 * Returns the value of the '<em><b>Other</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Other</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Other</em>' attribute.
+	 * @see #setOther(String)
+	 * @see environment.smartbuildingPackage#getCredential_Other()
+	 * @model
+	 * @generated
+	 */
+	String getOther();
+
+	/**
+	 * Sets the value of the '{@link environment.Credential#getOther <em>Other</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Other</em>' attribute.
+	 * @see #getOther()
+	 * @generated
+	 */
+	void setOther(String value);
 
 } // Credential

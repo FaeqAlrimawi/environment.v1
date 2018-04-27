@@ -3265,13 +3265,22 @@ public interface smartbuildingPackage extends EPackage {
 	int CREDENTIAL = 18;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CREDENTIAL__NAME = 0;
+	int CREDENTIAL__TYPE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Other</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREDENTIAL__OTHER = 1;
 
 	/**
 	 * The number of structural features of the '<em>Credential</em>' class.
@@ -3280,7 +3289,7 @@ public interface smartbuildingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CREDENTIAL_FEATURE_COUNT = 1;
+	int CREDENTIAL_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Credential</em>' class.
@@ -8888,15 +8897,26 @@ public interface smartbuildingPackage extends EPackage {
 	EClass getCredential();
 
 	/**
-	 * Returns the meta object for the attribute '{@link environment.Credential#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link environment.Credential#getType <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see environment.Credential#getName()
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see environment.Credential#getType()
 	 * @see #getCredential()
 	 * @generated
 	 */
-	EAttribute getCredential_Name();
+	EAttribute getCredential_Type();
+
+	/**
+	 * Returns the meta object for the attribute '{@link environment.Credential#getOther <em>Other</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Other</em>'.
+	 * @see environment.Credential#getOther()
+	 * @see #getCredential()
+	 * @generated
+	 */
+	EAttribute getCredential_Other();
 
 	/**
 	 * Returns the meta object for class '{@link environment.Actor <em>Actor</em>}'.
@@ -9953,12 +9973,20 @@ public interface smartbuildingPackage extends EPackage {
 		EClass CREDENTIAL = eINSTANCE.getCredential();
 
 		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute CREDENTIAL__NAME = eINSTANCE.getCredential_Name();
+		EAttribute CREDENTIAL__TYPE = eINSTANCE.getCredential_Type();
+
+		/**
+		 * The meta object literal for the '<em><b>Other</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CREDENTIAL__OTHER = eINSTANCE.getCredential_Other();
 
 		/**
 		 * The meta object literal for the '{@link environment.impl.ActorImpl <em>Actor</em>}' class.

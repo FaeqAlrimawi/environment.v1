@@ -55,6 +55,7 @@ public interface Connection extends EObject {
 	
 	// maunally added methods
 	int compareType(Connection connection);
+	int comparePort(Connection connection);
 	/**
 	 * Returns the value of the '<em><b>Asset1</b></em>' reference.
 	 * <!-- begin-user-doc -->
