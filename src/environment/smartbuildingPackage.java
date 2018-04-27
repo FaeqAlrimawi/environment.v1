@@ -3265,22 +3265,13 @@ public interface smartbuildingPackage extends EPackage {
 	int CREDENTIAL = 18;
 
 	/**
-	 * The feature id for the '<em><b>Key</b></em>' attribute.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CREDENTIAL__KEY = 0;
-
-	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CREDENTIAL__VALUE = 1;
+	int CREDENTIAL__NAME = 0;
 
 	/**
 	 * The number of structural features of the '<em>Credential</em>' class.
@@ -3289,7 +3280,7 @@ public interface smartbuildingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CREDENTIAL_FEATURE_COUNT = 2;
+	int CREDENTIAL_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>Credential</em>' class.
@@ -8156,6 +8147,17 @@ public interface smartbuildingPackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '{@link environment.CredentialType <em>Credential Type</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see environment.CredentialType
+	 * @see environment.impl.smartbuildingPackageImpl#getCredentialType()
+	 * @generated
+	 */
+	int CREDENTIAL_TYPE = 50;
+
+
+	/**
 	 * Returns the meta object for class '{@link environment.PhysicalAsset <em>Physical Asset</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8886,26 +8888,15 @@ public interface smartbuildingPackage extends EPackage {
 	EClass getCredential();
 
 	/**
-	 * Returns the meta object for the attribute '{@link environment.Credential#getKey <em>Key</em>}'.
+	 * Returns the meta object for the attribute '{@link environment.Credential#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Key</em>'.
-	 * @see environment.Credential#getKey()
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see environment.Credential#getName()
 	 * @see #getCredential()
 	 * @generated
 	 */
-	EAttribute getCredential_Key();
-
-	/**
-	 * Returns the meta object for the attribute '{@link environment.Credential#getValue <em>Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see environment.Credential#getValue()
-	 * @see #getCredential()
-	 * @generated
-	 */
-	EAttribute getCredential_Value();
+	EAttribute getCredential_Name();
 
 	/**
 	 * Returns the meta object for class '{@link environment.Actor <em>Actor</em>}'.
@@ -9337,6 +9328,16 @@ public interface smartbuildingPackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getFileStatus();
+
+	/**
+	 * Returns the meta object for enum '{@link environment.CredentialType <em>Credential Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Credential Type</em>'.
+	 * @see environment.CredentialType
+	 * @generated
+	 */
+	EEnum getCredentialType();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -9952,20 +9953,12 @@ public interface smartbuildingPackage extends EPackage {
 		EClass CREDENTIAL = eINSTANCE.getCredential();
 
 		/**
-		 * The meta object literal for the '<em><b>Key</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute CREDENTIAL__KEY = eINSTANCE.getCredential_Key();
-
-		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CREDENTIAL__VALUE = eINSTANCE.getCredential_Value();
+		EAttribute CREDENTIAL__NAME = eINSTANCE.getCredential_Name();
 
 		/**
 		 * The meta object literal for the '{@link environment.impl.ActorImpl <em>Actor</em>}' class.
@@ -10364,6 +10357,16 @@ public interface smartbuildingPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum FILE_STATUS = eINSTANCE.getFileStatus();
+
+		/**
+		 * The meta object literal for the '{@link environment.CredentialType <em>Credential Type</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see environment.CredentialType
+		 * @see environment.impl.smartbuildingPackageImpl#getCredentialType()
+		 * @generated
+		 */
+		EEnum CREDENTIAL_TYPE = eINSTANCE.getCredentialType();
 
 	}
 

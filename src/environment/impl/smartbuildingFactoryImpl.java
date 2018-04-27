@@ -13,6 +13,7 @@ import environment.CardReader;
 import environment.CoffeeMachine;
 import environment.ComputingDevice;
 import environment.Credential;
+import environment.CredentialType;
 import environment.Desktop;
 import environment.DigitalAsset;
 import environment.DigitalConnection;
@@ -169,6 +170,8 @@ public class smartbuildingFactoryImpl extends EFactoryImpl implements smartbuild
 				return createProcessStatusFromString(eDataType, initialValue);
 			case smartbuildingPackage.FILE_STATUS:
 				return createFileStatusFromString(eDataType, initialValue);
+			case smartbuildingPackage.CREDENTIAL_TYPE:
+				return createCredentialTypeFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -188,6 +191,8 @@ public class smartbuildingFactoryImpl extends EFactoryImpl implements smartbuild
 				return convertProcessStatusToString(eDataType, instanceValue);
 			case smartbuildingPackage.FILE_STATUS:
 				return convertFileStatusToString(eDataType, instanceValue);
+			case smartbuildingPackage.CREDENTIAL_TYPE:
+				return convertCredentialTypeToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -700,6 +705,26 @@ public class smartbuildingFactoryImpl extends EFactoryImpl implements smartbuild
 	 * @generated
 	 */
 	public String convertFileStatusToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CredentialType createCredentialTypeFromString(EDataType eDataType, String initialValue) {
+		CredentialType result = CredentialType.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertCredentialTypeToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

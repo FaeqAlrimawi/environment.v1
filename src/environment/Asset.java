@@ -73,7 +73,7 @@ public interface Asset extends EObject {
 	//properties match
 	
 	static final int SIMILARITY_MAXIMUM_VALUE = (EXACT_TYPE + ATTRIBUTE_TYPE) + COMMON_PARENT + CONTAINEDASSETS_EXACT; // currently 75
-	static final int SIMILARITY_THRESHOLD = SIMILARITY_MAXIMUM_VALUE/2; // currently 50%
+	static int SIMILARITY_THRESHOLD = SIMILARITY_MAXIMUM_VALUE/2; // currently 50%
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->

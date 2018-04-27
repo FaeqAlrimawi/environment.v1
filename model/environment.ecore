@@ -120,9 +120,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="abstractable" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Credential">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="key" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="#//CredentialType"
         iD="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Actor" eSuperTypes="#//PhysicalAsset">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="role" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -174,4 +173,10 @@
   <eClassifiers xsi:type="ecore:EClass" name="CardReader" eSuperTypes="#//ComputingDevice"/>
   <eClassifiers xsi:type="ecore:EClass" name="Employee" eSuperTypes="#//Actor"/>
   <eClassifiers xsi:type="ecore:EClass" name="Visitor" eSuperTypes="#//Actor"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="CredentialType">
+    <eLiterals name="PASSWORD"/>
+    <eLiterals name="PINCODE" value="1"/>
+    <eLiterals name="CARD" value="2"/>
+    <eLiterals name="FINGERPRINT" value="3"/>
+  </eClassifiers>
 </ecore:EPackage>

@@ -39,13 +39,21 @@ public interface Connection extends EObject {
 	static final int ABSTRACT_TYPE = 1;
 	static final int TYPE_MISMATCH = 0;
 	
+	//port match 30%
+	static final int EXACT_PORT = 30; // matches port name, asset linked to it, and credential
+	static final int PARTIAL_PORT = 15; // matches asset type associated with port
+	
+	// ends of the connection 20%
+	static final int COMMON_END_TYPE = 20; // one end of both connections share the same asset, the other end share the same type (direct type) of asset
+	static final int COMMON_END = 10; // one end of both connections share the same asset, the other end has different types of assets
+	
 	// direction 5%
 	static final int CONNECTION_DIRECTION = 5;
 	
-	static final int MAXIMUM_SIMILARITY_VALUE = EXACT_TYPE + CONNECTION_DIRECTION;
-	static final int SIMILARITY_THRESHOLD_VALUE =  MAXIMUM_SIMILARITY_VALUE/2;
+	static final int MAXIMUM_SIMILARITY_VALUE = EXACT_TYPE + EXACT_PORT + COMMON_END_TYPE + CONNECTION_DIRECTION; //currently 85
+	static int SIMILARITY_THRESHOLD_VALUE =  MAXIMUM_SIMILARITY_VALUE/2; // currently 50% of above of the total
 	
-	//maunally added methods
+	// maunally added methods
 	int compareType(Connection connection);
 	/**
 	 * Returns the value of the '<em><b>Asset1</b></em>' reference.

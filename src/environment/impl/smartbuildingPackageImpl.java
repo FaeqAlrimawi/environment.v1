@@ -14,6 +14,7 @@ import environment.CoffeeMachine;
 import environment.ComputingDevice;
 import environment.Connection;
 import environment.Credential;
+import environment.CredentialType;
 import environment.Desktop;
 import environment.DigitalAsset;
 import environment.DigitalConnection;
@@ -416,6 +417,13 @@ public class smartbuildingPackageImpl extends EPackageImpl implements smartbuild
 	 * @generated
 	 */
 	private EEnum fileStatusEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum credentialTypeEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -1104,17 +1112,8 @@ public class smartbuildingPackageImpl extends EPackageImpl implements smartbuild
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCredential_Key() {
+	public EAttribute getCredential_Name() {
 		return (EAttribute)credentialEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getCredential_Value() {
-		return (EAttribute)credentialEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1500,6 +1499,15 @@ public class smartbuildingPackageImpl extends EPackageImpl implements smartbuild
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EEnum getCredentialType() {
+		return credentialTypeEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public smartbuildingFactory getsmartbuildingFactory() {
 		return (smartbuildingFactory)getEFactoryInstance();
 	}
@@ -1610,8 +1618,7 @@ public class smartbuildingPackageImpl extends EPackageImpl implements smartbuild
 		createEAttribute(propertyEClass, PROPERTY__ABSTRACTABLE);
 
 		credentialEClass = createEClass(CREDENTIAL);
-		createEAttribute(credentialEClass, CREDENTIAL__KEY);
-		createEAttribute(credentialEClass, CREDENTIAL__VALUE);
+		createEAttribute(credentialEClass, CREDENTIAL__NAME);
 
 		actorEClass = createEClass(ACTOR);
 		createEAttribute(actorEClass, ACTOR__ROLE);
@@ -1684,6 +1691,7 @@ public class smartbuildingPackageImpl extends EPackageImpl implements smartbuild
 		statusEEnum = createEEnum(STATUS);
 		processStatusEEnum = createEEnum(PROCESS_STATUS);
 		fileStatusEEnum = createEEnum(FILE_STATUS);
+		credentialTypeEEnum = createEEnum(CREDENTIAL_TYPE);
 	}
 
 	/**
@@ -1856,8 +1864,7 @@ public class smartbuildingPackageImpl extends EPackageImpl implements smartbuild
 		initEAttribute(getProperty_Abstractable(), ecorePackage.getEBoolean(), "abstractable", null, 0, 1, Property.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(credentialEClass, Credential.class, "Credential", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getCredential_Key(), ecorePackage.getEString(), "key", null, 0, 1, Credential.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCredential_Value(), ecorePackage.getEString(), "value", null, 0, 1, Credential.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCredential_Name(), this.getCredentialType(), "name", null, 0, 1, Credential.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(actorEClass, Actor.class, "Actor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getActor_Role(), ecorePackage.getEString(), "role", null, 0, 1, Actor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1940,6 +1947,12 @@ public class smartbuildingPackageImpl extends EPackageImpl implements smartbuild
 		initEEnum(fileStatusEEnum, FileStatus.class, "FileStatus");
 		addEEnumLiteral(fileStatusEEnum, FileStatus.OPEN);
 		addEEnumLiteral(fileStatusEEnum, FileStatus.CLOSED);
+
+		initEEnum(credentialTypeEEnum, CredentialType.class, "CredentialType");
+		addEEnumLiteral(credentialTypeEEnum, CredentialType.PASSWORD);
+		addEEnumLiteral(credentialTypeEEnum, CredentialType.PINCODE);
+		addEEnumLiteral(credentialTypeEEnum, CredentialType.CARD);
+		addEEnumLiteral(credentialTypeEEnum, CredentialType.FINGERPRINT);
 
 		// Create resource
 		createResource(eNS_URI);

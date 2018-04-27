@@ -448,7 +448,6 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 			similarity += Connection.CONNECTION_DIRECTION;
 		}
 		
-		System.out.println(similarity);
 		
 		return similarity;
 	}
