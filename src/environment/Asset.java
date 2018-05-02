@@ -45,34 +45,36 @@ public interface Asset extends EObject {
 	 */
 	EList<Connection> getConnections();
 
-	//type similarity is given 30% (one of the following values will be assigned)
-	static final int EXACT_TYPE = 30; // best: both have the same type
-	static final int ASSIGNABLE_TYPE = 15; // very good: one is the super type of the other
-	static final int EXACT_SUPER_TYPE = 10; // good: both share the same super type (e.g., lab and kitchen are Rooms)
-	static final int ATTRIBUTE_TYPE = 5; // natching of the type as attribute
-	static final int ABSTRACT_TYPE = 1; // not so good: both either physical or digital
+	//type similarity is given 40 (one of the following values will be assigned)
+	static final int EXACT_TYPE = 40; // best: both have the same type
+	static final int ASSIGNABLE_TYPE = 25; // very good: one is the super type of the other
+	static final int EXACT_SUPER_TYPE = 15; // good: both share the same super type (e.g., lab and kitchen are Rooms)
+	static final int ATTRIBUTE_TYPE = 10; // matching of the type as attribute
+	static final int ABSTRACT_TYPE = 5; // not so good: both either physical or digital
 	
 	//if one asset is digital and the other is physical, then their similarity would be zero
 	static final int NO_COMMON_TYPE = 0;
 	
-	//contained by the same parent 20%
+	//contained by the same parent 20
 	static final int COMMON_PARENT = 20;
 	static final int COMMON_PARENT_TYPE = 10; //parents have the same type
 	
-	//similarity of contained assets 20%
-	static final int CONTAINEDASSETS_EXACT = 20; //same number and type of assets
-	static final int CONTAINEDASSETS_PARTIAL = 10; //some of the contained assets have the same type. some is set by CONTAINEDASSETS_PARTIAL_NUMBER PERCENTAGE
+	//similarity of contained assets max. 30
+	static final int CONTAINEDASSETS_EXACT = 30; //same number and type of assets
+	static final int CONTAINEDASSETS_PARTIAL = 20; //some of the contained assets have the same type. some is set by CONTAINEDASSETS_PARTIAL_NUMBER PERCENTAGE
 	static final double CONTAINEDASSETS_PARTIAL_PERCENTAGE = 0.5; // 50% OF contained assets
 	static final int NO_CONTAINEDASSETS = 10; // both assets have no contained assets
-	//connectivity 
 	
+	//connectivity takes max. 50. calculation will depend on the value returned from the connection/total multiplied by this value
+	static final int CONNECTION_VALUE = 50;
+	static final int BOTH_HAVE_NO_CONNECTIONS = 10; //if both assets have no connections
 	// reference match
 	
 	//attributes match
 	
 	//properties match
 	
-	static final int SIMILARITY_MAXIMUM_VALUE = (EXACT_TYPE + ATTRIBUTE_TYPE) + COMMON_PARENT + CONTAINEDASSETS_EXACT; // currently 75
+	static final int SIMILARITY_MAXIMUM_VALUE = (EXACT_TYPE + ATTRIBUTE_TYPE) + COMMON_PARENT + CONTAINEDASSETS_EXACT + CONNECTION_VALUE; // currently 105
 	static int SIMILARITY_THRESHOLD = SIMILARITY_MAXIMUM_VALUE/2; // currently 50%
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
@@ -101,10 +103,10 @@ public interface Asset extends EObject {
 	void setName(String value);
 
 	//added manually
-	int compareType(Asset asset);
-	int compareContainedAssets(Asset asset);
-	int compareParentAsset(Asset asset);
-	int compareConnections(Asset asset);
+	double compareType(Asset asset);
+	double compareContainedAssets(Asset asset);
+	double compareParentAsset(Asset asset);
+	double compareConnections(Asset asset);
 	
 	/**
 	 * Returns the value of the '<em><b>Property</b></em>' containment reference list.
@@ -238,9 +240,9 @@ public interface Asset extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model
-	 * @generated
+	
 	 */
-	int similarTo(Asset asset);
+	double similarTo(Asset asset);
 
 	/**
 	 * <!-- begin-user-doc -->

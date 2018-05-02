@@ -1837,7 +1837,7 @@ public class smartbuildingPackageImpl extends EPackageImpl implements smartbuild
 
 		initEOperation(getAsset__AbstractAsset(), this.getAsset(), "abstractAsset", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getAsset__SimilarTo__Asset(), ecorePackage.getEInt(), "similarTo", 0, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getAsset__SimilarTo__Asset(), ecorePackage.getEDouble(), "similarTo", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getAsset(), "asset", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEOperation(getAsset__MergeConnections(), null, "mergeConnections", 0, 1, IS_UNIQUE, IS_ORDERED);

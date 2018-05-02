@@ -67,7 +67,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="PhysicalConnection" eSuperTypes="#//Connection"/>
   <eClassifiers xsi:type="ecore:EClass" name="Asset" abstract="true">
     <eOperations name="abstractAsset" eType="#//Asset"/>
-    <eOperations name="similarTo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+    <eOperations name="similarTo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
       <eParameters name="asset" eType="#//Asset"/>
     </eOperations>
     <eOperations name="mergeConnections"/>

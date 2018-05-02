@@ -4,7 +4,6 @@ package environment.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.BasicEList;
@@ -25,6 +24,7 @@ import environment.Property;
 import environment.Type;
 import environment.smartbuildingFactory;
 import environment.smartbuildingPackage;
+import extrnalUtility.HungarianAlgorithm;
 
 /**
  * <!-- begin-user-doc -->
@@ -362,6 +362,7 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 
 		//2-properties are added to the new abstracted asset only if they are abstractable i.e. isAbstractable is set to true
 		Property tmp;
+	
 		for (Property pro : this.getProperty()) {
 			if(pro.isAbstractable()) {
 				tmp = instance.createProperty();
@@ -390,10 +391,10 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 	 * Criteria: 1- type, 2- 
 	 * <!-- end-user-doc -->
 	 */
-	public int similarTo(Asset asset) {
+	public double similarTo(Asset asset) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
-		int similarity = 0;
+		double similarity = 0;
 		
 		//compare types of assets
 		similarity += compareType(asset);
@@ -409,6 +410,7 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 		//next, check number and type of contained assets
 		similarity += compareContainedAssets(asset);
 		
+		similarity += this.compareConnections(asset);
 		//compare type as attribute if specified
 		if(this.getType() != null && !this.getType().getName().isEmpty() &&
 				asset.getType() != null && !asset.getType().getName().isEmpty() &&
@@ -424,7 +426,7 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 */
 	
-	public int compareType(Asset asset) {
+	public double compareType(Asset asset) {
 		
 		int similarityPercentage = 0; //goes from 0 (not similar) to 100 (equal)
 		
@@ -457,7 +459,7 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 	}
 	
 	@Override
-	public int compareContainedAssets(Asset asset) {
+	public double compareContainedAssets(Asset asset) {
 		
 		EList<Asset> thisAssets = null;
 		EList<DigitalAsset> thisDigitalAssets = null;
@@ -599,7 +601,7 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 		return 0;
 	}
 	
-	public int compareParentAsset(Asset asset) {
+	public double compareParentAsset(Asset asset) {
 		
 		Asset thisParentAsset = null;
 		Asset argParentAsset = null;
@@ -629,15 +631,72 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 		return 0;
 	}
 	
-	public int compareConnections(Asset asset) {
+	public double compareConnections(Asset asset) {
 		
-		//connection type
+		// percentage of similarity is found then all percentages are added then divided by the number of connections (thisConnectionsSize*argConnectionsSize) to get average similarity
 		
-		//direction
+		double similarity = 0;
+		double [][] similarityValues;
+		int thisConnectionsSize = this.getConnections().size();
+		int argConnectionsSize = asset.getConnections().size();
 		
-		//
+		//they are similar in the sense that they both don't have connections
+		if (thisConnectionsSize == 0 && argConnectionsSize == 0) {
+			return Asset.BOTH_HAVE_NO_CONNECTIONS;
+		}
 		
-		return 0;
+		//if one of the assets has no connections
+		if(thisConnectionsSize == 0 || argConnectionsSize == 0) {
+			return 0;
+		}
+		
+		//determine which connections should be rows and which should be columns
+		if(thisConnectionsSize < argConnectionsSize) {
+			similarityValues = new double[thisConnectionsSize][argConnectionsSize];
+		} else {
+			similarityValues = new double[argConnectionsSize][thisConnectionsSize];
+		}
+		
+		
+		//double averageSimilarityPercentage = 0;
+		
+		//find similarity values between all connections (matrix: smaller size * bigger size connections)
+		for(int i=0;i<similarityValues.length;i++) {
+			for(int j=0;j<similarityValues[i].length;j++) {
+				similarityValues[i][j] = (double)this.getConnections().get(i).similarTo(asset.getConnections().get(j))/(double)Connection.MAXIMUM_SIMILARITY_VALUE;
+				//averageSimilarityPercentage += similarityValues[i][j]; 
+			}
+
+		}
+		
+		//print matrix
+/*		for(int i=0;i<similarityValues.length;i++) {
+			for(int j=0;j<similarityValues[i].length;j++) {
+				System.out.print(" ("+i+","+j+")="+similarityValues[i][j]);
+			}
+			System.out.println();
+		}*/
+		
+		
+		//find max similarity using the Hungarian lgorithm (combinatorial optimisation algorithm to solve assignment problem)
+		double hungMaxSimilarity = HungarianAlgorithm.hgAlgorithm(similarityValues, "max");
+		
+		//it is divided by the bigger size array
+		hungMaxSimilarity = hungMaxSimilarity/(double)similarityValues[0].length;
+		
+		//System.out.println("hung max similarity: " + hungMaxSimilarity);
+		
+		//alternative: average similarity is calculated (easy)
+		//averageSimilarityPercentage = averageSimilarityPercentage/(double)(thisConnectionsSize*argConnectionsSize);
+			
+		//System.out.println("average similarity: " + averageSimilarityPercentage);
+		
+		//currently if hungMxSimilairty is less than 2% then similarity is zero
+		similarity = (double)Asset.CONNECTION_VALUE*hungMaxSimilarity;
+		
+		//System.out.println("similarity points out of "+Asset.CONNECTION_VALUE + "= "+ similarity);
+		
+		return similarity;
 	}
 	
 	@Override
