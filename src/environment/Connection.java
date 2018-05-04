@@ -18,12 +18,12 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link environment.Connection#getAsset1 <em>Asset1</em>}</li>
  *   <li>{@link environment.Connection#getAsset2 <em>Asset2</em>}</li>
  *   <li>{@link environment.Connection#getName <em>Name</em>}</li>
- *   <li>{@link environment.Connection#getType <em>Type</em>}</li>
  *   <li>{@link environment.Connection#getConstraints <em>Constraints</em>}</li>
  *   <li>{@link environment.Connection#isBidirectional <em>Bidirectional</em>}</li>
  *   <li>{@link environment.Connection#getPort <em>Port</em>}</li>
  *   <li>{@link environment.Connection#getProperties <em>Properties</em>}</li>
  *   <li>{@link environment.Connection#getDescription <em>Description</em>}</li>
+ *   <li>{@link environment.Connection#getType <em>Type</em>}</li>
  * </ul>
  *
  * @see environment.smartbuildingPackage#getConnection()
@@ -63,6 +63,8 @@ public interface Connection extends EObject {
 	int compareType(Connection connection);
 	int comparePort(Connection connection);
 	int compareEnds(Connection connection);
+	Connection abstractConnection();
+	void abstractPort(); 
 	/**
 	 * Returns the value of the '<em><b>Asset1</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -142,31 +144,30 @@ public interface Connection extends EObject {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Type</b></em>' attribute.
+	 * Returns the value of the '<em><b>Type</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Type</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Type</em>' attribute.
-	 * @see #setType(String)
+	 * @return the value of the '<em>Type</em>' containment reference.
+	 * @see #setType(Type)
 	 * @see environment.smartbuildingPackage#getConnection_Type()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
-	String getType();
+	Type getType();
 
 	/**
-	 * Sets the value of the '{@link environment.Connection#getType <em>Type</em>}' attribute.
+	 * Sets the value of the '{@link environment.Connection#getType <em>Type</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Type</em>' attribute.
+	 * @param value the new value of the '<em>Type</em>' containment reference.
 	 * @see #getType()
 	 * @generated
 	 */
-	void setType(String value);
-
+	void setType(Type value);
 	/**
 	 * Returns the value of the '<em><b>Constraints</b></em>' attribute list.
 	 * The list contents are of type {@link java.lang.String}.

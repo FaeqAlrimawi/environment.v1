@@ -536,7 +536,7 @@ public class smartbuildingPackageImpl extends EPackageImpl implements smartbuild
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getComputingDevice_CanConnect() {
+	public EAttribute getComputingDevice_Connectable() {
 		return (EAttribute)computingDeviceEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -547,15 +547,6 @@ public class smartbuildingPackageImpl extends EPackageImpl implements smartbuild
 	 */
 	public EAttribute getComputingDevice_Model() {
 		return (EAttribute)computingDeviceEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getComputingDevice__IsAbstractable() {
-		return computingDeviceEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -725,8 +716,8 @@ public class smartbuildingPackageImpl extends EPackageImpl implements smartbuild
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getConnection_Type() {
-		return (EAttribute)connectionEClass.getEStructuralFeatures().get(3);
+	public EReference getConnection_Type() {
+		return (EReference)connectionEClass.getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -735,7 +726,7 @@ public class smartbuildingPackageImpl extends EPackageImpl implements smartbuild
 	 * @generated
 	 */
 	public EAttribute getConnection_Constraints() {
-		return (EAttribute)connectionEClass.getEStructuralFeatures().get(4);
+		return (EAttribute)connectionEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -744,7 +735,7 @@ public class smartbuildingPackageImpl extends EPackageImpl implements smartbuild
 	 * @generated
 	 */
 	public EAttribute getConnection_Bidirectional() {
-		return (EAttribute)connectionEClass.getEStructuralFeatures().get(5);
+		return (EAttribute)connectionEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -753,7 +744,7 @@ public class smartbuildingPackageImpl extends EPackageImpl implements smartbuild
 	 * @generated
 	 */
 	public EReference getConnection_Port() {
-		return (EReference)connectionEClass.getEStructuralFeatures().get(6);
+		return (EReference)connectionEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -762,7 +753,7 @@ public class smartbuildingPackageImpl extends EPackageImpl implements smartbuild
 	 * @generated
 	 */
 	public EReference getConnection_Properties() {
-		return (EReference)connectionEClass.getEStructuralFeatures().get(7);
+		return (EReference)connectionEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -771,7 +762,7 @@ public class smartbuildingPackageImpl extends EPackageImpl implements smartbuild
 	 * @generated
 	 */
 	public EAttribute getConnection_Description() {
-		return (EAttribute)connectionEClass.getEStructuralFeatures().get(8);
+		return (EAttribute)connectionEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -1546,9 +1537,8 @@ public class smartbuildingPackageImpl extends EPackageImpl implements smartbuild
 
 		computingDeviceEClass = createEClass(COMPUTING_DEVICE);
 		createEAttribute(computingDeviceEClass, COMPUTING_DEVICE__STATUS);
-		createEAttribute(computingDeviceEClass, COMPUTING_DEVICE__CAN_CONNECT);
+		createEAttribute(computingDeviceEClass, COMPUTING_DEVICE__CONNECTABLE);
 		createEAttribute(computingDeviceEClass, COMPUTING_DEVICE__MODEL);
-		createEOperation(computingDeviceEClass, COMPUTING_DEVICE___IS_ABSTRACTABLE);
 
 		hvacEClass = createEClass(HVAC);
 
@@ -1577,12 +1567,12 @@ public class smartbuildingPackageImpl extends EPackageImpl implements smartbuild
 		createEReference(connectionEClass, CONNECTION__ASSET1);
 		createEReference(connectionEClass, CONNECTION__ASSET2);
 		createEAttribute(connectionEClass, CONNECTION__NAME);
-		createEAttribute(connectionEClass, CONNECTION__TYPE);
 		createEAttribute(connectionEClass, CONNECTION__CONSTRAINTS);
 		createEAttribute(connectionEClass, CONNECTION__BIDIRECTIONAL);
 		createEReference(connectionEClass, CONNECTION__PORT);
 		createEReference(connectionEClass, CONNECTION__PROPERTIES);
 		createEAttribute(connectionEClass, CONNECTION__DESCRIPTION);
+		createEReference(connectionEClass, CONNECTION__TYPE);
 		createEOperation(connectionEClass, CONNECTION___SIMILAR_TO__CONNECTION);
 
 		digitalConnectionEClass = createEClass(DIGITAL_CONNECTION);
@@ -1779,10 +1769,8 @@ public class smartbuildingPackageImpl extends EPackageImpl implements smartbuild
 
 		initEClass(computingDeviceEClass, ComputingDevice.class, "ComputingDevice", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getComputingDevice_Status(), this.getStatus(), "status", null, 0, 1, ComputingDevice.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getComputingDevice_CanConnect(), ecorePackage.getEBoolean(), "canConnect", null, 0, 1, ComputingDevice.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getComputingDevice_Connectable(), ecorePackage.getEBoolean(), "connectable", null, 0, 1, ComputingDevice.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getComputingDevice_Model(), ecorePackage.getEString(), "model", null, 0, 1, ComputingDevice.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEOperation(getComputingDevice__IsAbstractable(), ecorePackage.getEBoolean(), "isAbstractable", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(hvacEClass, environment.HVAC.class, "HVAC", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1811,12 +1799,12 @@ public class smartbuildingPackageImpl extends EPackageImpl implements smartbuild
 		initEReference(getConnection_Asset1(), this.getAsset(), null, "asset1", null, 0, 1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getConnection_Asset2(), this.getAsset(), null, "asset2", null, 0, 1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getConnection_Name(), ecorePackage.getEString(), "name", null, 0, 1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getConnection_Type(), ecorePackage.getEString(), "type", null, 0, 1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getConnection_Constraints(), ecorePackage.getEString(), "constraints", null, 0, -1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getConnection_Bidirectional(), ecorePackage.getEBoolean(), "bidirectional", "true", 0, 1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getConnection_Port(), this.getPort(), null, "port", null, 0, 1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getConnection_Properties(), this.getProperty(), null, "properties", null, 0, -1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getConnection_Description(), ecorePackage.getEString(), "description", null, 0, 1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getConnection_Type(), this.getType(), null, "type", null, 0, 1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		EOperation op = initEOperation(getConnection__SimilarTo__Connection(), ecorePackage.getEInt(), "similarTo", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getConnection(), "connection", 0, 1, IS_UNIQUE, IS_ORDERED);

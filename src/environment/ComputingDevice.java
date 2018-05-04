@@ -13,7 +13,7 @@ package environment;
  * </p>
  * <ul>
  *   <li>{@link environment.ComputingDevice#getStatus <em>Status</em>}</li>
- *   <li>{@link environment.ComputingDevice#isCanConnect <em>Can Connect</em>}</li>
+ *   <li>{@link environment.ComputingDevice#isConnectable <em>Connectable</em>}</li>
  *   <li>{@link environment.ComputingDevice#getModel <em>Model</em>}</li>
  * </ul>
  *
@@ -52,46 +52,31 @@ public interface ComputingDevice extends PhysicalAsset {
 	void setStatus(Status value);
 
 	/**
-	 * Returns the value of the '<em><b>Can Connect</b></em>' attribute.
+	 * Returns the value of the '<em><b>Connectable</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Can Connect</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Connectable</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Can Connect</em>' attribute.
-	 * @see #setCanConnect(boolean)
-	 * @see environment.smartbuildingPackage#getComputingDevice_CanConnect()
+	 * @return the value of the '<em>Connectable</em>' attribute.
+	 * @see #setConnectable(boolean)
+	 * @see environment.smartbuildingPackage#getComputingDevice_Connectable()
 	 * @model
 	 * @generated
 	 */
-	boolean isCanConnect();
+	boolean isConnectable();
 
 	/**
-	 * Returns the value of the '<em><b>Can Connect</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Can Connect</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Can Connect</em>' attribute.
-	 * @see #setCanConnect(boolean)
-	 * @see environment.smartbuildingPackage#getComputingDevice_CanConnect()
-	 * @model
-
-	 */
-	boolean canConnect();
-
-	/**
-	 * Sets the value of the '{@link environment.ComputingDevice#isCanConnect <em>Can Connect</em>}' attribute.
+	 * Sets the value of the '{@link environment.ComputingDevice#isConnectable <em>Connectable</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Can Connect</em>' attribute.
-	 * @see #isCanConnect()
+	 * @param value the new value of the '<em>Connectable</em>' attribute.
+	 * @see #isConnectable()
 	 * @generated
 	 */
-	void setCanConnect(boolean value);
+	void setConnectable(boolean value);
+
 
 	/**
 	 * Returns the value of the '<em><b>Model</b></em>' attribute.
@@ -118,13 +103,5 @@ public interface ComputingDevice extends PhysicalAsset {
 	 * @generated
 	 */
 	void setModel(String value);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model kind="operation"
-	 * @generated
-	 */
-	boolean isAbstractable();
 
 } // ComputingDevice

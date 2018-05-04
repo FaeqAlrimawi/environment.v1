@@ -2,6 +2,7 @@
  */
 package environment.impl;
 
+import environment.Asset;
 import environment.PhysicalStructure;
 import environment.smartbuildingPackage;
 import org.eclipse.emf.ecore.EClass;
@@ -32,5 +33,10 @@ public class PhysicalStructureImpl extends PhysicalAssetImpl implements Physical
 	protected EClass eStaticClass() {
 		return smartbuildingPackage.Literals.PHYSICAL_STRUCTURE;
 	}
+	
+	public Asset abstractType() {
+		
+		return instance.createPhysicalStructure();
+}
 
 } //PhysicalStructureImpl

@@ -503,13 +503,13 @@ public interface smartbuildingPackage extends EPackage {
 	int COMPUTING_DEVICE__STATUS = PHYSICAL_ASSET_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Can Connect</b></em>' attribute.
+	 * The feature id for the '<em><b>Connectable</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPUTING_DEVICE__CAN_CONNECT = PHYSICAL_ASSET_FEATURE_COUNT + 1;
+	int COMPUTING_DEVICE__CONNECTABLE = PHYSICAL_ASSET_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Model</b></em>' attribute.
@@ -602,22 +602,13 @@ public interface smartbuildingPackage extends EPackage {
 	int COMPUTING_DEVICE___CAN_MERGE_CONNECTIONS__ELIST = PHYSICAL_ASSET___CAN_MERGE_CONNECTIONS__ELIST;
 
 	/**
-	 * The operation id for the '<em>Is Abstractable</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPUTING_DEVICE___IS_ABSTRACTABLE = PHYSICAL_ASSET_OPERATION_COUNT + 0;
-
-	/**
 	 * The number of operations of the '<em>Computing Device</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPUTING_DEVICE_OPERATION_COUNT = PHYSICAL_ASSET_OPERATION_COUNT + 1;
+	int COMPUTING_DEVICE_OPERATION_COUNT = PHYSICAL_ASSET_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link environment.impl.HVACImpl <em>HVAC</em>}' class.
@@ -720,13 +711,13 @@ public interface smartbuildingPackage extends EPackage {
 	int HVAC__STATUS = COMPUTING_DEVICE__STATUS;
 
 	/**
-	 * The feature id for the '<em><b>Can Connect</b></em>' attribute.
+	 * The feature id for the '<em><b>Connectable</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int HVAC__CAN_CONNECT = COMPUTING_DEVICE__CAN_CONNECT;
+	int HVAC__CONNECTABLE = COMPUTING_DEVICE__CONNECTABLE;
 
 	/**
 	 * The feature id for the '<em><b>Model</b></em>' attribute.
@@ -817,15 +808,6 @@ public interface smartbuildingPackage extends EPackage {
 	 * @ordered
 	 */
 	int HVAC___CAN_MERGE_CONNECTIONS__ELIST = COMPUTING_DEVICE___CAN_MERGE_CONNECTIONS__ELIST;
-
-	/**
-	 * The operation id for the '<em>Is Abstractable</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HVAC___IS_ABSTRACTABLE = COMPUTING_DEVICE___IS_ABSTRACTABLE;
 
 	/**
 	 * The number of operations of the '<em>HVAC</em>' class.
@@ -937,13 +919,13 @@ public interface smartbuildingPackage extends EPackage {
 	int SMART_LIGHT__STATUS = COMPUTING_DEVICE__STATUS;
 
 	/**
-	 * The feature id for the '<em><b>Can Connect</b></em>' attribute.
+	 * The feature id for the '<em><b>Connectable</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SMART_LIGHT__CAN_CONNECT = COMPUTING_DEVICE__CAN_CONNECT;
+	int SMART_LIGHT__CONNECTABLE = COMPUTING_DEVICE__CONNECTABLE;
 
 	/**
 	 * The feature id for the '<em><b>Model</b></em>' attribute.
@@ -1034,15 +1016,6 @@ public interface smartbuildingPackage extends EPackage {
 	 * @ordered
 	 */
 	int SMART_LIGHT___CAN_MERGE_CONNECTIONS__ELIST = COMPUTING_DEVICE___CAN_MERGE_CONNECTIONS__ELIST;
-
-	/**
-	 * The operation id for the '<em>Is Abstractable</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SMART_LIGHT___IS_ABSTRACTABLE = COMPUTING_DEVICE___IS_ABSTRACTABLE;
 
 	/**
 	 * The number of operations of the '<em>Smart Light</em>' class.
@@ -1154,13 +1127,13 @@ public interface smartbuildingPackage extends EPackage {
 	int LAPTOP__STATUS = COMPUTING_DEVICE__STATUS;
 
 	/**
-	 * The feature id for the '<em><b>Can Connect</b></em>' attribute.
+	 * The feature id for the '<em><b>Connectable</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LAPTOP__CAN_CONNECT = COMPUTING_DEVICE__CAN_CONNECT;
+	int LAPTOP__CONNECTABLE = COMPUTING_DEVICE__CONNECTABLE;
 
 	/**
 	 * The feature id for the '<em><b>Model</b></em>' attribute.
@@ -1251,15 +1224,6 @@ public interface smartbuildingPackage extends EPackage {
 	 * @ordered
 	 */
 	int LAPTOP___CAN_MERGE_CONNECTIONS__ELIST = COMPUTING_DEVICE___CAN_MERGE_CONNECTIONS__ELIST;
-
-	/**
-	 * The operation id for the '<em>Is Abstractable</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LAPTOP___IS_ABSTRACTABLE = COMPUTING_DEVICE___IS_ABSTRACTABLE;
 
 	/**
 	 * The number of operations of the '<em>Laptop</em>' class.
@@ -1371,13 +1335,13 @@ public interface smartbuildingPackage extends EPackage {
 	int DESKTOP__STATUS = COMPUTING_DEVICE__STATUS;
 
 	/**
-	 * The feature id for the '<em><b>Can Connect</b></em>' attribute.
+	 * The feature id for the '<em><b>Connectable</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DESKTOP__CAN_CONNECT = COMPUTING_DEVICE__CAN_CONNECT;
+	int DESKTOP__CONNECTABLE = COMPUTING_DEVICE__CONNECTABLE;
 
 	/**
 	 * The feature id for the '<em><b>Model</b></em>' attribute.
@@ -1468,15 +1432,6 @@ public interface smartbuildingPackage extends EPackage {
 	 * @ordered
 	 */
 	int DESKTOP___CAN_MERGE_CONNECTIONS__ELIST = COMPUTING_DEVICE___CAN_MERGE_CONNECTIONS__ELIST;
-
-	/**
-	 * The operation id for the '<em>Is Abstractable</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DESKTOP___IS_ABSTRACTABLE = COMPUTING_DEVICE___IS_ABSTRACTABLE;
 
 	/**
 	 * The number of operations of the '<em>Desktop</em>' class.
@@ -1588,13 +1543,13 @@ public interface smartbuildingPackage extends EPackage {
 	int CCTV__STATUS = COMPUTING_DEVICE__STATUS;
 
 	/**
-	 * The feature id for the '<em><b>Can Connect</b></em>' attribute.
+	 * The feature id for the '<em><b>Connectable</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CCTV__CAN_CONNECT = COMPUTING_DEVICE__CAN_CONNECT;
+	int CCTV__CONNECTABLE = COMPUTING_DEVICE__CONNECTABLE;
 
 	/**
 	 * The feature id for the '<em><b>Model</b></em>' attribute.
@@ -1685,15 +1640,6 @@ public interface smartbuildingPackage extends EPackage {
 	 * @ordered
 	 */
 	int CCTV___CAN_MERGE_CONNECTIONS__ELIST = COMPUTING_DEVICE___CAN_MERGE_CONNECTIONS__ELIST;
-
-	/**
-	 * The operation id for the '<em>Is Abstractable</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CCTV___IS_ABSTRACTABLE = COMPUTING_DEVICE___IS_ABSTRACTABLE;
 
 	/**
 	 * The number of operations of the '<em>CCTV</em>' class.
@@ -1805,13 +1751,13 @@ public interface smartbuildingPackage extends EPackage {
 	int SERVER__STATUS = COMPUTING_DEVICE__STATUS;
 
 	/**
-	 * The feature id for the '<em><b>Can Connect</b></em>' attribute.
+	 * The feature id for the '<em><b>Connectable</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SERVER__CAN_CONNECT = COMPUTING_DEVICE__CAN_CONNECT;
+	int SERVER__CONNECTABLE = COMPUTING_DEVICE__CONNECTABLE;
 
 	/**
 	 * The feature id for the '<em><b>Model</b></em>' attribute.
@@ -1902,15 +1848,6 @@ public interface smartbuildingPackage extends EPackage {
 	 * @ordered
 	 */
 	int SERVER___CAN_MERGE_CONNECTIONS__ELIST = COMPUTING_DEVICE___CAN_MERGE_CONNECTIONS__ELIST;
-
-	/**
-	 * The operation id for the '<em>Is Abstractable</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVER___IS_ABSTRACTABLE = COMPUTING_DEVICE___IS_ABSTRACTABLE;
 
 	/**
 	 * The number of operations of the '<em>Server</em>' class.
@@ -2728,22 +2665,13 @@ public interface smartbuildingPackage extends EPackage {
 	int CONNECTION__NAME = 2;
 
 	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONNECTION__TYPE = 3;
-
-	/**
 	 * The feature id for the '<em><b>Constraints</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION__CONSTRAINTS = 4;
+	int CONNECTION__CONSTRAINTS = 3;
 
 	/**
 	 * The feature id for the '<em><b>Bidirectional</b></em>' attribute.
@@ -2752,7 +2680,7 @@ public interface smartbuildingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION__BIDIRECTIONAL = 5;
+	int CONNECTION__BIDIRECTIONAL = 4;
 
 	/**
 	 * The feature id for the '<em><b>Port</b></em>' containment reference.
@@ -2761,7 +2689,7 @@ public interface smartbuildingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION__PORT = 6;
+	int CONNECTION__PORT = 5;
 
 	/**
 	 * The feature id for the '<em><b>Properties</b></em>' reference list.
@@ -2770,7 +2698,7 @@ public interface smartbuildingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION__PROPERTIES = 7;
+	int CONNECTION__PROPERTIES = 6;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -2779,7 +2707,16 @@ public interface smartbuildingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION__DESCRIPTION = 8;
+	int CONNECTION__DESCRIPTION = 7;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONNECTION__TYPE = 8;
 
 	/**
 	 * The number of structural features of the '<em>Connection</em>' class.
@@ -2846,15 +2783,6 @@ public interface smartbuildingPackage extends EPackage {
 	int DIGITAL_CONNECTION__NAME = CONNECTION__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DIGITAL_CONNECTION__TYPE = CONNECTION__TYPE;
-
-	/**
 	 * The feature id for the '<em><b>Constraints</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2898,6 +2826,15 @@ public interface smartbuildingPackage extends EPackage {
 	 * @ordered
 	 */
 	int DIGITAL_CONNECTION__DESCRIPTION = CONNECTION__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIGITAL_CONNECTION__TYPE = CONNECTION__TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Protocol</b></em>' attribute.
@@ -2973,15 +2910,6 @@ public interface smartbuildingPackage extends EPackage {
 	int PHYSICAL_CONNECTION__NAME = CONNECTION__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PHYSICAL_CONNECTION__TYPE = CONNECTION__TYPE;
-
-	/**
 	 * The feature id for the '<em><b>Constraints</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3025,6 +2953,15 @@ public interface smartbuildingPackage extends EPackage {
 	 * @ordered
 	 */
 	int PHYSICAL_CONNECTION__DESCRIPTION = CONNECTION__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PHYSICAL_CONNECTION__TYPE = CONNECTION__TYPE;
 
 	/**
 	 * The number of structural features of the '<em>Physical Connection</em>' class.
@@ -4425,13 +4362,13 @@ public interface smartbuildingPackage extends EPackage {
 	int FIRE_ALARM__STATUS = COMPUTING_DEVICE__STATUS;
 
 	/**
-	 * The feature id for the '<em><b>Can Connect</b></em>' attribute.
+	 * The feature id for the '<em><b>Connectable</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FIRE_ALARM__CAN_CONNECT = COMPUTING_DEVICE__CAN_CONNECT;
+	int FIRE_ALARM__CONNECTABLE = COMPUTING_DEVICE__CONNECTABLE;
 
 	/**
 	 * The feature id for the '<em><b>Model</b></em>' attribute.
@@ -4522,15 +4459,6 @@ public interface smartbuildingPackage extends EPackage {
 	 * @ordered
 	 */
 	int FIRE_ALARM___CAN_MERGE_CONNECTIONS__ELIST = COMPUTING_DEVICE___CAN_MERGE_CONNECTIONS__ELIST;
-
-	/**
-	 * The operation id for the '<em>Is Abstractable</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FIRE_ALARM___IS_ABSTRACTABLE = COMPUTING_DEVICE___IS_ABSTRACTABLE;
 
 	/**
 	 * The number of operations of the '<em>Fire Alarm</em>' class.
@@ -4642,13 +4570,13 @@ public interface smartbuildingPackage extends EPackage {
 	int WORKSTATION__STATUS = COMPUTING_DEVICE__STATUS;
 
 	/**
-	 * The feature id for the '<em><b>Can Connect</b></em>' attribute.
+	 * The feature id for the '<em><b>Connectable</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WORKSTATION__CAN_CONNECT = COMPUTING_DEVICE__CAN_CONNECT;
+	int WORKSTATION__CONNECTABLE = COMPUTING_DEVICE__CONNECTABLE;
 
 	/**
 	 * The feature id for the '<em><b>Model</b></em>' attribute.
@@ -4739,15 +4667,6 @@ public interface smartbuildingPackage extends EPackage {
 	 * @ordered
 	 */
 	int WORKSTATION___CAN_MERGE_CONNECTIONS__ELIST = COMPUTING_DEVICE___CAN_MERGE_CONNECTIONS__ELIST;
-
-	/**
-	 * The operation id for the '<em>Is Abstractable</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WORKSTATION___IS_ABSTRACTABLE = COMPUTING_DEVICE___IS_ABSTRACTABLE;
 
 	/**
 	 * The number of operations of the '<em>Workstation</em>' class.
@@ -5402,13 +5321,13 @@ public interface smartbuildingPackage extends EPackage {
 	int DISH_WASHER__STATUS = COMPUTING_DEVICE__STATUS;
 
 	/**
-	 * The feature id for the '<em><b>Can Connect</b></em>' attribute.
+	 * The feature id for the '<em><b>Connectable</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DISH_WASHER__CAN_CONNECT = COMPUTING_DEVICE__CAN_CONNECT;
+	int DISH_WASHER__CONNECTABLE = COMPUTING_DEVICE__CONNECTABLE;
 
 	/**
 	 * The feature id for the '<em><b>Model</b></em>' attribute.
@@ -5499,15 +5418,6 @@ public interface smartbuildingPackage extends EPackage {
 	 * @ordered
 	 */
 	int DISH_WASHER___CAN_MERGE_CONNECTIONS__ELIST = COMPUTING_DEVICE___CAN_MERGE_CONNECTIONS__ELIST;
-
-	/**
-	 * The operation id for the '<em>Is Abstractable</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DISH_WASHER___IS_ABSTRACTABLE = COMPUTING_DEVICE___IS_ABSTRACTABLE;
 
 	/**
 	 * The number of operations of the '<em>Dish Washer</em>' class.
@@ -5619,13 +5529,13 @@ public interface smartbuildingPackage extends EPackage {
 	int COFFEE_MACHINE__STATUS = COMPUTING_DEVICE__STATUS;
 
 	/**
-	 * The feature id for the '<em><b>Can Connect</b></em>' attribute.
+	 * The feature id for the '<em><b>Connectable</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COFFEE_MACHINE__CAN_CONNECT = COMPUTING_DEVICE__CAN_CONNECT;
+	int COFFEE_MACHINE__CONNECTABLE = COMPUTING_DEVICE__CONNECTABLE;
 
 	/**
 	 * The feature id for the '<em><b>Model</b></em>' attribute.
@@ -5716,15 +5626,6 @@ public interface smartbuildingPackage extends EPackage {
 	 * @ordered
 	 */
 	int COFFEE_MACHINE___CAN_MERGE_CONNECTIONS__ELIST = COMPUTING_DEVICE___CAN_MERGE_CONNECTIONS__ELIST;
-
-	/**
-	 * The operation id for the '<em>Is Abstractable</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COFFEE_MACHINE___IS_ABSTRACTABLE = COMPUTING_DEVICE___IS_ABSTRACTABLE;
 
 	/**
 	 * The number of operations of the '<em>Coffee Machine</em>' class.
@@ -5836,13 +5737,13 @@ public interface smartbuildingPackage extends EPackage {
 	int ELEVATOR__STATUS = COMPUTING_DEVICE__STATUS;
 
 	/**
-	 * The feature id for the '<em><b>Can Connect</b></em>' attribute.
+	 * The feature id for the '<em><b>Connectable</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ELEVATOR__CAN_CONNECT = COMPUTING_DEVICE__CAN_CONNECT;
+	int ELEVATOR__CONNECTABLE = COMPUTING_DEVICE__CONNECTABLE;
 
 	/**
 	 * The feature id for the '<em><b>Model</b></em>' attribute.
@@ -5933,15 +5834,6 @@ public interface smartbuildingPackage extends EPackage {
 	 * @ordered
 	 */
 	int ELEVATOR___CAN_MERGE_CONNECTIONS__ELIST = COMPUTING_DEVICE___CAN_MERGE_CONNECTIONS__ELIST;
-
-	/**
-	 * The operation id for the '<em>Is Abstractable</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ELEVATOR___IS_ABSTRACTABLE = COMPUTING_DEVICE___IS_ABSTRACTABLE;
 
 	/**
 	 * The number of operations of the '<em>Elevator</em>' class.
@@ -6949,15 +6841,6 @@ public interface smartbuildingPackage extends EPackage {
 	int IP_CONNECTION__NAME = DIGITAL_CONNECTION__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IP_CONNECTION__TYPE = DIGITAL_CONNECTION__TYPE;
-
-	/**
 	 * The feature id for the '<em><b>Constraints</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7001,6 +6884,15 @@ public interface smartbuildingPackage extends EPackage {
 	 * @ordered
 	 */
 	int IP_CONNECTION__DESCRIPTION = DIGITAL_CONNECTION__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IP_CONNECTION__TYPE = DIGITAL_CONNECTION__TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Protocol</b></em>' attribute.
@@ -7076,15 +6968,6 @@ public interface smartbuildingPackage extends EPackage {
 	int BUS_CONNECTION__NAME = DIGITAL_CONNECTION__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BUS_CONNECTION__TYPE = DIGITAL_CONNECTION__TYPE;
-
-	/**
 	 * The feature id for the '<em><b>Constraints</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7128,6 +7011,15 @@ public interface smartbuildingPackage extends EPackage {
 	 * @ordered
 	 */
 	int BUS_CONNECTION__DESCRIPTION = DIGITAL_CONNECTION__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_CONNECTION__TYPE = DIGITAL_CONNECTION__TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Protocol</b></em>' attribute.
@@ -7628,13 +7520,13 @@ public interface smartbuildingPackage extends EPackage {
 	int CARD_READER__STATUS = COMPUTING_DEVICE__STATUS;
 
 	/**
-	 * The feature id for the '<em><b>Can Connect</b></em>' attribute.
+	 * The feature id for the '<em><b>Connectable</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CARD_READER__CAN_CONNECT = COMPUTING_DEVICE__CAN_CONNECT;
+	int CARD_READER__CONNECTABLE = COMPUTING_DEVICE__CONNECTABLE;
 
 	/**
 	 * The feature id for the '<em><b>Model</b></em>' attribute.
@@ -7725,15 +7617,6 @@ public interface smartbuildingPackage extends EPackage {
 	 * @ordered
 	 */
 	int CARD_READER___CAN_MERGE_CONNECTIONS__ELIST = COMPUTING_DEVICE___CAN_MERGE_CONNECTIONS__ELIST;
-
-	/**
-	 * The operation id for the '<em>Is Abstractable</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CARD_READER___IS_ABSTRACTABLE = COMPUTING_DEVICE___IS_ABSTRACTABLE;
 
 	/**
 	 * The number of operations of the '<em>Card Reader</em>' class.
@@ -8220,15 +8103,15 @@ public interface smartbuildingPackage extends EPackage {
 	EAttribute getComputingDevice_Status();
 
 	/**
-	 * Returns the meta object for the attribute '{@link environment.ComputingDevice#isCanConnect <em>Can Connect</em>}'.
+	 * Returns the meta object for the attribute '{@link environment.ComputingDevice#isConnectable <em>Connectable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Can Connect</em>'.
-	 * @see environment.ComputingDevice#isCanConnect()
+	 * @return the meta object for the attribute '<em>Connectable</em>'.
+	 * @see environment.ComputingDevice#isConnectable()
 	 * @see #getComputingDevice()
 	 * @generated
 	 */
-	EAttribute getComputingDevice_CanConnect();
+	EAttribute getComputingDevice_Connectable();
 
 	/**
 	 * Returns the meta object for the attribute '{@link environment.ComputingDevice#getModel <em>Model</em>}'.
@@ -8240,16 +8123,6 @@ public interface smartbuildingPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getComputingDevice_Model();
-
-	/**
-	 * Returns the meta object for the '{@link environment.ComputingDevice#isAbstractable() <em>Is Abstractable</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Abstractable</em>' operation.
-	 * @see environment.ComputingDevice#isAbstractable()
-	 * @generated
-	 */
-	EOperation getComputingDevice__IsAbstractable();
 
 	/**
 	 * Returns the meta object for class '{@link environment.HVAC <em>HVAC</em>}'.
@@ -8440,15 +8313,15 @@ public interface smartbuildingPackage extends EPackage {
 	EAttribute getConnection_Name();
 
 	/**
-	 * Returns the meta object for the attribute '{@link environment.Connection#getType <em>Type</em>}'.
+	 * Returns the meta object for the containment reference '{@link environment.Connection#getType <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @return the meta object for the containment reference '<em>Type</em>'.
 	 * @see environment.Connection#getType()
 	 * @see #getConnection()
 	 * @generated
 	 */
-	EAttribute getConnection_Type();
+	EReference getConnection_Type();
 
 	/**
 	 * Returns the meta object for the attribute list '{@link environment.Connection#getConstraints <em>Constraints</em>}'.
@@ -9427,12 +9300,12 @@ public interface smartbuildingPackage extends EPackage {
 		EAttribute COMPUTING_DEVICE__STATUS = eINSTANCE.getComputingDevice_Status();
 
 		/**
-		 * The meta object literal for the '<em><b>Can Connect</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Connectable</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute COMPUTING_DEVICE__CAN_CONNECT = eINSTANCE.getComputingDevice_CanConnect();
+		EAttribute COMPUTING_DEVICE__CONNECTABLE = eINSTANCE.getComputingDevice_Connectable();
 
 		/**
 		 * The meta object literal for the '<em><b>Model</b></em>' attribute feature.
@@ -9441,14 +9314,6 @@ public interface smartbuildingPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute COMPUTING_DEVICE__MODEL = eINSTANCE.getComputingDevice_Model();
-
-		/**
-		 * The meta object literal for the '<em><b>Is Abstractable</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation COMPUTING_DEVICE___IS_ABSTRACTABLE = eINSTANCE.getComputingDevice__IsAbstractable();
 
 		/**
 		 * The meta object literal for the '{@link environment.impl.HVACImpl <em>HVAC</em>}' class.
@@ -9615,12 +9480,12 @@ public interface smartbuildingPackage extends EPackage {
 		EAttribute CONNECTION__NAME = eINSTANCE.getConnection_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Type</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute CONNECTION__TYPE = eINSTANCE.getConnection_Type();
+		EReference CONNECTION__TYPE = eINSTANCE.getConnection_Type();
 
 		/**
 		 * The meta object literal for the '<em><b>Constraints</b></em>' attribute list feature.

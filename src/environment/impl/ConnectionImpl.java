@@ -10,7 +10,8 @@ import environment.DigitalConnection;
 import environment.PhysicalConnection;
 import environment.Port;
 import environment.Property;
-
+import environment.Type;
+import environment.smartbuildingFactory;
 import environment.smartbuildingPackage;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
@@ -40,17 +41,27 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link environment.impl.ConnectionImpl#getAsset1 <em>Asset1</em>}</li>
  *   <li>{@link environment.impl.ConnectionImpl#getAsset2 <em>Asset2</em>}</li>
  *   <li>{@link environment.impl.ConnectionImpl#getName <em>Name</em>}</li>
- *   <li>{@link environment.impl.ConnectionImpl#getType <em>Type</em>}</li>
  *   <li>{@link environment.impl.ConnectionImpl#getConstraints <em>Constraints</em>}</li>
  *   <li>{@link environment.impl.ConnectionImpl#isBidirectional <em>Bidirectional</em>}</li>
  *   <li>{@link environment.impl.ConnectionImpl#getPort <em>Port</em>}</li>
  *   <li>{@link environment.impl.ConnectionImpl#getProperties <em>Properties</em>}</li>
  *   <li>{@link environment.impl.ConnectionImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link environment.impl.ConnectionImpl#getType <em>Type</em>}</li>
  * </ul>
  *
  * @generated
  */
 public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implements Connection {
+	
+	protected smartbuildingFactory instance = environment.smartbuildingFactory.eINSTANCE;
+	protected static int connectionNumber = 1;
+	protected static int portNumber = 1;
+	protected static final long CONNECTION_NUMBER_LIMIT = Long.MAX_VALUE;
+	protected static final long PORT_NUMBER_LIMIT = Long.MAX_VALUE;
+	protected static String connectionName = "connection";
+	protected static String portName = "port";
+	protected Connection abstractedConnection;
+	protected boolean isAbstracted = false;
 	/**
 	 * The cached value of the '{@link #getAsset1() <em>Asset1</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -90,26 +101,6 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getType()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String TYPE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getType()
-	 * @generated
-	 * @ordered
-	 */
-	protected String type = TYPE_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getConstraints() <em>Constraints</em>}' attribute list.
@@ -180,6 +171,15 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 	 * @ordered
 	 */
 	protected String description = DESCRIPTION_EDEFAULT;
+	/**
+	 * The cached value of the '{@link #getType() <em>Type</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getType()
+	 * @generated
+	 * @ordered
+	 */
+	protected Type type;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -302,7 +302,7 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getType() {
+	public Type getType() {
 		return type;
 	}
 
@@ -311,11 +311,33 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setType(String newType) {
-		String oldType = type;
+	public NotificationChain basicSetType(Type newType, NotificationChain msgs) {
+		Type oldType = type;
 		type = newType;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, smartbuildingPackage.CONNECTION__TYPE, oldType, type));
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, smartbuildingPackage.CONNECTION__TYPE, oldType, newType);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setType(Type newType) {
+		if (newType != type) {
+			NotificationChain msgs = null;
+			if (type != null)
+				msgs = ((InternalEObject)type).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - smartbuildingPackage.CONNECTION__TYPE, null, msgs);
+			if (newType != null)
+				msgs = ((InternalEObject)newType).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - smartbuildingPackage.CONNECTION__TYPE, null, msgs);
+			msgs = basicSetType(newType, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, smartbuildingPackage.CONNECTION__TYPE, newType, newType));
 	}
 
 	/**
@@ -427,6 +449,94 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 			eNotify(new ENotificationImpl(this, Notification.SET, smartbuildingPackage.CONNECTION__DESCRIPTION, oldDescription, description));
 	}
 
+	public Connection abstractConnection() {
+		
+		
+		if(isAbstracted) {
+			return abstractedConnection;
+		}
+		
+		//set type
+		abstractedConnection = abstractType();
+		
+		//set name
+		abstractedConnection.setName(ConnectionImpl.connectionName+ConnectionImpl.connectionNumber++);
+		if(ConnectionImpl.connectionNumber >= ConnectionImpl.CONNECTION_NUMBER_LIMIT) {
+			ConnectionImpl.connectionNumber = 0;
+		}
+		
+		//set bidirectional
+		abstractedConnection.setBidirectional(this.isBidirectional());
+		
+		// type as attribute. for the moment it is abstracted (whatever value found)
+		if(this.getType() != null) {
+			Type type = instance.createType();
+			type.setName(this.getType().getName());
+			abstractedConnection.setType(type);	
+		}
+		
+		//abstract port
+		
+		
+		if(abstractedConnection != null) {
+			setAbstracted(true);	
+		}
+		
+		return  abstractConnection();
+	}
+	
+	public Connection abstractType() {
+		Connection con = null;
+		
+		//default implementation returns an instance of the parent or a physical or digital class
+		if(!PhysicalConnectionImpl.class.equals(this.getClass()) && !DigitalConnectionImpl.class.equals(this.getClass())) {
+			try {
+				con = (Connection)(this.getClass().getSuperclass().newInstance());
+			} catch (InstantiationException | IllegalAccessException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		} else	if(PhysicalConnectionImpl.class.equals(this.getClass())) {
+			con = instance.createPhysicalConnection();
+		} else if (DigitalConnectionImpl.class.equals(this.getClass())){
+			con = instance.createDigitalConnection();
+		}
+		
+		
+		return con;
+	}
+	
+	public void abstractPort() {
+		
+		Port port = this.getPort();
+		
+		//if current connection has no holds then abstraction is not required
+		if(port == null) {
+			return;
+		}
+		
+		Port portAbstracted = instance.createPort();
+		
+		//set name
+		portAbstracted.setName(ConnectionImpl.portName+ConnectionImpl.portNumber++);
+		
+		if(ConnectionImpl.portNumber >= ConnectionImpl.PORT_NUMBER_LIMIT) {
+			ConnectionImpl.portNumber = 0;
+		}
+		
+		//abstract asset
+		Asset portAsset = port.getAsset();
+		
+		if(portAsset != null) {
+			portAbstracted.setAsset(portAsset.abstractAsset());
+		}
+		
+		//credentials
+		
+		
+	}
+	
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -690,6 +800,8 @@ public int compareType(Connection connection) {
 		switch (featureID) {
 			case smartbuildingPackage.CONNECTION__PORT:
 				return basicSetPort(null, msgs);
+			case smartbuildingPackage.CONNECTION__TYPE:
+				return basicSetType(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -710,8 +822,6 @@ public int compareType(Connection connection) {
 				return basicGetAsset2();
 			case smartbuildingPackage.CONNECTION__NAME:
 				return getName();
-			case smartbuildingPackage.CONNECTION__TYPE:
-				return getType();
 			case smartbuildingPackage.CONNECTION__CONSTRAINTS:
 				return getConstraints();
 			case smartbuildingPackage.CONNECTION__BIDIRECTIONAL:
@@ -722,6 +832,8 @@ public int compareType(Connection connection) {
 				return getProperties();
 			case smartbuildingPackage.CONNECTION__DESCRIPTION:
 				return getDescription();
+			case smartbuildingPackage.CONNECTION__TYPE:
+				return getType();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -744,9 +856,6 @@ public int compareType(Connection connection) {
 			case smartbuildingPackage.CONNECTION__NAME:
 				setName((String)newValue);
 				return;
-			case smartbuildingPackage.CONNECTION__TYPE:
-				setType((String)newValue);
-				return;
 			case smartbuildingPackage.CONNECTION__CONSTRAINTS:
 				getConstraints().clear();
 				getConstraints().addAll((Collection<? extends String>)newValue);
@@ -763,6 +872,9 @@ public int compareType(Connection connection) {
 				return;
 			case smartbuildingPackage.CONNECTION__DESCRIPTION:
 				setDescription((String)newValue);
+				return;
+			case smartbuildingPackage.CONNECTION__TYPE:
+				setType((Type)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -785,9 +897,6 @@ public int compareType(Connection connection) {
 			case smartbuildingPackage.CONNECTION__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case smartbuildingPackage.CONNECTION__TYPE:
-				setType(TYPE_EDEFAULT);
-				return;
 			case smartbuildingPackage.CONNECTION__CONSTRAINTS:
 				getConstraints().clear();
 				return;
@@ -802,6 +911,9 @@ public int compareType(Connection connection) {
 				return;
 			case smartbuildingPackage.CONNECTION__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
+				return;
+			case smartbuildingPackage.CONNECTION__TYPE:
+				setType((Type)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -821,8 +933,6 @@ public int compareType(Connection connection) {
 				return asset2 != null;
 			case smartbuildingPackage.CONNECTION__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case smartbuildingPackage.CONNECTION__TYPE:
-				return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
 			case smartbuildingPackage.CONNECTION__CONSTRAINTS:
 				return constraints != null && !constraints.isEmpty();
 			case smartbuildingPackage.CONNECTION__BIDIRECTIONAL:
@@ -833,6 +943,8 @@ public int compareType(Connection connection) {
 				return properties != null && !properties.isEmpty();
 			case smartbuildingPackage.CONNECTION__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
+			case smartbuildingPackage.CONNECTION__TYPE:
+				return type != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -863,8 +975,6 @@ public int compareType(Connection connection) {
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (name: ");
 		result.append(name);
-		result.append(", type: ");
-		result.append(type);
 		result.append(", constraints: ");
 		result.append(constraints);
 		result.append(", bidirectional: ");
@@ -875,4 +985,27 @@ public int compareType(Connection connection) {
 		return result.toString();
 	}
 
+	public Connection getAbstractedConnection() {
+		return abstractedConnection;
+	}
+
+	public void setAbstractedConnection(Connection abstractedConnection) {
+		
+		if(abstractedConnection == null) {
+			isAbstracted = false;
+		} else {
+			isAbstracted = true;
+		}
+		this.abstractedConnection = abstractedConnection;
+	}
+
+	public boolean isAbstracted() {
+		return isAbstracted;
+	}
+
+	public void setAbstracted(boolean isAbstracted) {
+		this.isAbstracted = isAbstracted;
+	}
+
+	
 } //ConnectionImpl

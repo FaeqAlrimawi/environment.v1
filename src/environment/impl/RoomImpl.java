@@ -3,8 +3,6 @@
 package environment.impl;
 
 import environment.Asset;
-import environment.Connection;
-import environment.PhysicalAsset;
 import environment.Room;
 
 import environment.smartbuildingPackage;
@@ -37,12 +35,12 @@ public class RoomImpl extends PhysicalStructureImpl implements Room {
 		return smartbuildingPackage.Literals.ROOM;
 	}
 	
-public Room abstractAsset() {
+/*public Room abstractAsset() {
 		
 		Room abstractedAsset = environment.smartbuildingFactory.eINSTANCE.createRoom();
 		
 		//get an abstracted asset from parent
-		PhysicalAsset aset = (PhysicalAsset)super.abstractAsset();
+		PhysicalStructure aset = (PhysicalStructure)super.abstractAsset();
 		
 		
 		//set attributes
@@ -74,7 +72,11 @@ public Room abstractAsset() {
 		aset = null;
 		
 		return abstractedAsset;
-	}
+	}*/
 	
+	public Asset abstractType() {
+	
+		return instance.createRoom();
+}
 
 } //RoomImpl

@@ -55,7 +55,16 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 	 * @ordered
 	 */
 	protected EList<Connection> connections;
-
+	
+	protected smartbuildingFactory instance = environment.smartbuildingFactory.eINSTANCE;
+	
+	//used for naming abstracted assets
+	protected static int assetNumber = 1;
+	protected static final long ASSET_NUMBER_LIMIT = Long.MAX_VALUE;
+	protected static String assetName = "asset";
+	protected Asset abstractedAsset;
+	protected boolean isAbstracted = false;
+	
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -331,36 +340,43 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 */
 	public Asset abstractAsset() {
-		// TODO: implement this method
+
 		//abstracting an asset includes:
-		//1-abstracting attributes (name, type, etc.)
-		//2-contained assets 
-		//3-connections
+		//1-abstract asset type
+		//2-abstracting attributes (name, type, etc.)
+		//3-contained assets 
+		//4-connections
 		
-		//1-abstract attributes
-		smartbuildingFactory instance = environment.smartbuildingFactory.eINSTANCE;
-		Asset abstractedAsset;
-		
-		if(PhysicalAsset.class.isAssignableFrom(this.getClass())) {
-			abstractedAsset = instance.createPhysicalAsset();
-		} else {
-			abstractedAsset = instance.createDigitalAsset();
+		//if an abstracted asset is already created for this asset
+		if(isAbstracted) {
+			return getAbstractedAsset();
 		}
 		
-		// 1-set attributes
+		//1-abstract type
+		//Asset abstractedAsset;
+		
+		abstractedAsset = abstractType();
+		
+		// 2-set attributes
 		// a-change name
-		abstractedAsset.setName("temp");// give a unique name
-
+		abstractedAsset.setName(AssetImpl.assetName+AssetImpl.assetNumber++);// give a unique name
+		
+		if(AssetImpl.assetNumber >= AssetImpl.ASSET_NUMBER_LIMIT) {
+			AssetImpl.assetNumber = 0;
+		}
 		// b-set value...value represents how important the asset in the system.
 		// the higher the more value it has
 		abstractedAsset.setValue(this.getValue());
 		
 		// c-type
-		Type type = instance.createType();
-		type.setName(this.getType().getName());
-		abstractedAsset.setType(type);
+		if(this.getType() != null) {
+			Type type = instance.createType();
+			type.setName(this.getType().getName());
+			abstractedAsset.setType(type);	
+		}
+		
 
-		//2-properties are added to the new abstracted asset only if they are abstractable i.e. isAbstractable is set to true
+		//3-properties are added to the new abstracted asset only if they are abstractable i.e. isAbstractable is set to true
 		Property tmp;
 	
 		for (Property pro : this.getProperty()) {
@@ -372,15 +388,20 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 			}
 		}
 		
-		// 3-abstract contained assets (can be done by merging/aggregating
+		// 4-abstract contained assets (can be done by merging/aggregating
 		// assets if possible)
 		// shallow abstraction of contained assets might be needed
-		mergeContainedAssets();
-
-		// 4-abstract connections (can be done by merging/aggregating
+		
+		abstractContainedAsets();
+		
+		// 5-abstract connections (can be done by merging/aggregating
 		// connections if possible)
 		// shallow abstraction of connections might be needed
-		mergeConnections();
+		abstractConnections();
+		
+		if(abstractedAsset != null) {
+			isAbstracted = true;
+		}
 		
 		return abstractedAsset;
 	}
@@ -456,6 +477,59 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 		}
 		
 		return similarityPercentage;
+	}
+	
+	public Asset abstractType() {
+		
+		Asset ast = null;
+		
+		
+		//default implementation returns an instance of the parent or a physical or digital class
+		if(!PhysicalAssetImpl.class.equals(this.getClass()) && !DigitalAssetImpl.class.equals(this.getClass())) {
+			try {
+				ast = (Asset)(this.getClass().getSuperclass().newInstance());
+			} catch (InstantiationException | IllegalAccessException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		} else	if(PhysicalAssetImpl.class.equals(this.getClass())) {
+			ast = instance.createPhysicalAsset();
+		} else if (DigitalAssetImpl.class.equals(this.getClass())){
+			ast = instance.createDigitalAsset();
+		}
+		
+		
+		return ast;
+	}
+	
+	public Asset abstractType(String classType) {
+		
+		Asset ast = null;
+		
+		try {
+			
+			//if the class name specified does not contain an "Impl" at the end of the name then it will be added
+			if(!classType.endsWith("Impl")) {
+				classType = classType+"Impl";
+			}
+			
+			String pkgName = instance.getsmartbuildingPackage().eNAME+".impl.";
+			
+			Class<?> cls = Class.forName(pkgName+classType);
+			ast = (Asset)(cls.newInstance());
+		
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (InstantiationException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IllegalAccessException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return ast;
 	}
 	
 	@Override
@@ -773,9 +847,9 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 */
 	public void mergeContainedAssets() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		
+
+
+		//
 		if(!canMergeContainedAssets()) {
 			return;
 		}
@@ -783,6 +857,61 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 		
 	}
 
+	public void abstractContainedAsets() {
+		
+		EList<Asset> thisAssets = null;
+		EList<DigitalAsset> thisDigitalAssets = null;
+		
+		if(PhysicalAsset.class.isInstance(this)) {
+			thisAssets = ((PhysicalAsset)this).getContainedAssets();	
+		} else if(DigitalAsset.class.isInstance(this)) {
+			thisDigitalAssets = ((DigitalAsset)this).getContainedAssets();	
+		}
+			
+		//move digital assets to the assets variable
+		if(thisDigitalAssets != null) {
+			thisAssets = new BasicEList<Asset>();
+			for(DigitalAsset ast : thisDigitalAssets) {
+				thisAssets.add(ast);
+			}
+		}
+
+		if(thisAssets == null || thisAssets.size() == 0) {
+			return;
+		}
+		
+		//create a new list of assets that are abstracts of the contained assets
+		EList<Asset> abstractedAssets = new BasicEList<Asset>();
+		
+		for(Asset ast : thisAssets) {
+			if(ast.getAbstractedAsset() != null) {
+				abstractedAssets.add(ast.getAbstractedAsset());
+			} else {
+				abstractedAssets.add(ast.abstractAsset());
+				
+			}
+		}
+
+			if(PhysicalAsset.class.isInstance(abstractedAsset)) {
+				((PhysicalAsset)abstractedAsset).getContainedAssets().clear();
+				((PhysicalAsset)abstractedAsset).getContainedAssets().addAll(abstractedAssets);
+			} else if(DigitalAsset.class.isInstance(abstractedAsset)) {
+				((DigitalAsset)abstractedAsset).getContainedAssets().clear();
+				for(Asset as : abstractedAssets) {
+					((DigitalAsset)abstractedAsset).getContainedAssets().add((DigitalAsset)as);
+				}
+			}
+			
+			//mergeContainedAssets();
+	}
+	
+	public void abstractConnections() {
+		
+		
+		
+		//mergeConnections();
+	}
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -998,4 +1127,29 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 		return result.toString();
 	}
 
+	public Asset getAbstractedAsset() {
+		return abstractedAsset;
+	}
+	
+	public void setAbstractedAsset(Asset ast) {
+		
+		if(ast == null) {
+			isAbstracted = false;
+		} else {
+			isAbstracted = true;	
+		}
+		
+		abstractedAsset = ast;
+		
+	}
+
+	public boolean isAbstracted() {
+		return isAbstracted;
+	}
+
+	public void setAbstracted(boolean isAbstracted) {
+		this.isAbstracted = isAbstracted;
+	}
+	
+	
 } //AssetImpl
