@@ -476,6 +476,16 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 		}
 		
 		//abstract port
+		abstractPort();
+		
+		//abstract connection ends i.e. asset1 & asset2
+		if(this.getAsset1() != null) {
+			abstractedConnection.setAsset1(this.getAsset1().abstractAsset());
+		}
+		if(this.getAsset2() != null) {
+			abstractedConnection.setAsset2(this.getAsset2().abstractAsset());
+		}
+		
 		
 		
 		if(abstractedConnection != null) {
@@ -531,8 +541,18 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 			portAbstracted.setAsset(portAsset.abstractAsset());
 		}
 		
-		//credentials
+		Credential c;
+		//set credentials
+		for(Credential cred : port.getCredential()) {
+			c = instance.createCredential();
+			c.setType(cred.getType());
+			if(c.getType() == CredentialType.OTHER) {
+				c.setOther(cred.getOther());
+			}
+			portAbstracted.getCredential().add(c);
+		}
 		
+		abstractedConnection.setPort(portAbstracted);
 		
 	}
 	
