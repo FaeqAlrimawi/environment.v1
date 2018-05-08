@@ -13,7 +13,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * A representation of the literals of the enumeration '<em><b>Credential Type</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see environment.smartbuildingPackage#getCredentialType()
+ * @see environment.cpsPackage#getCredentialType()
  * @model
  * @generated
  */

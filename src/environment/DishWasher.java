@@ -9,7 +9,7 @@ package environment;
  * <!-- end-user-doc -->
  *
  *
- * @see environment.smartbuildingPackage#getDishWasher()
+ * @see environment.cpsPackage#getDishWasher()
  * @model
  * @generated
  */

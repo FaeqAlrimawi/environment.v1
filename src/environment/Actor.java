@@ -15,7 +15,7 @@ package environment;
  *   <li>{@link environment.Actor#getRole <em>Role</em>}</li>
  * </ul>
  *
- * @see environment.smartbuildingPackage#getActor()
+ * @see environment.cpsPackage#getActor()
  * @model
  * @generated
  */
@@ -30,7 +30,7 @@ public interface Actor extends PhysicalAsset {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Role</em>' attribute.
 	 * @see #setRole(String)
-	 * @see environment.smartbuildingPackage#getActor_Role()
+	 * @see environment.cpsPackage#getActor_Role()
 	 * @model
 	 * @generated
 	 */

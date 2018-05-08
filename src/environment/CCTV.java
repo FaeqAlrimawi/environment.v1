@@ -9,7 +9,7 @@ package environment;
  * <!-- end-user-doc -->
  *
  *
- * @see environment.smartbuildingPackage#getCCTV()
+ * @see environment.cpsPackage#getCCTV()
  * @model
  * @generated
  */

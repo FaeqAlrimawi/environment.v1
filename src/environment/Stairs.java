@@ -9,7 +9,7 @@ package environment;
  * <!-- end-user-doc -->
  *
  *
- * @see environment.smartbuildingPackage#getStairs()
+ * @see environment.cpsPackage#getStairs()
  * @model
  * @generated
  */

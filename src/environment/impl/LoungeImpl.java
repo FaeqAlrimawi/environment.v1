@@ -4,7 +4,7 @@ package environment.impl;
 
 import environment.Lounge;
 
-import environment.smartbuildingPackage;
+import environment.cpsPackage;
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -31,7 +31,7 @@ public class LoungeImpl extends RoomImpl implements Lounge {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return smartbuildingPackage.Literals.LOUNGE;
+		return cpsPackage.Literals.LOUNGE;
 	}
 
 } //LoungeImpl

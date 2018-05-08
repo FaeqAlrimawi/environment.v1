@@ -4,7 +4,7 @@ package environment.impl;
 
 import environment.Type;
 
-import environment.smartbuildingPackage;
+import environment.cpsPackage;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
@@ -74,7 +74,7 @@ public class TypeImpl extends MinimalEObjectImpl.Container implements Type {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return smartbuildingPackage.Literals.TYPE;
+		return cpsPackage.Literals.TYPE;
 	}
 
 	/**
@@ -95,7 +95,7 @@ public class TypeImpl extends MinimalEObjectImpl.Container implements Type {
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, smartbuildingPackage.TYPE__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, cpsPackage.TYPE__NAME, oldName, name));
 	}
 
 	/**
@@ -116,7 +116,7 @@ public class TypeImpl extends MinimalEObjectImpl.Container implements Type {
 		Type oldSuperType = superType;
 		superType = newSuperType;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, smartbuildingPackage.TYPE__SUPER_TYPE, oldSuperType, newSuperType);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, cpsPackage.TYPE__SUPER_TYPE, oldSuperType, newSuperType);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -131,14 +131,14 @@ public class TypeImpl extends MinimalEObjectImpl.Container implements Type {
 		if (newSuperType != superType) {
 			NotificationChain msgs = null;
 			if (superType != null)
-				msgs = ((InternalEObject)superType).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - smartbuildingPackage.TYPE__SUPER_TYPE, null, msgs);
+				msgs = ((InternalEObject)superType).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - cpsPackage.TYPE__SUPER_TYPE, null, msgs);
 			if (newSuperType != null)
-				msgs = ((InternalEObject)newSuperType).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - smartbuildingPackage.TYPE__SUPER_TYPE, null, msgs);
+				msgs = ((InternalEObject)newSuperType).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - cpsPackage.TYPE__SUPER_TYPE, null, msgs);
 			msgs = basicSetSuperType(newSuperType, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, smartbuildingPackage.TYPE__SUPER_TYPE, newSuperType, newSuperType));
+			eNotify(new ENotificationImpl(this, Notification.SET, cpsPackage.TYPE__SUPER_TYPE, newSuperType, newSuperType));
 	}
 
 	/**
@@ -149,7 +149,7 @@ public class TypeImpl extends MinimalEObjectImpl.Container implements Type {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case smartbuildingPackage.TYPE__SUPER_TYPE:
+			case cpsPackage.TYPE__SUPER_TYPE:
 				return basicSetSuperType(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -163,9 +163,9 @@ public class TypeImpl extends MinimalEObjectImpl.Container implements Type {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case smartbuildingPackage.TYPE__NAME:
+			case cpsPackage.TYPE__NAME:
 				return getName();
-			case smartbuildingPackage.TYPE__SUPER_TYPE:
+			case cpsPackage.TYPE__SUPER_TYPE:
 				return getSuperType();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -180,10 +180,10 @@ public class TypeImpl extends MinimalEObjectImpl.Container implements Type {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case smartbuildingPackage.TYPE__NAME:
+			case cpsPackage.TYPE__NAME:
 				setName((String)newValue);
 				return;
-			case smartbuildingPackage.TYPE__SUPER_TYPE:
+			case cpsPackage.TYPE__SUPER_TYPE:
 				setSuperType((Type)newValue);
 				return;
 		}
@@ -198,10 +198,10 @@ public class TypeImpl extends MinimalEObjectImpl.Container implements Type {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case smartbuildingPackage.TYPE__NAME:
+			case cpsPackage.TYPE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case smartbuildingPackage.TYPE__SUPER_TYPE:
+			case cpsPackage.TYPE__SUPER_TYPE:
 				setSuperType((Type)null);
 				return;
 		}
@@ -216,9 +216,9 @@ public class TypeImpl extends MinimalEObjectImpl.Container implements Type {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case smartbuildingPackage.TYPE__NAME:
+			case cpsPackage.TYPE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case smartbuildingPackage.TYPE__SUPER_TYPE:
+			case cpsPackage.TYPE__SUPER_TYPE:
 				return superType != null;
 		}
 		return super.eIsSet(featureID);

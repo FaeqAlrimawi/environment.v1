@@ -5,7 +5,7 @@ package environment.impl;
 import environment.Application;
 import environment.ProcessStatus;
 
-import environment.smartbuildingPackage;
+import environment.cpsPackage;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -83,7 +83,7 @@ public class ApplicationImpl extends DigitalAssetImpl implements Application {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return smartbuildingPackage.Literals.APPLICATION;
+		return cpsPackage.Literals.APPLICATION;
 	}
 
 	/**
@@ -104,7 +104,7 @@ public class ApplicationImpl extends DigitalAssetImpl implements Application {
 		ProcessStatus oldStatus = status;
 		status = newStatus == null ? STATUS_EDEFAULT : newStatus;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, smartbuildingPackage.APPLICATION__STATUS, oldStatus, status));
+			eNotify(new ENotificationImpl(this, Notification.SET, cpsPackage.APPLICATION__STATUS, oldStatus, status));
 	}
 
 	/**
@@ -125,7 +125,7 @@ public class ApplicationImpl extends DigitalAssetImpl implements Application {
 		String oldUrl = url;
 		url = newUrl;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, smartbuildingPackage.APPLICATION__URL, oldUrl, url));
+			eNotify(new ENotificationImpl(this, Notification.SET, cpsPackage.APPLICATION__URL, oldUrl, url));
 	}
 
 	/**
@@ -136,9 +136,9 @@ public class ApplicationImpl extends DigitalAssetImpl implements Application {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case smartbuildingPackage.APPLICATION__STATUS:
+			case cpsPackage.APPLICATION__STATUS:
 				return getStatus();
-			case smartbuildingPackage.APPLICATION__URL:
+			case cpsPackage.APPLICATION__URL:
 				return getUrl();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -152,10 +152,10 @@ public class ApplicationImpl extends DigitalAssetImpl implements Application {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case smartbuildingPackage.APPLICATION__STATUS:
+			case cpsPackage.APPLICATION__STATUS:
 				setStatus((ProcessStatus)newValue);
 				return;
-			case smartbuildingPackage.APPLICATION__URL:
+			case cpsPackage.APPLICATION__URL:
 				setUrl((String)newValue);
 				return;
 		}
@@ -170,10 +170,10 @@ public class ApplicationImpl extends DigitalAssetImpl implements Application {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case smartbuildingPackage.APPLICATION__STATUS:
+			case cpsPackage.APPLICATION__STATUS:
 				setStatus(STATUS_EDEFAULT);
 				return;
-			case smartbuildingPackage.APPLICATION__URL:
+			case cpsPackage.APPLICATION__URL:
 				setUrl(URL_EDEFAULT);
 				return;
 		}
@@ -188,9 +188,9 @@ public class ApplicationImpl extends DigitalAssetImpl implements Application {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case smartbuildingPackage.APPLICATION__STATUS:
+			case cpsPackage.APPLICATION__STATUS:
 				return status != STATUS_EDEFAULT;
-			case smartbuildingPackage.APPLICATION__URL:
+			case cpsPackage.APPLICATION__URL:
 				return URL_EDEFAULT == null ? url != null : !URL_EDEFAULT.equals(url);
 		}
 		return super.eIsSet(featureID);

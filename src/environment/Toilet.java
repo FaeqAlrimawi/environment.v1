@@ -9,7 +9,7 @@ package environment;
  * <!-- end-user-doc -->
  *
  *
- * @see environment.smartbuildingPackage#getToilet()
+ * @see environment.cpsPackage#getToilet()
  * @model
  * @generated
  */

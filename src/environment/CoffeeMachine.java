@@ -9,7 +9,7 @@ package environment;
  * <!-- end-user-doc -->
  *
  *
- * @see environment.smartbuildingPackage#getCoffeeMachine()
+ * @see environment.cpsPackage#getCoffeeMachine()
  * @model
  * @generated
  */

@@ -26,7 +26,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link environment.Connection#getType <em>Type</em>}</li>
  * </ul>
  *
- * @see environment.smartbuildingPackage#getConnection()
+ * @see environment.cpsPackage#getConnection()
  * @model abstract="true"
  * @generated
  */
@@ -75,7 +75,7 @@ public interface Connection extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Asset1</em>' reference.
 	 * @see #setAsset1(Asset)
-	 * @see environment.smartbuildingPackage#getConnection_Asset1()
+	 * @see environment.cpsPackage#getConnection_Asset1()
 	 * @model
 	 * @generated
 	 */
@@ -101,7 +101,7 @@ public interface Connection extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Asset2</em>' reference.
 	 * @see #setAsset2(Asset)
-	 * @see environment.smartbuildingPackage#getConnection_Asset2()
+	 * @see environment.cpsPackage#getConnection_Asset2()
 	 * @model
 	 * @generated
 	 */
@@ -127,7 +127,7 @@ public interface Connection extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see environment.smartbuildingPackage#getConnection_Name()
+	 * @see environment.cpsPackage#getConnection_Name()
 	 * @model id="true"
 	 * @generated
 	 */
@@ -153,7 +153,7 @@ public interface Connection extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type</em>' containment reference.
 	 * @see #setType(Type)
-	 * @see environment.smartbuildingPackage#getConnection_Type()
+	 * @see environment.cpsPackage#getConnection_Type()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -178,7 +178,7 @@ public interface Connection extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Constraints</em>' attribute list.
-	 * @see environment.smartbuildingPackage#getConnection_Constraints()
+	 * @see environment.cpsPackage#getConnection_Constraints()
 	 * @model
 	 * @generated
 	 */
@@ -195,7 +195,7 @@ public interface Connection extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Bidirectional</em>' attribute.
 	 * @see #setBidirectional(boolean)
-	 * @see environment.smartbuildingPackage#getConnection_Bidirectional()
+	 * @see environment.cpsPackage#getConnection_Bidirectional()
 	 * @model default="true"
 	 * @generated
 	 */
@@ -219,7 +219,7 @@ public interface Connection extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Port</em>' containment reference.
 	 * @see #setPort(Port)
-	 * @see environment.smartbuildingPackage#getConnection_Port()
+	 * @see environment.cpsPackage#getConnection_Port()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -245,7 +245,7 @@ public interface Connection extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Properties</em>' reference list.
-	 * @see environment.smartbuildingPackage#getConnection_Properties()
+	 * @see environment.cpsPackage#getConnection_Properties()
 	 * @model
 	 * @generated
 	 */
@@ -261,7 +261,7 @@ public interface Connection extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Description</em>' attribute.
 	 * @see #setDescription(String)
-	 * @see environment.smartbuildingPackage#getConnection_Description()
+	 * @see environment.cpsPackage#getConnection_Description()
 	 * @model
 	 * @generated
 	 */

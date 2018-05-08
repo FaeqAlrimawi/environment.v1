@@ -17,7 +17,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link environment.DigitalAsset#getContainedAssets <em>Contained Assets</em>}</li>
  * </ul>
  *
- * @see environment.smartbuildingPackage#getDigitalAsset()
+ * @see environment.cpsPackage#getDigitalAsset()
  * @model
  * @generated
  */
@@ -32,7 +32,7 @@ public interface DigitalAsset extends Asset {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Parent Asset</em>' reference.
 	 * @see #setParentAsset(Asset)
-	 * @see environment.smartbuildingPackage#getDigitalAsset_ParentAsset()
+	 * @see environment.cpsPackage#getDigitalAsset_ParentAsset()
 	 * @model
 	 * @generated
 	 */
@@ -58,7 +58,7 @@ public interface DigitalAsset extends Asset {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Contained Assets</em>' reference list.
-	 * @see environment.smartbuildingPackage#getDigitalAsset_ContainedAssets()
+	 * @see environment.cpsPackage#getDigitalAsset_ContainedAssets()
 	 * @model
 	 * @generated
 	 */

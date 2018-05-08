@@ -3,7 +3,7 @@
 package environment.impl;
 
 import environment.CCTV;
-import environment.smartbuildingPackage;
+import environment.cpsPackage;
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -30,7 +30,7 @@ public class CCTVImpl extends ComputingDeviceImpl implements CCTV {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return smartbuildingPackage.Literals.CCTV;
+		return cpsPackage.Literals.CCTV;
 	}
 
 } //CCTVImpl

@@ -10,7 +10,7 @@ import environment.EnvironmentDiagram;
 import environment.Port;
 import environment.Property;
 
-import environment.smartbuildingPackage;
+import environment.cpsPackage;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -120,7 +120,7 @@ public class EnvironmentDiagramImpl extends MinimalEObjectImpl.Container impleme
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return smartbuildingPackage.Literals.ENVIRONMENT_DIAGRAM;
+		return cpsPackage.Literals.ENVIRONMENT_DIAGRAM;
 	}
 
 	/**
@@ -130,7 +130,7 @@ public class EnvironmentDiagramImpl extends MinimalEObjectImpl.Container impleme
 	 */
 	public EList<Asset> getAsset() {
 		if (asset == null) {
-			asset = new EObjectContainmentEList<Asset>(Asset.class, this, smartbuildingPackage.ENVIRONMENT_DIAGRAM__ASSET);
+			asset = new EObjectContainmentEList<Asset>(Asset.class, this, cpsPackage.ENVIRONMENT_DIAGRAM__ASSET);
 		}
 		return asset;
 	}
@@ -142,7 +142,7 @@ public class EnvironmentDiagramImpl extends MinimalEObjectImpl.Container impleme
 	 */
 	public EList<Connection> getConnection() {
 		if (connection == null) {
-			connection = new EObjectContainmentEList<Connection>(Connection.class, this, smartbuildingPackage.ENVIRONMENT_DIAGRAM__CONNECTION);
+			connection = new EObjectContainmentEList<Connection>(Connection.class, this, cpsPackage.ENVIRONMENT_DIAGRAM__CONNECTION);
 		}
 		return connection;
 	}
@@ -154,7 +154,7 @@ public class EnvironmentDiagramImpl extends MinimalEObjectImpl.Container impleme
 	 */
 	public EList<Port> getPort() {
 		if (port == null) {
-			port = new EObjectContainmentEList<Port>(Port.class, this, smartbuildingPackage.ENVIRONMENT_DIAGRAM__PORT);
+			port = new EObjectContainmentEList<Port>(Port.class, this, cpsPackage.ENVIRONMENT_DIAGRAM__PORT);
 		}
 		return port;
 	}
@@ -166,7 +166,7 @@ public class EnvironmentDiagramImpl extends MinimalEObjectImpl.Container impleme
 	 */
 	public EList<Property> getProperty() {
 		if (property == null) {
-			property = new EObjectContainmentEList<Property>(Property.class, this, smartbuildingPackage.ENVIRONMENT_DIAGRAM__PROPERTY);
+			property = new EObjectContainmentEList<Property>(Property.class, this, cpsPackage.ENVIRONMENT_DIAGRAM__PROPERTY);
 		}
 		return property;
 	}
@@ -178,7 +178,7 @@ public class EnvironmentDiagramImpl extends MinimalEObjectImpl.Container impleme
 	 */
 	public EList<Credential> getCredential() {
 		if (credential == null) {
-			credential = new EObjectContainmentEList<Credential>(Credential.class, this, smartbuildingPackage.ENVIRONMENT_DIAGRAM__CREDENTIAL);
+			credential = new EObjectContainmentEList<Credential>(Credential.class, this, cpsPackage.ENVIRONMENT_DIAGRAM__CREDENTIAL);
 		}
 		return credential;
 	}
@@ -190,7 +190,7 @@ public class EnvironmentDiagramImpl extends MinimalEObjectImpl.Container impleme
 	 */
 	public EList<Action> getRule() {
 		if (rule == null) {
-			rule = new EObjectContainmentEList<Action>(Action.class, this, smartbuildingPackage.ENVIRONMENT_DIAGRAM__RULE);
+			rule = new EObjectContainmentEList<Action>(Action.class, this, cpsPackage.ENVIRONMENT_DIAGRAM__RULE);
 		}
 		return rule;
 	}
@@ -203,17 +203,17 @@ public class EnvironmentDiagramImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case smartbuildingPackage.ENVIRONMENT_DIAGRAM__ASSET:
+			case cpsPackage.ENVIRONMENT_DIAGRAM__ASSET:
 				return ((InternalEList<?>)getAsset()).basicRemove(otherEnd, msgs);
-			case smartbuildingPackage.ENVIRONMENT_DIAGRAM__CONNECTION:
+			case cpsPackage.ENVIRONMENT_DIAGRAM__CONNECTION:
 				return ((InternalEList<?>)getConnection()).basicRemove(otherEnd, msgs);
-			case smartbuildingPackage.ENVIRONMENT_DIAGRAM__PORT:
+			case cpsPackage.ENVIRONMENT_DIAGRAM__PORT:
 				return ((InternalEList<?>)getPort()).basicRemove(otherEnd, msgs);
-			case smartbuildingPackage.ENVIRONMENT_DIAGRAM__PROPERTY:
+			case cpsPackage.ENVIRONMENT_DIAGRAM__PROPERTY:
 				return ((InternalEList<?>)getProperty()).basicRemove(otherEnd, msgs);
-			case smartbuildingPackage.ENVIRONMENT_DIAGRAM__CREDENTIAL:
+			case cpsPackage.ENVIRONMENT_DIAGRAM__CREDENTIAL:
 				return ((InternalEList<?>)getCredential()).basicRemove(otherEnd, msgs);
-			case smartbuildingPackage.ENVIRONMENT_DIAGRAM__RULE:
+			case cpsPackage.ENVIRONMENT_DIAGRAM__RULE:
 				return ((InternalEList<?>)getRule()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -227,17 +227,17 @@ public class EnvironmentDiagramImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case smartbuildingPackage.ENVIRONMENT_DIAGRAM__ASSET:
+			case cpsPackage.ENVIRONMENT_DIAGRAM__ASSET:
 				return getAsset();
-			case smartbuildingPackage.ENVIRONMENT_DIAGRAM__CONNECTION:
+			case cpsPackage.ENVIRONMENT_DIAGRAM__CONNECTION:
 				return getConnection();
-			case smartbuildingPackage.ENVIRONMENT_DIAGRAM__PORT:
+			case cpsPackage.ENVIRONMENT_DIAGRAM__PORT:
 				return getPort();
-			case smartbuildingPackage.ENVIRONMENT_DIAGRAM__PROPERTY:
+			case cpsPackage.ENVIRONMENT_DIAGRAM__PROPERTY:
 				return getProperty();
-			case smartbuildingPackage.ENVIRONMENT_DIAGRAM__CREDENTIAL:
+			case cpsPackage.ENVIRONMENT_DIAGRAM__CREDENTIAL:
 				return getCredential();
-			case smartbuildingPackage.ENVIRONMENT_DIAGRAM__RULE:
+			case cpsPackage.ENVIRONMENT_DIAGRAM__RULE:
 				return getRule();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -252,27 +252,27 @@ public class EnvironmentDiagramImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case smartbuildingPackage.ENVIRONMENT_DIAGRAM__ASSET:
+			case cpsPackage.ENVIRONMENT_DIAGRAM__ASSET:
 				getAsset().clear();
 				getAsset().addAll((Collection<? extends Asset>)newValue);
 				return;
-			case smartbuildingPackage.ENVIRONMENT_DIAGRAM__CONNECTION:
+			case cpsPackage.ENVIRONMENT_DIAGRAM__CONNECTION:
 				getConnection().clear();
 				getConnection().addAll((Collection<? extends Connection>)newValue);
 				return;
-			case smartbuildingPackage.ENVIRONMENT_DIAGRAM__PORT:
+			case cpsPackage.ENVIRONMENT_DIAGRAM__PORT:
 				getPort().clear();
 				getPort().addAll((Collection<? extends Port>)newValue);
 				return;
-			case smartbuildingPackage.ENVIRONMENT_DIAGRAM__PROPERTY:
+			case cpsPackage.ENVIRONMENT_DIAGRAM__PROPERTY:
 				getProperty().clear();
 				getProperty().addAll((Collection<? extends Property>)newValue);
 				return;
-			case smartbuildingPackage.ENVIRONMENT_DIAGRAM__CREDENTIAL:
+			case cpsPackage.ENVIRONMENT_DIAGRAM__CREDENTIAL:
 				getCredential().clear();
 				getCredential().addAll((Collection<? extends Credential>)newValue);
 				return;
-			case smartbuildingPackage.ENVIRONMENT_DIAGRAM__RULE:
+			case cpsPackage.ENVIRONMENT_DIAGRAM__RULE:
 				getRule().clear();
 				getRule().addAll((Collection<? extends Action>)newValue);
 				return;
@@ -288,22 +288,22 @@ public class EnvironmentDiagramImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case smartbuildingPackage.ENVIRONMENT_DIAGRAM__ASSET:
+			case cpsPackage.ENVIRONMENT_DIAGRAM__ASSET:
 				getAsset().clear();
 				return;
-			case smartbuildingPackage.ENVIRONMENT_DIAGRAM__CONNECTION:
+			case cpsPackage.ENVIRONMENT_DIAGRAM__CONNECTION:
 				getConnection().clear();
 				return;
-			case smartbuildingPackage.ENVIRONMENT_DIAGRAM__PORT:
+			case cpsPackage.ENVIRONMENT_DIAGRAM__PORT:
 				getPort().clear();
 				return;
-			case smartbuildingPackage.ENVIRONMENT_DIAGRAM__PROPERTY:
+			case cpsPackage.ENVIRONMENT_DIAGRAM__PROPERTY:
 				getProperty().clear();
 				return;
-			case smartbuildingPackage.ENVIRONMENT_DIAGRAM__CREDENTIAL:
+			case cpsPackage.ENVIRONMENT_DIAGRAM__CREDENTIAL:
 				getCredential().clear();
 				return;
-			case smartbuildingPackage.ENVIRONMENT_DIAGRAM__RULE:
+			case cpsPackage.ENVIRONMENT_DIAGRAM__RULE:
 				getRule().clear();
 				return;
 		}
@@ -318,17 +318,17 @@ public class EnvironmentDiagramImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case smartbuildingPackage.ENVIRONMENT_DIAGRAM__ASSET:
+			case cpsPackage.ENVIRONMENT_DIAGRAM__ASSET:
 				return asset != null && !asset.isEmpty();
-			case smartbuildingPackage.ENVIRONMENT_DIAGRAM__CONNECTION:
+			case cpsPackage.ENVIRONMENT_DIAGRAM__CONNECTION:
 				return connection != null && !connection.isEmpty();
-			case smartbuildingPackage.ENVIRONMENT_DIAGRAM__PORT:
+			case cpsPackage.ENVIRONMENT_DIAGRAM__PORT:
 				return port != null && !port.isEmpty();
-			case smartbuildingPackage.ENVIRONMENT_DIAGRAM__PROPERTY:
+			case cpsPackage.ENVIRONMENT_DIAGRAM__PROPERTY:
 				return property != null && !property.isEmpty();
-			case smartbuildingPackage.ENVIRONMENT_DIAGRAM__CREDENTIAL:
+			case cpsPackage.ENVIRONMENT_DIAGRAM__CREDENTIAL:
 				return credential != null && !credential.isEmpty();
-			case smartbuildingPackage.ENVIRONMENT_DIAGRAM__RULE:
+			case cpsPackage.ENVIRONMENT_DIAGRAM__RULE:
 				return rule != null && !rule.isEmpty();
 		}
 		return super.eIsSet(featureID);

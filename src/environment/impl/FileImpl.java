@@ -5,7 +5,7 @@ package environment.impl;
 import environment.File;
 import environment.FileStatus;
 
-import environment.smartbuildingPackage;
+import environment.cpsPackage;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -83,7 +83,7 @@ public class FileImpl extends DigitalAssetImpl implements File {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return smartbuildingPackage.Literals.FILE;
+		return cpsPackage.Literals.FILE;
 	}
 
 	/**
@@ -104,7 +104,7 @@ public class FileImpl extends DigitalAssetImpl implements File {
 		FileStatus oldStatus = status;
 		status = newStatus == null ? STATUS_EDEFAULT : newStatus;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, smartbuildingPackage.FILE__STATUS, oldStatus, status));
+			eNotify(new ENotificationImpl(this, Notification.SET, cpsPackage.FILE__STATUS, oldStatus, status));
 	}
 
 	/**
@@ -125,7 +125,7 @@ public class FileImpl extends DigitalAssetImpl implements File {
 		String oldUrl = url;
 		url = newUrl;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, smartbuildingPackage.FILE__URL, oldUrl, url));
+			eNotify(new ENotificationImpl(this, Notification.SET, cpsPackage.FILE__URL, oldUrl, url));
 	}
 
 	/**
@@ -136,9 +136,9 @@ public class FileImpl extends DigitalAssetImpl implements File {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case smartbuildingPackage.FILE__STATUS:
+			case cpsPackage.FILE__STATUS:
 				return getStatus();
-			case smartbuildingPackage.FILE__URL:
+			case cpsPackage.FILE__URL:
 				return getUrl();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -152,10 +152,10 @@ public class FileImpl extends DigitalAssetImpl implements File {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case smartbuildingPackage.FILE__STATUS:
+			case cpsPackage.FILE__STATUS:
 				setStatus((FileStatus)newValue);
 				return;
-			case smartbuildingPackage.FILE__URL:
+			case cpsPackage.FILE__URL:
 				setUrl((String)newValue);
 				return;
 		}
@@ -170,10 +170,10 @@ public class FileImpl extends DigitalAssetImpl implements File {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case smartbuildingPackage.FILE__STATUS:
+			case cpsPackage.FILE__STATUS:
 				setStatus(STATUS_EDEFAULT);
 				return;
-			case smartbuildingPackage.FILE__URL:
+			case cpsPackage.FILE__URL:
 				setUrl(URL_EDEFAULT);
 				return;
 		}
@@ -188,9 +188,9 @@ public class FileImpl extends DigitalAssetImpl implements File {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case smartbuildingPackage.FILE__STATUS:
+			case cpsPackage.FILE__STATUS:
 				return status != STATUS_EDEFAULT;
-			case smartbuildingPackage.FILE__URL:
+			case cpsPackage.FILE__URL:
 				return URL_EDEFAULT == null ? url != null : !URL_EDEFAULT.equals(url);
 		}
 		return super.eIsSet(featureID);

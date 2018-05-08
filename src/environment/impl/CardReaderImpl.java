@@ -3,8 +3,7 @@
 package environment.impl;
 
 import environment.CardReader;
-import environment.smartbuildingPackage;
-
+import environment.cpsPackage;
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -31,7 +30,7 @@ public class CardReaderImpl extends ComputingDeviceImpl implements CardReader {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return smartbuildingPackage.Literals.CARD_READER;
+		return cpsPackage.Literals.CARD_READER;
 	}
 
 } //CardReaderImpl

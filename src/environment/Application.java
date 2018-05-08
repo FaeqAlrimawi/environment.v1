@@ -16,7 +16,7 @@ package environment;
  *   <li>{@link environment.Application#getUrl <em>Url</em>}</li>
  * </ul>
  *
- * @see environment.smartbuildingPackage#getApplication()
+ * @see environment.cpsPackage#getApplication()
  * @model
  * @generated
  */
@@ -33,7 +33,7 @@ public interface Application extends DigitalAsset {
 	 * @return the value of the '<em>Status</em>' attribute.
 	 * @see environment.ProcessStatus
 	 * @see #setStatus(ProcessStatus)
-	 * @see environment.smartbuildingPackage#getApplication_Status()
+	 * @see environment.cpsPackage#getApplication_Status()
 	 * @model
 	 * @generated
 	 */
@@ -60,7 +60,7 @@ public interface Application extends DigitalAsset {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Url</em>' attribute.
 	 * @see #setUrl(String)
-	 * @see environment.smartbuildingPackage#getApplication_Url()
+	 * @see environment.cpsPackage#getApplication_Url()
 	 * @model
 	 * @generated
 	 */

@@ -4,7 +4,7 @@ package environment.impl;
 
 import environment.Property;
 
-import environment.smartbuildingPackage;
+import environment.cpsPackage;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -104,7 +104,7 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return smartbuildingPackage.Literals.PROPERTY;
+		return cpsPackage.Literals.PROPERTY;
 	}
 
 	/**
@@ -125,7 +125,7 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, smartbuildingPackage.PROPERTY__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, cpsPackage.PROPERTY__NAME, oldName, name));
 	}
 
 	/**
@@ -146,7 +146,7 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
 		String oldValue = value;
 		value = newValue;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, smartbuildingPackage.PROPERTY__VALUE, oldValue, value));
+			eNotify(new ENotificationImpl(this, Notification.SET, cpsPackage.PROPERTY__VALUE, oldValue, value));
 	}
 
 	/**
@@ -167,7 +167,7 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
 		boolean oldAbstractable = abstractable;
 		abstractable = newAbstractable;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, smartbuildingPackage.PROPERTY__ABSTRACTABLE, oldAbstractable, abstractable));
+			eNotify(new ENotificationImpl(this, Notification.SET, cpsPackage.PROPERTY__ABSTRACTABLE, oldAbstractable, abstractable));
 	}
 
 	/**
@@ -178,11 +178,11 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case smartbuildingPackage.PROPERTY__NAME:
+			case cpsPackage.PROPERTY__NAME:
 				return getName();
-			case smartbuildingPackage.PROPERTY__VALUE:
+			case cpsPackage.PROPERTY__VALUE:
 				return getValue();
-			case smartbuildingPackage.PROPERTY__ABSTRACTABLE:
+			case cpsPackage.PROPERTY__ABSTRACTABLE:
 				return isAbstractable();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -196,13 +196,13 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case smartbuildingPackage.PROPERTY__NAME:
+			case cpsPackage.PROPERTY__NAME:
 				setName((String)newValue);
 				return;
-			case smartbuildingPackage.PROPERTY__VALUE:
+			case cpsPackage.PROPERTY__VALUE:
 				setValue((String)newValue);
 				return;
-			case smartbuildingPackage.PROPERTY__ABSTRACTABLE:
+			case cpsPackage.PROPERTY__ABSTRACTABLE:
 				setAbstractable((Boolean)newValue);
 				return;
 		}
@@ -217,13 +217,13 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case smartbuildingPackage.PROPERTY__NAME:
+			case cpsPackage.PROPERTY__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case smartbuildingPackage.PROPERTY__VALUE:
+			case cpsPackage.PROPERTY__VALUE:
 				setValue(VALUE_EDEFAULT);
 				return;
-			case smartbuildingPackage.PROPERTY__ABSTRACTABLE:
+			case cpsPackage.PROPERTY__ABSTRACTABLE:
 				setAbstractable(ABSTRACTABLE_EDEFAULT);
 				return;
 		}
@@ -238,11 +238,11 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case smartbuildingPackage.PROPERTY__NAME:
+			case cpsPackage.PROPERTY__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case smartbuildingPackage.PROPERTY__VALUE:
+			case cpsPackage.PROPERTY__VALUE:
 				return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
-			case smartbuildingPackage.PROPERTY__ABSTRACTABLE:
+			case cpsPackage.PROPERTY__ABSTRACTABLE:
 				return abstractable != ABSTRACTABLE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

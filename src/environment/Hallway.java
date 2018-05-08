@@ -9,7 +9,7 @@ package environment;
  * <!-- end-user-doc -->
  *
  *
- * @see environment.smartbuildingPackage#getHallway()
+ * @see environment.cpsPackage#getHallway()
  * @model
  * @generated
  */

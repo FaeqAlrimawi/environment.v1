@@ -4,7 +4,7 @@ package environment.impl;
 
 import environment.PhysicalConnection;
 
-import environment.smartbuildingPackage;
+import environment.cpsPackage;
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -31,7 +31,7 @@ public class PhysicalConnectionImpl extends ConnectionImpl implements PhysicalCo
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return smartbuildingPackage.Literals.PHYSICAL_CONNECTION;
+		return cpsPackage.Literals.PHYSICAL_CONNECTION;
 	}
 
 } //PhysicalConnectionImpl

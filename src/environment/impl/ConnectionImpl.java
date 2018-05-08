@@ -11,8 +11,8 @@ import environment.PhysicalConnection;
 import environment.Port;
 import environment.Property;
 import environment.Type;
+import environment.cpsPackage;
 import environment.smartbuildingFactory;
-import environment.smartbuildingPackage;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 
@@ -197,7 +197,7 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return smartbuildingPackage.Literals.CONNECTION;
+		return cpsPackage.Literals.CONNECTION;
 	}
 
 	/**
@@ -211,7 +211,7 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 			asset1 = (Asset)eResolveProxy(oldAsset1);
 			if (asset1 != oldAsset1) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, smartbuildingPackage.CONNECTION__ASSET1, oldAsset1, asset1));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, cpsPackage.CONNECTION__ASSET1, oldAsset1, asset1));
 			}
 		}
 		return asset1;
@@ -235,7 +235,7 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 		Asset oldAsset1 = asset1;
 		asset1 = newAsset1;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, smartbuildingPackage.CONNECTION__ASSET1, oldAsset1, asset1));
+			eNotify(new ENotificationImpl(this, Notification.SET, cpsPackage.CONNECTION__ASSET1, oldAsset1, asset1));
 	}
 
 	/**
@@ -249,7 +249,7 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 			asset2 = (Asset)eResolveProxy(oldAsset2);
 			if (asset2 != oldAsset2) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, smartbuildingPackage.CONNECTION__ASSET2, oldAsset2, asset2));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, cpsPackage.CONNECTION__ASSET2, oldAsset2, asset2));
 			}
 		}
 		return asset2;
@@ -273,7 +273,7 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 		Asset oldAsset2 = asset2;
 		asset2 = newAsset2;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, smartbuildingPackage.CONNECTION__ASSET2, oldAsset2, asset2));
+			eNotify(new ENotificationImpl(this, Notification.SET, cpsPackage.CONNECTION__ASSET2, oldAsset2, asset2));
 	}
 
 	/**
@@ -294,7 +294,7 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, smartbuildingPackage.CONNECTION__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, cpsPackage.CONNECTION__NAME, oldName, name));
 	}
 
 	/**
@@ -315,7 +315,7 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 		Type oldType = type;
 		type = newType;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, smartbuildingPackage.CONNECTION__TYPE, oldType, newType);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, cpsPackage.CONNECTION__TYPE, oldType, newType);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -330,14 +330,14 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 		if (newType != type) {
 			NotificationChain msgs = null;
 			if (type != null)
-				msgs = ((InternalEObject)type).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - smartbuildingPackage.CONNECTION__TYPE, null, msgs);
+				msgs = ((InternalEObject)type).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - cpsPackage.CONNECTION__TYPE, null, msgs);
 			if (newType != null)
-				msgs = ((InternalEObject)newType).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - smartbuildingPackage.CONNECTION__TYPE, null, msgs);
+				msgs = ((InternalEObject)newType).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - cpsPackage.CONNECTION__TYPE, null, msgs);
 			msgs = basicSetType(newType, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, smartbuildingPackage.CONNECTION__TYPE, newType, newType));
+			eNotify(new ENotificationImpl(this, Notification.SET, cpsPackage.CONNECTION__TYPE, newType, newType));
 	}
 
 	/**
@@ -347,7 +347,7 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 	 */
 	public EList<String> getConstraints() {
 		if (constraints == null) {
-			constraints = new EDataTypeUniqueEList<String>(String.class, this, smartbuildingPackage.CONNECTION__CONSTRAINTS);
+			constraints = new EDataTypeUniqueEList<String>(String.class, this, cpsPackage.CONNECTION__CONSTRAINTS);
 		}
 		return constraints;
 	}
@@ -370,7 +370,7 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 		boolean oldBidirectional = bidirectional;
 		bidirectional = newBidirectional;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, smartbuildingPackage.CONNECTION__BIDIRECTIONAL, oldBidirectional, bidirectional));
+			eNotify(new ENotificationImpl(this, Notification.SET, cpsPackage.CONNECTION__BIDIRECTIONAL, oldBidirectional, bidirectional));
 	}
 
 	/**
@@ -391,7 +391,7 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 		Port oldPort = port;
 		port = newPort;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, smartbuildingPackage.CONNECTION__PORT, oldPort, newPort);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, cpsPackage.CONNECTION__PORT, oldPort, newPort);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -406,14 +406,14 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 		if (newPort != port) {
 			NotificationChain msgs = null;
 			if (port != null)
-				msgs = ((InternalEObject)port).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - smartbuildingPackage.CONNECTION__PORT, null, msgs);
+				msgs = ((InternalEObject)port).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - cpsPackage.CONNECTION__PORT, null, msgs);
 			if (newPort != null)
-				msgs = ((InternalEObject)newPort).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - smartbuildingPackage.CONNECTION__PORT, null, msgs);
+				msgs = ((InternalEObject)newPort).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - cpsPackage.CONNECTION__PORT, null, msgs);
 			msgs = basicSetPort(newPort, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, smartbuildingPackage.CONNECTION__PORT, newPort, newPort));
+			eNotify(new ENotificationImpl(this, Notification.SET, cpsPackage.CONNECTION__PORT, newPort, newPort));
 	}
 
 	/**
@@ -423,7 +423,7 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 	 */
 	public EList<Property> getProperties() {
 		if (properties == null) {
-			properties = new EObjectResolvingEList<Property>(Property.class, this, smartbuildingPackage.CONNECTION__PROPERTIES);
+			properties = new EObjectResolvingEList<Property>(Property.class, this, cpsPackage.CONNECTION__PROPERTIES);
 		}
 		return properties;
 	}
@@ -446,7 +446,7 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 		String oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, smartbuildingPackage.CONNECTION__DESCRIPTION, oldDescription, description));
+			eNotify(new ENotificationImpl(this, Notification.SET, cpsPackage.CONNECTION__DESCRIPTION, oldDescription, description));
 	}
 
 	public Connection abstractConnection() {
@@ -818,9 +818,9 @@ public int compareType(Connection connection) {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case smartbuildingPackage.CONNECTION__PORT:
+			case cpsPackage.CONNECTION__PORT:
 				return basicSetPort(null, msgs);
-			case smartbuildingPackage.CONNECTION__TYPE:
+			case cpsPackage.CONNECTION__TYPE:
 				return basicSetType(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -834,25 +834,25 @@ public int compareType(Connection connection) {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case smartbuildingPackage.CONNECTION__ASSET1:
+			case cpsPackage.CONNECTION__ASSET1:
 				if (resolve) return getAsset1();
 				return basicGetAsset1();
-			case smartbuildingPackage.CONNECTION__ASSET2:
+			case cpsPackage.CONNECTION__ASSET2:
 				if (resolve) return getAsset2();
 				return basicGetAsset2();
-			case smartbuildingPackage.CONNECTION__NAME:
+			case cpsPackage.CONNECTION__NAME:
 				return getName();
-			case smartbuildingPackage.CONNECTION__CONSTRAINTS:
+			case cpsPackage.CONNECTION__CONSTRAINTS:
 				return getConstraints();
-			case smartbuildingPackage.CONNECTION__BIDIRECTIONAL:
+			case cpsPackage.CONNECTION__BIDIRECTIONAL:
 				return isBidirectional();
-			case smartbuildingPackage.CONNECTION__PORT:
+			case cpsPackage.CONNECTION__PORT:
 				return getPort();
-			case smartbuildingPackage.CONNECTION__PROPERTIES:
+			case cpsPackage.CONNECTION__PROPERTIES:
 				return getProperties();
-			case smartbuildingPackage.CONNECTION__DESCRIPTION:
+			case cpsPackage.CONNECTION__DESCRIPTION:
 				return getDescription();
-			case smartbuildingPackage.CONNECTION__TYPE:
+			case cpsPackage.CONNECTION__TYPE:
 				return getType();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -867,33 +867,33 @@ public int compareType(Connection connection) {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case smartbuildingPackage.CONNECTION__ASSET1:
+			case cpsPackage.CONNECTION__ASSET1:
 				setAsset1((Asset)newValue);
 				return;
-			case smartbuildingPackage.CONNECTION__ASSET2:
+			case cpsPackage.CONNECTION__ASSET2:
 				setAsset2((Asset)newValue);
 				return;
-			case smartbuildingPackage.CONNECTION__NAME:
+			case cpsPackage.CONNECTION__NAME:
 				setName((String)newValue);
 				return;
-			case smartbuildingPackage.CONNECTION__CONSTRAINTS:
+			case cpsPackage.CONNECTION__CONSTRAINTS:
 				getConstraints().clear();
 				getConstraints().addAll((Collection<? extends String>)newValue);
 				return;
-			case smartbuildingPackage.CONNECTION__BIDIRECTIONAL:
+			case cpsPackage.CONNECTION__BIDIRECTIONAL:
 				setBidirectional((Boolean)newValue);
 				return;
-			case smartbuildingPackage.CONNECTION__PORT:
+			case cpsPackage.CONNECTION__PORT:
 				setPort((Port)newValue);
 				return;
-			case smartbuildingPackage.CONNECTION__PROPERTIES:
+			case cpsPackage.CONNECTION__PROPERTIES:
 				getProperties().clear();
 				getProperties().addAll((Collection<? extends Property>)newValue);
 				return;
-			case smartbuildingPackage.CONNECTION__DESCRIPTION:
+			case cpsPackage.CONNECTION__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
-			case smartbuildingPackage.CONNECTION__TYPE:
+			case cpsPackage.CONNECTION__TYPE:
 				setType((Type)newValue);
 				return;
 		}
@@ -908,31 +908,31 @@ public int compareType(Connection connection) {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case smartbuildingPackage.CONNECTION__ASSET1:
+			case cpsPackage.CONNECTION__ASSET1:
 				setAsset1((Asset)null);
 				return;
-			case smartbuildingPackage.CONNECTION__ASSET2:
+			case cpsPackage.CONNECTION__ASSET2:
 				setAsset2((Asset)null);
 				return;
-			case smartbuildingPackage.CONNECTION__NAME:
+			case cpsPackage.CONNECTION__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case smartbuildingPackage.CONNECTION__CONSTRAINTS:
+			case cpsPackage.CONNECTION__CONSTRAINTS:
 				getConstraints().clear();
 				return;
-			case smartbuildingPackage.CONNECTION__BIDIRECTIONAL:
+			case cpsPackage.CONNECTION__BIDIRECTIONAL:
 				setBidirectional(BIDIRECTIONAL_EDEFAULT);
 				return;
-			case smartbuildingPackage.CONNECTION__PORT:
+			case cpsPackage.CONNECTION__PORT:
 				setPort((Port)null);
 				return;
-			case smartbuildingPackage.CONNECTION__PROPERTIES:
+			case cpsPackage.CONNECTION__PROPERTIES:
 				getProperties().clear();
 				return;
-			case smartbuildingPackage.CONNECTION__DESCRIPTION:
+			case cpsPackage.CONNECTION__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
-			case smartbuildingPackage.CONNECTION__TYPE:
+			case cpsPackage.CONNECTION__TYPE:
 				setType((Type)null);
 				return;
 		}
@@ -947,23 +947,23 @@ public int compareType(Connection connection) {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case smartbuildingPackage.CONNECTION__ASSET1:
+			case cpsPackage.CONNECTION__ASSET1:
 				return asset1 != null;
-			case smartbuildingPackage.CONNECTION__ASSET2:
+			case cpsPackage.CONNECTION__ASSET2:
 				return asset2 != null;
-			case smartbuildingPackage.CONNECTION__NAME:
+			case cpsPackage.CONNECTION__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case smartbuildingPackage.CONNECTION__CONSTRAINTS:
+			case cpsPackage.CONNECTION__CONSTRAINTS:
 				return constraints != null && !constraints.isEmpty();
-			case smartbuildingPackage.CONNECTION__BIDIRECTIONAL:
+			case cpsPackage.CONNECTION__BIDIRECTIONAL:
 				return bidirectional != BIDIRECTIONAL_EDEFAULT;
-			case smartbuildingPackage.CONNECTION__PORT:
+			case cpsPackage.CONNECTION__PORT:
 				return port != null;
-			case smartbuildingPackage.CONNECTION__PROPERTIES:
+			case cpsPackage.CONNECTION__PROPERTIES:
 				return properties != null && !properties.isEmpty();
-			case smartbuildingPackage.CONNECTION__DESCRIPTION:
+			case cpsPackage.CONNECTION__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-			case smartbuildingPackage.CONNECTION__TYPE:
+			case cpsPackage.CONNECTION__TYPE:
 				return type != null;
 		}
 		return super.eIsSet(featureID);
@@ -977,7 +977,7 @@ public int compareType(Connection connection) {
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case smartbuildingPackage.CONNECTION___SIMILAR_TO__CONNECTION:
+			case cpsPackage.CONNECTION___SIMILAR_TO__CONNECTION:
 				return similarTo((Connection)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);

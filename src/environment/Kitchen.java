@@ -9,7 +9,7 @@ package environment;
  * <!-- end-user-doc -->
  *
  *
- * @see environment.smartbuildingPackage#getKitchen()
+ * @see environment.cpsPackage#getKitchen()
  * @model
  * @generated
  */

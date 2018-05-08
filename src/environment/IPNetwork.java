@@ -9,7 +9,7 @@ package environment;
  * <!-- end-user-doc -->
  *
  *
- * @see environment.smartbuildingPackage#getIPNetwork()
+ * @see environment.cpsPackage#getIPNetwork()
  * @model
  * @generated
  */

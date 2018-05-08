@@ -4,7 +4,7 @@ package environment.impl;
 
 import environment.Server;
 
-import environment.smartbuildingPackage;
+import environment.cpsPackage;
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -31,7 +31,7 @@ public class ServerImpl extends ComputingDeviceImpl implements Server {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return smartbuildingPackage.Literals.SERVER;
+		return cpsPackage.Literals.SERVER;
 	}
 
 } //ServerImpl

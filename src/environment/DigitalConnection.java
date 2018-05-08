@@ -15,7 +15,7 @@ package environment;
  *   <li>{@link environment.DigitalConnection#getProtocol <em>Protocol</em>}</li>
  * </ul>
  *
- * @see environment.smartbuildingPackage#getDigitalConnection()
+ * @see environment.cpsPackage#getDigitalConnection()
  * @model
  * @generated
  */
@@ -31,7 +31,7 @@ public interface DigitalConnection extends Connection {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Protocol</em>' attribute.
 	 * @see #setProtocol(String)
-	 * @see environment.smartbuildingPackage#getDigitalConnection_Protocol()
+	 * @see environment.cpsPackage#getDigitalConnection_Protocol()
 	 * @model
 	 * @generated
 	 */

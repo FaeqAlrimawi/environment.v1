@@ -3,8 +3,7 @@
 package environment.impl;
 
 import environment.Kitchen;
-import environment.smartbuildingPackage;
-
+import environment.cpsPackage;
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -31,7 +30,7 @@ public class KitchenImpl extends RoomImpl implements Kitchen {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return smartbuildingPackage.Literals.KITCHEN;
+		return cpsPackage.Literals.KITCHEN;
 	}
 
 } //KitchenImpl

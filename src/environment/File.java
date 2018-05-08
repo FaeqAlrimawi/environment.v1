@@ -16,7 +16,7 @@ package environment;
  *   <li>{@link environment.File#getUrl <em>Url</em>}</li>
  * </ul>
  *
- * @see environment.smartbuildingPackage#getFile()
+ * @see environment.cpsPackage#getFile()
  * @model
  * @generated
  */
@@ -33,7 +33,7 @@ public interface File extends DigitalAsset {
 	 * @return the value of the '<em>Status</em>' attribute.
 	 * @see environment.FileStatus
 	 * @see #setStatus(FileStatus)
-	 * @see environment.smartbuildingPackage#getFile_Status()
+	 * @see environment.cpsPackage#getFile_Status()
 	 * @model
 	 * @generated
 	 */
@@ -60,7 +60,7 @@ public interface File extends DigitalAsset {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Url</em>' attribute.
 	 * @see #setUrl(String)
-	 * @see environment.smartbuildingPackage#getFile_Url()
+	 * @see environment.cpsPackage#getFile_Url()
 	 * @model
 	 * @generated
 	 */

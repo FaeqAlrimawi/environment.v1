@@ -3,8 +3,7 @@
 package environment.impl;
 
 import environment.Employee;
-import environment.smartbuildingPackage;
-
+import environment.cpsPackage;
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -31,7 +30,7 @@ public class EmployeeImpl extends ActorImpl implements Employee {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return smartbuildingPackage.Literals.EMPLOYEE;
+		return cpsPackage.Literals.EMPLOYEE;
 	}
 
 } //EmployeeImpl

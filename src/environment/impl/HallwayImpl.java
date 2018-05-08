@@ -4,7 +4,7 @@ package environment.impl;
 
 import environment.Hallway;
 
-import environment.smartbuildingPackage;
+import environment.cpsPackage;
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -31,7 +31,7 @@ public class HallwayImpl extends PhysicalStructureImpl implements Hallway {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return smartbuildingPackage.Literals.HALLWAY;
+		return cpsPackage.Literals.HALLWAY;
 	}
 
 } //HallwayImpl

@@ -4,7 +4,7 @@ package environment.impl;
 
 import environment.Lab;
 
-import environment.smartbuildingPackage;
+import environment.cpsPackage;
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -31,7 +31,7 @@ public class LabImpl extends RoomImpl implements Lab {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return smartbuildingPackage.Literals.LAB;
+		return cpsPackage.Literals.LAB;
 	}
 
 } //LabImpl

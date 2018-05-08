@@ -9,7 +9,7 @@ package environment;
  * <!-- end-user-doc -->
  *
  *
- * @see environment.smartbuildingPackage#getElevatorsArea()
+ * @see environment.cpsPackage#getElevatorsArea()
  * @model
  * @generated
  */

@@ -4,7 +4,7 @@ package environment.impl;
 
 import environment.Asset;
 import environment.DigitalAsset;
-import environment.smartbuildingPackage;
+import environment.cpsPackage;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -69,7 +69,7 @@ public class DigitalAssetImpl extends AssetImpl implements DigitalAsset {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return smartbuildingPackage.Literals.DIGITAL_ASSET;
+		return cpsPackage.Literals.DIGITAL_ASSET;
 	}
 
 	/**
@@ -83,7 +83,7 @@ public class DigitalAssetImpl extends AssetImpl implements DigitalAsset {
 			parentAsset = (Asset)eResolveProxy(oldParentAsset);
 			if (parentAsset != oldParentAsset) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, smartbuildingPackage.DIGITAL_ASSET__PARENT_ASSET, oldParentAsset, parentAsset));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, cpsPackage.DIGITAL_ASSET__PARENT_ASSET, oldParentAsset, parentAsset));
 			}
 		}
 		return parentAsset;
@@ -107,7 +107,7 @@ public class DigitalAssetImpl extends AssetImpl implements DigitalAsset {
 		Asset oldParentAsset = parentAsset;
 		parentAsset = newParentAsset;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, smartbuildingPackage.DIGITAL_ASSET__PARENT_ASSET, oldParentAsset, parentAsset));
+			eNotify(new ENotificationImpl(this, Notification.SET, cpsPackage.DIGITAL_ASSET__PARENT_ASSET, oldParentAsset, parentAsset));
 	}
 
 	/**
@@ -117,7 +117,7 @@ public class DigitalAssetImpl extends AssetImpl implements DigitalAsset {
 	 */
 	public EList<DigitalAsset> getContainedAssets() {
 		if (containedAssets == null) {
-			containedAssets = new EObjectResolvingEList<DigitalAsset>(DigitalAsset.class, this, smartbuildingPackage.DIGITAL_ASSET__CONTAINED_ASSETS);
+			containedAssets = new EObjectResolvingEList<DigitalAsset>(DigitalAsset.class, this, cpsPackage.DIGITAL_ASSET__CONTAINED_ASSETS);
 		}
 		return containedAssets;
 	}
@@ -130,10 +130,10 @@ public class DigitalAssetImpl extends AssetImpl implements DigitalAsset {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case smartbuildingPackage.DIGITAL_ASSET__PARENT_ASSET:
+			case cpsPackage.DIGITAL_ASSET__PARENT_ASSET:
 				if (resolve) return getParentAsset();
 				return basicGetParentAsset();
-			case smartbuildingPackage.DIGITAL_ASSET__CONTAINED_ASSETS:
+			case cpsPackage.DIGITAL_ASSET__CONTAINED_ASSETS:
 				return getContainedAssets();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -148,10 +148,10 @@ public class DigitalAssetImpl extends AssetImpl implements DigitalAsset {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case smartbuildingPackage.DIGITAL_ASSET__PARENT_ASSET:
+			case cpsPackage.DIGITAL_ASSET__PARENT_ASSET:
 				setParentAsset((Asset)newValue);
 				return;
-			case smartbuildingPackage.DIGITAL_ASSET__CONTAINED_ASSETS:
+			case cpsPackage.DIGITAL_ASSET__CONTAINED_ASSETS:
 				getContainedAssets().clear();
 				getContainedAssets().addAll((Collection<? extends DigitalAsset>)newValue);
 				return;
@@ -167,10 +167,10 @@ public class DigitalAssetImpl extends AssetImpl implements DigitalAsset {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case smartbuildingPackage.DIGITAL_ASSET__PARENT_ASSET:
+			case cpsPackage.DIGITAL_ASSET__PARENT_ASSET:
 				setParentAsset((Asset)null);
 				return;
-			case smartbuildingPackage.DIGITAL_ASSET__CONTAINED_ASSETS:
+			case cpsPackage.DIGITAL_ASSET__CONTAINED_ASSETS:
 				getContainedAssets().clear();
 				return;
 		}
@@ -185,9 +185,9 @@ public class DigitalAssetImpl extends AssetImpl implements DigitalAsset {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case smartbuildingPackage.DIGITAL_ASSET__PARENT_ASSET:
+			case cpsPackage.DIGITAL_ASSET__PARENT_ASSET:
 				return parentAsset != null;
-			case smartbuildingPackage.DIGITAL_ASSET__CONTAINED_ASSETS:
+			case cpsPackage.DIGITAL_ASSET__CONTAINED_ASSETS:
 				return containedAssets != null && !containedAssets.isEmpty();
 		}
 		return super.eIsSet(featureID);

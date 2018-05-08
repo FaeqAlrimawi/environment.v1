@@ -4,7 +4,7 @@ package environment.impl;
 
 import environment.Toilet;
 
-import environment.smartbuildingPackage;
+import environment.cpsPackage;
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -31,7 +31,7 @@ public class ToiletImpl extends RoomImpl implements Toilet {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return smartbuildingPackage.Literals.TOILET;
+		return cpsPackage.Literals.TOILET;
 	}
 
 } //ToiletImpl

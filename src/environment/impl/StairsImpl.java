@@ -3,8 +3,7 @@
 package environment.impl;
 
 import environment.Stairs;
-import environment.smartbuildingPackage;
-
+import environment.cpsPackage;
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -31,7 +30,7 @@ public class StairsImpl extends PhysicalStructureImpl implements Stairs {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return smartbuildingPackage.Literals.STAIRS;
+		return cpsPackage.Literals.STAIRS;
 	}
 
 } //StairsImpl

@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link environment.Property#isAbstractable <em>Abstractable</em>}</li>
  * </ul>
  *
- * @see environment.smartbuildingPackage#getProperty()
+ * @see environment.cpsPackage#getProperty()
  * @model
  * @generated
  */
@@ -33,7 +33,7 @@ public interface Property extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see environment.smartbuildingPackage#getProperty_Name()
+	 * @see environment.cpsPackage#getProperty_Name()
 	 * @model id="true"
 	 * @generated
 	 */
@@ -59,7 +59,7 @@ public interface Property extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Value</em>' attribute.
 	 * @see #setValue(String)
-	 * @see environment.smartbuildingPackage#getProperty_Value()
+	 * @see environment.cpsPackage#getProperty_Value()
 	 * @model
 	 * @generated
 	 */
@@ -85,7 +85,7 @@ public interface Property extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Abstractable</em>' attribute.
 	 * @see #setAbstractable(boolean)
-	 * @see environment.smartbuildingPackage#getProperty_Abstractable()
+	 * @see environment.cpsPackage#getProperty_Abstractable()
 	 * @model
 	 * @generated
 	 */

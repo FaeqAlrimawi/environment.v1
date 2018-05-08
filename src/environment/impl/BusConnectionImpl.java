@@ -3,8 +3,7 @@
 package environment.impl;
 
 import environment.BusConnection;
-import environment.smartbuildingPackage;
-
+import environment.cpsPackage;
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -31,7 +30,7 @@ public class BusConnectionImpl extends DigitalConnectionImpl implements BusConne
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return smartbuildingPackage.Literals.BUS_CONNECTION;
+		return cpsPackage.Literals.BUS_CONNECTION;
 	}
 
 } //BusConnectionImpl

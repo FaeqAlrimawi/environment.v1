@@ -9,7 +9,7 @@ package environment;
  * <!-- end-user-doc -->
  *
  *
- * @see environment.smartbuildingPackage#getCardReader()
+ * @see environment.cpsPackage#getCardReader()
  * @model
  * @generated
  */

@@ -4,7 +4,7 @@ package environment.impl;
 
 import environment.HVAC;
 
-import environment.smartbuildingPackage;
+import environment.cpsPackage;
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -31,7 +31,7 @@ public class HVACImpl extends ComputingDeviceImpl implements HVAC {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return smartbuildingPackage.Literals.HVAC;
+		return cpsPackage.Literals.HVAC;
 	}
 
 } //HVACImpl

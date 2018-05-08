@@ -9,7 +9,7 @@ package environment;
  * <!-- end-user-doc -->
  *
  *
- * @see environment.smartbuildingPackage#getPhysicalStructure()
+ * @see environment.cpsPackage#getPhysicalStructure()
  * @model
  * @generated
  */

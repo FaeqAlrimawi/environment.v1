@@ -3,7 +3,7 @@
 package environment.impl;
 
 import environment.Action;
-import environment.smartbuildingPackage;
+import environment.cpsPackage;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -110,7 +110,7 @@ public class ActionImpl extends MinimalEObjectImpl.Container implements Action {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return smartbuildingPackage.Literals.ACTION;
+		return cpsPackage.Literals.ACTION;
 	}
 
 	/**
@@ -131,7 +131,7 @@ public class ActionImpl extends MinimalEObjectImpl.Container implements Action {
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, smartbuildingPackage.ACTION__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, cpsPackage.ACTION__NAME, oldName, name));
 	}
 
 	/**
@@ -141,7 +141,7 @@ public class ActionImpl extends MinimalEObjectImpl.Container implements Action {
 	 */
 	public EList<String> getPreconditions() {
 		if (preconditions == null) {
-			preconditions = new EDataTypeUniqueEList<String>(String.class, this, smartbuildingPackage.ACTION__PRECONDITIONS);
+			preconditions = new EDataTypeUniqueEList<String>(String.class, this, cpsPackage.ACTION__PRECONDITIONS);
 		}
 		return preconditions;
 	}
@@ -153,7 +153,7 @@ public class ActionImpl extends MinimalEObjectImpl.Container implements Action {
 	 */
 	public EList<String> getPostconditions() {
 		if (postconditions == null) {
-			postconditions = new EDataTypeUniqueEList<String>(String.class, this, smartbuildingPackage.ACTION__POSTCONDITIONS);
+			postconditions = new EDataTypeUniqueEList<String>(String.class, this, cpsPackage.ACTION__POSTCONDITIONS);
 		}
 		return postconditions;
 	}
@@ -176,7 +176,7 @@ public class ActionImpl extends MinimalEObjectImpl.Container implements Action {
 		String oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, smartbuildingPackage.ACTION__DESCRIPTION, oldDescription, description));
+			eNotify(new ENotificationImpl(this, Notification.SET, cpsPackage.ACTION__DESCRIPTION, oldDescription, description));
 	}
 
 	/**
@@ -187,13 +187,13 @@ public class ActionImpl extends MinimalEObjectImpl.Container implements Action {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case smartbuildingPackage.ACTION__NAME:
+			case cpsPackage.ACTION__NAME:
 				return getName();
-			case smartbuildingPackage.ACTION__PRECONDITIONS:
+			case cpsPackage.ACTION__PRECONDITIONS:
 				return getPreconditions();
-			case smartbuildingPackage.ACTION__POSTCONDITIONS:
+			case cpsPackage.ACTION__POSTCONDITIONS:
 				return getPostconditions();
-			case smartbuildingPackage.ACTION__DESCRIPTION:
+			case cpsPackage.ACTION__DESCRIPTION:
 				return getDescription();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -208,18 +208,18 @@ public class ActionImpl extends MinimalEObjectImpl.Container implements Action {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case smartbuildingPackage.ACTION__NAME:
+			case cpsPackage.ACTION__NAME:
 				setName((String)newValue);
 				return;
-			case smartbuildingPackage.ACTION__PRECONDITIONS:
+			case cpsPackage.ACTION__PRECONDITIONS:
 				getPreconditions().clear();
 				getPreconditions().addAll((Collection<? extends String>)newValue);
 				return;
-			case smartbuildingPackage.ACTION__POSTCONDITIONS:
+			case cpsPackage.ACTION__POSTCONDITIONS:
 				getPostconditions().clear();
 				getPostconditions().addAll((Collection<? extends String>)newValue);
 				return;
-			case smartbuildingPackage.ACTION__DESCRIPTION:
+			case cpsPackage.ACTION__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
 		}
@@ -234,16 +234,16 @@ public class ActionImpl extends MinimalEObjectImpl.Container implements Action {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case smartbuildingPackage.ACTION__NAME:
+			case cpsPackage.ACTION__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case smartbuildingPackage.ACTION__PRECONDITIONS:
+			case cpsPackage.ACTION__PRECONDITIONS:
 				getPreconditions().clear();
 				return;
-			case smartbuildingPackage.ACTION__POSTCONDITIONS:
+			case cpsPackage.ACTION__POSTCONDITIONS:
 				getPostconditions().clear();
 				return;
-			case smartbuildingPackage.ACTION__DESCRIPTION:
+			case cpsPackage.ACTION__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
 		}
@@ -258,13 +258,13 @@ public class ActionImpl extends MinimalEObjectImpl.Container implements Action {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case smartbuildingPackage.ACTION__NAME:
+			case cpsPackage.ACTION__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case smartbuildingPackage.ACTION__PRECONDITIONS:
+			case cpsPackage.ACTION__PRECONDITIONS:
 				return preconditions != null && !preconditions.isEmpty();
-			case smartbuildingPackage.ACTION__POSTCONDITIONS:
+			case cpsPackage.ACTION__POSTCONDITIONS:
 				return postconditions != null && !postconditions.isEmpty();
-			case smartbuildingPackage.ACTION__DESCRIPTION:
+			case cpsPackage.ACTION__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 		}
 		return super.eIsSet(featureID);

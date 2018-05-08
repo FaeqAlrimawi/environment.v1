@@ -3,8 +3,7 @@
 package environment.impl;
 
 import environment.BusNetwork;
-import environment.smartbuildingPackage;
-
+import environment.cpsPackage;
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -31,7 +30,7 @@ public class BusNetworkImpl extends DigitalNetworkImpl implements BusNetwork {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return smartbuildingPackage.Literals.BUS_NETWORK;
+		return cpsPackage.Literals.BUS_NETWORK;
 	}
 
 } //BusNetworkImpl

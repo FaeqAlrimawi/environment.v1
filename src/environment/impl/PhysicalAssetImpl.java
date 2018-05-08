@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 import environment.Asset;
 import environment.PhysicalAsset;
-import environment.smartbuildingPackage;
+import environment.cpsPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -66,7 +66,7 @@ public class PhysicalAssetImpl extends AssetImpl implements PhysicalAsset {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return smartbuildingPackage.Literals.PHYSICAL_ASSET;
+		return cpsPackage.Literals.PHYSICAL_ASSET;
 	}
 
 	/**
@@ -76,7 +76,7 @@ public class PhysicalAssetImpl extends AssetImpl implements PhysicalAsset {
 	 */
 	public EList<Asset> getContainedAssets() {
 		if (containedAssets == null) {
-			containedAssets = new EObjectResolvingEList<Asset>(Asset.class, this, smartbuildingPackage.PHYSICAL_ASSET__CONTAINED_ASSETS);
+			containedAssets = new EObjectResolvingEList<Asset>(Asset.class, this, cpsPackage.PHYSICAL_ASSET__CONTAINED_ASSETS);
 		}
 		return containedAssets;
 	}
@@ -92,7 +92,7 @@ public class PhysicalAssetImpl extends AssetImpl implements PhysicalAsset {
 			parentAsset = (PhysicalAsset)eResolveProxy(oldParentAsset);
 			if (parentAsset != oldParentAsset) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, smartbuildingPackage.PHYSICAL_ASSET__PARENT_ASSET, oldParentAsset, parentAsset));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, cpsPackage.PHYSICAL_ASSET__PARENT_ASSET, oldParentAsset, parentAsset));
 			}
 		}
 		return parentAsset;
@@ -116,7 +116,7 @@ public class PhysicalAssetImpl extends AssetImpl implements PhysicalAsset {
 		PhysicalAsset oldParentAsset = parentAsset;
 		parentAsset = newParentAsset;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, smartbuildingPackage.PHYSICAL_ASSET__PARENT_ASSET, oldParentAsset, parentAsset));
+			eNotify(new ENotificationImpl(this, Notification.SET, cpsPackage.PHYSICAL_ASSET__PARENT_ASSET, oldParentAsset, parentAsset));
 	}
 
 	/**
@@ -127,9 +127,9 @@ public class PhysicalAssetImpl extends AssetImpl implements PhysicalAsset {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case smartbuildingPackage.PHYSICAL_ASSET__CONTAINED_ASSETS:
+			case cpsPackage.PHYSICAL_ASSET__CONTAINED_ASSETS:
 				return getContainedAssets();
-			case smartbuildingPackage.PHYSICAL_ASSET__PARENT_ASSET:
+			case cpsPackage.PHYSICAL_ASSET__PARENT_ASSET:
 				if (resolve) return getParentAsset();
 				return basicGetParentAsset();
 		}
@@ -145,11 +145,11 @@ public class PhysicalAssetImpl extends AssetImpl implements PhysicalAsset {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case smartbuildingPackage.PHYSICAL_ASSET__CONTAINED_ASSETS:
+			case cpsPackage.PHYSICAL_ASSET__CONTAINED_ASSETS:
 				getContainedAssets().clear();
 				getContainedAssets().addAll((Collection<? extends Asset>)newValue);
 				return;
-			case smartbuildingPackage.PHYSICAL_ASSET__PARENT_ASSET:
+			case cpsPackage.PHYSICAL_ASSET__PARENT_ASSET:
 				setParentAsset((PhysicalAsset)newValue);
 				return;
 		}
@@ -164,10 +164,10 @@ public class PhysicalAssetImpl extends AssetImpl implements PhysicalAsset {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case smartbuildingPackage.PHYSICAL_ASSET__CONTAINED_ASSETS:
+			case cpsPackage.PHYSICAL_ASSET__CONTAINED_ASSETS:
 				getContainedAssets().clear();
 				return;
-			case smartbuildingPackage.PHYSICAL_ASSET__PARENT_ASSET:
+			case cpsPackage.PHYSICAL_ASSET__PARENT_ASSET:
 				setParentAsset((PhysicalAsset)null);
 				return;
 		}
@@ -182,9 +182,9 @@ public class PhysicalAssetImpl extends AssetImpl implements PhysicalAsset {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case smartbuildingPackage.PHYSICAL_ASSET__CONTAINED_ASSETS:
+			case cpsPackage.PHYSICAL_ASSET__CONTAINED_ASSETS:
 				return containedAssets != null && !containedAssets.isEmpty();
-			case smartbuildingPackage.PHYSICAL_ASSET__PARENT_ASSET:
+			case cpsPackage.PHYSICAL_ASSET__PARENT_ASSET:
 				return parentAsset != null;
 		}
 		return super.eIsSet(featureID);

@@ -9,7 +9,7 @@ package environment;
  * <!-- end-user-doc -->
  *
  *
- * @see environment.smartbuildingPackage#getPhysicalConnection()
+ * @see environment.cpsPackage#getPhysicalConnection()
  * @model
  * @generated
  */

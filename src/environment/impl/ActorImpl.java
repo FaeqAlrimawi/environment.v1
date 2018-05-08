@@ -3,7 +3,7 @@
 package environment.impl;
 
 import environment.Actor;
-import environment.smartbuildingPackage;
+import environment.cpsPackage;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -60,7 +60,7 @@ public class ActorImpl extends PhysicalAssetImpl implements Actor {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return smartbuildingPackage.Literals.ACTOR;
+		return cpsPackage.Literals.ACTOR;
 	}
 
 	/**
@@ -81,7 +81,7 @@ public class ActorImpl extends PhysicalAssetImpl implements Actor {
 		String oldRole = role;
 		role = newRole;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, smartbuildingPackage.ACTOR__ROLE, oldRole, role));
+			eNotify(new ENotificationImpl(this, Notification.SET, cpsPackage.ACTOR__ROLE, oldRole, role));
 	}
 
 	/**
@@ -92,7 +92,7 @@ public class ActorImpl extends PhysicalAssetImpl implements Actor {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case smartbuildingPackage.ACTOR__ROLE:
+			case cpsPackage.ACTOR__ROLE:
 				return getRole();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -106,7 +106,7 @@ public class ActorImpl extends PhysicalAssetImpl implements Actor {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case smartbuildingPackage.ACTOR__ROLE:
+			case cpsPackage.ACTOR__ROLE:
 				setRole((String)newValue);
 				return;
 		}
@@ -121,7 +121,7 @@ public class ActorImpl extends PhysicalAssetImpl implements Actor {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case smartbuildingPackage.ACTOR__ROLE:
+			case cpsPackage.ACTOR__ROLE:
 				setRole(ROLE_EDEFAULT);
 				return;
 		}
@@ -136,7 +136,7 @@ public class ActorImpl extends PhysicalAssetImpl implements Actor {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case smartbuildingPackage.ACTOR__ROLE:
+			case cpsPackage.ACTOR__ROLE:
 				return ROLE_EDEFAULT == null ? role != null : !ROLE_EDEFAULT.equals(role);
 		}
 		return super.eIsSet(featureID);

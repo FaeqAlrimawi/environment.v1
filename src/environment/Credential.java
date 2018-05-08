@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link environment.Credential#getOther <em>Other</em>}</li>
  * </ul>
  *
- * @see environment.smartbuildingPackage#getCredential()
+ * @see environment.cpsPackage#getCredential()
  * @model
  * @generated
  */
@@ -34,7 +34,7 @@ public interface Credential extends EObject {
 	 * @return the value of the '<em>Type</em>' attribute.
 	 * @see environment.CredentialType
 	 * @see #setType(CredentialType)
-	 * @see environment.smartbuildingPackage#getCredential_Type()
+	 * @see environment.cpsPackage#getCredential_Type()
 	 * @model id="true"
 	 * @generated
 	 */
@@ -61,7 +61,7 @@ public interface Credential extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Other</em>' attribute.
 	 * @see #setOther(String)
-	 * @see environment.smartbuildingPackage#getCredential_Other()
+	 * @see environment.cpsPackage#getCredential_Other()
 	 * @model
 	 * @generated
 	 */

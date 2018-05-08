@@ -9,7 +9,7 @@ package environment;
  * <!-- end-user-doc -->
  *
  *
- * @see environment.smartbuildingPackage#getLaptop()
+ * @see environment.cpsPackage#getLaptop()
  * @model
  * @generated
  */

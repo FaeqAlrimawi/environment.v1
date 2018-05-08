@@ -17,7 +17,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link environment.PhysicalAsset#getParentAsset <em>Parent Asset</em>}</li>
  * </ul>
  *
- * @see environment.smartbuildingPackage#getPhysicalAsset()
+ * @see environment.cpsPackage#getPhysicalAsset()
  * @model
  * @generated
  */
@@ -32,7 +32,7 @@ public interface PhysicalAsset extends Asset {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Contained Assets</em>' reference list.
-	 * @see environment.smartbuildingPackage#getPhysicalAsset_ContainedAssets()
+	 * @see environment.cpsPackage#getPhysicalAsset_ContainedAssets()
 	 * @model
 	 * @generated
 	 */
@@ -48,7 +48,7 @@ public interface PhysicalAsset extends Asset {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Parent Asset</em>' reference.
 	 * @see #setParentAsset(PhysicalAsset)
-	 * @see environment.smartbuildingPackage#getPhysicalAsset_ParentAsset()
+	 * @see environment.cpsPackage#getPhysicalAsset_ParentAsset()
 	 * @model
 	 * @generated
 	 */

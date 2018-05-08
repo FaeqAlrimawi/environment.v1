@@ -21,7 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link environment.Action#getDescription <em>Description</em>}</li>
  * </ul>
  *
- * @see environment.smartbuildingPackage#getAction()
+ * @see environment.cpsPackage#getAction()
  * @model
  * @generated
  */
@@ -36,7 +36,7 @@ public interface Action extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see environment.smartbuildingPackage#getAction_Name()
+	 * @see environment.cpsPackage#getAction_Name()
 	 * @model id="true"
 	 * @generated
 	 */
@@ -62,7 +62,7 @@ public interface Action extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Preconditions</em>' attribute list.
-	 * @see environment.smartbuildingPackage#getAction_Preconditions()
+	 * @see environment.cpsPackage#getAction_Preconditions()
 	 * @model
 	 * @generated
 	 */
@@ -78,7 +78,7 @@ public interface Action extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Postconditions</em>' attribute list.
-	 * @see environment.smartbuildingPackage#getAction_Postconditions()
+	 * @see environment.cpsPackage#getAction_Postconditions()
 	 * @model
 	 * @generated
 	 */
@@ -94,7 +94,7 @@ public interface Action extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Description</em>' attribute.
 	 * @see #setDescription(String)
-	 * @see environment.smartbuildingPackage#getAction_Description()
+	 * @see environment.cpsPackage#getAction_Description()
 	 * @model
 	 * @generated
 	 */

@@ -3,7 +3,7 @@
 package environment.impl;
 
 import environment.Elevator;
-import environment.smartbuildingPackage;
+import environment.cpsPackage;
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -30,7 +30,7 @@ public class ElevatorImpl extends ComputingDeviceImpl implements Elevator {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return smartbuildingPackage.Literals.ELEVATOR;
+		return cpsPackage.Literals.ELEVATOR;
 	}
 
 } //ElevatorImpl

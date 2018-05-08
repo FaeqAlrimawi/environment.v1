@@ -9,7 +9,7 @@ package environment;
  * <!-- end-user-doc -->
  *
  *
- * @see environment.smartbuildingPackage#getLounge()
+ * @see environment.cpsPackage#getLounge()
  * @model
  * @generated
  */

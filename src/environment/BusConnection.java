@@ -9,7 +9,7 @@ package environment;
  * <!-- end-user-doc -->
  *
  *
- * @see environment.smartbuildingPackage#getBusConnection()
+ * @see environment.cpsPackage#getBusConnection()
  * @model
  * @generated
  */
