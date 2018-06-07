@@ -127,10 +127,8 @@ public class PhysicalAssetImpl extends AssetImpl implements PhysicalAsset {
 		EList<Asset> containedAssets = newParentAsset.getContainedAssets();
 		
 		//add to the new parent
-		if(!containedAssets.contains(this)) {
-			
+		if(!containedAssets.contains(this)) {	
 			containedAssets.add(this);
-		//	newParentAsset.eSet(cpsPackage.PHYSICAL_ASSET__CONTAINED_ASSETS, (Object)containedAssets);
 		}
 		
 		//remove from old parent
@@ -149,7 +147,6 @@ public class PhysicalAssetImpl extends AssetImpl implements PhysicalAsset {
 		switch (featureID) {
 			case cpsPackage.PHYSICAL_ASSET__CONTAINED_ASSETS:
 				removeDuplicates(getContainedAssets());
-				System.out.println("eGet invoked " + this.getName());
 				return getContainedAssets();
 			case cpsPackage.PHYSICAL_ASSET__PARENT_ASSET:
 				if (resolve) return getParentAsset();
@@ -161,7 +158,7 @@ public class PhysicalAssetImpl extends AssetImpl implements PhysicalAsset {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-
+	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
@@ -169,7 +166,6 @@ public class PhysicalAssetImpl extends AssetImpl implements PhysicalAsset {
 		switch (featureID) {
 			case cpsPackage.PHYSICAL_ASSET__CONTAINED_ASSETS:
 				getContainedAssets().clear();
-				
 				getContainedAssets().addAll((Collection<? extends Asset>)newValue);
 				return;
 			case cpsPackage.PHYSICAL_ASSET__PARENT_ASSET:
@@ -184,8 +180,7 @@ public class PhysicalAssetImpl extends AssetImpl implements PhysicalAsset {
 		Set<Asset> hs = new HashSet<Asset>();
 		hs.addAll(assets);
 		assets.clear();
-		assets.addAll(hs);
-		
+		assets.addAll(hs);		
 	}
 	
 

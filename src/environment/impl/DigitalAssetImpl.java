@@ -7,6 +7,8 @@ import environment.DigitalAsset;
 import environment.PhysicalAsset;
 import environment.cpsPackage;
 import java.util.Collection;
+import java.util.HashSet;
+import java.util.Set;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -114,9 +116,9 @@ public class DigitalAssetImpl extends AssetImpl implements DigitalAsset {
 					return;
 				}
 				
-				if(newParentAsset.getClass().getName().contains("Physical")) {
+				if(PhysicalAsset.class.isInstance(newParentAsset)) {
 					EList<Asset> containedAssets = ((PhysicalAsset)newParentAsset).getContainedAssets();
-					
+					System.out.println("add to physical " + this.getName());
 					//add to the new parent
 					if(!containedAssets.contains(this)) {
 						((PhysicalAsset)newParentAsset).getContainedAssets().add(this);
@@ -124,16 +126,18 @@ public class DigitalAssetImpl extends AssetImpl implements DigitalAsset {
 					
 					//remove from old parent
 					if(oldParentAsset != null) {
-						if(oldParentAsset.getClass().getName().contains("Physical")) {
+						if(PhysicalAsset.class.isInstance(oldParentAsset)) {
 							((PhysicalAsset)oldParentAsset).getContainedAssets().remove(this);
-						} else if(oldParentAsset.getClass().getName().contains("Digital")) {
+							System.out.println("remove from physical " + this.getName());
+						} else if(DigitalAsset.class.isInstance(oldParentAsset)) {
+							System.out.println("remove from digital " + this.getName());
 							((DigitalAsset)oldParentAsset).getContainedAssets().remove(this);
 						}
 						
 					}
-				} else if(newParentAsset.getClass().getName().contains("Digital")) {
+				} else if(DigitalAsset.class.isInstance(newParentAsset)) {
 					EList<DigitalAsset> containedAssets = ((DigitalAsset)newParentAsset).getContainedAssets();
-					
+					System.out.println("add to digital " + this.getName());
 					//add to the new parent
 					if(!containedAssets.contains(this)) {
 						((DigitalAsset)newParentAsset).getContainedAssets().add(this);
@@ -141,10 +145,12 @@ public class DigitalAssetImpl extends AssetImpl implements DigitalAsset {
 					
 					//remove from old parent
 					if(oldParentAsset != null) {
-						if(oldParentAsset.getClass().getName().contains("Physical")) {
+						if(PhysicalAsset.class.isInstance(oldParentAsset)) {
 							((PhysicalAsset)oldParentAsset).getContainedAssets().remove(this);
-						} else if(oldParentAsset.getClass().getName().contains("Digital")) {
+							System.out.println("remove from physical " + this.getName());
+						} else if(DigitalAsset.class.isInstance(oldParentAsset)) {
 							((DigitalAsset)oldParentAsset).getContainedAssets().remove(this);
+							System.out.println("remove from digital " + this.getName());
 						}
 				}
 				}
@@ -168,7 +174,7 @@ public class DigitalAssetImpl extends AssetImpl implements DigitalAsset {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * 
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
@@ -177,11 +183,20 @@ public class DigitalAssetImpl extends AssetImpl implements DigitalAsset {
 				if (resolve) return getParentAsset();
 				return basicGetParentAsset();
 			case cpsPackage.DIGITAL_ASSET__CONTAINED_ASSETS:
+				removeDuplicates(getContainedAssets());
 				return getContainedAssets();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
 
+	private void removeDuplicates(Collection<DigitalAsset> assets) {
+
+		Set<DigitalAsset> hs = new HashSet<DigitalAsset>();
+		hs.addAll(assets);
+		assets.clear();
+		assets.addAll(hs);		
+	}
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
