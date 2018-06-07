@@ -118,47 +118,61 @@ public class DigitalAssetImpl extends AssetImpl implements DigitalAsset {
 				
 				if(PhysicalAsset.class.isInstance(newParentAsset)) {
 					EList<Asset> containedAssets = ((PhysicalAsset)newParentAsset).getContainedAssets();
-					System.out.println("add to physical " + this.getName());
-					//add to the new parent
-					if(!containedAssets.contains(this)) {
-						((PhysicalAsset)newParentAsset).getContainedAssets().add(this);
-					}
 					
-					//remove from old parent
-					if(oldParentAsset != null) {
-						if(PhysicalAsset.class.isInstance(oldParentAsset)) {
-							((PhysicalAsset)oldParentAsset).getContainedAssets().remove(this);
-							System.out.println("remove from physical " + this.getName());
-						} else if(DigitalAsset.class.isInstance(oldParentAsset)) {
-							System.out.println("remove from digital " + this.getName());
-							((DigitalAsset)oldParentAsset).getContainedAssets().remove(this);
-						}
+					//add to the new parent
+					if(!isContainedInPhysical((Collection<Asset>)containedAssets)) {
 						
+						containedAssets.add(this);
+						removeDuplicatesPhysical((Collection<Asset>)containedAssets);
 					}
 				} else if(DigitalAsset.class.isInstance(newParentAsset)) {
 					EList<DigitalAsset> containedAssets = ((DigitalAsset)newParentAsset).getContainedAssets();
-					System.out.println("add to digital " + this.getName());
-					//add to the new parent
-					if(!containedAssets.contains(this)) {
-						((DigitalAsset)newParentAsset).getContainedAssets().add(this);
-					}
 					
-					//remove from old parent
-					if(oldParentAsset != null) {
-						if(PhysicalAsset.class.isInstance(oldParentAsset)) {
-							((PhysicalAsset)oldParentAsset).getContainedAssets().remove(this);
-							System.out.println("remove from physical " + this.getName());
-						} else if(DigitalAsset.class.isInstance(oldParentAsset)) {
-							((DigitalAsset)oldParentAsset).getContainedAssets().remove(this);
-							System.out.println("remove from digital " + this.getName());
+					//add to the new parent
+						if(!isContainedIn((Collection<DigitalAsset>)containedAssets)) {
+		
+							containedAssets.add(this);
 						}
-				}
+						
+						//removeDuplicates((Collection<DigitalAsset>)containedAssets);			
 				}
 				
-				
+				//remove from old parent
+				if(oldParentAsset != null) {
+					if(PhysicalAsset.class.isInstance(oldParentAsset)) {
+						((PhysicalAsset)oldParentAsset).getContainedAssets().remove(this);
+					
+					} else if(DigitalAsset.class.isInstance(oldParentAsset)) {
+						((DigitalAsset)oldParentAsset).getContainedAssets().remove(this);
+		
+					}
+			}
 				
 	}
+	
+	private boolean isContainedIn(Collection<DigitalAsset> containedAssets) {
+		
+		for(Asset ast : containedAssets) {
+			if(this.getName().equalsIgnoreCase(ast.getName())) {
+				return true;
+			}
+		}
+		
+		return false;
+	}
+	
+	private boolean isContainedInPhysical(Collection<Asset> containedAssets) {
+		
+		for(Asset ast : containedAssets) {
+			if(this.getName().equalsIgnoreCase(ast.getName())) {
+				return true;
+			}
+		}
+		
+		return false;
+	}
 
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -192,6 +206,14 @@ public class DigitalAssetImpl extends AssetImpl implements DigitalAsset {
 	private void removeDuplicates(Collection<DigitalAsset> assets) {
 
 		Set<DigitalAsset> hs = new HashSet<DigitalAsset>();
+		hs.addAll(assets);
+		assets.clear();
+		assets.addAll(hs);		
+	}
+	
+	private void removeDuplicatesPhysical(Collection<Asset> assets) {
+
+		Set<Asset> hs = new HashSet<Asset>();
 		hs.addAll(assets);
 		assets.clear();
 		assets.addAll(hs);		

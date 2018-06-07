@@ -127,7 +127,7 @@ public class PhysicalAssetImpl extends AssetImpl implements PhysicalAsset {
 		EList<Asset> containedAssets = newParentAsset.getContainedAssets();
 		
 		//add to the new parent
-		if(!containedAssets.contains(this)) {	
+		if(!isContainedIn(containedAssets)) {	
 			containedAssets.add(this);
 		}
 		
@@ -135,6 +135,18 @@ public class PhysicalAssetImpl extends AssetImpl implements PhysicalAsset {
 		if(oldParentAsset != null) {
 			oldParentAsset.getContainedAssets().remove(this);
 		}
+	}
+	
+	
+	private boolean isContainedIn(Collection<Asset> containedAssets) {
+		
+		for(Asset ast : containedAssets) {
+			if(this.getName().equalsIgnoreCase(ast.getName())) {
+				return true;
+			}
+		}
+		
+		return false;
 	}
 
 	/**
