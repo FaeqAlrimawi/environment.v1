@@ -3,6 +3,8 @@
 package environment.impl;
 
 import java.util.Collection;
+import java.util.HashSet;
+import java.util.Set;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
@@ -110,24 +112,44 @@ public class PhysicalAssetImpl extends AssetImpl implements PhysicalAsset {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	public void setParentAsset(PhysicalAsset newParentAsset) {
 		PhysicalAsset oldParentAsset = parentAsset;
 		parentAsset = newParentAsset;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, cpsPackage.PHYSICAL_ASSET__PARENT_ASSET, oldParentAsset, parentAsset));
+		
+		//add this object as a child to the parent as well and remove from old parent if any
+		if(newParentAsset == null) {
+			return;
+		}
+		
+		EList<Asset> containedAssets = newParentAsset.getContainedAssets();
+		
+		//add to the new parent
+		if(!containedAssets.contains(this)) {
+			
+			containedAssets.add(this);
+		//	newParentAsset.eSet(cpsPackage.PHYSICAL_ASSET__CONTAINED_ASSETS, (Object)containedAssets);
+		}
+		
+		//remove from old parent
+		if(oldParentAsset != null) {
+			oldParentAsset.getContainedAssets().remove(this);
+		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case cpsPackage.PHYSICAL_ASSET__CONTAINED_ASSETS:
+				removeDuplicates(getContainedAssets());
+				System.out.println("eGet invoked " + this.getName());
 				return getContainedAssets();
 			case cpsPackage.PHYSICAL_ASSET__PARENT_ASSET:
 				if (resolve) return getParentAsset();
@@ -139,7 +161,7 @@ public class PhysicalAssetImpl extends AssetImpl implements PhysicalAsset {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
@@ -147,6 +169,7 @@ public class PhysicalAssetImpl extends AssetImpl implements PhysicalAsset {
 		switch (featureID) {
 			case cpsPackage.PHYSICAL_ASSET__CONTAINED_ASSETS:
 				getContainedAssets().clear();
+				
 				getContainedAssets().addAll((Collection<? extends Asset>)newValue);
 				return;
 			case cpsPackage.PHYSICAL_ASSET__PARENT_ASSET:
@@ -155,6 +178,16 @@ public class PhysicalAssetImpl extends AssetImpl implements PhysicalAsset {
 		}
 		super.eSet(featureID, newValue);
 	}
+	
+	private void removeDuplicates(Collection<Asset> assets) {
+
+		Set<Asset> hs = new HashSet<Asset>();
+		hs.addAll(assets);
+		assets.clear();
+		assets.addAll(hs);
+		
+	}
+	
 
 	/**
 	 * <!-- begin-user-doc -->

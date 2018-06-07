@@ -168,10 +168,15 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	protected AssetImpl() {
 		super();
+		
+		//by default, control is set to the name of the class that is invoked
+		String className = this.getClass().getName();
+		String [] names = className.split("\\.");
+		String ctrl = names[names.length-1].replace("Impl", "");
+		setControl(ctrl);
 	}
 
 	/**

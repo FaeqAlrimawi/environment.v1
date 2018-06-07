@@ -3,7 +3,6 @@
 package environment.impl;
 
 import environment.FireAlarm;
-
 import environment.cpsPackage;
 import org.eclipse.emf.ecore.EClass;
 

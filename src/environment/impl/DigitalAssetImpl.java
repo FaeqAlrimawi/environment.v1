@@ -4,6 +4,7 @@ package environment.impl;
 
 import environment.Asset;
 import environment.DigitalAsset;
+import environment.PhysicalAsset;
 import environment.cpsPackage;
 import java.util.Collection;
 
@@ -56,7 +57,7 @@ public class DigitalAssetImpl extends AssetImpl implements DigitalAsset {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	
 	 */
 	protected DigitalAssetImpl() {
 		super();
@@ -101,13 +102,55 @@ public class DigitalAssetImpl extends AssetImpl implements DigitalAsset {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	public void setParentAsset(Asset newParentAsset) {
 		Asset oldParentAsset = parentAsset;
 		parentAsset = newParentAsset;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, cpsPackage.DIGITAL_ASSET__PARENT_ASSET, oldParentAsset, parentAsset));
+		
+		//add this object as a child to the parent as well and remove from old parent if any
+				if(newParentAsset == null) {
+					return;
+				}
+				
+				if(newParentAsset.getClass().getName().contains("Physical")) {
+					EList<Asset> containedAssets = ((PhysicalAsset)newParentAsset).getContainedAssets();
+					
+					//add to the new parent
+					if(!containedAssets.contains(this)) {
+						((PhysicalAsset)newParentAsset).getContainedAssets().add(this);
+					}
+					
+					//remove from old parent
+					if(oldParentAsset != null) {
+						if(oldParentAsset.getClass().getName().contains("Physical")) {
+							((PhysicalAsset)oldParentAsset).getContainedAssets().remove(this);
+						} else if(oldParentAsset.getClass().getName().contains("Digital")) {
+							((DigitalAsset)oldParentAsset).getContainedAssets().remove(this);
+						}
+						
+					}
+				} else if(newParentAsset.getClass().getName().contains("Digital")) {
+					EList<DigitalAsset> containedAssets = ((DigitalAsset)newParentAsset).getContainedAssets();
+					
+					//add to the new parent
+					if(!containedAssets.contains(this)) {
+						((DigitalAsset)newParentAsset).getContainedAssets().add(this);
+					}
+					
+					//remove from old parent
+					if(oldParentAsset != null) {
+						if(oldParentAsset.getClass().getName().contains("Physical")) {
+							((PhysicalAsset)oldParentAsset).getContainedAssets().remove(this);
+						} else if(oldParentAsset.getClass().getName().contains("Digital")) {
+							((DigitalAsset)oldParentAsset).getContainedAssets().remove(this);
+						}
+				}
+				}
+				
+				
+				
 	}
 
 	/**

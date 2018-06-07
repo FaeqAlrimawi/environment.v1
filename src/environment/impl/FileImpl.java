@@ -4,7 +4,6 @@ package environment.impl;
 
 import environment.File;
 import environment.FileStatus;
-
 import environment.cpsPackage;
 import org.eclipse.emf.common.notify.Notification;
 

@@ -337,6 +337,96 @@ public interface EnvironmentFactory extends EFactory {
 	ElevatorsArea createElevatorsArea();
 
 	/**
+	 * Returns a new object of class '<em>IP Network</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>IP Network</em>'.
+	 * @generated
+	 */
+	IPNetwork createIPNetwork();
+
+	/**
+	 * Returns a new object of class '<em>Digital Network</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Digital Network</em>'.
+	 * @generated
+	 */
+	DigitalNetwork createDigitalNetwork();
+
+	/**
+	 * Returns a new object of class '<em>Bus Network</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Bus Network</em>'.
+	 * @generated
+	 */
+	BusNetwork createBusNetwork();
+
+	/**
+	 * Returns a new object of class '<em>IP Connection</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>IP Connection</em>'.
+	 * @generated
+	 */
+	IPConnection createIPConnection();
+
+	/**
+	 * Returns a new object of class '<em>Bus Connection</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Bus Connection</em>'.
+	 * @generated
+	 */
+	BusConnection createBusConnection();
+
+	/**
+	 * Returns a new object of class '<em>Kitchen</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Kitchen</em>'.
+	 * @generated
+	 */
+	Kitchen createKitchen();
+
+	/**
+	 * Returns a new object of class '<em>Stairs</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Stairs</em>'.
+	 * @generated
+	 */
+	Stairs createStairs();
+
+	/**
+	 * Returns a new object of class '<em>Card Reader</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Card Reader</em>'.
+	 * @generated
+	 */
+	CardReader createCardReader();
+
+	/**
+	 * Returns a new object of class '<em>Employee</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Employee</em>'.
+	 * @generated
+	 */
+	Employee createEmployee();
+
+	/**
+	 * Returns a new object of class '<em>Visitor</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Visitor</em>'.
+	 * @generated
+	 */
+	Visitor createVisitor();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

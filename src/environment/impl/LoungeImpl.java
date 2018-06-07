@@ -3,7 +3,6 @@
 package environment.impl;
 
 import environment.Lounge;
-
 import environment.cpsPackage;
 import org.eclipse.emf.ecore.EClass;
 

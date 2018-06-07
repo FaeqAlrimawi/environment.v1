@@ -3,7 +3,6 @@
 package environment.impl;
 
 import environment.Type;
-
 import environment.cpsPackage;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;

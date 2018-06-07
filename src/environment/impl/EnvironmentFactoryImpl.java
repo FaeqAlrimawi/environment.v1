@@ -6,16 +6,22 @@ import environment.Action;
 import environment.Actor;
 import environment.Application;
 import environment.Building;
+import environment.BusConnection;
+import environment.BusNetwork;
 import environment.CCTV;
+import environment.CardReader;
 import environment.CoffeeMachine;
 import environment.ComputingDevice;
 import environment.Credential;
+import environment.CredentialType;
 import environment.Desktop;
 import environment.DigitalAsset;
 import environment.DigitalConnection;
+import environment.DigitalNetwork;
 import environment.DishWasher;
 import environment.Elevator;
 import environment.ElevatorsArea;
+import environment.Employee;
 import environment.EnvironmentDiagram;
 import environment.EnvironmentFactory;
 import environment.EnvironmentPackage;
@@ -25,6 +31,9 @@ import environment.FireAlarm;
 import environment.Floor;
 import environment.HVAC;
 import environment.Hallway;
+import environment.IPConnection;
+import environment.IPNetwork;
+import environment.Kitchen;
 import environment.Lab;
 import environment.Laptop;
 import environment.Lounge;
@@ -37,9 +46,11 @@ import environment.Property;
 import environment.Room;
 import environment.Server;
 import environment.SmartLight;
+import environment.Stairs;
 import environment.Status;
 import environment.Toilet;
 import environment.Type;
+import environment.Visitor;
 import environment.Workstation;
 
 import org.eclipse.emf.ecore.EClass;
@@ -130,6 +141,16 @@ public class EnvironmentFactoryImpl extends EFactoryImpl implements EnvironmentF
 			case EnvironmentPackage.ELEVATOR: return createElevator();
 			case EnvironmentPackage.HALLWAY: return createHallway();
 			case EnvironmentPackage.ELEVATORS_AREA: return createElevatorsArea();
+			case EnvironmentPackage.IP_NETWORK: return createIPNetwork();
+			case EnvironmentPackage.DIGITAL_NETWORK: return createDigitalNetwork();
+			case EnvironmentPackage.BUS_NETWORK: return createBusNetwork();
+			case EnvironmentPackage.IP_CONNECTION: return createIPConnection();
+			case EnvironmentPackage.BUS_CONNECTION: return createBusConnection();
+			case EnvironmentPackage.KITCHEN: return createKitchen();
+			case EnvironmentPackage.STAIRS: return createStairs();
+			case EnvironmentPackage.CARD_READER: return createCardReader();
+			case EnvironmentPackage.EMPLOYEE: return createEmployee();
+			case EnvironmentPackage.VISITOR: return createVisitor();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -149,6 +170,8 @@ public class EnvironmentFactoryImpl extends EFactoryImpl implements EnvironmentF
 				return createProcessStatusFromString(eDataType, initialValue);
 			case EnvironmentPackage.FILE_STATUS:
 				return createFileStatusFromString(eDataType, initialValue);
+			case EnvironmentPackage.CREDENTIAL_TYPE:
+				return createCredentialTypeFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -168,6 +191,8 @@ public class EnvironmentFactoryImpl extends EFactoryImpl implements EnvironmentF
 				return convertProcessStatusToString(eDataType, instanceValue);
 			case EnvironmentPackage.FILE_STATUS:
 				return convertFileStatusToString(eDataType, instanceValue);
+			case EnvironmentPackage.CREDENTIAL_TYPE:
+				return convertCredentialTypeToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -528,6 +553,106 @@ public class EnvironmentFactoryImpl extends EFactoryImpl implements EnvironmentF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public IPNetwork createIPNetwork() {
+		IPNetworkImpl ipNetwork = new IPNetworkImpl();
+		return ipNetwork;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DigitalNetwork createDigitalNetwork() {
+		DigitalNetworkImpl digitalNetwork = new DigitalNetworkImpl();
+		return digitalNetwork;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BusNetwork createBusNetwork() {
+		BusNetworkImpl busNetwork = new BusNetworkImpl();
+		return busNetwork;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IPConnection createIPConnection() {
+		IPConnectionImpl ipConnection = new IPConnectionImpl();
+		return ipConnection;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BusConnection createBusConnection() {
+		BusConnectionImpl busConnection = new BusConnectionImpl();
+		return busConnection;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Kitchen createKitchen() {
+		KitchenImpl kitchen = new KitchenImpl();
+		return kitchen;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Stairs createStairs() {
+		StairsImpl stairs = new StairsImpl();
+		return stairs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CardReader createCardReader() {
+		CardReaderImpl cardReader = new CardReaderImpl();
+		return cardReader;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Employee createEmployee() {
+		EmployeeImpl employee = new EmployeeImpl();
+		return employee;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Visitor createVisitor() {
+		VisitorImpl visitor = new VisitorImpl();
+		return visitor;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Status createStatusFromString(EDataType eDataType, String initialValue) {
 		Status result = Status.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
@@ -580,6 +705,26 @@ public class EnvironmentFactoryImpl extends EFactoryImpl implements EnvironmentF
 	 * @generated
 	 */
 	public String convertFileStatusToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CredentialType createCredentialTypeFromString(EDataType eDataType, String initialValue) {
+		CredentialType result = CredentialType.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertCredentialTypeToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

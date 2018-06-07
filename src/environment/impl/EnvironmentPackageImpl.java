@@ -7,16 +7,22 @@ import environment.Actor;
 import environment.Application;
 import environment.Asset;
 import environment.Building;
+import environment.BusConnection;
+import environment.BusNetwork;
+import environment.CardReader;
 import environment.CoffeeMachine;
 import environment.ComputingDevice;
 import environment.Connection;
 import environment.Credential;
+import environment.CredentialType;
 import environment.Desktop;
 import environment.DigitalAsset;
 import environment.DigitalConnection;
+import environment.DigitalNetwork;
 import environment.DishWasher;
 import environment.Elevator;
 import environment.ElevatorsArea;
+import environment.Employee;
 import environment.EnvironmentDiagram;
 import environment.EnvironmentFactory;
 import environment.EnvironmentPackage;
@@ -25,6 +31,9 @@ import environment.FileStatus;
 import environment.FireAlarm;
 import environment.Floor;
 import environment.Hallway;
+import environment.IPConnection;
+import environment.IPNetwork;
+import environment.Kitchen;
 import environment.Lab;
 import environment.Laptop;
 import environment.Lounge;
@@ -37,14 +46,17 @@ import environment.Property;
 import environment.Room;
 import environment.Server;
 import environment.SmartLight;
+import environment.Stairs;
 import environment.Status;
 import environment.Toilet;
 import environment.Type;
+import environment.Visitor;
 import environment.Workstation;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
+import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -321,6 +333,76 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass ipNetworkEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass digitalNetworkEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass busNetworkEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass ipConnectionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass busConnectionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass kitchenEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass stairsEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass cardReaderEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass employeeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass visitorEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum statusEEnum = null;
 
 	/**
@@ -336,6 +418,13 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 	 * @generated
 	 */
 	private EEnum fileStatusEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum credentialTypeEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -448,7 +537,7 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getComputingDevice_CanConnect() {
+	public EAttribute getComputingDevice_Connectable() {
 		return (EAttribute)computingDeviceEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -628,8 +717,17 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getConnection_Type() {
-		return (EAttribute)connectionEClass.getEStructuralFeatures().get(3);
+	public EReference getConnection_Type() {
+		return (EReference)connectionEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getConnection__SimilarTo__Connection() {
+		return connectionEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -638,6 +736,15 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 	 * @generated
 	 */
 	public EAttribute getConnection_Constraints() {
+		return (EAttribute)connectionEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getConnection_Bidirectional() {
 		return (EAttribute)connectionEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -646,17 +753,8 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getConnection_IsBidirectional() {
-		return (EAttribute)connectionEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getConnection_Port() {
-		return (EReference)connectionEClass.getEStructuralFeatures().get(6);
+		return (EReference)connectionEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -665,7 +763,7 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 	 * @generated
 	 */
 	public EReference getConnection_Properties() {
-		return (EReference)connectionEClass.getEStructuralFeatures().get(7);
+		return (EReference)connectionEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -674,7 +772,7 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 	 * @generated
 	 */
 	public EAttribute getConnection_Description() {
-		return (EAttribute)connectionEClass.getEStructuralFeatures().get(8);
+		return (EAttribute)connectionEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -684,6 +782,15 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 	 */
 	public EClass getDigitalConnection() {
 		return digitalConnectionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDigitalConnection_Protocol() {
+		return (EAttribute)digitalConnectionEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -765,6 +872,78 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 	 */
 	public EAttribute getAsset_Control() {
 		return (EAttribute)assetEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getAsset__AbstractAsset() {
+		return assetEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getAsset__SimilarTo__Asset() {
+		return assetEClass.getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getAsset__MergeConnections() {
+		return assetEClass.getEOperations().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getAsset__CanMergeConnections() {
+		return assetEClass.getEOperations().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getAsset__CanMergeContainedAssets() {
+		return assetEClass.getEOperations().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getAsset__MergeContainedAssets() {
+		return assetEClass.getEOperations().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getAsset__MergeConnections__EList() {
+		return assetEClass.getEOperations().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getAsset__CanMergeConnections__EList() {
+		return assetEClass.getEOperations().get(7);
 	}
 
 	/**
@@ -907,6 +1086,15 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getProperty_Abstractable() {
+		return (EAttribute)propertyEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getCredential() {
 		return credentialEClass;
 	}
@@ -916,7 +1104,7 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCredential_Key() {
+	public EAttribute getCredential_Type() {
 		return (EAttribute)credentialEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -925,7 +1113,7 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCredential_Value() {
+	public EAttribute getCredential_Other() {
 		return (EAttribute)credentialEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -1177,6 +1365,114 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getIPNetwork() {
+		return ipNetworkEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getDigitalNetwork() {
+		return digitalNetworkEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDigitalNetwork_Protocol() {
+		return (EAttribute)digitalNetworkEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDigitalNetwork_Encryption() {
+		return (EAttribute)digitalNetworkEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getBusNetwork() {
+		return busNetworkEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getIPConnection() {
+		return ipConnectionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getBusConnection() {
+		return busConnectionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getKitchen() {
+		return kitchenEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getStairs() {
+		return stairsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getCardReader() {
+		return cardReaderEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getEmployee() {
+		return employeeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getVisitor() {
+		return visitorEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getStatus() {
 		return statusEEnum;
 	}
@@ -1197,6 +1493,15 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 	 */
 	public EEnum getFileStatus() {
 		return fileStatusEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getCredentialType() {
+		return credentialTypeEEnum;
 	}
 
 	/**
@@ -1233,7 +1538,7 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 
 		computingDeviceEClass = createEClass(COMPUTING_DEVICE);
 		createEAttribute(computingDeviceEClass, COMPUTING_DEVICE__STATUS);
-		createEAttribute(computingDeviceEClass, COMPUTING_DEVICE__CAN_CONNECT);
+		createEAttribute(computingDeviceEClass, COMPUTING_DEVICE__CONNECTABLE);
 		createEAttribute(computingDeviceEClass, COMPUTING_DEVICE__MODEL);
 
 		hvacEClass = createEClass(HVAC);
@@ -1263,14 +1568,16 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 		createEReference(connectionEClass, CONNECTION__ASSET1);
 		createEReference(connectionEClass, CONNECTION__ASSET2);
 		createEAttribute(connectionEClass, CONNECTION__NAME);
-		createEAttribute(connectionEClass, CONNECTION__TYPE);
 		createEAttribute(connectionEClass, CONNECTION__CONSTRAINTS);
-		createEAttribute(connectionEClass, CONNECTION__IS_BIDIRECTIONAL);
+		createEAttribute(connectionEClass, CONNECTION__BIDIRECTIONAL);
 		createEReference(connectionEClass, CONNECTION__PORT);
 		createEReference(connectionEClass, CONNECTION__PROPERTIES);
 		createEAttribute(connectionEClass, CONNECTION__DESCRIPTION);
+		createEReference(connectionEClass, CONNECTION__TYPE);
+		createEOperation(connectionEClass, CONNECTION___SIMILAR_TO__CONNECTION);
 
 		digitalConnectionEClass = createEClass(DIGITAL_CONNECTION);
+		createEAttribute(digitalConnectionEClass, DIGITAL_CONNECTION__PROTOCOL);
 
 		physicalConnectionEClass = createEClass(PHYSICAL_CONNECTION);
 
@@ -1282,6 +1589,14 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 		createEReference(assetEClass, ASSET__TYPE);
 		createEAttribute(assetEClass, ASSET__DESCRIPTION);
 		createEAttribute(assetEClass, ASSET__CONTROL);
+		createEOperation(assetEClass, ASSET___ABSTRACT_ASSET);
+		createEOperation(assetEClass, ASSET___SIMILAR_TO__ASSET);
+		createEOperation(assetEClass, ASSET___MERGE_CONNECTIONS);
+		createEOperation(assetEClass, ASSET___CAN_MERGE_CONNECTIONS);
+		createEOperation(assetEClass, ASSET___CAN_MERGE_CONTAINED_ASSETS);
+		createEOperation(assetEClass, ASSET___MERGE_CONTAINED_ASSETS);
+		createEOperation(assetEClass, ASSET___MERGE_CONNECTIONS__ELIST);
+		createEOperation(assetEClass, ASSET___CAN_MERGE_CONNECTIONS__ELIST);
 
 		environmentDiagramEClass = createEClass(ENVIRONMENT_DIAGRAM);
 		createEReference(environmentDiagramEClass, ENVIRONMENT_DIAGRAM__ASSET);
@@ -1300,10 +1615,11 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 		propertyEClass = createEClass(PROPERTY);
 		createEAttribute(propertyEClass, PROPERTY__NAME);
 		createEAttribute(propertyEClass, PROPERTY__VALUE);
+		createEAttribute(propertyEClass, PROPERTY__ABSTRACTABLE);
 
 		credentialEClass = createEClass(CREDENTIAL);
-		createEAttribute(credentialEClass, CREDENTIAL__KEY);
-		createEAttribute(credentialEClass, CREDENTIAL__VALUE);
+		createEAttribute(credentialEClass, CREDENTIAL__TYPE);
+		createEAttribute(credentialEClass, CREDENTIAL__OTHER);
 
 		actorEClass = createEClass(ACTOR);
 		createEAttribute(actorEClass, ACTOR__ROLE);
@@ -1350,10 +1666,33 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 
 		elevatorsAreaEClass = createEClass(ELEVATORS_AREA);
 
+		ipNetworkEClass = createEClass(IP_NETWORK);
+
+		digitalNetworkEClass = createEClass(DIGITAL_NETWORK);
+		createEAttribute(digitalNetworkEClass, DIGITAL_NETWORK__PROTOCOL);
+		createEAttribute(digitalNetworkEClass, DIGITAL_NETWORK__ENCRYPTION);
+
+		busNetworkEClass = createEClass(BUS_NETWORK);
+
+		ipConnectionEClass = createEClass(IP_CONNECTION);
+
+		busConnectionEClass = createEClass(BUS_CONNECTION);
+
+		kitchenEClass = createEClass(KITCHEN);
+
+		stairsEClass = createEClass(STAIRS);
+
+		cardReaderEClass = createEClass(CARD_READER);
+
+		employeeEClass = createEClass(EMPLOYEE);
+
+		visitorEClass = createEClass(VISITOR);
+
 		// Create enums
 		statusEEnum = createEEnum(STATUS);
 		processStatusEEnum = createEEnum(PROCESS_STATUS);
 		fileStatusEEnum = createEEnum(FILE_STATUS);
+		credentialTypeEEnum = createEEnum(CREDENTIAL_TYPE);
 	}
 
 	/**
@@ -1413,6 +1752,16 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 		elevatorEClass.getESuperTypes().add(this.getComputingDevice());
 		hallwayEClass.getESuperTypes().add(this.getPhysicalStructure());
 		elevatorsAreaEClass.getESuperTypes().add(this.getRoom());
+		ipNetworkEClass.getESuperTypes().add(this.getDigitalNetwork());
+		digitalNetworkEClass.getESuperTypes().add(this.getDigitalAsset());
+		busNetworkEClass.getESuperTypes().add(this.getDigitalNetwork());
+		ipConnectionEClass.getESuperTypes().add(this.getDigitalConnection());
+		busConnectionEClass.getESuperTypes().add(this.getDigitalConnection());
+		kitchenEClass.getESuperTypes().add(this.getRoom());
+		stairsEClass.getESuperTypes().add(this.getPhysicalStructure());
+		cardReaderEClass.getESuperTypes().add(this.getComputingDevice());
+		employeeEClass.getESuperTypes().add(this.getActor());
+		visitorEClass.getESuperTypes().add(this.getActor());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(physicalAssetEClass, PhysicalAsset.class, "PhysicalAsset", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1421,7 +1770,7 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 
 		initEClass(computingDeviceEClass, ComputingDevice.class, "ComputingDevice", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getComputingDevice_Status(), this.getStatus(), "status", null, 0, 1, ComputingDevice.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getComputingDevice_CanConnect(), ecorePackage.getEBoolean(), "canConnect", null, 0, 1, ComputingDevice.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getComputingDevice_Connectable(), ecorePackage.getEBoolean(), "connectable", null, 0, 1, ComputingDevice.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getComputingDevice_Model(), ecorePackage.getEString(), "model", null, 0, 1, ComputingDevice.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(hvacEClass, environment.HVAC.class, "HVAC", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1451,14 +1800,18 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 		initEReference(getConnection_Asset1(), this.getAsset(), null, "asset1", null, 0, 1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getConnection_Asset2(), this.getAsset(), null, "asset2", null, 0, 1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getConnection_Name(), ecorePackage.getEString(), "name", null, 0, 1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getConnection_Type(), ecorePackage.getEString(), "type", null, 0, 1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getConnection_Constraints(), ecorePackage.getEString(), "constraints", null, 0, -1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getConnection_IsBidirectional(), ecorePackage.getEBoolean(), "isBidirectional", "true", 0, 1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getConnection_Bidirectional(), ecorePackage.getEBoolean(), "bidirectional", "true", 0, 1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getConnection_Port(), this.getPort(), null, "port", null, 0, 1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getConnection_Properties(), this.getProperty(), null, "properties", null, 0, -1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getConnection_Description(), ecorePackage.getEString(), "description", null, 0, 1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getConnection_Type(), this.getType(), null, "type", null, 0, 1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		EOperation op = initEOperation(getConnection__SimilarTo__Connection(), ecorePackage.getEInt(), "similarTo", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getConnection(), "connection", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(digitalConnectionEClass, DigitalConnection.class, "DigitalConnection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getDigitalConnection_Protocol(), ecorePackage.getEString(), "protocol", null, 0, 1, DigitalConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(physicalConnectionEClass, PhysicalConnection.class, "PhysicalConnection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1467,9 +1820,28 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 		initEAttribute(getAsset_Name(), ecorePackage.getEString(), "name", null, 0, 1, Asset.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAsset_Property(), this.getProperty(), null, "property", null, 0, -1, Asset.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAsset_Value(), ecorePackage.getEInt(), "value", null, 0, 1, Asset.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAsset_Type(), this.getType(), null, "type", null, 0, -1, Asset.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAsset_Type(), this.getType(), null, "type", null, 0, 1, Asset.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAsset_Description(), ecorePackage.getEString(), "description", null, 0, 1, Asset.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAsset_Control(), ecorePackage.getEString(), "control", null, 0, 1, Asset.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEOperation(getAsset__AbstractAsset(), this.getAsset(), "abstractAsset", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getAsset__SimilarTo__Asset(), ecorePackage.getEDouble(), "similarTo", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getAsset(), "asset", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		initEOperation(getAsset__MergeConnections(), null, "mergeConnections", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		initEOperation(getAsset__CanMergeConnections(), ecorePackage.getEBoolean(), "canMergeConnections", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		initEOperation(getAsset__CanMergeContainedAssets(), ecorePackage.getEBoolean(), "canMergeContainedAssets", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		initEOperation(getAsset__MergeContainedAssets(), null, "mergeContainedAssets", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getAsset__MergeConnections__EList(), null, "mergeConnections", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getConnection(), "connections", 0, -1, IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getAsset__CanMergeConnections__EList(), ecorePackage.getEBoolean(), "canMergeConnections", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getConnection(), "connections", 0, -1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(environmentDiagramEClass, EnvironmentDiagram.class, "EnvironmentDiagram", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getEnvironmentDiagram_Asset(), this.getAsset(), null, "asset", null, 0, -1, EnvironmentDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1488,10 +1860,11 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 		initEClass(propertyEClass, Property.class, "Property", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getProperty_Name(), ecorePackage.getEString(), "name", null, 0, 1, Property.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getProperty_Value(), ecorePackage.getEString(), "value", null, 0, 1, Property.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getProperty_Abstractable(), ecorePackage.getEBoolean(), "abstractable", null, 0, 1, Property.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(credentialEClass, Credential.class, "Credential", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getCredential_Key(), ecorePackage.getEString(), "key", null, 0, 1, Credential.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCredential_Value(), ecorePackage.getEString(), "value", null, 0, 1, Credential.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCredential_Type(), this.getCredentialType(), "type", null, 0, 1, Credential.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCredential_Other(), ecorePackage.getEString(), "other", null, 0, 1, Credential.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(actorEClass, Actor.class, "Actor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getActor_Role(), ecorePackage.getEString(), "role", null, 0, 1, Actor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1510,7 +1883,7 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 
 		initEClass(typeEClass, Type.class, "Type", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getType_Name(), ecorePackage.getEString(), "name", null, 0, 1, Type.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getType_SuperType(), this.getType(), null, "superType", null, 0, -1, Type.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getType_SuperType(), this.getType(), null, "superType", null, 0, 1, Type.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(roomEClass, Room.class, "Room", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1538,6 +1911,28 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 
 		initEClass(elevatorsAreaEClass, ElevatorsArea.class, "ElevatorsArea", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
+		initEClass(ipNetworkEClass, IPNetwork.class, "IPNetwork", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(digitalNetworkEClass, DigitalNetwork.class, "DigitalNetwork", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getDigitalNetwork_Protocol(), ecorePackage.getEString(), "Protocol", null, 0, 1, DigitalNetwork.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDigitalNetwork_Encryption(), ecorePackage.getEString(), "encryption", null, 0, 1, DigitalNetwork.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(busNetworkEClass, BusNetwork.class, "BusNetwork", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(ipConnectionEClass, IPConnection.class, "IPConnection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(busConnectionEClass, BusConnection.class, "BusConnection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(kitchenEClass, Kitchen.class, "Kitchen", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(stairsEClass, Stairs.class, "Stairs", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(cardReaderEClass, CardReader.class, "CardReader", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(employeeEClass, Employee.class, "Employee", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(visitorEClass, Visitor.class, "Visitor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
 		// Initialize enums and add enum literals
 		initEEnum(statusEEnum, Status.class, "Status");
 		addEEnumLiteral(statusEEnum, Status.ON);
@@ -1552,6 +1947,13 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 		initEEnum(fileStatusEEnum, FileStatus.class, "FileStatus");
 		addEEnumLiteral(fileStatusEEnum, FileStatus.OPEN);
 		addEEnumLiteral(fileStatusEEnum, FileStatus.CLOSED);
+
+		initEEnum(credentialTypeEEnum, CredentialType.class, "CredentialType");
+		addEEnumLiteral(credentialTypeEEnum, CredentialType.PASSWORD);
+		addEEnumLiteral(credentialTypeEEnum, CredentialType.PINCODE);
+		addEEnumLiteral(credentialTypeEEnum, CredentialType.CARD);
+		addEEnumLiteral(credentialTypeEEnum, CredentialType.FINGERPRINT);
+		addEEnumLiteral(credentialTypeEEnum, CredentialType.OTHER);
 
 		// Create resource
 		createResource(eNS_URI);

@@ -9,7 +9,6 @@ import environment.Credential;
 import environment.EnvironmentDiagram;
 import environment.Port;
 import environment.Property;
-
 import environment.cpsPackage;
 import java.util.Collection;
 

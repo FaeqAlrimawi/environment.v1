@@ -4,7 +4,6 @@ package environment.impl;
 
 import environment.Asset;
 import environment.Room;
-
 import environment.cpsPackage;
 import org.eclipse.emf.ecore.EClass;
 

@@ -7,7 +7,10 @@ import environment.Actor;
 import environment.Application;
 import environment.Asset;
 import environment.Building;
+import environment.BusConnection;
+import environment.BusNetwork;
 import environment.CCTV;
+import environment.CardReader;
 import environment.CoffeeMachine;
 import environment.ComputingDevice;
 import environment.Connection;
@@ -15,9 +18,11 @@ import environment.Credential;
 import environment.Desktop;
 import environment.DigitalAsset;
 import environment.DigitalConnection;
+import environment.DigitalNetwork;
 import environment.DishWasher;
 import environment.Elevator;
 import environment.ElevatorsArea;
+import environment.Employee;
 import environment.EnvironmentDiagram;
 import environment.EnvironmentPackage;
 import environment.File;
@@ -25,6 +30,9 @@ import environment.FireAlarm;
 import environment.Floor;
 import environment.HVAC;
 import environment.Hallway;
+import environment.IPConnection;
+import environment.IPNetwork;
+import environment.Kitchen;
 import environment.Lab;
 import environment.Laptop;
 import environment.Lounge;
@@ -36,8 +44,10 @@ import environment.Property;
 import environment.Room;
 import environment.Server;
 import environment.SmartLight;
+import environment.Stairs;
 import environment.Toilet;
 import environment.Type;
+import environment.Visitor;
 import environment.Workstation;
 
 import org.eclipse.emf.ecore.EObject;
@@ -398,6 +408,94 @@ public class EnvironmentSwitch<T> extends Switch<T> {
 				if (result == null) result = casePhysicalStructure(elevatorsArea);
 				if (result == null) result = casePhysicalAsset(elevatorsArea);
 				if (result == null) result = caseAsset(elevatorsArea);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case EnvironmentPackage.IP_NETWORK: {
+				IPNetwork ipNetwork = (IPNetwork)theEObject;
+				T result = caseIPNetwork(ipNetwork);
+				if (result == null) result = caseDigitalNetwork(ipNetwork);
+				if (result == null) result = caseDigitalAsset(ipNetwork);
+				if (result == null) result = caseAsset(ipNetwork);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case EnvironmentPackage.DIGITAL_NETWORK: {
+				DigitalNetwork digitalNetwork = (DigitalNetwork)theEObject;
+				T result = caseDigitalNetwork(digitalNetwork);
+				if (result == null) result = caseDigitalAsset(digitalNetwork);
+				if (result == null) result = caseAsset(digitalNetwork);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case EnvironmentPackage.BUS_NETWORK: {
+				BusNetwork busNetwork = (BusNetwork)theEObject;
+				T result = caseBusNetwork(busNetwork);
+				if (result == null) result = caseDigitalNetwork(busNetwork);
+				if (result == null) result = caseDigitalAsset(busNetwork);
+				if (result == null) result = caseAsset(busNetwork);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case EnvironmentPackage.IP_CONNECTION: {
+				IPConnection ipConnection = (IPConnection)theEObject;
+				T result = caseIPConnection(ipConnection);
+				if (result == null) result = caseDigitalConnection(ipConnection);
+				if (result == null) result = caseConnection(ipConnection);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case EnvironmentPackage.BUS_CONNECTION: {
+				BusConnection busConnection = (BusConnection)theEObject;
+				T result = caseBusConnection(busConnection);
+				if (result == null) result = caseDigitalConnection(busConnection);
+				if (result == null) result = caseConnection(busConnection);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case EnvironmentPackage.KITCHEN: {
+				Kitchen kitchen = (Kitchen)theEObject;
+				T result = caseKitchen(kitchen);
+				if (result == null) result = caseRoom(kitchen);
+				if (result == null) result = casePhysicalStructure(kitchen);
+				if (result == null) result = casePhysicalAsset(kitchen);
+				if (result == null) result = caseAsset(kitchen);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case EnvironmentPackage.STAIRS: {
+				Stairs stairs = (Stairs)theEObject;
+				T result = caseStairs(stairs);
+				if (result == null) result = casePhysicalStructure(stairs);
+				if (result == null) result = casePhysicalAsset(stairs);
+				if (result == null) result = caseAsset(stairs);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case EnvironmentPackage.CARD_READER: {
+				CardReader cardReader = (CardReader)theEObject;
+				T result = caseCardReader(cardReader);
+				if (result == null) result = caseComputingDevice(cardReader);
+				if (result == null) result = casePhysicalAsset(cardReader);
+				if (result == null) result = caseAsset(cardReader);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case EnvironmentPackage.EMPLOYEE: {
+				Employee employee = (Employee)theEObject;
+				T result = caseEmployee(employee);
+				if (result == null) result = caseActor(employee);
+				if (result == null) result = casePhysicalAsset(employee);
+				if (result == null) result = caseAsset(employee);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case EnvironmentPackage.VISITOR: {
+				Visitor visitor = (Visitor)theEObject;
+				T result = caseVisitor(visitor);
+				if (result == null) result = caseActor(visitor);
+				if (result == null) result = casePhysicalAsset(visitor);
+				if (result == null) result = caseAsset(visitor);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -957,6 +1055,156 @@ public class EnvironmentSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseElevatorsArea(ElevatorsArea object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>IP Network</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>IP Network</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseIPNetwork(IPNetwork object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Digital Network</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Digital Network</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDigitalNetwork(DigitalNetwork object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Bus Network</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Bus Network</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseBusNetwork(BusNetwork object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>IP Connection</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>IP Connection</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseIPConnection(IPConnection object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Bus Connection</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Bus Connection</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseBusConnection(BusConnection object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Kitchen</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Kitchen</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseKitchen(Kitchen object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Stairs</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Stairs</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseStairs(Stairs object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Card Reader</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Card Reader</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCardReader(CardReader object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Employee</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Employee</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEmployee(Employee object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Visitor</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Visitor</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVisitor(Visitor object) {
 		return null;
 	}
 

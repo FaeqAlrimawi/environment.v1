@@ -7,7 +7,10 @@ import environment.Actor;
 import environment.Application;
 import environment.Asset;
 import environment.Building;
+import environment.BusConnection;
+import environment.BusNetwork;
 import environment.CCTV;
+import environment.CardReader;
 import environment.CoffeeMachine;
 import environment.ComputingDevice;
 import environment.Connection;
@@ -15,9 +18,11 @@ import environment.Credential;
 import environment.Desktop;
 import environment.DigitalAsset;
 import environment.DigitalConnection;
+import environment.DigitalNetwork;
 import environment.DishWasher;
 import environment.Elevator;
 import environment.ElevatorsArea;
+import environment.Employee;
 import environment.EnvironmentDiagram;
 import environment.EnvironmentPackage;
 import environment.File;
@@ -25,6 +30,9 @@ import environment.FireAlarm;
 import environment.Floor;
 import environment.HVAC;
 import environment.Hallway;
+import environment.IPConnection;
+import environment.IPNetwork;
+import environment.Kitchen;
 import environment.Lab;
 import environment.Laptop;
 import environment.Lounge;
@@ -36,8 +44,10 @@ import environment.Property;
 import environment.Room;
 import environment.Server;
 import environment.SmartLight;
+import environment.Stairs;
 import environment.Toilet;
 import environment.Type;
+import environment.Visitor;
 import environment.Workstation;
 
 import org.eclipse.emf.common.notify.Adapter;
@@ -250,6 +260,46 @@ public class EnvironmentAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseElevatorsArea(ElevatorsArea object) {
 				return createElevatorsAreaAdapter();
+			}
+			@Override
+			public Adapter caseIPNetwork(IPNetwork object) {
+				return createIPNetworkAdapter();
+			}
+			@Override
+			public Adapter caseDigitalNetwork(DigitalNetwork object) {
+				return createDigitalNetworkAdapter();
+			}
+			@Override
+			public Adapter caseBusNetwork(BusNetwork object) {
+				return createBusNetworkAdapter();
+			}
+			@Override
+			public Adapter caseIPConnection(IPConnection object) {
+				return createIPConnectionAdapter();
+			}
+			@Override
+			public Adapter caseBusConnection(BusConnection object) {
+				return createBusConnectionAdapter();
+			}
+			@Override
+			public Adapter caseKitchen(Kitchen object) {
+				return createKitchenAdapter();
+			}
+			@Override
+			public Adapter caseStairs(Stairs object) {
+				return createStairsAdapter();
+			}
+			@Override
+			public Adapter caseCardReader(CardReader object) {
+				return createCardReaderAdapter();
+			}
+			@Override
+			public Adapter caseEmployee(Employee object) {
+				return createEmployeeAdapter();
+			}
+			@Override
+			public Adapter caseVisitor(Visitor object) {
+				return createVisitorAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -786,6 +836,146 @@ public class EnvironmentAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createElevatorsAreaAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link environment.IPNetwork <em>IP Network</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see environment.IPNetwork
+	 * @generated
+	 */
+	public Adapter createIPNetworkAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link environment.DigitalNetwork <em>Digital Network</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see environment.DigitalNetwork
+	 * @generated
+	 */
+	public Adapter createDigitalNetworkAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link environment.BusNetwork <em>Bus Network</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see environment.BusNetwork
+	 * @generated
+	 */
+	public Adapter createBusNetworkAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link environment.IPConnection <em>IP Connection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see environment.IPConnection
+	 * @generated
+	 */
+	public Adapter createIPConnectionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link environment.BusConnection <em>Bus Connection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see environment.BusConnection
+	 * @generated
+	 */
+	public Adapter createBusConnectionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link environment.Kitchen <em>Kitchen</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see environment.Kitchen
+	 * @generated
+	 */
+	public Adapter createKitchenAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link environment.Stairs <em>Stairs</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see environment.Stairs
+	 * @generated
+	 */
+	public Adapter createStairsAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link environment.CardReader <em>Card Reader</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see environment.CardReader
+	 * @generated
+	 */
+	public Adapter createCardReaderAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link environment.Employee <em>Employee</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see environment.Employee
+	 * @generated
+	 */
+	public Adapter createEmployeeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link environment.Visitor <em>Visitor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see environment.Visitor
+	 * @generated
+	 */
+	public Adapter createVisitorAdapter() {
 		return null;
 	}
 

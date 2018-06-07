@@ -5,6 +5,7 @@ package environment;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
+import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -104,7 +105,7 @@ public interface EnvironmentPackage extends EPackage {
 	int ASSET__VALUE = 3;
 
 	/**
-	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Type</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -140,13 +141,85 @@ public interface EnvironmentPackage extends EPackage {
 	int ASSET_FEATURE_COUNT = 7;
 
 	/**
+	 * The operation id for the '<em>Abstract Asset</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSET___ABSTRACT_ASSET = 0;
+
+	/**
+	 * The operation id for the '<em>Similar To</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSET___SIMILAR_TO__ASSET = 1;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSET___MERGE_CONNECTIONS = 2;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSET___CAN_MERGE_CONNECTIONS = 3;
+
+	/**
+	 * The operation id for the '<em>Can Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSET___CAN_MERGE_CONTAINED_ASSETS = 4;
+
+	/**
+	 * The operation id for the '<em>Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSET___MERGE_CONTAINED_ASSETS = 5;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSET___MERGE_CONNECTIONS__ELIST = 6;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSET___CAN_MERGE_CONNECTIONS__ELIST = 7;
+
+	/**
 	 * The number of operations of the '<em>Asset</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ASSET_OPERATION_COUNT = 0;
+	int ASSET_OPERATION_COUNT = 8;
 
 	/**
 	 * The meta object id for the '{@link environment.impl.PhysicalAssetImpl <em>Physical Asset</em>}' class.
@@ -195,7 +268,7 @@ public interface EnvironmentPackage extends EPackage {
 	int PHYSICAL_ASSET__VALUE = ASSET__VALUE;
 
 	/**
-	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Type</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -247,6 +320,78 @@ public interface EnvironmentPackage extends EPackage {
 	 * @ordered
 	 */
 	int PHYSICAL_ASSET_FEATURE_COUNT = ASSET_FEATURE_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Abstract Asset</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PHYSICAL_ASSET___ABSTRACT_ASSET = ASSET___ABSTRACT_ASSET;
+
+	/**
+	 * The operation id for the '<em>Similar To</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PHYSICAL_ASSET___SIMILAR_TO__ASSET = ASSET___SIMILAR_TO__ASSET;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PHYSICAL_ASSET___MERGE_CONNECTIONS = ASSET___MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PHYSICAL_ASSET___CAN_MERGE_CONNECTIONS = ASSET___CAN_MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PHYSICAL_ASSET___CAN_MERGE_CONTAINED_ASSETS = ASSET___CAN_MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PHYSICAL_ASSET___MERGE_CONTAINED_ASSETS = ASSET___MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PHYSICAL_ASSET___MERGE_CONNECTIONS__ELIST = ASSET___MERGE_CONNECTIONS__ELIST;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PHYSICAL_ASSET___CAN_MERGE_CONNECTIONS__ELIST = ASSET___CAN_MERGE_CONNECTIONS__ELIST;
 
 	/**
 	 * The number of operations of the '<em>Physical Asset</em>' class.
@@ -304,7 +449,7 @@ public interface EnvironmentPackage extends EPackage {
 	int COMPUTING_DEVICE__VALUE = PHYSICAL_ASSET__VALUE;
 
 	/**
-	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Type</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -358,13 +503,13 @@ public interface EnvironmentPackage extends EPackage {
 	int COMPUTING_DEVICE__STATUS = PHYSICAL_ASSET_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Can Connect</b></em>' attribute.
+	 * The feature id for the '<em><b>Connectable</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPUTING_DEVICE__CAN_CONNECT = PHYSICAL_ASSET_FEATURE_COUNT + 1;
+	int COMPUTING_DEVICE__CONNECTABLE = PHYSICAL_ASSET_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Model</b></em>' attribute.
@@ -383,6 +528,78 @@ public interface EnvironmentPackage extends EPackage {
 	 * @ordered
 	 */
 	int COMPUTING_DEVICE_FEATURE_COUNT = PHYSICAL_ASSET_FEATURE_COUNT + 3;
+
+	/**
+	 * The operation id for the '<em>Abstract Asset</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPUTING_DEVICE___ABSTRACT_ASSET = PHYSICAL_ASSET___ABSTRACT_ASSET;
+
+	/**
+	 * The operation id for the '<em>Similar To</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPUTING_DEVICE___SIMILAR_TO__ASSET = PHYSICAL_ASSET___SIMILAR_TO__ASSET;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPUTING_DEVICE___MERGE_CONNECTIONS = PHYSICAL_ASSET___MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPUTING_DEVICE___CAN_MERGE_CONNECTIONS = PHYSICAL_ASSET___CAN_MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPUTING_DEVICE___CAN_MERGE_CONTAINED_ASSETS = PHYSICAL_ASSET___CAN_MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPUTING_DEVICE___MERGE_CONTAINED_ASSETS = PHYSICAL_ASSET___MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPUTING_DEVICE___MERGE_CONNECTIONS__ELIST = PHYSICAL_ASSET___MERGE_CONNECTIONS__ELIST;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPUTING_DEVICE___CAN_MERGE_CONNECTIONS__ELIST = PHYSICAL_ASSET___CAN_MERGE_CONNECTIONS__ELIST;
 
 	/**
 	 * The number of operations of the '<em>Computing Device</em>' class.
@@ -440,7 +657,7 @@ public interface EnvironmentPackage extends EPackage {
 	int HVAC__VALUE = COMPUTING_DEVICE__VALUE;
 
 	/**
-	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Type</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -494,13 +711,13 @@ public interface EnvironmentPackage extends EPackage {
 	int HVAC__STATUS = COMPUTING_DEVICE__STATUS;
 
 	/**
-	 * The feature id for the '<em><b>Can Connect</b></em>' attribute.
+	 * The feature id for the '<em><b>Connectable</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int HVAC__CAN_CONNECT = COMPUTING_DEVICE__CAN_CONNECT;
+	int HVAC__CONNECTABLE = COMPUTING_DEVICE__CONNECTABLE;
 
 	/**
 	 * The feature id for the '<em><b>Model</b></em>' attribute.
@@ -519,6 +736,78 @@ public interface EnvironmentPackage extends EPackage {
 	 * @ordered
 	 */
 	int HVAC_FEATURE_COUNT = COMPUTING_DEVICE_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Abstract Asset</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HVAC___ABSTRACT_ASSET = COMPUTING_DEVICE___ABSTRACT_ASSET;
+
+	/**
+	 * The operation id for the '<em>Similar To</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HVAC___SIMILAR_TO__ASSET = COMPUTING_DEVICE___SIMILAR_TO__ASSET;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HVAC___MERGE_CONNECTIONS = COMPUTING_DEVICE___MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HVAC___CAN_MERGE_CONNECTIONS = COMPUTING_DEVICE___CAN_MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HVAC___CAN_MERGE_CONTAINED_ASSETS = COMPUTING_DEVICE___CAN_MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HVAC___MERGE_CONTAINED_ASSETS = COMPUTING_DEVICE___MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HVAC___MERGE_CONNECTIONS__ELIST = COMPUTING_DEVICE___MERGE_CONNECTIONS__ELIST;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HVAC___CAN_MERGE_CONNECTIONS__ELIST = COMPUTING_DEVICE___CAN_MERGE_CONNECTIONS__ELIST;
 
 	/**
 	 * The number of operations of the '<em>HVAC</em>' class.
@@ -576,7 +865,7 @@ public interface EnvironmentPackage extends EPackage {
 	int SMART_LIGHT__VALUE = COMPUTING_DEVICE__VALUE;
 
 	/**
-	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Type</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -630,13 +919,13 @@ public interface EnvironmentPackage extends EPackage {
 	int SMART_LIGHT__STATUS = COMPUTING_DEVICE__STATUS;
 
 	/**
-	 * The feature id for the '<em><b>Can Connect</b></em>' attribute.
+	 * The feature id for the '<em><b>Connectable</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SMART_LIGHT__CAN_CONNECT = COMPUTING_DEVICE__CAN_CONNECT;
+	int SMART_LIGHT__CONNECTABLE = COMPUTING_DEVICE__CONNECTABLE;
 
 	/**
 	 * The feature id for the '<em><b>Model</b></em>' attribute.
@@ -655,6 +944,78 @@ public interface EnvironmentPackage extends EPackage {
 	 * @ordered
 	 */
 	int SMART_LIGHT_FEATURE_COUNT = COMPUTING_DEVICE_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Abstract Asset</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SMART_LIGHT___ABSTRACT_ASSET = COMPUTING_DEVICE___ABSTRACT_ASSET;
+
+	/**
+	 * The operation id for the '<em>Similar To</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SMART_LIGHT___SIMILAR_TO__ASSET = COMPUTING_DEVICE___SIMILAR_TO__ASSET;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SMART_LIGHT___MERGE_CONNECTIONS = COMPUTING_DEVICE___MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SMART_LIGHT___CAN_MERGE_CONNECTIONS = COMPUTING_DEVICE___CAN_MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SMART_LIGHT___CAN_MERGE_CONTAINED_ASSETS = COMPUTING_DEVICE___CAN_MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SMART_LIGHT___MERGE_CONTAINED_ASSETS = COMPUTING_DEVICE___MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SMART_LIGHT___MERGE_CONNECTIONS__ELIST = COMPUTING_DEVICE___MERGE_CONNECTIONS__ELIST;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SMART_LIGHT___CAN_MERGE_CONNECTIONS__ELIST = COMPUTING_DEVICE___CAN_MERGE_CONNECTIONS__ELIST;
 
 	/**
 	 * The number of operations of the '<em>Smart Light</em>' class.
@@ -712,7 +1073,7 @@ public interface EnvironmentPackage extends EPackage {
 	int LAPTOP__VALUE = COMPUTING_DEVICE__VALUE;
 
 	/**
-	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Type</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -766,13 +1127,13 @@ public interface EnvironmentPackage extends EPackage {
 	int LAPTOP__STATUS = COMPUTING_DEVICE__STATUS;
 
 	/**
-	 * The feature id for the '<em><b>Can Connect</b></em>' attribute.
+	 * The feature id for the '<em><b>Connectable</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LAPTOP__CAN_CONNECT = COMPUTING_DEVICE__CAN_CONNECT;
+	int LAPTOP__CONNECTABLE = COMPUTING_DEVICE__CONNECTABLE;
 
 	/**
 	 * The feature id for the '<em><b>Model</b></em>' attribute.
@@ -791,6 +1152,78 @@ public interface EnvironmentPackage extends EPackage {
 	 * @ordered
 	 */
 	int LAPTOP_FEATURE_COUNT = COMPUTING_DEVICE_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Abstract Asset</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAPTOP___ABSTRACT_ASSET = COMPUTING_DEVICE___ABSTRACT_ASSET;
+
+	/**
+	 * The operation id for the '<em>Similar To</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAPTOP___SIMILAR_TO__ASSET = COMPUTING_DEVICE___SIMILAR_TO__ASSET;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAPTOP___MERGE_CONNECTIONS = COMPUTING_DEVICE___MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAPTOP___CAN_MERGE_CONNECTIONS = COMPUTING_DEVICE___CAN_MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAPTOP___CAN_MERGE_CONTAINED_ASSETS = COMPUTING_DEVICE___CAN_MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAPTOP___MERGE_CONTAINED_ASSETS = COMPUTING_DEVICE___MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAPTOP___MERGE_CONNECTIONS__ELIST = COMPUTING_DEVICE___MERGE_CONNECTIONS__ELIST;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAPTOP___CAN_MERGE_CONNECTIONS__ELIST = COMPUTING_DEVICE___CAN_MERGE_CONNECTIONS__ELIST;
 
 	/**
 	 * The number of operations of the '<em>Laptop</em>' class.
@@ -848,7 +1281,7 @@ public interface EnvironmentPackage extends EPackage {
 	int DESKTOP__VALUE = COMPUTING_DEVICE__VALUE;
 
 	/**
-	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Type</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -902,13 +1335,13 @@ public interface EnvironmentPackage extends EPackage {
 	int DESKTOP__STATUS = COMPUTING_DEVICE__STATUS;
 
 	/**
-	 * The feature id for the '<em><b>Can Connect</b></em>' attribute.
+	 * The feature id for the '<em><b>Connectable</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DESKTOP__CAN_CONNECT = COMPUTING_DEVICE__CAN_CONNECT;
+	int DESKTOP__CONNECTABLE = COMPUTING_DEVICE__CONNECTABLE;
 
 	/**
 	 * The feature id for the '<em><b>Model</b></em>' attribute.
@@ -927,6 +1360,78 @@ public interface EnvironmentPackage extends EPackage {
 	 * @ordered
 	 */
 	int DESKTOP_FEATURE_COUNT = COMPUTING_DEVICE_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Abstract Asset</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DESKTOP___ABSTRACT_ASSET = COMPUTING_DEVICE___ABSTRACT_ASSET;
+
+	/**
+	 * The operation id for the '<em>Similar To</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DESKTOP___SIMILAR_TO__ASSET = COMPUTING_DEVICE___SIMILAR_TO__ASSET;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DESKTOP___MERGE_CONNECTIONS = COMPUTING_DEVICE___MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DESKTOP___CAN_MERGE_CONNECTIONS = COMPUTING_DEVICE___CAN_MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DESKTOP___CAN_MERGE_CONTAINED_ASSETS = COMPUTING_DEVICE___CAN_MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DESKTOP___MERGE_CONTAINED_ASSETS = COMPUTING_DEVICE___MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DESKTOP___MERGE_CONNECTIONS__ELIST = COMPUTING_DEVICE___MERGE_CONNECTIONS__ELIST;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DESKTOP___CAN_MERGE_CONNECTIONS__ELIST = COMPUTING_DEVICE___CAN_MERGE_CONNECTIONS__ELIST;
 
 	/**
 	 * The number of operations of the '<em>Desktop</em>' class.
@@ -984,7 +1489,7 @@ public interface EnvironmentPackage extends EPackage {
 	int CCTV__VALUE = COMPUTING_DEVICE__VALUE;
 
 	/**
-	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Type</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1038,13 +1543,13 @@ public interface EnvironmentPackage extends EPackage {
 	int CCTV__STATUS = COMPUTING_DEVICE__STATUS;
 
 	/**
-	 * The feature id for the '<em><b>Can Connect</b></em>' attribute.
+	 * The feature id for the '<em><b>Connectable</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CCTV__CAN_CONNECT = COMPUTING_DEVICE__CAN_CONNECT;
+	int CCTV__CONNECTABLE = COMPUTING_DEVICE__CONNECTABLE;
 
 	/**
 	 * The feature id for the '<em><b>Model</b></em>' attribute.
@@ -1063,6 +1568,78 @@ public interface EnvironmentPackage extends EPackage {
 	 * @ordered
 	 */
 	int CCTV_FEATURE_COUNT = COMPUTING_DEVICE_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Abstract Asset</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CCTV___ABSTRACT_ASSET = COMPUTING_DEVICE___ABSTRACT_ASSET;
+
+	/**
+	 * The operation id for the '<em>Similar To</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CCTV___SIMILAR_TO__ASSET = COMPUTING_DEVICE___SIMILAR_TO__ASSET;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CCTV___MERGE_CONNECTIONS = COMPUTING_DEVICE___MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CCTV___CAN_MERGE_CONNECTIONS = COMPUTING_DEVICE___CAN_MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CCTV___CAN_MERGE_CONTAINED_ASSETS = COMPUTING_DEVICE___CAN_MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CCTV___MERGE_CONTAINED_ASSETS = COMPUTING_DEVICE___MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CCTV___MERGE_CONNECTIONS__ELIST = COMPUTING_DEVICE___MERGE_CONNECTIONS__ELIST;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CCTV___CAN_MERGE_CONNECTIONS__ELIST = COMPUTING_DEVICE___CAN_MERGE_CONNECTIONS__ELIST;
 
 	/**
 	 * The number of operations of the '<em>CCTV</em>' class.
@@ -1120,7 +1697,7 @@ public interface EnvironmentPackage extends EPackage {
 	int SERVER__VALUE = COMPUTING_DEVICE__VALUE;
 
 	/**
-	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Type</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1174,13 +1751,13 @@ public interface EnvironmentPackage extends EPackage {
 	int SERVER__STATUS = COMPUTING_DEVICE__STATUS;
 
 	/**
-	 * The feature id for the '<em><b>Can Connect</b></em>' attribute.
+	 * The feature id for the '<em><b>Connectable</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SERVER__CAN_CONNECT = COMPUTING_DEVICE__CAN_CONNECT;
+	int SERVER__CONNECTABLE = COMPUTING_DEVICE__CONNECTABLE;
 
 	/**
 	 * The feature id for the '<em><b>Model</b></em>' attribute.
@@ -1199,6 +1776,78 @@ public interface EnvironmentPackage extends EPackage {
 	 * @ordered
 	 */
 	int SERVER_FEATURE_COUNT = COMPUTING_DEVICE_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Abstract Asset</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SERVER___ABSTRACT_ASSET = COMPUTING_DEVICE___ABSTRACT_ASSET;
+
+	/**
+	 * The operation id for the '<em>Similar To</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SERVER___SIMILAR_TO__ASSET = COMPUTING_DEVICE___SIMILAR_TO__ASSET;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SERVER___MERGE_CONNECTIONS = COMPUTING_DEVICE___MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SERVER___CAN_MERGE_CONNECTIONS = COMPUTING_DEVICE___CAN_MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SERVER___CAN_MERGE_CONTAINED_ASSETS = COMPUTING_DEVICE___CAN_MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SERVER___MERGE_CONTAINED_ASSETS = COMPUTING_DEVICE___MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SERVER___MERGE_CONNECTIONS__ELIST = COMPUTING_DEVICE___MERGE_CONNECTIONS__ELIST;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SERVER___CAN_MERGE_CONNECTIONS__ELIST = COMPUTING_DEVICE___CAN_MERGE_CONNECTIONS__ELIST;
 
 	/**
 	 * The number of operations of the '<em>Server</em>' class.
@@ -1256,7 +1905,7 @@ public interface EnvironmentPackage extends EPackage {
 	int DIGITAL_ASSET__VALUE = ASSET__VALUE;
 
 	/**
-	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Type</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1308,6 +1957,78 @@ public interface EnvironmentPackage extends EPackage {
 	 * @ordered
 	 */
 	int DIGITAL_ASSET_FEATURE_COUNT = ASSET_FEATURE_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Abstract Asset</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIGITAL_ASSET___ABSTRACT_ASSET = ASSET___ABSTRACT_ASSET;
+
+	/**
+	 * The operation id for the '<em>Similar To</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIGITAL_ASSET___SIMILAR_TO__ASSET = ASSET___SIMILAR_TO__ASSET;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIGITAL_ASSET___MERGE_CONNECTIONS = ASSET___MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIGITAL_ASSET___CAN_MERGE_CONNECTIONS = ASSET___CAN_MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIGITAL_ASSET___CAN_MERGE_CONTAINED_ASSETS = ASSET___CAN_MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIGITAL_ASSET___MERGE_CONTAINED_ASSETS = ASSET___MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIGITAL_ASSET___MERGE_CONNECTIONS__ELIST = ASSET___MERGE_CONNECTIONS__ELIST;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIGITAL_ASSET___CAN_MERGE_CONNECTIONS__ELIST = ASSET___CAN_MERGE_CONNECTIONS__ELIST;
 
 	/**
 	 * The number of operations of the '<em>Digital Asset</em>' class.
@@ -1365,7 +2086,7 @@ public interface EnvironmentPackage extends EPackage {
 	int FILE__VALUE = DIGITAL_ASSET__VALUE;
 
 	/**
-	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Type</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1437,6 +2158,78 @@ public interface EnvironmentPackage extends EPackage {
 	int FILE_FEATURE_COUNT = DIGITAL_ASSET_FEATURE_COUNT + 2;
 
 	/**
+	 * The operation id for the '<em>Abstract Asset</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILE___ABSTRACT_ASSET = DIGITAL_ASSET___ABSTRACT_ASSET;
+
+	/**
+	 * The operation id for the '<em>Similar To</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILE___SIMILAR_TO__ASSET = DIGITAL_ASSET___SIMILAR_TO__ASSET;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILE___MERGE_CONNECTIONS = DIGITAL_ASSET___MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILE___CAN_MERGE_CONNECTIONS = DIGITAL_ASSET___CAN_MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILE___CAN_MERGE_CONTAINED_ASSETS = DIGITAL_ASSET___CAN_MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILE___MERGE_CONTAINED_ASSETS = DIGITAL_ASSET___MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILE___MERGE_CONNECTIONS__ELIST = DIGITAL_ASSET___MERGE_CONNECTIONS__ELIST;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILE___CAN_MERGE_CONNECTIONS__ELIST = DIGITAL_ASSET___CAN_MERGE_CONNECTIONS__ELIST;
+
+	/**
 	 * The number of operations of the '<em>File</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1492,7 +2285,7 @@ public interface EnvironmentPackage extends EPackage {
 	int PROCESS__VALUE = DIGITAL_ASSET__VALUE;
 
 	/**
-	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Type</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1555,6 +2348,78 @@ public interface EnvironmentPackage extends EPackage {
 	int PROCESS_FEATURE_COUNT = DIGITAL_ASSET_FEATURE_COUNT + 1;
 
 	/**
+	 * The operation id for the '<em>Abstract Asset</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS___ABSTRACT_ASSET = DIGITAL_ASSET___ABSTRACT_ASSET;
+
+	/**
+	 * The operation id for the '<em>Similar To</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS___SIMILAR_TO__ASSET = DIGITAL_ASSET___SIMILAR_TO__ASSET;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS___MERGE_CONNECTIONS = DIGITAL_ASSET___MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS___CAN_MERGE_CONNECTIONS = DIGITAL_ASSET___CAN_MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS___CAN_MERGE_CONTAINED_ASSETS = DIGITAL_ASSET___CAN_MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS___MERGE_CONTAINED_ASSETS = DIGITAL_ASSET___MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS___MERGE_CONNECTIONS__ELIST = DIGITAL_ASSET___MERGE_CONNECTIONS__ELIST;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS___CAN_MERGE_CONNECTIONS__ELIST = DIGITAL_ASSET___CAN_MERGE_CONNECTIONS__ELIST;
+
+	/**
 	 * The number of operations of the '<em>Process</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1610,7 +2475,7 @@ public interface EnvironmentPackage extends EPackage {
 	int APPLICATION__VALUE = DIGITAL_ASSET__VALUE;
 
 	/**
-	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Type</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1682,6 +2547,78 @@ public interface EnvironmentPackage extends EPackage {
 	int APPLICATION_FEATURE_COUNT = DIGITAL_ASSET_FEATURE_COUNT + 2;
 
 	/**
+	 * The operation id for the '<em>Abstract Asset</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APPLICATION___ABSTRACT_ASSET = DIGITAL_ASSET___ABSTRACT_ASSET;
+
+	/**
+	 * The operation id for the '<em>Similar To</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APPLICATION___SIMILAR_TO__ASSET = DIGITAL_ASSET___SIMILAR_TO__ASSET;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APPLICATION___MERGE_CONNECTIONS = DIGITAL_ASSET___MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APPLICATION___CAN_MERGE_CONNECTIONS = DIGITAL_ASSET___CAN_MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APPLICATION___CAN_MERGE_CONTAINED_ASSETS = DIGITAL_ASSET___CAN_MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APPLICATION___MERGE_CONTAINED_ASSETS = DIGITAL_ASSET___MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APPLICATION___MERGE_CONNECTIONS__ELIST = DIGITAL_ASSET___MERGE_CONNECTIONS__ELIST;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APPLICATION___CAN_MERGE_CONNECTIONS__ELIST = DIGITAL_ASSET___CAN_MERGE_CONNECTIONS__ELIST;
+
+	/**
 	 * The number of operations of the '<em>Application</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1728,31 +2665,22 @@ public interface EnvironmentPackage extends EPackage {
 	int CONNECTION__NAME = 2;
 
 	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONNECTION__TYPE = 3;
-
-	/**
 	 * The feature id for the '<em><b>Constraints</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION__CONSTRAINTS = 4;
+	int CONNECTION__CONSTRAINTS = 3;
 
 	/**
-	 * The feature id for the '<em><b>Is Bidirectional</b></em>' attribute.
+	 * The feature id for the '<em><b>Bidirectional</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION__IS_BIDIRECTIONAL = 5;
+	int CONNECTION__BIDIRECTIONAL = 4;
 
 	/**
 	 * The feature id for the '<em><b>Port</b></em>' containment reference.
@@ -1761,7 +2689,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION__PORT = 6;
+	int CONNECTION__PORT = 5;
 
 	/**
 	 * The feature id for the '<em><b>Properties</b></em>' reference list.
@@ -1770,7 +2698,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION__PROPERTIES = 7;
+	int CONNECTION__PROPERTIES = 6;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1779,7 +2707,16 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION__DESCRIPTION = 8;
+	int CONNECTION__DESCRIPTION = 7;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONNECTION__TYPE = 8;
 
 	/**
 	 * The number of structural features of the '<em>Connection</em>' class.
@@ -1791,13 +2728,22 @@ public interface EnvironmentPackage extends EPackage {
 	int CONNECTION_FEATURE_COUNT = 9;
 
 	/**
+	 * The operation id for the '<em>Similar To</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONNECTION___SIMILAR_TO__CONNECTION = 0;
+
+	/**
 	 * The number of operations of the '<em>Connection</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_OPERATION_COUNT = 0;
+	int CONNECTION_OPERATION_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link environment.impl.DigitalConnectionImpl <em>Digital Connection</em>}' class.
@@ -1837,15 +2783,6 @@ public interface EnvironmentPackage extends EPackage {
 	int DIGITAL_CONNECTION__NAME = CONNECTION__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DIGITAL_CONNECTION__TYPE = CONNECTION__TYPE;
-
-	/**
 	 * The feature id for the '<em><b>Constraints</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1855,13 +2792,13 @@ public interface EnvironmentPackage extends EPackage {
 	int DIGITAL_CONNECTION__CONSTRAINTS = CONNECTION__CONSTRAINTS;
 
 	/**
-	 * The feature id for the '<em><b>Is Bidirectional</b></em>' attribute.
+	 * The feature id for the '<em><b>Bidirectional</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DIGITAL_CONNECTION__IS_BIDIRECTIONAL = CONNECTION__IS_BIDIRECTIONAL;
+	int DIGITAL_CONNECTION__BIDIRECTIONAL = CONNECTION__BIDIRECTIONAL;
 
 	/**
 	 * The feature id for the '<em><b>Port</b></em>' containment reference.
@@ -1891,13 +2828,40 @@ public interface EnvironmentPackage extends EPackage {
 	int DIGITAL_CONNECTION__DESCRIPTION = CONNECTION__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Type</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIGITAL_CONNECTION__TYPE = CONNECTION__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Protocol</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIGITAL_CONNECTION__PROTOCOL = CONNECTION_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Digital Connection</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DIGITAL_CONNECTION_FEATURE_COUNT = CONNECTION_FEATURE_COUNT + 0;
+	int DIGITAL_CONNECTION_FEATURE_COUNT = CONNECTION_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Similar To</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIGITAL_CONNECTION___SIMILAR_TO__CONNECTION = CONNECTION___SIMILAR_TO__CONNECTION;
 
 	/**
 	 * The number of operations of the '<em>Digital Connection</em>' class.
@@ -1946,15 +2910,6 @@ public interface EnvironmentPackage extends EPackage {
 	int PHYSICAL_CONNECTION__NAME = CONNECTION__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PHYSICAL_CONNECTION__TYPE = CONNECTION__TYPE;
-
-	/**
 	 * The feature id for the '<em><b>Constraints</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1964,13 +2919,13 @@ public interface EnvironmentPackage extends EPackage {
 	int PHYSICAL_CONNECTION__CONSTRAINTS = CONNECTION__CONSTRAINTS;
 
 	/**
-	 * The feature id for the '<em><b>Is Bidirectional</b></em>' attribute.
+	 * The feature id for the '<em><b>Bidirectional</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PHYSICAL_CONNECTION__IS_BIDIRECTIONAL = CONNECTION__IS_BIDIRECTIONAL;
+	int PHYSICAL_CONNECTION__BIDIRECTIONAL = CONNECTION__BIDIRECTIONAL;
 
 	/**
 	 * The feature id for the '<em><b>Port</b></em>' containment reference.
@@ -2000,6 +2955,15 @@ public interface EnvironmentPackage extends EPackage {
 	int PHYSICAL_CONNECTION__DESCRIPTION = CONNECTION__DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Type</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PHYSICAL_CONNECTION__TYPE = CONNECTION__TYPE;
+
+	/**
 	 * The number of structural features of the '<em>Physical Connection</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2007,6 +2971,15 @@ public interface EnvironmentPackage extends EPackage {
 	 * @ordered
 	 */
 	int PHYSICAL_CONNECTION_FEATURE_COUNT = CONNECTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Similar To</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PHYSICAL_CONNECTION___SIMILAR_TO__CONNECTION = CONNECTION___SIMILAR_TO__CONNECTION;
 
 	/**
 	 * The number of operations of the '<em>Physical Connection</em>' class.
@@ -2192,13 +3165,22 @@ public interface EnvironmentPackage extends EPackage {
 	int PROPERTY__VALUE = 1;
 
 	/**
+	 * The feature id for the '<em><b>Abstractable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROPERTY__ABSTRACTABLE = 2;
+
+	/**
 	 * The number of structural features of the '<em>Property</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROPERTY_FEATURE_COUNT = 2;
+	int PROPERTY_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Property</em>' class.
@@ -2220,22 +3202,22 @@ public interface EnvironmentPackage extends EPackage {
 	int CREDENTIAL = 18;
 
 	/**
-	 * The feature id for the '<em><b>Key</b></em>' attribute.
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CREDENTIAL__KEY = 0;
+	int CREDENTIAL__TYPE = 0;
 
 	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * The feature id for the '<em><b>Other</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CREDENTIAL__VALUE = 1;
+	int CREDENTIAL__OTHER = 1;
 
 	/**
 	 * The number of structural features of the '<em>Credential</em>' class.
@@ -2302,7 +3284,7 @@ public interface EnvironmentPackage extends EPackage {
 	int ACTOR__VALUE = PHYSICAL_ASSET__VALUE;
 
 	/**
-	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Type</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2365,6 +3347,78 @@ public interface EnvironmentPackage extends EPackage {
 	int ACTOR_FEATURE_COUNT = PHYSICAL_ASSET_FEATURE_COUNT + 1;
 
 	/**
+	 * The operation id for the '<em>Abstract Asset</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTOR___ABSTRACT_ASSET = PHYSICAL_ASSET___ABSTRACT_ASSET;
+
+	/**
+	 * The operation id for the '<em>Similar To</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTOR___SIMILAR_TO__ASSET = PHYSICAL_ASSET___SIMILAR_TO__ASSET;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTOR___MERGE_CONNECTIONS = PHYSICAL_ASSET___MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTOR___CAN_MERGE_CONNECTIONS = PHYSICAL_ASSET___CAN_MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTOR___CAN_MERGE_CONTAINED_ASSETS = PHYSICAL_ASSET___CAN_MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTOR___MERGE_CONTAINED_ASSETS = PHYSICAL_ASSET___MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTOR___MERGE_CONNECTIONS__ELIST = PHYSICAL_ASSET___MERGE_CONNECTIONS__ELIST;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTOR___CAN_MERGE_CONNECTIONS__ELIST = PHYSICAL_ASSET___CAN_MERGE_CONNECTIONS__ELIST;
+
+	/**
 	 * The number of operations of the '<em>Actor</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2420,7 +3474,7 @@ public interface EnvironmentPackage extends EPackage {
 	int PHYSICAL_STRUCTURE__VALUE = PHYSICAL_ASSET__VALUE;
 
 	/**
-	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Type</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2472,6 +3526,78 @@ public interface EnvironmentPackage extends EPackage {
 	 * @ordered
 	 */
 	int PHYSICAL_STRUCTURE_FEATURE_COUNT = PHYSICAL_ASSET_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Abstract Asset</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PHYSICAL_STRUCTURE___ABSTRACT_ASSET = PHYSICAL_ASSET___ABSTRACT_ASSET;
+
+	/**
+	 * The operation id for the '<em>Similar To</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PHYSICAL_STRUCTURE___SIMILAR_TO__ASSET = PHYSICAL_ASSET___SIMILAR_TO__ASSET;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PHYSICAL_STRUCTURE___MERGE_CONNECTIONS = PHYSICAL_ASSET___MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PHYSICAL_STRUCTURE___CAN_MERGE_CONNECTIONS = PHYSICAL_ASSET___CAN_MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PHYSICAL_STRUCTURE___CAN_MERGE_CONTAINED_ASSETS = PHYSICAL_ASSET___CAN_MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PHYSICAL_STRUCTURE___MERGE_CONTAINED_ASSETS = PHYSICAL_ASSET___MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PHYSICAL_STRUCTURE___MERGE_CONNECTIONS__ELIST = PHYSICAL_ASSET___MERGE_CONNECTIONS__ELIST;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PHYSICAL_STRUCTURE___CAN_MERGE_CONNECTIONS__ELIST = PHYSICAL_ASSET___CAN_MERGE_CONNECTIONS__ELIST;
 
 	/**
 	 * The number of operations of the '<em>Physical Structure</em>' class.
@@ -2566,7 +3692,7 @@ public interface EnvironmentPackage extends EPackage {
 	int TYPE__NAME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Super Type</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Super Type</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2639,7 +3765,7 @@ public interface EnvironmentPackage extends EPackage {
 	int ROOM__VALUE = PHYSICAL_STRUCTURE__VALUE;
 
 	/**
-	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Type</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2691,6 +3817,78 @@ public interface EnvironmentPackage extends EPackage {
 	 * @ordered
 	 */
 	int ROOM_FEATURE_COUNT = PHYSICAL_STRUCTURE_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Abstract Asset</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM___ABSTRACT_ASSET = PHYSICAL_STRUCTURE___ABSTRACT_ASSET;
+
+	/**
+	 * The operation id for the '<em>Similar To</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM___SIMILAR_TO__ASSET = PHYSICAL_STRUCTURE___SIMILAR_TO__ASSET;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM___MERGE_CONNECTIONS = PHYSICAL_STRUCTURE___MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM___CAN_MERGE_CONNECTIONS = PHYSICAL_STRUCTURE___CAN_MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM___CAN_MERGE_CONTAINED_ASSETS = PHYSICAL_STRUCTURE___CAN_MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM___MERGE_CONTAINED_ASSETS = PHYSICAL_STRUCTURE___MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM___MERGE_CONNECTIONS__ELIST = PHYSICAL_STRUCTURE___MERGE_CONNECTIONS__ELIST;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM___CAN_MERGE_CONNECTIONS__ELIST = PHYSICAL_STRUCTURE___CAN_MERGE_CONNECTIONS__ELIST;
 
 	/**
 	 * The number of operations of the '<em>Room</em>' class.
@@ -2748,7 +3946,7 @@ public interface EnvironmentPackage extends EPackage {
 	int FLOOR__VALUE = PHYSICAL_STRUCTURE__VALUE;
 
 	/**
-	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Type</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2800,6 +3998,78 @@ public interface EnvironmentPackage extends EPackage {
 	 * @ordered
 	 */
 	int FLOOR_FEATURE_COUNT = PHYSICAL_STRUCTURE_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Abstract Asset</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FLOOR___ABSTRACT_ASSET = PHYSICAL_STRUCTURE___ABSTRACT_ASSET;
+
+	/**
+	 * The operation id for the '<em>Similar To</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FLOOR___SIMILAR_TO__ASSET = PHYSICAL_STRUCTURE___SIMILAR_TO__ASSET;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FLOOR___MERGE_CONNECTIONS = PHYSICAL_STRUCTURE___MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FLOOR___CAN_MERGE_CONNECTIONS = PHYSICAL_STRUCTURE___CAN_MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FLOOR___CAN_MERGE_CONTAINED_ASSETS = PHYSICAL_STRUCTURE___CAN_MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FLOOR___MERGE_CONTAINED_ASSETS = PHYSICAL_STRUCTURE___MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FLOOR___MERGE_CONNECTIONS__ELIST = PHYSICAL_STRUCTURE___MERGE_CONNECTIONS__ELIST;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FLOOR___CAN_MERGE_CONNECTIONS__ELIST = PHYSICAL_STRUCTURE___CAN_MERGE_CONNECTIONS__ELIST;
 
 	/**
 	 * The number of operations of the '<em>Floor</em>' class.
@@ -2857,7 +4127,7 @@ public interface EnvironmentPackage extends EPackage {
 	int BUILDING__VALUE = PHYSICAL_STRUCTURE__VALUE;
 
 	/**
-	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Type</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2909,6 +4179,78 @@ public interface EnvironmentPackage extends EPackage {
 	 * @ordered
 	 */
 	int BUILDING_FEATURE_COUNT = PHYSICAL_STRUCTURE_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Abstract Asset</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUILDING___ABSTRACT_ASSET = PHYSICAL_STRUCTURE___ABSTRACT_ASSET;
+
+	/**
+	 * The operation id for the '<em>Similar To</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUILDING___SIMILAR_TO__ASSET = PHYSICAL_STRUCTURE___SIMILAR_TO__ASSET;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUILDING___MERGE_CONNECTIONS = PHYSICAL_STRUCTURE___MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUILDING___CAN_MERGE_CONNECTIONS = PHYSICAL_STRUCTURE___CAN_MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUILDING___CAN_MERGE_CONTAINED_ASSETS = PHYSICAL_STRUCTURE___CAN_MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUILDING___MERGE_CONTAINED_ASSETS = PHYSICAL_STRUCTURE___MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUILDING___MERGE_CONNECTIONS__ELIST = PHYSICAL_STRUCTURE___MERGE_CONNECTIONS__ELIST;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUILDING___CAN_MERGE_CONNECTIONS__ELIST = PHYSICAL_STRUCTURE___CAN_MERGE_CONNECTIONS__ELIST;
 
 	/**
 	 * The number of operations of the '<em>Building</em>' class.
@@ -2966,7 +4308,7 @@ public interface EnvironmentPackage extends EPackage {
 	int FIRE_ALARM__VALUE = COMPUTING_DEVICE__VALUE;
 
 	/**
-	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Type</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3020,13 +4362,13 @@ public interface EnvironmentPackage extends EPackage {
 	int FIRE_ALARM__STATUS = COMPUTING_DEVICE__STATUS;
 
 	/**
-	 * The feature id for the '<em><b>Can Connect</b></em>' attribute.
+	 * The feature id for the '<em><b>Connectable</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FIRE_ALARM__CAN_CONNECT = COMPUTING_DEVICE__CAN_CONNECT;
+	int FIRE_ALARM__CONNECTABLE = COMPUTING_DEVICE__CONNECTABLE;
 
 	/**
 	 * The feature id for the '<em><b>Model</b></em>' attribute.
@@ -3045,6 +4387,78 @@ public interface EnvironmentPackage extends EPackage {
 	 * @ordered
 	 */
 	int FIRE_ALARM_FEATURE_COUNT = COMPUTING_DEVICE_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Abstract Asset</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FIRE_ALARM___ABSTRACT_ASSET = COMPUTING_DEVICE___ABSTRACT_ASSET;
+
+	/**
+	 * The operation id for the '<em>Similar To</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FIRE_ALARM___SIMILAR_TO__ASSET = COMPUTING_DEVICE___SIMILAR_TO__ASSET;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FIRE_ALARM___MERGE_CONNECTIONS = COMPUTING_DEVICE___MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FIRE_ALARM___CAN_MERGE_CONNECTIONS = COMPUTING_DEVICE___CAN_MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FIRE_ALARM___CAN_MERGE_CONTAINED_ASSETS = COMPUTING_DEVICE___CAN_MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FIRE_ALARM___MERGE_CONTAINED_ASSETS = COMPUTING_DEVICE___MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FIRE_ALARM___MERGE_CONNECTIONS__ELIST = COMPUTING_DEVICE___MERGE_CONNECTIONS__ELIST;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FIRE_ALARM___CAN_MERGE_CONNECTIONS__ELIST = COMPUTING_DEVICE___CAN_MERGE_CONNECTIONS__ELIST;
 
 	/**
 	 * The number of operations of the '<em>Fire Alarm</em>' class.
@@ -3102,7 +4516,7 @@ public interface EnvironmentPackage extends EPackage {
 	int WORKSTATION__VALUE = COMPUTING_DEVICE__VALUE;
 
 	/**
-	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Type</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3156,13 +4570,13 @@ public interface EnvironmentPackage extends EPackage {
 	int WORKSTATION__STATUS = COMPUTING_DEVICE__STATUS;
 
 	/**
-	 * The feature id for the '<em><b>Can Connect</b></em>' attribute.
+	 * The feature id for the '<em><b>Connectable</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WORKSTATION__CAN_CONNECT = COMPUTING_DEVICE__CAN_CONNECT;
+	int WORKSTATION__CONNECTABLE = COMPUTING_DEVICE__CONNECTABLE;
 
 	/**
 	 * The feature id for the '<em><b>Model</b></em>' attribute.
@@ -3181,6 +4595,78 @@ public interface EnvironmentPackage extends EPackage {
 	 * @ordered
 	 */
 	int WORKSTATION_FEATURE_COUNT = COMPUTING_DEVICE_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Abstract Asset</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORKSTATION___ABSTRACT_ASSET = COMPUTING_DEVICE___ABSTRACT_ASSET;
+
+	/**
+	 * The operation id for the '<em>Similar To</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORKSTATION___SIMILAR_TO__ASSET = COMPUTING_DEVICE___SIMILAR_TO__ASSET;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORKSTATION___MERGE_CONNECTIONS = COMPUTING_DEVICE___MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORKSTATION___CAN_MERGE_CONNECTIONS = COMPUTING_DEVICE___CAN_MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORKSTATION___CAN_MERGE_CONTAINED_ASSETS = COMPUTING_DEVICE___CAN_MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORKSTATION___MERGE_CONTAINED_ASSETS = COMPUTING_DEVICE___MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORKSTATION___MERGE_CONNECTIONS__ELIST = COMPUTING_DEVICE___MERGE_CONNECTIONS__ELIST;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORKSTATION___CAN_MERGE_CONNECTIONS__ELIST = COMPUTING_DEVICE___CAN_MERGE_CONNECTIONS__ELIST;
 
 	/**
 	 * The number of operations of the '<em>Workstation</em>' class.
@@ -3238,7 +4724,7 @@ public interface EnvironmentPackage extends EPackage {
 	int LAB__VALUE = ROOM__VALUE;
 
 	/**
-	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Type</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3290,6 +4776,78 @@ public interface EnvironmentPackage extends EPackage {
 	 * @ordered
 	 */
 	int LAB_FEATURE_COUNT = ROOM_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Abstract Asset</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAB___ABSTRACT_ASSET = ROOM___ABSTRACT_ASSET;
+
+	/**
+	 * The operation id for the '<em>Similar To</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAB___SIMILAR_TO__ASSET = ROOM___SIMILAR_TO__ASSET;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAB___MERGE_CONNECTIONS = ROOM___MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAB___CAN_MERGE_CONNECTIONS = ROOM___CAN_MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAB___CAN_MERGE_CONTAINED_ASSETS = ROOM___CAN_MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAB___MERGE_CONTAINED_ASSETS = ROOM___MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAB___MERGE_CONNECTIONS__ELIST = ROOM___MERGE_CONNECTIONS__ELIST;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAB___CAN_MERGE_CONNECTIONS__ELIST = ROOM___CAN_MERGE_CONNECTIONS__ELIST;
 
 	/**
 	 * The number of operations of the '<em>Lab</em>' class.
@@ -3347,7 +4905,7 @@ public interface EnvironmentPackage extends EPackage {
 	int TOILET__VALUE = ROOM__VALUE;
 
 	/**
-	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Type</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3399,6 +4957,78 @@ public interface EnvironmentPackage extends EPackage {
 	 * @ordered
 	 */
 	int TOILET_FEATURE_COUNT = ROOM_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Abstract Asset</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOILET___ABSTRACT_ASSET = ROOM___ABSTRACT_ASSET;
+
+	/**
+	 * The operation id for the '<em>Similar To</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOILET___SIMILAR_TO__ASSET = ROOM___SIMILAR_TO__ASSET;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOILET___MERGE_CONNECTIONS = ROOM___MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOILET___CAN_MERGE_CONNECTIONS = ROOM___CAN_MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOILET___CAN_MERGE_CONTAINED_ASSETS = ROOM___CAN_MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOILET___MERGE_CONTAINED_ASSETS = ROOM___MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOILET___MERGE_CONNECTIONS__ELIST = ROOM___MERGE_CONNECTIONS__ELIST;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOILET___CAN_MERGE_CONNECTIONS__ELIST = ROOM___CAN_MERGE_CONNECTIONS__ELIST;
 
 	/**
 	 * The number of operations of the '<em>Toilet</em>' class.
@@ -3456,7 +5086,7 @@ public interface EnvironmentPackage extends EPackage {
 	int LOUNGE__VALUE = ROOM__VALUE;
 
 	/**
-	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Type</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3508,6 +5138,78 @@ public interface EnvironmentPackage extends EPackage {
 	 * @ordered
 	 */
 	int LOUNGE_FEATURE_COUNT = ROOM_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Abstract Asset</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOUNGE___ABSTRACT_ASSET = ROOM___ABSTRACT_ASSET;
+
+	/**
+	 * The operation id for the '<em>Similar To</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOUNGE___SIMILAR_TO__ASSET = ROOM___SIMILAR_TO__ASSET;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOUNGE___MERGE_CONNECTIONS = ROOM___MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOUNGE___CAN_MERGE_CONNECTIONS = ROOM___CAN_MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOUNGE___CAN_MERGE_CONTAINED_ASSETS = ROOM___CAN_MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOUNGE___MERGE_CONTAINED_ASSETS = ROOM___MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOUNGE___MERGE_CONNECTIONS__ELIST = ROOM___MERGE_CONNECTIONS__ELIST;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOUNGE___CAN_MERGE_CONNECTIONS__ELIST = ROOM___CAN_MERGE_CONNECTIONS__ELIST;
 
 	/**
 	 * The number of operations of the '<em>Lounge</em>' class.
@@ -3565,7 +5267,7 @@ public interface EnvironmentPackage extends EPackage {
 	int DISH_WASHER__VALUE = COMPUTING_DEVICE__VALUE;
 
 	/**
-	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Type</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3619,13 +5321,13 @@ public interface EnvironmentPackage extends EPackage {
 	int DISH_WASHER__STATUS = COMPUTING_DEVICE__STATUS;
 
 	/**
-	 * The feature id for the '<em><b>Can Connect</b></em>' attribute.
+	 * The feature id for the '<em><b>Connectable</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DISH_WASHER__CAN_CONNECT = COMPUTING_DEVICE__CAN_CONNECT;
+	int DISH_WASHER__CONNECTABLE = COMPUTING_DEVICE__CONNECTABLE;
 
 	/**
 	 * The feature id for the '<em><b>Model</b></em>' attribute.
@@ -3644,6 +5346,78 @@ public interface EnvironmentPackage extends EPackage {
 	 * @ordered
 	 */
 	int DISH_WASHER_FEATURE_COUNT = COMPUTING_DEVICE_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Abstract Asset</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DISH_WASHER___ABSTRACT_ASSET = COMPUTING_DEVICE___ABSTRACT_ASSET;
+
+	/**
+	 * The operation id for the '<em>Similar To</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DISH_WASHER___SIMILAR_TO__ASSET = COMPUTING_DEVICE___SIMILAR_TO__ASSET;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DISH_WASHER___MERGE_CONNECTIONS = COMPUTING_DEVICE___MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DISH_WASHER___CAN_MERGE_CONNECTIONS = COMPUTING_DEVICE___CAN_MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DISH_WASHER___CAN_MERGE_CONTAINED_ASSETS = COMPUTING_DEVICE___CAN_MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DISH_WASHER___MERGE_CONTAINED_ASSETS = COMPUTING_DEVICE___MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DISH_WASHER___MERGE_CONNECTIONS__ELIST = COMPUTING_DEVICE___MERGE_CONNECTIONS__ELIST;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DISH_WASHER___CAN_MERGE_CONNECTIONS__ELIST = COMPUTING_DEVICE___CAN_MERGE_CONNECTIONS__ELIST;
 
 	/**
 	 * The number of operations of the '<em>Dish Washer</em>' class.
@@ -3701,7 +5475,7 @@ public interface EnvironmentPackage extends EPackage {
 	int COFFEE_MACHINE__VALUE = COMPUTING_DEVICE__VALUE;
 
 	/**
-	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Type</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3755,13 +5529,13 @@ public interface EnvironmentPackage extends EPackage {
 	int COFFEE_MACHINE__STATUS = COMPUTING_DEVICE__STATUS;
 
 	/**
-	 * The feature id for the '<em><b>Can Connect</b></em>' attribute.
+	 * The feature id for the '<em><b>Connectable</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COFFEE_MACHINE__CAN_CONNECT = COMPUTING_DEVICE__CAN_CONNECT;
+	int COFFEE_MACHINE__CONNECTABLE = COMPUTING_DEVICE__CONNECTABLE;
 
 	/**
 	 * The feature id for the '<em><b>Model</b></em>' attribute.
@@ -3780,6 +5554,78 @@ public interface EnvironmentPackage extends EPackage {
 	 * @ordered
 	 */
 	int COFFEE_MACHINE_FEATURE_COUNT = COMPUTING_DEVICE_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Abstract Asset</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COFFEE_MACHINE___ABSTRACT_ASSET = COMPUTING_DEVICE___ABSTRACT_ASSET;
+
+	/**
+	 * The operation id for the '<em>Similar To</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COFFEE_MACHINE___SIMILAR_TO__ASSET = COMPUTING_DEVICE___SIMILAR_TO__ASSET;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COFFEE_MACHINE___MERGE_CONNECTIONS = COMPUTING_DEVICE___MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COFFEE_MACHINE___CAN_MERGE_CONNECTIONS = COMPUTING_DEVICE___CAN_MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COFFEE_MACHINE___CAN_MERGE_CONTAINED_ASSETS = COMPUTING_DEVICE___CAN_MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COFFEE_MACHINE___MERGE_CONTAINED_ASSETS = COMPUTING_DEVICE___MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COFFEE_MACHINE___MERGE_CONNECTIONS__ELIST = COMPUTING_DEVICE___MERGE_CONNECTIONS__ELIST;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COFFEE_MACHINE___CAN_MERGE_CONNECTIONS__ELIST = COMPUTING_DEVICE___CAN_MERGE_CONNECTIONS__ELIST;
 
 	/**
 	 * The number of operations of the '<em>Coffee Machine</em>' class.
@@ -3837,7 +5683,7 @@ public interface EnvironmentPackage extends EPackage {
 	int ELEVATOR__VALUE = COMPUTING_DEVICE__VALUE;
 
 	/**
-	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Type</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3891,13 +5737,13 @@ public interface EnvironmentPackage extends EPackage {
 	int ELEVATOR__STATUS = COMPUTING_DEVICE__STATUS;
 
 	/**
-	 * The feature id for the '<em><b>Can Connect</b></em>' attribute.
+	 * The feature id for the '<em><b>Connectable</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ELEVATOR__CAN_CONNECT = COMPUTING_DEVICE__CAN_CONNECT;
+	int ELEVATOR__CONNECTABLE = COMPUTING_DEVICE__CONNECTABLE;
 
 	/**
 	 * The feature id for the '<em><b>Model</b></em>' attribute.
@@ -3916,6 +5762,78 @@ public interface EnvironmentPackage extends EPackage {
 	 * @ordered
 	 */
 	int ELEVATOR_FEATURE_COUNT = COMPUTING_DEVICE_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Abstract Asset</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEVATOR___ABSTRACT_ASSET = COMPUTING_DEVICE___ABSTRACT_ASSET;
+
+	/**
+	 * The operation id for the '<em>Similar To</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEVATOR___SIMILAR_TO__ASSET = COMPUTING_DEVICE___SIMILAR_TO__ASSET;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEVATOR___MERGE_CONNECTIONS = COMPUTING_DEVICE___MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEVATOR___CAN_MERGE_CONNECTIONS = COMPUTING_DEVICE___CAN_MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEVATOR___CAN_MERGE_CONTAINED_ASSETS = COMPUTING_DEVICE___CAN_MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEVATOR___MERGE_CONTAINED_ASSETS = COMPUTING_DEVICE___MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEVATOR___MERGE_CONNECTIONS__ELIST = COMPUTING_DEVICE___MERGE_CONNECTIONS__ELIST;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEVATOR___CAN_MERGE_CONNECTIONS__ELIST = COMPUTING_DEVICE___CAN_MERGE_CONNECTIONS__ELIST;
 
 	/**
 	 * The number of operations of the '<em>Elevator</em>' class.
@@ -3973,7 +5891,7 @@ public interface EnvironmentPackage extends EPackage {
 	int HALLWAY__VALUE = PHYSICAL_STRUCTURE__VALUE;
 
 	/**
-	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Type</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4025,6 +5943,78 @@ public interface EnvironmentPackage extends EPackage {
 	 * @ordered
 	 */
 	int HALLWAY_FEATURE_COUNT = PHYSICAL_STRUCTURE_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Abstract Asset</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HALLWAY___ABSTRACT_ASSET = PHYSICAL_STRUCTURE___ABSTRACT_ASSET;
+
+	/**
+	 * The operation id for the '<em>Similar To</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HALLWAY___SIMILAR_TO__ASSET = PHYSICAL_STRUCTURE___SIMILAR_TO__ASSET;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HALLWAY___MERGE_CONNECTIONS = PHYSICAL_STRUCTURE___MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HALLWAY___CAN_MERGE_CONNECTIONS = PHYSICAL_STRUCTURE___CAN_MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HALLWAY___CAN_MERGE_CONTAINED_ASSETS = PHYSICAL_STRUCTURE___CAN_MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HALLWAY___MERGE_CONTAINED_ASSETS = PHYSICAL_STRUCTURE___MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HALLWAY___MERGE_CONNECTIONS__ELIST = PHYSICAL_STRUCTURE___MERGE_CONNECTIONS__ELIST;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HALLWAY___CAN_MERGE_CONNECTIONS__ELIST = PHYSICAL_STRUCTURE___CAN_MERGE_CONNECTIONS__ELIST;
 
 	/**
 	 * The number of operations of the '<em>Hallway</em>' class.
@@ -4082,7 +6072,7 @@ public interface EnvironmentPackage extends EPackage {
 	int ELEVATORS_AREA__VALUE = ROOM__VALUE;
 
 	/**
-	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Type</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4136,6 +6126,78 @@ public interface EnvironmentPackage extends EPackage {
 	int ELEVATORS_AREA_FEATURE_COUNT = ROOM_FEATURE_COUNT + 0;
 
 	/**
+	 * The operation id for the '<em>Abstract Asset</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEVATORS_AREA___ABSTRACT_ASSET = ROOM___ABSTRACT_ASSET;
+
+	/**
+	 * The operation id for the '<em>Similar To</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEVATORS_AREA___SIMILAR_TO__ASSET = ROOM___SIMILAR_TO__ASSET;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEVATORS_AREA___MERGE_CONNECTIONS = ROOM___MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEVATORS_AREA___CAN_MERGE_CONNECTIONS = ROOM___CAN_MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEVATORS_AREA___CAN_MERGE_CONTAINED_ASSETS = ROOM___CAN_MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEVATORS_AREA___MERGE_CONTAINED_ASSETS = ROOM___MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEVATORS_AREA___MERGE_CONNECTIONS__ELIST = ROOM___MERGE_CONNECTIONS__ELIST;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEVATORS_AREA___CAN_MERGE_CONNECTIONS__ELIST = ROOM___CAN_MERGE_CONNECTIONS__ELIST;
+
+	/**
 	 * The number of operations of the '<em>Elevators Area</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4145,6 +6207,1807 @@ public interface EnvironmentPackage extends EPackage {
 	int ELEVATORS_AREA_OPERATION_COUNT = ROOM_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link environment.impl.DigitalNetworkImpl <em>Digital Network</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see environment.impl.DigitalNetworkImpl
+	 * @see environment.impl.EnvironmentPackageImpl#getDigitalNetwork()
+	 * @generated
+	 */
+	int DIGITAL_NETWORK = 38;
+
+	/**
+	 * The feature id for the '<em><b>Connections</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIGITAL_NETWORK__CONNECTIONS = DIGITAL_ASSET__CONNECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIGITAL_NETWORK__NAME = DIGITAL_ASSET__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Property</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIGITAL_NETWORK__PROPERTY = DIGITAL_ASSET__PROPERTY;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIGITAL_NETWORK__VALUE = DIGITAL_ASSET__VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIGITAL_NETWORK__TYPE = DIGITAL_ASSET__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIGITAL_NETWORK__DESCRIPTION = DIGITAL_ASSET__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Control</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIGITAL_NETWORK__CONTROL = DIGITAL_ASSET__CONTROL;
+
+	/**
+	 * The feature id for the '<em><b>Parent Asset</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIGITAL_NETWORK__PARENT_ASSET = DIGITAL_ASSET__PARENT_ASSET;
+
+	/**
+	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIGITAL_NETWORK__CONTAINED_ASSETS = DIGITAL_ASSET__CONTAINED_ASSETS;
+
+	/**
+	 * The feature id for the '<em><b>Protocol</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIGITAL_NETWORK__PROTOCOL = DIGITAL_ASSET_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Encryption</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIGITAL_NETWORK__ENCRYPTION = DIGITAL_ASSET_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Digital Network</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIGITAL_NETWORK_FEATURE_COUNT = DIGITAL_ASSET_FEATURE_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Abstract Asset</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIGITAL_NETWORK___ABSTRACT_ASSET = DIGITAL_ASSET___ABSTRACT_ASSET;
+
+	/**
+	 * The operation id for the '<em>Similar To</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIGITAL_NETWORK___SIMILAR_TO__ASSET = DIGITAL_ASSET___SIMILAR_TO__ASSET;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIGITAL_NETWORK___MERGE_CONNECTIONS = DIGITAL_ASSET___MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIGITAL_NETWORK___CAN_MERGE_CONNECTIONS = DIGITAL_ASSET___CAN_MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIGITAL_NETWORK___CAN_MERGE_CONTAINED_ASSETS = DIGITAL_ASSET___CAN_MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIGITAL_NETWORK___MERGE_CONTAINED_ASSETS = DIGITAL_ASSET___MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIGITAL_NETWORK___MERGE_CONNECTIONS__ELIST = DIGITAL_ASSET___MERGE_CONNECTIONS__ELIST;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIGITAL_NETWORK___CAN_MERGE_CONNECTIONS__ELIST = DIGITAL_ASSET___CAN_MERGE_CONNECTIONS__ELIST;
+
+	/**
+	 * The number of operations of the '<em>Digital Network</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIGITAL_NETWORK_OPERATION_COUNT = DIGITAL_ASSET_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link environment.impl.IPNetworkImpl <em>IP Network</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see environment.impl.IPNetworkImpl
+	 * @see environment.impl.EnvironmentPackageImpl#getIPNetwork()
+	 * @generated
+	 */
+	int IP_NETWORK = 37;
+
+	/**
+	 * The feature id for the '<em><b>Connections</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IP_NETWORK__CONNECTIONS = DIGITAL_NETWORK__CONNECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IP_NETWORK__NAME = DIGITAL_NETWORK__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Property</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IP_NETWORK__PROPERTY = DIGITAL_NETWORK__PROPERTY;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IP_NETWORK__VALUE = DIGITAL_NETWORK__VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IP_NETWORK__TYPE = DIGITAL_NETWORK__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IP_NETWORK__DESCRIPTION = DIGITAL_NETWORK__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Control</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IP_NETWORK__CONTROL = DIGITAL_NETWORK__CONTROL;
+
+	/**
+	 * The feature id for the '<em><b>Parent Asset</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IP_NETWORK__PARENT_ASSET = DIGITAL_NETWORK__PARENT_ASSET;
+
+	/**
+	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IP_NETWORK__CONTAINED_ASSETS = DIGITAL_NETWORK__CONTAINED_ASSETS;
+
+	/**
+	 * The feature id for the '<em><b>Protocol</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IP_NETWORK__PROTOCOL = DIGITAL_NETWORK__PROTOCOL;
+
+	/**
+	 * The feature id for the '<em><b>Encryption</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IP_NETWORK__ENCRYPTION = DIGITAL_NETWORK__ENCRYPTION;
+
+	/**
+	 * The number of structural features of the '<em>IP Network</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IP_NETWORK_FEATURE_COUNT = DIGITAL_NETWORK_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Abstract Asset</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IP_NETWORK___ABSTRACT_ASSET = DIGITAL_NETWORK___ABSTRACT_ASSET;
+
+	/**
+	 * The operation id for the '<em>Similar To</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IP_NETWORK___SIMILAR_TO__ASSET = DIGITAL_NETWORK___SIMILAR_TO__ASSET;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IP_NETWORK___MERGE_CONNECTIONS = DIGITAL_NETWORK___MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IP_NETWORK___CAN_MERGE_CONNECTIONS = DIGITAL_NETWORK___CAN_MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IP_NETWORK___CAN_MERGE_CONTAINED_ASSETS = DIGITAL_NETWORK___CAN_MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IP_NETWORK___MERGE_CONTAINED_ASSETS = DIGITAL_NETWORK___MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IP_NETWORK___MERGE_CONNECTIONS__ELIST = DIGITAL_NETWORK___MERGE_CONNECTIONS__ELIST;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IP_NETWORK___CAN_MERGE_CONNECTIONS__ELIST = DIGITAL_NETWORK___CAN_MERGE_CONNECTIONS__ELIST;
+
+	/**
+	 * The number of operations of the '<em>IP Network</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IP_NETWORK_OPERATION_COUNT = DIGITAL_NETWORK_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link environment.impl.BusNetworkImpl <em>Bus Network</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see environment.impl.BusNetworkImpl
+	 * @see environment.impl.EnvironmentPackageImpl#getBusNetwork()
+	 * @generated
+	 */
+	int BUS_NETWORK = 39;
+
+	/**
+	 * The feature id for the '<em><b>Connections</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_NETWORK__CONNECTIONS = DIGITAL_NETWORK__CONNECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_NETWORK__NAME = DIGITAL_NETWORK__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Property</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_NETWORK__PROPERTY = DIGITAL_NETWORK__PROPERTY;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_NETWORK__VALUE = DIGITAL_NETWORK__VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_NETWORK__TYPE = DIGITAL_NETWORK__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_NETWORK__DESCRIPTION = DIGITAL_NETWORK__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Control</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_NETWORK__CONTROL = DIGITAL_NETWORK__CONTROL;
+
+	/**
+	 * The feature id for the '<em><b>Parent Asset</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_NETWORK__PARENT_ASSET = DIGITAL_NETWORK__PARENT_ASSET;
+
+	/**
+	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_NETWORK__CONTAINED_ASSETS = DIGITAL_NETWORK__CONTAINED_ASSETS;
+
+	/**
+	 * The feature id for the '<em><b>Protocol</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_NETWORK__PROTOCOL = DIGITAL_NETWORK__PROTOCOL;
+
+	/**
+	 * The feature id for the '<em><b>Encryption</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_NETWORK__ENCRYPTION = DIGITAL_NETWORK__ENCRYPTION;
+
+	/**
+	 * The number of structural features of the '<em>Bus Network</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_NETWORK_FEATURE_COUNT = DIGITAL_NETWORK_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Abstract Asset</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_NETWORK___ABSTRACT_ASSET = DIGITAL_NETWORK___ABSTRACT_ASSET;
+
+	/**
+	 * The operation id for the '<em>Similar To</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_NETWORK___SIMILAR_TO__ASSET = DIGITAL_NETWORK___SIMILAR_TO__ASSET;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_NETWORK___MERGE_CONNECTIONS = DIGITAL_NETWORK___MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_NETWORK___CAN_MERGE_CONNECTIONS = DIGITAL_NETWORK___CAN_MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_NETWORK___CAN_MERGE_CONTAINED_ASSETS = DIGITAL_NETWORK___CAN_MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_NETWORK___MERGE_CONTAINED_ASSETS = DIGITAL_NETWORK___MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_NETWORK___MERGE_CONNECTIONS__ELIST = DIGITAL_NETWORK___MERGE_CONNECTIONS__ELIST;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_NETWORK___CAN_MERGE_CONNECTIONS__ELIST = DIGITAL_NETWORK___CAN_MERGE_CONNECTIONS__ELIST;
+
+	/**
+	 * The number of operations of the '<em>Bus Network</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_NETWORK_OPERATION_COUNT = DIGITAL_NETWORK_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link environment.impl.IPConnectionImpl <em>IP Connection</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see environment.impl.IPConnectionImpl
+	 * @see environment.impl.EnvironmentPackageImpl#getIPConnection()
+	 * @generated
+	 */
+	int IP_CONNECTION = 40;
+
+	/**
+	 * The feature id for the '<em><b>Asset1</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IP_CONNECTION__ASSET1 = DIGITAL_CONNECTION__ASSET1;
+
+	/**
+	 * The feature id for the '<em><b>Asset2</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IP_CONNECTION__ASSET2 = DIGITAL_CONNECTION__ASSET2;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IP_CONNECTION__NAME = DIGITAL_CONNECTION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Constraints</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IP_CONNECTION__CONSTRAINTS = DIGITAL_CONNECTION__CONSTRAINTS;
+
+	/**
+	 * The feature id for the '<em><b>Bidirectional</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IP_CONNECTION__BIDIRECTIONAL = DIGITAL_CONNECTION__BIDIRECTIONAL;
+
+	/**
+	 * The feature id for the '<em><b>Port</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IP_CONNECTION__PORT = DIGITAL_CONNECTION__PORT;
+
+	/**
+	 * The feature id for the '<em><b>Properties</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IP_CONNECTION__PROPERTIES = DIGITAL_CONNECTION__PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IP_CONNECTION__DESCRIPTION = DIGITAL_CONNECTION__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IP_CONNECTION__TYPE = DIGITAL_CONNECTION__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Protocol</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IP_CONNECTION__PROTOCOL = DIGITAL_CONNECTION__PROTOCOL;
+
+	/**
+	 * The number of structural features of the '<em>IP Connection</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IP_CONNECTION_FEATURE_COUNT = DIGITAL_CONNECTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Similar To</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IP_CONNECTION___SIMILAR_TO__CONNECTION = DIGITAL_CONNECTION___SIMILAR_TO__CONNECTION;
+
+	/**
+	 * The number of operations of the '<em>IP Connection</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IP_CONNECTION_OPERATION_COUNT = DIGITAL_CONNECTION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link environment.impl.BusConnectionImpl <em>Bus Connection</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see environment.impl.BusConnectionImpl
+	 * @see environment.impl.EnvironmentPackageImpl#getBusConnection()
+	 * @generated
+	 */
+	int BUS_CONNECTION = 41;
+
+	/**
+	 * The feature id for the '<em><b>Asset1</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_CONNECTION__ASSET1 = DIGITAL_CONNECTION__ASSET1;
+
+	/**
+	 * The feature id for the '<em><b>Asset2</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_CONNECTION__ASSET2 = DIGITAL_CONNECTION__ASSET2;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_CONNECTION__NAME = DIGITAL_CONNECTION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Constraints</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_CONNECTION__CONSTRAINTS = DIGITAL_CONNECTION__CONSTRAINTS;
+
+	/**
+	 * The feature id for the '<em><b>Bidirectional</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_CONNECTION__BIDIRECTIONAL = DIGITAL_CONNECTION__BIDIRECTIONAL;
+
+	/**
+	 * The feature id for the '<em><b>Port</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_CONNECTION__PORT = DIGITAL_CONNECTION__PORT;
+
+	/**
+	 * The feature id for the '<em><b>Properties</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_CONNECTION__PROPERTIES = DIGITAL_CONNECTION__PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_CONNECTION__DESCRIPTION = DIGITAL_CONNECTION__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_CONNECTION__TYPE = DIGITAL_CONNECTION__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Protocol</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_CONNECTION__PROTOCOL = DIGITAL_CONNECTION__PROTOCOL;
+
+	/**
+	 * The number of structural features of the '<em>Bus Connection</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_CONNECTION_FEATURE_COUNT = DIGITAL_CONNECTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Similar To</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_CONNECTION___SIMILAR_TO__CONNECTION = DIGITAL_CONNECTION___SIMILAR_TO__CONNECTION;
+
+	/**
+	 * The number of operations of the '<em>Bus Connection</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_CONNECTION_OPERATION_COUNT = DIGITAL_CONNECTION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link environment.impl.KitchenImpl <em>Kitchen</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see environment.impl.KitchenImpl
+	 * @see environment.impl.EnvironmentPackageImpl#getKitchen()
+	 * @generated
+	 */
+	int KITCHEN = 42;
+
+	/**
+	 * The feature id for the '<em><b>Connections</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KITCHEN__CONNECTIONS = ROOM__CONNECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KITCHEN__NAME = ROOM__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Property</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KITCHEN__PROPERTY = ROOM__PROPERTY;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KITCHEN__VALUE = ROOM__VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KITCHEN__TYPE = ROOM__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KITCHEN__DESCRIPTION = ROOM__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Control</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KITCHEN__CONTROL = ROOM__CONTROL;
+
+	/**
+	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KITCHEN__CONTAINED_ASSETS = ROOM__CONTAINED_ASSETS;
+
+	/**
+	 * The feature id for the '<em><b>Parent Asset</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KITCHEN__PARENT_ASSET = ROOM__PARENT_ASSET;
+
+	/**
+	 * The number of structural features of the '<em>Kitchen</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KITCHEN_FEATURE_COUNT = ROOM_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Abstract Asset</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KITCHEN___ABSTRACT_ASSET = ROOM___ABSTRACT_ASSET;
+
+	/**
+	 * The operation id for the '<em>Similar To</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KITCHEN___SIMILAR_TO__ASSET = ROOM___SIMILAR_TO__ASSET;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KITCHEN___MERGE_CONNECTIONS = ROOM___MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KITCHEN___CAN_MERGE_CONNECTIONS = ROOM___CAN_MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KITCHEN___CAN_MERGE_CONTAINED_ASSETS = ROOM___CAN_MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KITCHEN___MERGE_CONTAINED_ASSETS = ROOM___MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KITCHEN___MERGE_CONNECTIONS__ELIST = ROOM___MERGE_CONNECTIONS__ELIST;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KITCHEN___CAN_MERGE_CONNECTIONS__ELIST = ROOM___CAN_MERGE_CONNECTIONS__ELIST;
+
+	/**
+	 * The number of operations of the '<em>Kitchen</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KITCHEN_OPERATION_COUNT = ROOM_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link environment.impl.StairsImpl <em>Stairs</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see environment.impl.StairsImpl
+	 * @see environment.impl.EnvironmentPackageImpl#getStairs()
+	 * @generated
+	 */
+	int STAIRS = 43;
+
+	/**
+	 * The feature id for the '<em><b>Connections</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAIRS__CONNECTIONS = PHYSICAL_STRUCTURE__CONNECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAIRS__NAME = PHYSICAL_STRUCTURE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Property</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAIRS__PROPERTY = PHYSICAL_STRUCTURE__PROPERTY;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAIRS__VALUE = PHYSICAL_STRUCTURE__VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAIRS__TYPE = PHYSICAL_STRUCTURE__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAIRS__DESCRIPTION = PHYSICAL_STRUCTURE__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Control</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAIRS__CONTROL = PHYSICAL_STRUCTURE__CONTROL;
+
+	/**
+	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAIRS__CONTAINED_ASSETS = PHYSICAL_STRUCTURE__CONTAINED_ASSETS;
+
+	/**
+	 * The feature id for the '<em><b>Parent Asset</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAIRS__PARENT_ASSET = PHYSICAL_STRUCTURE__PARENT_ASSET;
+
+	/**
+	 * The number of structural features of the '<em>Stairs</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAIRS_FEATURE_COUNT = PHYSICAL_STRUCTURE_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Abstract Asset</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAIRS___ABSTRACT_ASSET = PHYSICAL_STRUCTURE___ABSTRACT_ASSET;
+
+	/**
+	 * The operation id for the '<em>Similar To</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAIRS___SIMILAR_TO__ASSET = PHYSICAL_STRUCTURE___SIMILAR_TO__ASSET;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAIRS___MERGE_CONNECTIONS = PHYSICAL_STRUCTURE___MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAIRS___CAN_MERGE_CONNECTIONS = PHYSICAL_STRUCTURE___CAN_MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAIRS___CAN_MERGE_CONTAINED_ASSETS = PHYSICAL_STRUCTURE___CAN_MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAIRS___MERGE_CONTAINED_ASSETS = PHYSICAL_STRUCTURE___MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAIRS___MERGE_CONNECTIONS__ELIST = PHYSICAL_STRUCTURE___MERGE_CONNECTIONS__ELIST;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAIRS___CAN_MERGE_CONNECTIONS__ELIST = PHYSICAL_STRUCTURE___CAN_MERGE_CONNECTIONS__ELIST;
+
+	/**
+	 * The number of operations of the '<em>Stairs</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAIRS_OPERATION_COUNT = PHYSICAL_STRUCTURE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link environment.impl.CardReaderImpl <em>Card Reader</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see environment.impl.CardReaderImpl
+	 * @see environment.impl.EnvironmentPackageImpl#getCardReader()
+	 * @generated
+	 */
+	int CARD_READER = 44;
+
+	/**
+	 * The feature id for the '<em><b>Connections</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARD_READER__CONNECTIONS = COMPUTING_DEVICE__CONNECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARD_READER__NAME = COMPUTING_DEVICE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Property</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARD_READER__PROPERTY = COMPUTING_DEVICE__PROPERTY;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARD_READER__VALUE = COMPUTING_DEVICE__VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARD_READER__TYPE = COMPUTING_DEVICE__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARD_READER__DESCRIPTION = COMPUTING_DEVICE__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Control</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARD_READER__CONTROL = COMPUTING_DEVICE__CONTROL;
+
+	/**
+	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARD_READER__CONTAINED_ASSETS = COMPUTING_DEVICE__CONTAINED_ASSETS;
+
+	/**
+	 * The feature id for the '<em><b>Parent Asset</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARD_READER__PARENT_ASSET = COMPUTING_DEVICE__PARENT_ASSET;
+
+	/**
+	 * The feature id for the '<em><b>Status</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARD_READER__STATUS = COMPUTING_DEVICE__STATUS;
+
+	/**
+	 * The feature id for the '<em><b>Connectable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARD_READER__CONNECTABLE = COMPUTING_DEVICE__CONNECTABLE;
+
+	/**
+	 * The feature id for the '<em><b>Model</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARD_READER__MODEL = COMPUTING_DEVICE__MODEL;
+
+	/**
+	 * The number of structural features of the '<em>Card Reader</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARD_READER_FEATURE_COUNT = COMPUTING_DEVICE_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Abstract Asset</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARD_READER___ABSTRACT_ASSET = COMPUTING_DEVICE___ABSTRACT_ASSET;
+
+	/**
+	 * The operation id for the '<em>Similar To</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARD_READER___SIMILAR_TO__ASSET = COMPUTING_DEVICE___SIMILAR_TO__ASSET;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARD_READER___MERGE_CONNECTIONS = COMPUTING_DEVICE___MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARD_READER___CAN_MERGE_CONNECTIONS = COMPUTING_DEVICE___CAN_MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARD_READER___CAN_MERGE_CONTAINED_ASSETS = COMPUTING_DEVICE___CAN_MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARD_READER___MERGE_CONTAINED_ASSETS = COMPUTING_DEVICE___MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARD_READER___MERGE_CONNECTIONS__ELIST = COMPUTING_DEVICE___MERGE_CONNECTIONS__ELIST;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARD_READER___CAN_MERGE_CONNECTIONS__ELIST = COMPUTING_DEVICE___CAN_MERGE_CONNECTIONS__ELIST;
+
+	/**
+	 * The number of operations of the '<em>Card Reader</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARD_READER_OPERATION_COUNT = COMPUTING_DEVICE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link environment.impl.EmployeeImpl <em>Employee</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see environment.impl.EmployeeImpl
+	 * @see environment.impl.EnvironmentPackageImpl#getEmployee()
+	 * @generated
+	 */
+	int EMPLOYEE = 45;
+
+	/**
+	 * The feature id for the '<em><b>Connections</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMPLOYEE__CONNECTIONS = ACTOR__CONNECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMPLOYEE__NAME = ACTOR__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Property</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMPLOYEE__PROPERTY = ACTOR__PROPERTY;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMPLOYEE__VALUE = ACTOR__VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMPLOYEE__TYPE = ACTOR__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMPLOYEE__DESCRIPTION = ACTOR__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Control</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMPLOYEE__CONTROL = ACTOR__CONTROL;
+
+	/**
+	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMPLOYEE__CONTAINED_ASSETS = ACTOR__CONTAINED_ASSETS;
+
+	/**
+	 * The feature id for the '<em><b>Parent Asset</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMPLOYEE__PARENT_ASSET = ACTOR__PARENT_ASSET;
+
+	/**
+	 * The feature id for the '<em><b>Role</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMPLOYEE__ROLE = ACTOR__ROLE;
+
+	/**
+	 * The number of structural features of the '<em>Employee</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMPLOYEE_FEATURE_COUNT = ACTOR_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Abstract Asset</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMPLOYEE___ABSTRACT_ASSET = ACTOR___ABSTRACT_ASSET;
+
+	/**
+	 * The operation id for the '<em>Similar To</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMPLOYEE___SIMILAR_TO__ASSET = ACTOR___SIMILAR_TO__ASSET;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMPLOYEE___MERGE_CONNECTIONS = ACTOR___MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMPLOYEE___CAN_MERGE_CONNECTIONS = ACTOR___CAN_MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMPLOYEE___CAN_MERGE_CONTAINED_ASSETS = ACTOR___CAN_MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMPLOYEE___MERGE_CONTAINED_ASSETS = ACTOR___MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMPLOYEE___MERGE_CONNECTIONS__ELIST = ACTOR___MERGE_CONNECTIONS__ELIST;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMPLOYEE___CAN_MERGE_CONNECTIONS__ELIST = ACTOR___CAN_MERGE_CONNECTIONS__ELIST;
+
+	/**
+	 * The number of operations of the '<em>Employee</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMPLOYEE_OPERATION_COUNT = ACTOR_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link environment.impl.VisitorImpl <em>Visitor</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see environment.impl.VisitorImpl
+	 * @see environment.impl.EnvironmentPackageImpl#getVisitor()
+	 * @generated
+	 */
+	int VISITOR = 46;
+
+	/**
+	 * The feature id for the '<em><b>Connections</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VISITOR__CONNECTIONS = ACTOR__CONNECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VISITOR__NAME = ACTOR__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Property</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VISITOR__PROPERTY = ACTOR__PROPERTY;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VISITOR__VALUE = ACTOR__VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VISITOR__TYPE = ACTOR__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VISITOR__DESCRIPTION = ACTOR__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Control</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VISITOR__CONTROL = ACTOR__CONTROL;
+
+	/**
+	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VISITOR__CONTAINED_ASSETS = ACTOR__CONTAINED_ASSETS;
+
+	/**
+	 * The feature id for the '<em><b>Parent Asset</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VISITOR__PARENT_ASSET = ACTOR__PARENT_ASSET;
+
+	/**
+	 * The feature id for the '<em><b>Role</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VISITOR__ROLE = ACTOR__ROLE;
+
+	/**
+	 * The number of structural features of the '<em>Visitor</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VISITOR_FEATURE_COUNT = ACTOR_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Abstract Asset</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VISITOR___ABSTRACT_ASSET = ACTOR___ABSTRACT_ASSET;
+
+	/**
+	 * The operation id for the '<em>Similar To</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VISITOR___SIMILAR_TO__ASSET = ACTOR___SIMILAR_TO__ASSET;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VISITOR___MERGE_CONNECTIONS = ACTOR___MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VISITOR___CAN_MERGE_CONNECTIONS = ACTOR___CAN_MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VISITOR___CAN_MERGE_CONTAINED_ASSETS = ACTOR___CAN_MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VISITOR___MERGE_CONTAINED_ASSETS = ACTOR___MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VISITOR___MERGE_CONNECTIONS__ELIST = ACTOR___MERGE_CONNECTIONS__ELIST;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VISITOR___CAN_MERGE_CONNECTIONS__ELIST = ACTOR___CAN_MERGE_CONNECTIONS__ELIST;
+
+	/**
+	 * The number of operations of the '<em>Visitor</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VISITOR_OPERATION_COUNT = ACTOR_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link environment.Status <em>Status</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4152,7 +8015,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @see environment.impl.EnvironmentPackageImpl#getStatus()
 	 * @generated
 	 */
-	int STATUS = 37;
+	int STATUS = 47;
 
 	/**
 	 * The meta object id for the '{@link environment.ProcessStatus <em>Process Status</em>}' enum.
@@ -4162,7 +8025,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @see environment.impl.EnvironmentPackageImpl#getProcessStatus()
 	 * @generated
 	 */
-	int PROCESS_STATUS = 38;
+	int PROCESS_STATUS = 48;
 
 	/**
 	 * The meta object id for the '{@link environment.FileStatus <em>File Status</em>}' enum.
@@ -4172,7 +8035,18 @@ public interface EnvironmentPackage extends EPackage {
 	 * @see environment.impl.EnvironmentPackageImpl#getFileStatus()
 	 * @generated
 	 */
-	int FILE_STATUS = 39;
+	int FILE_STATUS = 49;
+
+
+	/**
+	 * The meta object id for the '{@link environment.CredentialType <em>Credential Type</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see environment.CredentialType
+	 * @see environment.impl.EnvironmentPackageImpl#getCredentialType()
+	 * @generated
+	 */
+	int CREDENTIAL_TYPE = 50;
 
 
 	/**
@@ -4229,15 +8103,15 @@ public interface EnvironmentPackage extends EPackage {
 	EAttribute getComputingDevice_Status();
 
 	/**
-	 * Returns the meta object for the attribute '{@link environment.ComputingDevice#isCanConnect <em>Can Connect</em>}'.
+	 * Returns the meta object for the attribute '{@link environment.ComputingDevice#isConnectable <em>Connectable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Can Connect</em>'.
-	 * @see environment.ComputingDevice#isCanConnect()
+	 * @return the meta object for the attribute '<em>Connectable</em>'.
+	 * @see environment.ComputingDevice#isConnectable()
 	 * @see #getComputingDevice()
 	 * @generated
 	 */
-	EAttribute getComputingDevice_CanConnect();
+	EAttribute getComputingDevice_Connectable();
 
 	/**
 	 * Returns the meta object for the attribute '{@link environment.ComputingDevice#getModel <em>Model</em>}'.
@@ -4439,15 +8313,25 @@ public interface EnvironmentPackage extends EPackage {
 	EAttribute getConnection_Name();
 
 	/**
-	 * Returns the meta object for the attribute '{@link environment.Connection#getType <em>Type</em>}'.
+	 * Returns the meta object for the containment reference '{@link environment.Connection#getType <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @return the meta object for the containment reference '<em>Type</em>'.
 	 * @see environment.Connection#getType()
 	 * @see #getConnection()
 	 * @generated
 	 */
-	EAttribute getConnection_Type();
+	EReference getConnection_Type();
+
+	/**
+	 * Returns the meta object for the '{@link environment.Connection#similarTo(environment.Connection) <em>Similar To</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Similar To</em>' operation.
+	 * @see environment.Connection#similarTo(environment.Connection)
+	 * @generated
+	 */
+	EOperation getConnection__SimilarTo__Connection();
 
 	/**
 	 * Returns the meta object for the attribute list '{@link environment.Connection#getConstraints <em>Constraints</em>}'.
@@ -4461,15 +8345,15 @@ public interface EnvironmentPackage extends EPackage {
 	EAttribute getConnection_Constraints();
 
 	/**
-	 * Returns the meta object for the attribute '{@link environment.Connection#isIsBidirectional <em>Is Bidirectional</em>}'.
+	 * Returns the meta object for the attribute '{@link environment.Connection#isBidirectional <em>Bidirectional</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Is Bidirectional</em>'.
-	 * @see environment.Connection#isIsBidirectional()
+	 * @return the meta object for the attribute '<em>Bidirectional</em>'.
+	 * @see environment.Connection#isBidirectional()
 	 * @see #getConnection()
 	 * @generated
 	 */
-	EAttribute getConnection_IsBidirectional();
+	EAttribute getConnection_Bidirectional();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link environment.Connection#getPort <em>Port</em>}'.
@@ -4513,6 +8397,17 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getDigitalConnection();
+
+	/**
+	 * Returns the meta object for the attribute '{@link environment.DigitalConnection#getProtocol <em>Protocol</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Protocol</em>'.
+	 * @see environment.DigitalConnection#getProtocol()
+	 * @see #getDigitalConnection()
+	 * @generated
+	 */
+	EAttribute getDigitalConnection_Protocol();
 
 	/**
 	 * Returns the meta object for class '{@link environment.PhysicalConnection <em>Physical Connection</em>}'.
@@ -4579,10 +8474,10 @@ public interface EnvironmentPackage extends EPackage {
 	EAttribute getAsset_Value();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link environment.Asset#getType <em>Type</em>}'.
+	 * Returns the meta object for the containment reference '{@link environment.Asset#getType <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Type</em>'.
+	 * @return the meta object for the containment reference '<em>Type</em>'.
 	 * @see environment.Asset#getType()
 	 * @see #getAsset()
 	 * @generated
@@ -4610,6 +8505,86 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getAsset_Control();
+
+	/**
+	 * Returns the meta object for the '{@link environment.Asset#abstractAsset() <em>Abstract Asset</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Abstract Asset</em>' operation.
+	 * @see environment.Asset#abstractAsset()
+	 * @generated
+	 */
+	EOperation getAsset__AbstractAsset();
+
+	/**
+	 * Returns the meta object for the '{@link environment.Asset#similarTo(environment.Asset) <em>Similar To</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Similar To</em>' operation.
+	 * @see environment.Asset#similarTo(environment.Asset)
+	 * @generated
+	 */
+	EOperation getAsset__SimilarTo__Asset();
+
+	/**
+	 * Returns the meta object for the '{@link environment.Asset#mergeConnections() <em>Merge Connections</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Merge Connections</em>' operation.
+	 * @see environment.Asset#mergeConnections()
+	 * @generated
+	 */
+	EOperation getAsset__MergeConnections();
+
+	/**
+	 * Returns the meta object for the '{@link environment.Asset#canMergeConnections() <em>Can Merge Connections</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Can Merge Connections</em>' operation.
+	 * @see environment.Asset#canMergeConnections()
+	 * @generated
+	 */
+	EOperation getAsset__CanMergeConnections();
+
+	/**
+	 * Returns the meta object for the '{@link environment.Asset#canMergeContainedAssets() <em>Can Merge Contained Assets</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Can Merge Contained Assets</em>' operation.
+	 * @see environment.Asset#canMergeContainedAssets()
+	 * @generated
+	 */
+	EOperation getAsset__CanMergeContainedAssets();
+
+	/**
+	 * Returns the meta object for the '{@link environment.Asset#mergeContainedAssets() <em>Merge Contained Assets</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Merge Contained Assets</em>' operation.
+	 * @see environment.Asset#mergeContainedAssets()
+	 * @generated
+	 */
+	EOperation getAsset__MergeContainedAssets();
+
+	/**
+	 * Returns the meta object for the '{@link environment.Asset#mergeConnections(org.eclipse.emf.common.util.EList) <em>Merge Connections</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Merge Connections</em>' operation.
+	 * @see environment.Asset#mergeConnections(org.eclipse.emf.common.util.EList)
+	 * @generated
+	 */
+	EOperation getAsset__MergeConnections__EList();
+
+	/**
+	 * Returns the meta object for the '{@link environment.Asset#canMergeConnections(org.eclipse.emf.common.util.EList) <em>Can Merge Connections</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Can Merge Connections</em>' operation.
+	 * @see environment.Asset#canMergeConnections(org.eclipse.emf.common.util.EList)
+	 * @generated
+	 */
+	EOperation getAsset__CanMergeConnections__EList();
 
 	/**
 	 * Returns the meta object for class '{@link environment.EnvironmentDiagram <em>Diagram</em>}'.
@@ -4774,6 +8749,17 @@ public interface EnvironmentPackage extends EPackage {
 	EAttribute getProperty_Value();
 
 	/**
+	 * Returns the meta object for the attribute '{@link environment.Property#isAbstractable <em>Abstractable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Abstractable</em>'.
+	 * @see environment.Property#isAbstractable()
+	 * @see #getProperty()
+	 * @generated
+	 */
+	EAttribute getProperty_Abstractable();
+
+	/**
 	 * Returns the meta object for class '{@link environment.Credential <em>Credential</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4784,26 +8770,26 @@ public interface EnvironmentPackage extends EPackage {
 	EClass getCredential();
 
 	/**
-	 * Returns the meta object for the attribute '{@link environment.Credential#getKey <em>Key</em>}'.
+	 * Returns the meta object for the attribute '{@link environment.Credential#getType <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Key</em>'.
-	 * @see environment.Credential#getKey()
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see environment.Credential#getType()
 	 * @see #getCredential()
 	 * @generated
 	 */
-	EAttribute getCredential_Key();
+	EAttribute getCredential_Type();
 
 	/**
-	 * Returns the meta object for the attribute '{@link environment.Credential#getValue <em>Value</em>}'.
+	 * Returns the meta object for the attribute '{@link environment.Credential#getOther <em>Other</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see environment.Credential#getValue()
+	 * @return the meta object for the attribute '<em>Other</em>'.
+	 * @see environment.Credential#getOther()
 	 * @see #getCredential()
 	 * @generated
 	 */
-	EAttribute getCredential_Value();
+	EAttribute getCredential_Other();
 
 	/**
 	 * Returns the meta object for class '{@link environment.Actor <em>Actor</em>}'.
@@ -4944,10 +8930,10 @@ public interface EnvironmentPackage extends EPackage {
 	EAttribute getType_Name();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link environment.Type#getSuperType <em>Super Type</em>}'.
+	 * Returns the meta object for the containment reference '{@link environment.Type#getSuperType <em>Super Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Super Type</em>'.
+	 * @return the meta object for the containment reference '<em>Super Type</em>'.
 	 * @see environment.Type#getSuperType()
 	 * @see #getType()
 	 * @generated
@@ -5085,6 +9071,128 @@ public interface EnvironmentPackage extends EPackage {
 	EClass getElevatorsArea();
 
 	/**
+	 * Returns the meta object for class '{@link environment.IPNetwork <em>IP Network</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>IP Network</em>'.
+	 * @see environment.IPNetwork
+	 * @generated
+	 */
+	EClass getIPNetwork();
+
+	/**
+	 * Returns the meta object for class '{@link environment.DigitalNetwork <em>Digital Network</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Digital Network</em>'.
+	 * @see environment.DigitalNetwork
+	 * @generated
+	 */
+	EClass getDigitalNetwork();
+
+	/**
+	 * Returns the meta object for the attribute '{@link environment.DigitalNetwork#getProtocol <em>Protocol</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Protocol</em>'.
+	 * @see environment.DigitalNetwork#getProtocol()
+	 * @see #getDigitalNetwork()
+	 * @generated
+	 */
+	EAttribute getDigitalNetwork_Protocol();
+
+	/**
+	 * Returns the meta object for the attribute '{@link environment.DigitalNetwork#getEncryption <em>Encryption</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Encryption</em>'.
+	 * @see environment.DigitalNetwork#getEncryption()
+	 * @see #getDigitalNetwork()
+	 * @generated
+	 */
+	EAttribute getDigitalNetwork_Encryption();
+
+	/**
+	 * Returns the meta object for class '{@link environment.BusNetwork <em>Bus Network</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Bus Network</em>'.
+	 * @see environment.BusNetwork
+	 * @generated
+	 */
+	EClass getBusNetwork();
+
+	/**
+	 * Returns the meta object for class '{@link environment.IPConnection <em>IP Connection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>IP Connection</em>'.
+	 * @see environment.IPConnection
+	 * @generated
+	 */
+	EClass getIPConnection();
+
+	/**
+	 * Returns the meta object for class '{@link environment.BusConnection <em>Bus Connection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Bus Connection</em>'.
+	 * @see environment.BusConnection
+	 * @generated
+	 */
+	EClass getBusConnection();
+
+	/**
+	 * Returns the meta object for class '{@link environment.Kitchen <em>Kitchen</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Kitchen</em>'.
+	 * @see environment.Kitchen
+	 * @generated
+	 */
+	EClass getKitchen();
+
+	/**
+	 * Returns the meta object for class '{@link environment.Stairs <em>Stairs</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Stairs</em>'.
+	 * @see environment.Stairs
+	 * @generated
+	 */
+	EClass getStairs();
+
+	/**
+	 * Returns the meta object for class '{@link environment.CardReader <em>Card Reader</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Card Reader</em>'.
+	 * @see environment.CardReader
+	 * @generated
+	 */
+	EClass getCardReader();
+
+	/**
+	 * Returns the meta object for class '{@link environment.Employee <em>Employee</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Employee</em>'.
+	 * @see environment.Employee
+	 * @generated
+	 */
+	EClass getEmployee();
+
+	/**
+	 * Returns the meta object for class '{@link environment.Visitor <em>Visitor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Visitor</em>'.
+	 * @see environment.Visitor
+	 * @generated
+	 */
+	EClass getVisitor();
+
+	/**
 	 * Returns the meta object for enum '{@link environment.Status <em>Status</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5113,6 +9221,16 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getFileStatus();
+
+	/**
+	 * Returns the meta object for enum '{@link environment.CredentialType <em>Credential Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Credential Type</em>'.
+	 * @see environment.CredentialType
+	 * @generated
+	 */
+	EEnum getCredentialType();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -5182,12 +9300,12 @@ public interface EnvironmentPackage extends EPackage {
 		EAttribute COMPUTING_DEVICE__STATUS = eINSTANCE.getComputingDevice_Status();
 
 		/**
-		 * The meta object literal for the '<em><b>Can Connect</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Connectable</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute COMPUTING_DEVICE__CAN_CONNECT = eINSTANCE.getComputingDevice_CanConnect();
+		EAttribute COMPUTING_DEVICE__CONNECTABLE = eINSTANCE.getComputingDevice_Connectable();
 
 		/**
 		 * The meta object literal for the '<em><b>Model</b></em>' attribute feature.
@@ -5362,12 +9480,20 @@ public interface EnvironmentPackage extends EPackage {
 		EAttribute CONNECTION__NAME = eINSTANCE.getConnection_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Type</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute CONNECTION__TYPE = eINSTANCE.getConnection_Type();
+		EReference CONNECTION__TYPE = eINSTANCE.getConnection_Type();
+
+		/**
+		 * The meta object literal for the '<em><b>Similar To</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CONNECTION___SIMILAR_TO__CONNECTION = eINSTANCE.getConnection__SimilarTo__Connection();
 
 		/**
 		 * The meta object literal for the '<em><b>Constraints</b></em>' attribute list feature.
@@ -5378,12 +9504,12 @@ public interface EnvironmentPackage extends EPackage {
 		EAttribute CONNECTION__CONSTRAINTS = eINSTANCE.getConnection_Constraints();
 
 		/**
-		 * The meta object literal for the '<em><b>Is Bidirectional</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Bidirectional</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute CONNECTION__IS_BIDIRECTIONAL = eINSTANCE.getConnection_IsBidirectional();
+		EAttribute CONNECTION__BIDIRECTIONAL = eINSTANCE.getConnection_Bidirectional();
 
 		/**
 		 * The meta object literal for the '<em><b>Port</b></em>' containment reference feature.
@@ -5418,6 +9544,14 @@ public interface EnvironmentPackage extends EPackage {
 		 * @generated
 		 */
 		EClass DIGITAL_CONNECTION = eINSTANCE.getDigitalConnection();
+
+		/**
+		 * The meta object literal for the '<em><b>Protocol</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DIGITAL_CONNECTION__PROTOCOL = eINSTANCE.getDigitalConnection_Protocol();
 
 		/**
 		 * The meta object literal for the '{@link environment.impl.PhysicalConnectionImpl <em>Physical Connection</em>}' class.
@@ -5472,7 +9606,7 @@ public interface EnvironmentPackage extends EPackage {
 		EAttribute ASSET__VALUE = eINSTANCE.getAsset_Value();
 
 		/**
-		 * The meta object literal for the '<em><b>Type</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Type</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5494,6 +9628,70 @@ public interface EnvironmentPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ASSET__CONTROL = eINSTANCE.getAsset_Control();
+
+		/**
+		 * The meta object literal for the '<em><b>Abstract Asset</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ASSET___ABSTRACT_ASSET = eINSTANCE.getAsset__AbstractAsset();
+
+		/**
+		 * The meta object literal for the '<em><b>Similar To</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ASSET___SIMILAR_TO__ASSET = eINSTANCE.getAsset__SimilarTo__Asset();
+
+		/**
+		 * The meta object literal for the '<em><b>Merge Connections</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ASSET___MERGE_CONNECTIONS = eINSTANCE.getAsset__MergeConnections();
+
+		/**
+		 * The meta object literal for the '<em><b>Can Merge Connections</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ASSET___CAN_MERGE_CONNECTIONS = eINSTANCE.getAsset__CanMergeConnections();
+
+		/**
+		 * The meta object literal for the '<em><b>Can Merge Contained Assets</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ASSET___CAN_MERGE_CONTAINED_ASSETS = eINSTANCE.getAsset__CanMergeContainedAssets();
+
+		/**
+		 * The meta object literal for the '<em><b>Merge Contained Assets</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ASSET___MERGE_CONTAINED_ASSETS = eINSTANCE.getAsset__MergeContainedAssets();
+
+		/**
+		 * The meta object literal for the '<em><b>Merge Connections</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ASSET___MERGE_CONNECTIONS__ELIST = eINSTANCE.getAsset__MergeConnections__EList();
+
+		/**
+		 * The meta object literal for the '<em><b>Can Merge Connections</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ASSET___CAN_MERGE_CONNECTIONS__ELIST = eINSTANCE.getAsset__CanMergeConnections__EList();
 
 		/**
 		 * The meta object literal for the '{@link environment.impl.EnvironmentDiagramImpl <em>Diagram</em>}' class.
@@ -5622,6 +9820,14 @@ public interface EnvironmentPackage extends EPackage {
 		EAttribute PROPERTY__VALUE = eINSTANCE.getProperty_Value();
 
 		/**
+		 * The meta object literal for the '<em><b>Abstractable</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PROPERTY__ABSTRACTABLE = eINSTANCE.getProperty_Abstractable();
+
+		/**
 		 * The meta object literal for the '{@link environment.impl.CredentialImpl <em>Credential</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5632,20 +9838,20 @@ public interface EnvironmentPackage extends EPackage {
 		EClass CREDENTIAL = eINSTANCE.getCredential();
 
 		/**
-		 * The meta object literal for the '<em><b>Key</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute CREDENTIAL__KEY = eINSTANCE.getCredential_Key();
+		EAttribute CREDENTIAL__TYPE = eINSTANCE.getCredential_Type();
 
 		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Other</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute CREDENTIAL__VALUE = eINSTANCE.getCredential_Value();
+		EAttribute CREDENTIAL__OTHER = eINSTANCE.getCredential_Other();
 
 		/**
 		 * The meta object literal for the '{@link environment.impl.ActorImpl <em>Actor</em>}' class.
@@ -5762,7 +9968,7 @@ public interface EnvironmentPackage extends EPackage {
 		EAttribute TYPE__NAME = eINSTANCE.getType_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Super Type</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Super Type</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5900,6 +10106,122 @@ public interface EnvironmentPackage extends EPackage {
 		EClass ELEVATORS_AREA = eINSTANCE.getElevatorsArea();
 
 		/**
+		 * The meta object literal for the '{@link environment.impl.IPNetworkImpl <em>IP Network</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see environment.impl.IPNetworkImpl
+		 * @see environment.impl.EnvironmentPackageImpl#getIPNetwork()
+		 * @generated
+		 */
+		EClass IP_NETWORK = eINSTANCE.getIPNetwork();
+
+		/**
+		 * The meta object literal for the '{@link environment.impl.DigitalNetworkImpl <em>Digital Network</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see environment.impl.DigitalNetworkImpl
+		 * @see environment.impl.EnvironmentPackageImpl#getDigitalNetwork()
+		 * @generated
+		 */
+		EClass DIGITAL_NETWORK = eINSTANCE.getDigitalNetwork();
+
+		/**
+		 * The meta object literal for the '<em><b>Protocol</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DIGITAL_NETWORK__PROTOCOL = eINSTANCE.getDigitalNetwork_Protocol();
+
+		/**
+		 * The meta object literal for the '<em><b>Encryption</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DIGITAL_NETWORK__ENCRYPTION = eINSTANCE.getDigitalNetwork_Encryption();
+
+		/**
+		 * The meta object literal for the '{@link environment.impl.BusNetworkImpl <em>Bus Network</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see environment.impl.BusNetworkImpl
+		 * @see environment.impl.EnvironmentPackageImpl#getBusNetwork()
+		 * @generated
+		 */
+		EClass BUS_NETWORK = eINSTANCE.getBusNetwork();
+
+		/**
+		 * The meta object literal for the '{@link environment.impl.IPConnectionImpl <em>IP Connection</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see environment.impl.IPConnectionImpl
+		 * @see environment.impl.EnvironmentPackageImpl#getIPConnection()
+		 * @generated
+		 */
+		EClass IP_CONNECTION = eINSTANCE.getIPConnection();
+
+		/**
+		 * The meta object literal for the '{@link environment.impl.BusConnectionImpl <em>Bus Connection</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see environment.impl.BusConnectionImpl
+		 * @see environment.impl.EnvironmentPackageImpl#getBusConnection()
+		 * @generated
+		 */
+		EClass BUS_CONNECTION = eINSTANCE.getBusConnection();
+
+		/**
+		 * The meta object literal for the '{@link environment.impl.KitchenImpl <em>Kitchen</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see environment.impl.KitchenImpl
+		 * @see environment.impl.EnvironmentPackageImpl#getKitchen()
+		 * @generated
+		 */
+		EClass KITCHEN = eINSTANCE.getKitchen();
+
+		/**
+		 * The meta object literal for the '{@link environment.impl.StairsImpl <em>Stairs</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see environment.impl.StairsImpl
+		 * @see environment.impl.EnvironmentPackageImpl#getStairs()
+		 * @generated
+		 */
+		EClass STAIRS = eINSTANCE.getStairs();
+
+		/**
+		 * The meta object literal for the '{@link environment.impl.CardReaderImpl <em>Card Reader</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see environment.impl.CardReaderImpl
+		 * @see environment.impl.EnvironmentPackageImpl#getCardReader()
+		 * @generated
+		 */
+		EClass CARD_READER = eINSTANCE.getCardReader();
+
+		/**
+		 * The meta object literal for the '{@link environment.impl.EmployeeImpl <em>Employee</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see environment.impl.EmployeeImpl
+		 * @see environment.impl.EnvironmentPackageImpl#getEmployee()
+		 * @generated
+		 */
+		EClass EMPLOYEE = eINSTANCE.getEmployee();
+
+		/**
+		 * The meta object literal for the '{@link environment.impl.VisitorImpl <em>Visitor</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see environment.impl.VisitorImpl
+		 * @see environment.impl.EnvironmentPackageImpl#getVisitor()
+		 * @generated
+		 */
+		EClass VISITOR = eINSTANCE.getVisitor();
+
+		/**
 		 * The meta object literal for the '{@link environment.Status <em>Status</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5928,6 +10250,16 @@ public interface EnvironmentPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum FILE_STATUS = eINSTANCE.getFileStatus();
+
+		/**
+		 * The meta object literal for the '{@link environment.CredentialType <em>Credential Type</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see environment.CredentialType
+		 * @see environment.impl.EnvironmentPackageImpl#getCredentialType()
+		 * @generated
+		 */
+		EEnum CREDENTIAL_TYPE = eINSTANCE.getCredentialType();
 
 	}
 
