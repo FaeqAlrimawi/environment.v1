@@ -185,7 +185,7 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 		String [] names = className.split("\\.");
 		String cName = names[names.length-1].replace("Impl", "");
 		String ctrl = cName;
-		String currentCtrl  =getControl();
+		String currentCtrl = getControl();
 		
 		if(currentCtrl == null || currentCtrl.isEmpty()) {
 			//if this object can be cast to a Room, then the control is a room

@@ -184,10 +184,24 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+
 	 */
 	protected ConnectionImpl() {
 		super();
+		
+		//set default name
+		String currentName = getName();
+		String className = this.getClass().getName();
+		String [] names = className.split("\\.");
+		String cName = names[names.length-1].replace("Impl", "");
+		
+		if(currentName == null || currentName.isEmpty()) {
+				String name = cName + connectionNumber++;
+				char c[] = name.toCharArray();
+				c[0] = Character.toLowerCase(c[0]);
+				name = new String(c);
+				setName(name);
+			}
 	}
 
 	/**
