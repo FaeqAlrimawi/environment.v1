@@ -121,16 +121,14 @@ public class DigitalAssetImpl extends AssetImpl implements DigitalAsset {
 					
 					//add to the new parent
 					if(!isContainedInPhysical((Collection<Asset>)containedAssets)) {
-						
 						containedAssets.add(this);
-						removeDuplicatesPhysical((Collection<Asset>)containedAssets);
+						//removeDuplicatesPhysical((Collection<Asset>)containedAssets);
 					}
 				} else if(DigitalAsset.class.isInstance(newParentAsset)) {
 					EList<DigitalAsset> containedAssets = ((DigitalAsset)newParentAsset).getContainedAssets();
 					
 					//add to the new parent
 						if(!isContainedIn((Collection<DigitalAsset>)containedAssets)) {
-		
 							containedAssets.add(this);
 						}
 						
@@ -146,7 +144,7 @@ public class DigitalAssetImpl extends AssetImpl implements DigitalAsset {
 						((DigitalAsset)oldParentAsset).getContainedAssets().remove(this);
 		
 					}
-			}
+			} 
 				
 	}
 	

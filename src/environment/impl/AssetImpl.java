@@ -4,6 +4,9 @@ package environment.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
+import java.util.HashSet;
+import java.util.Set;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.BasicEList;
@@ -21,6 +24,7 @@ import environment.Connection;
 import environment.DigitalAsset;
 import environment.PhysicalAsset;
 import environment.Property;
+import environment.Room;
 import environment.Type;
 import environment.cpsPackage;
 import environment.smartbuildingFactory;
@@ -164,7 +168,11 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 	 * @ordered
 	 */
 	protected String control = CONTROL_EDEFAULT;
-
+	
+//	protected  static LinkedList<Integer> assetNumbers = new LinkedList<Integer>();
+//	
+//	protected static Random random = new Random();
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -175,8 +183,29 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 		//by default, control is set to the name of the class that is invoked
 		String className = this.getClass().getName();
 		String [] names = className.split("\\.");
-		String ctrl = names[names.length-1].replace("Impl", "");
-		setControl(ctrl);
+		String cName = names[names.length-1].replace("Impl", "");
+		String ctrl = cName;
+		String currentCtrl  =getControl();
+		
+		if(currentCtrl == null || currentCtrl.isEmpty()) {
+			//if this object can be cast to a Room, then the control is a room
+			if(Room.class.isInstance(this)) {
+				ctrl = "Room";
+			}
+			
+			setControl(ctrl);
+		}
+		
+		//give default name to the asset if there's no name
+		String currentName = getName();
+		
+		if(currentName == null || currentName.isEmpty()) {
+				String name = cName+ assetNumber++;
+				char c[] = name.toCharArray();
+				c[0] = Character.toLowerCase(c[0]);
+				name = new String(c);
+				setName(name);
+			}
 	}
 
 	/**
@@ -960,12 +989,13 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case cpsPackage.ASSET__CONNECTIONS:
+				removeDuplicates(getConnections());
 				return getConnections();
 			case cpsPackage.ASSET__NAME:
 				return getName();
@@ -983,6 +1013,14 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 		return super.eGet(featureID, resolve, coreType);
 	}
 
+	private void removeDuplicates(Collection<Connection> connections) {
+
+		Set<Connection> hs = new HashSet<Connection>();
+		hs.addAll(connections);
+		connections.clear();
+		connections.addAll(hs);		
+	}
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

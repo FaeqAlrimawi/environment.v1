@@ -229,13 +229,28 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	public void setAsset1(Asset newAsset1) {
 		Asset oldAsset1 = asset1;
 		asset1 = newAsset1;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, cpsPackage.CONNECTION__ASSET1, oldAsset1, asset1));
+		
+		//update asset1 with the connection
+		if(asset1 != null) {
+			EList<Connection> connections = asset1.getConnections();
+			
+			if(!isContainedIn((Collection<Connection>)connections)) {
+				connections.add(this);
+			}
+		}
+		
+		
+		//remove connection from old asset
+		if(oldAsset1 != null) {
+			oldAsset1.getConnections().remove(this);
+		}
+		
 	}
 
 	/**
@@ -267,15 +282,42 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+
 	 */
 	public void setAsset2(Asset newAsset2) {
 		Asset oldAsset2 = asset2;
 		asset2 = newAsset2;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, cpsPackage.CONNECTION__ASSET2, oldAsset2, asset2));
+		
+		//add connection to asset2
+		if(asset2 != null) {
+			EList<Connection> connections = asset2.getConnections();
+			
+			if(!isContainedIn((Collection<Connection>)connections)) {
+				connections.add(this);
+			}
+		}
+		
+		//remove connection from old asset
+		if(oldAsset2 != null) {
+			oldAsset2.getConnections().remove(this);
+		}
 	}
 
+private boolean isContainedIn(Collection<Connection> connections) {
+		
+		for(Connection con : connections) {
+			if(this.getName() != null) {
+				if(this.getName().equalsIgnoreCase(con.getName())) {
+					return true;
+				}
+			}
+			
+		}
+		
+		return false;
+	}
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
