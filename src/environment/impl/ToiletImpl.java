@@ -3,7 +3,7 @@
 package environment.impl;
 
 import environment.Toilet;
-import environment.cpsPackage;
+import environment.CyberPhysicalSystemPackage;
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -30,7 +30,7 @@ public class ToiletImpl extends RoomImpl implements Toilet {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return cpsPackage.Literals.TOILET;
+		return CyberPhysicalSystemPackage.Literals.TOILET;
 	}
 
 } //ToiletImpl

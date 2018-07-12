@@ -3,7 +3,7 @@
 package environment.impl;
 
 import environment.DishWasher;
-import environment.cpsPackage;
+import environment.CyberPhysicalSystemPackage;
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -30,7 +30,7 @@ public class DishWasherImpl extends ComputingDeviceImpl implements DishWasher {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return cpsPackage.Literals.DISH_WASHER;
+		return CyberPhysicalSystemPackage.Literals.DISH_WASHER;
 	}
 
 } //DishWasherImpl

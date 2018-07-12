@@ -3,7 +3,7 @@
 package environment.impl;
 
 import environment.ElevatorsArea;
-import environment.cpsPackage;
+import environment.CyberPhysicalSystemPackage;
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -30,7 +30,7 @@ public class ElevatorsAreaImpl extends RoomImpl implements ElevatorsArea {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return cpsPackage.Literals.ELEVATORS_AREA;
+		return CyberPhysicalSystemPackage.Literals.ELEVATORS_AREA;
 	}
 
 } //ElevatorsAreaImpl

@@ -3,7 +3,7 @@
 package environment.impl;
 
 import environment.Lab;
-import environment.cpsPackage;
+import environment.CyberPhysicalSystemPackage;
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -30,7 +30,7 @@ public class LabImpl extends RoomImpl implements Lab {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return cpsPackage.Literals.LAB;
+		return CyberPhysicalSystemPackage.Literals.LAB;
 	}
 
 } //LabImpl

@@ -5,7 +5,7 @@ package environment.impl;
 import environment.Asset;
 import environment.DigitalAsset;
 import environment.PhysicalAsset;
-import environment.cpsPackage;
+import environment.CyberPhysicalSystemPackage;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
@@ -72,7 +72,7 @@ public class DigitalAssetImpl extends AssetImpl implements DigitalAsset {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return cpsPackage.Literals.DIGITAL_ASSET;
+		return CyberPhysicalSystemPackage.Literals.DIGITAL_ASSET;
 	}
 
 	/**
@@ -86,7 +86,7 @@ public class DigitalAssetImpl extends AssetImpl implements DigitalAsset {
 			parentAsset = (Asset)eResolveProxy(oldParentAsset);
 			if (parentAsset != oldParentAsset) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, cpsPackage.DIGITAL_ASSET__PARENT_ASSET, oldParentAsset, parentAsset));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CyberPhysicalSystemPackage.DIGITAL_ASSET__PARENT_ASSET, oldParentAsset, parentAsset));
 			}
 		}
 		return parentAsset;
@@ -109,7 +109,7 @@ public class DigitalAssetImpl extends AssetImpl implements DigitalAsset {
 		Asset oldParentAsset = parentAsset;
 		parentAsset = newParentAsset;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, cpsPackage.DIGITAL_ASSET__PARENT_ASSET, oldParentAsset, parentAsset));
+			eNotify(new ENotificationImpl(this, Notification.SET, CyberPhysicalSystemPackage.DIGITAL_ASSET__PARENT_ASSET, oldParentAsset, parentAsset));
 		
 		//add this object as a child to the parent as well and remove from old parent if any
 				if(newParentAsset == null) {
@@ -178,7 +178,7 @@ public class DigitalAssetImpl extends AssetImpl implements DigitalAsset {
 	 */
 	public EList<DigitalAsset> getContainedAssets() {
 		if (containedAssets == null) {
-			containedAssets = new EObjectResolvingEList<DigitalAsset>(DigitalAsset.class, this, cpsPackage.DIGITAL_ASSET__CONTAINED_ASSETS);
+			containedAssets = new EObjectResolvingEList<DigitalAsset>(DigitalAsset.class, this, CyberPhysicalSystemPackage.DIGITAL_ASSET__CONTAINED_ASSETS);
 		}
 		return containedAssets;
 	}
@@ -191,10 +191,10 @@ public class DigitalAssetImpl extends AssetImpl implements DigitalAsset {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case cpsPackage.DIGITAL_ASSET__PARENT_ASSET:
+			case CyberPhysicalSystemPackage.DIGITAL_ASSET__PARENT_ASSET:
 				if (resolve) return getParentAsset();
 				return basicGetParentAsset();
-			case cpsPackage.DIGITAL_ASSET__CONTAINED_ASSETS:
+			case CyberPhysicalSystemPackage.DIGITAL_ASSET__CONTAINED_ASSETS:
 				removeDuplicates(getContainedAssets());
 				return getContainedAssets();
 		}
@@ -226,10 +226,10 @@ public class DigitalAssetImpl extends AssetImpl implements DigitalAsset {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case cpsPackage.DIGITAL_ASSET__PARENT_ASSET:
+			case CyberPhysicalSystemPackage.DIGITAL_ASSET__PARENT_ASSET:
 				setParentAsset((Asset)newValue);
 				return;
-			case cpsPackage.DIGITAL_ASSET__CONTAINED_ASSETS:
+			case CyberPhysicalSystemPackage.DIGITAL_ASSET__CONTAINED_ASSETS:
 				getContainedAssets().clear();
 				getContainedAssets().addAll((Collection<? extends DigitalAsset>)newValue);
 				return;
@@ -245,10 +245,10 @@ public class DigitalAssetImpl extends AssetImpl implements DigitalAsset {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case cpsPackage.DIGITAL_ASSET__PARENT_ASSET:
+			case CyberPhysicalSystemPackage.DIGITAL_ASSET__PARENT_ASSET:
 				setParentAsset((Asset)null);
 				return;
-			case cpsPackage.DIGITAL_ASSET__CONTAINED_ASSETS:
+			case CyberPhysicalSystemPackage.DIGITAL_ASSET__CONTAINED_ASSETS:
 				getContainedAssets().clear();
 				return;
 		}
@@ -263,9 +263,9 @@ public class DigitalAssetImpl extends AssetImpl implements DigitalAsset {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case cpsPackage.DIGITAL_ASSET__PARENT_ASSET:
+			case CyberPhysicalSystemPackage.DIGITAL_ASSET__PARENT_ASSET:
 				return parentAsset != null;
-			case cpsPackage.DIGITAL_ASSET__CONTAINED_ASSETS:
+			case CyberPhysicalSystemPackage.DIGITAL_ASSET__CONTAINED_ASSETS:
 				return containedAssets != null && !containedAssets.isEmpty();
 		}
 		return super.eIsSet(featureID);

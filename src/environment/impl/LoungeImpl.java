@@ -3,7 +3,7 @@
 package environment.impl;
 
 import environment.Lounge;
-import environment.cpsPackage;
+import environment.CyberPhysicalSystemPackage;
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -30,7 +30,7 @@ public class LoungeImpl extends RoomImpl implements Lounge {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return cpsPackage.Literals.LOUNGE;
+		return CyberPhysicalSystemPackage.Literals.LOUNGE;
 	}
 
 } //LoungeImpl

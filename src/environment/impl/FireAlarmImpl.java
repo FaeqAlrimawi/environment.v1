@@ -3,7 +3,7 @@
 package environment.impl;
 
 import environment.FireAlarm;
-import environment.cpsPackage;
+import environment.CyberPhysicalSystemPackage;
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -30,7 +30,7 @@ public class FireAlarmImpl extends ComputingDeviceImpl implements FireAlarm {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return cpsPackage.Literals.FIRE_ALARM;
+		return CyberPhysicalSystemPackage.Literals.FIRE_ALARM;
 	}
 
 } //FireAlarmImpl

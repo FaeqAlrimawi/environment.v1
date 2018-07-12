@@ -3,7 +3,7 @@
 package environment.impl;
 
 import environment.PhysicalConnection;
-import environment.cpsPackage;
+import environment.CyberPhysicalSystemPackage;
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -30,7 +30,7 @@ public class PhysicalConnectionImpl extends ConnectionImpl implements PhysicalCo
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return cpsPackage.Literals.PHYSICAL_CONNECTION;
+		return CyberPhysicalSystemPackage.Literals.PHYSICAL_CONNECTION;
 	}
 
 } //PhysicalConnectionImpl

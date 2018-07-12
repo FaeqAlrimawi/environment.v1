@@ -3,7 +3,7 @@
 package environment.impl;
 
 import environment.ProcessStatus;
-import environment.cpsPackage;
+import environment.CyberPhysicalSystemPackage;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -60,7 +60,7 @@ public class ProcessImpl extends DigitalAssetImpl implements environment.Process
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return cpsPackage.Literals.PROCESS;
+		return CyberPhysicalSystemPackage.Literals.PROCESS;
 	}
 
 	/**
@@ -81,7 +81,7 @@ public class ProcessImpl extends DigitalAssetImpl implements environment.Process
 		ProcessStatus oldStatus = status;
 		status = newStatus == null ? STATUS_EDEFAULT : newStatus;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, cpsPackage.PROCESS__STATUS, oldStatus, status));
+			eNotify(new ENotificationImpl(this, Notification.SET, CyberPhysicalSystemPackage.PROCESS__STATUS, oldStatus, status));
 	}
 
 	/**
@@ -92,7 +92,7 @@ public class ProcessImpl extends DigitalAssetImpl implements environment.Process
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case cpsPackage.PROCESS__STATUS:
+			case CyberPhysicalSystemPackage.PROCESS__STATUS:
 				return getStatus();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -106,7 +106,7 @@ public class ProcessImpl extends DigitalAssetImpl implements environment.Process
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case cpsPackage.PROCESS__STATUS:
+			case CyberPhysicalSystemPackage.PROCESS__STATUS:
 				setStatus((ProcessStatus)newValue);
 				return;
 		}
@@ -121,7 +121,7 @@ public class ProcessImpl extends DigitalAssetImpl implements environment.Process
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case cpsPackage.PROCESS__STATUS:
+			case CyberPhysicalSystemPackage.PROCESS__STATUS:
 				setStatus(STATUS_EDEFAULT);
 				return;
 		}
@@ -136,7 +136,7 @@ public class ProcessImpl extends DigitalAssetImpl implements environment.Process
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case cpsPackage.PROCESS__STATUS:
+			case CyberPhysicalSystemPackage.PROCESS__STATUS:
 				return status != STATUS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

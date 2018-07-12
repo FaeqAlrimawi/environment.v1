@@ -4,7 +4,7 @@ package environment.impl;
 
 import environment.Asset;
 import environment.Room;
-import environment.cpsPackage;
+import environment.CyberPhysicalSystemPackage;
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -31,7 +31,7 @@ public class RoomImpl extends PhysicalStructureImpl implements Room {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return cpsPackage.Literals.ROOM;
+		return CyberPhysicalSystemPackage.Literals.ROOM;
 	}
 	
 /*public Room abstractAsset() {

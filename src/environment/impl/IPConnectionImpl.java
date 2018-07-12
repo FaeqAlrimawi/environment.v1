@@ -3,7 +3,7 @@
 package environment.impl;
 
 import environment.IPConnection;
-import environment.cpsPackage;
+import environment.CyberPhysicalSystemPackage;
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -30,7 +30,7 @@ public class IPConnectionImpl extends DigitalConnectionImpl implements IPConnect
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return cpsPackage.Literals.IP_CONNECTION;
+		return CyberPhysicalSystemPackage.Literals.IP_CONNECTION;
 	}
 
 } //IPConnectionImpl

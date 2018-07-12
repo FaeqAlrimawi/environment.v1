@@ -15,6 +15,7 @@ import environment.CoffeeMachine;
 import environment.ComputingDevice;
 import environment.Connection;
 import environment.Credential;
+import environment.CyberPhysicalSystemPackage;
 import environment.Desktop;
 import environment.DigitalAsset;
 import environment.DigitalConnection;
@@ -48,7 +49,6 @@ import environment.Toilet;
 import environment.Type;
 import environment.Visitor;
 import environment.Workstation;
-import environment.cpsPackage;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
@@ -62,17 +62,17 @@ import org.eclipse.emf.ecore.EObject;
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see environment.cpsPackage
+ * @see environment.CyberPhysicalSystemPackage
  * @generated
  */
-public class cpsAdapterFactory extends AdapterFactoryImpl {
+public class CyberPhysicalSystemAdapterFactory extends AdapterFactoryImpl {
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static cpsPackage modelPackage;
+	protected static CyberPhysicalSystemPackage modelPackage;
 
 	/**
 	 * Creates an instance of the adapter factory.
@@ -80,9 +80,9 @@ public class cpsAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public cpsAdapterFactory() {
+	public CyberPhysicalSystemAdapterFactory() {
 		if (modelPackage == null) {
-			modelPackage = cpsPackage.eINSTANCE;
+			modelPackage = CyberPhysicalSystemPackage.eINSTANCE;
 		}
 	}
 
@@ -111,8 +111,8 @@ public class cpsAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected cpsSwitch<Adapter> modelSwitch =
-		new cpsSwitch<Adapter>() {
+	protected CyberPhysicalSystemSwitch<Adapter> modelSwitch =
+		new CyberPhysicalSystemSwitch<Adapter>() {
 			@Override
 			public Adapter casePhysicalAsset(PhysicalAsset object) {
 				return createPhysicalAssetAdapter();
@@ -991,4 +991,4 @@ public class cpsAdapterFactory extends AdapterFactoryImpl {
 		return null;
 	}
 
-} //cpsAdapterFactory
+} //CyberPhysicalSystemAdapterFactory

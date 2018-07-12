@@ -3,7 +3,7 @@
 package environment.impl;
 
 import environment.Building;
-import environment.cpsPackage;
+import environment.CyberPhysicalSystemPackage;
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -30,7 +30,7 @@ public class BuildingImpl extends PhysicalStructureImpl implements Building {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return cpsPackage.Literals.BUILDING;
+		return CyberPhysicalSystemPackage.Literals.BUILDING;
 	}
 
 } //BuildingImpl

@@ -3,7 +3,7 @@
 package environment.impl;
 
 import environment.Property;
-import environment.cpsPackage;
+import environment.CyberPhysicalSystemPackage;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -103,7 +103,7 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return cpsPackage.Literals.PROPERTY;
+		return CyberPhysicalSystemPackage.Literals.PROPERTY;
 	}
 
 	/**
@@ -124,7 +124,7 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, cpsPackage.PROPERTY__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, CyberPhysicalSystemPackage.PROPERTY__NAME, oldName, name));
 	}
 
 	/**
@@ -145,7 +145,7 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
 		String oldValue = value;
 		value = newValue;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, cpsPackage.PROPERTY__VALUE, oldValue, value));
+			eNotify(new ENotificationImpl(this, Notification.SET, CyberPhysicalSystemPackage.PROPERTY__VALUE, oldValue, value));
 	}
 
 	/**
@@ -166,7 +166,7 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
 		boolean oldAbstractable = abstractable;
 		abstractable = newAbstractable;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, cpsPackage.PROPERTY__ABSTRACTABLE, oldAbstractable, abstractable));
+			eNotify(new ENotificationImpl(this, Notification.SET, CyberPhysicalSystemPackage.PROPERTY__ABSTRACTABLE, oldAbstractable, abstractable));
 	}
 
 	/**
@@ -177,11 +177,11 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case cpsPackage.PROPERTY__NAME:
+			case CyberPhysicalSystemPackage.PROPERTY__NAME:
 				return getName();
-			case cpsPackage.PROPERTY__VALUE:
+			case CyberPhysicalSystemPackage.PROPERTY__VALUE:
 				return getValue();
-			case cpsPackage.PROPERTY__ABSTRACTABLE:
+			case CyberPhysicalSystemPackage.PROPERTY__ABSTRACTABLE:
 				return isAbstractable();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -195,13 +195,13 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case cpsPackage.PROPERTY__NAME:
+			case CyberPhysicalSystemPackage.PROPERTY__NAME:
 				setName((String)newValue);
 				return;
-			case cpsPackage.PROPERTY__VALUE:
+			case CyberPhysicalSystemPackage.PROPERTY__VALUE:
 				setValue((String)newValue);
 				return;
-			case cpsPackage.PROPERTY__ABSTRACTABLE:
+			case CyberPhysicalSystemPackage.PROPERTY__ABSTRACTABLE:
 				setAbstractable((Boolean)newValue);
 				return;
 		}
@@ -216,13 +216,13 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case cpsPackage.PROPERTY__NAME:
+			case CyberPhysicalSystemPackage.PROPERTY__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case cpsPackage.PROPERTY__VALUE:
+			case CyberPhysicalSystemPackage.PROPERTY__VALUE:
 				setValue(VALUE_EDEFAULT);
 				return;
-			case cpsPackage.PROPERTY__ABSTRACTABLE:
+			case CyberPhysicalSystemPackage.PROPERTY__ABSTRACTABLE:
 				setAbstractable(ABSTRACTABLE_EDEFAULT);
 				return;
 		}
@@ -237,11 +237,11 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case cpsPackage.PROPERTY__NAME:
+			case CyberPhysicalSystemPackage.PROPERTY__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case cpsPackage.PROPERTY__VALUE:
+			case CyberPhysicalSystemPackage.PROPERTY__VALUE:
 				return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
-			case cpsPackage.PROPERTY__ABSTRACTABLE:
+			case CyberPhysicalSystemPackage.PROPERTY__ABSTRACTABLE:
 				return abstractable != ABSTRACTABLE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

@@ -3,7 +3,7 @@
 package environment.impl;
 
 import environment.Workstation;
-import environment.cpsPackage;
+import environment.CyberPhysicalSystemPackage;
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -30,7 +30,7 @@ public class WorkstationImpl extends ComputingDeviceImpl implements Workstation 
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return cpsPackage.Literals.WORKSTATION;
+		return CyberPhysicalSystemPackage.Literals.WORKSTATION;
 	}
 
 } //WorkstationImpl

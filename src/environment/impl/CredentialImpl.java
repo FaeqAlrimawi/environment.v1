@@ -4,7 +4,7 @@ package environment.impl;
 
 import environment.Credential;
 import environment.CredentialType;
-import environment.cpsPackage;
+import environment.CyberPhysicalSystemPackage;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -83,7 +83,7 @@ public class CredentialImpl extends MinimalEObjectImpl.Container implements Cred
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return cpsPackage.Literals.CREDENTIAL;
+		return CyberPhysicalSystemPackage.Literals.CREDENTIAL;
 	}
 
 	/**
@@ -104,7 +104,7 @@ public class CredentialImpl extends MinimalEObjectImpl.Container implements Cred
 		CredentialType oldType = type;
 		type = newType == null ? TYPE_EDEFAULT : newType;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, cpsPackage.CREDENTIAL__TYPE, oldType, type));
+			eNotify(new ENotificationImpl(this, Notification.SET, CyberPhysicalSystemPackage.CREDENTIAL__TYPE, oldType, type));
 	}
 
 	/**
@@ -125,7 +125,7 @@ public class CredentialImpl extends MinimalEObjectImpl.Container implements Cred
 		String oldOther = other;
 		other = newOther;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, cpsPackage.CREDENTIAL__OTHER, oldOther, other));
+			eNotify(new ENotificationImpl(this, Notification.SET, CyberPhysicalSystemPackage.CREDENTIAL__OTHER, oldOther, other));
 	}
 
 	/**
@@ -136,9 +136,9 @@ public class CredentialImpl extends MinimalEObjectImpl.Container implements Cred
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case cpsPackage.CREDENTIAL__TYPE:
+			case CyberPhysicalSystemPackage.CREDENTIAL__TYPE:
 				return getType();
-			case cpsPackage.CREDENTIAL__OTHER:
+			case CyberPhysicalSystemPackage.CREDENTIAL__OTHER:
 				return getOther();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -152,10 +152,10 @@ public class CredentialImpl extends MinimalEObjectImpl.Container implements Cred
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case cpsPackage.CREDENTIAL__TYPE:
+			case CyberPhysicalSystemPackage.CREDENTIAL__TYPE:
 				setType((CredentialType)newValue);
 				return;
-			case cpsPackage.CREDENTIAL__OTHER:
+			case CyberPhysicalSystemPackage.CREDENTIAL__OTHER:
 				setOther((String)newValue);
 				return;
 		}
@@ -170,10 +170,10 @@ public class CredentialImpl extends MinimalEObjectImpl.Container implements Cred
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case cpsPackage.CREDENTIAL__TYPE:
+			case CyberPhysicalSystemPackage.CREDENTIAL__TYPE:
 				setType(TYPE_EDEFAULT);
 				return;
-			case cpsPackage.CREDENTIAL__OTHER:
+			case CyberPhysicalSystemPackage.CREDENTIAL__OTHER:
 				setOther(OTHER_EDEFAULT);
 				return;
 		}
@@ -188,9 +188,9 @@ public class CredentialImpl extends MinimalEObjectImpl.Container implements Cred
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case cpsPackage.CREDENTIAL__TYPE:
+			case CyberPhysicalSystemPackage.CREDENTIAL__TYPE:
 				return type != TYPE_EDEFAULT;
-			case cpsPackage.CREDENTIAL__OTHER:
+			case CyberPhysicalSystemPackage.CREDENTIAL__OTHER:
 				return OTHER_EDEFAULT == null ? other != null : !OTHER_EDEFAULT.equals(other);
 		}
 		return super.eIsSet(featureID);

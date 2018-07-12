@@ -5,7 +5,7 @@ package environment.impl;
 import environment.Asset;
 import environment.Credential;
 import environment.Port;
-import environment.cpsPackage;
+import environment.CyberPhysicalSystemPackage;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -115,7 +115,7 @@ public class PortImpl extends MinimalEObjectImpl.Container implements Port {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return cpsPackage.Literals.PORT;
+		return CyberPhysicalSystemPackage.Literals.PORT;
 	}
 
 	/**
@@ -129,7 +129,7 @@ public class PortImpl extends MinimalEObjectImpl.Container implements Port {
 			asset = (Asset)eResolveProxy(oldAsset);
 			if (asset != oldAsset) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, cpsPackage.PORT__ASSET, oldAsset, asset));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CyberPhysicalSystemPackage.PORT__ASSET, oldAsset, asset));
 			}
 		}
 		return asset;
@@ -153,7 +153,7 @@ public class PortImpl extends MinimalEObjectImpl.Container implements Port {
 		Asset oldAsset = asset;
 		asset = newAsset;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, cpsPackage.PORT__ASSET, oldAsset, asset));
+			eNotify(new ENotificationImpl(this, Notification.SET, CyberPhysicalSystemPackage.PORT__ASSET, oldAsset, asset));
 	}
 
 	/**
@@ -174,7 +174,7 @@ public class PortImpl extends MinimalEObjectImpl.Container implements Port {
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, cpsPackage.PORT__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, CyberPhysicalSystemPackage.PORT__NAME, oldName, name));
 	}
 
 	/**
@@ -184,7 +184,7 @@ public class PortImpl extends MinimalEObjectImpl.Container implements Port {
 	 */
 	public EList<Credential> getCredential() {
 		if (credential == null) {
-			credential = new EObjectContainmentEList<Credential>(Credential.class, this, cpsPackage.PORT__CREDENTIAL);
+			credential = new EObjectContainmentEList<Credential>(Credential.class, this, CyberPhysicalSystemPackage.PORT__CREDENTIAL);
 		}
 		return credential;
 	}
@@ -207,7 +207,7 @@ public class PortImpl extends MinimalEObjectImpl.Container implements Port {
 		String oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, cpsPackage.PORT__DESCRIPTION, oldDescription, description));
+			eNotify(new ENotificationImpl(this, Notification.SET, CyberPhysicalSystemPackage.PORT__DESCRIPTION, oldDescription, description));
 	}
 
 	/**
@@ -218,7 +218,7 @@ public class PortImpl extends MinimalEObjectImpl.Container implements Port {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case cpsPackage.PORT__CREDENTIAL:
+			case CyberPhysicalSystemPackage.PORT__CREDENTIAL:
 				return ((InternalEList<?>)getCredential()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -232,14 +232,14 @@ public class PortImpl extends MinimalEObjectImpl.Container implements Port {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case cpsPackage.PORT__ASSET:
+			case CyberPhysicalSystemPackage.PORT__ASSET:
 				if (resolve) return getAsset();
 				return basicGetAsset();
-			case cpsPackage.PORT__NAME:
+			case CyberPhysicalSystemPackage.PORT__NAME:
 				return getName();
-			case cpsPackage.PORT__CREDENTIAL:
+			case CyberPhysicalSystemPackage.PORT__CREDENTIAL:
 				return getCredential();
-			case cpsPackage.PORT__DESCRIPTION:
+			case CyberPhysicalSystemPackage.PORT__DESCRIPTION:
 				return getDescription();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -254,17 +254,17 @@ public class PortImpl extends MinimalEObjectImpl.Container implements Port {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case cpsPackage.PORT__ASSET:
+			case CyberPhysicalSystemPackage.PORT__ASSET:
 				setAsset((Asset)newValue);
 				return;
-			case cpsPackage.PORT__NAME:
+			case CyberPhysicalSystemPackage.PORT__NAME:
 				setName((String)newValue);
 				return;
-			case cpsPackage.PORT__CREDENTIAL:
+			case CyberPhysicalSystemPackage.PORT__CREDENTIAL:
 				getCredential().clear();
 				getCredential().addAll((Collection<? extends Credential>)newValue);
 				return;
-			case cpsPackage.PORT__DESCRIPTION:
+			case CyberPhysicalSystemPackage.PORT__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
 		}
@@ -279,16 +279,16 @@ public class PortImpl extends MinimalEObjectImpl.Container implements Port {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case cpsPackage.PORT__ASSET:
+			case CyberPhysicalSystemPackage.PORT__ASSET:
 				setAsset((Asset)null);
 				return;
-			case cpsPackage.PORT__NAME:
+			case CyberPhysicalSystemPackage.PORT__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case cpsPackage.PORT__CREDENTIAL:
+			case CyberPhysicalSystemPackage.PORT__CREDENTIAL:
 				getCredential().clear();
 				return;
-			case cpsPackage.PORT__DESCRIPTION:
+			case CyberPhysicalSystemPackage.PORT__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
 		}
@@ -303,13 +303,13 @@ public class PortImpl extends MinimalEObjectImpl.Container implements Port {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case cpsPackage.PORT__ASSET:
+			case CyberPhysicalSystemPackage.PORT__ASSET:
 				return asset != null;
-			case cpsPackage.PORT__NAME:
+			case CyberPhysicalSystemPackage.PORT__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case cpsPackage.PORT__CREDENTIAL:
+			case CyberPhysicalSystemPackage.PORT__CREDENTIAL:
 				return credential != null && !credential.isEmpty();
-			case cpsPackage.PORT__DESCRIPTION:
+			case CyberPhysicalSystemPackage.PORT__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 		}
 		return super.eIsSet(featureID);

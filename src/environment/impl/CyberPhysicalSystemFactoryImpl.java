@@ -14,6 +14,8 @@ import environment.CoffeeMachine;
 import environment.ComputingDevice;
 import environment.Credential;
 import environment.CredentialType;
+import environment.CyberPhysicalSystemFactory;
+import environment.CyberPhysicalSystemPackage;
 import environment.Desktop;
 import environment.DigitalAsset;
 import environment.DigitalConnection;
@@ -23,8 +25,6 @@ import environment.Elevator;
 import environment.ElevatorsArea;
 import environment.Employee;
 import environment.EnvironmentDiagram;
-import environment.EnvironmentFactory;
-import environment.EnvironmentPackage;
 import environment.File;
 import environment.FileStatus;
 import environment.FireAlarm;
@@ -68,24 +68,24 @@ import org.eclipse.emf.ecore.plugin.EcorePlugin;
  * <!-- end-user-doc -->
  * @generated
  */
-public class EnvironmentFactoryImpl extends EFactoryImpl implements EnvironmentFactory {
+public class CyberPhysicalSystemFactoryImpl extends EFactoryImpl implements CyberPhysicalSystemFactory {
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static EnvironmentFactory init() {
+	public static CyberPhysicalSystemFactory init() {
 		try {
-			EnvironmentFactory theEnvironmentFactory = (EnvironmentFactory)EPackage.Registry.INSTANCE.getEFactory(EnvironmentPackage.eNS_URI);
-			if (theEnvironmentFactory != null) {
-				return theEnvironmentFactory;
+			CyberPhysicalSystemFactory theCyberPhysicalSystemFactory = (CyberPhysicalSystemFactory)EPackage.Registry.INSTANCE.getEFactory(CyberPhysicalSystemPackage.eNS_URI);
+			if (theCyberPhysicalSystemFactory != null) {
+				return theCyberPhysicalSystemFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new EnvironmentFactoryImpl();
+		return new CyberPhysicalSystemFactoryImpl();
 	}
 
 	/**
@@ -94,7 +94,7 @@ public class EnvironmentFactoryImpl extends EFactoryImpl implements EnvironmentF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EnvironmentFactoryImpl() {
+	public CyberPhysicalSystemFactoryImpl() {
 		super();
 	}
 
@@ -106,51 +106,51 @@ public class EnvironmentFactoryImpl extends EFactoryImpl implements EnvironmentF
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case EnvironmentPackage.PHYSICAL_ASSET: return createPhysicalAsset();
-			case EnvironmentPackage.COMPUTING_DEVICE: return createComputingDevice();
-			case EnvironmentPackage.HVAC: return createHVAC();
-			case EnvironmentPackage.SMART_LIGHT: return createSmartLight();
-			case EnvironmentPackage.LAPTOP: return createLaptop();
-			case EnvironmentPackage.DESKTOP: return createDesktop();
-			case EnvironmentPackage.CCTV: return createCCTV();
-			case EnvironmentPackage.SERVER: return createServer();
-			case EnvironmentPackage.FILE: return createFile();
-			case EnvironmentPackage.PROCESS: return createProcess();
-			case EnvironmentPackage.APPLICATION: return createApplication();
-			case EnvironmentPackage.DIGITAL_CONNECTION: return createDigitalConnection();
-			case EnvironmentPackage.PHYSICAL_CONNECTION: return createPhysicalConnection();
-			case EnvironmentPackage.ENVIRONMENT_DIAGRAM: return createEnvironmentDiagram();
-			case EnvironmentPackage.PORT: return createPort();
-			case EnvironmentPackage.PROPERTY: return createProperty();
-			case EnvironmentPackage.CREDENTIAL: return createCredential();
-			case EnvironmentPackage.ACTOR: return createActor();
-			case EnvironmentPackage.PHYSICAL_STRUCTURE: return createPhysicalStructure();
-			case EnvironmentPackage.DIGITAL_ASSET: return createDigitalAsset();
-			case EnvironmentPackage.ACTION: return createAction();
-			case EnvironmentPackage.TYPE: return createType();
-			case EnvironmentPackage.ROOM: return createRoom();
-			case EnvironmentPackage.FLOOR: return createFloor();
-			case EnvironmentPackage.BUILDING: return createBuilding();
-			case EnvironmentPackage.FIRE_ALARM: return createFireAlarm();
-			case EnvironmentPackage.WORKSTATION: return createWorkstation();
-			case EnvironmentPackage.LAB: return createLab();
-			case EnvironmentPackage.TOILET: return createToilet();
-			case EnvironmentPackage.LOUNGE: return createLounge();
-			case EnvironmentPackage.DISH_WASHER: return createDishWasher();
-			case EnvironmentPackage.COFFEE_MACHINE: return createCoffeeMachine();
-			case EnvironmentPackage.ELEVATOR: return createElevator();
-			case EnvironmentPackage.HALLWAY: return createHallway();
-			case EnvironmentPackage.ELEVATORS_AREA: return createElevatorsArea();
-			case EnvironmentPackage.IP_NETWORK: return createIPNetwork();
-			case EnvironmentPackage.DIGITAL_NETWORK: return createDigitalNetwork();
-			case EnvironmentPackage.BUS_NETWORK: return createBusNetwork();
-			case EnvironmentPackage.IP_CONNECTION: return createIPConnection();
-			case EnvironmentPackage.BUS_CONNECTION: return createBusConnection();
-			case EnvironmentPackage.KITCHEN: return createKitchen();
-			case EnvironmentPackage.STAIRS: return createStairs();
-			case EnvironmentPackage.CARD_READER: return createCardReader();
-			case EnvironmentPackage.EMPLOYEE: return createEmployee();
-			case EnvironmentPackage.VISITOR: return createVisitor();
+			case CyberPhysicalSystemPackage.PHYSICAL_ASSET: return createPhysicalAsset();
+			case CyberPhysicalSystemPackage.COMPUTING_DEVICE: return createComputingDevice();
+			case CyberPhysicalSystemPackage.HVAC: return createHVAC();
+			case CyberPhysicalSystemPackage.SMART_LIGHT: return createSmartLight();
+			case CyberPhysicalSystemPackage.LAPTOP: return createLaptop();
+			case CyberPhysicalSystemPackage.DESKTOP: return createDesktop();
+			case CyberPhysicalSystemPackage.CCTV: return createCCTV();
+			case CyberPhysicalSystemPackage.SERVER: return createServer();
+			case CyberPhysicalSystemPackage.FILE: return createFile();
+			case CyberPhysicalSystemPackage.PROCESS: return createProcess();
+			case CyberPhysicalSystemPackage.APPLICATION: return createApplication();
+			case CyberPhysicalSystemPackage.DIGITAL_CONNECTION: return createDigitalConnection();
+			case CyberPhysicalSystemPackage.PHYSICAL_CONNECTION: return createPhysicalConnection();
+			case CyberPhysicalSystemPackage.ENVIRONMENT_DIAGRAM: return createEnvironmentDiagram();
+			case CyberPhysicalSystemPackage.PORT: return createPort();
+			case CyberPhysicalSystemPackage.PROPERTY: return createProperty();
+			case CyberPhysicalSystemPackage.CREDENTIAL: return createCredential();
+			case CyberPhysicalSystemPackage.ACTOR: return createActor();
+			case CyberPhysicalSystemPackage.PHYSICAL_STRUCTURE: return createPhysicalStructure();
+			case CyberPhysicalSystemPackage.DIGITAL_ASSET: return createDigitalAsset();
+			case CyberPhysicalSystemPackage.ACTION: return createAction();
+			case CyberPhysicalSystemPackage.TYPE: return createType();
+			case CyberPhysicalSystemPackage.ROOM: return createRoom();
+			case CyberPhysicalSystemPackage.FLOOR: return createFloor();
+			case CyberPhysicalSystemPackage.BUILDING: return createBuilding();
+			case CyberPhysicalSystemPackage.FIRE_ALARM: return createFireAlarm();
+			case CyberPhysicalSystemPackage.WORKSTATION: return createWorkstation();
+			case CyberPhysicalSystemPackage.LAB: return createLab();
+			case CyberPhysicalSystemPackage.TOILET: return createToilet();
+			case CyberPhysicalSystemPackage.LOUNGE: return createLounge();
+			case CyberPhysicalSystemPackage.DISH_WASHER: return createDishWasher();
+			case CyberPhysicalSystemPackage.COFFEE_MACHINE: return createCoffeeMachine();
+			case CyberPhysicalSystemPackage.ELEVATOR: return createElevator();
+			case CyberPhysicalSystemPackage.HALLWAY: return createHallway();
+			case CyberPhysicalSystemPackage.ELEVATORS_AREA: return createElevatorsArea();
+			case CyberPhysicalSystemPackage.IP_NETWORK: return createIPNetwork();
+			case CyberPhysicalSystemPackage.DIGITAL_NETWORK: return createDigitalNetwork();
+			case CyberPhysicalSystemPackage.BUS_NETWORK: return createBusNetwork();
+			case CyberPhysicalSystemPackage.IP_CONNECTION: return createIPConnection();
+			case CyberPhysicalSystemPackage.BUS_CONNECTION: return createBusConnection();
+			case CyberPhysicalSystemPackage.KITCHEN: return createKitchen();
+			case CyberPhysicalSystemPackage.STAIRS: return createStairs();
+			case CyberPhysicalSystemPackage.CARD_READER: return createCardReader();
+			case CyberPhysicalSystemPackage.EMPLOYEE: return createEmployee();
+			case CyberPhysicalSystemPackage.VISITOR: return createVisitor();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -164,13 +164,13 @@ public class EnvironmentFactoryImpl extends EFactoryImpl implements EnvironmentF
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-			case EnvironmentPackage.STATUS:
+			case CyberPhysicalSystemPackage.STATUS:
 				return createStatusFromString(eDataType, initialValue);
-			case EnvironmentPackage.PROCESS_STATUS:
+			case CyberPhysicalSystemPackage.PROCESS_STATUS:
 				return createProcessStatusFromString(eDataType, initialValue);
-			case EnvironmentPackage.FILE_STATUS:
+			case CyberPhysicalSystemPackage.FILE_STATUS:
 				return createFileStatusFromString(eDataType, initialValue);
-			case EnvironmentPackage.CREDENTIAL_TYPE:
+			case CyberPhysicalSystemPackage.CREDENTIAL_TYPE:
 				return createCredentialTypeFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -185,13 +185,13 @@ public class EnvironmentFactoryImpl extends EFactoryImpl implements EnvironmentF
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-			case EnvironmentPackage.STATUS:
+			case CyberPhysicalSystemPackage.STATUS:
 				return convertStatusToString(eDataType, instanceValue);
-			case EnvironmentPackage.PROCESS_STATUS:
+			case CyberPhysicalSystemPackage.PROCESS_STATUS:
 				return convertProcessStatusToString(eDataType, instanceValue);
-			case EnvironmentPackage.FILE_STATUS:
+			case CyberPhysicalSystemPackage.FILE_STATUS:
 				return convertFileStatusToString(eDataType, instanceValue);
-			case EnvironmentPackage.CREDENTIAL_TYPE:
+			case CyberPhysicalSystemPackage.CREDENTIAL_TYPE:
 				return convertCredentialTypeToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -733,8 +733,8 @@ public class EnvironmentFactoryImpl extends EFactoryImpl implements EnvironmentF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EnvironmentPackage getEnvironmentPackage() {
-		return (EnvironmentPackage)getEPackage();
+	public CyberPhysicalSystemPackage getCyberPhysicalSystemPackage() {
+		return (CyberPhysicalSystemPackage)getEPackage();
 	}
 
 	/**
@@ -744,8 +744,8 @@ public class EnvironmentFactoryImpl extends EFactoryImpl implements EnvironmentF
 	 * @generated
 	 */
 	@Deprecated
-	public static EnvironmentPackage getPackage() {
-		return EnvironmentPackage.eINSTANCE;
+	public static CyberPhysicalSystemPackage getPackage() {
+		return CyberPhysicalSystemPackage.eINSTANCE;
 	}
 
-} //EnvironmentFactoryImpl
+} //CyberPhysicalSystemFactoryImpl

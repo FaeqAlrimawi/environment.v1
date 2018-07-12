@@ -15,6 +15,8 @@ import environment.ComputingDevice;
 import environment.Connection;
 import environment.Credential;
 import environment.CredentialType;
+import environment.CyberPhysicalSystemFactory;
+import environment.CyberPhysicalSystemPackage;
 import environment.Desktop;
 import environment.DigitalAsset;
 import environment.DigitalConnection;
@@ -24,8 +26,6 @@ import environment.Elevator;
 import environment.ElevatorsArea;
 import environment.Employee;
 import environment.EnvironmentDiagram;
-import environment.EnvironmentFactory;
-import environment.EnvironmentPackage;
 import environment.File;
 import environment.FileStatus;
 import environment.FireAlarm;
@@ -68,7 +68,7 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
  * <!-- end-user-doc -->
  * @generated
  */
-public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentPackage {
+public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements CyberPhysicalSystemPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -437,12 +437,12 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see environment.EnvironmentPackage#eNS_URI
+	 * @see environment.CyberPhysicalSystemPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-	private EnvironmentPackageImpl() {
-		super(eNS_URI, EnvironmentFactory.eINSTANCE);
+	private CyberPhysicalSystemPackageImpl() {
+		super(eNS_URI, CyberPhysicalSystemFactory.eINSTANCE);
 	}
 
 	/**
@@ -455,7 +455,7 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link EnvironmentPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link CyberPhysicalSystemPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -464,27 +464,27 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static EnvironmentPackage init() {
-		if (isInited) return (EnvironmentPackage)EPackage.Registry.INSTANCE.getEPackage(EnvironmentPackage.eNS_URI);
+	public static CyberPhysicalSystemPackage init() {
+		if (isInited) return (CyberPhysicalSystemPackage)EPackage.Registry.INSTANCE.getEPackage(CyberPhysicalSystemPackage.eNS_URI);
 
 		// Obtain or create and register package
-		EnvironmentPackageImpl theEnvironmentPackage = (EnvironmentPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof EnvironmentPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new EnvironmentPackageImpl());
+		CyberPhysicalSystemPackageImpl theCyberPhysicalSystemPackage = (CyberPhysicalSystemPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof CyberPhysicalSystemPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new CyberPhysicalSystemPackageImpl());
 
 		isInited = true;
 
 		// Create package meta-data objects
-		theEnvironmentPackage.createPackageContents();
+		theCyberPhysicalSystemPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theEnvironmentPackage.initializePackageContents();
+		theCyberPhysicalSystemPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theEnvironmentPackage.freeze();
+		theCyberPhysicalSystemPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(EnvironmentPackage.eNS_URI, theEnvironmentPackage);
-		return theEnvironmentPackage;
+		EPackage.Registry.INSTANCE.put(CyberPhysicalSystemPackage.eNS_URI, theCyberPhysicalSystemPackage);
+		return theCyberPhysicalSystemPackage;
 	}
 
 	/**
@@ -717,24 +717,6 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getConnection_Type() {
-		return (EReference)connectionEClass.getEStructuralFeatures().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getConnection__SimilarTo__Connection() {
-		return connectionEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getConnection_Constraints() {
 		return (EAttribute)connectionEClass.getEStructuralFeatures().get(3);
 	}
@@ -773,6 +755,24 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 	 */
 	public EAttribute getConnection_Description() {
 		return (EAttribute)connectionEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getConnection_Type() {
+		return (EReference)connectionEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getConnection__SimilarTo__Connection() {
+		return connectionEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -1509,8 +1509,8 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EnvironmentFactory getEnvironmentFactory() {
-		return (EnvironmentFactory)getEFactoryInstance();
+	public CyberPhysicalSystemFactory getCyberPhysicalSystemFactory() {
+		return (CyberPhysicalSystemFactory)getEFactoryInstance();
 	}
 
 	/**
@@ -1959,4 +1959,4 @@ public class EnvironmentPackageImpl extends EPackageImpl implements EnvironmentP
 		createResource(eNS_URI);
 	}
 
-} //EnvironmentPackageImpl
+} //CyberPhysicalSystemPackageImpl

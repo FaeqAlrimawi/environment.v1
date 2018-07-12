@@ -3,7 +3,7 @@
 package environment.impl;
 
 import environment.Elevator;
-import environment.cpsPackage;
+import environment.CyberPhysicalSystemPackage;
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -30,7 +30,7 @@ public class ElevatorImpl extends ComputingDeviceImpl implements Elevator {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return cpsPackage.Literals.ELEVATOR;
+		return CyberPhysicalSystemPackage.Literals.ELEVATOR;
 	}
 
 } //ElevatorImpl

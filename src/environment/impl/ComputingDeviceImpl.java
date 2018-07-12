@@ -9,7 +9,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import environment.Asset;
 import environment.ComputingDevice;
 import environment.Status;
-import environment.cpsPackage;
+import environment.CyberPhysicalSystemPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -103,7 +103,7 @@ public class ComputingDeviceImpl extends PhysicalAssetImpl implements ComputingD
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return cpsPackage.Literals.COMPUTING_DEVICE;
+		return CyberPhysicalSystemPackage.Literals.COMPUTING_DEVICE;
 	}
 
 	/**
@@ -124,7 +124,7 @@ public class ComputingDeviceImpl extends PhysicalAssetImpl implements ComputingD
 		Status oldStatus = status;
 		status = newStatus == null ? STATUS_EDEFAULT : newStatus;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, cpsPackage.COMPUTING_DEVICE__STATUS, oldStatus, status));
+			eNotify(new ENotificationImpl(this, Notification.SET, CyberPhysicalSystemPackage.COMPUTING_DEVICE__STATUS, oldStatus, status));
 	}
 
 	/**
@@ -145,7 +145,7 @@ public class ComputingDeviceImpl extends PhysicalAssetImpl implements ComputingD
 		boolean oldConnectable = connectable;
 		connectable = newConnectable;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, cpsPackage.COMPUTING_DEVICE__CONNECTABLE, oldConnectable, connectable));
+			eNotify(new ENotificationImpl(this, Notification.SET, CyberPhysicalSystemPackage.COMPUTING_DEVICE__CONNECTABLE, oldConnectable, connectable));
 	}
 
 
@@ -167,7 +167,7 @@ public class ComputingDeviceImpl extends PhysicalAssetImpl implements ComputingD
 		String oldModel = model;
 		model = newModel;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, cpsPackage.COMPUTING_DEVICE__MODEL, oldModel, model));
+			eNotify(new ENotificationImpl(this, Notification.SET, CyberPhysicalSystemPackage.COMPUTING_DEVICE__MODEL, oldModel, model));
 	}
 
 
@@ -231,11 +231,11 @@ public class ComputingDeviceImpl extends PhysicalAssetImpl implements ComputingD
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case cpsPackage.COMPUTING_DEVICE__STATUS:
+			case CyberPhysicalSystemPackage.COMPUTING_DEVICE__STATUS:
 				return getStatus();
-			case cpsPackage.COMPUTING_DEVICE__CONNECTABLE:
+			case CyberPhysicalSystemPackage.COMPUTING_DEVICE__CONNECTABLE:
 				return isConnectable();
-			case cpsPackage.COMPUTING_DEVICE__MODEL:
+			case CyberPhysicalSystemPackage.COMPUTING_DEVICE__MODEL:
 				return getModel();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -249,13 +249,13 @@ public class ComputingDeviceImpl extends PhysicalAssetImpl implements ComputingD
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case cpsPackage.COMPUTING_DEVICE__STATUS:
+			case CyberPhysicalSystemPackage.COMPUTING_DEVICE__STATUS:
 				setStatus((Status)newValue);
 				return;
-			case cpsPackage.COMPUTING_DEVICE__CONNECTABLE:
+			case CyberPhysicalSystemPackage.COMPUTING_DEVICE__CONNECTABLE:
 				setConnectable((Boolean)newValue);
 				return;
-			case cpsPackage.COMPUTING_DEVICE__MODEL:
+			case CyberPhysicalSystemPackage.COMPUTING_DEVICE__MODEL:
 				setModel((String)newValue);
 				return;
 		}
@@ -270,13 +270,13 @@ public class ComputingDeviceImpl extends PhysicalAssetImpl implements ComputingD
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case cpsPackage.COMPUTING_DEVICE__STATUS:
+			case CyberPhysicalSystemPackage.COMPUTING_DEVICE__STATUS:
 				setStatus(STATUS_EDEFAULT);
 				return;
-			case cpsPackage.COMPUTING_DEVICE__CONNECTABLE:
+			case CyberPhysicalSystemPackage.COMPUTING_DEVICE__CONNECTABLE:
 				setConnectable(CONNECTABLE_EDEFAULT);
 				return;
-			case cpsPackage.COMPUTING_DEVICE__MODEL:
+			case CyberPhysicalSystemPackage.COMPUTING_DEVICE__MODEL:
 				setModel(MODEL_EDEFAULT);
 				return;
 		}
@@ -291,11 +291,11 @@ public class ComputingDeviceImpl extends PhysicalAssetImpl implements ComputingD
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case cpsPackage.COMPUTING_DEVICE__STATUS:
+			case CyberPhysicalSystemPackage.COMPUTING_DEVICE__STATUS:
 				return status != STATUS_EDEFAULT;
-			case cpsPackage.COMPUTING_DEVICE__CONNECTABLE:
+			case CyberPhysicalSystemPackage.COMPUTING_DEVICE__CONNECTABLE:
 				return connectable != CONNECTABLE_EDEFAULT;
-			case cpsPackage.COMPUTING_DEVICE__MODEL:
+			case CyberPhysicalSystemPackage.COMPUTING_DEVICE__MODEL:
 				return MODEL_EDEFAULT == null ? model != null : !MODEL_EDEFAULT.equals(model);
 		}
 		return super.eIsSet(featureID);

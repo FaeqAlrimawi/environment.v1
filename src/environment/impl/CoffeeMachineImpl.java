@@ -3,7 +3,7 @@
 package environment.impl;
 
 import environment.CoffeeMachine;
-import environment.cpsPackage;
+import environment.CyberPhysicalSystemPackage;
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -30,7 +30,7 @@ public class CoffeeMachineImpl extends ComputingDeviceImpl implements CoffeeMach
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return cpsPackage.Literals.COFFEE_MACHINE;
+		return CyberPhysicalSystemPackage.Literals.COFFEE_MACHINE;
 	}
 
 } //CoffeeMachineImpl

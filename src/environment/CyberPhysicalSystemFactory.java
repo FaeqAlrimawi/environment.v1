@@ -9,17 +9,17 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see environment.EnvironmentPackage
+ * @see environment.CyberPhysicalSystemPackage
  * @generated
  */
-public interface EnvironmentFactory extends EFactory {
+public interface CyberPhysicalSystemFactory extends EFactory {
 	/**
 	 * The singleton instance of the factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	EnvironmentFactory eINSTANCE = environment.impl.EnvironmentFactoryImpl.init();
+	CyberPhysicalSystemFactory eINSTANCE = environment.impl.CyberPhysicalSystemFactoryImpl.init();
 
 	/**
 	 * Returns a new object of class '<em>Physical Asset</em>'.
@@ -139,10 +139,10 @@ public interface EnvironmentFactory extends EFactory {
 	PhysicalConnection createPhysicalConnection();
 
 	/**
-	 * Returns a new object of class '<em>Diagram</em>'.
+	 * Returns a new object of class '<em>Environment Diagram</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Diagram</em>'.
+	 * @return a new object of class '<em>Environment Diagram</em>'.
 	 * @generated
 	 */
 	EnvironmentDiagram createEnvironmentDiagram();
@@ -433,6 +433,6 @@ public interface EnvironmentFactory extends EFactory {
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
-	EnvironmentPackage getEnvironmentPackage();
+	CyberPhysicalSystemPackage getCyberPhysicalSystemPackage();
 
-} //EnvironmentFactory
+} //CyberPhysicalSystemFactory

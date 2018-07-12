@@ -3,7 +3,7 @@
 package environment.impl;
 
 import environment.Server;
-import environment.cpsPackage;
+import environment.CyberPhysicalSystemPackage;
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -30,7 +30,7 @@ public class ServerImpl extends ComputingDeviceImpl implements Server {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return cpsPackage.Literals.SERVER;
+		return CyberPhysicalSystemPackage.Literals.SERVER;
 	}
 
 } //ServerImpl

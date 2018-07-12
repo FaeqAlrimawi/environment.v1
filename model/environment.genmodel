@@ -5,7 +5,8 @@
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
     operationReflection="true" importOrganizing="true">
   <foreignModel>environment.ecore</foreignModel>
-  <genPackages prefix="cps" disposableProviderFactory="true" ecorePackage="environment.ecore#/">
+  <genPackages prefix="CyberPhysicalSystem" disposableProviderFactory="true" fileExtensions="cps"
+      ecorePackage="environment.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="environment.ecore#//Status">
       <genEnumLiterals ecoreEnumLiteral="environment.ecore#//Status/ON"/>
       <genEnumLiterals ecoreEnumLiteral="environment.ecore#//Status/OFF"/>

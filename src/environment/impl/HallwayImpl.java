@@ -3,7 +3,7 @@
 package environment.impl;
 
 import environment.Hallway;
-import environment.cpsPackage;
+import environment.CyberPhysicalSystemPackage;
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -30,7 +30,7 @@ public class HallwayImpl extends PhysicalStructureImpl implements Hallway {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return cpsPackage.Literals.HALLWAY;
+		return CyberPhysicalSystemPackage.Literals.HALLWAY;
 	}
 
 } //HallwayImpl

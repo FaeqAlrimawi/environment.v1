@@ -4,7 +4,7 @@ package environment.impl;
 
 import environment.File;
 import environment.FileStatus;
-import environment.cpsPackage;
+import environment.CyberPhysicalSystemPackage;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -82,7 +82,7 @@ public class FileImpl extends DigitalAssetImpl implements File {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return cpsPackage.Literals.FILE;
+		return CyberPhysicalSystemPackage.Literals.FILE;
 	}
 
 	/**
@@ -103,7 +103,7 @@ public class FileImpl extends DigitalAssetImpl implements File {
 		FileStatus oldStatus = status;
 		status = newStatus == null ? STATUS_EDEFAULT : newStatus;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, cpsPackage.FILE__STATUS, oldStatus, status));
+			eNotify(new ENotificationImpl(this, Notification.SET, CyberPhysicalSystemPackage.FILE__STATUS, oldStatus, status));
 	}
 
 	/**
@@ -124,7 +124,7 @@ public class FileImpl extends DigitalAssetImpl implements File {
 		String oldUrl = url;
 		url = newUrl;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, cpsPackage.FILE__URL, oldUrl, url));
+			eNotify(new ENotificationImpl(this, Notification.SET, CyberPhysicalSystemPackage.FILE__URL, oldUrl, url));
 	}
 
 	/**
@@ -135,9 +135,9 @@ public class FileImpl extends DigitalAssetImpl implements File {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case cpsPackage.FILE__STATUS:
+			case CyberPhysicalSystemPackage.FILE__STATUS:
 				return getStatus();
-			case cpsPackage.FILE__URL:
+			case CyberPhysicalSystemPackage.FILE__URL:
 				return getUrl();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -151,10 +151,10 @@ public class FileImpl extends DigitalAssetImpl implements File {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case cpsPackage.FILE__STATUS:
+			case CyberPhysicalSystemPackage.FILE__STATUS:
 				setStatus((FileStatus)newValue);
 				return;
-			case cpsPackage.FILE__URL:
+			case CyberPhysicalSystemPackage.FILE__URL:
 				setUrl((String)newValue);
 				return;
 		}
@@ -169,10 +169,10 @@ public class FileImpl extends DigitalAssetImpl implements File {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case cpsPackage.FILE__STATUS:
+			case CyberPhysicalSystemPackage.FILE__STATUS:
 				setStatus(STATUS_EDEFAULT);
 				return;
-			case cpsPackage.FILE__URL:
+			case CyberPhysicalSystemPackage.FILE__URL:
 				setUrl(URL_EDEFAULT);
 				return;
 		}
@@ -187,9 +187,9 @@ public class FileImpl extends DigitalAssetImpl implements File {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case cpsPackage.FILE__STATUS:
+			case CyberPhysicalSystemPackage.FILE__STATUS:
 				return status != STATUS_EDEFAULT;
-			case cpsPackage.FILE__URL:
+			case CyberPhysicalSystemPackage.FILE__URL:
 				return URL_EDEFAULT == null ? url != null : !URL_EDEFAULT.equals(url);
 		}
 		return super.eIsSet(featureID);

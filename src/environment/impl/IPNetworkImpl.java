@@ -3,7 +3,7 @@
 package environment.impl;
 
 import environment.IPNetwork;
-import environment.cpsPackage;
+import environment.CyberPhysicalSystemPackage;
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -30,7 +30,7 @@ public class IPNetworkImpl extends DigitalNetworkImpl implements IPNetwork {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return cpsPackage.Literals.IP_NETWORK;
+		return CyberPhysicalSystemPackage.Literals.IP_NETWORK;
 	}
 
 } //IPNetworkImpl

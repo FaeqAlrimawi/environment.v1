@@ -11,8 +11,8 @@ import environment.PhysicalConnection;
 import environment.Port;
 import environment.Property;
 import environment.Type;
-import environment.cpsPackage;
-import environment.smartbuildingFactory;
+import environment.CyberPhysicalSystemPackage;
+import environment.CyberPhysicalSystemFactory;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 
@@ -53,7 +53,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  */
 public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implements Connection {
 	
-	protected smartbuildingFactory instance = environment.smartbuildingFactory.eINSTANCE;
+	protected CyberPhysicalSystemFactory instance = environment.CyberPhysicalSystemFactory.eINSTANCE;
 	protected static int connectionNumber = 1;
 	protected static int portNumber = 1;
 	protected static final long CONNECTION_NUMBER_LIMIT = Long.MAX_VALUE;
@@ -211,7 +211,7 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return cpsPackage.Literals.CONNECTION;
+		return CyberPhysicalSystemPackage.Literals.CONNECTION;
 	}
 
 	/**
@@ -225,7 +225,7 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 			asset1 = (Asset)eResolveProxy(oldAsset1);
 			if (asset1 != oldAsset1) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, cpsPackage.CONNECTION__ASSET1, oldAsset1, asset1));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CyberPhysicalSystemPackage.CONNECTION__ASSET1, oldAsset1, asset1));
 			}
 		}
 		return asset1;
@@ -248,7 +248,7 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 		Asset oldAsset1 = asset1;
 		asset1 = newAsset1;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, cpsPackage.CONNECTION__ASSET1, oldAsset1, asset1));
+			eNotify(new ENotificationImpl(this, Notification.SET, CyberPhysicalSystemPackage.CONNECTION__ASSET1, oldAsset1, asset1));
 		
 		//update asset1 with the connection
 		if(asset1 != null) {
@@ -278,7 +278,7 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 			asset2 = (Asset)eResolveProxy(oldAsset2);
 			if (asset2 != oldAsset2) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, cpsPackage.CONNECTION__ASSET2, oldAsset2, asset2));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CyberPhysicalSystemPackage.CONNECTION__ASSET2, oldAsset2, asset2));
 			}
 		}
 		return asset2;
@@ -302,7 +302,7 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 		Asset oldAsset2 = asset2;
 		asset2 = newAsset2;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, cpsPackage.CONNECTION__ASSET2, oldAsset2, asset2));
+			eNotify(new ENotificationImpl(this, Notification.SET, CyberPhysicalSystemPackage.CONNECTION__ASSET2, oldAsset2, asset2));
 		
 		//add connection to asset2
 		if(asset2 != null) {
@@ -350,7 +350,7 @@ private boolean isContainedIn(Collection<Connection> connections) {
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, cpsPackage.CONNECTION__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, CyberPhysicalSystemPackage.CONNECTION__NAME, oldName, name));
 	}
 
 	/**
@@ -371,7 +371,7 @@ private boolean isContainedIn(Collection<Connection> connections) {
 		Type oldType = type;
 		type = newType;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, cpsPackage.CONNECTION__TYPE, oldType, newType);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CyberPhysicalSystemPackage.CONNECTION__TYPE, oldType, newType);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -386,14 +386,14 @@ private boolean isContainedIn(Collection<Connection> connections) {
 		if (newType != type) {
 			NotificationChain msgs = null;
 			if (type != null)
-				msgs = ((InternalEObject)type).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - cpsPackage.CONNECTION__TYPE, null, msgs);
+				msgs = ((InternalEObject)type).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CyberPhysicalSystemPackage.CONNECTION__TYPE, null, msgs);
 			if (newType != null)
-				msgs = ((InternalEObject)newType).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - cpsPackage.CONNECTION__TYPE, null, msgs);
+				msgs = ((InternalEObject)newType).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CyberPhysicalSystemPackage.CONNECTION__TYPE, null, msgs);
 			msgs = basicSetType(newType, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, cpsPackage.CONNECTION__TYPE, newType, newType));
+			eNotify(new ENotificationImpl(this, Notification.SET, CyberPhysicalSystemPackage.CONNECTION__TYPE, newType, newType));
 	}
 
 	/**
@@ -403,7 +403,7 @@ private boolean isContainedIn(Collection<Connection> connections) {
 	 */
 	public EList<String> getConstraints() {
 		if (constraints == null) {
-			constraints = new EDataTypeUniqueEList<String>(String.class, this, cpsPackage.CONNECTION__CONSTRAINTS);
+			constraints = new EDataTypeUniqueEList<String>(String.class, this, CyberPhysicalSystemPackage.CONNECTION__CONSTRAINTS);
 		}
 		return constraints;
 	}
@@ -426,7 +426,7 @@ private boolean isContainedIn(Collection<Connection> connections) {
 		boolean oldBidirectional = bidirectional;
 		bidirectional = newBidirectional;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, cpsPackage.CONNECTION__BIDIRECTIONAL, oldBidirectional, bidirectional));
+			eNotify(new ENotificationImpl(this, Notification.SET, CyberPhysicalSystemPackage.CONNECTION__BIDIRECTIONAL, oldBidirectional, bidirectional));
 	}
 
 	/**
@@ -447,7 +447,7 @@ private boolean isContainedIn(Collection<Connection> connections) {
 		Port oldPort = port;
 		port = newPort;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, cpsPackage.CONNECTION__PORT, oldPort, newPort);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CyberPhysicalSystemPackage.CONNECTION__PORT, oldPort, newPort);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -462,14 +462,14 @@ private boolean isContainedIn(Collection<Connection> connections) {
 		if (newPort != port) {
 			NotificationChain msgs = null;
 			if (port != null)
-				msgs = ((InternalEObject)port).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - cpsPackage.CONNECTION__PORT, null, msgs);
+				msgs = ((InternalEObject)port).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CyberPhysicalSystemPackage.CONNECTION__PORT, null, msgs);
 			if (newPort != null)
-				msgs = ((InternalEObject)newPort).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - cpsPackage.CONNECTION__PORT, null, msgs);
+				msgs = ((InternalEObject)newPort).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CyberPhysicalSystemPackage.CONNECTION__PORT, null, msgs);
 			msgs = basicSetPort(newPort, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, cpsPackage.CONNECTION__PORT, newPort, newPort));
+			eNotify(new ENotificationImpl(this, Notification.SET, CyberPhysicalSystemPackage.CONNECTION__PORT, newPort, newPort));
 	}
 
 	/**
@@ -479,7 +479,7 @@ private boolean isContainedIn(Collection<Connection> connections) {
 	 */
 	public EList<Property> getProperties() {
 		if (properties == null) {
-			properties = new EObjectResolvingEList<Property>(Property.class, this, cpsPackage.CONNECTION__PROPERTIES);
+			properties = new EObjectResolvingEList<Property>(Property.class, this, CyberPhysicalSystemPackage.CONNECTION__PROPERTIES);
 		}
 		return properties;
 	}
@@ -502,7 +502,7 @@ private boolean isContainedIn(Collection<Connection> connections) {
 		String oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, cpsPackage.CONNECTION__DESCRIPTION, oldDescription, description));
+			eNotify(new ENotificationImpl(this, Notification.SET, CyberPhysicalSystemPackage.CONNECTION__DESCRIPTION, oldDescription, description));
 	}
 
 	public Connection abstractConnection() {
@@ -874,9 +874,9 @@ public int compareType(Connection connection) {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case cpsPackage.CONNECTION__PORT:
+			case CyberPhysicalSystemPackage.CONNECTION__PORT:
 				return basicSetPort(null, msgs);
-			case cpsPackage.CONNECTION__TYPE:
+			case CyberPhysicalSystemPackage.CONNECTION__TYPE:
 				return basicSetType(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -890,25 +890,25 @@ public int compareType(Connection connection) {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case cpsPackage.CONNECTION__ASSET1:
+			case CyberPhysicalSystemPackage.CONNECTION__ASSET1:
 				if (resolve) return getAsset1();
 				return basicGetAsset1();
-			case cpsPackage.CONNECTION__ASSET2:
+			case CyberPhysicalSystemPackage.CONNECTION__ASSET2:
 				if (resolve) return getAsset2();
 				return basicGetAsset2();
-			case cpsPackage.CONNECTION__NAME:
+			case CyberPhysicalSystemPackage.CONNECTION__NAME:
 				return getName();
-			case cpsPackage.CONNECTION__CONSTRAINTS:
+			case CyberPhysicalSystemPackage.CONNECTION__CONSTRAINTS:
 				return getConstraints();
-			case cpsPackage.CONNECTION__BIDIRECTIONAL:
+			case CyberPhysicalSystemPackage.CONNECTION__BIDIRECTIONAL:
 				return isBidirectional();
-			case cpsPackage.CONNECTION__PORT:
+			case CyberPhysicalSystemPackage.CONNECTION__PORT:
 				return getPort();
-			case cpsPackage.CONNECTION__PROPERTIES:
+			case CyberPhysicalSystemPackage.CONNECTION__PROPERTIES:
 				return getProperties();
-			case cpsPackage.CONNECTION__DESCRIPTION:
+			case CyberPhysicalSystemPackage.CONNECTION__DESCRIPTION:
 				return getDescription();
-			case cpsPackage.CONNECTION__TYPE:
+			case CyberPhysicalSystemPackage.CONNECTION__TYPE:
 				return getType();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -923,33 +923,33 @@ public int compareType(Connection connection) {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case cpsPackage.CONNECTION__ASSET1:
+			case CyberPhysicalSystemPackage.CONNECTION__ASSET1:
 				setAsset1((Asset)newValue);
 				return;
-			case cpsPackage.CONNECTION__ASSET2:
+			case CyberPhysicalSystemPackage.CONNECTION__ASSET2:
 				setAsset2((Asset)newValue);
 				return;
-			case cpsPackage.CONNECTION__NAME:
+			case CyberPhysicalSystemPackage.CONNECTION__NAME:
 				setName((String)newValue);
 				return;
-			case cpsPackage.CONNECTION__CONSTRAINTS:
+			case CyberPhysicalSystemPackage.CONNECTION__CONSTRAINTS:
 				getConstraints().clear();
 				getConstraints().addAll((Collection<? extends String>)newValue);
 				return;
-			case cpsPackage.CONNECTION__BIDIRECTIONAL:
+			case CyberPhysicalSystemPackage.CONNECTION__BIDIRECTIONAL:
 				setBidirectional((Boolean)newValue);
 				return;
-			case cpsPackage.CONNECTION__PORT:
+			case CyberPhysicalSystemPackage.CONNECTION__PORT:
 				setPort((Port)newValue);
 				return;
-			case cpsPackage.CONNECTION__PROPERTIES:
+			case CyberPhysicalSystemPackage.CONNECTION__PROPERTIES:
 				getProperties().clear();
 				getProperties().addAll((Collection<? extends Property>)newValue);
 				return;
-			case cpsPackage.CONNECTION__DESCRIPTION:
+			case CyberPhysicalSystemPackage.CONNECTION__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
-			case cpsPackage.CONNECTION__TYPE:
+			case CyberPhysicalSystemPackage.CONNECTION__TYPE:
 				setType((Type)newValue);
 				return;
 		}
@@ -964,31 +964,31 @@ public int compareType(Connection connection) {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case cpsPackage.CONNECTION__ASSET1:
+			case CyberPhysicalSystemPackage.CONNECTION__ASSET1:
 				setAsset1((Asset)null);
 				return;
-			case cpsPackage.CONNECTION__ASSET2:
+			case CyberPhysicalSystemPackage.CONNECTION__ASSET2:
 				setAsset2((Asset)null);
 				return;
-			case cpsPackage.CONNECTION__NAME:
+			case CyberPhysicalSystemPackage.CONNECTION__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case cpsPackage.CONNECTION__CONSTRAINTS:
+			case CyberPhysicalSystemPackage.CONNECTION__CONSTRAINTS:
 				getConstraints().clear();
 				return;
-			case cpsPackage.CONNECTION__BIDIRECTIONAL:
+			case CyberPhysicalSystemPackage.CONNECTION__BIDIRECTIONAL:
 				setBidirectional(BIDIRECTIONAL_EDEFAULT);
 				return;
-			case cpsPackage.CONNECTION__PORT:
+			case CyberPhysicalSystemPackage.CONNECTION__PORT:
 				setPort((Port)null);
 				return;
-			case cpsPackage.CONNECTION__PROPERTIES:
+			case CyberPhysicalSystemPackage.CONNECTION__PROPERTIES:
 				getProperties().clear();
 				return;
-			case cpsPackage.CONNECTION__DESCRIPTION:
+			case CyberPhysicalSystemPackage.CONNECTION__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
-			case cpsPackage.CONNECTION__TYPE:
+			case CyberPhysicalSystemPackage.CONNECTION__TYPE:
 				setType((Type)null);
 				return;
 		}
@@ -1003,23 +1003,23 @@ public int compareType(Connection connection) {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case cpsPackage.CONNECTION__ASSET1:
+			case CyberPhysicalSystemPackage.CONNECTION__ASSET1:
 				return asset1 != null;
-			case cpsPackage.CONNECTION__ASSET2:
+			case CyberPhysicalSystemPackage.CONNECTION__ASSET2:
 				return asset2 != null;
-			case cpsPackage.CONNECTION__NAME:
+			case CyberPhysicalSystemPackage.CONNECTION__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case cpsPackage.CONNECTION__CONSTRAINTS:
+			case CyberPhysicalSystemPackage.CONNECTION__CONSTRAINTS:
 				return constraints != null && !constraints.isEmpty();
-			case cpsPackage.CONNECTION__BIDIRECTIONAL:
+			case CyberPhysicalSystemPackage.CONNECTION__BIDIRECTIONAL:
 				return bidirectional != BIDIRECTIONAL_EDEFAULT;
-			case cpsPackage.CONNECTION__PORT:
+			case CyberPhysicalSystemPackage.CONNECTION__PORT:
 				return port != null;
-			case cpsPackage.CONNECTION__PROPERTIES:
+			case CyberPhysicalSystemPackage.CONNECTION__PROPERTIES:
 				return properties != null && !properties.isEmpty();
-			case cpsPackage.CONNECTION__DESCRIPTION:
+			case CyberPhysicalSystemPackage.CONNECTION__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-			case cpsPackage.CONNECTION__TYPE:
+			case CyberPhysicalSystemPackage.CONNECTION__TYPE:
 				return type != null;
 		}
 		return super.eIsSet(featureID);
@@ -1033,7 +1033,7 @@ public int compareType(Connection connection) {
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case cpsPackage.CONNECTION___SIMILAR_TO__CONNECTION:
+			case CyberPhysicalSystemPackage.CONNECTION___SIMILAR_TO__CONNECTION:
 				return similarTo((Connection)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);

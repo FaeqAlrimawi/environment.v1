@@ -3,7 +3,7 @@
 package environment.impl;
 
 import environment.DigitalNetwork;
-import environment.cpsPackage;
+import environment.CyberPhysicalSystemPackage;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -81,7 +81,7 @@ public class DigitalNetworkImpl extends DigitalAssetImpl implements DigitalNetwo
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return cpsPackage.Literals.DIGITAL_NETWORK;
+		return CyberPhysicalSystemPackage.Literals.DIGITAL_NETWORK;
 	}
 
 	/**
@@ -102,7 +102,7 @@ public class DigitalNetworkImpl extends DigitalAssetImpl implements DigitalNetwo
 		String oldProtocol = protocol;
 		protocol = newProtocol;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, cpsPackage.DIGITAL_NETWORK__PROTOCOL, oldProtocol, protocol));
+			eNotify(new ENotificationImpl(this, Notification.SET, CyberPhysicalSystemPackage.DIGITAL_NETWORK__PROTOCOL, oldProtocol, protocol));
 	}
 
 	/**
@@ -123,7 +123,7 @@ public class DigitalNetworkImpl extends DigitalAssetImpl implements DigitalNetwo
 		String oldEncryption = encryption;
 		encryption = newEncryption;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, cpsPackage.DIGITAL_NETWORK__ENCRYPTION, oldEncryption, encryption));
+			eNotify(new ENotificationImpl(this, Notification.SET, CyberPhysicalSystemPackage.DIGITAL_NETWORK__ENCRYPTION, oldEncryption, encryption));
 	}
 
 	/**
@@ -134,9 +134,9 @@ public class DigitalNetworkImpl extends DigitalAssetImpl implements DigitalNetwo
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case cpsPackage.DIGITAL_NETWORK__PROTOCOL:
+			case CyberPhysicalSystemPackage.DIGITAL_NETWORK__PROTOCOL:
 				return getProtocol();
-			case cpsPackage.DIGITAL_NETWORK__ENCRYPTION:
+			case CyberPhysicalSystemPackage.DIGITAL_NETWORK__ENCRYPTION:
 				return getEncryption();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -150,10 +150,10 @@ public class DigitalNetworkImpl extends DigitalAssetImpl implements DigitalNetwo
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case cpsPackage.DIGITAL_NETWORK__PROTOCOL:
+			case CyberPhysicalSystemPackage.DIGITAL_NETWORK__PROTOCOL:
 				setProtocol((String)newValue);
 				return;
-			case cpsPackage.DIGITAL_NETWORK__ENCRYPTION:
+			case CyberPhysicalSystemPackage.DIGITAL_NETWORK__ENCRYPTION:
 				setEncryption((String)newValue);
 				return;
 		}
@@ -168,10 +168,10 @@ public class DigitalNetworkImpl extends DigitalAssetImpl implements DigitalNetwo
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case cpsPackage.DIGITAL_NETWORK__PROTOCOL:
+			case CyberPhysicalSystemPackage.DIGITAL_NETWORK__PROTOCOL:
 				setProtocol(PROTOCOL_EDEFAULT);
 				return;
-			case cpsPackage.DIGITAL_NETWORK__ENCRYPTION:
+			case CyberPhysicalSystemPackage.DIGITAL_NETWORK__ENCRYPTION:
 				setEncryption(ENCRYPTION_EDEFAULT);
 				return;
 		}
@@ -186,9 +186,9 @@ public class DigitalNetworkImpl extends DigitalAssetImpl implements DigitalNetwo
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case cpsPackage.DIGITAL_NETWORK__PROTOCOL:
+			case CyberPhysicalSystemPackage.DIGITAL_NETWORK__PROTOCOL:
 				return PROTOCOL_EDEFAULT == null ? protocol != null : !PROTOCOL_EDEFAULT.equals(protocol);
-			case cpsPackage.DIGITAL_NETWORK__ENCRYPTION:
+			case CyberPhysicalSystemPackage.DIGITAL_NETWORK__ENCRYPTION:
 				return ENCRYPTION_EDEFAULT == null ? encryption != null : !ENCRYPTION_EDEFAULT.equals(encryption);
 		}
 		return super.eIsSet(featureID);

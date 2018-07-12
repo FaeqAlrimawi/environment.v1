@@ -3,7 +3,7 @@
 package environment.impl;
 
 import environment.Visitor;
-import environment.cpsPackage;
+import environment.CyberPhysicalSystemPackage;
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -30,7 +30,7 @@ public class VisitorImpl extends ActorImpl implements Visitor {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return cpsPackage.Literals.VISITOR;
+		return CyberPhysicalSystemPackage.Literals.VISITOR;
 	}
 
 } //VisitorImpl

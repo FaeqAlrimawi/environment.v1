@@ -14,4 +14,12 @@
             genModel="model/env.genmodel"/>
    </extension>
 
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated environment -->
+      <package
+            uri="http://www.example.org/environment"
+            class="environment.CyberPhysicalSystemPackage"
+            genModel="model/environment.genmodel"/>
+   </extension>
+
 </plugin>

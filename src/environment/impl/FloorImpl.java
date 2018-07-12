@@ -3,7 +3,7 @@
 package environment.impl;
 
 import environment.Floor;
-import environment.cpsPackage;
+import environment.CyberPhysicalSystemPackage;
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -30,7 +30,7 @@ public class FloorImpl extends PhysicalStructureImpl implements Floor {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return cpsPackage.Literals.FLOOR;
+		return CyberPhysicalSystemPackage.Literals.FLOOR;
 	}
 
 } //FloorImpl

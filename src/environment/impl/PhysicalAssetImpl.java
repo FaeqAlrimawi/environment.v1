@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 import environment.Asset;
 import environment.PhysicalAsset;
-import environment.cpsPackage;
+import environment.CyberPhysicalSystemPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -68,7 +68,7 @@ public class PhysicalAssetImpl extends AssetImpl implements PhysicalAsset {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return cpsPackage.Literals.PHYSICAL_ASSET;
+		return CyberPhysicalSystemPackage.Literals.PHYSICAL_ASSET;
 	}
 
 	/**
@@ -78,7 +78,7 @@ public class PhysicalAssetImpl extends AssetImpl implements PhysicalAsset {
 	 */
 	public EList<Asset> getContainedAssets() {
 		if (containedAssets == null) {
-			containedAssets = new EObjectResolvingEList<Asset>(Asset.class, this, cpsPackage.PHYSICAL_ASSET__CONTAINED_ASSETS);
+			containedAssets = new EObjectResolvingEList<Asset>(Asset.class, this, CyberPhysicalSystemPackage.PHYSICAL_ASSET__CONTAINED_ASSETS);
 		}
 		return containedAssets;
 	}
@@ -94,7 +94,7 @@ public class PhysicalAssetImpl extends AssetImpl implements PhysicalAsset {
 			parentAsset = (PhysicalAsset)eResolveProxy(oldParentAsset);
 			if (parentAsset != oldParentAsset) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, cpsPackage.PHYSICAL_ASSET__PARENT_ASSET, oldParentAsset, parentAsset));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CyberPhysicalSystemPackage.PHYSICAL_ASSET__PARENT_ASSET, oldParentAsset, parentAsset));
 			}
 		}
 		return parentAsset;
@@ -117,7 +117,7 @@ public class PhysicalAssetImpl extends AssetImpl implements PhysicalAsset {
 		PhysicalAsset oldParentAsset = parentAsset;
 		parentAsset = newParentAsset;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, cpsPackage.PHYSICAL_ASSET__PARENT_ASSET, oldParentAsset, parentAsset));
+			eNotify(new ENotificationImpl(this, Notification.SET, CyberPhysicalSystemPackage.PHYSICAL_ASSET__PARENT_ASSET, oldParentAsset, parentAsset));
 		
 		//add this object as a child to the parent as well and remove from old parent if any
 		if(newParentAsset == null) {
@@ -157,10 +157,10 @@ public class PhysicalAssetImpl extends AssetImpl implements PhysicalAsset {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case cpsPackage.PHYSICAL_ASSET__CONTAINED_ASSETS:
+			case CyberPhysicalSystemPackage.PHYSICAL_ASSET__CONTAINED_ASSETS:
 				removeDuplicates(getContainedAssets());
 				return getContainedAssets();
-			case cpsPackage.PHYSICAL_ASSET__PARENT_ASSET:
+			case CyberPhysicalSystemPackage.PHYSICAL_ASSET__PARENT_ASSET:
 				if (resolve) return getParentAsset();
 				return basicGetParentAsset();
 		}
@@ -176,11 +176,11 @@ public class PhysicalAssetImpl extends AssetImpl implements PhysicalAsset {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case cpsPackage.PHYSICAL_ASSET__CONTAINED_ASSETS:
+			case CyberPhysicalSystemPackage.PHYSICAL_ASSET__CONTAINED_ASSETS:
 				getContainedAssets().clear();
 				getContainedAssets().addAll((Collection<? extends Asset>)newValue);
 				return;
-			case cpsPackage.PHYSICAL_ASSET__PARENT_ASSET:
+			case CyberPhysicalSystemPackage.PHYSICAL_ASSET__PARENT_ASSET:
 				setParentAsset((PhysicalAsset)newValue);
 				return;
 		}
@@ -204,10 +204,10 @@ public class PhysicalAssetImpl extends AssetImpl implements PhysicalAsset {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case cpsPackage.PHYSICAL_ASSET__CONTAINED_ASSETS:
+			case CyberPhysicalSystemPackage.PHYSICAL_ASSET__CONTAINED_ASSETS:
 				getContainedAssets().clear();
 				return;
-			case cpsPackage.PHYSICAL_ASSET__PARENT_ASSET:
+			case CyberPhysicalSystemPackage.PHYSICAL_ASSET__PARENT_ASSET:
 				setParentAsset((PhysicalAsset)null);
 				return;
 		}
@@ -222,9 +222,9 @@ public class PhysicalAssetImpl extends AssetImpl implements PhysicalAsset {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case cpsPackage.PHYSICAL_ASSET__CONTAINED_ASSETS:
+			case CyberPhysicalSystemPackage.PHYSICAL_ASSET__CONTAINED_ASSETS:
 				return containedAssets != null && !containedAssets.isEmpty();
-			case cpsPackage.PHYSICAL_ASSET__PARENT_ASSET:
+			case CyberPhysicalSystemPackage.PHYSICAL_ASSET__PARENT_ASSET:
 				return parentAsset != null;
 		}
 		return super.eIsSet(featureID);

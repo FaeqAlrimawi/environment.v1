@@ -21,13 +21,13 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 import environment.Asset;
 import environment.Connection;
+import environment.CyberPhysicalSystemFactory;
+import environment.CyberPhysicalSystemPackage;
 import environment.DigitalAsset;
 import environment.PhysicalAsset;
 import environment.Property;
 import environment.Room;
 import environment.Type;
-import environment.cpsPackage;
-import environment.smartbuildingFactory;
 import extrnalUtility.HungarianAlgorithm;
 
 /**
@@ -60,7 +60,7 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	protected EList<Connection> connections;
 	
-	protected smartbuildingFactory instance = environment.smartbuildingFactory.eINSTANCE;
+	protected CyberPhysicalSystemFactory instance = environment.CyberPhysicalSystemFactory.eINSTANCE;
 	
 	//used for naming abstracted assets
 	protected static int assetNumber = 1;
@@ -215,7 +215,7 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return cpsPackage.Literals.ASSET;
+		return CyberPhysicalSystemPackage.Literals.ASSET;
 	}
 
 	/**
@@ -225,7 +225,7 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	public EList<Connection> getConnections() {
 		if (connections == null) {
-			connections = new EObjectResolvingEList<Connection>(Connection.class, this, cpsPackage.ASSET__CONNECTIONS);
+			connections = new EObjectResolvingEList<Connection>(Connection.class, this, CyberPhysicalSystemPackage.ASSET__CONNECTIONS);
 		}
 		return connections;
 	}
@@ -248,7 +248,7 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, cpsPackage.ASSET__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, CyberPhysicalSystemPackage.ASSET__NAME, oldName, name));
 	}
 
 	/**
@@ -258,7 +258,7 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	public EList<Property> getProperty() {
 		if (property == null) {
-			property = new EObjectContainmentEList<Property>(Property.class, this, cpsPackage.ASSET__PROPERTY);
+			property = new EObjectContainmentEList<Property>(Property.class, this, CyberPhysicalSystemPackage.ASSET__PROPERTY);
 		}
 		return property;
 	}
@@ -281,7 +281,7 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 		int oldValue = value;
 		value = newValue;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, cpsPackage.ASSET__VALUE, oldValue, value));
+			eNotify(new ENotificationImpl(this, Notification.SET, CyberPhysicalSystemPackage.ASSET__VALUE, oldValue, value));
 	}
 
 	/**
@@ -302,7 +302,7 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 		Type oldType = type;
 		type = newType;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, cpsPackage.ASSET__TYPE, oldType, newType);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CyberPhysicalSystemPackage.ASSET__TYPE, oldType, newType);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -317,14 +317,14 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 		if (newType != type) {
 			NotificationChain msgs = null;
 			if (type != null)
-				msgs = ((InternalEObject)type).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - cpsPackage.ASSET__TYPE, null, msgs);
+				msgs = ((InternalEObject)type).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CyberPhysicalSystemPackage.ASSET__TYPE, null, msgs);
 			if (newType != null)
-				msgs = ((InternalEObject)newType).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - cpsPackage.ASSET__TYPE, null, msgs);
+				msgs = ((InternalEObject)newType).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CyberPhysicalSystemPackage.ASSET__TYPE, null, msgs);
 			msgs = basicSetType(newType, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, cpsPackage.ASSET__TYPE, newType, newType));
+			eNotify(new ENotificationImpl(this, Notification.SET, CyberPhysicalSystemPackage.ASSET__TYPE, newType, newType));
 	}
 
 	/**
@@ -345,7 +345,7 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 		String oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, cpsPackage.ASSET__DESCRIPTION, oldDescription, description));
+			eNotify(new ENotificationImpl(this, Notification.SET, CyberPhysicalSystemPackage.ASSET__DESCRIPTION, oldDescription, description));
 	}
 
 	/**
@@ -366,7 +366,7 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 		String oldControl = control;
 		control = newControl;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, cpsPackage.ASSET__CONTROL, oldControl, control));
+			eNotify(new ENotificationImpl(this, Notification.SET, CyberPhysicalSystemPackage.ASSET__CONTROL, oldControl, control));
 	}
 
 	/**
@@ -547,7 +547,7 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 				classType = classType+"Impl";
 			}
 			
-			String pkgName = instance.getsmartbuildingPackage().eNAME+".impl.";
+			String pkgName = instance.getCyberPhysicalSystemPackage().eNAME+".impl.";
 			
 			Class<?> cls = Class.forName(pkgName+classType);
 			ast = (Asset)(cls.newInstance());
@@ -978,9 +978,9 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case cpsPackage.ASSET__PROPERTY:
+			case CyberPhysicalSystemPackage.ASSET__PROPERTY:
 				return ((InternalEList<?>)getProperty()).basicRemove(otherEnd, msgs);
-			case cpsPackage.ASSET__TYPE:
+			case CyberPhysicalSystemPackage.ASSET__TYPE:
 				return basicSetType(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -994,20 +994,20 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case cpsPackage.ASSET__CONNECTIONS:
+			case CyberPhysicalSystemPackage.ASSET__CONNECTIONS:
 				removeDuplicates(getConnections());
 				return getConnections();
-			case cpsPackage.ASSET__NAME:
+			case CyberPhysicalSystemPackage.ASSET__NAME:
 				return getName();
-			case cpsPackage.ASSET__PROPERTY:
+			case CyberPhysicalSystemPackage.ASSET__PROPERTY:
 				return getProperty();
-			case cpsPackage.ASSET__VALUE:
+			case CyberPhysicalSystemPackage.ASSET__VALUE:
 				return getValue();
-			case cpsPackage.ASSET__TYPE:
+			case CyberPhysicalSystemPackage.ASSET__TYPE:
 				return getType();
-			case cpsPackage.ASSET__DESCRIPTION:
+			case CyberPhysicalSystemPackage.ASSET__DESCRIPTION:
 				return getDescription();
-			case cpsPackage.ASSET__CONTROL:
+			case CyberPhysicalSystemPackage.ASSET__CONTROL:
 				return getControl();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -1030,27 +1030,27 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case cpsPackage.ASSET__CONNECTIONS:
+			case CyberPhysicalSystemPackage.ASSET__CONNECTIONS:
 				getConnections().clear();
 				getConnections().addAll((Collection<? extends Connection>)newValue);
 				return;
-			case cpsPackage.ASSET__NAME:
+			case CyberPhysicalSystemPackage.ASSET__NAME:
 				setName((String)newValue);
 				return;
-			case cpsPackage.ASSET__PROPERTY:
+			case CyberPhysicalSystemPackage.ASSET__PROPERTY:
 				getProperty().clear();
 				getProperty().addAll((Collection<? extends Property>)newValue);
 				return;
-			case cpsPackage.ASSET__VALUE:
+			case CyberPhysicalSystemPackage.ASSET__VALUE:
 				setValue((Integer)newValue);
 				return;
-			case cpsPackage.ASSET__TYPE:
+			case CyberPhysicalSystemPackage.ASSET__TYPE:
 				setType((Type)newValue);
 				return;
-			case cpsPackage.ASSET__DESCRIPTION:
+			case CyberPhysicalSystemPackage.ASSET__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
-			case cpsPackage.ASSET__CONTROL:
+			case CyberPhysicalSystemPackage.ASSET__CONTROL:
 				setControl((String)newValue);
 				return;
 		}
@@ -1065,25 +1065,25 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case cpsPackage.ASSET__CONNECTIONS:
+			case CyberPhysicalSystemPackage.ASSET__CONNECTIONS:
 				getConnections().clear();
 				return;
-			case cpsPackage.ASSET__NAME:
+			case CyberPhysicalSystemPackage.ASSET__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case cpsPackage.ASSET__PROPERTY:
+			case CyberPhysicalSystemPackage.ASSET__PROPERTY:
 				getProperty().clear();
 				return;
-			case cpsPackage.ASSET__VALUE:
+			case CyberPhysicalSystemPackage.ASSET__VALUE:
 				setValue(VALUE_EDEFAULT);
 				return;
-			case cpsPackage.ASSET__TYPE:
+			case CyberPhysicalSystemPackage.ASSET__TYPE:
 				setType((Type)null);
 				return;
-			case cpsPackage.ASSET__DESCRIPTION:
+			case CyberPhysicalSystemPackage.ASSET__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
-			case cpsPackage.ASSET__CONTROL:
+			case CyberPhysicalSystemPackage.ASSET__CONTROL:
 				setControl(CONTROL_EDEFAULT);
 				return;
 		}
@@ -1098,19 +1098,19 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case cpsPackage.ASSET__CONNECTIONS:
+			case CyberPhysicalSystemPackage.ASSET__CONNECTIONS:
 				return connections != null && !connections.isEmpty();
-			case cpsPackage.ASSET__NAME:
+			case CyberPhysicalSystemPackage.ASSET__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case cpsPackage.ASSET__PROPERTY:
+			case CyberPhysicalSystemPackage.ASSET__PROPERTY:
 				return property != null && !property.isEmpty();
-			case cpsPackage.ASSET__VALUE:
+			case CyberPhysicalSystemPackage.ASSET__VALUE:
 				return value != VALUE_EDEFAULT;
-			case cpsPackage.ASSET__TYPE:
+			case CyberPhysicalSystemPackage.ASSET__TYPE:
 				return type != null;
-			case cpsPackage.ASSET__DESCRIPTION:
+			case CyberPhysicalSystemPackage.ASSET__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-			case cpsPackage.ASSET__CONTROL:
+			case CyberPhysicalSystemPackage.ASSET__CONTROL:
 				return CONTROL_EDEFAULT == null ? control != null : !CONTROL_EDEFAULT.equals(control);
 		}
 		return super.eIsSet(featureID);
@@ -1125,24 +1125,24 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case cpsPackage.ASSET___ABSTRACT_ASSET:
+			case CyberPhysicalSystemPackage.ASSET___ABSTRACT_ASSET:
 				return abstractAsset();
-			case cpsPackage.ASSET___SIMILAR_TO__ASSET:
+			case CyberPhysicalSystemPackage.ASSET___SIMILAR_TO__ASSET:
 				return similarTo((Asset)arguments.get(0));
-			case cpsPackage.ASSET___MERGE_CONNECTIONS:
+			case CyberPhysicalSystemPackage.ASSET___MERGE_CONNECTIONS:
 				mergeConnections();
 				return null;
-			case cpsPackage.ASSET___CAN_MERGE_CONNECTIONS:
+			case CyberPhysicalSystemPackage.ASSET___CAN_MERGE_CONNECTIONS:
 				return canMergeConnections();
-			case cpsPackage.ASSET___CAN_MERGE_CONTAINED_ASSETS:
+			case CyberPhysicalSystemPackage.ASSET___CAN_MERGE_CONTAINED_ASSETS:
 				return canMergeContainedAssets();
-			case cpsPackage.ASSET___MERGE_CONTAINED_ASSETS:
+			case CyberPhysicalSystemPackage.ASSET___MERGE_CONTAINED_ASSETS:
 				mergeContainedAssets();
 				return null;
-			case cpsPackage.ASSET___MERGE_CONNECTIONS__ELIST:
+			case CyberPhysicalSystemPackage.ASSET___MERGE_CONNECTIONS__ELIST:
 				mergeConnections((EList<Connection>)arguments.get(0));
 				return null;
-			case cpsPackage.ASSET___CAN_MERGE_CONNECTIONS__ELIST:
+			case CyberPhysicalSystemPackage.ASSET___CAN_MERGE_CONNECTIONS__ELIST:
 				return canMergeConnections((EList<Connection>)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);

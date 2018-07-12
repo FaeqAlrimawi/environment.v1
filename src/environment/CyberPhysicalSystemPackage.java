@@ -21,11 +21,11 @@ import org.eclipse.emf.ecore.EReference;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see environment.EnvironmentFactory
+ * @see environment.CyberPhysicalSystemFactory
  * @model kind="package"
  * @generated
  */
-public interface EnvironmentPackage extends EPackage {
+public interface CyberPhysicalSystemPackage extends EPackage {
 	/**
 	 * The package name.
 	 * <!-- begin-user-doc -->
@@ -56,14 +56,14 @@ public interface EnvironmentPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	EnvironmentPackage eINSTANCE = environment.impl.EnvironmentPackageImpl.init();
+	CyberPhysicalSystemPackage eINSTANCE = environment.impl.CyberPhysicalSystemPackageImpl.init();
 
 	/**
 	 * The meta object id for the '{@link environment.impl.AssetImpl <em>Asset</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see environment.impl.AssetImpl
-	 * @see environment.impl.EnvironmentPackageImpl#getAsset()
+	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getAsset()
 	 * @generated
 	 */
 	int ASSET = 14;
@@ -226,7 +226,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see environment.impl.PhysicalAssetImpl
-	 * @see environment.impl.EnvironmentPackageImpl#getPhysicalAsset()
+	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getPhysicalAsset()
 	 * @generated
 	 */
 	int PHYSICAL_ASSET = 0;
@@ -407,7 +407,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see environment.impl.ComputingDeviceImpl
-	 * @see environment.impl.EnvironmentPackageImpl#getComputingDevice()
+	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getComputingDevice()
 	 * @generated
 	 */
 	int COMPUTING_DEVICE = 1;
@@ -615,7 +615,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see environment.impl.HVACImpl
-	 * @see environment.impl.EnvironmentPackageImpl#getHVAC()
+	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getHVAC()
 	 * @generated
 	 */
 	int HVAC = 2;
@@ -823,7 +823,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see environment.impl.SmartLightImpl
-	 * @see environment.impl.EnvironmentPackageImpl#getSmartLight()
+	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getSmartLight()
 	 * @generated
 	 */
 	int SMART_LIGHT = 3;
@@ -1031,7 +1031,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see environment.impl.LaptopImpl
-	 * @see environment.impl.EnvironmentPackageImpl#getLaptop()
+	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getLaptop()
 	 * @generated
 	 */
 	int LAPTOP = 4;
@@ -1239,7 +1239,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see environment.impl.DesktopImpl
-	 * @see environment.impl.EnvironmentPackageImpl#getDesktop()
+	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getDesktop()
 	 * @generated
 	 */
 	int DESKTOP = 5;
@@ -1447,7 +1447,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see environment.impl.CCTVImpl
-	 * @see environment.impl.EnvironmentPackageImpl#getCCTV()
+	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getCCTV()
 	 * @generated
 	 */
 	int CCTV = 6;
@@ -1655,7 +1655,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see environment.impl.ServerImpl
-	 * @see environment.impl.EnvironmentPackageImpl#getServer()
+	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getServer()
 	 * @generated
 	 */
 	int SERVER = 7;
@@ -1863,7 +1863,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see environment.impl.DigitalAssetImpl
-	 * @see environment.impl.EnvironmentPackageImpl#getDigitalAsset()
+	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getDigitalAsset()
 	 * @generated
 	 */
 	int DIGITAL_ASSET = 21;
@@ -2044,7 +2044,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see environment.impl.FileImpl
-	 * @see environment.impl.EnvironmentPackageImpl#getFile()
+	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getFile()
 	 * @generated
 	 */
 	int FILE = 8;
@@ -2243,7 +2243,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see environment.impl.ProcessImpl
-	 * @see environment.impl.EnvironmentPackageImpl#getProcess()
+	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getProcess()
 	 * @generated
 	 */
 	int PROCESS = 9;
@@ -2433,7 +2433,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see environment.impl.ApplicationImpl
-	 * @see environment.impl.EnvironmentPackageImpl#getApplication()
+	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getApplication()
 	 * @generated
 	 */
 	int APPLICATION = 10;
@@ -2632,7 +2632,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see environment.impl.ConnectionImpl
-	 * @see environment.impl.EnvironmentPackageImpl#getConnection()
+	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getConnection()
 	 * @generated
 	 */
 	int CONNECTION = 11;
@@ -2750,7 +2750,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see environment.impl.DigitalConnectionImpl
-	 * @see environment.impl.EnvironmentPackageImpl#getDigitalConnection()
+	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getDigitalConnection()
 	 * @generated
 	 */
 	int DIGITAL_CONNECTION = 12;
@@ -2877,7 +2877,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see environment.impl.PhysicalConnectionImpl
-	 * @see environment.impl.EnvironmentPackageImpl#getPhysicalConnection()
+	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getPhysicalConnection()
 	 * @generated
 	 */
 	int PHYSICAL_CONNECTION = 13;
@@ -2991,11 +2991,11 @@ public interface EnvironmentPackage extends EPackage {
 	int PHYSICAL_CONNECTION_OPERATION_COUNT = CONNECTION_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link environment.impl.EnvironmentDiagramImpl <em>Diagram</em>}' class.
+	 * The meta object id for the '{@link environment.impl.EnvironmentDiagramImpl <em>Environment Diagram</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see environment.impl.EnvironmentDiagramImpl
-	 * @see environment.impl.EnvironmentPackageImpl#getEnvironmentDiagram()
+	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getEnvironmentDiagram()
 	 * @generated
 	 */
 	int ENVIRONMENT_DIAGRAM = 15;
@@ -3055,7 +3055,7 @@ public interface EnvironmentPackage extends EPackage {
 	int ENVIRONMENT_DIAGRAM__RULE = 5;
 
 	/**
-	 * The number of structural features of the '<em>Diagram</em>' class.
+	 * The number of structural features of the '<em>Environment Diagram</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3064,7 +3064,7 @@ public interface EnvironmentPackage extends EPackage {
 	int ENVIRONMENT_DIAGRAM_FEATURE_COUNT = 6;
 
 	/**
-	 * The number of operations of the '<em>Diagram</em>' class.
+	 * The number of operations of the '<em>Environment Diagram</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3077,7 +3077,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see environment.impl.PortImpl
-	 * @see environment.impl.EnvironmentPackageImpl#getPort()
+	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getPort()
 	 * @generated
 	 */
 	int PORT = 16;
@@ -3141,7 +3141,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see environment.impl.PropertyImpl
-	 * @see environment.impl.EnvironmentPackageImpl#getProperty()
+	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getProperty()
 	 * @generated
 	 */
 	int PROPERTY = 17;
@@ -3196,7 +3196,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see environment.impl.CredentialImpl
-	 * @see environment.impl.EnvironmentPackageImpl#getCredential()
+	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getCredential()
 	 * @generated
 	 */
 	int CREDENTIAL = 18;
@@ -3242,7 +3242,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see environment.impl.ActorImpl
-	 * @see environment.impl.EnvironmentPackageImpl#getActor()
+	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getActor()
 	 * @generated
 	 */
 	int ACTOR = 19;
@@ -3432,7 +3432,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see environment.impl.PhysicalStructureImpl
-	 * @see environment.impl.EnvironmentPackageImpl#getPhysicalStructure()
+	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getPhysicalStructure()
 	 * @generated
 	 */
 	int PHYSICAL_STRUCTURE = 20;
@@ -3613,7 +3613,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see environment.impl.ActionImpl
-	 * @see environment.impl.EnvironmentPackageImpl#getAction()
+	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getAction()
 	 * @generated
 	 */
 	int ACTION = 22;
@@ -3677,7 +3677,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see environment.impl.TypeImpl
-	 * @see environment.impl.EnvironmentPackageImpl#getType()
+	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getType()
 	 * @generated
 	 */
 	int TYPE = 23;
@@ -3723,7 +3723,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see environment.impl.RoomImpl
-	 * @see environment.impl.EnvironmentPackageImpl#getRoom()
+	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getRoom()
 	 * @generated
 	 */
 	int ROOM = 24;
@@ -3904,7 +3904,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see environment.impl.FloorImpl
-	 * @see environment.impl.EnvironmentPackageImpl#getFloor()
+	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getFloor()
 	 * @generated
 	 */
 	int FLOOR = 25;
@@ -4085,7 +4085,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see environment.impl.BuildingImpl
-	 * @see environment.impl.EnvironmentPackageImpl#getBuilding()
+	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getBuilding()
 	 * @generated
 	 */
 	int BUILDING = 26;
@@ -4266,7 +4266,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see environment.impl.FireAlarmImpl
-	 * @see environment.impl.EnvironmentPackageImpl#getFireAlarm()
+	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getFireAlarm()
 	 * @generated
 	 */
 	int FIRE_ALARM = 27;
@@ -4474,7 +4474,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see environment.impl.WorkstationImpl
-	 * @see environment.impl.EnvironmentPackageImpl#getWorkstation()
+	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getWorkstation()
 	 * @generated
 	 */
 	int WORKSTATION = 28;
@@ -4682,7 +4682,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see environment.impl.LabImpl
-	 * @see environment.impl.EnvironmentPackageImpl#getLab()
+	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getLab()
 	 * @generated
 	 */
 	int LAB = 29;
@@ -4863,7 +4863,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see environment.impl.ToiletImpl
-	 * @see environment.impl.EnvironmentPackageImpl#getToilet()
+	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getToilet()
 	 * @generated
 	 */
 	int TOILET = 30;
@@ -5044,7 +5044,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see environment.impl.LoungeImpl
-	 * @see environment.impl.EnvironmentPackageImpl#getLounge()
+	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getLounge()
 	 * @generated
 	 */
 	int LOUNGE = 31;
@@ -5225,7 +5225,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see environment.impl.DishWasherImpl
-	 * @see environment.impl.EnvironmentPackageImpl#getDishWasher()
+	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getDishWasher()
 	 * @generated
 	 */
 	int DISH_WASHER = 32;
@@ -5433,7 +5433,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see environment.impl.CoffeeMachineImpl
-	 * @see environment.impl.EnvironmentPackageImpl#getCoffeeMachine()
+	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getCoffeeMachine()
 	 * @generated
 	 */
 	int COFFEE_MACHINE = 33;
@@ -5641,7 +5641,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see environment.impl.ElevatorImpl
-	 * @see environment.impl.EnvironmentPackageImpl#getElevator()
+	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getElevator()
 	 * @generated
 	 */
 	int ELEVATOR = 34;
@@ -5849,7 +5849,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see environment.impl.HallwayImpl
-	 * @see environment.impl.EnvironmentPackageImpl#getHallway()
+	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getHallway()
 	 * @generated
 	 */
 	int HALLWAY = 35;
@@ -6030,7 +6030,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see environment.impl.ElevatorsAreaImpl
-	 * @see environment.impl.EnvironmentPackageImpl#getElevatorsArea()
+	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getElevatorsArea()
 	 * @generated
 	 */
 	int ELEVATORS_AREA = 36;
@@ -6211,7 +6211,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see environment.impl.DigitalNetworkImpl
-	 * @see environment.impl.EnvironmentPackageImpl#getDigitalNetwork()
+	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getDigitalNetwork()
 	 * @generated
 	 */
 	int DIGITAL_NETWORK = 38;
@@ -6410,7 +6410,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see environment.impl.IPNetworkImpl
-	 * @see environment.impl.EnvironmentPackageImpl#getIPNetwork()
+	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getIPNetwork()
 	 * @generated
 	 */
 	int IP_NETWORK = 37;
@@ -6609,7 +6609,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see environment.impl.BusNetworkImpl
-	 * @see environment.impl.EnvironmentPackageImpl#getBusNetwork()
+	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getBusNetwork()
 	 * @generated
 	 */
 	int BUS_NETWORK = 39;
@@ -6808,7 +6808,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see environment.impl.IPConnectionImpl
-	 * @see environment.impl.EnvironmentPackageImpl#getIPConnection()
+	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getIPConnection()
 	 * @generated
 	 */
 	int IP_CONNECTION = 40;
@@ -6935,7 +6935,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see environment.impl.BusConnectionImpl
-	 * @see environment.impl.EnvironmentPackageImpl#getBusConnection()
+	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getBusConnection()
 	 * @generated
 	 */
 	int BUS_CONNECTION = 41;
@@ -7062,7 +7062,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see environment.impl.KitchenImpl
-	 * @see environment.impl.EnvironmentPackageImpl#getKitchen()
+	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getKitchen()
 	 * @generated
 	 */
 	int KITCHEN = 42;
@@ -7243,7 +7243,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see environment.impl.StairsImpl
-	 * @see environment.impl.EnvironmentPackageImpl#getStairs()
+	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getStairs()
 	 * @generated
 	 */
 	int STAIRS = 43;
@@ -7424,7 +7424,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see environment.impl.CardReaderImpl
-	 * @see environment.impl.EnvironmentPackageImpl#getCardReader()
+	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getCardReader()
 	 * @generated
 	 */
 	int CARD_READER = 44;
@@ -7632,7 +7632,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see environment.impl.EmployeeImpl
-	 * @see environment.impl.EnvironmentPackageImpl#getEmployee()
+	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getEmployee()
 	 * @generated
 	 */
 	int EMPLOYEE = 45;
@@ -7822,7 +7822,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see environment.impl.VisitorImpl
-	 * @see environment.impl.EnvironmentPackageImpl#getVisitor()
+	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getVisitor()
 	 * @generated
 	 */
 	int VISITOR = 46;
@@ -8012,7 +8012,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see environment.Status
-	 * @see environment.impl.EnvironmentPackageImpl#getStatus()
+	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getStatus()
 	 * @generated
 	 */
 	int STATUS = 47;
@@ -8022,7 +8022,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see environment.ProcessStatus
-	 * @see environment.impl.EnvironmentPackageImpl#getProcessStatus()
+	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getProcessStatus()
 	 * @generated
 	 */
 	int PROCESS_STATUS = 48;
@@ -8032,18 +8032,17 @@ public interface EnvironmentPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see environment.FileStatus
-	 * @see environment.impl.EnvironmentPackageImpl#getFileStatus()
+	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getFileStatus()
 	 * @generated
 	 */
 	int FILE_STATUS = 49;
-
 
 	/**
 	 * The meta object id for the '{@link environment.CredentialType <em>Credential Type</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see environment.CredentialType
-	 * @see environment.impl.EnvironmentPackageImpl#getCredentialType()
+	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getCredentialType()
 	 * @generated
 	 */
 	int CREDENTIAL_TYPE = 50;
@@ -8313,27 +8312,6 @@ public interface EnvironmentPackage extends EPackage {
 	EAttribute getConnection_Name();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link environment.Connection#getType <em>Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Type</em>'.
-	 * @see environment.Connection#getType()
-	 * @see #getConnection()
-	 * @generated
-	 */
-	EReference getConnection_Type();
-
-	/**
-	 * Returns the meta object for the '{@link environment.Connection#similarTo(environment.Connection) <em>Similar To</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Similar To</em>' operation.
-	 * @see environment.Connection#similarTo(environment.Connection)
-	 * @generated
-	 */
-	EOperation getConnection__SimilarTo__Connection();
-
-	/**
 	 * Returns the meta object for the attribute list '{@link environment.Connection#getConstraints <em>Constraints</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8387,6 +8365,27 @@ public interface EnvironmentPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getConnection_Description();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link environment.Connection#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Type</em>'.
+	 * @see environment.Connection#getType()
+	 * @see #getConnection()
+	 * @generated
+	 */
+	EReference getConnection_Type();
+
+	/**
+	 * Returns the meta object for the '{@link environment.Connection#similarTo(environment.Connection) <em>Similar To</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Similar To</em>' operation.
+	 * @see environment.Connection#similarTo(environment.Connection)
+	 * @generated
+	 */
+	EOperation getConnection__SimilarTo__Connection();
 
 	/**
 	 * Returns the meta object for class '{@link environment.DigitalConnection <em>Digital Connection</em>}'.
@@ -8587,10 +8586,10 @@ public interface EnvironmentPackage extends EPackage {
 	EOperation getAsset__CanMergeConnections__EList();
 
 	/**
-	 * Returns the meta object for class '{@link environment.EnvironmentDiagram <em>Diagram</em>}'.
+	 * Returns the meta object for class '{@link environment.EnvironmentDiagram <em>Environment Diagram</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Diagram</em>'.
+	 * @return the meta object for class '<em>Environment Diagram</em>'.
 	 * @see environment.EnvironmentDiagram
 	 * @generated
 	 */
@@ -9239,7 +9238,7 @@ public interface EnvironmentPackage extends EPackage {
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	EnvironmentFactory getEnvironmentFactory();
+	CyberPhysicalSystemFactory getCyberPhysicalSystemFactory();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -9260,7 +9259,7 @@ public interface EnvironmentPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see environment.impl.PhysicalAssetImpl
-		 * @see environment.impl.EnvironmentPackageImpl#getPhysicalAsset()
+		 * @see environment.impl.CyberPhysicalSystemPackageImpl#getPhysicalAsset()
 		 * @generated
 		 */
 		EClass PHYSICAL_ASSET = eINSTANCE.getPhysicalAsset();
@@ -9286,7 +9285,7 @@ public interface EnvironmentPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see environment.impl.ComputingDeviceImpl
-		 * @see environment.impl.EnvironmentPackageImpl#getComputingDevice()
+		 * @see environment.impl.CyberPhysicalSystemPackageImpl#getComputingDevice()
 		 * @generated
 		 */
 		EClass COMPUTING_DEVICE = eINSTANCE.getComputingDevice();
@@ -9320,7 +9319,7 @@ public interface EnvironmentPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see environment.impl.HVACImpl
-		 * @see environment.impl.EnvironmentPackageImpl#getHVAC()
+		 * @see environment.impl.CyberPhysicalSystemPackageImpl#getHVAC()
 		 * @generated
 		 */
 		EClass HVAC = eINSTANCE.getHVAC();
@@ -9330,7 +9329,7 @@ public interface EnvironmentPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see environment.impl.SmartLightImpl
-		 * @see environment.impl.EnvironmentPackageImpl#getSmartLight()
+		 * @see environment.impl.CyberPhysicalSystemPackageImpl#getSmartLight()
 		 * @generated
 		 */
 		EClass SMART_LIGHT = eINSTANCE.getSmartLight();
@@ -9340,7 +9339,7 @@ public interface EnvironmentPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see environment.impl.LaptopImpl
-		 * @see environment.impl.EnvironmentPackageImpl#getLaptop()
+		 * @see environment.impl.CyberPhysicalSystemPackageImpl#getLaptop()
 		 * @generated
 		 */
 		EClass LAPTOP = eINSTANCE.getLaptop();
@@ -9350,7 +9349,7 @@ public interface EnvironmentPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see environment.impl.DesktopImpl
-		 * @see environment.impl.EnvironmentPackageImpl#getDesktop()
+		 * @see environment.impl.CyberPhysicalSystemPackageImpl#getDesktop()
 		 * @generated
 		 */
 		EClass DESKTOP = eINSTANCE.getDesktop();
@@ -9360,7 +9359,7 @@ public interface EnvironmentPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see environment.impl.CCTVImpl
-		 * @see environment.impl.EnvironmentPackageImpl#getCCTV()
+		 * @see environment.impl.CyberPhysicalSystemPackageImpl#getCCTV()
 		 * @generated
 		 */
 		EClass CCTV = eINSTANCE.getCCTV();
@@ -9370,7 +9369,7 @@ public interface EnvironmentPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see environment.impl.ServerImpl
-		 * @see environment.impl.EnvironmentPackageImpl#getServer()
+		 * @see environment.impl.CyberPhysicalSystemPackageImpl#getServer()
 		 * @generated
 		 */
 		EClass SERVER = eINSTANCE.getServer();
@@ -9380,7 +9379,7 @@ public interface EnvironmentPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see environment.impl.FileImpl
-		 * @see environment.impl.EnvironmentPackageImpl#getFile()
+		 * @see environment.impl.CyberPhysicalSystemPackageImpl#getFile()
 		 * @generated
 		 */
 		EClass FILE = eINSTANCE.getFile();
@@ -9406,7 +9405,7 @@ public interface EnvironmentPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see environment.impl.ProcessImpl
-		 * @see environment.impl.EnvironmentPackageImpl#getProcess()
+		 * @see environment.impl.CyberPhysicalSystemPackageImpl#getProcess()
 		 * @generated
 		 */
 		EClass PROCESS = eINSTANCE.getProcess();
@@ -9424,7 +9423,7 @@ public interface EnvironmentPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see environment.impl.ApplicationImpl
-		 * @see environment.impl.EnvironmentPackageImpl#getApplication()
+		 * @see environment.impl.CyberPhysicalSystemPackageImpl#getApplication()
 		 * @generated
 		 */
 		EClass APPLICATION = eINSTANCE.getApplication();
@@ -9450,7 +9449,7 @@ public interface EnvironmentPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see environment.impl.ConnectionImpl
-		 * @see environment.impl.EnvironmentPackageImpl#getConnection()
+		 * @see environment.impl.CyberPhysicalSystemPackageImpl#getConnection()
 		 * @generated
 		 */
 		EClass CONNECTION = eINSTANCE.getConnection();
@@ -9478,22 +9477,6 @@ public interface EnvironmentPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute CONNECTION__NAME = eINSTANCE.getConnection_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Type</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CONNECTION__TYPE = eINSTANCE.getConnection_Type();
-
-		/**
-		 * The meta object literal for the '<em><b>Similar To</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation CONNECTION___SIMILAR_TO__CONNECTION = eINSTANCE.getConnection__SimilarTo__Connection();
 
 		/**
 		 * The meta object literal for the '<em><b>Constraints</b></em>' attribute list feature.
@@ -9536,11 +9519,27 @@ public interface EnvironmentPackage extends EPackage {
 		EAttribute CONNECTION__DESCRIPTION = eINSTANCE.getConnection_Description();
 
 		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONNECTION__TYPE = eINSTANCE.getConnection_Type();
+
+		/**
+		 * The meta object literal for the '<em><b>Similar To</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CONNECTION___SIMILAR_TO__CONNECTION = eINSTANCE.getConnection__SimilarTo__Connection();
+
+		/**
 		 * The meta object literal for the '{@link environment.impl.DigitalConnectionImpl <em>Digital Connection</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see environment.impl.DigitalConnectionImpl
-		 * @see environment.impl.EnvironmentPackageImpl#getDigitalConnection()
+		 * @see environment.impl.CyberPhysicalSystemPackageImpl#getDigitalConnection()
 		 * @generated
 		 */
 		EClass DIGITAL_CONNECTION = eINSTANCE.getDigitalConnection();
@@ -9558,7 +9557,7 @@ public interface EnvironmentPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see environment.impl.PhysicalConnectionImpl
-		 * @see environment.impl.EnvironmentPackageImpl#getPhysicalConnection()
+		 * @see environment.impl.CyberPhysicalSystemPackageImpl#getPhysicalConnection()
 		 * @generated
 		 */
 		EClass PHYSICAL_CONNECTION = eINSTANCE.getPhysicalConnection();
@@ -9568,7 +9567,7 @@ public interface EnvironmentPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see environment.impl.AssetImpl
-		 * @see environment.impl.EnvironmentPackageImpl#getAsset()
+		 * @see environment.impl.CyberPhysicalSystemPackageImpl#getAsset()
 		 * @generated
 		 */
 		EClass ASSET = eINSTANCE.getAsset();
@@ -9694,11 +9693,11 @@ public interface EnvironmentPackage extends EPackage {
 		EOperation ASSET___CAN_MERGE_CONNECTIONS__ELIST = eINSTANCE.getAsset__CanMergeConnections__EList();
 
 		/**
-		 * The meta object literal for the '{@link environment.impl.EnvironmentDiagramImpl <em>Diagram</em>}' class.
+		 * The meta object literal for the '{@link environment.impl.EnvironmentDiagramImpl <em>Environment Diagram</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see environment.impl.EnvironmentDiagramImpl
-		 * @see environment.impl.EnvironmentPackageImpl#getEnvironmentDiagram()
+		 * @see environment.impl.CyberPhysicalSystemPackageImpl#getEnvironmentDiagram()
 		 * @generated
 		 */
 		EClass ENVIRONMENT_DIAGRAM = eINSTANCE.getEnvironmentDiagram();
@@ -9756,7 +9755,7 @@ public interface EnvironmentPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see environment.impl.PortImpl
-		 * @see environment.impl.EnvironmentPackageImpl#getPort()
+		 * @see environment.impl.CyberPhysicalSystemPackageImpl#getPort()
 		 * @generated
 		 */
 		EClass PORT = eINSTANCE.getPort();
@@ -9798,7 +9797,7 @@ public interface EnvironmentPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see environment.impl.PropertyImpl
-		 * @see environment.impl.EnvironmentPackageImpl#getProperty()
+		 * @see environment.impl.CyberPhysicalSystemPackageImpl#getProperty()
 		 * @generated
 		 */
 		EClass PROPERTY = eINSTANCE.getProperty();
@@ -9832,7 +9831,7 @@ public interface EnvironmentPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see environment.impl.CredentialImpl
-		 * @see environment.impl.EnvironmentPackageImpl#getCredential()
+		 * @see environment.impl.CyberPhysicalSystemPackageImpl#getCredential()
 		 * @generated
 		 */
 		EClass CREDENTIAL = eINSTANCE.getCredential();
@@ -9858,7 +9857,7 @@ public interface EnvironmentPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see environment.impl.ActorImpl
-		 * @see environment.impl.EnvironmentPackageImpl#getActor()
+		 * @see environment.impl.CyberPhysicalSystemPackageImpl#getActor()
 		 * @generated
 		 */
 		EClass ACTOR = eINSTANCE.getActor();
@@ -9876,7 +9875,7 @@ public interface EnvironmentPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see environment.impl.PhysicalStructureImpl
-		 * @see environment.impl.EnvironmentPackageImpl#getPhysicalStructure()
+		 * @see environment.impl.CyberPhysicalSystemPackageImpl#getPhysicalStructure()
 		 * @generated
 		 */
 		EClass PHYSICAL_STRUCTURE = eINSTANCE.getPhysicalStructure();
@@ -9886,7 +9885,7 @@ public interface EnvironmentPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see environment.impl.DigitalAssetImpl
-		 * @see environment.impl.EnvironmentPackageImpl#getDigitalAsset()
+		 * @see environment.impl.CyberPhysicalSystemPackageImpl#getDigitalAsset()
 		 * @generated
 		 */
 		EClass DIGITAL_ASSET = eINSTANCE.getDigitalAsset();
@@ -9912,7 +9911,7 @@ public interface EnvironmentPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see environment.impl.ActionImpl
-		 * @see environment.impl.EnvironmentPackageImpl#getAction()
+		 * @see environment.impl.CyberPhysicalSystemPackageImpl#getAction()
 		 * @generated
 		 */
 		EClass ACTION = eINSTANCE.getAction();
@@ -9954,7 +9953,7 @@ public interface EnvironmentPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see environment.impl.TypeImpl
-		 * @see environment.impl.EnvironmentPackageImpl#getType()
+		 * @see environment.impl.CyberPhysicalSystemPackageImpl#getType()
 		 * @generated
 		 */
 		EClass TYPE = eINSTANCE.getType();
@@ -9980,7 +9979,7 @@ public interface EnvironmentPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see environment.impl.RoomImpl
-		 * @see environment.impl.EnvironmentPackageImpl#getRoom()
+		 * @see environment.impl.CyberPhysicalSystemPackageImpl#getRoom()
 		 * @generated
 		 */
 		EClass ROOM = eINSTANCE.getRoom();
@@ -9990,7 +9989,7 @@ public interface EnvironmentPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see environment.impl.FloorImpl
-		 * @see environment.impl.EnvironmentPackageImpl#getFloor()
+		 * @see environment.impl.CyberPhysicalSystemPackageImpl#getFloor()
 		 * @generated
 		 */
 		EClass FLOOR = eINSTANCE.getFloor();
@@ -10000,7 +9999,7 @@ public interface EnvironmentPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see environment.impl.BuildingImpl
-		 * @see environment.impl.EnvironmentPackageImpl#getBuilding()
+		 * @see environment.impl.CyberPhysicalSystemPackageImpl#getBuilding()
 		 * @generated
 		 */
 		EClass BUILDING = eINSTANCE.getBuilding();
@@ -10010,7 +10009,7 @@ public interface EnvironmentPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see environment.impl.FireAlarmImpl
-		 * @see environment.impl.EnvironmentPackageImpl#getFireAlarm()
+		 * @see environment.impl.CyberPhysicalSystemPackageImpl#getFireAlarm()
 		 * @generated
 		 */
 		EClass FIRE_ALARM = eINSTANCE.getFireAlarm();
@@ -10020,7 +10019,7 @@ public interface EnvironmentPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see environment.impl.WorkstationImpl
-		 * @see environment.impl.EnvironmentPackageImpl#getWorkstation()
+		 * @see environment.impl.CyberPhysicalSystemPackageImpl#getWorkstation()
 		 * @generated
 		 */
 		EClass WORKSTATION = eINSTANCE.getWorkstation();
@@ -10030,7 +10029,7 @@ public interface EnvironmentPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see environment.impl.LabImpl
-		 * @see environment.impl.EnvironmentPackageImpl#getLab()
+		 * @see environment.impl.CyberPhysicalSystemPackageImpl#getLab()
 		 * @generated
 		 */
 		EClass LAB = eINSTANCE.getLab();
@@ -10040,7 +10039,7 @@ public interface EnvironmentPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see environment.impl.ToiletImpl
-		 * @see environment.impl.EnvironmentPackageImpl#getToilet()
+		 * @see environment.impl.CyberPhysicalSystemPackageImpl#getToilet()
 		 * @generated
 		 */
 		EClass TOILET = eINSTANCE.getToilet();
@@ -10050,7 +10049,7 @@ public interface EnvironmentPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see environment.impl.LoungeImpl
-		 * @see environment.impl.EnvironmentPackageImpl#getLounge()
+		 * @see environment.impl.CyberPhysicalSystemPackageImpl#getLounge()
 		 * @generated
 		 */
 		EClass LOUNGE = eINSTANCE.getLounge();
@@ -10060,7 +10059,7 @@ public interface EnvironmentPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see environment.impl.DishWasherImpl
-		 * @see environment.impl.EnvironmentPackageImpl#getDishWasher()
+		 * @see environment.impl.CyberPhysicalSystemPackageImpl#getDishWasher()
 		 * @generated
 		 */
 		EClass DISH_WASHER = eINSTANCE.getDishWasher();
@@ -10070,7 +10069,7 @@ public interface EnvironmentPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see environment.impl.CoffeeMachineImpl
-		 * @see environment.impl.EnvironmentPackageImpl#getCoffeeMachine()
+		 * @see environment.impl.CyberPhysicalSystemPackageImpl#getCoffeeMachine()
 		 * @generated
 		 */
 		EClass COFFEE_MACHINE = eINSTANCE.getCoffeeMachine();
@@ -10080,7 +10079,7 @@ public interface EnvironmentPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see environment.impl.ElevatorImpl
-		 * @see environment.impl.EnvironmentPackageImpl#getElevator()
+		 * @see environment.impl.CyberPhysicalSystemPackageImpl#getElevator()
 		 * @generated
 		 */
 		EClass ELEVATOR = eINSTANCE.getElevator();
@@ -10090,7 +10089,7 @@ public interface EnvironmentPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see environment.impl.HallwayImpl
-		 * @see environment.impl.EnvironmentPackageImpl#getHallway()
+		 * @see environment.impl.CyberPhysicalSystemPackageImpl#getHallway()
 		 * @generated
 		 */
 		EClass HALLWAY = eINSTANCE.getHallway();
@@ -10100,7 +10099,7 @@ public interface EnvironmentPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see environment.impl.ElevatorsAreaImpl
-		 * @see environment.impl.EnvironmentPackageImpl#getElevatorsArea()
+		 * @see environment.impl.CyberPhysicalSystemPackageImpl#getElevatorsArea()
 		 * @generated
 		 */
 		EClass ELEVATORS_AREA = eINSTANCE.getElevatorsArea();
@@ -10110,7 +10109,7 @@ public interface EnvironmentPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see environment.impl.IPNetworkImpl
-		 * @see environment.impl.EnvironmentPackageImpl#getIPNetwork()
+		 * @see environment.impl.CyberPhysicalSystemPackageImpl#getIPNetwork()
 		 * @generated
 		 */
 		EClass IP_NETWORK = eINSTANCE.getIPNetwork();
@@ -10120,7 +10119,7 @@ public interface EnvironmentPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see environment.impl.DigitalNetworkImpl
-		 * @see environment.impl.EnvironmentPackageImpl#getDigitalNetwork()
+		 * @see environment.impl.CyberPhysicalSystemPackageImpl#getDigitalNetwork()
 		 * @generated
 		 */
 		EClass DIGITAL_NETWORK = eINSTANCE.getDigitalNetwork();
@@ -10146,7 +10145,7 @@ public interface EnvironmentPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see environment.impl.BusNetworkImpl
-		 * @see environment.impl.EnvironmentPackageImpl#getBusNetwork()
+		 * @see environment.impl.CyberPhysicalSystemPackageImpl#getBusNetwork()
 		 * @generated
 		 */
 		EClass BUS_NETWORK = eINSTANCE.getBusNetwork();
@@ -10156,7 +10155,7 @@ public interface EnvironmentPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see environment.impl.IPConnectionImpl
-		 * @see environment.impl.EnvironmentPackageImpl#getIPConnection()
+		 * @see environment.impl.CyberPhysicalSystemPackageImpl#getIPConnection()
 		 * @generated
 		 */
 		EClass IP_CONNECTION = eINSTANCE.getIPConnection();
@@ -10166,7 +10165,7 @@ public interface EnvironmentPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see environment.impl.BusConnectionImpl
-		 * @see environment.impl.EnvironmentPackageImpl#getBusConnection()
+		 * @see environment.impl.CyberPhysicalSystemPackageImpl#getBusConnection()
 		 * @generated
 		 */
 		EClass BUS_CONNECTION = eINSTANCE.getBusConnection();
@@ -10176,7 +10175,7 @@ public interface EnvironmentPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see environment.impl.KitchenImpl
-		 * @see environment.impl.EnvironmentPackageImpl#getKitchen()
+		 * @see environment.impl.CyberPhysicalSystemPackageImpl#getKitchen()
 		 * @generated
 		 */
 		EClass KITCHEN = eINSTANCE.getKitchen();
@@ -10186,7 +10185,7 @@ public interface EnvironmentPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see environment.impl.StairsImpl
-		 * @see environment.impl.EnvironmentPackageImpl#getStairs()
+		 * @see environment.impl.CyberPhysicalSystemPackageImpl#getStairs()
 		 * @generated
 		 */
 		EClass STAIRS = eINSTANCE.getStairs();
@@ -10196,7 +10195,7 @@ public interface EnvironmentPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see environment.impl.CardReaderImpl
-		 * @see environment.impl.EnvironmentPackageImpl#getCardReader()
+		 * @see environment.impl.CyberPhysicalSystemPackageImpl#getCardReader()
 		 * @generated
 		 */
 		EClass CARD_READER = eINSTANCE.getCardReader();
@@ -10206,7 +10205,7 @@ public interface EnvironmentPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see environment.impl.EmployeeImpl
-		 * @see environment.impl.EnvironmentPackageImpl#getEmployee()
+		 * @see environment.impl.CyberPhysicalSystemPackageImpl#getEmployee()
 		 * @generated
 		 */
 		EClass EMPLOYEE = eINSTANCE.getEmployee();
@@ -10216,7 +10215,7 @@ public interface EnvironmentPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see environment.impl.VisitorImpl
-		 * @see environment.impl.EnvironmentPackageImpl#getVisitor()
+		 * @see environment.impl.CyberPhysicalSystemPackageImpl#getVisitor()
 		 * @generated
 		 */
 		EClass VISITOR = eINSTANCE.getVisitor();
@@ -10226,7 +10225,7 @@ public interface EnvironmentPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see environment.Status
-		 * @see environment.impl.EnvironmentPackageImpl#getStatus()
+		 * @see environment.impl.CyberPhysicalSystemPackageImpl#getStatus()
 		 * @generated
 		 */
 		EEnum STATUS = eINSTANCE.getStatus();
@@ -10236,7 +10235,7 @@ public interface EnvironmentPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see environment.ProcessStatus
-		 * @see environment.impl.EnvironmentPackageImpl#getProcessStatus()
+		 * @see environment.impl.CyberPhysicalSystemPackageImpl#getProcessStatus()
 		 * @generated
 		 */
 		EEnum PROCESS_STATUS = eINSTANCE.getProcessStatus();
@@ -10246,7 +10245,7 @@ public interface EnvironmentPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see environment.FileStatus
-		 * @see environment.impl.EnvironmentPackageImpl#getFileStatus()
+		 * @see environment.impl.CyberPhysicalSystemPackageImpl#getFileStatus()
 		 * @generated
 		 */
 		EEnum FILE_STATUS = eINSTANCE.getFileStatus();
@@ -10256,11 +10255,11 @@ public interface EnvironmentPackage extends EPackage {
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @see environment.CredentialType
-		 * @see environment.impl.EnvironmentPackageImpl#getCredentialType()
+		 * @see environment.impl.CyberPhysicalSystemPackageImpl#getCredentialType()
 		 * @generated
 		 */
 		EEnum CREDENTIAL_TYPE = eINSTANCE.getCredentialType();
 
 	}
 
-} //EnvironmentPackage
+} //CyberPhysicalSystemPackage

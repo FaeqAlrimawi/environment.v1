@@ -15,6 +15,7 @@ import environment.CoffeeMachine;
 import environment.ComputingDevice;
 import environment.Connection;
 import environment.Credential;
+import environment.CyberPhysicalSystemPackage;
 import environment.Desktop;
 import environment.DigitalAsset;
 import environment.DigitalConnection;
@@ -24,7 +25,6 @@ import environment.Elevator;
 import environment.ElevatorsArea;
 import environment.Employee;
 import environment.EnvironmentDiagram;
-import environment.EnvironmentPackage;
 import environment.File;
 import environment.FireAlarm;
 import environment.Floor;
@@ -65,17 +65,17 @@ import org.eclipse.emf.ecore.util.Switch;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see environment.EnvironmentPackage
+ * @see environment.CyberPhysicalSystemPackage
  * @generated
  */
-public class EnvironmentSwitch<T> extends Switch<T> {
+public class CyberPhysicalSystemSwitch<T> extends Switch<T> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static EnvironmentPackage modelPackage;
+	protected static CyberPhysicalSystemPackage modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -83,9 +83,9 @@ public class EnvironmentSwitch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EnvironmentSwitch() {
+	public CyberPhysicalSystemSwitch() {
 		if (modelPackage == null) {
-			modelPackage = EnvironmentPackage.eINSTANCE;
+			modelPackage = CyberPhysicalSystemPackage.eINSTANCE;
 		}
 	}
 
@@ -112,14 +112,14 @@ public class EnvironmentSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case EnvironmentPackage.PHYSICAL_ASSET: {
+			case CyberPhysicalSystemPackage.PHYSICAL_ASSET: {
 				PhysicalAsset physicalAsset = (PhysicalAsset)theEObject;
 				T result = casePhysicalAsset(physicalAsset);
 				if (result == null) result = caseAsset(physicalAsset);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case EnvironmentPackage.COMPUTING_DEVICE: {
+			case CyberPhysicalSystemPackage.COMPUTING_DEVICE: {
 				ComputingDevice computingDevice = (ComputingDevice)theEObject;
 				T result = caseComputingDevice(computingDevice);
 				if (result == null) result = casePhysicalAsset(computingDevice);
@@ -127,7 +127,7 @@ public class EnvironmentSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case EnvironmentPackage.HVAC: {
+			case CyberPhysicalSystemPackage.HVAC: {
 				HVAC hvac = (HVAC)theEObject;
 				T result = caseHVAC(hvac);
 				if (result == null) result = caseComputingDevice(hvac);
@@ -136,7 +136,7 @@ public class EnvironmentSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case EnvironmentPackage.SMART_LIGHT: {
+			case CyberPhysicalSystemPackage.SMART_LIGHT: {
 				SmartLight smartLight = (SmartLight)theEObject;
 				T result = caseSmartLight(smartLight);
 				if (result == null) result = caseComputingDevice(smartLight);
@@ -145,7 +145,7 @@ public class EnvironmentSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case EnvironmentPackage.LAPTOP: {
+			case CyberPhysicalSystemPackage.LAPTOP: {
 				Laptop laptop = (Laptop)theEObject;
 				T result = caseLaptop(laptop);
 				if (result == null) result = caseComputingDevice(laptop);
@@ -154,7 +154,7 @@ public class EnvironmentSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case EnvironmentPackage.DESKTOP: {
+			case CyberPhysicalSystemPackage.DESKTOP: {
 				Desktop desktop = (Desktop)theEObject;
 				T result = caseDesktop(desktop);
 				if (result == null) result = caseComputingDevice(desktop);
@@ -163,7 +163,7 @@ public class EnvironmentSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case EnvironmentPackage.CCTV: {
+			case CyberPhysicalSystemPackage.CCTV: {
 				CCTV cctv = (CCTV)theEObject;
 				T result = caseCCTV(cctv);
 				if (result == null) result = caseComputingDevice(cctv);
@@ -172,7 +172,7 @@ public class EnvironmentSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case EnvironmentPackage.SERVER: {
+			case CyberPhysicalSystemPackage.SERVER: {
 				Server server = (Server)theEObject;
 				T result = caseServer(server);
 				if (result == null) result = caseComputingDevice(server);
@@ -181,7 +181,7 @@ public class EnvironmentSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case EnvironmentPackage.FILE: {
+			case CyberPhysicalSystemPackage.FILE: {
 				File file = (File)theEObject;
 				T result = caseFile(file);
 				if (result == null) result = caseDigitalAsset(file);
@@ -189,7 +189,7 @@ public class EnvironmentSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case EnvironmentPackage.PROCESS: {
+			case CyberPhysicalSystemPackage.PROCESS: {
 				environment.Process process = (environment.Process)theEObject;
 				T result = caseProcess(process);
 				if (result == null) result = caseDigitalAsset(process);
@@ -197,7 +197,7 @@ public class EnvironmentSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case EnvironmentPackage.APPLICATION: {
+			case CyberPhysicalSystemPackage.APPLICATION: {
 				Application application = (Application)theEObject;
 				T result = caseApplication(application);
 				if (result == null) result = caseDigitalAsset(application);
@@ -205,57 +205,57 @@ public class EnvironmentSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case EnvironmentPackage.CONNECTION: {
+			case CyberPhysicalSystemPackage.CONNECTION: {
 				Connection connection = (Connection)theEObject;
 				T result = caseConnection(connection);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case EnvironmentPackage.DIGITAL_CONNECTION: {
+			case CyberPhysicalSystemPackage.DIGITAL_CONNECTION: {
 				DigitalConnection digitalConnection = (DigitalConnection)theEObject;
 				T result = caseDigitalConnection(digitalConnection);
 				if (result == null) result = caseConnection(digitalConnection);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case EnvironmentPackage.PHYSICAL_CONNECTION: {
+			case CyberPhysicalSystemPackage.PHYSICAL_CONNECTION: {
 				PhysicalConnection physicalConnection = (PhysicalConnection)theEObject;
 				T result = casePhysicalConnection(physicalConnection);
 				if (result == null) result = caseConnection(physicalConnection);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case EnvironmentPackage.ASSET: {
+			case CyberPhysicalSystemPackage.ASSET: {
 				Asset asset = (Asset)theEObject;
 				T result = caseAsset(asset);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case EnvironmentPackage.ENVIRONMENT_DIAGRAM: {
+			case CyberPhysicalSystemPackage.ENVIRONMENT_DIAGRAM: {
 				EnvironmentDiagram environmentDiagram = (EnvironmentDiagram)theEObject;
 				T result = caseEnvironmentDiagram(environmentDiagram);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case EnvironmentPackage.PORT: {
+			case CyberPhysicalSystemPackage.PORT: {
 				Port port = (Port)theEObject;
 				T result = casePort(port);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case EnvironmentPackage.PROPERTY: {
+			case CyberPhysicalSystemPackage.PROPERTY: {
 				Property property = (Property)theEObject;
 				T result = caseProperty(property);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case EnvironmentPackage.CREDENTIAL: {
+			case CyberPhysicalSystemPackage.CREDENTIAL: {
 				Credential credential = (Credential)theEObject;
 				T result = caseCredential(credential);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case EnvironmentPackage.ACTOR: {
+			case CyberPhysicalSystemPackage.ACTOR: {
 				Actor actor = (Actor)theEObject;
 				T result = caseActor(actor);
 				if (result == null) result = casePhysicalAsset(actor);
@@ -263,7 +263,7 @@ public class EnvironmentSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case EnvironmentPackage.PHYSICAL_STRUCTURE: {
+			case CyberPhysicalSystemPackage.PHYSICAL_STRUCTURE: {
 				PhysicalStructure physicalStructure = (PhysicalStructure)theEObject;
 				T result = casePhysicalStructure(physicalStructure);
 				if (result == null) result = casePhysicalAsset(physicalStructure);
@@ -271,26 +271,26 @@ public class EnvironmentSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case EnvironmentPackage.DIGITAL_ASSET: {
+			case CyberPhysicalSystemPackage.DIGITAL_ASSET: {
 				DigitalAsset digitalAsset = (DigitalAsset)theEObject;
 				T result = caseDigitalAsset(digitalAsset);
 				if (result == null) result = caseAsset(digitalAsset);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case EnvironmentPackage.ACTION: {
+			case CyberPhysicalSystemPackage.ACTION: {
 				Action action = (Action)theEObject;
 				T result = caseAction(action);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case EnvironmentPackage.TYPE: {
+			case CyberPhysicalSystemPackage.TYPE: {
 				Type type = (Type)theEObject;
 				T result = caseType(type);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case EnvironmentPackage.ROOM: {
+			case CyberPhysicalSystemPackage.ROOM: {
 				Room room = (Room)theEObject;
 				T result = caseRoom(room);
 				if (result == null) result = casePhysicalStructure(room);
@@ -299,7 +299,7 @@ public class EnvironmentSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case EnvironmentPackage.FLOOR: {
+			case CyberPhysicalSystemPackage.FLOOR: {
 				Floor floor = (Floor)theEObject;
 				T result = caseFloor(floor);
 				if (result == null) result = casePhysicalStructure(floor);
@@ -308,7 +308,7 @@ public class EnvironmentSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case EnvironmentPackage.BUILDING: {
+			case CyberPhysicalSystemPackage.BUILDING: {
 				Building building = (Building)theEObject;
 				T result = caseBuilding(building);
 				if (result == null) result = casePhysicalStructure(building);
@@ -317,7 +317,7 @@ public class EnvironmentSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case EnvironmentPackage.FIRE_ALARM: {
+			case CyberPhysicalSystemPackage.FIRE_ALARM: {
 				FireAlarm fireAlarm = (FireAlarm)theEObject;
 				T result = caseFireAlarm(fireAlarm);
 				if (result == null) result = caseComputingDevice(fireAlarm);
@@ -326,7 +326,7 @@ public class EnvironmentSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case EnvironmentPackage.WORKSTATION: {
+			case CyberPhysicalSystemPackage.WORKSTATION: {
 				Workstation workstation = (Workstation)theEObject;
 				T result = caseWorkstation(workstation);
 				if (result == null) result = caseComputingDevice(workstation);
@@ -335,7 +335,7 @@ public class EnvironmentSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case EnvironmentPackage.LAB: {
+			case CyberPhysicalSystemPackage.LAB: {
 				Lab lab = (Lab)theEObject;
 				T result = caseLab(lab);
 				if (result == null) result = caseRoom(lab);
@@ -345,7 +345,7 @@ public class EnvironmentSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case EnvironmentPackage.TOILET: {
+			case CyberPhysicalSystemPackage.TOILET: {
 				Toilet toilet = (Toilet)theEObject;
 				T result = caseToilet(toilet);
 				if (result == null) result = caseRoom(toilet);
@@ -355,7 +355,7 @@ public class EnvironmentSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case EnvironmentPackage.LOUNGE: {
+			case CyberPhysicalSystemPackage.LOUNGE: {
 				Lounge lounge = (Lounge)theEObject;
 				T result = caseLounge(lounge);
 				if (result == null) result = caseRoom(lounge);
@@ -365,7 +365,7 @@ public class EnvironmentSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case EnvironmentPackage.DISH_WASHER: {
+			case CyberPhysicalSystemPackage.DISH_WASHER: {
 				DishWasher dishWasher = (DishWasher)theEObject;
 				T result = caseDishWasher(dishWasher);
 				if (result == null) result = caseComputingDevice(dishWasher);
@@ -374,7 +374,7 @@ public class EnvironmentSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case EnvironmentPackage.COFFEE_MACHINE: {
+			case CyberPhysicalSystemPackage.COFFEE_MACHINE: {
 				CoffeeMachine coffeeMachine = (CoffeeMachine)theEObject;
 				T result = caseCoffeeMachine(coffeeMachine);
 				if (result == null) result = caseComputingDevice(coffeeMachine);
@@ -383,7 +383,7 @@ public class EnvironmentSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case EnvironmentPackage.ELEVATOR: {
+			case CyberPhysicalSystemPackage.ELEVATOR: {
 				Elevator elevator = (Elevator)theEObject;
 				T result = caseElevator(elevator);
 				if (result == null) result = caseComputingDevice(elevator);
@@ -392,7 +392,7 @@ public class EnvironmentSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case EnvironmentPackage.HALLWAY: {
+			case CyberPhysicalSystemPackage.HALLWAY: {
 				Hallway hallway = (Hallway)theEObject;
 				T result = caseHallway(hallway);
 				if (result == null) result = casePhysicalStructure(hallway);
@@ -401,7 +401,7 @@ public class EnvironmentSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case EnvironmentPackage.ELEVATORS_AREA: {
+			case CyberPhysicalSystemPackage.ELEVATORS_AREA: {
 				ElevatorsArea elevatorsArea = (ElevatorsArea)theEObject;
 				T result = caseElevatorsArea(elevatorsArea);
 				if (result == null) result = caseRoom(elevatorsArea);
@@ -411,7 +411,7 @@ public class EnvironmentSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case EnvironmentPackage.IP_NETWORK: {
+			case CyberPhysicalSystemPackage.IP_NETWORK: {
 				IPNetwork ipNetwork = (IPNetwork)theEObject;
 				T result = caseIPNetwork(ipNetwork);
 				if (result == null) result = caseDigitalNetwork(ipNetwork);
@@ -420,7 +420,7 @@ public class EnvironmentSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case EnvironmentPackage.DIGITAL_NETWORK: {
+			case CyberPhysicalSystemPackage.DIGITAL_NETWORK: {
 				DigitalNetwork digitalNetwork = (DigitalNetwork)theEObject;
 				T result = caseDigitalNetwork(digitalNetwork);
 				if (result == null) result = caseDigitalAsset(digitalNetwork);
@@ -428,7 +428,7 @@ public class EnvironmentSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case EnvironmentPackage.BUS_NETWORK: {
+			case CyberPhysicalSystemPackage.BUS_NETWORK: {
 				BusNetwork busNetwork = (BusNetwork)theEObject;
 				T result = caseBusNetwork(busNetwork);
 				if (result == null) result = caseDigitalNetwork(busNetwork);
@@ -437,7 +437,7 @@ public class EnvironmentSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case EnvironmentPackage.IP_CONNECTION: {
+			case CyberPhysicalSystemPackage.IP_CONNECTION: {
 				IPConnection ipConnection = (IPConnection)theEObject;
 				T result = caseIPConnection(ipConnection);
 				if (result == null) result = caseDigitalConnection(ipConnection);
@@ -445,7 +445,7 @@ public class EnvironmentSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case EnvironmentPackage.BUS_CONNECTION: {
+			case CyberPhysicalSystemPackage.BUS_CONNECTION: {
 				BusConnection busConnection = (BusConnection)theEObject;
 				T result = caseBusConnection(busConnection);
 				if (result == null) result = caseDigitalConnection(busConnection);
@@ -453,7 +453,7 @@ public class EnvironmentSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case EnvironmentPackage.KITCHEN: {
+			case CyberPhysicalSystemPackage.KITCHEN: {
 				Kitchen kitchen = (Kitchen)theEObject;
 				T result = caseKitchen(kitchen);
 				if (result == null) result = caseRoom(kitchen);
@@ -463,7 +463,7 @@ public class EnvironmentSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case EnvironmentPackage.STAIRS: {
+			case CyberPhysicalSystemPackage.STAIRS: {
 				Stairs stairs = (Stairs)theEObject;
 				T result = caseStairs(stairs);
 				if (result == null) result = casePhysicalStructure(stairs);
@@ -472,7 +472,7 @@ public class EnvironmentSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case EnvironmentPackage.CARD_READER: {
+			case CyberPhysicalSystemPackage.CARD_READER: {
 				CardReader cardReader = (CardReader)theEObject;
 				T result = caseCardReader(cardReader);
 				if (result == null) result = caseComputingDevice(cardReader);
@@ -481,7 +481,7 @@ public class EnvironmentSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case EnvironmentPackage.EMPLOYEE: {
+			case CyberPhysicalSystemPackage.EMPLOYEE: {
 				Employee employee = (Employee)theEObject;
 				T result = caseEmployee(employee);
 				if (result == null) result = caseActor(employee);
@@ -490,7 +490,7 @@ public class EnvironmentSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case EnvironmentPackage.VISITOR: {
+			case CyberPhysicalSystemPackage.VISITOR: {
 				Visitor visitor = (Visitor)theEObject;
 				T result = caseVisitor(visitor);
 				if (result == null) result = caseActor(visitor);
@@ -729,13 +729,13 @@ public class EnvironmentSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Diagram</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Environment Diagram</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Diagram</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Environment Diagram</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
@@ -1224,4 +1224,4 @@ public class EnvironmentSwitch<T> extends Switch<T> {
 		return null;
 	}
 
-} //EnvironmentSwitch
+} //CyberPhysicalSystemSwitch
