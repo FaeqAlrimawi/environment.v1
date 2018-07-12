@@ -112,29 +112,26 @@ public class DigitalAssetImpl extends AssetImpl implements DigitalAsset {
 			eNotify(new ENotificationImpl(this, Notification.SET, CyberPhysicalSystemPackage.DIGITAL_ASSET__PARENT_ASSET, oldParentAsset, parentAsset));
 		
 		//add this object as a child to the parent as well and remove from old parent if any
-				if(newParentAsset == null) {
-					return;
-				}
-				
-				if(PhysicalAsset.class.isInstance(newParentAsset)) {
-					EList<Asset> containedAssets = ((PhysicalAsset)newParentAsset).getContainedAssets();
+				if(newParentAsset != null) {
+					if(PhysicalAsset.class.isInstance(newParentAsset)) {
+						EList<Asset> containedAssets = ((PhysicalAsset)newParentAsset).getContainedAssets();
 					
 					//add to the new parent
-					if(!isContainedInPhysical((Collection<Asset>)containedAssets)) {
-						containedAssets.add(this);
-						//removeDuplicatesPhysical((Collection<Asset>)containedAssets);
-					}
-				} else if(DigitalAsset.class.isInstance(newParentAsset)) {
-					EList<DigitalAsset> containedAssets = ((DigitalAsset)newParentAsset).getContainedAssets();
-					
-					//add to the new parent
-						if(!isContainedIn((Collection<DigitalAsset>)containedAssets)) {
+						if(!isContainedInPhysical((Collection<Asset>)containedAssets)) {
 							containedAssets.add(this);
+							//removeDuplicatesPhysical((Collection<Asset>)containedAssets);
+						}
+					} else if(DigitalAsset.class.isInstance(newParentAsset)) {
+						EList<DigitalAsset> containedAssets = ((DigitalAsset)newParentAsset).getContainedAssets();
+					
+						//add to the new parent
+							if(!isContainedIn((Collection<DigitalAsset>)containedAssets)) {
+								containedAssets.add(this);
 						}
 						
 						//removeDuplicates((Collection<DigitalAsset>)containedAssets);			
+					}
 				}
-				
 				//remove from old parent
 				if(oldParentAsset != null) {
 					if(PhysicalAsset.class.isInstance(oldParentAsset)) {
@@ -209,13 +206,6 @@ public class DigitalAssetImpl extends AssetImpl implements DigitalAsset {
 		assets.addAll(hs);		
 	}
 	
-	private void removeDuplicatesPhysical(Collection<Asset> assets) {
-
-		Set<Asset> hs = new HashSet<Asset>();
-		hs.addAll(assets);
-		assets.clear();
-		assets.addAll(hs);		
-	}
 	
 	/**
 	 * <!-- begin-user-doc -->
