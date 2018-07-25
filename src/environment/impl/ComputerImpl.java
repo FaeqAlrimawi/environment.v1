@@ -31,6 +31,7 @@ public class ComputerImpl extends ComputingDeviceImpl implements Computer {
 	 */
 	@Override
 	protected EClass eStaticClass() {
+		
 		return CyberPhysicalSystemPackage.Literals.COMPUTER;
 	}
 

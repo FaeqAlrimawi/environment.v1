@@ -430,7 +430,7 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 		// assets if possible)
 		// shallow abstraction of contained assets might be needed
 		
-		abstractContainedAsets();
+		abstractContainedAssets();
 		
 		// 5-abstract connections (can be done by merging/aggregating
 		// connections if possible)
@@ -928,7 +928,46 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 		
 	}
 
-	public void abstractContainedAsets() {
+	public void abstractContainedAssets() {
+		
+		EList<Asset> thisAssets = getContainedAsset();
+		
+		//create a new list of assets that are abstracts of the contained assets
+		EList<Asset> abstractedAssets = new BasicEList<Asset>();
+		
+		for(Asset ast : thisAssets) {
+			Asset astAbstract = ast.abstractAsset();
+			if(astAbstract != null) {
+				abstractedAssets.add(astAbstract);	
+			} else { //else add the original asset
+				abstractedAssets.add(ast);
+			}
+		}
+
+			/*if(PhysicalAsset.class.isInstance(abstractedAsset)) {
+				((PhysicalAsset)abstractedAsset).getContainedAssets().clear();
+				((PhysicalAsset)abstractedAsset).getContainedAssets().addAll(abstractedAssets);
+			} else if(DigitalAsset.class.isInstance(abstractedAsset)) {
+				((DigitalAsset)abstractedAsset).getContainedAssets().clear();
+				for(Asset as : abstractedAssets) {
+					((DigitalAsset)abstractedAsset).getContainedAssets().add((DigitalAsset)as);
+				}
+			}*/
+		
+		//add the new contained assets to the abstracted asset
+		abstractedAsset.getContainedAssets()
+			
+			//mergeContainedAssets();
+	}
+	
+	public void abstractConnections() {
+		
+		
+		
+		//mergeConnections();
+	}
+	
+	EList<Asset> getContainedAsset() {
 		
 		EList<Asset> thisAssets = null;
 		EList<DigitalAsset> thisDigitalAssets = null;
@@ -948,41 +987,11 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 		}
 
 		if(thisAssets == null || thisAssets.size() == 0) {
-			return;
+			return new BasicEList<Asset>();
 		}
 		
-		//create a new list of assets that are abstracts of the contained assets
-		EList<Asset> abstractedAssets = new BasicEList<Asset>();
-		
-		for(Asset ast : thisAssets) {
-			if(ast.getAbstractedAsset() != null) {
-				abstractedAssets.add(ast.getAbstractedAsset());
-			} else {
-				abstractedAssets.add(ast.abstractAsset());
-				
-			}
-		}
-
-			if(PhysicalAsset.class.isInstance(abstractedAsset)) {
-				((PhysicalAsset)abstractedAsset).getContainedAssets().clear();
-				((PhysicalAsset)abstractedAsset).getContainedAssets().addAll(abstractedAssets);
-			} else if(DigitalAsset.class.isInstance(abstractedAsset)) {
-				((DigitalAsset)abstractedAsset).getContainedAssets().clear();
-				for(Asset as : abstractedAssets) {
-					((DigitalAsset)abstractedAsset).getContainedAssets().add((DigitalAsset)as);
-				}
-			}
-			
-			//mergeContainedAssets();
+		return thisDigitalAssets;
 	}
-	
-	public void abstractConnections() {
-		
-		
-		
-		//mergeConnections();
-	}
-	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
