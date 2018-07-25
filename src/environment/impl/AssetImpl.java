@@ -24,11 +24,12 @@ import environment.Connection;
 import environment.CyberPhysicalSystemFactory;
 import environment.CyberPhysicalSystemPackage;
 import environment.DigitalAsset;
+import environment.EnvironmentDiagram;
 import environment.PhysicalAsset;
 import environment.Property;
 import environment.Room;
 import environment.Type;
-import extrnalUtility.HungarianAlgorithm;
+import externalUtility.HungarianAlgorithm;
 
 /**
  * <!-- begin-user-doc -->
@@ -388,8 +389,9 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 		
 		//1-abstract type
 		//Asset abstractedAsset;
-		
+
 		abstractedAsset = abstractType();
+		
 		
 		// 2-set attributes
 		// a-change name
@@ -515,25 +517,36 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 	
 	public Asset abstractType() {
 		
-		Asset ast = null;
+		try {
 		
-		
-		//default implementation returns an instance of the parent or a physical or digital class
-		if(!PhysicalAssetImpl.class.equals(this.getClass()) && !DigitalAssetImpl.class.equals(this.getClass())) {
-			try {
-				ast = (Asset)(this.getClass().getSuperclass().newInstance());
-			} catch (InstantiationException | IllegalAccessException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+		//abstract type based on levels in system meta-model. Currently has 3 levels
+		//level-3: least abstract. It contains ComputingDevice, Room, 
+		//use an array defined in the EnvironmentDiagram interface for all level 3 classes
+		for(Class<?> cls : EnvironmentDiagram.LEVEL3_CLASSES) {
+			if(cls.isInstance(this)) {
+				return (Asset) cls.newInstance();
 			}
-		} else	if(PhysicalAssetImpl.class.equals(this.getClass())) {
-			ast = instance.createPhysicalAsset();
-		} else if (DigitalAssetImpl.class.equals(this.getClass())){
-			ast = instance.createDigitalAsset();
+		}
+		//if it is instance of ComputingDevice then an abstracted asset will be of type ComputingDevice
+		/*if(ComputingDevice.class.isInstance(this)) {
+			return abstractType(ComputingDeviceImpl.class.getSimpleName());
+		}*/
+		
+		//if all fails, then return a new asset with type equals to the assets parent
+		if(!PhysicalAssetImpl.class.equals(this.getClass()) && !DigitalAssetImpl.class.equals(this.getClass())) {			
+			return (Asset) this.getClass().getSuperclass().newInstance();
+		//otherwise it creates a general physical or digital asset	
+		} else if(PhysicalAssetImpl.class.equals(this.getClass()) || DigitalAssetImpl.class.equals(this.getClass())) {
+			return this.getClass().newInstance();
+		} 
+		
+		} catch (InstantiationException | IllegalAccessException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 		
-		
-		return ast;
+		return null;
+
 	}
 	
 	public Asset abstractType(String classType) {
@@ -547,7 +560,7 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 				classType = classType+"Impl";
 			}
 			
-			String pkgName = instance.getCyberPhysicalSystemPackage().eNAME+".impl.";
+			String pkgName = CyberPhysicalSystemPackage.eNAME+".impl.";
 			
 			Class<?> cls = Class.forName(pkgName+classType);
 			ast = (Asset)(cls.newInstance());

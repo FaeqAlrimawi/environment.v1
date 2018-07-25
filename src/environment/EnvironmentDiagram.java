@@ -5,8 +5,25 @@ package environment;
 import java.util.List;
 
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
+
+import environment.impl.ActorImpl;
+import environment.impl.ApplicationImpl;
+import environment.impl.BuildingImpl;
+import environment.impl.BusNetworkImpl;
+import environment.impl.ComputingDeviceImpl;
+import environment.impl.DigitalAssetImpl;
+import environment.impl.DigitalNetworkImpl;
+import environment.impl.EmployeeImpl;
+import environment.impl.FileImpl;
+import environment.impl.HallwayImpl;
+import environment.impl.IPNetworkImpl;
+import environment.impl.PhysicalAssetImpl;
+import environment.impl.PhysicalStructureImpl;
+import environment.impl.ProcessImpl;
+import environment.impl.RoomImpl;
+import environment.impl.StairsImpl;
+import environment.impl.VisitorImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,6 +47,23 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface EnvironmentDiagram extends EObject {
+	
+	
+	//Level-0 is an Asset, which is an abstract (i.e. not instantiated)
+	//Level 1. Most abstract. Includes Digital and Physical assets
+	final Class<?>[] LEVEL1_CLASSES = 
+		{PhysicalAssetImpl.class, DigitalAssetImpl.class};
+	
+	//Level 2
+	final Class<?>[] LEVEL2_CLASSES = 
+		{PhysicalStructureImpl.class, ActorImpl.class, ComputingDeviceImpl.class, 
+				ApplicationImpl.class, ProcessImpl.class, FileImpl.class, DigitalNetworkImpl.class};
+	
+	//Level 3 classes. Least abstract
+	final Class<?>[] LEVEL3_CLASSES = 
+		{BuildingImpl.class, Floor.class, RoomImpl.class, HallwayImpl.class, 
+				StairsImpl.class, EmployeeImpl.class, VisitorImpl.class, BusNetworkImpl.class, 
+				IPNetworkImpl.class}; 
 	
 	List<String> getAssetNames();
 	/**

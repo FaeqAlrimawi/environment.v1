@@ -34,9 +34,16 @@ public class PhysicalStructureImpl extends PhysicalAssetImpl implements Physical
 		return CyberPhysicalSystemPackage.Literals.PHYSICAL_STRUCTURE;
 	}
 	
-	public Asset abstractType() {
+	/*public Asset abstractType() {
 		
-		return instance.createPhysicalStructure();
-}
+		try {
+			return (Asset)this.getClass().newInstance();
+		} catch (InstantiationException | IllegalAccessException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return null;
+}*/
 
 } //PhysicalStructureImpl

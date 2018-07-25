@@ -218,10 +218,17 @@ public class ComputingDeviceImpl extends PhysicalAssetImpl implements ComputingD
 		return abstractedAsset;
 	}*/
 	
-	public Asset abstractType() {
+	/*public Asset abstractType() {
 		
-		return instance.createComputingDevice();
-}
+		try {
+			return ComputingDeviceImpl.class.newInstance();
+		} catch (InstantiationException | IllegalAccessException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return null;
+}*/
 	
 	/**
 	 * <!-- begin-user-doc -->

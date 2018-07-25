@@ -52,6 +52,7 @@ public class RoomImpl extends PhysicalStructureImpl implements Room {
 			abstractedAsset.getConnections().add(con);
 		}
 		
+		
 		//copy abstracted assets
 		for(Asset ast : aset.getContainedAssets()) {
 			abstractedAsset.getContainedAssets().add(ast);
@@ -73,9 +74,16 @@ public class RoomImpl extends PhysicalStructureImpl implements Room {
 		return abstractedAsset;
 	}*/
 	
-	public Asset abstractType() {
+	/*public Asset abstractType() {
 	
-		return instance.createRoom();
-}
+		try {
+			return this.getClass().newInstance();
+		} catch (InstantiationException | IllegalAccessException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return null;
+}*/
 
 } //RoomImpl
