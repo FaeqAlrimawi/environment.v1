@@ -9,7 +9,7 @@ package environment;
  * <!-- end-user-doc -->
  *
  *
- * @see environment.cpsPackage#getElevatorsArea()
+ * @see environment.CyberPhysicalSystemPackage#getElevatorsArea()
  * @model
  * @generated
  */

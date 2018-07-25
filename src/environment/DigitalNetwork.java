@@ -16,7 +16,7 @@ package environment;
  *   <li>{@link environment.DigitalNetwork#getEncryption <em>Encryption</em>}</li>
  * </ul>
  *
- * @see environment.cpsPackage#getDigitalNetwork()
+ * @see environment.CyberPhysicalSystemPackage#getDigitalNetwork()
  * @model
  * @generated
  */
@@ -31,7 +31,7 @@ public interface DigitalNetwork extends DigitalAsset {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Protocol</em>' attribute.
 	 * @see #setProtocol(String)
-	 * @see environment.cpsPackage#getDigitalNetwork_Protocol()
+	 * @see environment.CyberPhysicalSystemPackage#getDigitalNetwork_Protocol()
 	 * @model
 	 * @generated
 	 */
@@ -57,7 +57,7 @@ public interface DigitalNetwork extends DigitalAsset {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Encryption</em>' attribute.
 	 * @see #setEncryption(String)
-	 * @see environment.cpsPackage#getDigitalNetwork_Encryption()
+	 * @see environment.CyberPhysicalSystemPackage#getDigitalNetwork_Encryption()
 	 * @model
 	 * @generated
 	 */

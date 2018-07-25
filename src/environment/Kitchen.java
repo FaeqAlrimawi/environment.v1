@@ -9,7 +9,7 @@ package environment;
  * <!-- end-user-doc -->
  *
  *
- * @see environment.cpsPackage#getKitchen()
+ * @see environment.CyberPhysicalSystemPackage#getKitchen()
  * @model
  * @generated
  */

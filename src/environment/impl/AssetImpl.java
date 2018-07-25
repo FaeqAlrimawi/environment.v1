@@ -5,6 +5,7 @@ package environment.impl;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -24,6 +25,7 @@ import environment.Connection;
 import environment.CyberPhysicalSystemFactory;
 import environment.CyberPhysicalSystemPackage;
 import environment.DigitalAsset;
+import environment.DigitalStatus;
 import environment.EnvironmentDiagram;
 import environment.PhysicalAsset;
 import environment.Property;
@@ -517,28 +519,50 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 	
 	public Asset abstractType() {
 		
+
 		try {
 		
 		//abstract type based on levels in system meta-model. Currently has 3 levels
-		//level-3: least abstract. It contains ComputingDevice, Room, 
-		//use an array defined in the EnvironmentDiagram interface for all level 3 classes
+
+		for (List<Class<?>> level : EnvironmentDiagramImpl.levels) {
+			for(Class<?> cls : level) {
+				if(cls.isInstance(this)) {
+					return (Asset) cls.newInstance();
+				}
+			}
+		}			
+		/*//level-3: least abstract
 		for(Class<?> cls : EnvironmentDiagram.LEVEL3_CLASSES) {
 			if(cls.isInstance(this)) {
 				return (Asset) cls.newInstance();
 			}
 		}
+		
+		for(Class<?> cls : EnvironmentDiagram.LEVEL2_CLASSES) {
+			if(cls.isInstance(this)) {
+				return (Asset) cls.newInstance();
+			}
+		}
+		
+		//level-3: mOST abstract
+		for(Class<?> cls : EnvironmentDiagram.LEVEL1_CLASSES) {
+			if(cls.isInstance(this)) {
+				return (Asset) cls.newInstance();
+			}
+		}*/
+		
 		//if it is instance of ComputingDevice then an abstracted asset will be of type ComputingDevice
 		/*if(ComputingDevice.class.isInstance(this)) {
 			return abstractType(ComputingDeviceImpl.class.getSimpleName());
 		}*/
 		
 		//if all fails, then return a new asset with type equals to the assets parent
-		if(!PhysicalAssetImpl.class.equals(this.getClass()) && !DigitalAssetImpl.class.equals(this.getClass())) {			
+		/*if(!PhysicalAssetImpl.class.equals(this.getClass()) && !DigitalAssetImpl.class.equals(this.getClass())) {			
 			return (Asset) this.getClass().getSuperclass().newInstance();
 		//otherwise it creates a general physical or digital asset	
 		} else if(PhysicalAssetImpl.class.equals(this.getClass()) || DigitalAssetImpl.class.equals(this.getClass())) {
 			return this.getClass().newInstance();
-		} 
+		} */
 		
 		} catch (InstantiationException | IllegalAccessException e) {
 			// TODO Auto-generated catch block

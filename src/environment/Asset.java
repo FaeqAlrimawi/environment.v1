@@ -24,7 +24,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link environment.Asset#getControl <em>Control</em>}</li>
  * </ul>
  *
- * @see environment.cpsPackage#getAsset()
+ * @see environment.CyberPhysicalSystemPackage#getAsset()
  * @model abstract="true"
  * @generated
  */
@@ -39,7 +39,7 @@ public interface Asset extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Connections</em>' reference list.
-	 * @see environment.cpsPackage#getAsset_Connections()
+	 * @see environment.CyberPhysicalSystemPackage#getAsset_Connections()
 	 * @model
 	 * @generated
 	 */
@@ -86,7 +86,7 @@ public interface Asset extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see environment.cpsPackage#getAsset_Name()
+	 * @see environment.CyberPhysicalSystemPackage#getAsset_Name()
 	 * @model id="true"
 	 * @generated
 	 */
@@ -125,7 +125,7 @@ public interface Asset extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Property</em>' containment reference list.
-	 * @see environment.cpsPackage#getAsset_Property()
+	 * @see environment.CyberPhysicalSystemPackage#getAsset_Property()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -141,7 +141,7 @@ public interface Asset extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Value</em>' attribute.
 	 * @see #setValue(int)
-	 * @see environment.cpsPackage#getAsset_Value()
+	 * @see environment.CyberPhysicalSystemPackage#getAsset_Value()
 	 * @model
 	 * @generated
 	 */
@@ -167,7 +167,7 @@ public interface Asset extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type</em>' containment reference.
 	 * @see #setType(Type)
-	 * @see environment.cpsPackage#getAsset_Type()
+	 * @see environment.CyberPhysicalSystemPackage#getAsset_Type()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -193,7 +193,7 @@ public interface Asset extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Description</em>' attribute.
 	 * @see #setDescription(String)
-	 * @see environment.cpsPackage#getAsset_Description()
+	 * @see environment.CyberPhysicalSystemPackage#getAsset_Description()
 	 * @model
 	 * @generated
 	 */
@@ -219,7 +219,7 @@ public interface Asset extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Control</em>' attribute.
 	 * @see #setControl(String)
-	 * @see environment.cpsPackage#getAsset_Control()
+	 * @see environment.CyberPhysicalSystemPackage#getAsset_Control()
 	 * @model
 	 * @generated
 	 */

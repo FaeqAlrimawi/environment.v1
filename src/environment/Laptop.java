@@ -9,9 +9,9 @@ package environment;
  * <!-- end-user-doc -->
  *
  *
- * @see environment.cpsPackage#getLaptop()
+ * @see environment.CyberPhysicalSystemPackage#getLaptop()
  * @model
  * @generated
  */
-public interface Laptop extends ComputingDevice {
+public interface Laptop extends Computer {
 } // Laptop

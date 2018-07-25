@@ -9,7 +9,7 @@ package environment;
  * <!-- end-user-doc -->
  *
  *
- * @see environment.cpsPackage#getHVAC()
+ * @see environment.CyberPhysicalSystemPackage#getHVAC()
  * @model
  * @generated
  */

@@ -12,6 +12,7 @@ import environment.BusNetwork;
 import environment.CCTV;
 import environment.CardReader;
 import environment.CoffeeMachine;
+import environment.Computer;
 import environment.ComputingDevice;
 import environment.Connection;
 import environment.Credential;
@@ -23,6 +24,7 @@ import environment.DigitalNetwork;
 import environment.DishWasher;
 import environment.Elevator;
 import environment.ElevatorsArea;
+import environment.EmbeddedComputer;
 import environment.Employee;
 import environment.EnvironmentDiagram;
 import environment.File;
@@ -36,6 +38,7 @@ import environment.Kitchen;
 import environment.Lab;
 import environment.Laptop;
 import environment.Lounge;
+import environment.MicroController;
 import environment.PhysicalAsset;
 import environment.PhysicalConnection;
 import environment.PhysicalStructure;
@@ -148,6 +151,7 @@ public class CyberPhysicalSystemSwitch<T> extends Switch<T> {
 			case CyberPhysicalSystemPackage.LAPTOP: {
 				Laptop laptop = (Laptop)theEObject;
 				T result = caseLaptop(laptop);
+				if (result == null) result = caseComputer(laptop);
 				if (result == null) result = caseComputingDevice(laptop);
 				if (result == null) result = casePhysicalAsset(laptop);
 				if (result == null) result = caseAsset(laptop);
@@ -157,6 +161,7 @@ public class CyberPhysicalSystemSwitch<T> extends Switch<T> {
 			case CyberPhysicalSystemPackage.DESKTOP: {
 				Desktop desktop = (Desktop)theEObject;
 				T result = caseDesktop(desktop);
+				if (result == null) result = caseComputer(desktop);
 				if (result == null) result = caseComputingDevice(desktop);
 				if (result == null) result = casePhysicalAsset(desktop);
 				if (result == null) result = caseAsset(desktop);
@@ -175,6 +180,7 @@ public class CyberPhysicalSystemSwitch<T> extends Switch<T> {
 			case CyberPhysicalSystemPackage.SERVER: {
 				Server server = (Server)theEObject;
 				T result = caseServer(server);
+				if (result == null) result = caseComputer(server);
 				if (result == null) result = caseComputingDevice(server);
 				if (result == null) result = casePhysicalAsset(server);
 				if (result == null) result = caseAsset(server);
@@ -329,6 +335,7 @@ public class CyberPhysicalSystemSwitch<T> extends Switch<T> {
 			case CyberPhysicalSystemPackage.WORKSTATION: {
 				Workstation workstation = (Workstation)theEObject;
 				T result = caseWorkstation(workstation);
+				if (result == null) result = caseComputer(workstation);
 				if (result == null) result = caseComputingDevice(workstation);
 				if (result == null) result = casePhysicalAsset(workstation);
 				if (result == null) result = caseAsset(workstation);
@@ -496,6 +503,36 @@ public class CyberPhysicalSystemSwitch<T> extends Switch<T> {
 				if (result == null) result = caseActor(visitor);
 				if (result == null) result = casePhysicalAsset(visitor);
 				if (result == null) result = caseAsset(visitor);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CyberPhysicalSystemPackage.COMPUTER: {
+				Computer computer = (Computer)theEObject;
+				T result = caseComputer(computer);
+				if (result == null) result = caseComputingDevice(computer);
+				if (result == null) result = casePhysicalAsset(computer);
+				if (result == null) result = caseAsset(computer);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CyberPhysicalSystemPackage.EMBEDDED_COMPUTER: {
+				EmbeddedComputer embeddedComputer = (EmbeddedComputer)theEObject;
+				T result = caseEmbeddedComputer(embeddedComputer);
+				if (result == null) result = caseComputer(embeddedComputer);
+				if (result == null) result = caseComputingDevice(embeddedComputer);
+				if (result == null) result = casePhysicalAsset(embeddedComputer);
+				if (result == null) result = caseAsset(embeddedComputer);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CyberPhysicalSystemPackage.MICRO_CONTROLLER: {
+				MicroController microController = (MicroController)theEObject;
+				T result = caseMicroController(microController);
+				if (result == null) result = caseEmbeddedComputer(microController);
+				if (result == null) result = caseComputer(microController);
+				if (result == null) result = caseComputingDevice(microController);
+				if (result == null) result = casePhysicalAsset(microController);
+				if (result == null) result = caseAsset(microController);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -1205,6 +1242,51 @@ public class CyberPhysicalSystemSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseVisitor(Visitor object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Computer</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Computer</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseComputer(Computer object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Embedded Computer</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Embedded Computer</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEmbeddedComputer(EmbeddedComputer object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Micro Controller</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Micro Controller</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMicroController(MicroController object) {
 		return null;
 	}
 

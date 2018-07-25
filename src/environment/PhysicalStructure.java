@@ -9,7 +9,7 @@ package environment;
  * <!-- end-user-doc -->
  *
  *
- * @see environment.cpsPackage#getPhysicalStructure()
+ * @see environment.CyberPhysicalSystemPackage#getPhysicalStructure()
  * @model
  * @generated
  */

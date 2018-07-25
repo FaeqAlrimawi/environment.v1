@@ -26,7 +26,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link environment.Connection#getType <em>Type</em>}</li>
  * </ul>
  *
- * @see environment.cpsPackage#getConnection()
+ * @see environment.CyberPhysicalSystemPackage#getConnection()
  * @model abstract="true"
  * @generated
  */
@@ -75,7 +75,7 @@ public interface Connection extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Asset1</em>' reference.
 	 * @see #setAsset1(Asset)
-	 * @see environment.cpsPackage#getConnection_Asset1()
+	 * @see environment.CyberPhysicalSystemPackage#getConnection_Asset1()
 	 * @model
 	 * @generated
 	 */
@@ -101,7 +101,7 @@ public interface Connection extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Asset2</em>' reference.
 	 * @see #setAsset2(Asset)
-	 * @see environment.cpsPackage#getConnection_Asset2()
+	 * @see environment.CyberPhysicalSystemPackage#getConnection_Asset2()
 	 * @model
 	 * @generated
 	 */
@@ -127,7 +127,7 @@ public interface Connection extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see environment.cpsPackage#getConnection_Name()
+	 * @see environment.CyberPhysicalSystemPackage#getConnection_Name()
 	 * @model id="true"
 	 * @generated
 	 */
@@ -153,7 +153,7 @@ public interface Connection extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type</em>' containment reference.
 	 * @see #setType(Type)
-	 * @see environment.cpsPackage#getConnection_Type()
+	 * @see environment.CyberPhysicalSystemPackage#getConnection_Type()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -178,7 +178,7 @@ public interface Connection extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Constraints</em>' attribute list.
-	 * @see environment.cpsPackage#getConnection_Constraints()
+	 * @see environment.CyberPhysicalSystemPackage#getConnection_Constraints()
 	 * @model
 	 * @generated
 	 */
@@ -195,7 +195,7 @@ public interface Connection extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Bidirectional</em>' attribute.
 	 * @see #setBidirectional(boolean)
-	 * @see environment.cpsPackage#getConnection_Bidirectional()
+	 * @see environment.CyberPhysicalSystemPackage#getConnection_Bidirectional()
 	 * @model default="true"
 	 * @generated
 	 */
@@ -219,7 +219,7 @@ public interface Connection extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Port</em>' containment reference.
 	 * @see #setPort(Port)
-	 * @see environment.cpsPackage#getConnection_Port()
+	 * @see environment.CyberPhysicalSystemPackage#getConnection_Port()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -245,7 +245,7 @@ public interface Connection extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Properties</em>' reference list.
-	 * @see environment.cpsPackage#getConnection_Properties()
+	 * @see environment.CyberPhysicalSystemPackage#getConnection_Properties()
 	 * @model
 	 * @generated
 	 */
@@ -261,7 +261,7 @@ public interface Connection extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Description</em>' attribute.
 	 * @see #setDescription(String)
-	 * @see environment.cpsPackage#getConnection_Description()
+	 * @see environment.CyberPhysicalSystemPackage#getConnection_Description()
 	 * @model
 	 * @generated
 	 */

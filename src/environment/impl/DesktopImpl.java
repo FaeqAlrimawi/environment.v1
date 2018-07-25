@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class DesktopImpl extends ComputingDeviceImpl implements Desktop {
+public class DesktopImpl extends ComputerImpl implements Desktop {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -9,7 +9,7 @@ package environment;
  * <!-- end-user-doc -->
  *
  *
- * @see environment.cpsPackage#getCCTV()
+ * @see environment.CyberPhysicalSystemPackage#getCCTV()
  * @model
  * @generated
  */

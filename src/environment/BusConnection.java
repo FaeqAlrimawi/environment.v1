@@ -9,7 +9,7 @@ package environment;
  * <!-- end-user-doc -->
  *
  *
- * @see environment.cpsPackage#getBusConnection()
+ * @see environment.CyberPhysicalSystemPackage#getBusConnection()
  * @model
  * @generated
  */

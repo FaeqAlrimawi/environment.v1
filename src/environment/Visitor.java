@@ -9,7 +9,7 @@ package environment;
  * <!-- end-user-doc -->
  *
  *
- * @see environment.cpsPackage#getVisitor()
+ * @see environment.CyberPhysicalSystemPackage#getVisitor()
  * @model
  * @generated
  */

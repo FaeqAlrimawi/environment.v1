@@ -13,7 +13,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * A representation of the literals of the enumeration '<em><b>Status</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see environment.cpsPackage#getStatus()
+ * @see environment.CyberPhysicalSystemPackage#getStatus()
  * @model
  * @generated
  */
@@ -49,14 +49,14 @@ public enum Status implements Enumerator {
 	BROKEN(2, "BROKEN", "BROKEN"),
 
 	/**
-	 * The '<em><b>LITERAL3</b></em>' literal object.
+	 * The '<em><b>UNKOWN</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #LITERAL3_VALUE
+	 * @see #UNKOWN_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	LITERAL3(3, "LITERAL3", "LITERAL3");
+	UNKOWN(3, "UNKOWN", "UNKOWN");
 
 	/**
 	 * The '<em><b>ON</b></em>' literal value.
@@ -104,19 +104,19 @@ public enum Status implements Enumerator {
 	public static final int BROKEN_VALUE = 2;
 
 	/**
-	 * The '<em><b>LITERAL3</b></em>' literal value.
+	 * The '<em><b>UNKOWN</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>LITERAL3</b></em>' literal object isn't clear,
+	 * If the meaning of '<em><b>UNKOWN</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #LITERAL3
+	 * @see #UNKOWN
 	 * @model
 	 * @generated
 	 * @ordered
 	 */
-	public static final int LITERAL3_VALUE = 3;
+	public static final int UNKOWN_VALUE = 3;
 
 	/**
 	 * An array of all the '<em><b>Status</b></em>' enumerators.
@@ -129,7 +129,7 @@ public enum Status implements Enumerator {
 			ON,
 			OFF,
 			BROKEN,
-			LITERAL3,
+			UNKOWN,
 		};
 
 	/**
@@ -189,7 +189,7 @@ public enum Status implements Enumerator {
 			case ON_VALUE: return ON;
 			case OFF_VALUE: return OFF;
 			case BROKEN_VALUE: return BROKEN;
-			case LITERAL3_VALUE: return LITERAL3;
+			case UNKOWN_VALUE: return UNKOWN;
 		}
 		return null;
 	}

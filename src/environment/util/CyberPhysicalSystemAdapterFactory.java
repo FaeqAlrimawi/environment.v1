@@ -12,6 +12,7 @@ import environment.BusNetwork;
 import environment.CCTV;
 import environment.CardReader;
 import environment.CoffeeMachine;
+import environment.Computer;
 import environment.ComputingDevice;
 import environment.Connection;
 import environment.Credential;
@@ -23,6 +24,7 @@ import environment.DigitalNetwork;
 import environment.DishWasher;
 import environment.Elevator;
 import environment.ElevatorsArea;
+import environment.EmbeddedComputer;
 import environment.Employee;
 import environment.EnvironmentDiagram;
 import environment.File;
@@ -36,6 +38,7 @@ import environment.Kitchen;
 import environment.Lab;
 import environment.Laptop;
 import environment.Lounge;
+import environment.MicroController;
 import environment.PhysicalAsset;
 import environment.PhysicalConnection;
 import environment.PhysicalStructure;
@@ -300,6 +303,18 @@ public class CyberPhysicalSystemAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseVisitor(Visitor object) {
 				return createVisitorAdapter();
+			}
+			@Override
+			public Adapter caseComputer(Computer object) {
+				return createComputerAdapter();
+			}
+			@Override
+			public Adapter caseEmbeddedComputer(EmbeddedComputer object) {
+				return createEmbeddedComputerAdapter();
+			}
+			@Override
+			public Adapter caseMicroController(MicroController object) {
+				return createMicroControllerAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -976,6 +991,48 @@ public class CyberPhysicalSystemAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createVisitorAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link environment.Computer <em>Computer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see environment.Computer
+	 * @generated
+	 */
+	public Adapter createComputerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link environment.EmbeddedComputer <em>Embedded Computer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see environment.EmbeddedComputer
+	 * @generated
+	 */
+	public Adapter createEmbeddedComputerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link environment.MicroController <em>Micro Controller</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see environment.MicroController
+	 * @generated
+	 */
+	public Adapter createMicroControllerAdapter() {
 		return null;
 	}
 

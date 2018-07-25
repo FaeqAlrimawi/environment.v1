@@ -9,7 +9,7 @@ package environment;
  * <!-- end-user-doc -->
  *
  *
- * @see environment.cpsPackage#getCoffeeMachine()
+ * @see environment.CyberPhysicalSystemPackage#getCoffeeMachine()
  * @model
  * @generated
  */

@@ -427,6 +427,33 @@ public interface CyberPhysicalSystemFactory extends EFactory {
 	Visitor createVisitor();
 
 	/**
+	 * Returns a new object of class '<em>Computer</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Computer</em>'.
+	 * @generated
+	 */
+	Computer createComputer();
+
+	/**
+	 * Returns a new object of class '<em>Embedded Computer</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Embedded Computer</em>'.
+	 * @generated
+	 */
+	EmbeddedComputer createEmbeddedComputer();
+
+	/**
+	 * Returns a new object of class '<em>Micro Controller</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Micro Controller</em>'.
+	 * @generated
+	 */
+	MicroController createMicroController();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

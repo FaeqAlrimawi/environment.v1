@@ -9,7 +9,7 @@ package environment;
  * <!-- end-user-doc -->
  *
  *
- * @see environment.cpsPackage#getSmartLight()
+ * @see environment.CyberPhysicalSystemPackage#getSmartLight()
  * @model
  * @generated
  */

@@ -16,14 +16,14 @@ package environment;
  *   <li>{@link environment.Application#getUrl <em>Url</em>}</li>
  * </ul>
  *
- * @see environment.cpsPackage#getApplication()
+ * @see environment.CyberPhysicalSystemPackage#getApplication()
  * @model
  * @generated
  */
 public interface Application extends DigitalAsset {
 	/**
 	 * Returns the value of the '<em><b>Status</b></em>' attribute.
-	 * The literals are from the enumeration {@link environment.ProcessStatus}.
+	 * The literals are from the enumeration {@link environment.DigitalStatus}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Status</em>' attribute isn't clear,
@@ -31,24 +31,24 @@ public interface Application extends DigitalAsset {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Status</em>' attribute.
-	 * @see environment.ProcessStatus
-	 * @see #setStatus(ProcessStatus)
-	 * @see environment.cpsPackage#getApplication_Status()
+	 * @see environment.DigitalStatus
+	 * @see #setStatus(DigitalStatus)
+	 * @see environment.CyberPhysicalSystemPackage#getApplication_Status()
 	 * @model
 	 * @generated
 	 */
-	ProcessStatus getStatus();
+	DigitalStatus getStatus();
 
 	/**
 	 * Sets the value of the '{@link environment.Application#getStatus <em>Status</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Status</em>' attribute.
-	 * @see environment.ProcessStatus
+	 * @see environment.DigitalStatus
 	 * @see #getStatus()
 	 * @generated
 	 */
-	void setStatus(ProcessStatus value);
+	void setStatus(DigitalStatus value);
 
 	/**
 	 * Returns the value of the '<em><b>Url</b></em>' attribute.
@@ -60,7 +60,7 @@ public interface Application extends DigitalAsset {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Url</em>' attribute.
 	 * @see #setUrl(String)
-	 * @see environment.cpsPackage#getApplication_Url()
+	 * @see environment.CyberPhysicalSystemPackage#getApplication_Url()
 	 * @model
 	 * @generated
 	 */

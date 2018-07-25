@@ -9,7 +9,7 @@ package environment;
  * <!-- end-user-doc -->
  *
  *
- * @see environment.cpsPackage#getPhysicalConnection()
+ * @see environment.CyberPhysicalSystemPackage#getPhysicalConnection()
  * @model
  * @generated
  */

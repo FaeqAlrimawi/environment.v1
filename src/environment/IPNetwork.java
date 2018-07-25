@@ -9,7 +9,7 @@ package environment;
  * <!-- end-user-doc -->
  *
  *
- * @see environment.cpsPackage#getIPNetwork()
+ * @see environment.CyberPhysicalSystemPackage#getIPNetwork()
  * @model
  * @generated
  */

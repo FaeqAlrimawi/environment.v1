@@ -9,7 +9,7 @@ package environment;
  * <!-- end-user-doc -->
  *
  *
- * @see environment.cpsPackage#getToilet()
+ * @see environment.CyberPhysicalSystemPackage#getToilet()
  * @model
  * @generated
  */

@@ -11,11 +11,13 @@
       <genEnumLiterals ecoreEnumLiteral="environment.ecore#//Status/ON"/>
       <genEnumLiterals ecoreEnumLiteral="environment.ecore#//Status/OFF"/>
       <genEnumLiterals ecoreEnumLiteral="environment.ecore#//Status/BROKEN"/>
-      <genEnumLiterals ecoreEnumLiteral="environment.ecore#//Status/LITERAL3"/>
+      <genEnumLiterals ecoreEnumLiteral="environment.ecore#//Status/UNKOWN"/>
     </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="environment.ecore#//ProcessStatus">
-      <genEnumLiterals ecoreEnumLiteral="environment.ecore#//ProcessStatus/RUNNING"/>
-      <genEnumLiterals ecoreEnumLiteral="environment.ecore#//ProcessStatus/NOT_RUNNING"/>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="environment.ecore#//DigitalStatus">
+      <genEnumLiterals ecoreEnumLiteral="environment.ecore#//DigitalStatus/RUNNING"/>
+      <genEnumLiterals ecoreEnumLiteral="environment.ecore#//DigitalStatus/NOT_RUNNING"/>
+      <genEnumLiterals ecoreEnumLiteral="environment.ecore#//DigitalStatus/SUSPENDED"/>
+      <genEnumLiterals ecoreEnumLiteral="environment.ecore#//DigitalStatus/UNKNOWN"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="environment.ecore#//FileStatus">
       <genEnumLiterals ecoreEnumLiteral="environment.ecore#//FileStatus/OPEN"/>
@@ -162,5 +164,8 @@
     <genClasses ecoreClass="environment.ecore#//CardReader"/>
     <genClasses ecoreClass="environment.ecore#//Employee"/>
     <genClasses ecoreClass="environment.ecore#//Visitor"/>
+    <genClasses ecoreClass="environment.ecore#//Computer"/>
+    <genClasses ecoreClass="environment.ecore#//EmbeddedComputer"/>
+    <genClasses ecoreClass="environment.ecore#//MicroController"/>
   </genPackages>
 </genmodel:GenModel>

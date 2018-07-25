@@ -9,9 +9,9 @@ package environment;
  * <!-- end-user-doc -->
  *
  *
- * @see environment.cpsPackage#getServer()
+ * @see environment.CyberPhysicalSystemPackage#getServer()
  * @model
  * @generated
  */
-public interface Server extends ComputingDevice {
+public interface Server extends Computer {
 } // Server

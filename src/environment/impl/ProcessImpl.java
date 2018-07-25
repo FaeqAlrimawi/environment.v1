@@ -2,8 +2,8 @@
  */
 package environment.impl;
 
-import environment.ProcessStatus;
 import environment.CyberPhysicalSystemPackage;
+import environment.DigitalStatus;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -32,7 +32,7 @@ public class ProcessImpl extends DigitalAssetImpl implements environment.Process
 	 * @generated
 	 * @ordered
 	 */
-	protected static final ProcessStatus STATUS_EDEFAULT = ProcessStatus.RUNNING;
+	protected static final DigitalStatus STATUS_EDEFAULT = DigitalStatus.RUNNING;
 
 	/**
 	 * The cached value of the '{@link #getStatus() <em>Status</em>}' attribute.
@@ -42,7 +42,7 @@ public class ProcessImpl extends DigitalAssetImpl implements environment.Process
 	 * @generated
 	 * @ordered
 	 */
-	protected ProcessStatus status = STATUS_EDEFAULT;
+	protected DigitalStatus status = STATUS_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -68,7 +68,7 @@ public class ProcessImpl extends DigitalAssetImpl implements environment.Process
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ProcessStatus getStatus() {
+	public DigitalStatus getStatus() {
 		return status;
 	}
 
@@ -77,8 +77,8 @@ public class ProcessImpl extends DigitalAssetImpl implements environment.Process
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setStatus(ProcessStatus newStatus) {
-		ProcessStatus oldStatus = status;
+	public void setStatus(DigitalStatus newStatus) {
+		DigitalStatus oldStatus = status;
 		status = newStatus == null ? STATUS_EDEFAULT : newStatus;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, CyberPhysicalSystemPackage.PROCESS__STATUS, oldStatus, status));
@@ -107,7 +107,7 @@ public class ProcessImpl extends DigitalAssetImpl implements environment.Process
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case CyberPhysicalSystemPackage.PROCESS__STATUS:
-				setStatus((ProcessStatus)newValue);
+				setStatus((DigitalStatus)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

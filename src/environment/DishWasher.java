@@ -9,7 +9,7 @@ package environment;
  * <!-- end-user-doc -->
  *
  *
- * @see environment.cpsPackage#getDishWasher()
+ * @see environment.CyberPhysicalSystemPackage#getDishWasher()
  * @model
  * @generated
  */

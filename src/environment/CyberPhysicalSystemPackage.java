@@ -1027,6 +1027,214 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	int SMART_LIGHT_OPERATION_COUNT = COMPUTING_DEVICE_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link environment.impl.ComputerImpl <em>Computer</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see environment.impl.ComputerImpl
+	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getComputer()
+	 * @generated
+	 */
+	int COMPUTER = 47;
+
+	/**
+	 * The feature id for the '<em><b>Connections</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPUTER__CONNECTIONS = COMPUTING_DEVICE__CONNECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPUTER__NAME = COMPUTING_DEVICE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Property</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPUTER__PROPERTY = COMPUTING_DEVICE__PROPERTY;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPUTER__VALUE = COMPUTING_DEVICE__VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPUTER__TYPE = COMPUTING_DEVICE__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPUTER__DESCRIPTION = COMPUTING_DEVICE__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Control</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPUTER__CONTROL = COMPUTING_DEVICE__CONTROL;
+
+	/**
+	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPUTER__CONTAINED_ASSETS = COMPUTING_DEVICE__CONTAINED_ASSETS;
+
+	/**
+	 * The feature id for the '<em><b>Parent Asset</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPUTER__PARENT_ASSET = COMPUTING_DEVICE__PARENT_ASSET;
+
+	/**
+	 * The feature id for the '<em><b>Status</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPUTER__STATUS = COMPUTING_DEVICE__STATUS;
+
+	/**
+	 * The feature id for the '<em><b>Connectable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPUTER__CONNECTABLE = COMPUTING_DEVICE__CONNECTABLE;
+
+	/**
+	 * The feature id for the '<em><b>Model</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPUTER__MODEL = COMPUTING_DEVICE__MODEL;
+
+	/**
+	 * The number of structural features of the '<em>Computer</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPUTER_FEATURE_COUNT = COMPUTING_DEVICE_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Abstract Asset</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPUTER___ABSTRACT_ASSET = COMPUTING_DEVICE___ABSTRACT_ASSET;
+
+	/**
+	 * The operation id for the '<em>Similar To</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPUTER___SIMILAR_TO__ASSET = COMPUTING_DEVICE___SIMILAR_TO__ASSET;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPUTER___MERGE_CONNECTIONS = COMPUTING_DEVICE___MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPUTER___CAN_MERGE_CONNECTIONS = COMPUTING_DEVICE___CAN_MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPUTER___CAN_MERGE_CONTAINED_ASSETS = COMPUTING_DEVICE___CAN_MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPUTER___MERGE_CONTAINED_ASSETS = COMPUTING_DEVICE___MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPUTER___MERGE_CONNECTIONS__ELIST = COMPUTING_DEVICE___MERGE_CONNECTIONS__ELIST;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPUTER___CAN_MERGE_CONNECTIONS__ELIST = COMPUTING_DEVICE___CAN_MERGE_CONNECTIONS__ELIST;
+
+	/**
+	 * The number of operations of the '<em>Computer</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPUTER_OPERATION_COUNT = COMPUTING_DEVICE_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link environment.impl.LaptopImpl <em>Laptop</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1043,7 +1251,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LAPTOP__CONNECTIONS = COMPUTING_DEVICE__CONNECTIONS;
+	int LAPTOP__CONNECTIONS = COMPUTER__CONNECTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1052,7 +1260,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LAPTOP__NAME = COMPUTING_DEVICE__NAME;
+	int LAPTOP__NAME = COMPUTER__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Property</b></em>' containment reference list.
@@ -1061,7 +1269,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LAPTOP__PROPERTY = COMPUTING_DEVICE__PROPERTY;
+	int LAPTOP__PROPERTY = COMPUTER__PROPERTY;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1070,7 +1278,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LAPTOP__VALUE = COMPUTING_DEVICE__VALUE;
+	int LAPTOP__VALUE = COMPUTER__VALUE;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' containment reference.
@@ -1079,7 +1287,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LAPTOP__TYPE = COMPUTING_DEVICE__TYPE;
+	int LAPTOP__TYPE = COMPUTER__TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1088,7 +1296,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LAPTOP__DESCRIPTION = COMPUTING_DEVICE__DESCRIPTION;
+	int LAPTOP__DESCRIPTION = COMPUTER__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Control</b></em>' attribute.
@@ -1097,7 +1305,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LAPTOP__CONTROL = COMPUTING_DEVICE__CONTROL;
+	int LAPTOP__CONTROL = COMPUTER__CONTROL;
 
 	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
@@ -1106,7 +1314,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LAPTOP__CONTAINED_ASSETS = COMPUTING_DEVICE__CONTAINED_ASSETS;
+	int LAPTOP__CONTAINED_ASSETS = COMPUTER__CONTAINED_ASSETS;
 
 	/**
 	 * The feature id for the '<em><b>Parent Asset</b></em>' reference.
@@ -1115,7 +1323,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LAPTOP__PARENT_ASSET = COMPUTING_DEVICE__PARENT_ASSET;
+	int LAPTOP__PARENT_ASSET = COMPUTER__PARENT_ASSET;
 
 	/**
 	 * The feature id for the '<em><b>Status</b></em>' attribute.
@@ -1124,7 +1332,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LAPTOP__STATUS = COMPUTING_DEVICE__STATUS;
+	int LAPTOP__STATUS = COMPUTER__STATUS;
 
 	/**
 	 * The feature id for the '<em><b>Connectable</b></em>' attribute.
@@ -1133,7 +1341,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LAPTOP__CONNECTABLE = COMPUTING_DEVICE__CONNECTABLE;
+	int LAPTOP__CONNECTABLE = COMPUTER__CONNECTABLE;
 
 	/**
 	 * The feature id for the '<em><b>Model</b></em>' attribute.
@@ -1142,7 +1350,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LAPTOP__MODEL = COMPUTING_DEVICE__MODEL;
+	int LAPTOP__MODEL = COMPUTER__MODEL;
 
 	/**
 	 * The number of structural features of the '<em>Laptop</em>' class.
@@ -1151,7 +1359,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LAPTOP_FEATURE_COUNT = COMPUTING_DEVICE_FEATURE_COUNT + 0;
+	int LAPTOP_FEATURE_COUNT = COMPUTER_FEATURE_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Abstract Asset</em>' operation.
@@ -1160,7 +1368,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LAPTOP___ABSTRACT_ASSET = COMPUTING_DEVICE___ABSTRACT_ASSET;
+	int LAPTOP___ABSTRACT_ASSET = COMPUTER___ABSTRACT_ASSET;
 
 	/**
 	 * The operation id for the '<em>Similar To</em>' operation.
@@ -1169,7 +1377,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LAPTOP___SIMILAR_TO__ASSET = COMPUTING_DEVICE___SIMILAR_TO__ASSET;
+	int LAPTOP___SIMILAR_TO__ASSET = COMPUTER___SIMILAR_TO__ASSET;
 
 	/**
 	 * The operation id for the '<em>Merge Connections</em>' operation.
@@ -1178,7 +1386,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LAPTOP___MERGE_CONNECTIONS = COMPUTING_DEVICE___MERGE_CONNECTIONS;
+	int LAPTOP___MERGE_CONNECTIONS = COMPUTER___MERGE_CONNECTIONS;
 
 	/**
 	 * The operation id for the '<em>Can Merge Connections</em>' operation.
@@ -1187,7 +1395,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LAPTOP___CAN_MERGE_CONNECTIONS = COMPUTING_DEVICE___CAN_MERGE_CONNECTIONS;
+	int LAPTOP___CAN_MERGE_CONNECTIONS = COMPUTER___CAN_MERGE_CONNECTIONS;
 
 	/**
 	 * The operation id for the '<em>Can Merge Contained Assets</em>' operation.
@@ -1196,7 +1404,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LAPTOP___CAN_MERGE_CONTAINED_ASSETS = COMPUTING_DEVICE___CAN_MERGE_CONTAINED_ASSETS;
+	int LAPTOP___CAN_MERGE_CONTAINED_ASSETS = COMPUTER___CAN_MERGE_CONTAINED_ASSETS;
 
 	/**
 	 * The operation id for the '<em>Merge Contained Assets</em>' operation.
@@ -1205,7 +1413,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LAPTOP___MERGE_CONTAINED_ASSETS = COMPUTING_DEVICE___MERGE_CONTAINED_ASSETS;
+	int LAPTOP___MERGE_CONTAINED_ASSETS = COMPUTER___MERGE_CONTAINED_ASSETS;
 
 	/**
 	 * The operation id for the '<em>Merge Connections</em>' operation.
@@ -1214,7 +1422,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LAPTOP___MERGE_CONNECTIONS__ELIST = COMPUTING_DEVICE___MERGE_CONNECTIONS__ELIST;
+	int LAPTOP___MERGE_CONNECTIONS__ELIST = COMPUTER___MERGE_CONNECTIONS__ELIST;
 
 	/**
 	 * The operation id for the '<em>Can Merge Connections</em>' operation.
@@ -1223,7 +1431,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LAPTOP___CAN_MERGE_CONNECTIONS__ELIST = COMPUTING_DEVICE___CAN_MERGE_CONNECTIONS__ELIST;
+	int LAPTOP___CAN_MERGE_CONNECTIONS__ELIST = COMPUTER___CAN_MERGE_CONNECTIONS__ELIST;
 
 	/**
 	 * The number of operations of the '<em>Laptop</em>' class.
@@ -1232,7 +1440,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LAPTOP_OPERATION_COUNT = COMPUTING_DEVICE_OPERATION_COUNT + 0;
+	int LAPTOP_OPERATION_COUNT = COMPUTER_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link environment.impl.DesktopImpl <em>Desktop</em>}' class.
@@ -1251,7 +1459,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DESKTOP__CONNECTIONS = COMPUTING_DEVICE__CONNECTIONS;
+	int DESKTOP__CONNECTIONS = COMPUTER__CONNECTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1260,7 +1468,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DESKTOP__NAME = COMPUTING_DEVICE__NAME;
+	int DESKTOP__NAME = COMPUTER__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Property</b></em>' containment reference list.
@@ -1269,7 +1477,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DESKTOP__PROPERTY = COMPUTING_DEVICE__PROPERTY;
+	int DESKTOP__PROPERTY = COMPUTER__PROPERTY;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1278,7 +1486,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DESKTOP__VALUE = COMPUTING_DEVICE__VALUE;
+	int DESKTOP__VALUE = COMPUTER__VALUE;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' containment reference.
@@ -1287,7 +1495,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DESKTOP__TYPE = COMPUTING_DEVICE__TYPE;
+	int DESKTOP__TYPE = COMPUTER__TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1296,7 +1504,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DESKTOP__DESCRIPTION = COMPUTING_DEVICE__DESCRIPTION;
+	int DESKTOP__DESCRIPTION = COMPUTER__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Control</b></em>' attribute.
@@ -1305,7 +1513,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DESKTOP__CONTROL = COMPUTING_DEVICE__CONTROL;
+	int DESKTOP__CONTROL = COMPUTER__CONTROL;
 
 	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
@@ -1314,7 +1522,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DESKTOP__CONTAINED_ASSETS = COMPUTING_DEVICE__CONTAINED_ASSETS;
+	int DESKTOP__CONTAINED_ASSETS = COMPUTER__CONTAINED_ASSETS;
 
 	/**
 	 * The feature id for the '<em><b>Parent Asset</b></em>' reference.
@@ -1323,7 +1531,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DESKTOP__PARENT_ASSET = COMPUTING_DEVICE__PARENT_ASSET;
+	int DESKTOP__PARENT_ASSET = COMPUTER__PARENT_ASSET;
 
 	/**
 	 * The feature id for the '<em><b>Status</b></em>' attribute.
@@ -1332,7 +1540,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DESKTOP__STATUS = COMPUTING_DEVICE__STATUS;
+	int DESKTOP__STATUS = COMPUTER__STATUS;
 
 	/**
 	 * The feature id for the '<em><b>Connectable</b></em>' attribute.
@@ -1341,7 +1549,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DESKTOP__CONNECTABLE = COMPUTING_DEVICE__CONNECTABLE;
+	int DESKTOP__CONNECTABLE = COMPUTER__CONNECTABLE;
 
 	/**
 	 * The feature id for the '<em><b>Model</b></em>' attribute.
@@ -1350,7 +1558,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DESKTOP__MODEL = COMPUTING_DEVICE__MODEL;
+	int DESKTOP__MODEL = COMPUTER__MODEL;
 
 	/**
 	 * The number of structural features of the '<em>Desktop</em>' class.
@@ -1359,7 +1567,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DESKTOP_FEATURE_COUNT = COMPUTING_DEVICE_FEATURE_COUNT + 0;
+	int DESKTOP_FEATURE_COUNT = COMPUTER_FEATURE_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Abstract Asset</em>' operation.
@@ -1368,7 +1576,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DESKTOP___ABSTRACT_ASSET = COMPUTING_DEVICE___ABSTRACT_ASSET;
+	int DESKTOP___ABSTRACT_ASSET = COMPUTER___ABSTRACT_ASSET;
 
 	/**
 	 * The operation id for the '<em>Similar To</em>' operation.
@@ -1377,7 +1585,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DESKTOP___SIMILAR_TO__ASSET = COMPUTING_DEVICE___SIMILAR_TO__ASSET;
+	int DESKTOP___SIMILAR_TO__ASSET = COMPUTER___SIMILAR_TO__ASSET;
 
 	/**
 	 * The operation id for the '<em>Merge Connections</em>' operation.
@@ -1386,7 +1594,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DESKTOP___MERGE_CONNECTIONS = COMPUTING_DEVICE___MERGE_CONNECTIONS;
+	int DESKTOP___MERGE_CONNECTIONS = COMPUTER___MERGE_CONNECTIONS;
 
 	/**
 	 * The operation id for the '<em>Can Merge Connections</em>' operation.
@@ -1395,7 +1603,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DESKTOP___CAN_MERGE_CONNECTIONS = COMPUTING_DEVICE___CAN_MERGE_CONNECTIONS;
+	int DESKTOP___CAN_MERGE_CONNECTIONS = COMPUTER___CAN_MERGE_CONNECTIONS;
 
 	/**
 	 * The operation id for the '<em>Can Merge Contained Assets</em>' operation.
@@ -1404,7 +1612,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DESKTOP___CAN_MERGE_CONTAINED_ASSETS = COMPUTING_DEVICE___CAN_MERGE_CONTAINED_ASSETS;
+	int DESKTOP___CAN_MERGE_CONTAINED_ASSETS = COMPUTER___CAN_MERGE_CONTAINED_ASSETS;
 
 	/**
 	 * The operation id for the '<em>Merge Contained Assets</em>' operation.
@@ -1413,7 +1621,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DESKTOP___MERGE_CONTAINED_ASSETS = COMPUTING_DEVICE___MERGE_CONTAINED_ASSETS;
+	int DESKTOP___MERGE_CONTAINED_ASSETS = COMPUTER___MERGE_CONTAINED_ASSETS;
 
 	/**
 	 * The operation id for the '<em>Merge Connections</em>' operation.
@@ -1422,7 +1630,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DESKTOP___MERGE_CONNECTIONS__ELIST = COMPUTING_DEVICE___MERGE_CONNECTIONS__ELIST;
+	int DESKTOP___MERGE_CONNECTIONS__ELIST = COMPUTER___MERGE_CONNECTIONS__ELIST;
 
 	/**
 	 * The operation id for the '<em>Can Merge Connections</em>' operation.
@@ -1431,7 +1639,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DESKTOP___CAN_MERGE_CONNECTIONS__ELIST = COMPUTING_DEVICE___CAN_MERGE_CONNECTIONS__ELIST;
+	int DESKTOP___CAN_MERGE_CONNECTIONS__ELIST = COMPUTER___CAN_MERGE_CONNECTIONS__ELIST;
 
 	/**
 	 * The number of operations of the '<em>Desktop</em>' class.
@@ -1440,7 +1648,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DESKTOP_OPERATION_COUNT = COMPUTING_DEVICE_OPERATION_COUNT + 0;
+	int DESKTOP_OPERATION_COUNT = COMPUTER_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link environment.impl.CCTVImpl <em>CCTV</em>}' class.
@@ -1667,7 +1875,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERVER__CONNECTIONS = COMPUTING_DEVICE__CONNECTIONS;
+	int SERVER__CONNECTIONS = COMPUTER__CONNECTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1676,7 +1884,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERVER__NAME = COMPUTING_DEVICE__NAME;
+	int SERVER__NAME = COMPUTER__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Property</b></em>' containment reference list.
@@ -1685,7 +1893,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERVER__PROPERTY = COMPUTING_DEVICE__PROPERTY;
+	int SERVER__PROPERTY = COMPUTER__PROPERTY;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1694,7 +1902,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERVER__VALUE = COMPUTING_DEVICE__VALUE;
+	int SERVER__VALUE = COMPUTER__VALUE;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' containment reference.
@@ -1703,7 +1911,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERVER__TYPE = COMPUTING_DEVICE__TYPE;
+	int SERVER__TYPE = COMPUTER__TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1712,7 +1920,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERVER__DESCRIPTION = COMPUTING_DEVICE__DESCRIPTION;
+	int SERVER__DESCRIPTION = COMPUTER__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Control</b></em>' attribute.
@@ -1721,7 +1929,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERVER__CONTROL = COMPUTING_DEVICE__CONTROL;
+	int SERVER__CONTROL = COMPUTER__CONTROL;
 
 	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
@@ -1730,7 +1938,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERVER__CONTAINED_ASSETS = COMPUTING_DEVICE__CONTAINED_ASSETS;
+	int SERVER__CONTAINED_ASSETS = COMPUTER__CONTAINED_ASSETS;
 
 	/**
 	 * The feature id for the '<em><b>Parent Asset</b></em>' reference.
@@ -1739,7 +1947,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERVER__PARENT_ASSET = COMPUTING_DEVICE__PARENT_ASSET;
+	int SERVER__PARENT_ASSET = COMPUTER__PARENT_ASSET;
 
 	/**
 	 * The feature id for the '<em><b>Status</b></em>' attribute.
@@ -1748,7 +1956,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERVER__STATUS = COMPUTING_DEVICE__STATUS;
+	int SERVER__STATUS = COMPUTER__STATUS;
 
 	/**
 	 * The feature id for the '<em><b>Connectable</b></em>' attribute.
@@ -1757,7 +1965,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERVER__CONNECTABLE = COMPUTING_DEVICE__CONNECTABLE;
+	int SERVER__CONNECTABLE = COMPUTER__CONNECTABLE;
 
 	/**
 	 * The feature id for the '<em><b>Model</b></em>' attribute.
@@ -1766,7 +1974,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERVER__MODEL = COMPUTING_DEVICE__MODEL;
+	int SERVER__MODEL = COMPUTER__MODEL;
 
 	/**
 	 * The number of structural features of the '<em>Server</em>' class.
@@ -1775,7 +1983,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERVER_FEATURE_COUNT = COMPUTING_DEVICE_FEATURE_COUNT + 0;
+	int SERVER_FEATURE_COUNT = COMPUTER_FEATURE_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Abstract Asset</em>' operation.
@@ -1784,7 +1992,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERVER___ABSTRACT_ASSET = COMPUTING_DEVICE___ABSTRACT_ASSET;
+	int SERVER___ABSTRACT_ASSET = COMPUTER___ABSTRACT_ASSET;
 
 	/**
 	 * The operation id for the '<em>Similar To</em>' operation.
@@ -1793,7 +2001,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERVER___SIMILAR_TO__ASSET = COMPUTING_DEVICE___SIMILAR_TO__ASSET;
+	int SERVER___SIMILAR_TO__ASSET = COMPUTER___SIMILAR_TO__ASSET;
 
 	/**
 	 * The operation id for the '<em>Merge Connections</em>' operation.
@@ -1802,7 +2010,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERVER___MERGE_CONNECTIONS = COMPUTING_DEVICE___MERGE_CONNECTIONS;
+	int SERVER___MERGE_CONNECTIONS = COMPUTER___MERGE_CONNECTIONS;
 
 	/**
 	 * The operation id for the '<em>Can Merge Connections</em>' operation.
@@ -1811,7 +2019,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERVER___CAN_MERGE_CONNECTIONS = COMPUTING_DEVICE___CAN_MERGE_CONNECTIONS;
+	int SERVER___CAN_MERGE_CONNECTIONS = COMPUTER___CAN_MERGE_CONNECTIONS;
 
 	/**
 	 * The operation id for the '<em>Can Merge Contained Assets</em>' operation.
@@ -1820,7 +2028,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERVER___CAN_MERGE_CONTAINED_ASSETS = COMPUTING_DEVICE___CAN_MERGE_CONTAINED_ASSETS;
+	int SERVER___CAN_MERGE_CONTAINED_ASSETS = COMPUTER___CAN_MERGE_CONTAINED_ASSETS;
 
 	/**
 	 * The operation id for the '<em>Merge Contained Assets</em>' operation.
@@ -1829,7 +2037,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERVER___MERGE_CONTAINED_ASSETS = COMPUTING_DEVICE___MERGE_CONTAINED_ASSETS;
+	int SERVER___MERGE_CONTAINED_ASSETS = COMPUTER___MERGE_CONTAINED_ASSETS;
 
 	/**
 	 * The operation id for the '<em>Merge Connections</em>' operation.
@@ -1838,7 +2046,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERVER___MERGE_CONNECTIONS__ELIST = COMPUTING_DEVICE___MERGE_CONNECTIONS__ELIST;
+	int SERVER___MERGE_CONNECTIONS__ELIST = COMPUTER___MERGE_CONNECTIONS__ELIST;
 
 	/**
 	 * The operation id for the '<em>Can Merge Connections</em>' operation.
@@ -1847,7 +2055,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERVER___CAN_MERGE_CONNECTIONS__ELIST = COMPUTING_DEVICE___CAN_MERGE_CONNECTIONS__ELIST;
+	int SERVER___CAN_MERGE_CONNECTIONS__ELIST = COMPUTER___CAN_MERGE_CONNECTIONS__ELIST;
 
 	/**
 	 * The number of operations of the '<em>Server</em>' class.
@@ -1856,7 +2064,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERVER_OPERATION_COUNT = COMPUTING_DEVICE_OPERATION_COUNT + 0;
+	int SERVER_OPERATION_COUNT = COMPUTER_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link environment.impl.DigitalAssetImpl <em>Digital Asset</em>}' class.
@@ -4486,7 +4694,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WORKSTATION__CONNECTIONS = COMPUTING_DEVICE__CONNECTIONS;
+	int WORKSTATION__CONNECTIONS = COMPUTER__CONNECTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4495,7 +4703,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WORKSTATION__NAME = COMPUTING_DEVICE__NAME;
+	int WORKSTATION__NAME = COMPUTER__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Property</b></em>' containment reference list.
@@ -4504,7 +4712,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WORKSTATION__PROPERTY = COMPUTING_DEVICE__PROPERTY;
+	int WORKSTATION__PROPERTY = COMPUTER__PROPERTY;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -4513,7 +4721,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WORKSTATION__VALUE = COMPUTING_DEVICE__VALUE;
+	int WORKSTATION__VALUE = COMPUTER__VALUE;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' containment reference.
@@ -4522,7 +4730,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WORKSTATION__TYPE = COMPUTING_DEVICE__TYPE;
+	int WORKSTATION__TYPE = COMPUTER__TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -4531,7 +4739,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WORKSTATION__DESCRIPTION = COMPUTING_DEVICE__DESCRIPTION;
+	int WORKSTATION__DESCRIPTION = COMPUTER__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Control</b></em>' attribute.
@@ -4540,7 +4748,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WORKSTATION__CONTROL = COMPUTING_DEVICE__CONTROL;
+	int WORKSTATION__CONTROL = COMPUTER__CONTROL;
 
 	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
@@ -4549,7 +4757,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WORKSTATION__CONTAINED_ASSETS = COMPUTING_DEVICE__CONTAINED_ASSETS;
+	int WORKSTATION__CONTAINED_ASSETS = COMPUTER__CONTAINED_ASSETS;
 
 	/**
 	 * The feature id for the '<em><b>Parent Asset</b></em>' reference.
@@ -4558,7 +4766,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WORKSTATION__PARENT_ASSET = COMPUTING_DEVICE__PARENT_ASSET;
+	int WORKSTATION__PARENT_ASSET = COMPUTER__PARENT_ASSET;
 
 	/**
 	 * The feature id for the '<em><b>Status</b></em>' attribute.
@@ -4567,7 +4775,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WORKSTATION__STATUS = COMPUTING_DEVICE__STATUS;
+	int WORKSTATION__STATUS = COMPUTER__STATUS;
 
 	/**
 	 * The feature id for the '<em><b>Connectable</b></em>' attribute.
@@ -4576,7 +4784,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WORKSTATION__CONNECTABLE = COMPUTING_DEVICE__CONNECTABLE;
+	int WORKSTATION__CONNECTABLE = COMPUTER__CONNECTABLE;
 
 	/**
 	 * The feature id for the '<em><b>Model</b></em>' attribute.
@@ -4585,7 +4793,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WORKSTATION__MODEL = COMPUTING_DEVICE__MODEL;
+	int WORKSTATION__MODEL = COMPUTER__MODEL;
 
 	/**
 	 * The number of structural features of the '<em>Workstation</em>' class.
@@ -4594,7 +4802,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WORKSTATION_FEATURE_COUNT = COMPUTING_DEVICE_FEATURE_COUNT + 0;
+	int WORKSTATION_FEATURE_COUNT = COMPUTER_FEATURE_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Abstract Asset</em>' operation.
@@ -4603,7 +4811,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WORKSTATION___ABSTRACT_ASSET = COMPUTING_DEVICE___ABSTRACT_ASSET;
+	int WORKSTATION___ABSTRACT_ASSET = COMPUTER___ABSTRACT_ASSET;
 
 	/**
 	 * The operation id for the '<em>Similar To</em>' operation.
@@ -4612,7 +4820,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WORKSTATION___SIMILAR_TO__ASSET = COMPUTING_DEVICE___SIMILAR_TO__ASSET;
+	int WORKSTATION___SIMILAR_TO__ASSET = COMPUTER___SIMILAR_TO__ASSET;
 
 	/**
 	 * The operation id for the '<em>Merge Connections</em>' operation.
@@ -4621,7 +4829,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WORKSTATION___MERGE_CONNECTIONS = COMPUTING_DEVICE___MERGE_CONNECTIONS;
+	int WORKSTATION___MERGE_CONNECTIONS = COMPUTER___MERGE_CONNECTIONS;
 
 	/**
 	 * The operation id for the '<em>Can Merge Connections</em>' operation.
@@ -4630,7 +4838,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WORKSTATION___CAN_MERGE_CONNECTIONS = COMPUTING_DEVICE___CAN_MERGE_CONNECTIONS;
+	int WORKSTATION___CAN_MERGE_CONNECTIONS = COMPUTER___CAN_MERGE_CONNECTIONS;
 
 	/**
 	 * The operation id for the '<em>Can Merge Contained Assets</em>' operation.
@@ -4639,7 +4847,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WORKSTATION___CAN_MERGE_CONTAINED_ASSETS = COMPUTING_DEVICE___CAN_MERGE_CONTAINED_ASSETS;
+	int WORKSTATION___CAN_MERGE_CONTAINED_ASSETS = COMPUTER___CAN_MERGE_CONTAINED_ASSETS;
 
 	/**
 	 * The operation id for the '<em>Merge Contained Assets</em>' operation.
@@ -4648,7 +4856,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WORKSTATION___MERGE_CONTAINED_ASSETS = COMPUTING_DEVICE___MERGE_CONTAINED_ASSETS;
+	int WORKSTATION___MERGE_CONTAINED_ASSETS = COMPUTER___MERGE_CONTAINED_ASSETS;
 
 	/**
 	 * The operation id for the '<em>Merge Connections</em>' operation.
@@ -4657,7 +4865,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WORKSTATION___MERGE_CONNECTIONS__ELIST = COMPUTING_DEVICE___MERGE_CONNECTIONS__ELIST;
+	int WORKSTATION___MERGE_CONNECTIONS__ELIST = COMPUTER___MERGE_CONNECTIONS__ELIST;
 
 	/**
 	 * The operation id for the '<em>Can Merge Connections</em>' operation.
@@ -4666,7 +4874,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WORKSTATION___CAN_MERGE_CONNECTIONS__ELIST = COMPUTING_DEVICE___CAN_MERGE_CONNECTIONS__ELIST;
+	int WORKSTATION___CAN_MERGE_CONNECTIONS__ELIST = COMPUTER___CAN_MERGE_CONNECTIONS__ELIST;
 
 	/**
 	 * The number of operations of the '<em>Workstation</em>' class.
@@ -4675,7 +4883,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WORKSTATION_OPERATION_COUNT = COMPUTING_DEVICE_OPERATION_COUNT + 0;
+	int WORKSTATION_OPERATION_COUNT = COMPUTER_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link environment.impl.LabImpl <em>Lab</em>}' class.
@@ -8008,6 +8216,422 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	int VISITOR_OPERATION_COUNT = ACTOR_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link environment.impl.EmbeddedComputerImpl <em>Embedded Computer</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see environment.impl.EmbeddedComputerImpl
+	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getEmbeddedComputer()
+	 * @generated
+	 */
+	int EMBEDDED_COMPUTER = 48;
+
+	/**
+	 * The feature id for the '<em><b>Connections</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMBEDDED_COMPUTER__CONNECTIONS = COMPUTER__CONNECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMBEDDED_COMPUTER__NAME = COMPUTER__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Property</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMBEDDED_COMPUTER__PROPERTY = COMPUTER__PROPERTY;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMBEDDED_COMPUTER__VALUE = COMPUTER__VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMBEDDED_COMPUTER__TYPE = COMPUTER__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMBEDDED_COMPUTER__DESCRIPTION = COMPUTER__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Control</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMBEDDED_COMPUTER__CONTROL = COMPUTER__CONTROL;
+
+	/**
+	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMBEDDED_COMPUTER__CONTAINED_ASSETS = COMPUTER__CONTAINED_ASSETS;
+
+	/**
+	 * The feature id for the '<em><b>Parent Asset</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMBEDDED_COMPUTER__PARENT_ASSET = COMPUTER__PARENT_ASSET;
+
+	/**
+	 * The feature id for the '<em><b>Status</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMBEDDED_COMPUTER__STATUS = COMPUTER__STATUS;
+
+	/**
+	 * The feature id for the '<em><b>Connectable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMBEDDED_COMPUTER__CONNECTABLE = COMPUTER__CONNECTABLE;
+
+	/**
+	 * The feature id for the '<em><b>Model</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMBEDDED_COMPUTER__MODEL = COMPUTER__MODEL;
+
+	/**
+	 * The number of structural features of the '<em>Embedded Computer</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMBEDDED_COMPUTER_FEATURE_COUNT = COMPUTER_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Abstract Asset</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMBEDDED_COMPUTER___ABSTRACT_ASSET = COMPUTER___ABSTRACT_ASSET;
+
+	/**
+	 * The operation id for the '<em>Similar To</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMBEDDED_COMPUTER___SIMILAR_TO__ASSET = COMPUTER___SIMILAR_TO__ASSET;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMBEDDED_COMPUTER___MERGE_CONNECTIONS = COMPUTER___MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMBEDDED_COMPUTER___CAN_MERGE_CONNECTIONS = COMPUTER___CAN_MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMBEDDED_COMPUTER___CAN_MERGE_CONTAINED_ASSETS = COMPUTER___CAN_MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMBEDDED_COMPUTER___MERGE_CONTAINED_ASSETS = COMPUTER___MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMBEDDED_COMPUTER___MERGE_CONNECTIONS__ELIST = COMPUTER___MERGE_CONNECTIONS__ELIST;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMBEDDED_COMPUTER___CAN_MERGE_CONNECTIONS__ELIST = COMPUTER___CAN_MERGE_CONNECTIONS__ELIST;
+
+	/**
+	 * The number of operations of the '<em>Embedded Computer</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMBEDDED_COMPUTER_OPERATION_COUNT = COMPUTER_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link environment.impl.MicroControllerImpl <em>Micro Controller</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see environment.impl.MicroControllerImpl
+	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getMicroController()
+	 * @generated
+	 */
+	int MICRO_CONTROLLER = 49;
+
+	/**
+	 * The feature id for the '<em><b>Connections</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MICRO_CONTROLLER__CONNECTIONS = EMBEDDED_COMPUTER__CONNECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MICRO_CONTROLLER__NAME = EMBEDDED_COMPUTER__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Property</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MICRO_CONTROLLER__PROPERTY = EMBEDDED_COMPUTER__PROPERTY;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MICRO_CONTROLLER__VALUE = EMBEDDED_COMPUTER__VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MICRO_CONTROLLER__TYPE = EMBEDDED_COMPUTER__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MICRO_CONTROLLER__DESCRIPTION = EMBEDDED_COMPUTER__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Control</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MICRO_CONTROLLER__CONTROL = EMBEDDED_COMPUTER__CONTROL;
+
+	/**
+	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MICRO_CONTROLLER__CONTAINED_ASSETS = EMBEDDED_COMPUTER__CONTAINED_ASSETS;
+
+	/**
+	 * The feature id for the '<em><b>Parent Asset</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MICRO_CONTROLLER__PARENT_ASSET = EMBEDDED_COMPUTER__PARENT_ASSET;
+
+	/**
+	 * The feature id for the '<em><b>Status</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MICRO_CONTROLLER__STATUS = EMBEDDED_COMPUTER__STATUS;
+
+	/**
+	 * The feature id for the '<em><b>Connectable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MICRO_CONTROLLER__CONNECTABLE = EMBEDDED_COMPUTER__CONNECTABLE;
+
+	/**
+	 * The feature id for the '<em><b>Model</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MICRO_CONTROLLER__MODEL = EMBEDDED_COMPUTER__MODEL;
+
+	/**
+	 * The number of structural features of the '<em>Micro Controller</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MICRO_CONTROLLER_FEATURE_COUNT = EMBEDDED_COMPUTER_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Abstract Asset</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MICRO_CONTROLLER___ABSTRACT_ASSET = EMBEDDED_COMPUTER___ABSTRACT_ASSET;
+
+	/**
+	 * The operation id for the '<em>Similar To</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MICRO_CONTROLLER___SIMILAR_TO__ASSET = EMBEDDED_COMPUTER___SIMILAR_TO__ASSET;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MICRO_CONTROLLER___MERGE_CONNECTIONS = EMBEDDED_COMPUTER___MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MICRO_CONTROLLER___CAN_MERGE_CONNECTIONS = EMBEDDED_COMPUTER___CAN_MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MICRO_CONTROLLER___CAN_MERGE_CONTAINED_ASSETS = EMBEDDED_COMPUTER___CAN_MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MICRO_CONTROLLER___MERGE_CONTAINED_ASSETS = EMBEDDED_COMPUTER___MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MICRO_CONTROLLER___MERGE_CONNECTIONS__ELIST = EMBEDDED_COMPUTER___MERGE_CONNECTIONS__ELIST;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MICRO_CONTROLLER___CAN_MERGE_CONNECTIONS__ELIST = EMBEDDED_COMPUTER___CAN_MERGE_CONNECTIONS__ELIST;
+
+	/**
+	 * The number of operations of the '<em>Micro Controller</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MICRO_CONTROLLER_OPERATION_COUNT = EMBEDDED_COMPUTER_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link environment.Status <em>Status</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8015,17 +8639,17 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getStatus()
 	 * @generated
 	 */
-	int STATUS = 47;
+	int STATUS = 50;
 
 	/**
-	 * The meta object id for the '{@link environment.ProcessStatus <em>Process Status</em>}' enum.
+	 * The meta object id for the '{@link environment.DigitalStatus <em>Digital Status</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see environment.ProcessStatus
-	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getProcessStatus()
+	 * @see environment.DigitalStatus
+	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getDigitalStatus()
 	 * @generated
 	 */
-	int PROCESS_STATUS = 48;
+	int DIGITAL_STATUS = 51;
 
 	/**
 	 * The meta object id for the '{@link environment.FileStatus <em>File Status</em>}' enum.
@@ -8035,7 +8659,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getFileStatus()
 	 * @generated
 	 */
-	int FILE_STATUS = 49;
+	int FILE_STATUS = 52;
 
 	/**
 	 * The meta object id for the '{@link environment.CredentialType <em>Credential Type</em>}' enum.
@@ -8045,7 +8669,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getCredentialType()
 	 * @generated
 	 */
-	int CREDENTIAL_TYPE = 50;
+	int CREDENTIAL_TYPE = 53;
 
 
 	/**
@@ -9192,6 +9816,36 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	EClass getVisitor();
 
 	/**
+	 * Returns the meta object for class '{@link environment.Computer <em>Computer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Computer</em>'.
+	 * @see environment.Computer
+	 * @generated
+	 */
+	EClass getComputer();
+
+	/**
+	 * Returns the meta object for class '{@link environment.EmbeddedComputer <em>Embedded Computer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Embedded Computer</em>'.
+	 * @see environment.EmbeddedComputer
+	 * @generated
+	 */
+	EClass getEmbeddedComputer();
+
+	/**
+	 * Returns the meta object for class '{@link environment.MicroController <em>Micro Controller</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Micro Controller</em>'.
+	 * @see environment.MicroController
+	 * @generated
+	 */
+	EClass getMicroController();
+
+	/**
 	 * Returns the meta object for enum '{@link environment.Status <em>Status</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9202,14 +9856,14 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	EEnum getStatus();
 
 	/**
-	 * Returns the meta object for enum '{@link environment.ProcessStatus <em>Process Status</em>}'.
+	 * Returns the meta object for enum '{@link environment.DigitalStatus <em>Digital Status</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>Process Status</em>'.
-	 * @see environment.ProcessStatus
+	 * @return the meta object for enum '<em>Digital Status</em>'.
+	 * @see environment.DigitalStatus
 	 * @generated
 	 */
-	EEnum getProcessStatus();
+	EEnum getDigitalStatus();
 
 	/**
 	 * Returns the meta object for enum '{@link environment.FileStatus <em>File Status</em>}'.
@@ -10221,6 +10875,36 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 		EClass VISITOR = eINSTANCE.getVisitor();
 
 		/**
+		 * The meta object literal for the '{@link environment.impl.ComputerImpl <em>Computer</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see environment.impl.ComputerImpl
+		 * @see environment.impl.CyberPhysicalSystemPackageImpl#getComputer()
+		 * @generated
+		 */
+		EClass COMPUTER = eINSTANCE.getComputer();
+
+		/**
+		 * The meta object literal for the '{@link environment.impl.EmbeddedComputerImpl <em>Embedded Computer</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see environment.impl.EmbeddedComputerImpl
+		 * @see environment.impl.CyberPhysicalSystemPackageImpl#getEmbeddedComputer()
+		 * @generated
+		 */
+		EClass EMBEDDED_COMPUTER = eINSTANCE.getEmbeddedComputer();
+
+		/**
+		 * The meta object literal for the '{@link environment.impl.MicroControllerImpl <em>Micro Controller</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see environment.impl.MicroControllerImpl
+		 * @see environment.impl.CyberPhysicalSystemPackageImpl#getMicroController()
+		 * @generated
+		 */
+		EClass MICRO_CONTROLLER = eINSTANCE.getMicroController();
+
+		/**
 		 * The meta object literal for the '{@link environment.Status <em>Status</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -10231,14 +10915,14 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 		EEnum STATUS = eINSTANCE.getStatus();
 
 		/**
-		 * The meta object literal for the '{@link environment.ProcessStatus <em>Process Status</em>}' enum.
+		 * The meta object literal for the '{@link environment.DigitalStatus <em>Digital Status</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see environment.ProcessStatus
-		 * @see environment.impl.CyberPhysicalSystemPackageImpl#getProcessStatus()
+		 * @see environment.DigitalStatus
+		 * @see environment.impl.CyberPhysicalSystemPackageImpl#getDigitalStatus()
 		 * @generated
 		 */
-		EEnum PROCESS_STATUS = eINSTANCE.getProcessStatus();
+		EEnum DIGITAL_STATUS = eINSTANCE.getDigitalStatus();
 
 		/**
 		 * The meta object literal for the '{@link environment.FileStatus <em>File Status</em>}' enum.

@@ -9,7 +9,7 @@ package environment;
  * <!-- end-user-doc -->
  *
  *
- * @see environment.cpsPackage#getHallway()
+ * @see environment.CyberPhysicalSystemPackage#getHallway()
  * @model
  * @generated
  */

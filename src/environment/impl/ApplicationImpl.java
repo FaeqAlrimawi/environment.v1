@@ -3,8 +3,8 @@
 package environment.impl;
 
 import environment.Application;
-import environment.ProcessStatus;
 import environment.CyberPhysicalSystemPackage;
+import environment.DigitalStatus;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -34,7 +34,7 @@ public class ApplicationImpl extends DigitalAssetImpl implements Application {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final ProcessStatus STATUS_EDEFAULT = ProcessStatus.RUNNING;
+	protected static final DigitalStatus STATUS_EDEFAULT = DigitalStatus.RUNNING;
 
 	/**
 	 * The cached value of the '{@link #getStatus() <em>Status</em>}' attribute.
@@ -44,7 +44,7 @@ public class ApplicationImpl extends DigitalAssetImpl implements Application {
 	 * @generated
 	 * @ordered
 	 */
-	protected ProcessStatus status = STATUS_EDEFAULT;
+	protected DigitalStatus status = STATUS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getUrl() <em>Url</em>}' attribute.
@@ -90,7 +90,7 @@ public class ApplicationImpl extends DigitalAssetImpl implements Application {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ProcessStatus getStatus() {
+	public DigitalStatus getStatus() {
 		return status;
 	}
 
@@ -99,8 +99,8 @@ public class ApplicationImpl extends DigitalAssetImpl implements Application {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setStatus(ProcessStatus newStatus) {
-		ProcessStatus oldStatus = status;
+	public void setStatus(DigitalStatus newStatus) {
+		DigitalStatus oldStatus = status;
 		status = newStatus == null ? STATUS_EDEFAULT : newStatus;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, CyberPhysicalSystemPackage.APPLICATION__STATUS, oldStatus, status));
@@ -152,7 +152,7 @@ public class ApplicationImpl extends DigitalAssetImpl implements Application {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case CyberPhysicalSystemPackage.APPLICATION__STATUS:
-				setStatus((ProcessStatus)newValue);
+				setStatus((DigitalStatus)newValue);
 				return;
 			case CyberPhysicalSystemPackage.APPLICATION__URL:
 				setUrl((String)newValue);

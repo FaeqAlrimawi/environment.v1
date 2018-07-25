@@ -10,14 +10,14 @@ import org.eclipse.emf.common.util.Enumerator;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the literals of the enumeration '<em><b>Process Status</b></em>',
+ * A representation of the literals of the enumeration '<em><b>Digital Status</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see environment.CyberPhysicalSystemPackage#getProcessStatus()
+ * @see environment.CyberPhysicalSystemPackage#getDigitalStatus()
  * @model
  * @generated
  */
-public enum ProcessStatus implements Enumerator {
+public enum DigitalStatus implements Enumerator {
 	/**
 	 * The '<em><b>RUNNING</b></em>' literal object.
 	 * <!-- begin-user-doc -->
@@ -36,7 +36,27 @@ public enum ProcessStatus implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	NOT_RUNNING(1, "NOT_RUNNING", "NOT_RUNNING");
+	NOT_RUNNING(1, "NOT_RUNNING", "NOT_RUNNING"),
+
+	/**
+	 * The '<em><b>SUSPENDED</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #SUSPENDED_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	SUSPENDED(2, "SUSPENDED", "SUSPENDED"),
+
+	/**
+	 * The '<em><b>UNKNOWN</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #UNKNOWN_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	UNKNOWN(3, "UNKNOWN", "UNKNOWN");
 
 	/**
 	 * The '<em><b>RUNNING</b></em>' literal value.
@@ -69,36 +89,68 @@ public enum ProcessStatus implements Enumerator {
 	public static final int NOT_RUNNING_VALUE = 1;
 
 	/**
-	 * An array of all the '<em><b>Process Status</b></em>' enumerators.
+	 * The '<em><b>SUSPENDED</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>SUSPENDED</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #SUSPENDED
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int SUSPENDED_VALUE = 2;
+
+	/**
+	 * The '<em><b>UNKNOWN</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>UNKNOWN</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #UNKNOWN
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int UNKNOWN_VALUE = 3;
+
+	/**
+	 * An array of all the '<em><b>Digital Status</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final ProcessStatus[] VALUES_ARRAY =
-		new ProcessStatus[] {
+	private static final DigitalStatus[] VALUES_ARRAY =
+		new DigitalStatus[] {
 			RUNNING,
 			NOT_RUNNING,
+			SUSPENDED,
+			UNKNOWN,
 		};
 
 	/**
-	 * A public read-only list of all the '<em><b>Process Status</b></em>' enumerators.
+	 * A public read-only list of all the '<em><b>Digital Status</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final List<ProcessStatus> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+	public static final List<DigitalStatus> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
 	/**
-	 * Returns the '<em><b>Process Status</b></em>' literal with the specified literal value.
+	 * Returns the '<em><b>Digital Status</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param literal the literal.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static ProcessStatus get(String literal) {
+	public static DigitalStatus get(String literal) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			ProcessStatus result = VALUES_ARRAY[i];
+			DigitalStatus result = VALUES_ARRAY[i];
 			if (result.toString().equals(literal)) {
 				return result;
 			}
@@ -107,16 +159,16 @@ public enum ProcessStatus implements Enumerator {
 	}
 
 	/**
-	 * Returns the '<em><b>Process Status</b></em>' literal with the specified name.
+	 * Returns the '<em><b>Digital Status</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param name the name.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static ProcessStatus getByName(String name) {
+	public static DigitalStatus getByName(String name) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			ProcessStatus result = VALUES_ARRAY[i];
+			DigitalStatus result = VALUES_ARRAY[i];
 			if (result.getName().equals(name)) {
 				return result;
 			}
@@ -125,17 +177,19 @@ public enum ProcessStatus implements Enumerator {
 	}
 
 	/**
-	 * Returns the '<em><b>Process Status</b></em>' literal with the specified integer value.
+	 * Returns the '<em><b>Digital Status</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the integer value.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static ProcessStatus get(int value) {
+	public static DigitalStatus get(int value) {
 		switch (value) {
 			case RUNNING_VALUE: return RUNNING;
 			case NOT_RUNNING_VALUE: return NOT_RUNNING;
+			case SUSPENDED_VALUE: return SUSPENDED;
+			case UNKNOWN_VALUE: return UNKNOWN;
 		}
 		return null;
 	}
@@ -167,7 +221,7 @@ public enum ProcessStatus implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private ProcessStatus(int value, String name, String literal) {
+	private DigitalStatus(int value, String name, String literal) {
 		this.value = value;
 		this.name = name;
 		this.literal = literal;
@@ -211,4 +265,4 @@ public enum ProcessStatus implements Enumerator {
 		return literal;
 	}
 	
-} //ProcessStatus
+} //DigitalStatus

@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class ServerImpl extends ComputingDeviceImpl implements Server {
+public class ServerImpl extends ComputerImpl implements Server {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

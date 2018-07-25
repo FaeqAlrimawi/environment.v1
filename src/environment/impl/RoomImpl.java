@@ -2,7 +2,6 @@
  */
 package environment.impl;
 
-import environment.Asset;
 import environment.Room;
 import environment.CyberPhysicalSystemPackage;
 import org.eclipse.emf.ecore.EClass;

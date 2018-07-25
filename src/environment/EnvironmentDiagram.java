@@ -2,6 +2,7 @@
  */
 package environment;
 
+import java.util.LinkedList;
 import java.util.List;
 
 import org.eclipse.emf.common.util.EList;
@@ -11,11 +12,13 @@ import environment.impl.ActorImpl;
 import environment.impl.ApplicationImpl;
 import environment.impl.BuildingImpl;
 import environment.impl.BusNetworkImpl;
+import environment.impl.ComputerImpl;
 import environment.impl.ComputingDeviceImpl;
 import environment.impl.DigitalAssetImpl;
 import environment.impl.DigitalNetworkImpl;
 import environment.impl.EmployeeImpl;
 import environment.impl.FileImpl;
+import environment.impl.FloorImpl;
 import environment.impl.HallwayImpl;
 import environment.impl.IPNetworkImpl;
 import environment.impl.PhysicalAssetImpl;
@@ -42,7 +45,7 @@ import environment.impl.VisitorImpl;
  *   <li>{@link environment.EnvironmentDiagram#getRule <em>Rule</em>}</li>
  * </ul>
  *
- * @see environment.cpsPackage#getEnvironmentDiagram()
+ * @see environment.CyberPhysicalSystemPackage#getEnvironmentDiagram()
  * @model
  * @generated
  */
@@ -50,20 +53,21 @@ public interface EnvironmentDiagram extends EObject {
 	
 	
 	//Level-0 is an Asset, which is an abstract (i.e. not instantiated)
+	
 	//Level 1. Most abstract. Includes Digital and Physical assets
-	final Class<?>[] LEVEL1_CLASSES = 
-		{PhysicalAssetImpl.class, DigitalAssetImpl.class};
+	Class<?> [] LEVEL1 = {PhysicalAssetImpl.class, DigitalAssetImpl.class};
 	
 	//Level 2
-	final Class<?>[] LEVEL2_CLASSES = 
+	Class<?>[] LEVEL2 = 
 		{PhysicalStructureImpl.class, ActorImpl.class, ComputingDeviceImpl.class, 
 				ApplicationImpl.class, ProcessImpl.class, FileImpl.class, DigitalNetworkImpl.class};
 	
 	//Level 3 classes. Least abstract
-	final Class<?>[] LEVEL3_CLASSES = 
-		{BuildingImpl.class, Floor.class, RoomImpl.class, HallwayImpl.class, 
+	Class<?>[] LEVEL3 = 
+		{BuildingImpl.class, FloorImpl.class, RoomImpl.class, HallwayImpl.class, 
 				StairsImpl.class, EmployeeImpl.class, VisitorImpl.class, BusNetworkImpl.class, 
-				IPNetworkImpl.class}; 
+				IPNetworkImpl.class, ComputerImpl.class}; 
+	
 	
 	List<String> getAssetNames();
 	/**
@@ -76,7 +80,7 @@ public interface EnvironmentDiagram extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Asset</em>' containment reference list.
-	 * @see environment.cpsPackage#getEnvironmentDiagram_Asset()
+	 * @see environment.CyberPhysicalSystemPackage#getEnvironmentDiagram_Asset()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -92,7 +96,7 @@ public interface EnvironmentDiagram extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Connection</em>' containment reference list.
-	 * @see environment.cpsPackage#getEnvironmentDiagram_Connection()
+	 * @see environment.CyberPhysicalSystemPackage#getEnvironmentDiagram_Connection()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -108,7 +112,7 @@ public interface EnvironmentDiagram extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Port</em>' containment reference list.
-	 * @see environment.cpsPackage#getEnvironmentDiagram_Port()
+	 * @see environment.CyberPhysicalSystemPackage#getEnvironmentDiagram_Port()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -124,7 +128,7 @@ public interface EnvironmentDiagram extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Property</em>' containment reference list.
-	 * @see environment.cpsPackage#getEnvironmentDiagram_Property()
+	 * @see environment.CyberPhysicalSystemPackage#getEnvironmentDiagram_Property()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -140,7 +144,7 @@ public interface EnvironmentDiagram extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Credential</em>' containment reference list.
-	 * @see environment.cpsPackage#getEnvironmentDiagram_Credential()
+	 * @see environment.CyberPhysicalSystemPackage#getEnvironmentDiagram_Credential()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -156,7 +160,7 @@ public interface EnvironmentDiagram extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Rule</em>' containment reference list.
-	 * @see environment.cpsPackage#getEnvironmentDiagram_Rule()
+	 * @see environment.CyberPhysicalSystemPackage#getEnvironmentDiagram_Rule()
 	 * @model containment="true"
 	 * @generated
 	 */

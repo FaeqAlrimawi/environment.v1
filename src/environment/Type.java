@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link environment.Type#getSuperType <em>Super Type</em>}</li>
  * </ul>
  *
- * @see environment.cpsPackage#getType()
+ * @see environment.CyberPhysicalSystemPackage#getType()
  * @model
  * @generated
  */
@@ -32,7 +32,7 @@ public interface Type extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see environment.cpsPackage#getType_Name()
+	 * @see environment.CyberPhysicalSystemPackage#getType_Name()
 	 * @model id="true"
 	 * @generated
 	 */
@@ -58,7 +58,7 @@ public interface Type extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Super Type</em>' containment reference.
 	 * @see #setSuperType(Type)
-	 * @see environment.cpsPackage#getType_SuperType()
+	 * @see environment.CyberPhysicalSystemPackage#getType_SuperType()
 	 * @model containment="true"
 	 * @generated
 	 */

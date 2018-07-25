@@ -9,7 +9,7 @@ package environment;
  * <!-- end-user-doc -->
  *
  *
- * @see environment.cpsPackage#getRoom()
+ * @see environment.CyberPhysicalSystemPackage#getRoom()
  * @model
  * @generated
  */

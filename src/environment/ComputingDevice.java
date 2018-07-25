@@ -17,7 +17,7 @@ package environment;
  *   <li>{@link environment.ComputingDevice#getModel <em>Model</em>}</li>
  * </ul>
  *
- * @see environment.cpsPackage#getComputingDevice()
+ * @see environment.CyberPhysicalSystemPackage#getComputingDevice()
  * @model
  * @generated
  */
@@ -34,7 +34,7 @@ public interface ComputingDevice extends PhysicalAsset {
 	 * @return the value of the '<em>Status</em>' attribute.
 	 * @see environment.Status
 	 * @see #setStatus(Status)
-	 * @see environment.cpsPackage#getComputingDevice_Status()
+	 * @see environment.CyberPhysicalSystemPackage#getComputingDevice_Status()
 	 * @model
 	 * @generated
 	 */
@@ -61,7 +61,7 @@ public interface ComputingDevice extends PhysicalAsset {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Connectable</em>' attribute.
 	 * @see #setConnectable(boolean)
-	 * @see environment.cpsPackage#getComputingDevice_Connectable()
+	 * @see environment.CyberPhysicalSystemPackage#getComputingDevice_Connectable()
 	 * @model
 	 * @generated
 	 */
@@ -88,7 +88,7 @@ public interface ComputingDevice extends PhysicalAsset {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Model</em>' attribute.
 	 * @see #setModel(String)
-	 * @see environment.cpsPackage#getComputingDevice_Model()
+	 * @see environment.CyberPhysicalSystemPackage#getComputingDevice_Model()
 	 * @model
 	 * @generated
 	 */

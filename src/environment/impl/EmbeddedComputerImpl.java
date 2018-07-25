@@ -2,24 +2,25 @@
  */
 package environment.impl;
 
-import environment.Laptop;
 import environment.CyberPhysicalSystemPackage;
+import environment.EmbeddedComputer;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Laptop</b></em>'.
+ * An implementation of the model object '<em><b>Embedded Computer</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class LaptopImpl extends ComputerImpl implements Laptop {
+public class EmbeddedComputerImpl extends ComputerImpl implements EmbeddedComputer {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected LaptopImpl() {
+	protected EmbeddedComputerImpl() {
 		super();
 	}
 
@@ -30,7 +31,7 @@ public class LaptopImpl extends ComputerImpl implements Laptop {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return CyberPhysicalSystemPackage.Literals.LAPTOP;
+		return CyberPhysicalSystemPackage.Literals.EMBEDDED_COMPUTER;
 	}
 
-} //LaptopImpl
+} //EmbeddedComputerImpl

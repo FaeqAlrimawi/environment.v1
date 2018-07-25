@@ -9,9 +9,9 @@ package environment;
  * <!-- end-user-doc -->
  *
  *
- * @see environment.cpsPackage#getDesktop()
+ * @see environment.CyberPhysicalSystemPackage#getDesktop()
  * @model
  * @generated
  */
-public interface Desktop extends ComputingDevice {
+public interface Desktop extends Computer {
 } // Desktop

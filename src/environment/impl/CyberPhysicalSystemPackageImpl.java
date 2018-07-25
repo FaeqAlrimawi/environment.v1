@@ -11,6 +11,7 @@ import environment.BusConnection;
 import environment.BusNetwork;
 import environment.CardReader;
 import environment.CoffeeMachine;
+import environment.Computer;
 import environment.ComputingDevice;
 import environment.Connection;
 import environment.Credential;
@@ -21,9 +22,11 @@ import environment.Desktop;
 import environment.DigitalAsset;
 import environment.DigitalConnection;
 import environment.DigitalNetwork;
+import environment.DigitalStatus;
 import environment.DishWasher;
 import environment.Elevator;
 import environment.ElevatorsArea;
+import environment.EmbeddedComputer;
 import environment.Employee;
 import environment.EnvironmentDiagram;
 import environment.File;
@@ -37,11 +40,11 @@ import environment.Kitchen;
 import environment.Lab;
 import environment.Laptop;
 import environment.Lounge;
+import environment.MicroController;
 import environment.PhysicalAsset;
 import environment.PhysicalConnection;
 import environment.PhysicalStructure;
 import environment.Port;
-import environment.ProcessStatus;
 import environment.Property;
 import environment.Room;
 import environment.Server;
@@ -403,6 +406,27 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass computerEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass embeddedComputerEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass microControllerEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum statusEEnum = null;
 
 	/**
@@ -410,7 +434,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EEnum processStatusEEnum = null;
+	private EEnum digitalStatusEEnum = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1473,6 +1497,33 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getComputer() {
+		return computerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getEmbeddedComputer() {
+		return embeddedComputerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMicroController() {
+		return microControllerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getStatus() {
 		return statusEEnum;
 	}
@@ -1482,8 +1533,8 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EEnum getProcessStatus() {
-		return processStatusEEnum;
+	public EEnum getDigitalStatus() {
+		return digitalStatusEEnum;
 	}
 
 	/**
@@ -1688,9 +1739,15 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 
 		visitorEClass = createEClass(VISITOR);
 
+		computerEClass = createEClass(COMPUTER);
+
+		embeddedComputerEClass = createEClass(EMBEDDED_COMPUTER);
+
+		microControllerEClass = createEClass(MICRO_CONTROLLER);
+
 		// Create enums
 		statusEEnum = createEEnum(STATUS);
-		processStatusEEnum = createEEnum(PROCESS_STATUS);
+		digitalStatusEEnum = createEEnum(DIGITAL_STATUS);
 		fileStatusEEnum = createEEnum(FILE_STATUS);
 		credentialTypeEEnum = createEEnum(CREDENTIAL_TYPE);
 	}
@@ -1727,10 +1784,10 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 		computingDeviceEClass.getESuperTypes().add(this.getPhysicalAsset());
 		hvacEClass.getESuperTypes().add(this.getComputingDevice());
 		smartLightEClass.getESuperTypes().add(this.getComputingDevice());
-		laptopEClass.getESuperTypes().add(this.getComputingDevice());
-		desktopEClass.getESuperTypes().add(this.getComputingDevice());
+		laptopEClass.getESuperTypes().add(this.getComputer());
+		desktopEClass.getESuperTypes().add(this.getComputer());
 		cctvEClass.getESuperTypes().add(this.getComputingDevice());
-		serverEClass.getESuperTypes().add(this.getComputingDevice());
+		serverEClass.getESuperTypes().add(this.getComputer());
 		fileEClass.getESuperTypes().add(this.getDigitalAsset());
 		processEClass.getESuperTypes().add(this.getDigitalAsset());
 		applicationEClass.getESuperTypes().add(this.getDigitalAsset());
@@ -1743,7 +1800,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 		floorEClass.getESuperTypes().add(this.getPhysicalStructure());
 		buildingEClass.getESuperTypes().add(this.getPhysicalStructure());
 		fireAlarmEClass.getESuperTypes().add(this.getComputingDevice());
-		workstationEClass.getESuperTypes().add(this.getComputingDevice());
+		workstationEClass.getESuperTypes().add(this.getComputer());
 		labEClass.getESuperTypes().add(this.getRoom());
 		toiletEClass.getESuperTypes().add(this.getRoom());
 		loungeEClass.getESuperTypes().add(this.getRoom());
@@ -1762,6 +1819,9 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 		cardReaderEClass.getESuperTypes().add(this.getComputingDevice());
 		employeeEClass.getESuperTypes().add(this.getActor());
 		visitorEClass.getESuperTypes().add(this.getActor());
+		computerEClass.getESuperTypes().add(this.getComputingDevice());
+		embeddedComputerEClass.getESuperTypes().add(this.getComputer());
+		microControllerEClass.getESuperTypes().add(this.getEmbeddedComputer());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(physicalAssetEClass, PhysicalAsset.class, "PhysicalAsset", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1790,10 +1850,10 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 		initEAttribute(getFile_Url(), ecorePackage.getEString(), "url", null, 0, 1, File.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(processEClass, environment.Process.class, "Process", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getProcess_Status(), this.getProcessStatus(), "status", null, 0, 1, environment.Process.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getProcess_Status(), this.getDigitalStatus(), "status", null, 0, 1, environment.Process.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(applicationEClass, Application.class, "Application", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getApplication_Status(), this.getProcessStatus(), "status", null, 0, 1, Application.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getApplication_Status(), this.getDigitalStatus(), "status", null, 0, 1, Application.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getApplication_Url(), ecorePackage.getEString(), "url", null, 0, 1, Application.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(connectionEClass, Connection.class, "Connection", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1933,16 +1993,24 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 
 		initEClass(visitorEClass, Visitor.class, "Visitor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
+		initEClass(computerEClass, Computer.class, "Computer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(embeddedComputerEClass, EmbeddedComputer.class, "EmbeddedComputer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(microControllerEClass, MicroController.class, "MicroController", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
 		// Initialize enums and add enum literals
 		initEEnum(statusEEnum, Status.class, "Status");
 		addEEnumLiteral(statusEEnum, Status.ON);
 		addEEnumLiteral(statusEEnum, Status.OFF);
 		addEEnumLiteral(statusEEnum, Status.BROKEN);
-		addEEnumLiteral(statusEEnum, Status.LITERAL3);
+		addEEnumLiteral(statusEEnum, Status.UNKOWN);
 
-		initEEnum(processStatusEEnum, ProcessStatus.class, "ProcessStatus");
-		addEEnumLiteral(processStatusEEnum, ProcessStatus.RUNNING);
-		addEEnumLiteral(processStatusEEnum, ProcessStatus.NOT_RUNNING);
+		initEEnum(digitalStatusEEnum, DigitalStatus.class, "DigitalStatus");
+		addEEnumLiteral(digitalStatusEEnum, DigitalStatus.RUNNING);
+		addEEnumLiteral(digitalStatusEEnum, DigitalStatus.NOT_RUNNING);
+		addEEnumLiteral(digitalStatusEEnum, DigitalStatus.SUSPENDED);
+		addEEnumLiteral(digitalStatusEEnum, DigitalStatus.UNKNOWN);
 
 		initEEnum(fileStatusEEnum, FileStatus.class, "FileStatus");
 		addEEnumLiteral(fileStatusEEnum, FileStatus.OPEN);

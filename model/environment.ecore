@@ -15,28 +15,30 @@
     <eLiterals name="ON"/>
     <eLiterals name="OFF" value="1"/>
     <eLiterals name="BROKEN" value="2"/>
-    <eLiterals name="LITERAL3" value="3"/>
+    <eLiterals name="UNKOWN" value="3"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="HVAC" eSuperTypes="#//ComputingDevice"/>
   <eClassifiers xsi:type="ecore:EClass" name="SmartLight" eSuperTypes="#//ComputingDevice"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Laptop" eSuperTypes="#//ComputingDevice"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Desktop" eSuperTypes="#//ComputingDevice"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Laptop" eSuperTypes="#//Computer"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Desktop" eSuperTypes="#//Computer"/>
   <eClassifiers xsi:type="ecore:EClass" name="CCTV" eSuperTypes="#//ComputingDevice"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Server" eSuperTypes="#//ComputingDevice"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Server" eSuperTypes="#//Computer"/>
   <eClassifiers xsi:type="ecore:EClass" name="File" eSuperTypes="#//DigitalAsset">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="status" eType="#//FileStatus"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="url" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Process" eSuperTypes="#//DigitalAsset">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="status" eType="#//ProcessStatus"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="status" eType="#//DigitalStatus"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Application" eSuperTypes="#//DigitalAsset">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="status" eType="#//ProcessStatus"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="status" eType="#//DigitalStatus"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="url" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="ProcessStatus">
+  <eClassifiers xsi:type="ecore:EEnum" name="DigitalStatus">
     <eLiterals name="RUNNING"/>
     <eLiterals name="NOT_RUNNING" value="1"/>
+    <eLiterals name="SUSPENDED" value="2"/>
+    <eLiterals name="UNKNOWN" value="3"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="FileStatus">
     <eLiterals name="OPEN"/>
@@ -151,7 +153,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="Floor" eSuperTypes="#//PhysicalStructure"/>
   <eClassifiers xsi:type="ecore:EClass" name="Building" eSuperTypes="#//PhysicalStructure"/>
   <eClassifiers xsi:type="ecore:EClass" name="FireAlarm" eSuperTypes="#//ComputingDevice"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Workstation" eSuperTypes="#//ComputingDevice"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Workstation" eSuperTypes="#//Computer"/>
   <eClassifiers xsi:type="ecore:EClass" name="Lab" eSuperTypes="#//Room"/>
   <eClassifiers xsi:type="ecore:EClass" name="Toilet" eSuperTypes="#//Room"/>
   <eClassifiers xsi:type="ecore:EClass" name="Lounge" eSuperTypes="#//Room"/>
@@ -180,4 +182,7 @@
     <eLiterals name="FINGERPRINT" value="3"/>
     <eLiterals name="OTHER" value="4"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Computer" eSuperTypes="#//ComputingDevice"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EmbeddedComputer" eSuperTypes="#//Computer"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MicroController" eSuperTypes="#//EmbeddedComputer"/>
 </ecore:EPackage>

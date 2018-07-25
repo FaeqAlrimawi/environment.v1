@@ -9,7 +9,7 @@ package environment;
  * <!-- end-user-doc -->
  *
  *
- * @see environment.cpsPackage#getLounge()
+ * @see environment.CyberPhysicalSystemPackage#getLounge()
  * @model
  * @generated
  */

@@ -10,6 +10,8 @@ import environment.EnvironmentDiagram;
 import environment.Port;
 import environment.Property;
 import environment.CyberPhysicalSystemPackage;
+
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
@@ -45,6 +47,10 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * @generated
  */
 public class EnvironmentDiagramImpl extends MinimalEObjectImpl.Container implements EnvironmentDiagram {
+	
+	
+	public static List<List<Class<?>>> levels = new LinkedList<List<Class<?>>>();
+
 	/**
 	 * The cached value of the '{@link #getAsset() <em>Asset</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -112,6 +118,18 @@ public class EnvironmentDiagramImpl extends MinimalEObjectImpl.Container impleme
 	 */
 	protected EnvironmentDiagramImpl() {
 		super();
+		
+		//sets the level precedency
+		
+		//level3
+		levels.add(Arrays.asList(EnvironmentDiagram.LEVEL3));
+		
+		//level2
+		levels.add(Arrays.asList(EnvironmentDiagram.LEVEL2));
+		
+		//level1
+		levels.add(Arrays.asList(EnvironmentDiagram.LEVEL1));
+		
 	}
 
 	public List<String> getAssetNames() {

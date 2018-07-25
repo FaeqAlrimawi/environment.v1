@@ -11,6 +11,7 @@ import environment.BusNetwork;
 import environment.CCTV;
 import environment.CardReader;
 import environment.CoffeeMachine;
+import environment.Computer;
 import environment.ComputingDevice;
 import environment.Credential;
 import environment.CredentialType;
@@ -20,9 +21,11 @@ import environment.Desktop;
 import environment.DigitalAsset;
 import environment.DigitalConnection;
 import environment.DigitalNetwork;
+import environment.DigitalStatus;
 import environment.DishWasher;
 import environment.Elevator;
 import environment.ElevatorsArea;
+import environment.EmbeddedComputer;
 import environment.Employee;
 import environment.EnvironmentDiagram;
 import environment.File;
@@ -37,11 +40,11 @@ import environment.Kitchen;
 import environment.Lab;
 import environment.Laptop;
 import environment.Lounge;
+import environment.MicroController;
 import environment.PhysicalAsset;
 import environment.PhysicalConnection;
 import environment.PhysicalStructure;
 import environment.Port;
-import environment.ProcessStatus;
 import environment.Property;
 import environment.Room;
 import environment.Server;
@@ -151,6 +154,9 @@ public class CyberPhysicalSystemFactoryImpl extends EFactoryImpl implements Cybe
 			case CyberPhysicalSystemPackage.CARD_READER: return createCardReader();
 			case CyberPhysicalSystemPackage.EMPLOYEE: return createEmployee();
 			case CyberPhysicalSystemPackage.VISITOR: return createVisitor();
+			case CyberPhysicalSystemPackage.COMPUTER: return createComputer();
+			case CyberPhysicalSystemPackage.EMBEDDED_COMPUTER: return createEmbeddedComputer();
+			case CyberPhysicalSystemPackage.MICRO_CONTROLLER: return createMicroController();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -166,8 +172,8 @@ public class CyberPhysicalSystemFactoryImpl extends EFactoryImpl implements Cybe
 		switch (eDataType.getClassifierID()) {
 			case CyberPhysicalSystemPackage.STATUS:
 				return createStatusFromString(eDataType, initialValue);
-			case CyberPhysicalSystemPackage.PROCESS_STATUS:
-				return createProcessStatusFromString(eDataType, initialValue);
+			case CyberPhysicalSystemPackage.DIGITAL_STATUS:
+				return createDigitalStatusFromString(eDataType, initialValue);
 			case CyberPhysicalSystemPackage.FILE_STATUS:
 				return createFileStatusFromString(eDataType, initialValue);
 			case CyberPhysicalSystemPackage.CREDENTIAL_TYPE:
@@ -187,8 +193,8 @@ public class CyberPhysicalSystemFactoryImpl extends EFactoryImpl implements Cybe
 		switch (eDataType.getClassifierID()) {
 			case CyberPhysicalSystemPackage.STATUS:
 				return convertStatusToString(eDataType, instanceValue);
-			case CyberPhysicalSystemPackage.PROCESS_STATUS:
-				return convertProcessStatusToString(eDataType, instanceValue);
+			case CyberPhysicalSystemPackage.DIGITAL_STATUS:
+				return convertDigitalStatusToString(eDataType, instanceValue);
 			case CyberPhysicalSystemPackage.FILE_STATUS:
 				return convertFileStatusToString(eDataType, instanceValue);
 			case CyberPhysicalSystemPackage.CREDENTIAL_TYPE:
@@ -653,6 +659,36 @@ public class CyberPhysicalSystemFactoryImpl extends EFactoryImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Computer createComputer() {
+		ComputerImpl computer = new ComputerImpl();
+		return computer;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EmbeddedComputer createEmbeddedComputer() {
+		EmbeddedComputerImpl embeddedComputer = new EmbeddedComputerImpl();
+		return embeddedComputer;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MicroController createMicroController() {
+		MicroControllerImpl microController = new MicroControllerImpl();
+		return microController;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Status createStatusFromString(EDataType eDataType, String initialValue) {
 		Status result = Status.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
@@ -673,8 +709,8 @@ public class CyberPhysicalSystemFactoryImpl extends EFactoryImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ProcessStatus createProcessStatusFromString(EDataType eDataType, String initialValue) {
-		ProcessStatus result = ProcessStatus.get(initialValue);
+	public DigitalStatus createDigitalStatusFromString(EDataType eDataType, String initialValue) {
+		DigitalStatus result = DigitalStatus.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
 		return result;
 	}
@@ -684,7 +720,7 @@ public class CyberPhysicalSystemFactoryImpl extends EFactoryImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertProcessStatusToString(EDataType eDataType, Object instanceValue) {
+	public String convertDigitalStatusToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

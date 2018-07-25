@@ -9,7 +9,7 @@ package environment;
  * <!-- end-user-doc -->
  *
  *
- * @see environment.cpsPackage#getStairs()
+ * @see environment.CyberPhysicalSystemPackage#getStairs()
  * @model
  * @generated
  */

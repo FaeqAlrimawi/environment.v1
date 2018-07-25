@@ -9,7 +9,7 @@ package environment;
  * <!-- end-user-doc -->
  *
  *
- * @see environment.cpsPackage#getEmployee()
+ * @see environment.CyberPhysicalSystemPackage#getEmployee()
  * @model
  * @generated
  */

@@ -9,7 +9,7 @@ package environment;
  * <!-- end-user-doc -->
  *
  *
- * @see environment.cpsPackage#getFireAlarm()
+ * @see environment.CyberPhysicalSystemPackage#getFireAlarm()
  * @model
  * @generated
  */

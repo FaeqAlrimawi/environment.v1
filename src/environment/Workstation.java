@@ -9,9 +9,9 @@ package environment;
  * <!-- end-user-doc -->
  *
  *
- * @see environment.cpsPackage#getWorkstation()
+ * @see environment.CyberPhysicalSystemPackage#getWorkstation()
  * @model
  * @generated
  */
-public interface Workstation extends ComputingDevice {
+public interface Workstation extends Computer {
 } // Workstation

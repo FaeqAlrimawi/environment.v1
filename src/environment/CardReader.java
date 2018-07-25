@@ -9,7 +9,7 @@ package environment;
  * <!-- end-user-doc -->
  *
  *
- * @see environment.cpsPackage#getCardReader()
+ * @see environment.CyberPhysicalSystemPackage#getCardReader()
  * @model
  * @generated
  */

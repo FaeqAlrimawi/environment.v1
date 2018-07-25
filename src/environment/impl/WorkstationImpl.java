@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class WorkstationImpl extends ComputingDeviceImpl implements Workstation {
+public class WorkstationImpl extends ComputerImpl implements Workstation {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
