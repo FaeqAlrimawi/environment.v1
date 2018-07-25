@@ -203,7 +203,7 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 		String currentName = getName();
 		
 		if(currentName == null || currentName.isEmpty()) {
-				String name = cName+ assetNumber++;
+				String name = this.getClass().getSimpleName().replace("Impl", "")+ assetNumber++;
 				char c[] = name.toCharArray();
 				c[0] = Character.toLowerCase(c[0]);
 				name = new String(c);
@@ -396,25 +396,22 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 		
 		
 		// 2-set attributes
-		// a-change name
-		abstractedAsset.setName(AssetImpl.assetName+AssetImpl.assetNumber++);// give a unique name
-		
-		if(AssetImpl.assetNumber >= AssetImpl.ASSET_NUMBER_LIMIT) {
-			AssetImpl.assetNumber = 0;
-		}
-		// b-set value...value represents how important the asset in the system.
+
+		// a-set value...value represents how important the asset in the system.
 		// the higher the more value it has
 		abstractedAsset.setValue(this.getValue());
 		
-		// c-type
+		// b-type
 		if(this.getType() != null) {
 			Type type = instance.createType();
 			type.setName(this.getType().getName());
 			abstractedAsset.setType(type);	
 		}
 		
-
-		//3-properties are added to the new abstracted asset only if they are abstractable i.e. isAbstractable is set to true
+		//c-control (remains the same)
+		abstractedAsset.setControl(this.getControl());
+		
+		//d-properties are added to the new abstracted asset only if they are abstractable i.e. isAbstractable is set to true
 		Property tmp;
 	
 		for (Property pro : this.getProperty()) {
@@ -573,7 +570,7 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 
 	}
 	
-	public Asset abstractType(String classType) {
+	/*public Asset abstractType(String classType) {
 		
 		Asset ast = null;
 		
@@ -601,7 +598,7 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 		}
 		
 		return ast;
-	}
+	}*/
 	
 	@Override
 	public double compareContainedAssets(Asset asset) {
@@ -930,10 +927,10 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 
 	public void abstractContainedAssets() {
 		
-		EList<Asset> thisAssets = getContainedAsset();
+		EList<Asset> thisAssets = (EList)this.getContainedAssets();
 		
 		//create a new list of assets that are abstracts of the contained assets
-		EList<Asset> abstractedAssets = new BasicEList<Asset>();
+		EList<Asset> abstractedAssets = new BasicEList< Asset>();
 		
 		for(Asset ast : thisAssets) {
 			Asset astAbstract = ast.abstractAsset();
@@ -953,23 +950,21 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 					((DigitalAsset)abstractedAsset).getContainedAssets().add((DigitalAsset)as);
 				}
 			}*/
+		abstractedAsset.getContainedAssets().clear();
+		abstractedAsset.getContainedAssets().addAll((EList) abstractedAssets);
 		
-		//add the new contained assets to the abstracted asset
-		abstractedAsset.getContainedAssets()
 			
 			//mergeContainedAssets();
 	}
 	
 	public void abstractConnections() {
-		
-		
-		
+
 		//mergeConnections();
 	}
 	
-	EList<Asset> getContainedAsset() {
+	public EList<? extends Asset> getContainedAssets() {
 		
-		EList<Asset> thisAssets = null;
+		/*EList<Asset> thisAssets = null;
 		EList<DigitalAsset> thisDigitalAssets = null;
 		
 		if(PhysicalAsset.class.isInstance(this)) {
@@ -989,8 +984,11 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 		if(thisAssets == null || thisAssets.size() == 0) {
 			return new BasicEList<Asset>();
 		}
+		*/
 		
-		return thisDigitalAssets;
+		//will never be called
+		
+		return new BasicEList();
 	}
 	/**
 	 * <!-- begin-user-doc -->

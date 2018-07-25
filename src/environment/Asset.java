@@ -108,14 +108,14 @@ public interface Asset extends EObject {
 	double compareParentAsset(Asset asset);
 	double compareConnections(Asset asset);
 	Asset abstractType();
-	Asset abstractType(String Classtype);
+//	Asset abstractType(String Classtype);
 	public Asset getAbstractedAsset();
 	public void setAbstractedAsset(Asset ast);
 	void abstractContainedAssets();
 	boolean isAbstracted();
 	void setAbstracted(boolean isAbstracted);
 	void abstractConnections();
-	EList<Asset> getContainedAssets();
+	EList<? extends Asset> getContainedAssets();
 	/**
 	 * Returns the value of the '<em><b>Property</b></em>' containment reference list.
 	 * The list contents are of type {@link environment.Property}.
