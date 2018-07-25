@@ -11,6 +11,8 @@ import environment.Port;
 import environment.Property;
 import environment.CyberPhysicalSystemPackage;
 import java.util.Collection;
+import java.util.LinkedList;
+import java.util.List;
 
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -112,6 +114,17 @@ public class EnvironmentDiagramImpl extends MinimalEObjectImpl.Container impleme
 		super();
 	}
 
+	public List<String> getAssetNames() {
+		
+		LinkedList<String> assetNames = new LinkedList<String>();
+		
+		for(Asset ast : getAsset()) {
+			assetNames.add(ast.getName());
+		}
+		
+		return assetNames;
+	}
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
