@@ -80,6 +80,9 @@ public class PhysicalAssetImpl extends AssetImpl implements PhysicalAsset {
 		if (containedAssets == null) {
 			containedAssets = new EObjectResolvingEList<Asset>(Asset.class, this, CyberPhysicalSystemPackage.PHYSICAL_ASSET__CONTAINED_ASSETS);
 		}
+		
+		removeDuplicates(containedAssets);
+		
 		return containedAssets;
 	}
 
@@ -158,7 +161,7 @@ public class PhysicalAssetImpl extends AssetImpl implements PhysicalAsset {
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case CyberPhysicalSystemPackage.PHYSICAL_ASSET__CONTAINED_ASSETS:
-				removeDuplicates(getContainedAssets());
+				//removeDuplicates(getContainedAssets());
 				return getContainedAssets();
 			case CyberPhysicalSystemPackage.PHYSICAL_ASSET__PARENT_ASSET:
 				if (resolve) return getParentAsset();

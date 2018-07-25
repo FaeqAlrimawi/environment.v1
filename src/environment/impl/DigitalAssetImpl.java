@@ -177,6 +177,9 @@ public class DigitalAssetImpl extends AssetImpl implements DigitalAsset {
 		if (containedAssets == null) {
 			containedAssets = new EObjectResolvingEList<DigitalAsset>(DigitalAsset.class, this, CyberPhysicalSystemPackage.DIGITAL_ASSET__CONTAINED_ASSETS);
 		}
+		
+		removeDuplicates(containedAssets);
+		
 		return containedAssets;
 	}
 
@@ -192,7 +195,7 @@ public class DigitalAssetImpl extends AssetImpl implements DigitalAsset {
 				if (resolve) return getParentAsset();
 				return basicGetParentAsset();
 			case CyberPhysicalSystemPackage.DIGITAL_ASSET__CONTAINED_ASSETS:
-				removeDuplicates(getContainedAssets());
+				//removeDuplicates(getContainedAssets());
 				return getContainedAssets();
 		}
 		return super.eGet(featureID, resolve, coreType);

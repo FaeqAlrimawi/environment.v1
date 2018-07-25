@@ -25,8 +25,6 @@ import environment.Connection;
 import environment.CyberPhysicalSystemFactory;
 import environment.CyberPhysicalSystemPackage;
 import environment.DigitalAsset;
-import environment.DigitalStatus;
-import environment.EnvironmentDiagram;
 import environment.PhysicalAsset;
 import environment.Property;
 import environment.Room;
@@ -927,7 +925,7 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 
 	public void abstractContainedAssets() {
 		
-		EList<Asset> thisAssets = (EList)this.getContainedAssets();
+		EList<? extends Asset> thisAssets = (EList)this.getContainedAssets();
 		
 		//create a new list of assets that are abstracts of the contained assets
 		EList<Asset> abstractedAssets = new BasicEList< Asset>();
