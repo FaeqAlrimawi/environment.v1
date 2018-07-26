@@ -63,7 +63,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//Type" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DigitalConnection" eSuperTypes="#//Connection">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="protocol" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="protocol" eType="#//Protocol"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PhysicalConnection" eSuperTypes="#//Connection"/>
   <eClassifiers xsi:type="ecore:EClass" name="Asset" abstract="true">
@@ -185,4 +185,17 @@
   <eClassifiers xsi:type="ecore:EClass" name="Computer" eSuperTypes="#//ComputingDevice"/>
   <eClassifiers xsi:type="ecore:EClass" name="EmbeddedComputer" eSuperTypes="#//Computer"/>
   <eClassifiers xsi:type="ecore:EClass" name="MicroController" eSuperTypes="#//EmbeddedComputer"/>
+  <eClassifiers xsi:type="ecore:EClass" name="WiredConnection" eSuperTypes="#//PhysicalConnection"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Ethernet" eSuperTypes="#//WiredConnection"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Walkway" eSuperTypes="#//PhysicalConnection"/>
+  <eClassifiers xsi:type="ecore:EClass" name="KNX" eSuperTypes="#//BusConnection"/>
+  <eClassifiers xsi:type="ecore:EClass" name="X10" eSuperTypes="#//BusConnection"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="Protocol">
+    <eLiterals name="IPv4"/>
+    <eLiterals name="IPv6" value="1"/>
+    <eLiterals name="ZIGBEE" value="2"/>
+    <eLiterals name="TCP" value="3"/>
+    <eLiterals name="UDP" value="4"/>
+    <eLiterals name="OTHER" value="5"/>
+  </eClassifiers>
 </ecore:EPackage>

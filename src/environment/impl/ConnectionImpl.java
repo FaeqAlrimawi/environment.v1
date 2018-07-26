@@ -7,7 +7,6 @@ import environment.Connection;
 import environment.Credential;
 import environment.CredentialType;
 import environment.DigitalConnection;
-import environment.EnvironmentDiagram;
 import environment.PhysicalConnection;
 import environment.Port;
 import environment.Property;

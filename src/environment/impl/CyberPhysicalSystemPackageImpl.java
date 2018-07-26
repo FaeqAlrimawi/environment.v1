@@ -29,6 +29,7 @@ import environment.ElevatorsArea;
 import environment.EmbeddedComputer;
 import environment.Employee;
 import environment.EnvironmentDiagram;
+import environment.Ethernet;
 import environment.File;
 import environment.FileStatus;
 import environment.FireAlarm;
@@ -46,6 +47,7 @@ import environment.PhysicalConnection;
 import environment.PhysicalStructure;
 import environment.Port;
 import environment.Property;
+import environment.Protocol;
 import environment.Room;
 import environment.Server;
 import environment.SmartLight;
@@ -54,6 +56,8 @@ import environment.Status;
 import environment.Toilet;
 import environment.Type;
 import environment.Visitor;
+import environment.Walkway;
+import environment.WiredConnection;
 import environment.Workstation;
 
 import org.eclipse.emf.ecore.EAttribute;
@@ -427,6 +431,41 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass wiredConnectionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass ethernetEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass walkwayEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass knxEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass x10EClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum statusEEnum = null;
 
 	/**
@@ -449,6 +488,13 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * @generated
 	 */
 	private EEnum credentialTypeEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum protocolEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -1524,6 +1570,51 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getWiredConnection() {
+		return wiredConnectionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getEthernet() {
+		return ethernetEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getWalkway() {
+		return walkwayEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getKNX() {
+		return knxEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getX10() {
+		return x10EClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getStatus() {
 		return statusEEnum;
 	}
@@ -1553,6 +1644,15 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 */
 	public EEnum getCredentialType() {
 		return credentialTypeEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getProtocol() {
+		return protocolEEnum;
 	}
 
 	/**
@@ -1745,11 +1845,22 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 
 		microControllerEClass = createEClass(MICRO_CONTROLLER);
 
+		wiredConnectionEClass = createEClass(WIRED_CONNECTION);
+
+		ethernetEClass = createEClass(ETHERNET);
+
+		walkwayEClass = createEClass(WALKWAY);
+
+		knxEClass = createEClass(KNX);
+
+		x10EClass = createEClass(X10);
+
 		// Create enums
 		statusEEnum = createEEnum(STATUS);
 		digitalStatusEEnum = createEEnum(DIGITAL_STATUS);
 		fileStatusEEnum = createEEnum(FILE_STATUS);
 		credentialTypeEEnum = createEEnum(CREDENTIAL_TYPE);
+		protocolEEnum = createEEnum(PROTOCOL);
 	}
 
 	/**
@@ -1822,6 +1933,11 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 		computerEClass.getESuperTypes().add(this.getComputingDevice());
 		embeddedComputerEClass.getESuperTypes().add(this.getComputer());
 		microControllerEClass.getESuperTypes().add(this.getEmbeddedComputer());
+		wiredConnectionEClass.getESuperTypes().add(this.getPhysicalConnection());
+		ethernetEClass.getESuperTypes().add(this.getWiredConnection());
+		walkwayEClass.getESuperTypes().add(this.getPhysicalConnection());
+		knxEClass.getESuperTypes().add(this.getBusConnection());
+		x10EClass.getESuperTypes().add(this.getBusConnection());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(physicalAssetEClass, PhysicalAsset.class, "PhysicalAsset", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1871,7 +1987,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 		addEParameter(op, this.getConnection(), "connection", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(digitalConnectionEClass, DigitalConnection.class, "DigitalConnection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getDigitalConnection_Protocol(), ecorePackage.getEString(), "protocol", null, 0, 1, DigitalConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDigitalConnection_Protocol(), this.getProtocol(), "protocol", null, 0, 1, DigitalConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(physicalConnectionEClass, PhysicalConnection.class, "PhysicalConnection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1999,6 +2115,16 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 
 		initEClass(microControllerEClass, MicroController.class, "MicroController", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
+		initEClass(wiredConnectionEClass, WiredConnection.class, "WiredConnection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(ethernetEClass, Ethernet.class, "Ethernet", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(walkwayEClass, Walkway.class, "Walkway", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(knxEClass, environment.KNX.class, "KNX", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(x10EClass, environment.X10.class, "X10", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
 		// Initialize enums and add enum literals
 		initEEnum(statusEEnum, Status.class, "Status");
 		addEEnumLiteral(statusEEnum, Status.ON);
@@ -2022,6 +2148,14 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 		addEEnumLiteral(credentialTypeEEnum, CredentialType.CARD);
 		addEEnumLiteral(credentialTypeEEnum, CredentialType.FINGERPRINT);
 		addEEnumLiteral(credentialTypeEEnum, CredentialType.OTHER);
+
+		initEEnum(protocolEEnum, Protocol.class, "Protocol");
+		addEEnumLiteral(protocolEEnum, Protocol.IPV4);
+		addEEnumLiteral(protocolEEnum, Protocol.IPV6);
+		addEEnumLiteral(protocolEEnum, Protocol.ZIGBEE);
+		addEEnumLiteral(protocolEEnum, Protocol.TCP);
+		addEEnumLiteral(protocolEEnum, Protocol.UDP);
+		addEEnumLiteral(protocolEEnum, Protocol.OTHER);
 
 		// Create resource
 		createResource(eNS_URI);

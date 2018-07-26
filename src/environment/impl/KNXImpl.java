@@ -2,25 +2,25 @@
  */
 package environment.impl;
 
-import environment.Computer;
 import environment.CyberPhysicalSystemPackage;
+import environment.KNX;
 
 import org.eclipse.emf.ecore.EClass;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Computer</b></em>'.
+ * An implementation of the model object '<em><b>KNX</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class ComputerImpl extends ComputingDeviceImpl implements Computer {
+public class KNXImpl extends BusConnectionImpl implements KNX {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ComputerImpl() {
+	protected KNXImpl() {
 		super();
 	}
 
@@ -31,7 +31,7 @@ public class ComputerImpl extends ComputingDeviceImpl implements Computer {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return CyberPhysicalSystemPackage.Literals.COMPUTER;
+		return CyberPhysicalSystemPackage.Literals.KNX;
 	}
 
-} //ComputerImpl
+} //KNXImpl

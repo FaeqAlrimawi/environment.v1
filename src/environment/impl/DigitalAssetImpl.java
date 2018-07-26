@@ -177,9 +177,6 @@ public class DigitalAssetImpl extends AssetImpl implements DigitalAsset {
 		if (containedAssets == null) {
 			containedAssets = new EObjectResolvingEList<DigitalAsset>(DigitalAsset.class, this, CyberPhysicalSystemPackage.DIGITAL_ASSET__CONTAINED_ASSETS);
 		}
-		
-		removeDuplicates(containedAssets);
-		
 		return containedAssets;
 	}
 

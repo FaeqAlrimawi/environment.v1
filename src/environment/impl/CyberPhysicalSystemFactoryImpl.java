@@ -28,6 +28,7 @@ import environment.ElevatorsArea;
 import environment.EmbeddedComputer;
 import environment.Employee;
 import environment.EnvironmentDiagram;
+import environment.Ethernet;
 import environment.File;
 import environment.FileStatus;
 import environment.FireAlarm;
@@ -36,6 +37,7 @@ import environment.HVAC;
 import environment.Hallway;
 import environment.IPConnection;
 import environment.IPNetwork;
+import environment.KNX;
 import environment.Kitchen;
 import environment.Lab;
 import environment.Laptop;
@@ -46,6 +48,7 @@ import environment.PhysicalConnection;
 import environment.PhysicalStructure;
 import environment.Port;
 import environment.Property;
+import environment.Protocol;
 import environment.Room;
 import environment.Server;
 import environment.SmartLight;
@@ -54,8 +57,11 @@ import environment.Status;
 import environment.Toilet;
 import environment.Type;
 import environment.Visitor;
+import environment.Walkway;
+import environment.WiredConnection;
 import environment.Workstation;
 
+import environment.X10;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
@@ -157,6 +163,11 @@ public class CyberPhysicalSystemFactoryImpl extends EFactoryImpl implements Cybe
 			case CyberPhysicalSystemPackage.COMPUTER: return createComputer();
 			case CyberPhysicalSystemPackage.EMBEDDED_COMPUTER: return createEmbeddedComputer();
 			case CyberPhysicalSystemPackage.MICRO_CONTROLLER: return createMicroController();
+			case CyberPhysicalSystemPackage.WIRED_CONNECTION: return createWiredConnection();
+			case CyberPhysicalSystemPackage.ETHERNET: return createEthernet();
+			case CyberPhysicalSystemPackage.WALKWAY: return createWalkway();
+			case CyberPhysicalSystemPackage.KNX: return createKNX();
+			case CyberPhysicalSystemPackage.X10: return createX10();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -178,6 +189,8 @@ public class CyberPhysicalSystemFactoryImpl extends EFactoryImpl implements Cybe
 				return createFileStatusFromString(eDataType, initialValue);
 			case CyberPhysicalSystemPackage.CREDENTIAL_TYPE:
 				return createCredentialTypeFromString(eDataType, initialValue);
+			case CyberPhysicalSystemPackage.PROTOCOL:
+				return createProtocolFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -199,6 +212,8 @@ public class CyberPhysicalSystemFactoryImpl extends EFactoryImpl implements Cybe
 				return convertFileStatusToString(eDataType, instanceValue);
 			case CyberPhysicalSystemPackage.CREDENTIAL_TYPE:
 				return convertCredentialTypeToString(eDataType, instanceValue);
+			case CyberPhysicalSystemPackage.PROTOCOL:
+				return convertProtocolToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -689,6 +704,56 @@ public class CyberPhysicalSystemFactoryImpl extends EFactoryImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public WiredConnection createWiredConnection() {
+		WiredConnectionImpl wiredConnection = new WiredConnectionImpl();
+		return wiredConnection;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Ethernet createEthernet() {
+		EthernetImpl ethernet = new EthernetImpl();
+		return ethernet;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Walkway createWalkway() {
+		WalkwayImpl walkway = new WalkwayImpl();
+		return walkway;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public KNX createKNX() {
+		KNXImpl knx = new KNXImpl();
+		return knx;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public X10 createX10() {
+		X10Impl x10 = new X10Impl();
+		return x10;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Status createStatusFromString(EDataType eDataType, String initialValue) {
 		Status result = Status.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
@@ -761,6 +826,26 @@ public class CyberPhysicalSystemFactoryImpl extends EFactoryImpl implements Cybe
 	 * @generated
 	 */
 	public String convertCredentialTypeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Protocol createProtocolFromString(EDataType eDataType, String initialValue) {
+		Protocol result = Protocol.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertProtocolToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

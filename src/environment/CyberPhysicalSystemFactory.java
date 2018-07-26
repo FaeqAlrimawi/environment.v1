@@ -454,6 +454,51 @@ public interface CyberPhysicalSystemFactory extends EFactory {
 	MicroController createMicroController();
 
 	/**
+	 * Returns a new object of class '<em>Wired Connection</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Wired Connection</em>'.
+	 * @generated
+	 */
+	WiredConnection createWiredConnection();
+
+	/**
+	 * Returns a new object of class '<em>Ethernet</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Ethernet</em>'.
+	 * @generated
+	 */
+	Ethernet createEthernet();
+
+	/**
+	 * Returns a new object of class '<em>Walkway</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Walkway</em>'.
+	 * @generated
+	 */
+	Walkway createWalkway();
+
+	/**
+	 * Returns a new object of class '<em>KNX</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>KNX</em>'.
+	 * @generated
+	 */
+	KNX createKNX();
+
+	/**
+	 * Returns a new object of class '<em>X10</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>X10</em>'.
+	 * @generated
+	 */
+	X10 createX10();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

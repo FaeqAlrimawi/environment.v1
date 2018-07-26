@@ -228,8 +228,6 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 		if (connections == null) {
 			connections = new EObjectResolvingEList<Connection>(Connection.class, this, CyberPhysicalSystemPackage.ASSET__CONNECTIONS);
 		}
-		
-		removeDuplicates(connections);
 		return connections;
 	}
 

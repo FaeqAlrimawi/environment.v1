@@ -8632,6 +8632,614 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	int MICRO_CONTROLLER_OPERATION_COUNT = EMBEDDED_COMPUTER_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link environment.impl.WiredConnectionImpl <em>Wired Connection</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see environment.impl.WiredConnectionImpl
+	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getWiredConnection()
+	 * @generated
+	 */
+	int WIRED_CONNECTION = 50;
+
+	/**
+	 * The feature id for the '<em><b>Asset1</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WIRED_CONNECTION__ASSET1 = PHYSICAL_CONNECTION__ASSET1;
+
+	/**
+	 * The feature id for the '<em><b>Asset2</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WIRED_CONNECTION__ASSET2 = PHYSICAL_CONNECTION__ASSET2;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WIRED_CONNECTION__NAME = PHYSICAL_CONNECTION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Constraints</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WIRED_CONNECTION__CONSTRAINTS = PHYSICAL_CONNECTION__CONSTRAINTS;
+
+	/**
+	 * The feature id for the '<em><b>Bidirectional</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WIRED_CONNECTION__BIDIRECTIONAL = PHYSICAL_CONNECTION__BIDIRECTIONAL;
+
+	/**
+	 * The feature id for the '<em><b>Port</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WIRED_CONNECTION__PORT = PHYSICAL_CONNECTION__PORT;
+
+	/**
+	 * The feature id for the '<em><b>Properties</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WIRED_CONNECTION__PROPERTIES = PHYSICAL_CONNECTION__PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WIRED_CONNECTION__DESCRIPTION = PHYSICAL_CONNECTION__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WIRED_CONNECTION__TYPE = PHYSICAL_CONNECTION__TYPE;
+
+	/**
+	 * The number of structural features of the '<em>Wired Connection</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WIRED_CONNECTION_FEATURE_COUNT = PHYSICAL_CONNECTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Similar To</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WIRED_CONNECTION___SIMILAR_TO__CONNECTION = PHYSICAL_CONNECTION___SIMILAR_TO__CONNECTION;
+
+	/**
+	 * The number of operations of the '<em>Wired Connection</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WIRED_CONNECTION_OPERATION_COUNT = PHYSICAL_CONNECTION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link environment.impl.EthernetImpl <em>Ethernet</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see environment.impl.EthernetImpl
+	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getEthernet()
+	 * @generated
+	 */
+	int ETHERNET = 51;
+
+	/**
+	 * The feature id for the '<em><b>Asset1</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETHERNET__ASSET1 = WIRED_CONNECTION__ASSET1;
+
+	/**
+	 * The feature id for the '<em><b>Asset2</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETHERNET__ASSET2 = WIRED_CONNECTION__ASSET2;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETHERNET__NAME = WIRED_CONNECTION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Constraints</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETHERNET__CONSTRAINTS = WIRED_CONNECTION__CONSTRAINTS;
+
+	/**
+	 * The feature id for the '<em><b>Bidirectional</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETHERNET__BIDIRECTIONAL = WIRED_CONNECTION__BIDIRECTIONAL;
+
+	/**
+	 * The feature id for the '<em><b>Port</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETHERNET__PORT = WIRED_CONNECTION__PORT;
+
+	/**
+	 * The feature id for the '<em><b>Properties</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETHERNET__PROPERTIES = WIRED_CONNECTION__PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETHERNET__DESCRIPTION = WIRED_CONNECTION__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETHERNET__TYPE = WIRED_CONNECTION__TYPE;
+
+	/**
+	 * The number of structural features of the '<em>Ethernet</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETHERNET_FEATURE_COUNT = WIRED_CONNECTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Similar To</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETHERNET___SIMILAR_TO__CONNECTION = WIRED_CONNECTION___SIMILAR_TO__CONNECTION;
+
+	/**
+	 * The number of operations of the '<em>Ethernet</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETHERNET_OPERATION_COUNT = WIRED_CONNECTION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link environment.impl.WalkwayImpl <em>Walkway</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see environment.impl.WalkwayImpl
+	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getWalkway()
+	 * @generated
+	 */
+	int WALKWAY = 52;
+
+	/**
+	 * The feature id for the '<em><b>Asset1</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WALKWAY__ASSET1 = PHYSICAL_CONNECTION__ASSET1;
+
+	/**
+	 * The feature id for the '<em><b>Asset2</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WALKWAY__ASSET2 = PHYSICAL_CONNECTION__ASSET2;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WALKWAY__NAME = PHYSICAL_CONNECTION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Constraints</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WALKWAY__CONSTRAINTS = PHYSICAL_CONNECTION__CONSTRAINTS;
+
+	/**
+	 * The feature id for the '<em><b>Bidirectional</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WALKWAY__BIDIRECTIONAL = PHYSICAL_CONNECTION__BIDIRECTIONAL;
+
+	/**
+	 * The feature id for the '<em><b>Port</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WALKWAY__PORT = PHYSICAL_CONNECTION__PORT;
+
+	/**
+	 * The feature id for the '<em><b>Properties</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WALKWAY__PROPERTIES = PHYSICAL_CONNECTION__PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WALKWAY__DESCRIPTION = PHYSICAL_CONNECTION__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WALKWAY__TYPE = PHYSICAL_CONNECTION__TYPE;
+
+	/**
+	 * The number of structural features of the '<em>Walkway</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WALKWAY_FEATURE_COUNT = PHYSICAL_CONNECTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Similar To</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WALKWAY___SIMILAR_TO__CONNECTION = PHYSICAL_CONNECTION___SIMILAR_TO__CONNECTION;
+
+	/**
+	 * The number of operations of the '<em>Walkway</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WALKWAY_OPERATION_COUNT = PHYSICAL_CONNECTION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link environment.impl.KNXImpl <em>KNX</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see environment.impl.KNXImpl
+	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getKNX()
+	 * @generated
+	 */
+	int KNX = 53;
+
+	/**
+	 * The feature id for the '<em><b>Asset1</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KNX__ASSET1 = BUS_CONNECTION__ASSET1;
+
+	/**
+	 * The feature id for the '<em><b>Asset2</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KNX__ASSET2 = BUS_CONNECTION__ASSET2;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KNX__NAME = BUS_CONNECTION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Constraints</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KNX__CONSTRAINTS = BUS_CONNECTION__CONSTRAINTS;
+
+	/**
+	 * The feature id for the '<em><b>Bidirectional</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KNX__BIDIRECTIONAL = BUS_CONNECTION__BIDIRECTIONAL;
+
+	/**
+	 * The feature id for the '<em><b>Port</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KNX__PORT = BUS_CONNECTION__PORT;
+
+	/**
+	 * The feature id for the '<em><b>Properties</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KNX__PROPERTIES = BUS_CONNECTION__PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KNX__DESCRIPTION = BUS_CONNECTION__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KNX__TYPE = BUS_CONNECTION__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Protocol</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KNX__PROTOCOL = BUS_CONNECTION__PROTOCOL;
+
+	/**
+	 * The number of structural features of the '<em>KNX</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KNX_FEATURE_COUNT = BUS_CONNECTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Similar To</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KNX___SIMILAR_TO__CONNECTION = BUS_CONNECTION___SIMILAR_TO__CONNECTION;
+
+	/**
+	 * The number of operations of the '<em>KNX</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KNX_OPERATION_COUNT = BUS_CONNECTION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link environment.impl.X10Impl <em>X10</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see environment.impl.X10Impl
+	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getX10()
+	 * @generated
+	 */
+	int X10 = 54;
+
+	/**
+	 * The feature id for the '<em><b>Asset1</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int X10__ASSET1 = BUS_CONNECTION__ASSET1;
+
+	/**
+	 * The feature id for the '<em><b>Asset2</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int X10__ASSET2 = BUS_CONNECTION__ASSET2;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int X10__NAME = BUS_CONNECTION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Constraints</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int X10__CONSTRAINTS = BUS_CONNECTION__CONSTRAINTS;
+
+	/**
+	 * The feature id for the '<em><b>Bidirectional</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int X10__BIDIRECTIONAL = BUS_CONNECTION__BIDIRECTIONAL;
+
+	/**
+	 * The feature id for the '<em><b>Port</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int X10__PORT = BUS_CONNECTION__PORT;
+
+	/**
+	 * The feature id for the '<em><b>Properties</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int X10__PROPERTIES = BUS_CONNECTION__PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int X10__DESCRIPTION = BUS_CONNECTION__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int X10__TYPE = BUS_CONNECTION__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Protocol</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int X10__PROTOCOL = BUS_CONNECTION__PROTOCOL;
+
+	/**
+	 * The number of structural features of the '<em>X10</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int X10_FEATURE_COUNT = BUS_CONNECTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Similar To</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int X10___SIMILAR_TO__CONNECTION = BUS_CONNECTION___SIMILAR_TO__CONNECTION;
+
+	/**
+	 * The number of operations of the '<em>X10</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int X10_OPERATION_COUNT = BUS_CONNECTION_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link environment.Status <em>Status</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8639,7 +9247,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getStatus()
 	 * @generated
 	 */
-	int STATUS = 50;
+	int STATUS = 55;
 
 	/**
 	 * The meta object id for the '{@link environment.DigitalStatus <em>Digital Status</em>}' enum.
@@ -8649,7 +9257,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getDigitalStatus()
 	 * @generated
 	 */
-	int DIGITAL_STATUS = 51;
+	int DIGITAL_STATUS = 56;
 
 	/**
 	 * The meta object id for the '{@link environment.FileStatus <em>File Status</em>}' enum.
@@ -8659,7 +9267,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getFileStatus()
 	 * @generated
 	 */
-	int FILE_STATUS = 52;
+	int FILE_STATUS = 57;
 
 	/**
 	 * The meta object id for the '{@link environment.CredentialType <em>Credential Type</em>}' enum.
@@ -8669,7 +9277,18 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getCredentialType()
 	 * @generated
 	 */
-	int CREDENTIAL_TYPE = 53;
+	int CREDENTIAL_TYPE = 58;
+
+
+	/**
+	 * The meta object id for the '{@link environment.Protocol <em>Protocol</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see environment.Protocol
+	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getProtocol()
+	 * @generated
+	 */
+	int PROTOCOL = 59;
 
 
 	/**
@@ -9846,6 +10465,56 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	EClass getMicroController();
 
 	/**
+	 * Returns the meta object for class '{@link environment.WiredConnection <em>Wired Connection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Wired Connection</em>'.
+	 * @see environment.WiredConnection
+	 * @generated
+	 */
+	EClass getWiredConnection();
+
+	/**
+	 * Returns the meta object for class '{@link environment.Ethernet <em>Ethernet</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Ethernet</em>'.
+	 * @see environment.Ethernet
+	 * @generated
+	 */
+	EClass getEthernet();
+
+	/**
+	 * Returns the meta object for class '{@link environment.Walkway <em>Walkway</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Walkway</em>'.
+	 * @see environment.Walkway
+	 * @generated
+	 */
+	EClass getWalkway();
+
+	/**
+	 * Returns the meta object for class '{@link environment.KNX <em>KNX</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>KNX</em>'.
+	 * @see environment.KNX
+	 * @generated
+	 */
+	EClass getKNX();
+
+	/**
+	 * Returns the meta object for class '{@link environment.X10 <em>X10</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>X10</em>'.
+	 * @see environment.X10
+	 * @generated
+	 */
+	EClass getX10();
+
+	/**
 	 * Returns the meta object for enum '{@link environment.Status <em>Status</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9884,6 +10553,16 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getCredentialType();
+
+	/**
+	 * Returns the meta object for enum '{@link environment.Protocol <em>Protocol</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Protocol</em>'.
+	 * @see environment.Protocol
+	 * @generated
+	 */
+	EEnum getProtocol();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -10905,6 +11584,56 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 		EClass MICRO_CONTROLLER = eINSTANCE.getMicroController();
 
 		/**
+		 * The meta object literal for the '{@link environment.impl.WiredConnectionImpl <em>Wired Connection</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see environment.impl.WiredConnectionImpl
+		 * @see environment.impl.CyberPhysicalSystemPackageImpl#getWiredConnection()
+		 * @generated
+		 */
+		EClass WIRED_CONNECTION = eINSTANCE.getWiredConnection();
+
+		/**
+		 * The meta object literal for the '{@link environment.impl.EthernetImpl <em>Ethernet</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see environment.impl.EthernetImpl
+		 * @see environment.impl.CyberPhysicalSystemPackageImpl#getEthernet()
+		 * @generated
+		 */
+		EClass ETHERNET = eINSTANCE.getEthernet();
+
+		/**
+		 * The meta object literal for the '{@link environment.impl.WalkwayImpl <em>Walkway</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see environment.impl.WalkwayImpl
+		 * @see environment.impl.CyberPhysicalSystemPackageImpl#getWalkway()
+		 * @generated
+		 */
+		EClass WALKWAY = eINSTANCE.getWalkway();
+
+		/**
+		 * The meta object literal for the '{@link environment.impl.KNXImpl <em>KNX</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see environment.impl.KNXImpl
+		 * @see environment.impl.CyberPhysicalSystemPackageImpl#getKNX()
+		 * @generated
+		 */
+		EClass KNX = eINSTANCE.getKNX();
+
+		/**
+		 * The meta object literal for the '{@link environment.impl.X10Impl <em>X10</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see environment.impl.X10Impl
+		 * @see environment.impl.CyberPhysicalSystemPackageImpl#getX10()
+		 * @generated
+		 */
+		EClass X10 = eINSTANCE.getX10();
+
+		/**
 		 * The meta object literal for the '{@link environment.Status <em>Status</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -10943,6 +11672,16 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum CREDENTIAL_TYPE = eINSTANCE.getCredentialType();
+
+		/**
+		 * The meta object literal for the '{@link environment.Protocol <em>Protocol</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see environment.Protocol
+		 * @see environment.impl.CyberPhysicalSystemPackageImpl#getProtocol()
+		 * @generated
+		 */
+		EEnum PROTOCOL = eINSTANCE.getProtocol();
 
 	}
 

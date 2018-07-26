@@ -10,11 +10,7 @@ import environment.EnvironmentDiagram;
 import environment.Port;
 import environment.Property;
 import environment.CyberPhysicalSystemPackage;
-
-import java.util.Arrays;
 import java.util.Collection;
-import java.util.Comparator;
-import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.TreeMap;
@@ -124,31 +120,6 @@ public class EnvironmentDiagramImpl extends MinimalEObjectImpl.Container impleme
 	 */
 	protected EnvironmentDiagramImpl() {
 		super();
-		
-		//used to sort keys (with values i.e. lists) in descending order (from highest, least abstract,
-		//to lowest, most abstract)
-		Comparator<Integer> greatestToLowest = new Comparator<Integer>() {
-
-			@Override
-			public int compare(Integer o1, Integer o2) {
-				return o2.compareTo(o1);
-			}
-		};
-		
-		abstractionLevels = new TreeMap<Integer, List<Class<?>>>(greatestToLowest);
-		
-		//level1
-//		levels.add(Arrays.asList(EnvironmentDiagram.LEVEL1_CLASSES));
-		abstractionLevels.put(1, Arrays.asList(EnvironmentDiagram.LEVEL1_CLASSES));
-		
-		//level2
-//		levels.add(Arrays.asList(EnvironmentDiagram.LEVEL2_CLASSES));
-		abstractionLevels.put(2, Arrays.asList(EnvironmentDiagram.LEVEL2_CLASSES));
-		
-		//level3
-//		levels.add(Arrays.asList(EnvironmentDiagram.LEVEL3_CLASSES));
-		abstractionLevels.put(3, Arrays.asList(EnvironmentDiagram.LEVEL3_CLASSES));
-
 	}
 
 	public List<String> getAssetNames() {

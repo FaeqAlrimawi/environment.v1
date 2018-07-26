@@ -27,6 +27,7 @@ import environment.ElevatorsArea;
 import environment.EmbeddedComputer;
 import environment.Employee;
 import environment.EnvironmentDiagram;
+import environment.Ethernet;
 import environment.File;
 import environment.FireAlarm;
 import environment.Floor;
@@ -34,6 +35,7 @@ import environment.HVAC;
 import environment.Hallway;
 import environment.IPConnection;
 import environment.IPNetwork;
+import environment.KNX;
 import environment.Kitchen;
 import environment.Lab;
 import environment.Laptop;
@@ -51,8 +53,11 @@ import environment.Stairs;
 import environment.Toilet;
 import environment.Type;
 import environment.Visitor;
+import environment.Walkway;
+import environment.WiredConnection;
 import environment.Workstation;
 
+import environment.X10;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -533,6 +538,49 @@ public class CyberPhysicalSystemSwitch<T> extends Switch<T> {
 				if (result == null) result = caseComputingDevice(microController);
 				if (result == null) result = casePhysicalAsset(microController);
 				if (result == null) result = caseAsset(microController);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CyberPhysicalSystemPackage.WIRED_CONNECTION: {
+				WiredConnection wiredConnection = (WiredConnection)theEObject;
+				T result = caseWiredConnection(wiredConnection);
+				if (result == null) result = casePhysicalConnection(wiredConnection);
+				if (result == null) result = caseConnection(wiredConnection);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CyberPhysicalSystemPackage.ETHERNET: {
+				Ethernet ethernet = (Ethernet)theEObject;
+				T result = caseEthernet(ethernet);
+				if (result == null) result = caseWiredConnection(ethernet);
+				if (result == null) result = casePhysicalConnection(ethernet);
+				if (result == null) result = caseConnection(ethernet);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CyberPhysicalSystemPackage.WALKWAY: {
+				Walkway walkway = (Walkway)theEObject;
+				T result = caseWalkway(walkway);
+				if (result == null) result = casePhysicalConnection(walkway);
+				if (result == null) result = caseConnection(walkway);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CyberPhysicalSystemPackage.KNX: {
+				KNX knx = (KNX)theEObject;
+				T result = caseKNX(knx);
+				if (result == null) result = caseBusConnection(knx);
+				if (result == null) result = caseDigitalConnection(knx);
+				if (result == null) result = caseConnection(knx);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CyberPhysicalSystemPackage.X10: {
+				X10 x10 = (X10)theEObject;
+				T result = caseX10(x10);
+				if (result == null) result = caseBusConnection(x10);
+				if (result == null) result = caseDigitalConnection(x10);
+				if (result == null) result = caseConnection(x10);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -1287,6 +1335,81 @@ public class CyberPhysicalSystemSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseMicroController(MicroController object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Wired Connection</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Wired Connection</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseWiredConnection(WiredConnection object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Ethernet</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Ethernet</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEthernet(Ethernet object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Walkway</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Walkway</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseWalkway(Walkway object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>KNX</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>KNX</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseKNX(KNX object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>X10</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>X10</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseX10(X10 object) {
 		return null;
 	}
 

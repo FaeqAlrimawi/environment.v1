@@ -27,6 +27,7 @@ import environment.ElevatorsArea;
 import environment.EmbeddedComputer;
 import environment.Employee;
 import environment.EnvironmentDiagram;
+import environment.Ethernet;
 import environment.File;
 import environment.FireAlarm;
 import environment.Floor;
@@ -34,6 +35,7 @@ import environment.HVAC;
 import environment.Hallway;
 import environment.IPConnection;
 import environment.IPNetwork;
+import environment.KNX;
 import environment.Kitchen;
 import environment.Lab;
 import environment.Laptop;
@@ -51,8 +53,11 @@ import environment.Stairs;
 import environment.Toilet;
 import environment.Type;
 import environment.Visitor;
+import environment.Walkway;
+import environment.WiredConnection;
 import environment.Workstation;
 
+import environment.X10;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 
@@ -315,6 +320,26 @@ public class CyberPhysicalSystemAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseMicroController(MicroController object) {
 				return createMicroControllerAdapter();
+			}
+			@Override
+			public Adapter caseWiredConnection(WiredConnection object) {
+				return createWiredConnectionAdapter();
+			}
+			@Override
+			public Adapter caseEthernet(Ethernet object) {
+				return createEthernetAdapter();
+			}
+			@Override
+			public Adapter caseWalkway(Walkway object) {
+				return createWalkwayAdapter();
+			}
+			@Override
+			public Adapter caseKNX(KNX object) {
+				return createKNXAdapter();
+			}
+			@Override
+			public Adapter caseX10(X10 object) {
+				return createX10Adapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -1033,6 +1058,76 @@ public class CyberPhysicalSystemAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createMicroControllerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link environment.WiredConnection <em>Wired Connection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see environment.WiredConnection
+	 * @generated
+	 */
+	public Adapter createWiredConnectionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link environment.Ethernet <em>Ethernet</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see environment.Ethernet
+	 * @generated
+	 */
+	public Adapter createEthernetAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link environment.Walkway <em>Walkway</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see environment.Walkway
+	 * @generated
+	 */
+	public Adapter createWalkwayAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link environment.KNX <em>KNX</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see environment.KNX
+	 * @generated
+	 */
+	public Adapter createKNXAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link environment.X10 <em>X10</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see environment.X10
+	 * @generated
+	 */
+	public Adapter createX10Adapter() {
 		return null;
 	}
 
