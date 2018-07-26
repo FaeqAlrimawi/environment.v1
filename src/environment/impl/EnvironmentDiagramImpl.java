@@ -13,8 +13,11 @@ import environment.CyberPhysicalSystemPackage;
 
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.Comparator;
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.TreeMap;
 
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -49,8 +52,11 @@ import org.eclipse.emf.ecore.util.InternalEList;
 public class EnvironmentDiagramImpl extends MinimalEObjectImpl.Container implements EnvironmentDiagram {
 	
 	
-	public static List<List<Class<?>>> levels = new LinkedList<List<Class<?>>>();
-
+//	public static List<List<Class<?>>> levels = new LinkedList<List<Class<?>>>();
+	public static TreeMap<Integer, List<Class<?>>> abstractionLevels;
+	public static int leastAbstractLevel = EnvironmentDiagram.LEVEL3;
+	public static int mostAbstractLevel = EnvironmentDiagram.LEVEL1;
+	
 	/**
 	 * The cached value of the '{@link #getAsset() <em>Asset</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -119,17 +125,30 @@ public class EnvironmentDiagramImpl extends MinimalEObjectImpl.Container impleme
 	protected EnvironmentDiagramImpl() {
 		super();
 		
-		//sets the level precedency
+		//used to sort keys (with values i.e. lists) in descending order (from highest, least abstract,
+		//to lowest, most abstract)
+		Comparator<Integer> greatestToLowest = new Comparator<Integer>() {
+
+			@Override
+			public int compare(Integer o1, Integer o2) {
+				return o2.compareTo(o1);
+			}
+		};
 		
-		//level3
-		levels.add(Arrays.asList(EnvironmentDiagram.LEVEL3));
-		
-		//level2
-		levels.add(Arrays.asList(EnvironmentDiagram.LEVEL2));
+		abstractionLevels = new TreeMap<Integer, List<Class<?>>>(greatestToLowest);
 		
 		//level1
-		levels.add(Arrays.asList(EnvironmentDiagram.LEVEL1));
+//		levels.add(Arrays.asList(EnvironmentDiagram.LEVEL1_CLASSES));
+		abstractionLevels.put(1, Arrays.asList(EnvironmentDiagram.LEVEL1_CLASSES));
 		
+		//level2
+//		levels.add(Arrays.asList(EnvironmentDiagram.LEVEL2_CLASSES));
+		abstractionLevels.put(2, Arrays.asList(EnvironmentDiagram.LEVEL2_CLASSES));
+		
+		//level3
+//		levels.add(Arrays.asList(EnvironmentDiagram.LEVEL3_CLASSES));
+		abstractionLevels.put(3, Arrays.asList(EnvironmentDiagram.LEVEL3_CLASSES));
+
 	}
 
 	public List<String> getAssetNames() {

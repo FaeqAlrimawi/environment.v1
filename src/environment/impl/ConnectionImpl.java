@@ -7,6 +7,7 @@ import environment.Connection;
 import environment.Credential;
 import environment.CredentialType;
 import environment.DigitalConnection;
+import environment.EnvironmentDiagram;
 import environment.PhysicalConnection;
 import environment.Port;
 import environment.Property;
@@ -15,6 +16,7 @@ import environment.CyberPhysicalSystemPackage;
 import environment.CyberPhysicalSystemFactory;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
+import java.util.List;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -515,10 +517,10 @@ private boolean isContainedIn(Collection<Connection> connections) {
 		//set type
 		abstractedConnection = abstractType();
 		
-		//set name
-		abstractedConnection.setName(ConnectionImpl.connectionName+ConnectionImpl.connectionNumber++);
-		if(ConnectionImpl.connectionNumber >= ConnectionImpl.CONNECTION_NUMBER_LIMIT) {
-			ConnectionImpl.connectionNumber = 0;
+		if(abstractedConnection != null) {
+			setAbstracted(true);	
+		} else {
+			return null;
 		}
 		
 		//set bidirectional
@@ -542,34 +544,30 @@ private boolean isContainedIn(Collection<Connection> connections) {
 			abstractedConnection.setAsset2(this.getAsset2().abstractAsset());
 		}
 		
-		
-		
-		if(abstractedConnection != null) {
-			setAbstracted(true);	
-		}
-		
-		return  abstractConnection();
+
+		return  abstractedConnection;
 	}
 	
 	public Connection abstractType() {
-		Connection con = null;
 		
-		//default implementation returns an instance of the parent or a physical or digital class
-		if(!PhysicalConnectionImpl.class.equals(this.getClass()) && !DigitalConnectionImpl.class.equals(this.getClass())) {
-			try {
-				con = (Connection)(this.getClass().getSuperclass().newInstance());
+		try {
+			
+			//abstract type based on levels in system meta-model. Currently has 3 levels
+
+			for (List<Class<?>> level : EnvironmentDiagramImpl.abstractionLevels.values()) {
+				for(Class<?> cls : level) {
+					if(cls.isInstance(this)) {
+						return (Connection) cls.newInstance();
+					}
+				}
+			}			
+			
 			} catch (InstantiationException | IllegalAccessException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-		} else	if(PhysicalConnectionImpl.class.equals(this.getClass())) {
-			con = instance.createPhysicalConnection();
-		} else if (DigitalConnectionImpl.class.equals(this.getClass())){
-			con = instance.createDigitalConnection();
-		}
-		
-		
-		return con;
+			
+			return null;
 	}
 	
 	public void abstractPort() {
@@ -598,6 +596,7 @@ private boolean isContainedIn(Collection<Connection> connections) {
 		}
 		
 		Credential c;
+		
 		//set credentials
 		for(Credential cred : port.getCredential()) {
 			c = instance.createCredential();

@@ -228,6 +228,8 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 		if (connections == null) {
 			connections = new EObjectResolvingEList<Connection>(Connection.class, this, CyberPhysicalSystemPackage.ASSET__CONNECTIONS);
 		}
+		
+		removeDuplicates(connections);
 		return connections;
 	}
 
@@ -392,7 +394,11 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 
 		abstractedAsset = abstractType();
 		
-		
+		if(abstractedAsset != null) {
+			isAbstracted = true;
+		} else {
+			return null;
+		}
 		// 2-set attributes
 
 		// a-set value...value represents how important the asset in the system.
@@ -432,9 +438,7 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 		// shallow abstraction of connections might be needed
 		abstractConnections();
 		
-		if(abstractedAsset != null) {
-			isAbstracted = true;
-		}
+		
 		
 		return abstractedAsset;
 	}
@@ -519,45 +523,13 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 		
 		//abstract type based on levels in system meta-model. Currently has 3 levels
 
-		for (List<Class<?>> level : EnvironmentDiagramImpl.levels) {
+		for (List<Class<?>> level : EnvironmentDiagramImpl.abstractionLevels.values()) {
 			for(Class<?> cls : level) {
 				if(cls.isInstance(this)) {
 					return (Asset) cls.newInstance();
 				}
 			}
 		}			
-		/*//level-3: least abstract
-		for(Class<?> cls : EnvironmentDiagram.LEVEL3_CLASSES) {
-			if(cls.isInstance(this)) {
-				return (Asset) cls.newInstance();
-			}
-		}
-		
-		for(Class<?> cls : EnvironmentDiagram.LEVEL2_CLASSES) {
-			if(cls.isInstance(this)) {
-				return (Asset) cls.newInstance();
-			}
-		}
-		
-		//level-3: mOST abstract
-		for(Class<?> cls : EnvironmentDiagram.LEVEL1_CLASSES) {
-			if(cls.isInstance(this)) {
-				return (Asset) cls.newInstance();
-			}
-		}*/
-		
-		//if it is instance of ComputingDevice then an abstracted asset will be of type ComputingDevice
-		/*if(ComputingDevice.class.isInstance(this)) {
-			return abstractType(ComputingDeviceImpl.class.getSimpleName());
-		}*/
-		
-		//if all fails, then return a new asset with type equals to the assets parent
-		/*if(!PhysicalAssetImpl.class.equals(this.getClass()) && !DigitalAssetImpl.class.equals(this.getClass())) {			
-			return (Asset) this.getClass().getSuperclass().newInstance();
-		//otherwise it creates a general physical or digital asset	
-		} else if(PhysicalAssetImpl.class.equals(this.getClass()) || DigitalAssetImpl.class.equals(this.getClass())) {
-			return this.getClass().newInstance();
-		} */
 		
 		} catch (InstantiationException | IllegalAccessException e) {
 			// TODO Auto-generated catch block
@@ -957,7 +929,12 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 	
 	public void abstractConnections() {
 
-		//mergeConnections();
+		for(Connection con : getConnections()) {
+			Connection abstractedConnection = con.abstractConnection();
+			if(abstractedConnection != null) {
+				abstractedAsset.getConnections().add(abstractedConnection);
+			}
+		}
 	}
 	
 	public EList<? extends Asset> getContainedAssets() {
@@ -1037,7 +1014,7 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case CyberPhysicalSystemPackage.ASSET__CONNECTIONS:
-				removeDuplicates(getConnections());
+//				removeDuplicates(getConnections());
 				return getConnections();
 			case CyberPhysicalSystemPackage.ASSET__NAME:
 				return getName();

@@ -11,17 +11,21 @@ import org.eclipse.emf.ecore.EObject;
 import environment.impl.ActorImpl;
 import environment.impl.ApplicationImpl;
 import environment.impl.BuildingImpl;
+import environment.impl.BusConnectionImpl;
 import environment.impl.BusNetworkImpl;
 import environment.impl.ComputerImpl;
 import environment.impl.ComputingDeviceImpl;
 import environment.impl.DigitalAssetImpl;
+import environment.impl.DigitalConnectionImpl;
 import environment.impl.DigitalNetworkImpl;
 import environment.impl.EmployeeImpl;
 import environment.impl.FileImpl;
 import environment.impl.FloorImpl;
 import environment.impl.HallwayImpl;
+import environment.impl.IPConnectionImpl;
 import environment.impl.IPNetworkImpl;
 import environment.impl.PhysicalAssetImpl;
+import environment.impl.PhysicalConnectionImpl;
 import environment.impl.PhysicalStructureImpl;
 import environment.impl.ProcessImpl;
 import environment.impl.RoomImpl;
@@ -54,20 +58,25 @@ public interface EnvironmentDiagram extends EObject {
 	
 	//Level-0 is an Asset, which is an abstract (i.e. not instantiated)
 	
+	int LEVEL1 = 1;
+	int LEVEL2 = 2;
+	int LEVEL3 = 3;
+	
 	//Level 1. Most abstract. Includes Digital and Physical assets
-	Class<?> [] LEVEL1 = {PhysicalAssetImpl.class, DigitalAssetImpl.class};
+	Class<?> [] LEVEL1_CLASSES = {PhysicalAssetImpl.class, DigitalAssetImpl.class, 
+			DigitalConnectionImpl.class, PhysicalConnectionImpl.class};
 	
 	//Level 2
-	Class<?>[] LEVEL2 = 
+	Class<?>[] LEVEL2_CLASSES = 
 		{PhysicalStructureImpl.class, ActorImpl.class, ComputingDeviceImpl.class, 
-				ApplicationImpl.class, ProcessImpl.class, FileImpl.class, DigitalNetworkImpl.class};
+				ApplicationImpl.class, ProcessImpl.class, FileImpl.class, DigitalNetworkImpl.class,
+				IPConnectionImpl.class, BusConnectionImpl.class};
 	
 	//Level 3 classes. Least abstract
-	Class<?>[] LEVEL3 = 
+	Class<?>[] LEVEL3_CLASSES = 
 		{BuildingImpl.class, FloorImpl.class, RoomImpl.class, HallwayImpl.class, 
 				StairsImpl.class, EmployeeImpl.class, VisitorImpl.class, BusNetworkImpl.class, 
 				IPNetworkImpl.class, ComputerImpl.class}; 
-	
 	
 	List<String> getAssetNames();
 	/**
