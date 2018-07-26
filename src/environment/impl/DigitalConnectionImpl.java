@@ -3,7 +3,6 @@
 package environment.impl;
 
 import environment.DigitalConnection;
-import environment.Protocol;
 import environment.CyberPhysicalSystemPackage;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
@@ -31,7 +30,7 @@ public class DigitalConnectionImpl extends ConnectionImpl implements DigitalConn
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Protocol PROTOCOL_EDEFAULT = Protocol.IPV4;
+	protected static final String PROTOCOL_EDEFAULT = null;
 	/**
 	 * The cached value of the '{@link #getProtocol() <em>Protocol</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -40,7 +39,7 @@ public class DigitalConnectionImpl extends ConnectionImpl implements DigitalConn
 	 * @generated
 	 * @ordered
 	 */
-	protected Protocol protocol = PROTOCOL_EDEFAULT;
+	protected String protocol = PROTOCOL_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -66,7 +65,7 @@ public class DigitalConnectionImpl extends ConnectionImpl implements DigitalConn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Protocol getProtocol() {
+	public String getProtocol() {
 		return protocol;
 	}
 
@@ -75,9 +74,9 @@ public class DigitalConnectionImpl extends ConnectionImpl implements DigitalConn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setProtocol(Protocol newProtocol) {
-		Protocol oldProtocol = protocol;
-		protocol = newProtocol == null ? PROTOCOL_EDEFAULT : newProtocol;
+	public void setProtocol(String newProtocol) {
+		String oldProtocol = protocol;
+		protocol = newProtocol;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, CyberPhysicalSystemPackage.DIGITAL_CONNECTION__PROTOCOL, oldProtocol, protocol));
 	}
@@ -105,7 +104,7 @@ public class DigitalConnectionImpl extends ConnectionImpl implements DigitalConn
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case CyberPhysicalSystemPackage.DIGITAL_CONNECTION__PROTOCOL:
-				setProtocol((Protocol)newValue);
+				setProtocol((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -135,7 +134,7 @@ public class DigitalConnectionImpl extends ConnectionImpl implements DigitalConn
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case CyberPhysicalSystemPackage.DIGITAL_CONNECTION__PROTOCOL:
-				return protocol != PROTOCOL_EDEFAULT;
+				return PROTOCOL_EDEFAULT == null ? protocol != null : !PROTOCOL_EDEFAULT.equals(protocol);
 		}
 		return super.eIsSet(featureID);
 	}

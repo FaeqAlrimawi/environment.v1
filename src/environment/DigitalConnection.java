@@ -23,7 +23,6 @@ public interface DigitalConnection extends Connection {
 
 	/**
 	 * Returns the value of the '<em><b>Protocol</b></em>' attribute.
-	 * The literals are from the enumeration {@link environment.Protocol}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Protocol</em>' attribute isn't clear,
@@ -31,22 +30,20 @@ public interface DigitalConnection extends Connection {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Protocol</em>' attribute.
-	 * @see environment.Protocol
-	 * @see #setProtocol(Protocol)
+	 * @see #setProtocol(String)
 	 * @see environment.CyberPhysicalSystemPackage#getDigitalConnection_Protocol()
 	 * @model
 	 * @generated
 	 */
-	Protocol getProtocol();
+	String getProtocol();
 
 	/**
 	 * Sets the value of the '{@link environment.DigitalConnection#getProtocol <em>Protocol</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Protocol</em>' attribute.
-	 * @see environment.Protocol
 	 * @see #getProtocol()
 	 * @generated
 	 */
-	void setProtocol(Protocol value);
+	void setProtocol(String value);
 } // DigitalConnection

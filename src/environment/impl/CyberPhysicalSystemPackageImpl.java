@@ -47,7 +47,6 @@ import environment.PhysicalConnection;
 import environment.PhysicalStructure;
 import environment.Port;
 import environment.Property;
-import environment.Protocol;
 import environment.Room;
 import environment.Server;
 import environment.SmartLight;
@@ -488,13 +487,6 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * @generated
 	 */
 	private EEnum credentialTypeEEnum = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EEnum protocolEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -1651,15 +1643,6 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EEnum getProtocol() {
-		return protocolEEnum;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public CyberPhysicalSystemFactory getCyberPhysicalSystemFactory() {
 		return (CyberPhysicalSystemFactory)getEFactoryInstance();
 	}
@@ -1860,7 +1843,6 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 		digitalStatusEEnum = createEEnum(DIGITAL_STATUS);
 		fileStatusEEnum = createEEnum(FILE_STATUS);
 		credentialTypeEEnum = createEEnum(CREDENTIAL_TYPE);
-		protocolEEnum = createEEnum(PROTOCOL);
 	}
 
 	/**
@@ -1987,7 +1969,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 		addEParameter(op, this.getConnection(), "connection", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(digitalConnectionEClass, DigitalConnection.class, "DigitalConnection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getDigitalConnection_Protocol(), this.getProtocol(), "protocol", null, 0, 1, DigitalConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDigitalConnection_Protocol(), ecorePackage.getEString(), "protocol", null, 0, 1, DigitalConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(physicalConnectionEClass, PhysicalConnection.class, "PhysicalConnection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -2148,14 +2130,6 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 		addEEnumLiteral(credentialTypeEEnum, CredentialType.CARD);
 		addEEnumLiteral(credentialTypeEEnum, CredentialType.FINGERPRINT);
 		addEEnumLiteral(credentialTypeEEnum, CredentialType.OTHER);
-
-		initEEnum(protocolEEnum, Protocol.class, "Protocol");
-		addEEnumLiteral(protocolEEnum, Protocol.IPV4);
-		addEEnumLiteral(protocolEEnum, Protocol.IPV6);
-		addEEnumLiteral(protocolEEnum, Protocol.ZIGBEE);
-		addEEnumLiteral(protocolEEnum, Protocol.TCP);
-		addEEnumLiteral(protocolEEnum, Protocol.UDP);
-		addEEnumLiteral(protocolEEnum, Protocol.OTHER);
 
 		// Create resource
 		createResource(eNS_URI);

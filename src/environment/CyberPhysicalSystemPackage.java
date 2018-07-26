@@ -9281,17 +9281,6 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 
 
 	/**
-	 * The meta object id for the '{@link environment.Protocol <em>Protocol</em>}' enum.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see environment.Protocol
-	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getProtocol()
-	 * @generated
-	 */
-	int PROTOCOL = 59;
-
-
-	/**
 	 * Returns the meta object for class '{@link environment.PhysicalAsset <em>Physical Asset</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10555,16 +10544,6 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	EEnum getCredentialType();
 
 	/**
-	 * Returns the meta object for enum '{@link environment.Protocol <em>Protocol</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>Protocol</em>'.
-	 * @see environment.Protocol
-	 * @generated
-	 */
-	EEnum getProtocol();
-
-	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -11672,16 +11651,6 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum CREDENTIAL_TYPE = eINSTANCE.getCredentialType();
-
-		/**
-		 * The meta object literal for the '{@link environment.Protocol <em>Protocol</em>}' enum.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see environment.Protocol
-		 * @see environment.impl.CyberPhysicalSystemPackageImpl#getProtocol()
-		 * @generated
-		 */
-		EEnum PROTOCOL = eINSTANCE.getProtocol();
 
 	}
 

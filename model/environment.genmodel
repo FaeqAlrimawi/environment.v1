@@ -30,14 +30,6 @@
       <genEnumLiterals ecoreEnumLiteral="environment.ecore#//CredentialType/FINGERPRINT"/>
       <genEnumLiterals ecoreEnumLiteral="environment.ecore#//CredentialType/OTHER"/>
     </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="environment.ecore#//Protocol">
-      <genEnumLiterals ecoreEnumLiteral="environment.ecore#//Protocol/IPv4"/>
-      <genEnumLiterals ecoreEnumLiteral="environment.ecore#//Protocol/IPv6"/>
-      <genEnumLiterals ecoreEnumLiteral="environment.ecore#//Protocol/ZIGBEE"/>
-      <genEnumLiterals ecoreEnumLiteral="environment.ecore#//Protocol/TCP"/>
-      <genEnumLiterals ecoreEnumLiteral="environment.ecore#//Protocol/UDP"/>
-      <genEnumLiterals ecoreEnumLiteral="environment.ecore#//Protocol/OTHER"/>
-    </genEnums>
     <genClasses ecoreClass="environment.ecore#//PhysicalAsset">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference environment.ecore#//PhysicalAsset/containedAssets"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference environment.ecore#//PhysicalAsset/parentAsset"/>

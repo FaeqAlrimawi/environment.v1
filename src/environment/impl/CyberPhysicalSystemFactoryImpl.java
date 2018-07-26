@@ -48,7 +48,6 @@ import environment.PhysicalConnection;
 import environment.PhysicalStructure;
 import environment.Port;
 import environment.Property;
-import environment.Protocol;
 import environment.Room;
 import environment.Server;
 import environment.SmartLight;
@@ -189,8 +188,6 @@ public class CyberPhysicalSystemFactoryImpl extends EFactoryImpl implements Cybe
 				return createFileStatusFromString(eDataType, initialValue);
 			case CyberPhysicalSystemPackage.CREDENTIAL_TYPE:
 				return createCredentialTypeFromString(eDataType, initialValue);
-			case CyberPhysicalSystemPackage.PROTOCOL:
-				return createProtocolFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -212,8 +209,6 @@ public class CyberPhysicalSystemFactoryImpl extends EFactoryImpl implements Cybe
 				return convertFileStatusToString(eDataType, instanceValue);
 			case CyberPhysicalSystemPackage.CREDENTIAL_TYPE:
 				return convertCredentialTypeToString(eDataType, instanceValue);
-			case CyberPhysicalSystemPackage.PROTOCOL:
-				return convertProtocolToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -826,26 +821,6 @@ public class CyberPhysicalSystemFactoryImpl extends EFactoryImpl implements Cybe
 	 * @generated
 	 */
 	public String convertCredentialTypeToString(EDataType eDataType, Object instanceValue) {
-		return instanceValue == null ? null : instanceValue.toString();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Protocol createProtocolFromString(EDataType eDataType, String initialValue) {
-		Protocol result = Protocol.get(initialValue);
-		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertProtocolToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 
