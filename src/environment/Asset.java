@@ -103,14 +103,28 @@ public interface Asset extends EObject {
 	void setName(String value);
 
 	//added manually
+	
 	double compareType(Asset asset);
 	double compareContainedAssets(Asset asset);
 	double compareParentAsset(Asset asset);
 	double compareConnections(Asset asset);
-	Asset abstractType();
-//	Asset abstractType(String Classtype);
-	public Asset getAbstractedAsset();
-	public void setAbstractedAsset(Asset ast);
+	
+
+	//Asset abstractType();
+	
+	/**
+	 * returns an abstract representation of this asset or null if there is no such representation
+	 * @return An Asset object that is the abstract
+	 */
+	Asset getAbstractedAsset();
+	
+	/**
+	 * Sets the abstract representation of this asset to the given argument. If the argument is NULL then
+	 * this can allow to create a new abstract asset using the method {@link environment.Asset#abstractAsset()}
+	 * @param newAbstractedAsset The Asset object that is the new abstract 
+	 */
+	void setAbstractedAsset(Asset newAbstractedAsset);
+	
 	void abstractContainedAssets();
 	boolean isAbstracted();
 	void setAbstracted(boolean isAbstracted);
@@ -237,10 +251,10 @@ public interface Asset extends EObject {
 	void setControl(String value);
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
+	 * Creates a new Asset object that represents an abstraction of this asset. This includes its attributes 
+	 * and references (e.g., contained assets and connections). The method returns null if the abstraction
+	 * method fails to create an abstract representation
+	 * @return An Asset object that is an abstract or null
 	 */
 	Asset abstractAsset();
 

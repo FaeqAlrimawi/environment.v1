@@ -63,7 +63,18 @@ public interface Connection extends EObject {
 	int compareType(Connection connection);
 	int comparePort(Connection connection);
 	int compareEnds(Connection connection);
+	
+	/**
+	 * Creates a new Connection object that represents an abstraction of this connection. This includes its attributes 
+	 * and references (e.g., asset1 and asset2). The method returns null if the abstraction
+	 * method fails to create an abstract representation
+	 * @return A Connection object that is an abstract or null
+	 */
 	Connection abstractConnection();
+	
+	void setAbstractedConnection(Connection newAbstractConnection);
+	boolean isAbstracted();
+	void setAbstracted(boolean isAbstracted);
 	void abstractPort(); 
 	/**
 	 * Returns the value of the '<em><b>Asset1</b></em>' reference.

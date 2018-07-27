@@ -207,6 +207,7 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 				name = new String(c);
 				setName(name);
 			}
+		
 	}
 
 	/**
@@ -388,7 +389,7 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 		if(isAbstracted) {
 			return getAbstractedAsset();
 		}
-		
+	
 		//1-abstract type
 		//Asset abstractedAsset;
 
@@ -438,6 +439,7 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 		// shallow abstraction of connections might be needed
 		abstractConnections();
 		
+		//create a periodic task to update the abstracted asset
 		
 		
 		return abstractedAsset;
@@ -572,7 +574,7 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 	
 	@Override
 	public double compareContainedAssets(Asset asset) {
-		
+
 		EList<Asset> thisAssets = null;
 		EList<DigitalAsset> thisDigitalAssets = null;
 		EList<Asset> argAssets = null;

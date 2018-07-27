@@ -281,6 +281,7 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CyberPhysicalSystemPackage.CONNECTION__ASSET2, oldAsset2, asset2));
 			}
+			
 		}
 		return asset2;
 	}
