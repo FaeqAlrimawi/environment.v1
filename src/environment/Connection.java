@@ -76,6 +76,7 @@ public interface Connection extends EObject {
 	boolean isAbstracted();
 	void setAbstracted(boolean isAbstracted);
 	void abstractPort(); 
+	
 	/**
 	 * Returns the value of the '<em><b>Asset1</b></em>' reference.
 	 * <!-- begin-user-doc -->
