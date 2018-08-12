@@ -80,6 +80,8 @@ public class PhysicalAssetImpl extends AssetImpl implements PhysicalAsset {
 		if (containedAssets == null) {
 			containedAssets = new EObjectResolvingEList<Asset>(Asset.class, this, CyberPhysicalSystemPackage.PHYSICAL_ASSET__CONTAINED_ASSETS);
 		}
+		
+		removeDuplicates(containedAssets);
 		return containedAssets;
 	}
 
