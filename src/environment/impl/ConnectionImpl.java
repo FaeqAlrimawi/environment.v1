@@ -11,6 +11,7 @@ import environment.PhysicalConnection;
 import environment.Port;
 import environment.Property;
 import environment.Type;
+import environment.Vulnerability;
 import environment.CyberPhysicalSystemPackage;
 import environment.CyberPhysicalSystemFactory;
 import java.lang.reflect.InvocationTargetException;
@@ -48,6 +49,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link environment.impl.ConnectionImpl#getProperties <em>Properties</em>}</li>
  *   <li>{@link environment.impl.ConnectionImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link environment.impl.ConnectionImpl#getType <em>Type</em>}</li>
+ *   <li>{@link environment.impl.ConnectionImpl#getVulnerabilities <em>Vulnerabilities</em>}</li>
  * </ul>
  *
  * @generated
@@ -183,6 +185,15 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 	protected Type type;
 
 	/**
+	 * The cached value of the '{@link #getVulnerabilities() <em>Vulnerabilities</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getVulnerabilities()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Vulnerability> vulnerabilities;
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 
@@ -281,7 +292,6 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CyberPhysicalSystemPackage.CONNECTION__ASSET2, oldAsset2, asset2));
 			}
-			
 		}
 		return asset2;
 	}
@@ -396,6 +406,18 @@ private boolean isContainedIn(Collection<Connection> connections) {
 		}
 		else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, CyberPhysicalSystemPackage.CONNECTION__TYPE, newType, newType));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Vulnerability> getVulnerabilities() {
+		if (vulnerabilities == null) {
+			vulnerabilities = new EObjectResolvingEList<Vulnerability>(Vulnerability.class, this, CyberPhysicalSystemPackage.CONNECTION__VULNERABILITIES);
+		}
+		return vulnerabilities;
 	}
 
 	/**
@@ -909,6 +931,8 @@ public int compareType(Connection connection) {
 				return getDescription();
 			case CyberPhysicalSystemPackage.CONNECTION__TYPE:
 				return getType();
+			case CyberPhysicalSystemPackage.CONNECTION__VULNERABILITIES:
+				return getVulnerabilities();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -951,6 +975,10 @@ public int compareType(Connection connection) {
 			case CyberPhysicalSystemPackage.CONNECTION__TYPE:
 				setType((Type)newValue);
 				return;
+			case CyberPhysicalSystemPackage.CONNECTION__VULNERABILITIES:
+				getVulnerabilities().clear();
+				getVulnerabilities().addAll((Collection<? extends Vulnerability>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -990,6 +1018,9 @@ public int compareType(Connection connection) {
 			case CyberPhysicalSystemPackage.CONNECTION__TYPE:
 				setType((Type)null);
 				return;
+			case CyberPhysicalSystemPackage.CONNECTION__VULNERABILITIES:
+				getVulnerabilities().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -1020,6 +1051,8 @@ public int compareType(Connection connection) {
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 			case CyberPhysicalSystemPackage.CONNECTION__TYPE:
 				return type != null;
+			case CyberPhysicalSystemPackage.CONNECTION__VULNERABILITIES:
+				return vulnerabilities != null && !vulnerabilities.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

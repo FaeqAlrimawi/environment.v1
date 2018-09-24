@@ -24,6 +24,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link environment.Connection#getProperties <em>Properties</em>}</li>
  *   <li>{@link environment.Connection#getDescription <em>Description</em>}</li>
  *   <li>{@link environment.Connection#getType <em>Type</em>}</li>
+ *   <li>{@link environment.Connection#getVulnerabilities <em>Vulnerabilities</em>}</li>
  * </ul>
  *
  * @see environment.CyberPhysicalSystemPackage#getConnection()
@@ -180,6 +181,21 @@ public interface Connection extends EObject {
 	 * @generated
 	 */
 	void setType(Type value);
+	/**
+	 * Returns the value of the '<em><b>Vulnerabilities</b></em>' reference list.
+	 * The list contents are of type {@link environment.Vulnerability}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Vulnerabilities</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Vulnerabilities</em>' reference list.
+	 * @see environment.CyberPhysicalSystemPackage#getConnection_Vulnerabilities()
+	 * @model
+	 * @generated
+	 */
+	EList<Vulnerability> getVulnerabilities();
 	/**
 	 * Returns the value of the '<em><b>Constraints</b></em>' attribute list.
 	 * The list contents are of type {@link java.lang.String}.

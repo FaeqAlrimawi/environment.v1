@@ -80,8 +80,6 @@ public class PhysicalAssetImpl extends AssetImpl implements PhysicalAsset {
 		if (containedAssets == null) {
 			containedAssets = new EObjectResolvingEList<Asset>(Asset.class, this, CyberPhysicalSystemPackage.PHYSICAL_ASSET__CONTAINED_ASSETS);
 		}
-		
-		removeDuplicates(containedAssets);
 		return containedAssets;
 	}
 
@@ -122,24 +120,48 @@ public class PhysicalAssetImpl extends AssetImpl implements PhysicalAsset {
 			eNotify(new ENotificationImpl(this, Notification.SET, CyberPhysicalSystemPackage.PHYSICAL_ASSET__PARENT_ASSET, oldParentAsset, parentAsset));
 		
 		//add this object as a child to the parent as well and remove from old parent if any
-		if(newParentAsset == null) {
-			return;
-		}
-		
-		EList<Asset> containedAssets = newParentAsset.getContainedAssets();
-		
-		//add to the new parent
-		if(!isContainedIn(containedAssets)) {	
-			containedAssets.add(this);
-		}
-		
-		//remove from old parent
-		if(oldParentAsset != null) {
-			oldParentAsset.getContainedAssets().remove(this);
-		}
+//		if(parentAsset == null) {
+//			return;
+//		}
+//		
+//		EList<Asset> containedAssets = parentAsset.getContainedAssets();
+//		EList<Asset> newList = new BasicEList<Asset>();
+//		
+//		newList.addAll(containedAssets);
+//		newList.add(this);
+//	
+//		parentAsset.getContainedAssets().clear();
+//		parentAsset.getContainedAssets().addAll(newList);
+//		
+//		//add to the new parent
+//		if(!isContainedIn(containedAssets)) {	
+//			containedAssets.add(this);
+//		}
+//		
+//		//remove from old parent
+//		if(oldParentAsset != null) {
+//			oldParentAsset.getContainedAssets().remove(this);
+//		}
 	}
 	
 	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case CyberPhysicalSystemPackage.PHYSICAL_ASSET__CONTAINED_ASSETS:
+				return getContainedAssets();
+			case CyberPhysicalSystemPackage.PHYSICAL_ASSET__PARENT_ASSET:
+				if (resolve) return getParentAsset();
+				return basicGetParentAsset();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
 	private boolean isContainedIn(Collection<Asset> containedAssets) {
 		
 		for(Asset ast : containedAssets) {
@@ -149,24 +171,6 @@ public class PhysicalAssetImpl extends AssetImpl implements PhysicalAsset {
 		}
 		
 		return false;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case CyberPhysicalSystemPackage.PHYSICAL_ASSET__CONTAINED_ASSETS:
-				//removeDuplicates(getContainedAssets());
-				return getContainedAssets();
-			case CyberPhysicalSystemPackage.PHYSICAL_ASSET__PARENT_ASSET:
-				if (resolve) return getParentAsset();
-				return basicGetParentAsset();
-		}
-		return super.eGet(featureID, resolve, coreType);
 	}
 
 	/**
@@ -251,7 +255,7 @@ public class PhysicalAssetImpl extends AssetImpl implements PhysicalAsset {
 		} else if (this.getParentAsset().compareType(physAsset.getParentAsset()) == Asset.EXACT_TYPE){
 			similarityPercentage += Asset.COMMON_PARENT_TYPE;
 		}
-		}
+		}	
 	
 		return similarityPercentage;
 	}*/

@@ -132,13 +132,22 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	int ASSET__CONTROL = 6;
 
 	/**
+	 * The feature id for the '<em><b>Vulnerabilities</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSET__VULNERABILITIES = 7;
+
+	/**
 	 * The number of structural features of the '<em>Asset</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ASSET_FEATURE_COUNT = 7;
+	int ASSET_FEATURE_COUNT = 8;
 
 	/**
 	 * The operation id for the '<em>Abstract Asset</em>' operation.
@@ -293,6 +302,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @ordered
 	 */
 	int PHYSICAL_ASSET__CONTROL = ASSET__CONTROL;
+
+	/**
+	 * The feature id for the '<em><b>Vulnerabilities</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PHYSICAL_ASSET__VULNERABILITIES = ASSET__VULNERABILITIES;
 
 	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
@@ -474,6 +492,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @ordered
 	 */
 	int COMPUTING_DEVICE__CONTROL = PHYSICAL_ASSET__CONTROL;
+
+	/**
+	 * The feature id for the '<em><b>Vulnerabilities</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPUTING_DEVICE__VULNERABILITIES = PHYSICAL_ASSET__VULNERABILITIES;
 
 	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
@@ -684,6 +711,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	int HVAC__CONTROL = COMPUTING_DEVICE__CONTROL;
 
 	/**
+	 * The feature id for the '<em><b>Vulnerabilities</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HVAC__VULNERABILITIES = COMPUTING_DEVICE__VULNERABILITIES;
+
+	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -890,6 +926,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @ordered
 	 */
 	int SMART_LIGHT__CONTROL = COMPUTING_DEVICE__CONTROL;
+
+	/**
+	 * The feature id for the '<em><b>Vulnerabilities</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SMART_LIGHT__VULNERABILITIES = COMPUTING_DEVICE__VULNERABILITIES;
 
 	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
@@ -1100,6 +1145,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	int COMPUTER__CONTROL = COMPUTING_DEVICE__CONTROL;
 
 	/**
+	 * The feature id for the '<em><b>Vulnerabilities</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPUTER__VULNERABILITIES = COMPUTING_DEVICE__VULNERABILITIES;
+
+	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1306,6 +1360,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @ordered
 	 */
 	int LAPTOP__CONTROL = COMPUTER__CONTROL;
+
+	/**
+	 * The feature id for the '<em><b>Vulnerabilities</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAPTOP__VULNERABILITIES = COMPUTER__VULNERABILITIES;
 
 	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
@@ -1516,6 +1579,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	int DESKTOP__CONTROL = COMPUTER__CONTROL;
 
 	/**
+	 * The feature id for the '<em><b>Vulnerabilities</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DESKTOP__VULNERABILITIES = COMPUTER__VULNERABILITIES;
+
+	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1722,6 +1794,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @ordered
 	 */
 	int CCTV__CONTROL = COMPUTING_DEVICE__CONTROL;
+
+	/**
+	 * The feature id for the '<em><b>Vulnerabilities</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CCTV__VULNERABILITIES = COMPUTING_DEVICE__VULNERABILITIES;
 
 	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
@@ -1932,6 +2013,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	int SERVER__CONTROL = COMPUTER__CONTROL;
 
 	/**
+	 * The feature id for the '<em><b>Vulnerabilities</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SERVER__VULNERABILITIES = COMPUTER__VULNERABILITIES;
+
+	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2140,6 +2230,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	int DIGITAL_ASSET__CONTROL = ASSET__CONTROL;
 
 	/**
+	 * The feature id for the '<em><b>Vulnerabilities</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIGITAL_ASSET__VULNERABILITIES = ASSET__VULNERABILITIES;
+
+	/**
 	 * The feature id for the '<em><b>Parent Asset</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2319,6 +2418,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @ordered
 	 */
 	int FILE__CONTROL = DIGITAL_ASSET__CONTROL;
+
+	/**
+	 * The feature id for the '<em><b>Vulnerabilities</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILE__VULNERABILITIES = DIGITAL_ASSET__VULNERABILITIES;
 
 	/**
 	 * The feature id for the '<em><b>Parent Asset</b></em>' reference.
@@ -2520,6 +2628,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	int PROCESS__CONTROL = DIGITAL_ASSET__CONTROL;
 
 	/**
+	 * The feature id for the '<em><b>Vulnerabilities</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS__VULNERABILITIES = DIGITAL_ASSET__VULNERABILITIES;
+
+	/**
 	 * The feature id for the '<em><b>Parent Asset</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2708,6 +2825,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @ordered
 	 */
 	int APPLICATION__CONTROL = DIGITAL_ASSET__CONTROL;
+
+	/**
+	 * The feature id for the '<em><b>Vulnerabilities</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APPLICATION__VULNERABILITIES = DIGITAL_ASSET__VULNERABILITIES;
 
 	/**
 	 * The feature id for the '<em><b>Parent Asset</b></em>' reference.
@@ -2927,13 +3053,22 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	int CONNECTION__TYPE = 8;
 
 	/**
+	 * The feature id for the '<em><b>Vulnerabilities</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONNECTION__VULNERABILITIES = 9;
+
+	/**
 	 * The number of structural features of the '<em>Connection</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_FEATURE_COUNT = 9;
+	int CONNECTION_FEATURE_COUNT = 10;
 
 	/**
 	 * The operation id for the '<em>Similar To</em>' operation.
@@ -3043,6 +3178,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @ordered
 	 */
 	int DIGITAL_CONNECTION__TYPE = CONNECTION__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Vulnerabilities</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIGITAL_CONNECTION__VULNERABILITIES = CONNECTION__VULNERABILITIES;
 
 	/**
 	 * The feature id for the '<em><b>Protocol</b></em>' attribute.
@@ -3170,6 +3314,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @ordered
 	 */
 	int PHYSICAL_CONNECTION__TYPE = CONNECTION__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Vulnerabilities</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PHYSICAL_CONNECTION__VULNERABILITIES = CONNECTION__VULNERABILITIES;
 
 	/**
 	 * The number of structural features of the '<em>Physical Connection</em>' class.
@@ -3519,6 +3672,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	int ACTOR__CONTROL = PHYSICAL_ASSET__CONTROL;
 
 	/**
+	 * The feature id for the '<em><b>Vulnerabilities</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTOR__VULNERABILITIES = PHYSICAL_ASSET__VULNERABILITIES;
+
+	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3707,6 +3869,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @ordered
 	 */
 	int PHYSICAL_STRUCTURE__CONTROL = PHYSICAL_ASSET__CONTROL;
+
+	/**
+	 * The feature id for the '<em><b>Vulnerabilities</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PHYSICAL_STRUCTURE__VULNERABILITIES = PHYSICAL_ASSET__VULNERABILITIES;
 
 	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
@@ -4000,6 +4171,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	int ROOM__CONTROL = PHYSICAL_STRUCTURE__CONTROL;
 
 	/**
+	 * The feature id for the '<em><b>Vulnerabilities</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM__VULNERABILITIES = PHYSICAL_STRUCTURE__VULNERABILITIES;
+
+	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4179,6 +4359,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @ordered
 	 */
 	int FLOOR__CONTROL = PHYSICAL_STRUCTURE__CONTROL;
+
+	/**
+	 * The feature id for the '<em><b>Vulnerabilities</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FLOOR__VULNERABILITIES = PHYSICAL_STRUCTURE__VULNERABILITIES;
 
 	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
@@ -4362,6 +4551,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	int BUILDING__CONTROL = PHYSICAL_STRUCTURE__CONTROL;
 
 	/**
+	 * The feature id for the '<em><b>Vulnerabilities</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUILDING__VULNERABILITIES = PHYSICAL_STRUCTURE__VULNERABILITIES;
+
+	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4541,6 +4739,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @ordered
 	 */
 	int FIRE_ALARM__CONTROL = COMPUTING_DEVICE__CONTROL;
+
+	/**
+	 * The feature id for the '<em><b>Vulnerabilities</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FIRE_ALARM__VULNERABILITIES = COMPUTING_DEVICE__VULNERABILITIES;
 
 	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
@@ -4751,6 +4958,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	int WORKSTATION__CONTROL = COMPUTER__CONTROL;
 
 	/**
+	 * The feature id for the '<em><b>Vulnerabilities</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORKSTATION__VULNERABILITIES = COMPUTER__VULNERABILITIES;
+
+	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4959,6 +5175,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	int LAB__CONTROL = ROOM__CONTROL;
 
 	/**
+	 * The feature id for the '<em><b>Vulnerabilities</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAB__VULNERABILITIES = ROOM__VULNERABILITIES;
+
+	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5138,6 +5363,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @ordered
 	 */
 	int TOILET__CONTROL = ROOM__CONTROL;
+
+	/**
+	 * The feature id for the '<em><b>Vulnerabilities</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOILET__VULNERABILITIES = ROOM__VULNERABILITIES;
 
 	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
@@ -5321,6 +5555,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	int LOUNGE__CONTROL = ROOM__CONTROL;
 
 	/**
+	 * The feature id for the '<em><b>Vulnerabilities</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOUNGE__VULNERABILITIES = ROOM__VULNERABILITIES;
+
+	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5500,6 +5743,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @ordered
 	 */
 	int DISH_WASHER__CONTROL = COMPUTING_DEVICE__CONTROL;
+
+	/**
+	 * The feature id for the '<em><b>Vulnerabilities</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DISH_WASHER__VULNERABILITIES = COMPUTING_DEVICE__VULNERABILITIES;
 
 	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
@@ -5710,6 +5962,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	int COFFEE_MACHINE__CONTROL = COMPUTING_DEVICE__CONTROL;
 
 	/**
+	 * The feature id for the '<em><b>Vulnerabilities</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COFFEE_MACHINE__VULNERABILITIES = COMPUTING_DEVICE__VULNERABILITIES;
+
+	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5916,6 +6177,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @ordered
 	 */
 	int ELEVATOR__CONTROL = COMPUTING_DEVICE__CONTROL;
+
+	/**
+	 * The feature id for the '<em><b>Vulnerabilities</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEVATOR__VULNERABILITIES = COMPUTING_DEVICE__VULNERABILITIES;
 
 	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
@@ -6126,6 +6396,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	int HALLWAY__CONTROL = PHYSICAL_STRUCTURE__CONTROL;
 
 	/**
+	 * The feature id for the '<em><b>Vulnerabilities</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HALLWAY__VULNERABILITIES = PHYSICAL_STRUCTURE__VULNERABILITIES;
+
+	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6307,6 +6586,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	int ELEVATORS_AREA__CONTROL = ROOM__CONTROL;
 
 	/**
+	 * The feature id for the '<em><b>Vulnerabilities</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEVATORS_AREA__VULNERABILITIES = ROOM__VULNERABILITIES;
+
+	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6486,6 +6774,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @ordered
 	 */
 	int DIGITAL_NETWORK__CONTROL = DIGITAL_ASSET__CONTROL;
+
+	/**
+	 * The feature id for the '<em><b>Vulnerabilities</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIGITAL_NETWORK__VULNERABILITIES = DIGITAL_ASSET__VULNERABILITIES;
 
 	/**
 	 * The feature id for the '<em><b>Parent Asset</b></em>' reference.
@@ -6687,6 +6984,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	int IP_NETWORK__CONTROL = DIGITAL_NETWORK__CONTROL;
 
 	/**
+	 * The feature id for the '<em><b>Vulnerabilities</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IP_NETWORK__VULNERABILITIES = DIGITAL_NETWORK__VULNERABILITIES;
+
+	/**
 	 * The feature id for the '<em><b>Parent Asset</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6884,6 +7190,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @ordered
 	 */
 	int BUS_NETWORK__CONTROL = DIGITAL_NETWORK__CONTROL;
+
+	/**
+	 * The feature id for the '<em><b>Vulnerabilities</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_NETWORK__VULNERABILITIES = DIGITAL_NETWORK__VULNERABILITIES;
 
 	/**
 	 * The feature id for the '<em><b>Parent Asset</b></em>' reference.
@@ -7103,6 +7418,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	int IP_CONNECTION__TYPE = DIGITAL_CONNECTION__TYPE;
 
 	/**
+	 * The feature id for the '<em><b>Vulnerabilities</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IP_CONNECTION__VULNERABILITIES = DIGITAL_CONNECTION__VULNERABILITIES;
+
+	/**
 	 * The feature id for the '<em><b>Protocol</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7230,6 +7554,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	int BUS_CONNECTION__TYPE = DIGITAL_CONNECTION__TYPE;
 
 	/**
+	 * The feature id for the '<em><b>Vulnerabilities</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_CONNECTION__VULNERABILITIES = DIGITAL_CONNECTION__VULNERABILITIES;
+
+	/**
 	 * The feature id for the '<em><b>Protocol</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7337,6 +7670,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @ordered
 	 */
 	int KITCHEN__CONTROL = ROOM__CONTROL;
+
+	/**
+	 * The feature id for the '<em><b>Vulnerabilities</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KITCHEN__VULNERABILITIES = ROOM__VULNERABILITIES;
 
 	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
@@ -7520,6 +7862,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	int STAIRS__CONTROL = PHYSICAL_STRUCTURE__CONTROL;
 
 	/**
+	 * The feature id for the '<em><b>Vulnerabilities</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAIRS__VULNERABILITIES = PHYSICAL_STRUCTURE__VULNERABILITIES;
+
+	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7699,6 +8050,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @ordered
 	 */
 	int CARD_READER__CONTROL = COMPUTING_DEVICE__CONTROL;
+
+	/**
+	 * The feature id for the '<em><b>Vulnerabilities</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARD_READER__VULNERABILITIES = COMPUTING_DEVICE__VULNERABILITIES;
 
 	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
@@ -7909,6 +8269,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	int EMPLOYEE__CONTROL = ACTOR__CONTROL;
 
 	/**
+	 * The feature id for the '<em><b>Vulnerabilities</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMPLOYEE__VULNERABILITIES = ACTOR__VULNERABILITIES;
+
+	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8099,6 +8468,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	int VISITOR__CONTROL = ACTOR__CONTROL;
 
 	/**
+	 * The feature id for the '<em><b>Vulnerabilities</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VISITOR__VULNERABILITIES = ACTOR__VULNERABILITIES;
+
+	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8287,6 +8665,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @ordered
 	 */
 	int EMBEDDED_COMPUTER__CONTROL = COMPUTER__CONTROL;
+
+	/**
+	 * The feature id for the '<em><b>Vulnerabilities</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMBEDDED_COMPUTER__VULNERABILITIES = COMPUTER__VULNERABILITIES;
 
 	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
@@ -8495,6 +8882,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @ordered
 	 */
 	int MICRO_CONTROLLER__CONTROL = EMBEDDED_COMPUTER__CONTROL;
+
+	/**
+	 * The feature id for the '<em><b>Vulnerabilities</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MICRO_CONTROLLER__VULNERABILITIES = EMBEDDED_COMPUTER__VULNERABILITIES;
 
 	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
@@ -8723,6 +9119,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	int WIRED_CONNECTION__TYPE = PHYSICAL_CONNECTION__TYPE;
 
 	/**
+	 * The feature id for the '<em><b>Vulnerabilities</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WIRED_CONNECTION__VULNERABILITIES = PHYSICAL_CONNECTION__VULNERABILITIES;
+
+	/**
 	 * The number of structural features of the '<em>Wired Connection</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8839,6 +9244,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @ordered
 	 */
 	int ETHERNET__TYPE = WIRED_CONNECTION__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Vulnerabilities</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETHERNET__VULNERABILITIES = WIRED_CONNECTION__VULNERABILITIES;
 
 	/**
 	 * The number of structural features of the '<em>Ethernet</em>' class.
@@ -8959,6 +9373,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	int WALKWAY__TYPE = PHYSICAL_CONNECTION__TYPE;
 
 	/**
+	 * The feature id for the '<em><b>Vulnerabilities</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WALKWAY__VULNERABILITIES = PHYSICAL_CONNECTION__VULNERABILITIES;
+
+	/**
 	 * The number of structural features of the '<em>Walkway</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9075,6 +9498,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @ordered
 	 */
 	int KNX__TYPE = BUS_CONNECTION__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Vulnerabilities</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KNX__VULNERABILITIES = BUS_CONNECTION__VULNERABILITIES;
 
 	/**
 	 * The feature id for the '<em><b>Protocol</b></em>' attribute.
@@ -9204,6 +9636,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	int X10__TYPE = BUS_CONNECTION__TYPE;
 
 	/**
+	 * The feature id for the '<em><b>Vulnerabilities</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int X10__VULNERABILITIES = BUS_CONNECTION__VULNERABILITIES;
+
+	/**
 	 * The feature id for the '<em><b>Protocol</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9240,6 +9681,260 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	int X10_OPERATION_COUNT = BUS_CONNECTION_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link environment.impl.VulnerabilityImpl <em>Vulnerability</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see environment.impl.VulnerabilityImpl
+	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getVulnerability()
+	 * @generated
+	 */
+	int VULNERABILITY = 55;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VULNERABILITY__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>URL</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VULNERABILITY__URL = 1;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VULNERABILITY__DESCRIPTION = 2;
+
+	/**
+	 * The feature id for the '<em><b>Severity</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VULNERABILITY__SEVERITY = 3;
+
+	/**
+	 * The number of structural features of the '<em>Vulnerability</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VULNERABILITY_FEATURE_COUNT = 4;
+
+	/**
+	 * The number of operations of the '<em>Vulnerability</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VULNERABILITY_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link environment.impl.OfficeImpl <em>Office</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see environment.impl.OfficeImpl
+	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getOffice()
+	 * @generated
+	 */
+	int OFFICE = 56;
+
+	/**
+	 * The feature id for the '<em><b>Connections</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OFFICE__CONNECTIONS = ROOM__CONNECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OFFICE__NAME = ROOM__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Property</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OFFICE__PROPERTY = ROOM__PROPERTY;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OFFICE__VALUE = ROOM__VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OFFICE__TYPE = ROOM__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OFFICE__DESCRIPTION = ROOM__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Control</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OFFICE__CONTROL = ROOM__CONTROL;
+
+	/**
+	 * The feature id for the '<em><b>Vulnerabilities</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OFFICE__VULNERABILITIES = ROOM__VULNERABILITIES;
+
+	/**
+	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OFFICE__CONTAINED_ASSETS = ROOM__CONTAINED_ASSETS;
+
+	/**
+	 * The feature id for the '<em><b>Parent Asset</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OFFICE__PARENT_ASSET = ROOM__PARENT_ASSET;
+
+	/**
+	 * The number of structural features of the '<em>Office</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OFFICE_FEATURE_COUNT = ROOM_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Abstract Asset</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OFFICE___ABSTRACT_ASSET = ROOM___ABSTRACT_ASSET;
+
+	/**
+	 * The operation id for the '<em>Similar To</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OFFICE___SIMILAR_TO__ASSET = ROOM___SIMILAR_TO__ASSET;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OFFICE___MERGE_CONNECTIONS = ROOM___MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OFFICE___CAN_MERGE_CONNECTIONS = ROOM___CAN_MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OFFICE___CAN_MERGE_CONTAINED_ASSETS = ROOM___CAN_MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OFFICE___MERGE_CONTAINED_ASSETS = ROOM___MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OFFICE___MERGE_CONNECTIONS__ELIST = ROOM___MERGE_CONNECTIONS__ELIST;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OFFICE___CAN_MERGE_CONNECTIONS__ELIST = ROOM___CAN_MERGE_CONNECTIONS__ELIST;
+
+	/**
+	 * The number of operations of the '<em>Office</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OFFICE_OPERATION_COUNT = ROOM_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link environment.Status <em>Status</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9247,7 +9942,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getStatus()
 	 * @generated
 	 */
-	int STATUS = 55;
+	int STATUS = 57;
 
 	/**
 	 * The meta object id for the '{@link environment.DigitalStatus <em>Digital Status</em>}' enum.
@@ -9257,7 +9952,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getDigitalStatus()
 	 * @generated
 	 */
-	int DIGITAL_STATUS = 56;
+	int DIGITAL_STATUS = 58;
 
 	/**
 	 * The meta object id for the '{@link environment.FileStatus <em>File Status</em>}' enum.
@@ -9267,7 +9962,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getFileStatus()
 	 * @generated
 	 */
-	int FILE_STATUS = 57;
+	int FILE_STATUS = 59;
 
 	/**
 	 * The meta object id for the '{@link environment.CredentialType <em>Credential Type</em>}' enum.
@@ -9277,8 +9972,18 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getCredentialType()
 	 * @generated
 	 */
-	int CREDENTIAL_TYPE = 58;
+	int CREDENTIAL_TYPE = 60;
 
+
+	/**
+	 * The meta object id for the '{@link environment.Level <em>Level</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see environment.Level
+	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getLevel()
+	 * @generated
+	 */
+	int LEVEL = 61;
 
 	/**
 	 * Returns the meta object for class '{@link environment.PhysicalAsset <em>Physical Asset</em>}'.
@@ -9610,6 +10315,17 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	EReference getConnection_Type();
 
 	/**
+	 * Returns the meta object for the reference list '{@link environment.Connection#getVulnerabilities <em>Vulnerabilities</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Vulnerabilities</em>'.
+	 * @see environment.Connection#getVulnerabilities()
+	 * @see #getConnection()
+	 * @generated
+	 */
+	EReference getConnection_Vulnerabilities();
+
+	/**
 	 * Returns the meta object for the '{@link environment.Connection#similarTo(environment.Connection) <em>Similar To</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9736,6 +10452,17 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getAsset_Control();
+
+	/**
+	 * Returns the meta object for the reference list '{@link environment.Asset#getVulnerabilities <em>Vulnerabilities</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Vulnerabilities</em>'.
+	 * @see environment.Asset#getVulnerabilities()
+	 * @see #getAsset()
+	 * @generated
+	 */
+	EReference getAsset_Vulnerabilities();
 
 	/**
 	 * Returns the meta object for the '{@link environment.Asset#abstractAsset() <em>Abstract Asset</em>}' operation.
@@ -10504,6 +11231,70 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	EClass getX10();
 
 	/**
+	 * Returns the meta object for class '{@link environment.Vulnerability <em>Vulnerability</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Vulnerability</em>'.
+	 * @see environment.Vulnerability
+	 * @generated
+	 */
+	EClass getVulnerability();
+
+	/**
+	 * Returns the meta object for the attribute '{@link environment.Vulnerability#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see environment.Vulnerability#getName()
+	 * @see #getVulnerability()
+	 * @generated
+	 */
+	EAttribute getVulnerability_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link environment.Vulnerability#getURL <em>URL</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>URL</em>'.
+	 * @see environment.Vulnerability#getURL()
+	 * @see #getVulnerability()
+	 * @generated
+	 */
+	EAttribute getVulnerability_URL();
+
+	/**
+	 * Returns the meta object for the attribute '{@link environment.Vulnerability#getDescription <em>Description</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Description</em>'.
+	 * @see environment.Vulnerability#getDescription()
+	 * @see #getVulnerability()
+	 * @generated
+	 */
+	EAttribute getVulnerability_Description();
+
+	/**
+	 * Returns the meta object for the attribute '{@link environment.Vulnerability#getSeverity <em>Severity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Severity</em>'.
+	 * @see environment.Vulnerability#getSeverity()
+	 * @see #getVulnerability()
+	 * @generated
+	 */
+	EAttribute getVulnerability_Severity();
+
+	/**
+	 * Returns the meta object for class '{@link environment.Office <em>Office</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Office</em>'.
+	 * @see environment.Office
+	 * @generated
+	 */
+	EClass getOffice();
+
+	/**
 	 * Returns the meta object for enum '{@link environment.Status <em>Status</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10542,6 +11333,16 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getCredentialType();
+
+	/**
+	 * Returns the meta object for enum '{@link environment.Level <em>Level</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Level</em>'.
+	 * @see environment.Level
+	 * @generated
+	 */
+	EEnum getLevel();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -10839,6 +11640,14 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 		EReference CONNECTION__TYPE = eINSTANCE.getConnection_Type();
 
 		/**
+		 * The meta object literal for the '<em><b>Vulnerabilities</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONNECTION__VULNERABILITIES = eINSTANCE.getConnection_Vulnerabilities();
+
+		/**
 		 * The meta object literal for the '<em><b>Similar To</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -10939,6 +11748,14 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ASSET__CONTROL = eINSTANCE.getAsset_Control();
+
+		/**
+		 * The meta object literal for the '<em><b>Vulnerabilities</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ASSET__VULNERABILITIES = eINSTANCE.getAsset_Vulnerabilities();
 
 		/**
 		 * The meta object literal for the '<em><b>Abstract Asset</b></em>' operation.
@@ -11613,6 +12430,58 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 		EClass X10 = eINSTANCE.getX10();
 
 		/**
+		 * The meta object literal for the '{@link environment.impl.VulnerabilityImpl <em>Vulnerability</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see environment.impl.VulnerabilityImpl
+		 * @see environment.impl.CyberPhysicalSystemPackageImpl#getVulnerability()
+		 * @generated
+		 */
+		EClass VULNERABILITY = eINSTANCE.getVulnerability();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VULNERABILITY__NAME = eINSTANCE.getVulnerability_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>URL</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VULNERABILITY__URL = eINSTANCE.getVulnerability_URL();
+
+		/**
+		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VULNERABILITY__DESCRIPTION = eINSTANCE.getVulnerability_Description();
+
+		/**
+		 * The meta object literal for the '<em><b>Severity</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VULNERABILITY__SEVERITY = eINSTANCE.getVulnerability_Severity();
+
+		/**
+		 * The meta object literal for the '{@link environment.impl.OfficeImpl <em>Office</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see environment.impl.OfficeImpl
+		 * @see environment.impl.CyberPhysicalSystemPackageImpl#getOffice()
+		 * @generated
+		 */
+		EClass OFFICE = eINSTANCE.getOffice();
+
+		/**
 		 * The meta object literal for the '{@link environment.Status <em>Status</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -11651,6 +12520,16 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum CREDENTIAL_TYPE = eINSTANCE.getCredentialType();
+
+		/**
+		 * The meta object literal for the '{@link environment.Level <em>Level</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see environment.Level
+		 * @see environment.impl.CyberPhysicalSystemPackageImpl#getLevel()
+		 * @generated
+		 */
+		EEnum LEVEL = eINSTANCE.getLevel();
 
 	}
 

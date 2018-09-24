@@ -41,6 +41,7 @@ import environment.Lab;
 import environment.Laptop;
 import environment.Lounge;
 import environment.MicroController;
+import environment.Office;
 import environment.PhysicalAsset;
 import environment.PhysicalConnection;
 import environment.PhysicalStructure;
@@ -53,6 +54,7 @@ import environment.Stairs;
 import environment.Toilet;
 import environment.Type;
 import environment.Visitor;
+import environment.Vulnerability;
 import environment.Walkway;
 import environment.WiredConnection;
 import environment.Workstation;
@@ -340,6 +342,14 @@ public class CyberPhysicalSystemAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseX10(X10 object) {
 				return createX10Adapter();
+			}
+			@Override
+			public Adapter caseVulnerability(Vulnerability object) {
+				return createVulnerabilityAdapter();
+			}
+			@Override
+			public Adapter caseOffice(Office object) {
+				return createOfficeAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -1128,6 +1138,34 @@ public class CyberPhysicalSystemAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createX10Adapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link environment.Vulnerability <em>Vulnerability</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see environment.Vulnerability
+	 * @generated
+	 */
+	public Adapter createVulnerabilityAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link environment.Office <em>Office</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see environment.Office
+	 * @generated
+	 */
+	public Adapter createOfficeAdapter() {
 		return null;
 	}
 

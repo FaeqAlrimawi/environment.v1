@@ -17,6 +17,7 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 import java.util.TreeMap;
 
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -51,11 +52,11 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class EnvironmentDiagramImpl extends MinimalEObjectImpl.Container implements EnvironmentDiagram {
 	
-	
-//	public static List<List<Class<?>>> levels = new LinkedList<List<Class<?>>>();
 	public static TreeMap<Integer, List<Class<?>>> abstractionLevels;
 	public static int leastAbstractLevel = EnvironmentDiagram.LEVEL3;
 	public static int mostAbstractLevel = EnvironmentDiagram.LEVEL1;
+	
+	protected Map<String, Asset> assetMap = new HashMap<String, Asset>();
 	
 	/**
 	 * The cached value of the '{@link #getAsset() <em>Asset</em>}' containment reference list.
@@ -181,6 +182,40 @@ public class EnvironmentDiagramImpl extends MinimalEObjectImpl.Container impleme
 			asset = new EObjectContainmentEList<Asset>(Asset.class, this, CyberPhysicalSystemPackage.ENVIRONMENT_DIAGRAM__ASSET);
 		}
 		return asset;
+	}
+	
+	public Asset getAsset(String assetName) {
+	
+		if(assetMap == null || assetMap.isEmpty()) {
+			generateAssetMap();
+		}
+		
+		return assetMap.get(assetName);
+		
+	}
+
+	public Connection getConnection(String connectionName) {
+	
+			for(Connection con : getConnection()) {
+				if(con.getName().equals(connectionName)) {
+					return con;
+				}
+			}
+			
+			return null;
+	}
+	
+	protected void generateAssetMap() {
+		
+		if(assetMap == null) {
+			assetMap = new HashMap<String, Asset>();
+		} else {
+			assetMap.clear();
+		}
+		
+		for(Asset ast : getAsset()) {
+			assetMap.put(ast.getName(), ast);
+		}
 	}
 
 	/**

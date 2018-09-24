@@ -29,6 +29,7 @@ import environment.PhysicalAsset;
 import environment.Property;
 import environment.Room;
 import environment.Type;
+import environment.Vulnerability;
 import externalUtility.HungarianAlgorithm;
 
 /**
@@ -46,6 +47,7 @@ import externalUtility.HungarianAlgorithm;
  *   <li>{@link environment.impl.AssetImpl#getType <em>Type</em>}</li>
  *   <li>{@link environment.impl.AssetImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link environment.impl.AssetImpl#getControl <em>Control</em>}</li>
+ *   <li>{@link environment.impl.AssetImpl#getVulnerabilities <em>Vulnerabilities</em>}</li>
  * </ul>
  *
  * @generated
@@ -170,7 +172,17 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	protected String control = CONTROL_EDEFAULT;
 	
-//	protected  static LinkedList<Integer> assetNumbers = new LinkedList<Integer>();
+/**
+	 * The cached value of the '{@link #getVulnerabilities() <em>Vulnerabilities</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getVulnerabilities()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Vulnerability> vulnerabilities;
+
+	//	protected  static LinkedList<Integer> assetNumbers = new LinkedList<Integer>();
 //	
 //	protected static Random random = new Random();
 	
@@ -371,6 +383,18 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 		control = newControl;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, CyberPhysicalSystemPackage.ASSET__CONTROL, oldControl, control));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Vulnerability> getVulnerabilities() {
+		if (vulnerabilities == null) {
+			vulnerabilities = new EObjectResolvingEList<Vulnerability>(Vulnerability.class, this, CyberPhysicalSystemPackage.ASSET__VULNERABILITIES);
+		}
+		return vulnerabilities;
 	}
 
 	/**
@@ -939,34 +963,34 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 		}
 	}
 	
-	public EList<? extends Asset> getContainedAssets() {
-		
-		/*EList<Asset> thisAssets = null;
-		EList<DigitalAsset> thisDigitalAssets = null;
-		
-		if(PhysicalAsset.class.isInstance(this)) {
-			thisAssets = ((PhysicalAsset)this).getContainedAssets();	
-		} else if(DigitalAsset.class.isInstance(this)) {
-			thisDigitalAssets = ((DigitalAsset)this).getContainedAssets();	
-		}
-			
-		//move digital assets to the assets variable
-		if(thisDigitalAssets != null) {
-			thisAssets = new BasicEList<Asset>();
-			for(DigitalAsset ast : thisDigitalAssets) {
-				thisAssets.add(ast);
-			}
-		}
-
-		if(thisAssets == null || thisAssets.size() == 0) {
-			return new BasicEList<Asset>();
-		}
-		*/
-		
-		//will never be called
-		
-		return new BasicEList();
-	}
+//	public EList<? extends Asset> getContainedAssets() {
+//		
+//		/*EList<Asset> thisAssets = null;
+//		EList<DigitalAsset> thisDigitalAssets = null;
+//		
+//		if(PhysicalAsset.class.isInstance(this)) {
+//			thisAssets = ((PhysicalAsset)this).getContainedAssets();	
+//		} else if(DigitalAsset.class.isInstance(this)) {
+//			thisDigitalAssets = ((DigitalAsset)this).getContainedAssets();	
+//		}
+//			
+//		//move digital assets to the assets variable
+//		if(thisDigitalAssets != null) {
+//			thisAssets = new BasicEList<Asset>();
+//			for(DigitalAsset ast : thisDigitalAssets) {
+//				thisAssets.add(ast);
+//			}
+//		}
+//
+//		if(thisAssets == null || thisAssets.size() == 0) {
+//			return new BasicEList<Asset>();
+//		}
+//		*/
+//		
+//		//will never be called
+//		
+//		return new BasicEList();
+//	}
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1009,14 +1033,13 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-
+	 * <!-- end-user-doc --
+	 * @generated
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case CyberPhysicalSystemPackage.ASSET__CONNECTIONS:
-//				removeDuplicates(getConnections());
 				return getConnections();
 			case CyberPhysicalSystemPackage.ASSET__NAME:
 				return getName();
@@ -1030,6 +1053,8 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 				return getDescription();
 			case CyberPhysicalSystemPackage.ASSET__CONTROL:
 				return getControl();
+			case CyberPhysicalSystemPackage.ASSET__VULNERABILITIES:
+				return getVulnerabilities();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -1074,6 +1099,10 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 			case CyberPhysicalSystemPackage.ASSET__CONTROL:
 				setControl((String)newValue);
 				return;
+			case CyberPhysicalSystemPackage.ASSET__VULNERABILITIES:
+				getVulnerabilities().clear();
+				getVulnerabilities().addAll((Collection<? extends Vulnerability>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -1107,6 +1136,9 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 			case CyberPhysicalSystemPackage.ASSET__CONTROL:
 				setControl(CONTROL_EDEFAULT);
 				return;
+			case CyberPhysicalSystemPackage.ASSET__VULNERABILITIES:
+				getVulnerabilities().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -1133,6 +1165,8 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 			case CyberPhysicalSystemPackage.ASSET__CONTROL:
 				return CONTROL_EDEFAULT == null ? control != null : !CONTROL_EDEFAULT.equals(control);
+			case CyberPhysicalSystemPackage.ASSET__VULNERABILITIES:
+				return vulnerabilities != null && !vulnerabilities.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

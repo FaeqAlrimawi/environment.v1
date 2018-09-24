@@ -41,6 +41,7 @@ import environment.Lab;
 import environment.Laptop;
 import environment.Lounge;
 import environment.MicroController;
+import environment.Office;
 import environment.PhysicalAsset;
 import environment.PhysicalConnection;
 import environment.PhysicalStructure;
@@ -53,6 +54,7 @@ import environment.Stairs;
 import environment.Toilet;
 import environment.Type;
 import environment.Visitor;
+import environment.Vulnerability;
 import environment.Walkway;
 import environment.WiredConnection;
 import environment.Workstation;
@@ -581,6 +583,22 @@ public class CyberPhysicalSystemSwitch<T> extends Switch<T> {
 				if (result == null) result = caseBusConnection(x10);
 				if (result == null) result = caseDigitalConnection(x10);
 				if (result == null) result = caseConnection(x10);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CyberPhysicalSystemPackage.VULNERABILITY: {
+				Vulnerability vulnerability = (Vulnerability)theEObject;
+				T result = caseVulnerability(vulnerability);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CyberPhysicalSystemPackage.OFFICE: {
+				Office office = (Office)theEObject;
+				T result = caseOffice(office);
+				if (result == null) result = caseRoom(office);
+				if (result == null) result = casePhysicalStructure(office);
+				if (result == null) result = casePhysicalAsset(office);
+				if (result == null) result = caseAsset(office);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -1410,6 +1428,36 @@ public class CyberPhysicalSystemSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseX10(X10 object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Vulnerability</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Vulnerability</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVulnerability(Vulnerability object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Office</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Office</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseOffice(Office object) {
 		return null;
 	}
 

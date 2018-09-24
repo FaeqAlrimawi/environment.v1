@@ -77,6 +77,7 @@ public interface EnvironmentDiagram extends EObject {
 				StairsImpl.class, EmployeeImpl.class, VisitorImpl.class, BusNetworkImpl.class, 
 				IPNetworkImpl.class, ComputerImpl.class}; 
 	
+	
 	List<String> getAssetNames();
 	/**
 	 * Returns the value of the '<em><b>Asset</b></em>' containment reference list.
@@ -93,7 +94,8 @@ public interface EnvironmentDiagram extends EObject {
 	 * @generated
 	 */
 	EList<Asset> getAsset();
-
+	Asset getAsset(String assetName);
+	Connection getConnection(String connectionName);
 	/**
 	 * Returns the value of the '<em><b>Connection</b></em>' containment reference list.
 	 * The list contents are of type {@link environment.Connection}.

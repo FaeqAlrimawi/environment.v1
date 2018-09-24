@@ -499,6 +499,24 @@ public interface CyberPhysicalSystemFactory extends EFactory {
 	X10 createX10();
 
 	/**
+	 * Returns a new object of class '<em>Vulnerability</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Vulnerability</em>'.
+	 * @generated
+	 */
+	Vulnerability createVulnerability();
+
+	/**
+	 * Returns a new object of class '<em>Office</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Office</em>'.
+	 * @generated
+	 */
+	Office createOffice();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

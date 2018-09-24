@@ -22,6 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link environment.Asset#getType <em>Type</em>}</li>
  *   <li>{@link environment.Asset#getDescription <em>Description</em>}</li>
  *   <li>{@link environment.Asset#getControl <em>Control</em>}</li>
+ *   <li>{@link environment.Asset#getVulnerabilities <em>Vulnerabilities</em>}</li>
  * </ul>
  *
  * @see environment.CyberPhysicalSystemPackage#getAsset()
@@ -249,6 +250,22 @@ public interface Asset extends EObject {
 	 * @generated
 	 */
 	void setControl(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Vulnerabilities</b></em>' reference list.
+	 * The list contents are of type {@link environment.Vulnerability}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Vulnerabilities</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Vulnerabilities</em>' reference list.
+	 * @see environment.CyberPhysicalSystemPackage#getAsset_Vulnerabilities()
+	 * @model
+	 * @generated
+	 */
+	EList<Vulnerability> getVulnerabilities();
 
 	/**
 	 * Creates a new Asset object that represents an abstraction of this asset. This includes its attributes 

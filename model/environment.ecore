@@ -61,6 +61,8 @@
         eType="#//Property"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//Type" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="vulnerabilities" upperBound="-1"
+        eType="#//Vulnerability"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DigitalConnection" eSuperTypes="#//Connection">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="protocol" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -91,6 +93,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//Type" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="control" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="vulnerabilities" upperBound="-1"
+        eType="#//Vulnerability"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="EnvironmentDiagram">
     <eStructuralFeatures xsi:type="ecore:EReference" name="asset" upperBound="-1"
@@ -190,4 +194,17 @@
   <eClassifiers xsi:type="ecore:EClass" name="Walkway" eSuperTypes="#//PhysicalConnection"/>
   <eClassifiers xsi:type="ecore:EClass" name="KNX" eSuperTypes="#//BusConnection"/>
   <eClassifiers xsi:type="ecore:EClass" name="X10" eSuperTypes="#//BusConnection"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Vulnerability">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="URL" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="severity" eType="#//Level"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Level">
+    <eLiterals name="LOW"/>
+    <eLiterals name="MEDIUM" value="1"/>
+    <eLiterals name="HIGH" value="2"/>
+    <eLiterals name="UNKNOWN" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Office" eSuperTypes="#//Room"/>
 </ecore:EPackage>

@@ -41,8 +41,10 @@ import environment.KNX;
 import environment.Kitchen;
 import environment.Lab;
 import environment.Laptop;
+import environment.Level;
 import environment.Lounge;
 import environment.MicroController;
+import environment.Office;
 import environment.PhysicalAsset;
 import environment.PhysicalConnection;
 import environment.PhysicalStructure;
@@ -56,6 +58,7 @@ import environment.Status;
 import environment.Toilet;
 import environment.Type;
 import environment.Visitor;
+import environment.Vulnerability;
 import environment.Walkway;
 import environment.WiredConnection;
 import environment.Workstation;
@@ -167,6 +170,8 @@ public class CyberPhysicalSystemFactoryImpl extends EFactoryImpl implements Cybe
 			case CyberPhysicalSystemPackage.WALKWAY: return createWalkway();
 			case CyberPhysicalSystemPackage.KNX: return createKNX();
 			case CyberPhysicalSystemPackage.X10: return createX10();
+			case CyberPhysicalSystemPackage.VULNERABILITY: return createVulnerability();
+			case CyberPhysicalSystemPackage.OFFICE: return createOffice();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -188,6 +193,8 @@ public class CyberPhysicalSystemFactoryImpl extends EFactoryImpl implements Cybe
 				return createFileStatusFromString(eDataType, initialValue);
 			case CyberPhysicalSystemPackage.CREDENTIAL_TYPE:
 				return createCredentialTypeFromString(eDataType, initialValue);
+			case CyberPhysicalSystemPackage.LEVEL:
+				return createLevelFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -209,6 +216,8 @@ public class CyberPhysicalSystemFactoryImpl extends EFactoryImpl implements Cybe
 				return convertFileStatusToString(eDataType, instanceValue);
 			case CyberPhysicalSystemPackage.CREDENTIAL_TYPE:
 				return convertCredentialTypeToString(eDataType, instanceValue);
+			case CyberPhysicalSystemPackage.LEVEL:
+				return convertLevelToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -749,6 +758,26 @@ public class CyberPhysicalSystemFactoryImpl extends EFactoryImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Vulnerability createVulnerability() {
+		VulnerabilityImpl vulnerability = new VulnerabilityImpl();
+		return vulnerability;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Office createOffice() {
+		OfficeImpl office = new OfficeImpl();
+		return office;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Status createStatusFromString(EDataType eDataType, String initialValue) {
 		Status result = Status.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
@@ -821,6 +850,26 @@ public class CyberPhysicalSystemFactoryImpl extends EFactoryImpl implements Cybe
 	 * @generated
 	 */
 	public String convertCredentialTypeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Level createLevelFromString(EDataType eDataType, String initialValue) {
+		Level result = Level.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertLevelToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

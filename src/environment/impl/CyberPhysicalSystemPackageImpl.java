@@ -40,8 +40,10 @@ import environment.IPNetwork;
 import environment.Kitchen;
 import environment.Lab;
 import environment.Laptop;
+import environment.Level;
 import environment.Lounge;
 import environment.MicroController;
+import environment.Office;
 import environment.PhysicalAsset;
 import environment.PhysicalConnection;
 import environment.PhysicalStructure;
@@ -55,6 +57,7 @@ import environment.Status;
 import environment.Toilet;
 import environment.Type;
 import environment.Visitor;
+import environment.Vulnerability;
 import environment.Walkway;
 import environment.WiredConnection;
 import environment.Workstation;
@@ -465,6 +468,20 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass vulnerabilityEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass officeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum statusEEnum = null;
 
 	/**
@@ -487,6 +504,13 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * @generated
 	 */
 	private EEnum credentialTypeEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum levelEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -833,6 +857,15 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getConnection_Vulnerabilities() {
+		return (EReference)connectionEClass.getEStructuralFeatures().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EOperation getConnection__SimilarTo__Connection() {
 		return connectionEClass.getEOperations().get(0);
 	}
@@ -934,6 +967,15 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 */
 	public EAttribute getAsset_Control() {
 		return (EAttribute)assetEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getAsset_Vulnerabilities() {
+		return (EReference)assetEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -1607,6 +1649,60 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getVulnerability() {
+		return vulnerabilityEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getVulnerability_Name() {
+		return (EAttribute)vulnerabilityEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getVulnerability_URL() {
+		return (EAttribute)vulnerabilityEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getVulnerability_Description() {
+		return (EAttribute)vulnerabilityEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getVulnerability_Severity() {
+		return (EAttribute)vulnerabilityEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getOffice() {
+		return officeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getStatus() {
 		return statusEEnum;
 	}
@@ -1636,6 +1732,15 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 */
 	public EEnum getCredentialType() {
 		return credentialTypeEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getLevel() {
+		return levelEEnum;
 	}
 
 	/**
@@ -1708,6 +1813,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 		createEReference(connectionEClass, CONNECTION__PROPERTIES);
 		createEAttribute(connectionEClass, CONNECTION__DESCRIPTION);
 		createEReference(connectionEClass, CONNECTION__TYPE);
+		createEReference(connectionEClass, CONNECTION__VULNERABILITIES);
 		createEOperation(connectionEClass, CONNECTION___SIMILAR_TO__CONNECTION);
 
 		digitalConnectionEClass = createEClass(DIGITAL_CONNECTION);
@@ -1723,6 +1829,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 		createEReference(assetEClass, ASSET__TYPE);
 		createEAttribute(assetEClass, ASSET__DESCRIPTION);
 		createEAttribute(assetEClass, ASSET__CONTROL);
+		createEReference(assetEClass, ASSET__VULNERABILITIES);
 		createEOperation(assetEClass, ASSET___ABSTRACT_ASSET);
 		createEOperation(assetEClass, ASSET___SIMILAR_TO__ASSET);
 		createEOperation(assetEClass, ASSET___MERGE_CONNECTIONS);
@@ -1838,11 +1945,20 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 
 		x10EClass = createEClass(X10);
 
+		vulnerabilityEClass = createEClass(VULNERABILITY);
+		createEAttribute(vulnerabilityEClass, VULNERABILITY__NAME);
+		createEAttribute(vulnerabilityEClass, VULNERABILITY__URL);
+		createEAttribute(vulnerabilityEClass, VULNERABILITY__DESCRIPTION);
+		createEAttribute(vulnerabilityEClass, VULNERABILITY__SEVERITY);
+
+		officeEClass = createEClass(OFFICE);
+
 		// Create enums
 		statusEEnum = createEEnum(STATUS);
 		digitalStatusEEnum = createEEnum(DIGITAL_STATUS);
 		fileStatusEEnum = createEEnum(FILE_STATUS);
 		credentialTypeEEnum = createEEnum(CREDENTIAL_TYPE);
+		levelEEnum = createEEnum(LEVEL);
 	}
 
 	/**
@@ -1920,6 +2036,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 		walkwayEClass.getESuperTypes().add(this.getPhysicalConnection());
 		knxEClass.getESuperTypes().add(this.getBusConnection());
 		x10EClass.getESuperTypes().add(this.getBusConnection());
+		officeEClass.getESuperTypes().add(this.getRoom());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(physicalAssetEClass, PhysicalAsset.class, "PhysicalAsset", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1964,6 +2081,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 		initEReference(getConnection_Properties(), this.getProperty(), null, "properties", null, 0, -1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getConnection_Description(), ecorePackage.getEString(), "description", null, 0, 1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getConnection_Type(), this.getType(), null, "type", null, 0, 1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getConnection_Vulnerabilities(), this.getVulnerability(), null, "vulnerabilities", null, 0, -1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		EOperation op = initEOperation(getConnection__SimilarTo__Connection(), ecorePackage.getEInt(), "similarTo", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getConnection(), "connection", 0, 1, IS_UNIQUE, IS_ORDERED);
@@ -1981,6 +2099,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 		initEReference(getAsset_Type(), this.getType(), null, "type", null, 0, 1, Asset.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAsset_Description(), ecorePackage.getEString(), "description", null, 0, 1, Asset.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAsset_Control(), ecorePackage.getEString(), "control", null, 0, 1, Asset.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAsset_Vulnerabilities(), this.getVulnerability(), null, "vulnerabilities", null, 0, -1, Asset.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getAsset__AbstractAsset(), this.getAsset(), "abstractAsset", 0, 1, IS_UNIQUE, IS_ORDERED);
 
@@ -2107,6 +2226,14 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 
 		initEClass(x10EClass, environment.X10.class, "X10", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
+		initEClass(vulnerabilityEClass, Vulnerability.class, "Vulnerability", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getVulnerability_Name(), ecorePackage.getEString(), "name", null, 0, 1, Vulnerability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVulnerability_URL(), ecorePackage.getEString(), "URL", null, 0, 1, Vulnerability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVulnerability_Description(), ecorePackage.getEString(), "description", null, 0, 1, Vulnerability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVulnerability_Severity(), this.getLevel(), "severity", null, 0, 1, Vulnerability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(officeEClass, Office.class, "Office", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
 		// Initialize enums and add enum literals
 		initEEnum(statusEEnum, Status.class, "Status");
 		addEEnumLiteral(statusEEnum, Status.ON);
@@ -2130,6 +2257,12 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 		addEEnumLiteral(credentialTypeEEnum, CredentialType.CARD);
 		addEEnumLiteral(credentialTypeEEnum, CredentialType.FINGERPRINT);
 		addEEnumLiteral(credentialTypeEEnum, CredentialType.OTHER);
+
+		initEEnum(levelEEnum, Level.class, "Level");
+		addEEnumLiteral(levelEEnum, Level.LOW);
+		addEEnumLiteral(levelEEnum, Level.MEDIUM);
+		addEEnumLiteral(levelEEnum, Level.HIGH);
+		addEEnumLiteral(levelEEnum, Level.UNKNOWN);
 
 		// Create resource
 		createResource(eNS_URI);

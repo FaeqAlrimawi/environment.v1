@@ -2,24 +2,20 @@
  */
 package environment.impl;
 
-import environment.Asset;
-import environment.DigitalAsset;
-import environment.PhysicalAsset;
-import environment.CyberPhysicalSystemPackage;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+
+import environment.Asset;
+import environment.CyberPhysicalSystemPackage;
+import environment.DigitalAsset;
 
 /**
  * <!-- begin-user-doc -->
@@ -110,38 +106,38 @@ public class DigitalAssetImpl extends AssetImpl implements DigitalAsset {
 		parentAsset = newParentAsset;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, CyberPhysicalSystemPackage.DIGITAL_ASSET__PARENT_ASSET, oldParentAsset, parentAsset));
-		
-		//add this object as a child to the parent as well and remove from old parent if any
-				if(newParentAsset != null) {
-					if(PhysicalAsset.class.isInstance(newParentAsset)) {
-						EList<Asset> containedAssets = ((PhysicalAsset)newParentAsset).getContainedAssets();
-					
-					//add to the new parent
-						if(!isContainedInPhysical((Collection<Asset>)containedAssets)) {
-							containedAssets.add(this);
-							//removeDuplicatesPhysical((Collection<Asset>)containedAssets);
-						}
-					} else if(DigitalAsset.class.isInstance(newParentAsset)) {
-						EList<DigitalAsset> containedAssets = ((DigitalAsset)newParentAsset).getContainedAssets();
-					
-						//add to the new parent
-							if(!isContainedIn((Collection<DigitalAsset>)containedAssets)) {
-								containedAssets.add(this);
-						}
-						
-						//removeDuplicates((Collection<DigitalAsset>)containedAssets);			
-					}
-				}
-				//remove from old parent
-				if(oldParentAsset != null) {
-					if(PhysicalAsset.class.isInstance(oldParentAsset)) {
-						((PhysicalAsset)oldParentAsset).getContainedAssets().remove(this);
-					
-					} else if(DigitalAsset.class.isInstance(oldParentAsset)) {
-						((DigitalAsset)oldParentAsset).getContainedAssets().remove(this);
-		
-					}
-			} 
+//		
+//		//add this object as a child to the parent as well and remove from old parent if any
+//				if(newParentAsset != null) {
+//					if(PhysicalAsset.class.isInstance(newParentAsset)) {
+//						EList<Asset> containedAssets = ((PhysicalAsset)newParentAsset).getContainedAssets();
+//					
+//					//add to the new parent
+//						if(!isContainedInPhysical((Collection<Asset>)containedAssets)) {
+//							containedAssets.add(this);
+//							//removeDuplicatesPhysical((Collection<Asset>)containedAssets);
+//						}
+//					} else if(DigitalAsset.class.isInstance(newParentAsset)) {
+//						EList<DigitalAsset> containedAssets = ((DigitalAsset)newParentAsset).getContainedAssets();
+//					
+//						//add to the new parent
+//							if(!isContainedIn((Collection<DigitalAsset>)containedAssets)) {
+//								containedAssets.add(this);
+//						}
+//						
+//						//removeDuplicates((Collection<DigitalAsset>)containedAssets);			
+//					}
+//				}
+//				//remove from old parent
+//				if(oldParentAsset != null) {
+//					if(PhysicalAsset.class.isInstance(oldParentAsset)) {
+//						((PhysicalAsset)oldParentAsset).getContainedAssets().remove(this);
+//					
+//					} else if(DigitalAsset.class.isInstance(oldParentAsset)) {
+//						((DigitalAsset)oldParentAsset).getContainedAssets().remove(this);
+//		
+//					}
+//			} 
 				
 	}
 	
@@ -177,8 +173,6 @@ public class DigitalAssetImpl extends AssetImpl implements DigitalAsset {
 		if (containedAssets == null) {
 			containedAssets = new EObjectResolvingEList<DigitalAsset>(DigitalAsset.class, this, CyberPhysicalSystemPackage.DIGITAL_ASSET__CONTAINED_ASSETS);
 		}
-		
-		removeDuplicates(containedAssets);
 		return containedAssets;
 	}
 
