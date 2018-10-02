@@ -2,6 +2,7 @@
  */
 package environment.util;
 
+import environment.AccessPoint;
 import environment.Action;
 import environment.Actor;
 import environment.Application;
@@ -50,6 +51,7 @@ import environment.Property;
 import environment.Room;
 import environment.Server;
 import environment.SmartLight;
+import environment.SmartTV;
 import environment.Stairs;
 import environment.Toilet;
 import environment.Type;
@@ -599,6 +601,24 @@ public class CyberPhysicalSystemSwitch<T> extends Switch<T> {
 				if (result == null) result = casePhysicalStructure(office);
 				if (result == null) result = casePhysicalAsset(office);
 				if (result == null) result = caseAsset(office);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CyberPhysicalSystemPackage.SMART_TV: {
+				SmartTV smartTV = (SmartTV)theEObject;
+				T result = caseSmartTV(smartTV);
+				if (result == null) result = caseComputingDevice(smartTV);
+				if (result == null) result = casePhysicalAsset(smartTV);
+				if (result == null) result = caseAsset(smartTV);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CyberPhysicalSystemPackage.ACCESS_POINT: {
+				AccessPoint accessPoint = (AccessPoint)theEObject;
+				T result = caseAccessPoint(accessPoint);
+				if (result == null) result = caseComputingDevice(accessPoint);
+				if (result == null) result = casePhysicalAsset(accessPoint);
+				if (result == null) result = caseAsset(accessPoint);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -1458,6 +1478,36 @@ public class CyberPhysicalSystemSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseOffice(Office object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Smart TV</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Smart TV</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSmartTV(SmartTV object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Access Point</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Access Point</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAccessPoint(AccessPoint object) {
 		return null;
 	}
 

@@ -9935,6 +9935,440 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	int OFFICE_OPERATION_COUNT = ROOM_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link environment.impl.SmartTVImpl <em>Smart TV</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see environment.impl.SmartTVImpl
+	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getSmartTV()
+	 * @generated
+	 */
+	int SMART_TV = 57;
+
+	/**
+	 * The feature id for the '<em><b>Connections</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SMART_TV__CONNECTIONS = COMPUTING_DEVICE__CONNECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SMART_TV__NAME = COMPUTING_DEVICE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Property</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SMART_TV__PROPERTY = COMPUTING_DEVICE__PROPERTY;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SMART_TV__VALUE = COMPUTING_DEVICE__VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SMART_TV__TYPE = COMPUTING_DEVICE__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SMART_TV__DESCRIPTION = COMPUTING_DEVICE__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Control</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SMART_TV__CONTROL = COMPUTING_DEVICE__CONTROL;
+
+	/**
+	 * The feature id for the '<em><b>Vulnerabilities</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SMART_TV__VULNERABILITIES = COMPUTING_DEVICE__VULNERABILITIES;
+
+	/**
+	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SMART_TV__CONTAINED_ASSETS = COMPUTING_DEVICE__CONTAINED_ASSETS;
+
+	/**
+	 * The feature id for the '<em><b>Parent Asset</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SMART_TV__PARENT_ASSET = COMPUTING_DEVICE__PARENT_ASSET;
+
+	/**
+	 * The feature id for the '<em><b>Status</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SMART_TV__STATUS = COMPUTING_DEVICE__STATUS;
+
+	/**
+	 * The feature id for the '<em><b>Connectable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SMART_TV__CONNECTABLE = COMPUTING_DEVICE__CONNECTABLE;
+
+	/**
+	 * The feature id for the '<em><b>Model</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SMART_TV__MODEL = COMPUTING_DEVICE__MODEL;
+
+	/**
+	 * The number of structural features of the '<em>Smart TV</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SMART_TV_FEATURE_COUNT = COMPUTING_DEVICE_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Abstract Asset</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SMART_TV___ABSTRACT_ASSET = COMPUTING_DEVICE___ABSTRACT_ASSET;
+
+	/**
+	 * The operation id for the '<em>Similar To</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SMART_TV___SIMILAR_TO__ASSET = COMPUTING_DEVICE___SIMILAR_TO__ASSET;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SMART_TV___MERGE_CONNECTIONS = COMPUTING_DEVICE___MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SMART_TV___CAN_MERGE_CONNECTIONS = COMPUTING_DEVICE___CAN_MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SMART_TV___CAN_MERGE_CONTAINED_ASSETS = COMPUTING_DEVICE___CAN_MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SMART_TV___MERGE_CONTAINED_ASSETS = COMPUTING_DEVICE___MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SMART_TV___MERGE_CONNECTIONS__ELIST = COMPUTING_DEVICE___MERGE_CONNECTIONS__ELIST;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SMART_TV___CAN_MERGE_CONNECTIONS__ELIST = COMPUTING_DEVICE___CAN_MERGE_CONNECTIONS__ELIST;
+
+	/**
+	 * The number of operations of the '<em>Smart TV</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SMART_TV_OPERATION_COUNT = COMPUTING_DEVICE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link environment.impl.AccessPointImpl <em>Access Point</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see environment.impl.AccessPointImpl
+	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getAccessPoint()
+	 * @generated
+	 */
+	int ACCESS_POINT = 58;
+
+	/**
+	 * The feature id for the '<em><b>Connections</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCESS_POINT__CONNECTIONS = COMPUTING_DEVICE__CONNECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCESS_POINT__NAME = COMPUTING_DEVICE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Property</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCESS_POINT__PROPERTY = COMPUTING_DEVICE__PROPERTY;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCESS_POINT__VALUE = COMPUTING_DEVICE__VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCESS_POINT__TYPE = COMPUTING_DEVICE__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCESS_POINT__DESCRIPTION = COMPUTING_DEVICE__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Control</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCESS_POINT__CONTROL = COMPUTING_DEVICE__CONTROL;
+
+	/**
+	 * The feature id for the '<em><b>Vulnerabilities</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCESS_POINT__VULNERABILITIES = COMPUTING_DEVICE__VULNERABILITIES;
+
+	/**
+	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCESS_POINT__CONTAINED_ASSETS = COMPUTING_DEVICE__CONTAINED_ASSETS;
+
+	/**
+	 * The feature id for the '<em><b>Parent Asset</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCESS_POINT__PARENT_ASSET = COMPUTING_DEVICE__PARENT_ASSET;
+
+	/**
+	 * The feature id for the '<em><b>Status</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCESS_POINT__STATUS = COMPUTING_DEVICE__STATUS;
+
+	/**
+	 * The feature id for the '<em><b>Connectable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCESS_POINT__CONNECTABLE = COMPUTING_DEVICE__CONNECTABLE;
+
+	/**
+	 * The feature id for the '<em><b>Model</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCESS_POINT__MODEL = COMPUTING_DEVICE__MODEL;
+
+	/**
+	 * The number of structural features of the '<em>Access Point</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCESS_POINT_FEATURE_COUNT = COMPUTING_DEVICE_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Abstract Asset</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCESS_POINT___ABSTRACT_ASSET = COMPUTING_DEVICE___ABSTRACT_ASSET;
+
+	/**
+	 * The operation id for the '<em>Similar To</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCESS_POINT___SIMILAR_TO__ASSET = COMPUTING_DEVICE___SIMILAR_TO__ASSET;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCESS_POINT___MERGE_CONNECTIONS = COMPUTING_DEVICE___MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCESS_POINT___CAN_MERGE_CONNECTIONS = COMPUTING_DEVICE___CAN_MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCESS_POINT___CAN_MERGE_CONTAINED_ASSETS = COMPUTING_DEVICE___CAN_MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCESS_POINT___MERGE_CONTAINED_ASSETS = COMPUTING_DEVICE___MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCESS_POINT___MERGE_CONNECTIONS__ELIST = COMPUTING_DEVICE___MERGE_CONNECTIONS__ELIST;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCESS_POINT___CAN_MERGE_CONNECTIONS__ELIST = COMPUTING_DEVICE___CAN_MERGE_CONNECTIONS__ELIST;
+
+	/**
+	 * The number of operations of the '<em>Access Point</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCESS_POINT_OPERATION_COUNT = COMPUTING_DEVICE_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link environment.Status <em>Status</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9942,7 +10376,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getStatus()
 	 * @generated
 	 */
-	int STATUS = 57;
+	int STATUS = 59;
 
 	/**
 	 * The meta object id for the '{@link environment.DigitalStatus <em>Digital Status</em>}' enum.
@@ -9952,7 +10386,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getDigitalStatus()
 	 * @generated
 	 */
-	int DIGITAL_STATUS = 58;
+	int DIGITAL_STATUS = 60;
 
 	/**
 	 * The meta object id for the '{@link environment.FileStatus <em>File Status</em>}' enum.
@@ -9962,7 +10396,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getFileStatus()
 	 * @generated
 	 */
-	int FILE_STATUS = 59;
+	int FILE_STATUS = 61;
 
 	/**
 	 * The meta object id for the '{@link environment.CredentialType <em>Credential Type</em>}' enum.
@@ -9972,7 +10406,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getCredentialType()
 	 * @generated
 	 */
-	int CREDENTIAL_TYPE = 60;
+	int CREDENTIAL_TYPE = 62;
 
 
 	/**
@@ -9983,7 +10417,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getLevel()
 	 * @generated
 	 */
-	int LEVEL = 61;
+	int LEVEL = 63;
 
 	/**
 	 * Returns the meta object for class '{@link environment.PhysicalAsset <em>Physical Asset</em>}'.
@@ -11295,6 +11729,26 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	EClass getOffice();
 
 	/**
+	 * Returns the meta object for class '{@link environment.SmartTV <em>Smart TV</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Smart TV</em>'.
+	 * @see environment.SmartTV
+	 * @generated
+	 */
+	EClass getSmartTV();
+
+	/**
+	 * Returns the meta object for class '{@link environment.AccessPoint <em>Access Point</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Access Point</em>'.
+	 * @see environment.AccessPoint
+	 * @generated
+	 */
+	EClass getAccessPoint();
+
+	/**
 	 * Returns the meta object for enum '{@link environment.Status <em>Status</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -12480,6 +12934,26 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 		 * @generated
 		 */
 		EClass OFFICE = eINSTANCE.getOffice();
+
+		/**
+		 * The meta object literal for the '{@link environment.impl.SmartTVImpl <em>Smart TV</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see environment.impl.SmartTVImpl
+		 * @see environment.impl.CyberPhysicalSystemPackageImpl#getSmartTV()
+		 * @generated
+		 */
+		EClass SMART_TV = eINSTANCE.getSmartTV();
+
+		/**
+		 * The meta object literal for the '{@link environment.impl.AccessPointImpl <em>Access Point</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see environment.impl.AccessPointImpl
+		 * @see environment.impl.CyberPhysicalSystemPackageImpl#getAccessPoint()
+		 * @generated
+		 */
+		EClass ACCESS_POINT = eINSTANCE.getAccessPoint();
 
 		/**
 		 * The meta object literal for the '{@link environment.Status <em>Status</em>}' enum.

@@ -2,6 +2,7 @@
  */
 package environment.util;
 
+import environment.AccessPoint;
 import environment.Action;
 import environment.Actor;
 import environment.Application;
@@ -50,6 +51,7 @@ import environment.Property;
 import environment.Room;
 import environment.Server;
 import environment.SmartLight;
+import environment.SmartTV;
 import environment.Stairs;
 import environment.Toilet;
 import environment.Type;
@@ -350,6 +352,14 @@ public class CyberPhysicalSystemAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseOffice(Office object) {
 				return createOfficeAdapter();
+			}
+			@Override
+			public Adapter caseSmartTV(SmartTV object) {
+				return createSmartTVAdapter();
+			}
+			@Override
+			public Adapter caseAccessPoint(AccessPoint object) {
+				return createAccessPointAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -1166,6 +1176,34 @@ public class CyberPhysicalSystemAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createOfficeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link environment.SmartTV <em>Smart TV</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see environment.SmartTV
+	 * @generated
+	 */
+	public Adapter createSmartTVAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link environment.AccessPoint <em>Access Point</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see environment.AccessPoint
+	 * @generated
+	 */
+	public Adapter createAccessPointAdapter() {
 		return null;
 	}
 

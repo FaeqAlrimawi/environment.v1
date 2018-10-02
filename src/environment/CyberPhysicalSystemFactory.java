@@ -517,6 +517,24 @@ public interface CyberPhysicalSystemFactory extends EFactory {
 	Office createOffice();
 
 	/**
+	 * Returns a new object of class '<em>Smart TV</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Smart TV</em>'.
+	 * @generated
+	 */
+	SmartTV createSmartTV();
+
+	/**
+	 * Returns a new object of class '<em>Access Point</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Access Point</em>'.
+	 * @generated
+	 */
+	AccessPoint createAccessPoint();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
