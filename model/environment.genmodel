@@ -187,5 +187,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//Vulnerability/severity"/>
     </genClasses>
     <genClasses ecoreClass="environment.ecore#//Office"/>
+    <genClasses ecoreClass="environment.ecore#//SmartTV"/>
+    <genClasses ecoreClass="environment.ecore#//AccessPoint"/>
   </genPackages>
 </genmodel:GenModel>

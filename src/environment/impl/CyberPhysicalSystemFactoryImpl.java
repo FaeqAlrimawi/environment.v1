@@ -2,6 +2,7 @@
  */
 package environment.impl;
 
+import environment.AccessPoint;
 import environment.Action;
 import environment.Actor;
 import environment.Application;
@@ -53,6 +54,7 @@ import environment.Property;
 import environment.Room;
 import environment.Server;
 import environment.SmartLight;
+import environment.SmartTV;
 import environment.Stairs;
 import environment.Status;
 import environment.Toilet;
@@ -172,6 +174,8 @@ public class CyberPhysicalSystemFactoryImpl extends EFactoryImpl implements Cybe
 			case CyberPhysicalSystemPackage.X10: return createX10();
 			case CyberPhysicalSystemPackage.VULNERABILITY: return createVulnerability();
 			case CyberPhysicalSystemPackage.OFFICE: return createOffice();
+			case CyberPhysicalSystemPackage.SMART_TV: return createSmartTV();
+			case CyberPhysicalSystemPackage.ACCESS_POINT: return createAccessPoint();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -771,6 +775,26 @@ public class CyberPhysicalSystemFactoryImpl extends EFactoryImpl implements Cybe
 	public Office createOffice() {
 		OfficeImpl office = new OfficeImpl();
 		return office;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SmartTV createSmartTV() {
+		SmartTVImpl smartTV = new SmartTVImpl();
+		return smartTV;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public AccessPoint createAccessPoint() {
+		AccessPointImpl accessPoint = new AccessPointImpl();
+		return accessPoint;
 	}
 
 	/**

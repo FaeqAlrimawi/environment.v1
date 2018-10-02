@@ -207,4 +207,6 @@
     <eLiterals name="UNKNOWN" value="3"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Office" eSuperTypes="#//Room"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SmartTV" eSuperTypes="#//ComputingDevice"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AccessPoint" eSuperTypes="#//ComputingDevice"/>
 </ecore:EPackage>

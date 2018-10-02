@@ -2,6 +2,7 @@
  */
 package environment.impl;
 
+import environment.AccessPoint;
 import environment.Action;
 import environment.Actor;
 import environment.Application;
@@ -52,6 +53,7 @@ import environment.Property;
 import environment.Room;
 import environment.Server;
 import environment.SmartLight;
+import environment.SmartTV;
 import environment.Stairs;
 import environment.Status;
 import environment.Toilet;
@@ -476,6 +478,20 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * @generated
 	 */
 	private EClass officeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass smartTVEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass accessPointEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1703,6 +1719,24 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getSmartTV() {
+		return smartTVEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getAccessPoint() {
+		return accessPointEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getStatus() {
 		return statusEEnum;
 	}
@@ -1953,6 +1987,10 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 
 		officeEClass = createEClass(OFFICE);
 
+		smartTVEClass = createEClass(SMART_TV);
+
+		accessPointEClass = createEClass(ACCESS_POINT);
+
 		// Create enums
 		statusEEnum = createEEnum(STATUS);
 		digitalStatusEEnum = createEEnum(DIGITAL_STATUS);
@@ -2037,6 +2075,8 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 		knxEClass.getESuperTypes().add(this.getBusConnection());
 		x10EClass.getESuperTypes().add(this.getBusConnection());
 		officeEClass.getESuperTypes().add(this.getRoom());
+		smartTVEClass.getESuperTypes().add(this.getComputingDevice());
+		accessPointEClass.getESuperTypes().add(this.getComputingDevice());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(physicalAssetEClass, PhysicalAsset.class, "PhysicalAsset", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2233,6 +2273,10 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 		initEAttribute(getVulnerability_Severity(), this.getLevel(), "severity", null, 0, 1, Vulnerability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(officeEClass, Office.class, "Office", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(smartTVEClass, SmartTV.class, "SmartTV", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(accessPointEClass, AccessPoint.class, "AccessPoint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals
 		initEEnum(statusEEnum, Status.class, "Status");
