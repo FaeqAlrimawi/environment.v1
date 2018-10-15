@@ -44,6 +44,7 @@ import environment.Laptop;
 import environment.Level;
 import environment.Lounge;
 import environment.MicroController;
+import environment.Mobility;
 import environment.Office;
 import environment.PhysicalAsset;
 import environment.PhysicalConnection;
@@ -529,6 +530,13 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	private EEnum levelEEnum = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum mobilityEEnum = null;
+
+	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
 	 * package URI value.
@@ -992,6 +1000,15 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 */
 	public EReference getAsset_Vulnerabilities() {
 		return (EReference)assetEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAsset_Mobility() {
+		return (EAttribute)assetEClass.getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -1782,6 +1799,15 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EEnum getMobility() {
+		return mobilityEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public CyberPhysicalSystemFactory getCyberPhysicalSystemFactory() {
 		return (CyberPhysicalSystemFactory)getEFactoryInstance();
 	}
@@ -1864,6 +1890,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 		createEAttribute(assetEClass, ASSET__DESCRIPTION);
 		createEAttribute(assetEClass, ASSET__CONTROL);
 		createEReference(assetEClass, ASSET__VULNERABILITIES);
+		createEAttribute(assetEClass, ASSET__MOBILITY);
 		createEOperation(assetEClass, ASSET___ABSTRACT_ASSET);
 		createEOperation(assetEClass, ASSET___SIMILAR_TO__ASSET);
 		createEOperation(assetEClass, ASSET___MERGE_CONNECTIONS);
@@ -1997,6 +2024,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 		fileStatusEEnum = createEEnum(FILE_STATUS);
 		credentialTypeEEnum = createEEnum(CREDENTIAL_TYPE);
 		levelEEnum = createEEnum(LEVEL);
+		mobilityEEnum = createEEnum(MOBILITY);
 	}
 
 	/**
@@ -2140,6 +2168,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 		initEAttribute(getAsset_Description(), ecorePackage.getEString(), "description", null, 0, 1, Asset.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAsset_Control(), ecorePackage.getEString(), "control", null, 0, 1, Asset.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAsset_Vulnerabilities(), this.getVulnerability(), null, "vulnerabilities", null, 0, -1, Asset.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAsset_Mobility(), this.getMobility(), "mobility", null, 0, 1, Asset.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getAsset__AbstractAsset(), this.getAsset(), "abstractAsset", 0, 1, IS_UNIQUE, IS_ORDERED);
 
@@ -2307,6 +2336,11 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 		addEEnumLiteral(levelEEnum, Level.MEDIUM);
 		addEEnumLiteral(levelEEnum, Level.HIGH);
 		addEEnumLiteral(levelEEnum, Level.UNKNOWN);
+
+		initEEnum(mobilityEEnum, Mobility.class, "Mobility");
+		addEEnumLiteral(mobilityEEnum, Mobility.MOVABLE);
+		addEEnumLiteral(mobilityEEnum, Mobility.FIXED);
+		addEEnumLiteral(mobilityEEnum, Mobility.UNKNOWN);
 
 		// Create resource
 		createResource(eNS_URI);

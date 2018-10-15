@@ -45,6 +45,7 @@ import environment.Laptop;
 import environment.Level;
 import environment.Lounge;
 import environment.MicroController;
+import environment.Mobility;
 import environment.Office;
 import environment.PhysicalAsset;
 import environment.PhysicalConnection;
@@ -199,6 +200,8 @@ public class CyberPhysicalSystemFactoryImpl extends EFactoryImpl implements Cybe
 				return createCredentialTypeFromString(eDataType, initialValue);
 			case CyberPhysicalSystemPackage.LEVEL:
 				return createLevelFromString(eDataType, initialValue);
+			case CyberPhysicalSystemPackage.MOBILITY:
+				return createMobilityFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -222,6 +225,8 @@ public class CyberPhysicalSystemFactoryImpl extends EFactoryImpl implements Cybe
 				return convertCredentialTypeToString(eDataType, instanceValue);
 			case CyberPhysicalSystemPackage.LEVEL:
 				return convertLevelToString(eDataType, instanceValue);
+			case CyberPhysicalSystemPackage.MOBILITY:
+				return convertMobilityToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -894,6 +899,26 @@ public class CyberPhysicalSystemFactoryImpl extends EFactoryImpl implements Cybe
 	 * @generated
 	 */
 	public String convertLevelToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Mobility createMobilityFromString(EDataType eDataType, String initialValue) {
+		Mobility result = Mobility.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertMobilityToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

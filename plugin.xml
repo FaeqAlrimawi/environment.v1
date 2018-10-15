@@ -22,4 +22,11 @@
             genModel="model/environment.genmodel"/>
    </extension>
 
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <!-- @generated environment -->
+      <parser
+            type="cps"
+            class="environment.util.CyberPhysicalSystemResourceFactoryImpl"/>
+   </extension>
+
 </plugin>

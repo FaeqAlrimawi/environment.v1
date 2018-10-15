@@ -25,6 +25,7 @@ import environment.Connection;
 import environment.CyberPhysicalSystemFactory;
 import environment.CyberPhysicalSystemPackage;
 import environment.DigitalAsset;
+import environment.Mobility;
 import environment.PhysicalAsset;
 import environment.Property;
 import environment.Room;
@@ -48,6 +49,7 @@ import externalUtility.HungarianAlgorithm;
  *   <li>{@link environment.impl.AssetImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link environment.impl.AssetImpl#getControl <em>Control</em>}</li>
  *   <li>{@link environment.impl.AssetImpl#getVulnerabilities <em>Vulnerabilities</em>}</li>
+ *   <li>{@link environment.impl.AssetImpl#getMobility <em>Mobility</em>}</li>
  * </ul>
  *
  * @generated
@@ -181,6 +183,26 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 	 * @ordered
 	 */
 	protected EList<Vulnerability> vulnerabilities;
+
+	/**
+	 * The default value of the '{@link #getMobility() <em>Mobility</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMobility()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Mobility MOBILITY_EDEFAULT = Mobility.MOVABLE;
+
+/**
+	 * The cached value of the '{@link #getMobility() <em>Mobility</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMobility()
+	 * @generated
+	 * @ordered
+	 */
+	protected Mobility mobility = MOBILITY_EDEFAULT;
 
 	//	protected  static LinkedList<Integer> assetNumbers = new LinkedList<Integer>();
 //	
@@ -395,6 +417,27 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 			vulnerabilities = new EObjectResolvingEList<Vulnerability>(Vulnerability.class, this, CyberPhysicalSystemPackage.ASSET__VULNERABILITIES);
 		}
 		return vulnerabilities;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Mobility getMobility() {
+		return mobility;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setMobility(Mobility newMobility) {
+		Mobility oldMobility = mobility;
+		mobility = newMobility == null ? MOBILITY_EDEFAULT : newMobility;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CyberPhysicalSystemPackage.ASSET__MOBILITY, oldMobility, mobility));
 	}
 
 	/**
@@ -1055,6 +1098,8 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 				return getControl();
 			case CyberPhysicalSystemPackage.ASSET__VULNERABILITIES:
 				return getVulnerabilities();
+			case CyberPhysicalSystemPackage.ASSET__MOBILITY:
+				return getMobility();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -1103,6 +1148,9 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 				getVulnerabilities().clear();
 				getVulnerabilities().addAll((Collection<? extends Vulnerability>)newValue);
 				return;
+			case CyberPhysicalSystemPackage.ASSET__MOBILITY:
+				setMobility((Mobility)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -1139,6 +1187,9 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 			case CyberPhysicalSystemPackage.ASSET__VULNERABILITIES:
 				getVulnerabilities().clear();
 				return;
+			case CyberPhysicalSystemPackage.ASSET__MOBILITY:
+				setMobility(MOBILITY_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -1167,6 +1218,8 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 				return CONTROL_EDEFAULT == null ? control != null : !CONTROL_EDEFAULT.equals(control);
 			case CyberPhysicalSystemPackage.ASSET__VULNERABILITIES:
 				return vulnerabilities != null && !vulnerabilities.isEmpty();
+			case CyberPhysicalSystemPackage.ASSET__MOBILITY:
+				return mobility != MOBILITY_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -1221,6 +1274,8 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 		result.append(description);
 		result.append(", control: ");
 		result.append(control);
+		result.append(", mobility: ");
+		result.append(mobility);
 		result.append(')');
 		return result.toString();
 	}

@@ -23,6 +23,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link environment.Asset#getDescription <em>Description</em>}</li>
  *   <li>{@link environment.Asset#getControl <em>Control</em>}</li>
  *   <li>{@link environment.Asset#getVulnerabilities <em>Vulnerabilities</em>}</li>
+ *   <li>{@link environment.Asset#getMobility <em>Mobility</em>}</li>
  * </ul>
  *
  * @see environment.CyberPhysicalSystemPackage#getAsset()
@@ -266,6 +267,35 @@ public interface Asset extends EObject {
 	 * @generated
 	 */
 	EList<Vulnerability> getVulnerabilities();
+
+	/**
+	 * Returns the value of the '<em><b>Mobility</b></em>' attribute.
+	 * The literals are from the enumeration {@link environment.Mobility}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Mobility</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Mobility</em>' attribute.
+	 * @see environment.Mobility
+	 * @see #setMobility(Mobility)
+	 * @see environment.CyberPhysicalSystemPackage#getAsset_Mobility()
+	 * @model
+	 * @generated
+	 */
+	Mobility getMobility();
+
+	/**
+	 * Sets the value of the '{@link environment.Asset#getMobility <em>Mobility</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Mobility</em>' attribute.
+	 * @see environment.Mobility
+	 * @see #getMobility()
+	 * @generated
+	 */
+	void setMobility(Mobility value);
 
 	/**
 	 * Creates a new Asset object that represents an abstraction of this asset. This includes its attributes 

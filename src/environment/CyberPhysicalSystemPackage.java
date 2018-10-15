@@ -141,13 +141,22 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	int ASSET__VULNERABILITIES = 7;
 
 	/**
+	 * The feature id for the '<em><b>Mobility</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSET__MOBILITY = 8;
+
+	/**
 	 * The number of structural features of the '<em>Asset</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ASSET_FEATURE_COUNT = 8;
+	int ASSET_FEATURE_COUNT = 9;
 
 	/**
 	 * The operation id for the '<em>Abstract Asset</em>' operation.
@@ -311,6 +320,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @ordered
 	 */
 	int PHYSICAL_ASSET__VULNERABILITIES = ASSET__VULNERABILITIES;
+
+	/**
+	 * The feature id for the '<em><b>Mobility</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PHYSICAL_ASSET__MOBILITY = ASSET__MOBILITY;
 
 	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
@@ -501,6 +519,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @ordered
 	 */
 	int COMPUTING_DEVICE__VULNERABILITIES = PHYSICAL_ASSET__VULNERABILITIES;
+
+	/**
+	 * The feature id for the '<em><b>Mobility</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPUTING_DEVICE__MOBILITY = PHYSICAL_ASSET__MOBILITY;
 
 	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
@@ -720,6 +747,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	int HVAC__VULNERABILITIES = COMPUTING_DEVICE__VULNERABILITIES;
 
 	/**
+	 * The feature id for the '<em><b>Mobility</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HVAC__MOBILITY = COMPUTING_DEVICE__MOBILITY;
+
+	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -935,6 +971,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @ordered
 	 */
 	int SMART_LIGHT__VULNERABILITIES = COMPUTING_DEVICE__VULNERABILITIES;
+
+	/**
+	 * The feature id for the '<em><b>Mobility</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SMART_LIGHT__MOBILITY = COMPUTING_DEVICE__MOBILITY;
 
 	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
@@ -1154,6 +1199,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	int COMPUTER__VULNERABILITIES = COMPUTING_DEVICE__VULNERABILITIES;
 
 	/**
+	 * The feature id for the '<em><b>Mobility</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPUTER__MOBILITY = COMPUTING_DEVICE__MOBILITY;
+
+	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1369,6 +1423,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @ordered
 	 */
 	int LAPTOP__VULNERABILITIES = COMPUTER__VULNERABILITIES;
+
+	/**
+	 * The feature id for the '<em><b>Mobility</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAPTOP__MOBILITY = COMPUTER__MOBILITY;
 
 	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
@@ -1588,6 +1651,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	int DESKTOP__VULNERABILITIES = COMPUTER__VULNERABILITIES;
 
 	/**
+	 * The feature id for the '<em><b>Mobility</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DESKTOP__MOBILITY = COMPUTER__MOBILITY;
+
+	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1803,6 +1875,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @ordered
 	 */
 	int CCTV__VULNERABILITIES = COMPUTING_DEVICE__VULNERABILITIES;
+
+	/**
+	 * The feature id for the '<em><b>Mobility</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CCTV__MOBILITY = COMPUTING_DEVICE__MOBILITY;
 
 	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
@@ -2022,6 +2103,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	int SERVER__VULNERABILITIES = COMPUTER__VULNERABILITIES;
 
 	/**
+	 * The feature id for the '<em><b>Mobility</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SERVER__MOBILITY = COMPUTER__MOBILITY;
+
+	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2239,6 +2329,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	int DIGITAL_ASSET__VULNERABILITIES = ASSET__VULNERABILITIES;
 
 	/**
+	 * The feature id for the '<em><b>Mobility</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIGITAL_ASSET__MOBILITY = ASSET__MOBILITY;
+
+	/**
 	 * The feature id for the '<em><b>Parent Asset</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2427,6 +2526,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @ordered
 	 */
 	int FILE__VULNERABILITIES = DIGITAL_ASSET__VULNERABILITIES;
+
+	/**
+	 * The feature id for the '<em><b>Mobility</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILE__MOBILITY = DIGITAL_ASSET__MOBILITY;
 
 	/**
 	 * The feature id for the '<em><b>Parent Asset</b></em>' reference.
@@ -2637,6 +2745,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	int PROCESS__VULNERABILITIES = DIGITAL_ASSET__VULNERABILITIES;
 
 	/**
+	 * The feature id for the '<em><b>Mobility</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS__MOBILITY = DIGITAL_ASSET__MOBILITY;
+
+	/**
 	 * The feature id for the '<em><b>Parent Asset</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2834,6 +2951,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @ordered
 	 */
 	int APPLICATION__VULNERABILITIES = DIGITAL_ASSET__VULNERABILITIES;
+
+	/**
+	 * The feature id for the '<em><b>Mobility</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APPLICATION__MOBILITY = DIGITAL_ASSET__MOBILITY;
 
 	/**
 	 * The feature id for the '<em><b>Parent Asset</b></em>' reference.
@@ -3681,6 +3807,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	int ACTOR__VULNERABILITIES = PHYSICAL_ASSET__VULNERABILITIES;
 
 	/**
+	 * The feature id for the '<em><b>Mobility</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTOR__MOBILITY = PHYSICAL_ASSET__MOBILITY;
+
+	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3878,6 +4013,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @ordered
 	 */
 	int PHYSICAL_STRUCTURE__VULNERABILITIES = PHYSICAL_ASSET__VULNERABILITIES;
+
+	/**
+	 * The feature id for the '<em><b>Mobility</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PHYSICAL_STRUCTURE__MOBILITY = PHYSICAL_ASSET__MOBILITY;
 
 	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
@@ -4180,6 +4324,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	int ROOM__VULNERABILITIES = PHYSICAL_STRUCTURE__VULNERABILITIES;
 
 	/**
+	 * The feature id for the '<em><b>Mobility</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM__MOBILITY = PHYSICAL_STRUCTURE__MOBILITY;
+
+	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4368,6 +4521,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @ordered
 	 */
 	int FLOOR__VULNERABILITIES = PHYSICAL_STRUCTURE__VULNERABILITIES;
+
+	/**
+	 * The feature id for the '<em><b>Mobility</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FLOOR__MOBILITY = PHYSICAL_STRUCTURE__MOBILITY;
 
 	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
@@ -4560,6 +4722,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	int BUILDING__VULNERABILITIES = PHYSICAL_STRUCTURE__VULNERABILITIES;
 
 	/**
+	 * The feature id for the '<em><b>Mobility</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUILDING__MOBILITY = PHYSICAL_STRUCTURE__MOBILITY;
+
+	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4748,6 +4919,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @ordered
 	 */
 	int FIRE_ALARM__VULNERABILITIES = COMPUTING_DEVICE__VULNERABILITIES;
+
+	/**
+	 * The feature id for the '<em><b>Mobility</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FIRE_ALARM__MOBILITY = COMPUTING_DEVICE__MOBILITY;
 
 	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
@@ -4967,6 +5147,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	int WORKSTATION__VULNERABILITIES = COMPUTER__VULNERABILITIES;
 
 	/**
+	 * The feature id for the '<em><b>Mobility</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORKSTATION__MOBILITY = COMPUTER__MOBILITY;
+
+	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5184,6 +5373,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	int LAB__VULNERABILITIES = ROOM__VULNERABILITIES;
 
 	/**
+	 * The feature id for the '<em><b>Mobility</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LAB__MOBILITY = ROOM__MOBILITY;
+
+	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5372,6 +5570,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @ordered
 	 */
 	int TOILET__VULNERABILITIES = ROOM__VULNERABILITIES;
+
+	/**
+	 * The feature id for the '<em><b>Mobility</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOILET__MOBILITY = ROOM__MOBILITY;
 
 	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
@@ -5564,6 +5771,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	int LOUNGE__VULNERABILITIES = ROOM__VULNERABILITIES;
 
 	/**
+	 * The feature id for the '<em><b>Mobility</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOUNGE__MOBILITY = ROOM__MOBILITY;
+
+	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5752,6 +5968,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @ordered
 	 */
 	int DISH_WASHER__VULNERABILITIES = COMPUTING_DEVICE__VULNERABILITIES;
+
+	/**
+	 * The feature id for the '<em><b>Mobility</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DISH_WASHER__MOBILITY = COMPUTING_DEVICE__MOBILITY;
 
 	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
@@ -5971,6 +6196,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	int COFFEE_MACHINE__VULNERABILITIES = COMPUTING_DEVICE__VULNERABILITIES;
 
 	/**
+	 * The feature id for the '<em><b>Mobility</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COFFEE_MACHINE__MOBILITY = COMPUTING_DEVICE__MOBILITY;
+
+	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6186,6 +6420,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @ordered
 	 */
 	int ELEVATOR__VULNERABILITIES = COMPUTING_DEVICE__VULNERABILITIES;
+
+	/**
+	 * The feature id for the '<em><b>Mobility</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEVATOR__MOBILITY = COMPUTING_DEVICE__MOBILITY;
 
 	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
@@ -6405,6 +6648,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	int HALLWAY__VULNERABILITIES = PHYSICAL_STRUCTURE__VULNERABILITIES;
 
 	/**
+	 * The feature id for the '<em><b>Mobility</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HALLWAY__MOBILITY = PHYSICAL_STRUCTURE__MOBILITY;
+
+	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6595,6 +6847,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	int ELEVATORS_AREA__VULNERABILITIES = ROOM__VULNERABILITIES;
 
 	/**
+	 * The feature id for the '<em><b>Mobility</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEVATORS_AREA__MOBILITY = ROOM__MOBILITY;
+
+	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6783,6 +7044,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @ordered
 	 */
 	int DIGITAL_NETWORK__VULNERABILITIES = DIGITAL_ASSET__VULNERABILITIES;
+
+	/**
+	 * The feature id for the '<em><b>Mobility</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIGITAL_NETWORK__MOBILITY = DIGITAL_ASSET__MOBILITY;
 
 	/**
 	 * The feature id for the '<em><b>Parent Asset</b></em>' reference.
@@ -6993,6 +7263,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	int IP_NETWORK__VULNERABILITIES = DIGITAL_NETWORK__VULNERABILITIES;
 
 	/**
+	 * The feature id for the '<em><b>Mobility</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IP_NETWORK__MOBILITY = DIGITAL_NETWORK__MOBILITY;
+
+	/**
 	 * The feature id for the '<em><b>Parent Asset</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7199,6 +7478,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @ordered
 	 */
 	int BUS_NETWORK__VULNERABILITIES = DIGITAL_NETWORK__VULNERABILITIES;
+
+	/**
+	 * The feature id for the '<em><b>Mobility</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_NETWORK__MOBILITY = DIGITAL_NETWORK__MOBILITY;
 
 	/**
 	 * The feature id for the '<em><b>Parent Asset</b></em>' reference.
@@ -7681,6 +7969,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	int KITCHEN__VULNERABILITIES = ROOM__VULNERABILITIES;
 
 	/**
+	 * The feature id for the '<em><b>Mobility</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KITCHEN__MOBILITY = ROOM__MOBILITY;
+
+	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7871,6 +8168,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	int STAIRS__VULNERABILITIES = PHYSICAL_STRUCTURE__VULNERABILITIES;
 
 	/**
+	 * The feature id for the '<em><b>Mobility</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAIRS__MOBILITY = PHYSICAL_STRUCTURE__MOBILITY;
+
+	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8059,6 +8365,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @ordered
 	 */
 	int CARD_READER__VULNERABILITIES = COMPUTING_DEVICE__VULNERABILITIES;
+
+	/**
+	 * The feature id for the '<em><b>Mobility</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARD_READER__MOBILITY = COMPUTING_DEVICE__MOBILITY;
 
 	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
@@ -8278,6 +8593,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	int EMPLOYEE__VULNERABILITIES = ACTOR__VULNERABILITIES;
 
 	/**
+	 * The feature id for the '<em><b>Mobility</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMPLOYEE__MOBILITY = ACTOR__MOBILITY;
+
+	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8477,6 +8801,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	int VISITOR__VULNERABILITIES = ACTOR__VULNERABILITIES;
 
 	/**
+	 * The feature id for the '<em><b>Mobility</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VISITOR__MOBILITY = ACTOR__MOBILITY;
+
+	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8674,6 +9007,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @ordered
 	 */
 	int EMBEDDED_COMPUTER__VULNERABILITIES = COMPUTER__VULNERABILITIES;
+
+	/**
+	 * The feature id for the '<em><b>Mobility</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMBEDDED_COMPUTER__MOBILITY = COMPUTER__MOBILITY;
 
 	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
@@ -8891,6 +9233,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @ordered
 	 */
 	int MICRO_CONTROLLER__VULNERABILITIES = EMBEDDED_COMPUTER__VULNERABILITIES;
+
+	/**
+	 * The feature id for the '<em><b>Mobility</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MICRO_CONTROLLER__MOBILITY = EMBEDDED_COMPUTER__MOBILITY;
 
 	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
@@ -9827,6 +10178,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	int OFFICE__VULNERABILITIES = ROOM__VULNERABILITIES;
 
 	/**
+	 * The feature id for the '<em><b>Mobility</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OFFICE__MOBILITY = ROOM__MOBILITY;
+
+	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10015,6 +10375,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @ordered
 	 */
 	int SMART_TV__VULNERABILITIES = COMPUTING_DEVICE__VULNERABILITIES;
+
+	/**
+	 * The feature id for the '<em><b>Mobility</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SMART_TV__MOBILITY = COMPUTING_DEVICE__MOBILITY;
 
 	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
@@ -10234,6 +10603,15 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	int ACCESS_POINT__VULNERABILITIES = COMPUTING_DEVICE__VULNERABILITIES;
 
 	/**
+	 * The feature id for the '<em><b>Mobility</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCESS_POINT__MOBILITY = COMPUTING_DEVICE__MOBILITY;
+
+	/**
 	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10418,6 +10796,16 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 */
 	int LEVEL = 63;
+
+	/**
+	 * The meta object id for the '{@link environment.Mobility <em>Mobility</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see environment.Mobility
+	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getMobility()
+	 * @generated
+	 */
+	int MOBILITY = 64;
 
 	/**
 	 * Returns the meta object for class '{@link environment.PhysicalAsset <em>Physical Asset</em>}'.
@@ -10897,6 +11285,17 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getAsset_Vulnerabilities();
+
+	/**
+	 * Returns the meta object for the attribute '{@link environment.Asset#getMobility <em>Mobility</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Mobility</em>'.
+	 * @see environment.Asset#getMobility()
+	 * @see #getAsset()
+	 * @generated
+	 */
+	EAttribute getAsset_Mobility();
 
 	/**
 	 * Returns the meta object for the '{@link environment.Asset#abstractAsset() <em>Abstract Asset</em>}' operation.
@@ -11799,6 +12198,16 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	EEnum getLevel();
 
 	/**
+	 * Returns the meta object for enum '{@link environment.Mobility <em>Mobility</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Mobility</em>'.
+	 * @see environment.Mobility
+	 * @generated
+	 */
+	EEnum getMobility();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -12210,6 +12619,14 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 		 * @generated
 		 */
 		EReference ASSET__VULNERABILITIES = eINSTANCE.getAsset_Vulnerabilities();
+
+		/**
+		 * The meta object literal for the '<em><b>Mobility</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ASSET__MOBILITY = eINSTANCE.getAsset_Mobility();
 
 		/**
 		 * The meta object literal for the '<em><b>Abstract Asset</b></em>' operation.
@@ -13004,6 +13421,16 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum LEVEL = eINSTANCE.getLevel();
+
+		/**
+		 * The meta object literal for the '{@link environment.Mobility <em>Mobility</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see environment.Mobility
+		 * @see environment.impl.CyberPhysicalSystemPackageImpl#getMobility()
+		 * @generated
+		 */
+		EEnum MOBILITY = eINSTANCE.getMobility();
 
 	}
 
