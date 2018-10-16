@@ -4,6 +4,8 @@ package environment.impl;
 
 import environment.PhysicalStructure;
 import environment.CyberPhysicalSystemPackage;
+import environment.Mobility;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -17,10 +19,12 @@ public class PhysicalStructureImpl extends PhysicalAssetImpl implements Physical
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * 
 	 */
 	protected PhysicalStructureImpl() {
 		super();
+		
+		setMobility(Mobility.FIXED);
 	}
 
 	/**
