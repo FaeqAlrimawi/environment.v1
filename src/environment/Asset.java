@@ -110,7 +110,7 @@ public interface Asset extends EObject {
 	double compareContainedAssets(Asset asset);
 	double compareParentAsset(Asset asset);
 	double compareConnections(Asset asset);
-	
+	Asset getParentAsset();
 
 	//Asset abstractType();
 	
