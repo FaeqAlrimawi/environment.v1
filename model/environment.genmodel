@@ -93,7 +93,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//Asset/value"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference environment.ecore#//Asset/type"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//Asset/description"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//Asset/control"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference environment.ecore#//Asset/vulnerabilities"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//Asset/mobility"/>
       <genOperations ecoreOperation="environment.ecore#//Asset/abstractAsset"/>
@@ -195,5 +194,6 @@
     <genClasses ecoreClass="environment.ecore#//Office"/>
     <genClasses ecoreClass="environment.ecore#//SmartTV"/>
     <genClasses ecoreClass="environment.ecore#//AccessPoint"/>
+    <genClasses ecoreClass="environment.ecore#//Malware"/>
   </genPackages>
 </genmodel:GenModel>

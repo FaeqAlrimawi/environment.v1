@@ -21,7 +21,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link environment.Asset#getValue <em>Value</em>}</li>
  *   <li>{@link environment.Asset#getType <em>Type</em>}</li>
  *   <li>{@link environment.Asset#getDescription <em>Description</em>}</li>
- *   <li>{@link environment.Asset#getControl <em>Control</em>}</li>
  *   <li>{@link environment.Asset#getVulnerabilities <em>Vulnerabilities</em>}</li>
  *   <li>{@link environment.Asset#getMobility <em>Mobility</em>}</li>
  * </ul>
@@ -225,32 +224,6 @@ public interface Asset extends EObject {
 	 * @generated
 	 */
 	void setDescription(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Control</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Control</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Control</em>' attribute.
-	 * @see #setControl(String)
-	 * @see environment.CyberPhysicalSystemPackage#getAsset_Control()
-	 * @model
-	 * @generated
-	 */
-	String getControl();
-
-	/**
-	 * Sets the value of the '{@link environment.Asset#getControl <em>Control</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Control</em>' attribute.
-	 * @see #getControl()
-	 * @generated
-	 */
-	void setControl(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Vulnerabilities</b></em>' reference list.

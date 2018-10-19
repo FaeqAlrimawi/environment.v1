@@ -535,6 +535,15 @@ public interface CyberPhysicalSystemFactory extends EFactory {
 	AccessPoint createAccessPoint();
 
 	/**
+	 * Returns a new object of class '<em>Malware</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Malware</em>'.
+	 * @generated
+	 */
+	Malware createMalware();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

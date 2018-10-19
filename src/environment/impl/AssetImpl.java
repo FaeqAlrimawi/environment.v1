@@ -28,7 +28,6 @@ import environment.DigitalAsset;
 import environment.Mobility;
 import environment.PhysicalAsset;
 import environment.Property;
-import environment.Room;
 import environment.Type;
 import environment.Vulnerability;
 import externalUtility.HungarianAlgorithm;
@@ -47,7 +46,6 @@ import externalUtility.HungarianAlgorithm;
  *   <li>{@link environment.impl.AssetImpl#getValue <em>Value</em>}</li>
  *   <li>{@link environment.impl.AssetImpl#getType <em>Type</em>}</li>
  *   <li>{@link environment.impl.AssetImpl#getDescription <em>Description</em>}</li>
- *   <li>{@link environment.impl.AssetImpl#getControl <em>Control</em>}</li>
  *   <li>{@link environment.impl.AssetImpl#getVulnerabilities <em>Vulnerabilities</em>}</li>
  *   <li>{@link environment.impl.AssetImpl#getMobility <em>Mobility</em>}</li>
  * </ul>
@@ -155,26 +153,6 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 	protected String description = DESCRIPTION_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getControl() <em>Control</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getControl()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String CONTROL_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getControl() <em>Control</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getControl()
-	 * @generated
-	 * @ordered
-	 */
-	protected String control = CONTROL_EDEFAULT;
-	
-/**
 	 * The cached value of the '{@link #getVulnerabilities() <em>Vulnerabilities</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -220,16 +198,19 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 		String [] names = className.split("\\.");
 		String cName = names[names.length-1].replace("Impl", "");
 		String ctrl = cName;
-		String currentCtrl = getControl();
 		
-		if(currentCtrl == null || currentCtrl.isEmpty()) {
-			//if this object can be cast to a Room, then the control is a room
-			if(Room.class.isInstance(this)) {
-				ctrl = "Room";
-			}
-			
-			setControl(ctrl);
-		}
+//		String currentCtrl = getControl();
+//		
+//		if(currentCtrl == null || currentCtrl.isEmpty()) {
+//			//if this object can be cast to a Room, then the control is a room
+//			if(Room.class.isInstance(this)) {
+//				ctrl = "Room";
+//			} else if(ComputingDevice.class.isInstance(this)) {
+//				ctrl = "ComputingDevice";
+//			}
+//			
+//			setControl(ctrl);
+//		}
 		
 		//give default name to the asset if there's no name
 		String currentName = getName();
@@ -391,27 +372,6 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getControl() {
-		return control;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setControl(String newControl) {
-		String oldControl = control;
-		control = newControl;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CyberPhysicalSystemPackage.ASSET__CONTROL, oldControl, control));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EList<Vulnerability> getVulnerabilities() {
 		if (vulnerabilities == null) {
 			vulnerabilities = new EObjectResolvingEList<Vulnerability>(Vulnerability.class, this, CyberPhysicalSystemPackage.ASSET__VULNERABILITIES);
@@ -481,7 +441,7 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 		}
 		
 		//c-control (remains the same)
-		abstractedAsset.setControl(this.getControl());
+//		abstractedAsset.setControl(this.getControl());
 		
 		//d-properties are added to the new abstracted asset only if they are abstractable i.e. isAbstractable is set to true
 		Property tmp;
@@ -1094,8 +1054,6 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 				return getType();
 			case CyberPhysicalSystemPackage.ASSET__DESCRIPTION:
 				return getDescription();
-			case CyberPhysicalSystemPackage.ASSET__CONTROL:
-				return getControl();
 			case CyberPhysicalSystemPackage.ASSET__VULNERABILITIES:
 				return getVulnerabilities();
 			case CyberPhysicalSystemPackage.ASSET__MOBILITY:
@@ -1141,9 +1099,6 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 			case CyberPhysicalSystemPackage.ASSET__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
-			case CyberPhysicalSystemPackage.ASSET__CONTROL:
-				setControl((String)newValue);
-				return;
 			case CyberPhysicalSystemPackage.ASSET__VULNERABILITIES:
 				getVulnerabilities().clear();
 				getVulnerabilities().addAll((Collection<? extends Vulnerability>)newValue);
@@ -1181,9 +1136,6 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 			case CyberPhysicalSystemPackage.ASSET__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
-			case CyberPhysicalSystemPackage.ASSET__CONTROL:
-				setControl(CONTROL_EDEFAULT);
-				return;
 			case CyberPhysicalSystemPackage.ASSET__VULNERABILITIES:
 				getVulnerabilities().clear();
 				return;
@@ -1214,8 +1166,6 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 				return type != null;
 			case CyberPhysicalSystemPackage.ASSET__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-			case CyberPhysicalSystemPackage.ASSET__CONTROL:
-				return CONTROL_EDEFAULT == null ? control != null : !CONTROL_EDEFAULT.equals(control);
 			case CyberPhysicalSystemPackage.ASSET__VULNERABILITIES:
 				return vulnerabilities != null && !vulnerabilities.isEmpty();
 			case CyberPhysicalSystemPackage.ASSET__MOBILITY:
@@ -1272,8 +1222,6 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 		result.append(value);
 		result.append(", description: ");
 		result.append(description);
-		result.append(", control: ");
-		result.append(control);
 		result.append(", mobility: ");
 		result.append(mobility);
 		result.append(')');

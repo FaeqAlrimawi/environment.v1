@@ -44,6 +44,7 @@ import environment.Lab;
 import environment.Laptop;
 import environment.Level;
 import environment.Lounge;
+import environment.Malware;
 import environment.MicroController;
 import environment.Mobility;
 import environment.Office;
@@ -177,6 +178,7 @@ public class CyberPhysicalSystemFactoryImpl extends EFactoryImpl implements Cybe
 			case CyberPhysicalSystemPackage.OFFICE: return createOffice();
 			case CyberPhysicalSystemPackage.SMART_TV: return createSmartTV();
 			case CyberPhysicalSystemPackage.ACCESS_POINT: return createAccessPoint();
+			case CyberPhysicalSystemPackage.MALWARE: return createMalware();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -800,6 +802,16 @@ public class CyberPhysicalSystemFactoryImpl extends EFactoryImpl implements Cybe
 	public AccessPoint createAccessPoint() {
 		AccessPointImpl accessPoint = new AccessPointImpl();
 		return accessPoint;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Malware createMalware() {
+		MalwareImpl malware = new MalwareImpl();
+		return malware;
 	}
 
 	/**

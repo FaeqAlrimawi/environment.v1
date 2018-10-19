@@ -43,6 +43,7 @@ import environment.Lab;
 import environment.Laptop;
 import environment.Level;
 import environment.Lounge;
+import environment.Malware;
 import environment.MicroController;
 import environment.Mobility;
 import environment.Office;
@@ -493,6 +494,13 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * @generated
 	 */
 	private EClass accessPointEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass malwareEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -989,17 +997,8 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getAsset_Control() {
-		return (EAttribute)assetEClass.getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getAsset_Vulnerabilities() {
-		return (EReference)assetEClass.getEStructuralFeatures().get(7);
+		return (EReference)assetEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -1008,7 +1007,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * @generated
 	 */
 	public EAttribute getAsset_Mobility() {
-		return (EAttribute)assetEClass.getEStructuralFeatures().get(8);
+		return (EAttribute)assetEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -1754,6 +1753,15 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getMalware() {
+		return malwareEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getStatus() {
 		return statusEEnum;
 	}
@@ -1888,7 +1896,6 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 		createEAttribute(assetEClass, ASSET__VALUE);
 		createEReference(assetEClass, ASSET__TYPE);
 		createEAttribute(assetEClass, ASSET__DESCRIPTION);
-		createEAttribute(assetEClass, ASSET__CONTROL);
 		createEReference(assetEClass, ASSET__VULNERABILITIES);
 		createEAttribute(assetEClass, ASSET__MOBILITY);
 		createEOperation(assetEClass, ASSET___ABSTRACT_ASSET);
@@ -2018,6 +2025,8 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 
 		accessPointEClass = createEClass(ACCESS_POINT);
 
+		malwareEClass = createEClass(MALWARE);
+
 		// Create enums
 		statusEEnum = createEEnum(STATUS);
 		digitalStatusEEnum = createEEnum(DIGITAL_STATUS);
@@ -2105,6 +2114,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 		officeEClass.getESuperTypes().add(this.getRoom());
 		smartTVEClass.getESuperTypes().add(this.getComputingDevice());
 		accessPointEClass.getESuperTypes().add(this.getComputingDevice());
+		malwareEClass.getESuperTypes().add(this.getApplication());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(physicalAssetEClass, PhysicalAsset.class, "PhysicalAsset", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2166,7 +2176,6 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 		initEAttribute(getAsset_Value(), ecorePackage.getEInt(), "value", null, 0, 1, Asset.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAsset_Type(), this.getType(), null, "type", null, 0, 1, Asset.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAsset_Description(), ecorePackage.getEString(), "description", null, 0, 1, Asset.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAsset_Control(), ecorePackage.getEString(), "control", null, 0, 1, Asset.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAsset_Vulnerabilities(), this.getVulnerability(), null, "vulnerabilities", null, 0, -1, Asset.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAsset_Mobility(), this.getMobility(), "mobility", null, 0, 1, Asset.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -2306,6 +2315,8 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 		initEClass(smartTVEClass, SmartTV.class, "SmartTV", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(accessPointEClass, AccessPoint.class, "AccessPoint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(malwareEClass, Malware.class, "Malware", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals
 		initEEnum(statusEEnum, Status.class, "Status");

@@ -41,6 +41,7 @@ import environment.Kitchen;
 import environment.Lab;
 import environment.Laptop;
 import environment.Lounge;
+import environment.Malware;
 import environment.MicroController;
 import environment.Office;
 import environment.PhysicalAsset;
@@ -619,6 +620,15 @@ public class CyberPhysicalSystemSwitch<T> extends Switch<T> {
 				if (result == null) result = caseComputingDevice(accessPoint);
 				if (result == null) result = casePhysicalAsset(accessPoint);
 				if (result == null) result = caseAsset(accessPoint);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CyberPhysicalSystemPackage.MALWARE: {
+				Malware malware = (Malware)theEObject;
+				T result = caseMalware(malware);
+				if (result == null) result = caseApplication(malware);
+				if (result == null) result = caseDigitalAsset(malware);
+				if (result == null) result = caseAsset(malware);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -1508,6 +1518,21 @@ public class CyberPhysicalSystemSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseAccessPoint(AccessPoint object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Malware</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Malware</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMalware(Malware object) {
 		return null;
 	}
 

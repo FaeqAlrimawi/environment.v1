@@ -41,6 +41,7 @@ import environment.Kitchen;
 import environment.Lab;
 import environment.Laptop;
 import environment.Lounge;
+import environment.Malware;
 import environment.MicroController;
 import environment.Office;
 import environment.PhysicalAsset;
@@ -360,6 +361,10 @@ public class CyberPhysicalSystemAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseAccessPoint(AccessPoint object) {
 				return createAccessPointAdapter();
+			}
+			@Override
+			public Adapter caseMalware(Malware object) {
+				return createMalwareAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -1204,6 +1209,20 @@ public class CyberPhysicalSystemAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createAccessPointAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link environment.Malware <em>Malware</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see environment.Malware
+	 * @generated
+	 */
+	public Adapter createMalwareAdapter() {
 		return null;
 	}
 
