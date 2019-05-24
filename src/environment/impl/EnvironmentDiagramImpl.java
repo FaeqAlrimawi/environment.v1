@@ -20,6 +20,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
@@ -27,6 +28,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
@@ -45,7 +47,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link environment.impl.EnvironmentDiagramImpl#getPort <em>Port</em>}</li>
  *   <li>{@link environment.impl.EnvironmentDiagramImpl#getProperty <em>Property</em>}</li>
  *   <li>{@link environment.impl.EnvironmentDiagramImpl#getCredential <em>Credential</em>}</li>
- *   <li>{@link environment.impl.EnvironmentDiagramImpl#getRule <em>Rule</em>}</li>
+ *   <li>{@link environment.impl.EnvironmentDiagramImpl#getAction <em>Action</em>}</li>
+ *   <li>{@link environment.impl.EnvironmentDiagramImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
@@ -109,15 +112,32 @@ public class EnvironmentDiagramImpl extends MinimalEObjectImpl.Container impleme
 	protected EList<Credential> credential;
 
 	/**
-	 * The cached value of the '{@link #getRule() <em>Rule</em>}' containment reference list.
+	 * The cached value of the '{@link #getAction() <em>Action</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getRule()
+	 * @see #getAction()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Action> rule;
-
+	protected EList<Action> action;
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -271,11 +291,32 @@ public class EnvironmentDiagramImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Action> getRule() {
-		if (rule == null) {
-			rule = new EObjectContainmentEList<Action>(Action.class, this, CyberPhysicalSystemPackage.ENVIRONMENT_DIAGRAM__RULE);
+	public EList<Action> getAction() {
+		if (action == null) {
+			action = new EObjectContainmentEList<Action>(Action.class, this, CyberPhysicalSystemPackage.ENVIRONMENT_DIAGRAM__ACTION);
 		}
-		return rule;
+		return action;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CyberPhysicalSystemPackage.ENVIRONMENT_DIAGRAM__NAME, oldName, name));
 	}
 
 	/**
@@ -296,8 +337,8 @@ public class EnvironmentDiagramImpl extends MinimalEObjectImpl.Container impleme
 				return ((InternalEList<?>)getProperty()).basicRemove(otherEnd, msgs);
 			case CyberPhysicalSystemPackage.ENVIRONMENT_DIAGRAM__CREDENTIAL:
 				return ((InternalEList<?>)getCredential()).basicRemove(otherEnd, msgs);
-			case CyberPhysicalSystemPackage.ENVIRONMENT_DIAGRAM__RULE:
-				return ((InternalEList<?>)getRule()).basicRemove(otherEnd, msgs);
+			case CyberPhysicalSystemPackage.ENVIRONMENT_DIAGRAM__ACTION:
+				return ((InternalEList<?>)getAction()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -320,8 +361,10 @@ public class EnvironmentDiagramImpl extends MinimalEObjectImpl.Container impleme
 				return getProperty();
 			case CyberPhysicalSystemPackage.ENVIRONMENT_DIAGRAM__CREDENTIAL:
 				return getCredential();
-			case CyberPhysicalSystemPackage.ENVIRONMENT_DIAGRAM__RULE:
-				return getRule();
+			case CyberPhysicalSystemPackage.ENVIRONMENT_DIAGRAM__ACTION:
+				return getAction();
+			case CyberPhysicalSystemPackage.ENVIRONMENT_DIAGRAM__NAME:
+				return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -355,9 +398,12 @@ public class EnvironmentDiagramImpl extends MinimalEObjectImpl.Container impleme
 				getCredential().clear();
 				getCredential().addAll((Collection<? extends Credential>)newValue);
 				return;
-			case CyberPhysicalSystemPackage.ENVIRONMENT_DIAGRAM__RULE:
-				getRule().clear();
-				getRule().addAll((Collection<? extends Action>)newValue);
+			case CyberPhysicalSystemPackage.ENVIRONMENT_DIAGRAM__ACTION:
+				getAction().clear();
+				getAction().addAll((Collection<? extends Action>)newValue);
+				return;
+			case CyberPhysicalSystemPackage.ENVIRONMENT_DIAGRAM__NAME:
+				setName((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -386,8 +432,11 @@ public class EnvironmentDiagramImpl extends MinimalEObjectImpl.Container impleme
 			case CyberPhysicalSystemPackage.ENVIRONMENT_DIAGRAM__CREDENTIAL:
 				getCredential().clear();
 				return;
-			case CyberPhysicalSystemPackage.ENVIRONMENT_DIAGRAM__RULE:
-				getRule().clear();
+			case CyberPhysicalSystemPackage.ENVIRONMENT_DIAGRAM__ACTION:
+				getAction().clear();
+				return;
+			case CyberPhysicalSystemPackage.ENVIRONMENT_DIAGRAM__NAME:
+				setName(NAME_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -411,10 +460,28 @@ public class EnvironmentDiagramImpl extends MinimalEObjectImpl.Container impleme
 				return property != null && !property.isEmpty();
 			case CyberPhysicalSystemPackage.ENVIRONMENT_DIAGRAM__CREDENTIAL:
 				return credential != null && !credential.isEmpty();
-			case CyberPhysicalSystemPackage.ENVIRONMENT_DIAGRAM__RULE:
-				return rule != null && !rule.isEmpty();
+			case CyberPhysicalSystemPackage.ENVIRONMENT_DIAGRAM__ACTION:
+				return action != null && !action.isEmpty();
+			case CyberPhysicalSystemPackage.ENVIRONMENT_DIAGRAM__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (name: ");
+		result.append(name);
+		result.append(')');
+		return result.toString();
 	}
 
 } //EnvironmentDiagramImpl

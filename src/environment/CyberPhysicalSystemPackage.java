@@ -3407,13 +3407,22 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	int ENVIRONMENT_DIAGRAM__CREDENTIAL = 4;
 
 	/**
-	 * The feature id for the '<em><b>Rule</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Action</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENVIRONMENT_DIAGRAM__RULE = 5;
+	int ENVIRONMENT_DIAGRAM__ACTION = 5;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENVIRONMENT_DIAGRAM__NAME = 6;
 
 	/**
 	 * The number of structural features of the '<em>Environment Diagram</em>' class.
@@ -3422,7 +3431,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENVIRONMENT_DIAGRAM_FEATURE_COUNT = 6;
+	int ENVIRONMENT_DIAGRAM_FEATURE_COUNT = 7;
 
 	/**
 	 * The number of operations of the '<em>Environment Diagram</em>' class.
@@ -11262,15 +11271,26 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	EReference getEnvironmentDiagram_Credential();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link environment.EnvironmentDiagram#getRule <em>Rule</em>}'.
+	 * Returns the meta object for the containment reference list '{@link environment.EnvironmentDiagram#getAction <em>Action</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Rule</em>'.
-	 * @see environment.EnvironmentDiagram#getRule()
+	 * @return the meta object for the containment reference list '<em>Action</em>'.
+	 * @see environment.EnvironmentDiagram#getAction()
 	 * @see #getEnvironmentDiagram()
 	 * @generated
 	 */
-	EReference getEnvironmentDiagram_Rule();
+	EReference getEnvironmentDiagram_Action();
+
+	/**
+	 * Returns the meta object for the attribute '{@link environment.EnvironmentDiagram#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see environment.EnvironmentDiagram#getName()
+	 * @see #getEnvironmentDiagram()
+	 * @generated
+	 */
+	EAttribute getEnvironmentDiagram_Name();
 
 	/**
 	 * Returns the meta object for class '{@link environment.Port <em>Port</em>}'.
@@ -12564,12 +12584,20 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 		EReference ENVIRONMENT_DIAGRAM__CREDENTIAL = eINSTANCE.getEnvironmentDiagram_Credential();
 
 		/**
-		 * The meta object literal for the '<em><b>Rule</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Action</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ENVIRONMENT_DIAGRAM__RULE = eINSTANCE.getEnvironmentDiagram_Rule();
+		EReference ENVIRONMENT_DIAGRAM__ACTION = eINSTANCE.getEnvironmentDiagram_Action();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ENVIRONMENT_DIAGRAM__NAME = eINSTANCE.getEnvironmentDiagram_Name();
 
 		/**
 		 * The meta object literal for the '{@link environment.impl.PortImpl <em>Port</em>}' class.

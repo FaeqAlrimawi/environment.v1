@@ -1141,8 +1141,17 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getEnvironmentDiagram_Rule() {
+	public EReference getEnvironmentDiagram_Action() {
 		return (EReference)environmentDiagramEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getEnvironmentDiagram_Name() {
+		return (EAttribute)environmentDiagramEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -1913,7 +1922,8 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 		createEReference(environmentDiagramEClass, ENVIRONMENT_DIAGRAM__PORT);
 		createEReference(environmentDiagramEClass, ENVIRONMENT_DIAGRAM__PROPERTY);
 		createEReference(environmentDiagramEClass, ENVIRONMENT_DIAGRAM__CREDENTIAL);
-		createEReference(environmentDiagramEClass, ENVIRONMENT_DIAGRAM__RULE);
+		createEReference(environmentDiagramEClass, ENVIRONMENT_DIAGRAM__ACTION);
+		createEAttribute(environmentDiagramEClass, ENVIRONMENT_DIAGRAM__NAME);
 
 		portEClass = createEClass(PORT);
 		createEReference(portEClass, PORT__ASSET);
@@ -2204,7 +2214,8 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 		initEReference(getEnvironmentDiagram_Port(), this.getPort(), null, "port", null, 0, -1, EnvironmentDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEnvironmentDiagram_Property(), this.getProperty(), null, "property", null, 0, -1, EnvironmentDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEnvironmentDiagram_Credential(), this.getCredential(), null, "credential", null, 0, -1, EnvironmentDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getEnvironmentDiagram_Rule(), this.getAction(), null, "rule", null, 0, -1, EnvironmentDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEnvironmentDiagram_Action(), this.getAction(), null, "action", null, 0, -1, EnvironmentDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEnvironmentDiagram_Name(), ecorePackage.getEString(), "name", null, 0, 1, EnvironmentDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(portEClass, Port.class, "Port", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getPort_Asset(), this.getAsset(), null, "asset", null, 0, 1, Port.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

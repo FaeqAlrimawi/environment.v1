@@ -45,7 +45,8 @@ import environment.impl.VisitorImpl;
  *   <li>{@link environment.EnvironmentDiagram#getPort <em>Port</em>}</li>
  *   <li>{@link environment.EnvironmentDiagram#getProperty <em>Property</em>}</li>
  *   <li>{@link environment.EnvironmentDiagram#getCredential <em>Credential</em>}</li>
- *   <li>{@link environment.EnvironmentDiagram#getRule <em>Rule</em>}</li>
+ *   <li>{@link environment.EnvironmentDiagram#getAction <em>Action</em>}</li>
+ *   <li>{@link environment.EnvironmentDiagram#getName <em>Name</em>}</li>
  * </ul>
  *
  * @see environment.CyberPhysicalSystemPackage#getEnvironmentDiagram()
@@ -161,19 +162,43 @@ public interface EnvironmentDiagram extends EObject {
 	EList<Credential> getCredential();
 
 	/**
-	 * Returns the value of the '<em><b>Rule</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Action</b></em>' containment reference list.
 	 * The list contents are of type {@link environment.Action}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Rule</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Action</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Rule</em>' containment reference list.
-	 * @see environment.CyberPhysicalSystemPackage#getEnvironmentDiagram_Rule()
+	 * @return the value of the '<em>Action</em>' containment reference list.
+	 * @see environment.CyberPhysicalSystemPackage#getEnvironmentDiagram_Action()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Action> getRule();
+	EList<Action> getAction();
+	/**
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see environment.CyberPhysicalSystemPackage#getEnvironmentDiagram_Name()
+	 * @model
+	 * @generated
+	 */
+	String getName();
+	/**
+	 * Sets the value of the '{@link environment.EnvironmentDiagram#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
+	 * @generated
+	 */
+	void setName(String value);
 
 } // EnvironmentDiagram

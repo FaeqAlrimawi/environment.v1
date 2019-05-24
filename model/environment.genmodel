@@ -116,7 +116,8 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference environment.ecore#//EnvironmentDiagram/port"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference environment.ecore#//EnvironmentDiagram/property"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference environment.ecore#//EnvironmentDiagram/credential"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference environment.ecore#//EnvironmentDiagram/rule"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference environment.ecore#//EnvironmentDiagram/action"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environment.ecore#//EnvironmentDiagram/name"/>
     </genClasses>
     <genClasses ecoreClass="environment.ecore#//Port">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference environment.ecore#//Port/asset"/>
