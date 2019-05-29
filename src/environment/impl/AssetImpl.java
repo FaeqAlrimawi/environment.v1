@@ -443,7 +443,7 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 		//c-control (remains the same)
 //		abstractedAsset.setControl(this.getControl());
 		
-		//d-properties are added to the new abstracted asset only if they are abstractable i.e. isAbstractable is set to true
+		//c-properties are added to the new abstracted asset only if they are abstractable i.e. isAbstractable is set to true
 		Property tmp;
 	
 		for (Property pro : this.getProperty()) {
@@ -455,6 +455,8 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 			}
 		}
 		
+		//d-Mobility
+		abstractedAsset.setMobility(this.getMobility());
 		// 4-abstract contained assets (can be done by merging/aggregating
 		// assets if possible)
 		// shallow abstraction of contained assets might be needed

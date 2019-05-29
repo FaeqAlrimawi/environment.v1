@@ -3,6 +3,7 @@
 package environment.impl;
 
 import environment.Application;
+import environment.Asset;
 import environment.CyberPhysicalSystemPackage;
 import environment.DigitalStatus;
 import org.eclipse.emf.common.notify.Notification;
@@ -75,6 +76,16 @@ public class ApplicationImpl extends DigitalAssetImpl implements Application {
 		super();
 	}
 
+	public Asset abstractAsset() {
+	
+		Application abstractedApp = (Application) super.abstractAsset();
+		
+		abstractedApp.setStatus(this.getStatus());
+		abstractedApp.setUrl(this.getUrl());
+		
+		return abstractedApp;
+	}
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

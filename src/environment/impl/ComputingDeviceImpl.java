@@ -5,6 +5,8 @@ package environment.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+import environment.Asset;
 import environment.ComputingDevice;
 import environment.Status;
 import environment.CyberPhysicalSystemPackage;
@@ -228,6 +230,21 @@ public class ComputingDeviceImpl extends PhysicalAssetImpl implements ComputingD
 		return null;
 }*/
 	
+	public Asset abstractAsset() {
+		
+		ComputingDevice abstractedAsset = (ComputingDevice) super.abstractAsset();
+		
+		//set connectability
+		abstractedAsset.setConnectable(this.isConnectable());
+		
+		//set model
+		abstractedAsset.setModel(this.getModel());
+		
+		//set status
+		abstractedAsset.setStatus(this.getStatus());
+		
+		return abstractedAsset;
+	}
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

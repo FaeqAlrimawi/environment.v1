@@ -52,6 +52,7 @@ import environment.PhysicalAsset;
 import environment.PhysicalConnection;
 import environment.PhysicalStructure;
 import environment.Port;
+import environment.Printer;
 import environment.Property;
 import environment.Room;
 import environment.Server;
@@ -179,6 +180,7 @@ public class CyberPhysicalSystemFactoryImpl extends EFactoryImpl implements Cybe
 			case CyberPhysicalSystemPackage.SMART_TV: return createSmartTV();
 			case CyberPhysicalSystemPackage.ACCESS_POINT: return createAccessPoint();
 			case CyberPhysicalSystemPackage.MALWARE: return createMalware();
+			case CyberPhysicalSystemPackage.PRINTER: return createPrinter();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -812,6 +814,16 @@ public class CyberPhysicalSystemFactoryImpl extends EFactoryImpl implements Cybe
 	public Malware createMalware() {
 		MalwareImpl malware = new MalwareImpl();
 		return malware;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Printer createPrinter() {
+		PrinterImpl printer = new PrinterImpl();
+		return printer;
 	}
 
 	/**

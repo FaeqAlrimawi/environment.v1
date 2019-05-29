@@ -3407,13 +3407,22 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	int ENVIRONMENT_DIAGRAM__CREDENTIAL = 4;
 
 	/**
-	 * The feature id for the '<em><b>Rule</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Action</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENVIRONMENT_DIAGRAM__RULE = 5;
+	int ENVIRONMENT_DIAGRAM__ACTION = 5;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENVIRONMENT_DIAGRAM__NAME = 6;
 
 	/**
 	 * The number of structural features of the '<em>Environment Diagram</em>' class.
@@ -3422,7 +3431,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENVIRONMENT_DIAGRAM_FEATURE_COUNT = 6;
+	int ENVIRONMENT_DIAGRAM_FEATURE_COUNT = 7;
 
 	/**
 	 * The number of operations of the '<em>Environment Diagram</em>' class.
@@ -10577,6 +10586,223 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	int MALWARE_OPERATION_COUNT = APPLICATION_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link environment.impl.PrinterImpl <em>Printer</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see environment.impl.PrinterImpl
+	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getPrinter()
+	 * @generated
+	 */
+	int PRINTER = 60;
+
+	/**
+	 * The feature id for the '<em><b>Connections</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRINTER__CONNECTIONS = COMPUTING_DEVICE__CONNECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRINTER__NAME = COMPUTING_DEVICE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Property</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRINTER__PROPERTY = COMPUTING_DEVICE__PROPERTY;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRINTER__VALUE = COMPUTING_DEVICE__VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRINTER__TYPE = COMPUTING_DEVICE__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRINTER__DESCRIPTION = COMPUTING_DEVICE__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Vulnerabilities</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRINTER__VULNERABILITIES = COMPUTING_DEVICE__VULNERABILITIES;
+
+	/**
+	 * The feature id for the '<em><b>Mobility</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRINTER__MOBILITY = COMPUTING_DEVICE__MOBILITY;
+
+	/**
+	 * The feature id for the '<em><b>Contained Assets</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRINTER__CONTAINED_ASSETS = COMPUTING_DEVICE__CONTAINED_ASSETS;
+
+	/**
+	 * The feature id for the '<em><b>Parent Asset</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRINTER__PARENT_ASSET = COMPUTING_DEVICE__PARENT_ASSET;
+
+	/**
+	 * The feature id for the '<em><b>Status</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRINTER__STATUS = COMPUTING_DEVICE__STATUS;
+
+	/**
+	 * The feature id for the '<em><b>Connectable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRINTER__CONNECTABLE = COMPUTING_DEVICE__CONNECTABLE;
+
+	/**
+	 * The feature id for the '<em><b>Model</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRINTER__MODEL = COMPUTING_DEVICE__MODEL;
+
+	/**
+	 * The number of structural features of the '<em>Printer</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRINTER_FEATURE_COUNT = COMPUTING_DEVICE_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Abstract Asset</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRINTER___ABSTRACT_ASSET = COMPUTING_DEVICE___ABSTRACT_ASSET;
+
+	/**
+	 * The operation id for the '<em>Similar To</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRINTER___SIMILAR_TO__ASSET = COMPUTING_DEVICE___SIMILAR_TO__ASSET;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRINTER___MERGE_CONNECTIONS = COMPUTING_DEVICE___MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRINTER___CAN_MERGE_CONNECTIONS = COMPUTING_DEVICE___CAN_MERGE_CONNECTIONS;
+
+	/**
+	 * The operation id for the '<em>Can Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRINTER___CAN_MERGE_CONTAINED_ASSETS = COMPUTING_DEVICE___CAN_MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Contained Assets</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRINTER___MERGE_CONTAINED_ASSETS = COMPUTING_DEVICE___MERGE_CONTAINED_ASSETS;
+
+	/**
+	 * The operation id for the '<em>Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRINTER___MERGE_CONNECTIONS__ELIST = COMPUTING_DEVICE___MERGE_CONNECTIONS__ELIST;
+
+	/**
+	 * The operation id for the '<em>Can Merge Connections</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRINTER___CAN_MERGE_CONNECTIONS__ELIST = COMPUTING_DEVICE___CAN_MERGE_CONNECTIONS__ELIST;
+
+	/**
+	 * The number of operations of the '<em>Printer</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRINTER_OPERATION_COUNT = COMPUTING_DEVICE_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link environment.Status <em>Status</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10584,7 +10810,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getStatus()
 	 * @generated
 	 */
-	int STATUS = 60;
+	int STATUS = 61;
 
 	/**
 	 * The meta object id for the '{@link environment.DigitalStatus <em>Digital Status</em>}' enum.
@@ -10594,7 +10820,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getDigitalStatus()
 	 * @generated
 	 */
-	int DIGITAL_STATUS = 61;
+	int DIGITAL_STATUS = 62;
 
 	/**
 	 * The meta object id for the '{@link environment.FileStatus <em>File Status</em>}' enum.
@@ -10604,7 +10830,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getFileStatus()
 	 * @generated
 	 */
-	int FILE_STATUS = 62;
+	int FILE_STATUS = 63;
 
 	/**
 	 * The meta object id for the '{@link environment.CredentialType <em>Credential Type</em>}' enum.
@@ -10614,7 +10840,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getCredentialType()
 	 * @generated
 	 */
-	int CREDENTIAL_TYPE = 63;
+	int CREDENTIAL_TYPE = 64;
 
 
 	/**
@@ -10625,7 +10851,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getLevel()
 	 * @generated
 	 */
-	int LEVEL = 64;
+	int LEVEL = 65;
 
 	/**
 	 * The meta object id for the '{@link environment.Mobility <em>Mobility</em>}' enum.
@@ -10635,7 +10861,7 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	 * @see environment.impl.CyberPhysicalSystemPackageImpl#getMobility()
 	 * @generated
 	 */
-	int MOBILITY = 65;
+	int MOBILITY = 66;
 
 	/**
 	 * Returns the meta object for class '{@link environment.PhysicalAsset <em>Physical Asset</em>}'.
@@ -11262,15 +11488,26 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	EReference getEnvironmentDiagram_Credential();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link environment.EnvironmentDiagram#getRule <em>Rule</em>}'.
+	 * Returns the meta object for the containment reference list '{@link environment.EnvironmentDiagram#getAction <em>Action</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Rule</em>'.
-	 * @see environment.EnvironmentDiagram#getRule()
+	 * @return the meta object for the containment reference list '<em>Action</em>'.
+	 * @see environment.EnvironmentDiagram#getAction()
 	 * @see #getEnvironmentDiagram()
 	 * @generated
 	 */
-	EReference getEnvironmentDiagram_Rule();
+	EReference getEnvironmentDiagram_Action();
+
+	/**
+	 * Returns the meta object for the attribute '{@link environment.EnvironmentDiagram#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see environment.EnvironmentDiagram#getName()
+	 * @see #getEnvironmentDiagram()
+	 * @generated
+	 */
+	EAttribute getEnvironmentDiagram_Name();
 
 	/**
 	 * Returns the meta object for class '{@link environment.Port <em>Port</em>}'.
@@ -11977,6 +12214,16 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 	EClass getMalware();
 
 	/**
+	 * Returns the meta object for class '{@link environment.Printer <em>Printer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Printer</em>'.
+	 * @see environment.Printer
+	 * @generated
+	 */
+	EClass getPrinter();
+
+	/**
 	 * Returns the meta object for enum '{@link environment.Status <em>Status</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -12564,12 +12811,20 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 		EReference ENVIRONMENT_DIAGRAM__CREDENTIAL = eINSTANCE.getEnvironmentDiagram_Credential();
 
 		/**
-		 * The meta object literal for the '<em><b>Rule</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Action</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ENVIRONMENT_DIAGRAM__RULE = eINSTANCE.getEnvironmentDiagram_Rule();
+		EReference ENVIRONMENT_DIAGRAM__ACTION = eINSTANCE.getEnvironmentDiagram_Action();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ENVIRONMENT_DIAGRAM__NAME = eINSTANCE.getEnvironmentDiagram_Name();
 
 		/**
 		 * The meta object literal for the '{@link environment.impl.PortImpl <em>Port</em>}' class.
@@ -13202,6 +13457,16 @@ public interface CyberPhysicalSystemPackage extends EPackage {
 		 * @generated
 		 */
 		EClass MALWARE = eINSTANCE.getMalware();
+
+		/**
+		 * The meta object literal for the '{@link environment.impl.PrinterImpl <em>Printer</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see environment.impl.PrinterImpl
+		 * @see environment.impl.CyberPhysicalSystemPackageImpl#getPrinter()
+		 * @generated
+		 */
+		EClass PRINTER = eINSTANCE.getPrinter();
 
 		/**
 		 * The meta object literal for the '{@link environment.Status <em>Status</em>}' enum.

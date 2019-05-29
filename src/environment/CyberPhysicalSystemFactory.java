@@ -544,6 +544,15 @@ public interface CyberPhysicalSystemFactory extends EFactory {
 	Malware createMalware();
 
 	/**
+	 * Returns a new object of class '<em>Printer</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Printer</em>'.
+	 * @generated
+	 */
+	Printer createPrinter();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

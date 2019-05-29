@@ -51,6 +51,7 @@ import environment.PhysicalAsset;
 import environment.PhysicalConnection;
 import environment.PhysicalStructure;
 import environment.Port;
+import environment.Printer;
 import environment.Property;
 import environment.Room;
 import environment.Server;
@@ -501,6 +502,13 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * @generated
 	 */
 	private EClass malwareEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass printerEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1141,8 +1149,17 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getEnvironmentDiagram_Rule() {
+	public EReference getEnvironmentDiagram_Action() {
 		return (EReference)environmentDiagramEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getEnvironmentDiagram_Name() {
+		return (EAttribute)environmentDiagramEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -1762,6 +1779,15 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getPrinter() {
+		return printerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getStatus() {
 		return statusEEnum;
 	}
@@ -1913,7 +1939,8 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 		createEReference(environmentDiagramEClass, ENVIRONMENT_DIAGRAM__PORT);
 		createEReference(environmentDiagramEClass, ENVIRONMENT_DIAGRAM__PROPERTY);
 		createEReference(environmentDiagramEClass, ENVIRONMENT_DIAGRAM__CREDENTIAL);
-		createEReference(environmentDiagramEClass, ENVIRONMENT_DIAGRAM__RULE);
+		createEReference(environmentDiagramEClass, ENVIRONMENT_DIAGRAM__ACTION);
+		createEAttribute(environmentDiagramEClass, ENVIRONMENT_DIAGRAM__NAME);
 
 		portEClass = createEClass(PORT);
 		createEReference(portEClass, PORT__ASSET);
@@ -2027,6 +2054,8 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 
 		malwareEClass = createEClass(MALWARE);
 
+		printerEClass = createEClass(PRINTER);
+
 		// Create enums
 		statusEEnum = createEEnum(STATUS);
 		digitalStatusEEnum = createEEnum(DIGITAL_STATUS);
@@ -2115,6 +2144,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 		smartTVEClass.getESuperTypes().add(this.getComputingDevice());
 		accessPointEClass.getESuperTypes().add(this.getComputingDevice());
 		malwareEClass.getESuperTypes().add(this.getApplication());
+		printerEClass.getESuperTypes().add(this.getComputingDevice());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(physicalAssetEClass, PhysicalAsset.class, "PhysicalAsset", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2204,7 +2234,8 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 		initEReference(getEnvironmentDiagram_Port(), this.getPort(), null, "port", null, 0, -1, EnvironmentDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEnvironmentDiagram_Property(), this.getProperty(), null, "property", null, 0, -1, EnvironmentDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEnvironmentDiagram_Credential(), this.getCredential(), null, "credential", null, 0, -1, EnvironmentDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getEnvironmentDiagram_Rule(), this.getAction(), null, "rule", null, 0, -1, EnvironmentDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEnvironmentDiagram_Action(), this.getAction(), null, "action", null, 0, -1, EnvironmentDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEnvironmentDiagram_Name(), ecorePackage.getEString(), "name", null, 0, 1, EnvironmentDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(portEClass, Port.class, "Port", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getPort_Asset(), this.getAsset(), null, "asset", null, 0, 1, Port.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2317,6 +2348,8 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 		initEClass(accessPointEClass, AccessPoint.class, "AccessPoint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(malwareEClass, Malware.class, "Malware", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(printerEClass, Printer.class, "Printer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals
 		initEEnum(statusEEnum, Status.class, "Status");

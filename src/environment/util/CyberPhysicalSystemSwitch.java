@@ -48,6 +48,7 @@ import environment.PhysicalAsset;
 import environment.PhysicalConnection;
 import environment.PhysicalStructure;
 import environment.Port;
+import environment.Printer;
 import environment.Property;
 import environment.Room;
 import environment.Server;
@@ -629,6 +630,15 @@ public class CyberPhysicalSystemSwitch<T> extends Switch<T> {
 				if (result == null) result = caseApplication(malware);
 				if (result == null) result = caseDigitalAsset(malware);
 				if (result == null) result = caseAsset(malware);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CyberPhysicalSystemPackage.PRINTER: {
+				Printer printer = (Printer)theEObject;
+				T result = casePrinter(printer);
+				if (result == null) result = caseComputingDevice(printer);
+				if (result == null) result = casePhysicalAsset(printer);
+				if (result == null) result = caseAsset(printer);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -1533,6 +1543,21 @@ public class CyberPhysicalSystemSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseMalware(Malware object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Printer</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Printer</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePrinter(Printer object) {
 		return null;
 	}
 

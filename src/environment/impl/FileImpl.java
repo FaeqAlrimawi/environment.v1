@@ -2,14 +2,14 @@
  */
 package environment.impl;
 
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+import environment.Asset;
+import environment.CyberPhysicalSystemPackage;
 import environment.File;
 import environment.FileStatus;
-import environment.CyberPhysicalSystemPackage;
-import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -75,6 +75,15 @@ public class FileImpl extends DigitalAssetImpl implements File {
 		super();
 	}
 
+	public Asset abstractAsset() {
+		
+		File abstractedFile = (File) super.abstractAsset();
+		
+		abstractedFile.setStatus(this.getStatus());
+		
+		return abstractedFile;
+	}
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

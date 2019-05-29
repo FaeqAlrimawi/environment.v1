@@ -2,13 +2,13 @@
  */
 package environment.impl;
 
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+import environment.Asset;
 import environment.CyberPhysicalSystemPackage;
 import environment.DigitalStatus;
-import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -53,6 +53,14 @@ public class ProcessImpl extends DigitalAssetImpl implements environment.Process
 		super();
 	}
 
+	public Asset abstractAsset() {
+		
+		environment.Process abstractedApp = (environment.Process) super.abstractAsset();
+		
+		abstractedApp.setStatus(this.getStatus());
+		
+		return abstractedApp;
+	}
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
