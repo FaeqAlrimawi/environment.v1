@@ -231,6 +231,7 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Asset getAsset1() {
 		if (asset1 != null && asset1.eIsProxy()) {
 			InternalEObject oldAsset1 = (InternalEObject)asset1;
@@ -284,6 +285,7 @@ public abstract class ConnectionImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Asset getAsset2() {
 		if (asset2 != null && asset2.eIsProxy()) {
 			InternalEObject oldAsset2 = (InternalEObject)asset2;
@@ -349,6 +351,7 @@ private boolean isContainedIn(Collection<Connection> connections) {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return name;
 	}
@@ -358,6 +361,7 @@ private boolean isContainedIn(Collection<Connection> connections) {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(String newName) {
 		String oldName = name;
 		name = newName;
@@ -370,6 +374,7 @@ private boolean isContainedIn(Collection<Connection> connections) {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Type getType() {
 		return type;
 	}
@@ -394,6 +399,7 @@ private boolean isContainedIn(Collection<Connection> connections) {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(Type newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;
@@ -413,6 +419,7 @@ private boolean isContainedIn(Collection<Connection> connections) {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Vulnerability> getVulnerabilities() {
 		if (vulnerabilities == null) {
 			vulnerabilities = new EObjectResolvingEList<Vulnerability>(Vulnerability.class, this, CyberPhysicalSystemPackage.CONNECTION__VULNERABILITIES);
@@ -425,6 +432,7 @@ private boolean isContainedIn(Collection<Connection> connections) {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<String> getConstraints() {
 		if (constraints == null) {
 			constraints = new EDataTypeUniqueEList<String>(String.class, this, CyberPhysicalSystemPackage.CONNECTION__CONSTRAINTS);
@@ -437,6 +445,7 @@ private boolean isContainedIn(Collection<Connection> connections) {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isBidirectional() {
 		return bidirectional;
 	}
@@ -446,6 +455,7 @@ private boolean isContainedIn(Collection<Connection> connections) {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBidirectional(boolean newBidirectional) {
 		boolean oldBidirectional = bidirectional;
 		bidirectional = newBidirectional;
@@ -458,6 +468,7 @@ private boolean isContainedIn(Collection<Connection> connections) {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Port getPort() {
 		return port;
 	}
@@ -482,6 +493,7 @@ private boolean isContainedIn(Collection<Connection> connections) {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPort(Port newPort) {
 		if (newPort != port) {
 			NotificationChain msgs = null;
@@ -501,6 +513,7 @@ private boolean isContainedIn(Collection<Connection> connections) {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Property> getProperties() {
 		if (properties == null) {
 			properties = new EObjectResolvingEList<Property>(Property.class, this, CyberPhysicalSystemPackage.CONNECTION__PROPERTIES);
@@ -513,6 +526,7 @@ private boolean isContainedIn(Collection<Connection> connections) {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getDescription() {
 		return description;
 	}
@@ -522,6 +536,7 @@ private boolean isContainedIn(Collection<Connection> connections) {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDescription(String newDescription) {
 		String oldDescription = description;
 		description = newDescription;
@@ -1080,7 +1095,7 @@ public int compareType(Connection connection) {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (name: ");
 		result.append(name);
 		result.append(", constraints: ");

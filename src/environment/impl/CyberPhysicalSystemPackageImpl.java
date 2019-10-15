@@ -580,7 +580,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-	 * 
+	 *
 	 * <p>This method is used to initialize {@link CyberPhysicalSystemPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
@@ -594,7 +594,8 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 		if (isInited) return (CyberPhysicalSystemPackage)EPackage.Registry.INSTANCE.getEPackage(CyberPhysicalSystemPackage.eNS_URI);
 
 		// Obtain or create and register package
-		CyberPhysicalSystemPackageImpl theCyberPhysicalSystemPackage = (CyberPhysicalSystemPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof CyberPhysicalSystemPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new CyberPhysicalSystemPackageImpl());
+		Object registeredCyberPhysicalSystemPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+		CyberPhysicalSystemPackageImpl theCyberPhysicalSystemPackage = registeredCyberPhysicalSystemPackage instanceof CyberPhysicalSystemPackageImpl ? (CyberPhysicalSystemPackageImpl)registeredCyberPhysicalSystemPackage : new CyberPhysicalSystemPackageImpl();
 
 		isInited = true;
 
@@ -607,7 +608,6 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 		// Mark meta-data to indicate it can't be changed
 		theCyberPhysicalSystemPackage.freeze();
 
-  
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(CyberPhysicalSystemPackage.eNS_URI, theCyberPhysicalSystemPackage);
 		return theCyberPhysicalSystemPackage;
@@ -618,6 +618,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getPhysicalAsset() {
 		return physicalAssetEClass;
 	}
@@ -627,6 +628,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getPhysicalAsset_ContainedAssets() {
 		return (EReference)physicalAssetEClass.getEStructuralFeatures().get(0);
 	}
@@ -636,6 +638,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getPhysicalAsset_ParentAsset() {
 		return (EReference)physicalAssetEClass.getEStructuralFeatures().get(1);
 	}
@@ -645,6 +648,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getComputingDevice() {
 		return computingDeviceEClass;
 	}
@@ -654,6 +658,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getComputingDevice_Status() {
 		return (EAttribute)computingDeviceEClass.getEStructuralFeatures().get(0);
 	}
@@ -663,6 +668,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getComputingDevice_Connectable() {
 		return (EAttribute)computingDeviceEClass.getEStructuralFeatures().get(1);
 	}
@@ -672,6 +678,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getComputingDevice_Model() {
 		return (EAttribute)computingDeviceEClass.getEStructuralFeatures().get(2);
 	}
@@ -681,6 +688,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getHVAC() {
 		return hvacEClass;
 	}
@@ -690,6 +698,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getSmartLight() {
 		return smartLightEClass;
 	}
@@ -699,6 +708,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getLaptop() {
 		return laptopEClass;
 	}
@@ -708,6 +718,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getDesktop() {
 		return desktopEClass;
 	}
@@ -717,6 +728,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getCCTV() {
 		return cctvEClass;
 	}
@@ -726,6 +738,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getServer() {
 		return serverEClass;
 	}
@@ -735,6 +748,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getFile() {
 		return fileEClass;
 	}
@@ -744,6 +758,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getFile_Status() {
 		return (EAttribute)fileEClass.getEStructuralFeatures().get(0);
 	}
@@ -753,6 +768,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getFile_Url() {
 		return (EAttribute)fileEClass.getEStructuralFeatures().get(1);
 	}
@@ -762,6 +778,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getProcess() {
 		return processEClass;
 	}
@@ -771,6 +788,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getProcess_Status() {
 		return (EAttribute)processEClass.getEStructuralFeatures().get(0);
 	}
@@ -780,6 +798,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getApplication() {
 		return applicationEClass;
 	}
@@ -789,6 +808,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getApplication_Status() {
 		return (EAttribute)applicationEClass.getEStructuralFeatures().get(0);
 	}
@@ -798,6 +818,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getApplication_Url() {
 		return (EAttribute)applicationEClass.getEStructuralFeatures().get(1);
 	}
@@ -807,6 +828,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getConnection() {
 		return connectionEClass;
 	}
@@ -816,6 +838,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getConnection_Asset1() {
 		return (EReference)connectionEClass.getEStructuralFeatures().get(0);
 	}
@@ -825,6 +848,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getConnection_Asset2() {
 		return (EReference)connectionEClass.getEStructuralFeatures().get(1);
 	}
@@ -834,6 +858,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getConnection_Name() {
 		return (EAttribute)connectionEClass.getEStructuralFeatures().get(2);
 	}
@@ -843,6 +868,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getConnection_Constraints() {
 		return (EAttribute)connectionEClass.getEStructuralFeatures().get(3);
 	}
@@ -852,6 +878,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getConnection_Bidirectional() {
 		return (EAttribute)connectionEClass.getEStructuralFeatures().get(4);
 	}
@@ -861,6 +888,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getConnection_Port() {
 		return (EReference)connectionEClass.getEStructuralFeatures().get(5);
 	}
@@ -870,6 +898,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getConnection_Properties() {
 		return (EReference)connectionEClass.getEStructuralFeatures().get(6);
 	}
@@ -879,6 +908,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getConnection_Description() {
 		return (EAttribute)connectionEClass.getEStructuralFeatures().get(7);
 	}
@@ -888,6 +918,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getConnection_Type() {
 		return (EReference)connectionEClass.getEStructuralFeatures().get(8);
 	}
@@ -897,6 +928,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getConnection_Vulnerabilities() {
 		return (EReference)connectionEClass.getEStructuralFeatures().get(9);
 	}
@@ -906,6 +938,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getConnection__SimilarTo__Connection() {
 		return connectionEClass.getEOperations().get(0);
 	}
@@ -915,6 +948,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getDigitalConnection() {
 		return digitalConnectionEClass;
 	}
@@ -924,6 +958,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getDigitalConnection_Protocol() {
 		return (EAttribute)digitalConnectionEClass.getEStructuralFeatures().get(0);
 	}
@@ -933,6 +968,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getPhysicalConnection() {
 		return physicalConnectionEClass;
 	}
@@ -942,6 +978,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getAsset() {
 		return assetEClass;
 	}
@@ -951,6 +988,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAsset_Connections() {
 		return (EReference)assetEClass.getEStructuralFeatures().get(0);
 	}
@@ -960,6 +998,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAsset_Name() {
 		return (EAttribute)assetEClass.getEStructuralFeatures().get(1);
 	}
@@ -969,6 +1008,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAsset_Property() {
 		return (EReference)assetEClass.getEStructuralFeatures().get(2);
 	}
@@ -978,6 +1018,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAsset_Value() {
 		return (EAttribute)assetEClass.getEStructuralFeatures().get(3);
 	}
@@ -987,6 +1028,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAsset_Type() {
 		return (EReference)assetEClass.getEStructuralFeatures().get(4);
 	}
@@ -996,6 +1038,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAsset_Description() {
 		return (EAttribute)assetEClass.getEStructuralFeatures().get(5);
 	}
@@ -1005,6 +1048,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAsset_Vulnerabilities() {
 		return (EReference)assetEClass.getEStructuralFeatures().get(6);
 	}
@@ -1014,6 +1058,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAsset_Mobility() {
 		return (EAttribute)assetEClass.getEStructuralFeatures().get(7);
 	}
@@ -1023,6 +1068,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getAsset__AbstractAsset() {
 		return assetEClass.getEOperations().get(0);
 	}
@@ -1032,6 +1078,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getAsset__SimilarTo__Asset() {
 		return assetEClass.getEOperations().get(1);
 	}
@@ -1041,6 +1088,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getAsset__MergeConnections() {
 		return assetEClass.getEOperations().get(2);
 	}
@@ -1050,6 +1098,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getAsset__CanMergeConnections() {
 		return assetEClass.getEOperations().get(3);
 	}
@@ -1059,6 +1108,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getAsset__CanMergeContainedAssets() {
 		return assetEClass.getEOperations().get(4);
 	}
@@ -1068,6 +1118,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getAsset__MergeContainedAssets() {
 		return assetEClass.getEOperations().get(5);
 	}
@@ -1077,6 +1128,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getAsset__MergeConnections__EList() {
 		return assetEClass.getEOperations().get(6);
 	}
@@ -1086,6 +1138,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getAsset__CanMergeConnections__EList() {
 		return assetEClass.getEOperations().get(7);
 	}
@@ -1095,6 +1148,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getEnvironmentDiagram() {
 		return environmentDiagramEClass;
 	}
@@ -1104,6 +1158,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getEnvironmentDiagram_Asset() {
 		return (EReference)environmentDiagramEClass.getEStructuralFeatures().get(0);
 	}
@@ -1113,6 +1168,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getEnvironmentDiagram_Connection() {
 		return (EReference)environmentDiagramEClass.getEStructuralFeatures().get(1);
 	}
@@ -1122,6 +1178,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getEnvironmentDiagram_Port() {
 		return (EReference)environmentDiagramEClass.getEStructuralFeatures().get(2);
 	}
@@ -1131,6 +1188,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getEnvironmentDiagram_Property() {
 		return (EReference)environmentDiagramEClass.getEStructuralFeatures().get(3);
 	}
@@ -1140,6 +1198,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getEnvironmentDiagram_Credential() {
 		return (EReference)environmentDiagramEClass.getEStructuralFeatures().get(4);
 	}
@@ -1149,6 +1208,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getEnvironmentDiagram_Action() {
 		return (EReference)environmentDiagramEClass.getEStructuralFeatures().get(5);
 	}
@@ -1158,6 +1218,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getEnvironmentDiagram_Name() {
 		return (EAttribute)environmentDiagramEClass.getEStructuralFeatures().get(6);
 	}
@@ -1167,6 +1228,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getPort() {
 		return portEClass;
 	}
@@ -1176,6 +1238,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getPort_Asset() {
 		return (EReference)portEClass.getEStructuralFeatures().get(0);
 	}
@@ -1185,6 +1248,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getPort_Name() {
 		return (EAttribute)portEClass.getEStructuralFeatures().get(1);
 	}
@@ -1194,6 +1258,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getPort_Credential() {
 		return (EReference)portEClass.getEStructuralFeatures().get(2);
 	}
@@ -1203,6 +1268,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getPort_Description() {
 		return (EAttribute)portEClass.getEStructuralFeatures().get(3);
 	}
@@ -1212,6 +1278,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getProperty() {
 		return propertyEClass;
 	}
@@ -1221,6 +1288,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getProperty_Name() {
 		return (EAttribute)propertyEClass.getEStructuralFeatures().get(0);
 	}
@@ -1230,6 +1298,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getProperty_Value() {
 		return (EAttribute)propertyEClass.getEStructuralFeatures().get(1);
 	}
@@ -1239,6 +1308,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getProperty_Abstractable() {
 		return (EAttribute)propertyEClass.getEStructuralFeatures().get(2);
 	}
@@ -1248,6 +1318,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getCredential() {
 		return credentialEClass;
 	}
@@ -1257,6 +1328,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCredential_Type() {
 		return (EAttribute)credentialEClass.getEStructuralFeatures().get(0);
 	}
@@ -1266,6 +1338,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCredential_Other() {
 		return (EAttribute)credentialEClass.getEStructuralFeatures().get(1);
 	}
@@ -1275,6 +1348,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getActor() {
 		return actorEClass;
 	}
@@ -1284,6 +1358,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getActor_Role() {
 		return (EAttribute)actorEClass.getEStructuralFeatures().get(0);
 	}
@@ -1293,6 +1368,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getPhysicalStructure() {
 		return physicalStructureEClass;
 	}
@@ -1302,6 +1378,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getDigitalAsset() {
 		return digitalAssetEClass;
 	}
@@ -1311,6 +1388,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getDigitalAsset_ParentAsset() {
 		return (EReference)digitalAssetEClass.getEStructuralFeatures().get(0);
 	}
@@ -1320,6 +1398,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getDigitalAsset_ContainedAssets() {
 		return (EReference)digitalAssetEClass.getEStructuralFeatures().get(1);
 	}
@@ -1329,6 +1408,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getAction() {
 		return actionEClass;
 	}
@@ -1338,6 +1418,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAction_Name() {
 		return (EAttribute)actionEClass.getEStructuralFeatures().get(0);
 	}
@@ -1347,6 +1428,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAction_Preconditions() {
 		return (EAttribute)actionEClass.getEStructuralFeatures().get(1);
 	}
@@ -1356,6 +1438,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAction_Postconditions() {
 		return (EAttribute)actionEClass.getEStructuralFeatures().get(2);
 	}
@@ -1365,6 +1448,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAction_Description() {
 		return (EAttribute)actionEClass.getEStructuralFeatures().get(3);
 	}
@@ -1374,6 +1458,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getType() {
 		return typeEClass;
 	}
@@ -1383,6 +1468,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getType_Name() {
 		return (EAttribute)typeEClass.getEStructuralFeatures().get(0);
 	}
@@ -1392,6 +1478,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getType_SuperType() {
 		return (EReference)typeEClass.getEStructuralFeatures().get(1);
 	}
@@ -1401,6 +1488,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getRoom() {
 		return roomEClass;
 	}
@@ -1410,6 +1498,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getFloor() {
 		return floorEClass;
 	}
@@ -1419,6 +1508,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getBuilding() {
 		return buildingEClass;
 	}
@@ -1428,6 +1518,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getFireAlarm() {
 		return fireAlarmEClass;
 	}
@@ -1437,6 +1528,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getWorkstation() {
 		return workstationEClass;
 	}
@@ -1446,6 +1538,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getLab() {
 		return labEClass;
 	}
@@ -1455,6 +1548,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getToilet() {
 		return toiletEClass;
 	}
@@ -1464,6 +1558,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getLounge() {
 		return loungeEClass;
 	}
@@ -1473,6 +1568,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getDishWasher() {
 		return dishWasherEClass;
 	}
@@ -1482,6 +1578,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getCoffeeMachine() {
 		return coffeeMachineEClass;
 	}
@@ -1491,6 +1588,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getElevator() {
 		return elevatorEClass;
 	}
@@ -1500,6 +1598,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getHallway() {
 		return hallwayEClass;
 	}
@@ -1509,6 +1608,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getElevatorsArea() {
 		return elevatorsAreaEClass;
 	}
@@ -1518,6 +1618,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getIPNetwork() {
 		return ipNetworkEClass;
 	}
@@ -1527,6 +1628,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getDigitalNetwork() {
 		return digitalNetworkEClass;
 	}
@@ -1536,6 +1638,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getDigitalNetwork_Protocol() {
 		return (EAttribute)digitalNetworkEClass.getEStructuralFeatures().get(0);
 	}
@@ -1545,6 +1648,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getDigitalNetwork_Encryption() {
 		return (EAttribute)digitalNetworkEClass.getEStructuralFeatures().get(1);
 	}
@@ -1554,6 +1658,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getBusNetwork() {
 		return busNetworkEClass;
 	}
@@ -1563,6 +1668,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getIPConnection() {
 		return ipConnectionEClass;
 	}
@@ -1572,6 +1678,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getBusConnection() {
 		return busConnectionEClass;
 	}
@@ -1581,6 +1688,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getKitchen() {
 		return kitchenEClass;
 	}
@@ -1590,6 +1698,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getStairs() {
 		return stairsEClass;
 	}
@@ -1599,6 +1708,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getCardReader() {
 		return cardReaderEClass;
 	}
@@ -1608,6 +1718,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getEmployee() {
 		return employeeEClass;
 	}
@@ -1617,6 +1728,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getVisitor() {
 		return visitorEClass;
 	}
@@ -1626,6 +1738,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getComputer() {
 		return computerEClass;
 	}
@@ -1635,6 +1748,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getEmbeddedComputer() {
 		return embeddedComputerEClass;
 	}
@@ -1644,6 +1758,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getMicroController() {
 		return microControllerEClass;
 	}
@@ -1653,6 +1768,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getWiredConnection() {
 		return wiredConnectionEClass;
 	}
@@ -1662,6 +1778,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getEthernet() {
 		return ethernetEClass;
 	}
@@ -1671,6 +1788,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getWalkway() {
 		return walkwayEClass;
 	}
@@ -1680,6 +1798,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getKNX() {
 		return knxEClass;
 	}
@@ -1689,6 +1808,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getX10() {
 		return x10EClass;
 	}
@@ -1698,6 +1818,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getVulnerability() {
 		return vulnerabilityEClass;
 	}
@@ -1707,6 +1828,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getVulnerability_Name() {
 		return (EAttribute)vulnerabilityEClass.getEStructuralFeatures().get(0);
 	}
@@ -1716,6 +1838,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getVulnerability_URL() {
 		return (EAttribute)vulnerabilityEClass.getEStructuralFeatures().get(1);
 	}
@@ -1725,6 +1848,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getVulnerability_Description() {
 		return (EAttribute)vulnerabilityEClass.getEStructuralFeatures().get(2);
 	}
@@ -1734,6 +1858,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getVulnerability_Severity() {
 		return (EAttribute)vulnerabilityEClass.getEStructuralFeatures().get(3);
 	}
@@ -1743,6 +1868,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getOffice() {
 		return officeEClass;
 	}
@@ -1752,6 +1878,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getSmartTV() {
 		return smartTVEClass;
 	}
@@ -1761,6 +1888,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getAccessPoint() {
 		return accessPointEClass;
 	}
@@ -1770,6 +1898,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getMalware() {
 		return malwareEClass;
 	}
@@ -1779,6 +1908,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getPrinter() {
 		return printerEClass;
 	}
@@ -1788,6 +1918,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getStatus() {
 		return statusEEnum;
 	}
@@ -1797,6 +1928,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getDigitalStatus() {
 		return digitalStatusEEnum;
 	}
@@ -1806,6 +1938,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getFileStatus() {
 		return fileStatusEEnum;
 	}
@@ -1815,6 +1948,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getCredentialType() {
 		return credentialTypeEEnum;
 	}
@@ -1824,6 +1958,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getLevel() {
 		return levelEEnum;
 	}
@@ -1833,6 +1968,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getMobility() {
 		return mobilityEEnum;
 	}
@@ -1842,6 +1978,7 @@ public class CyberPhysicalSystemPackageImpl extends EPackageImpl implements Cybe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CyberPhysicalSystemFactory getCyberPhysicalSystemFactory() {
 		return (CyberPhysicalSystemFactory)getEFactoryInstance();
 	}

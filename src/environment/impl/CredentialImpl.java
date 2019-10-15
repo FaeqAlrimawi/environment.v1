@@ -91,6 +91,7 @@ public class CredentialImpl extends MinimalEObjectImpl.Container implements Cred
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CredentialType getType() {
 		return type;
 	}
@@ -100,6 +101,7 @@ public class CredentialImpl extends MinimalEObjectImpl.Container implements Cred
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(CredentialType newType) {
 		CredentialType oldType = type;
 		type = newType == null ? TYPE_EDEFAULT : newType;
@@ -112,6 +114,7 @@ public class CredentialImpl extends MinimalEObjectImpl.Container implements Cred
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getOther() {
 		return other;
 	}
@@ -121,6 +124,7 @@ public class CredentialImpl extends MinimalEObjectImpl.Container implements Cred
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOther(String newOther) {
 		String oldOther = other;
 		other = newOther;
@@ -205,7 +209,7 @@ public class CredentialImpl extends MinimalEObjectImpl.Container implements Cred
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (type: ");
 		result.append(type);
 		result.append(", other: ");

@@ -123,6 +123,7 @@ public class PortImpl extends MinimalEObjectImpl.Container implements Port {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Asset getAsset() {
 		if (asset != null && asset.eIsProxy()) {
 			InternalEObject oldAsset = (InternalEObject)asset;
@@ -149,6 +150,7 @@ public class PortImpl extends MinimalEObjectImpl.Container implements Port {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAsset(Asset newAsset) {
 		Asset oldAsset = asset;
 		asset = newAsset;
@@ -161,6 +163,7 @@ public class PortImpl extends MinimalEObjectImpl.Container implements Port {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return name;
 	}
@@ -170,6 +173,7 @@ public class PortImpl extends MinimalEObjectImpl.Container implements Port {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(String newName) {
 		String oldName = name;
 		name = newName;
@@ -182,6 +186,7 @@ public class PortImpl extends MinimalEObjectImpl.Container implements Port {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Credential> getCredential() {
 		if (credential == null) {
 			credential = new EObjectContainmentEList<Credential>(Credential.class, this, CyberPhysicalSystemPackage.PORT__CREDENTIAL);
@@ -194,6 +199,7 @@ public class PortImpl extends MinimalEObjectImpl.Container implements Port {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getDescription() {
 		return description;
 	}
@@ -203,6 +209,7 @@ public class PortImpl extends MinimalEObjectImpl.Container implements Port {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDescription(String newDescription) {
 		String oldDescription = description;
 		description = newDescription;
@@ -324,7 +331,7 @@ public class PortImpl extends MinimalEObjectImpl.Container implements Port {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (name: ");
 		result.append(name);
 		result.append(", description: ");

@@ -76,6 +76,7 @@ public class DigitalAssetImpl extends AssetImpl implements DigitalAsset {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Asset getParentAsset() {
 		if (parentAsset != null && parentAsset.eIsProxy()) {
 			InternalEObject oldParentAsset = (InternalEObject)parentAsset;
@@ -169,6 +170,7 @@ public class DigitalAssetImpl extends AssetImpl implements DigitalAsset {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<DigitalAsset> getContainedAssets() {
 		if (containedAssets == null) {
 			containedAssets = new EObjectResolvingEList<DigitalAsset>(DigitalAsset.class, this, CyberPhysicalSystemPackage.DIGITAL_ASSET__CONTAINED_ASSETS);

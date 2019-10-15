@@ -111,6 +111,7 @@ public class ComputingDeviceImpl extends PhysicalAssetImpl implements ComputingD
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Status getStatus() {
 		return status;
 	}
@@ -120,6 +121,7 @@ public class ComputingDeviceImpl extends PhysicalAssetImpl implements ComputingD
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStatus(Status newStatus) {
 		Status oldStatus = status;
 		status = newStatus == null ? STATUS_EDEFAULT : newStatus;
@@ -132,6 +134,7 @@ public class ComputingDeviceImpl extends PhysicalAssetImpl implements ComputingD
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isConnectable() {
 		return connectable;
 	}
@@ -141,6 +144,7 @@ public class ComputingDeviceImpl extends PhysicalAssetImpl implements ComputingD
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setConnectable(boolean newConnectable) {
 		boolean oldConnectable = connectable;
 		connectable = newConnectable;
@@ -154,6 +158,7 @@ public class ComputingDeviceImpl extends PhysicalAssetImpl implements ComputingD
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getModel() {
 		return model;
 	}
@@ -163,6 +168,7 @@ public class ComputingDeviceImpl extends PhysicalAssetImpl implements ComputingD
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setModel(String newModel) {
 		String oldModel = model;
 		model = newModel;
@@ -332,7 +338,7 @@ public class ComputingDeviceImpl extends PhysicalAssetImpl implements ComputingD
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (status: ");
 		result.append(status);
 		result.append(", connectable: ");

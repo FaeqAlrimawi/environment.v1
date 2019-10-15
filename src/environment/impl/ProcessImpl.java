@@ -76,6 +76,7 @@ public class ProcessImpl extends DigitalAssetImpl implements environment.Process
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DigitalStatus getStatus() {
 		return status;
 	}
@@ -85,6 +86,7 @@ public class ProcessImpl extends DigitalAssetImpl implements environment.Process
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStatus(DigitalStatus newStatus) {
 		DigitalStatus oldStatus = status;
 		status = newStatus == null ? STATUS_EDEFAULT : newStatus;
@@ -159,7 +161,7 @@ public class ProcessImpl extends DigitalAssetImpl implements environment.Process
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (status: ");
 		result.append(status);
 		result.append(')');

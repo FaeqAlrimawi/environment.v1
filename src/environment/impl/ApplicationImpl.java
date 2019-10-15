@@ -101,6 +101,7 @@ public class ApplicationImpl extends DigitalAssetImpl implements Application {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DigitalStatus getStatus() {
 		return status;
 	}
@@ -110,6 +111,7 @@ public class ApplicationImpl extends DigitalAssetImpl implements Application {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStatus(DigitalStatus newStatus) {
 		DigitalStatus oldStatus = status;
 		status = newStatus == null ? STATUS_EDEFAULT : newStatus;
@@ -122,6 +124,7 @@ public class ApplicationImpl extends DigitalAssetImpl implements Application {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getUrl() {
 		return url;
 	}
@@ -131,6 +134,7 @@ public class ApplicationImpl extends DigitalAssetImpl implements Application {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUrl(String newUrl) {
 		String oldUrl = url;
 		url = newUrl;
@@ -215,7 +219,7 @@ public class ApplicationImpl extends DigitalAssetImpl implements Application {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (status: ");
 		result.append(status);
 		result.append(", url: ");

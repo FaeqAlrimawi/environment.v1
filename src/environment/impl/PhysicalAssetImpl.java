@@ -76,6 +76,7 @@ public class PhysicalAssetImpl extends AssetImpl implements PhysicalAsset {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Asset> getContainedAssets() {
 		if (containedAssets == null) {
 			containedAssets = new EObjectResolvingEList<Asset>(Asset.class, this, CyberPhysicalSystemPackage.PHYSICAL_ASSET__CONTAINED_ASSETS);
@@ -88,6 +89,7 @@ public class PhysicalAssetImpl extends AssetImpl implements PhysicalAsset {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PhysicalAsset getParentAsset() {
 		if (parentAsset != null && parentAsset.eIsProxy()) {
 			InternalEObject oldParentAsset = (InternalEObject)parentAsset;

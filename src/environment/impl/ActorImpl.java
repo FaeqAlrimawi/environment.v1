@@ -68,6 +68,7 @@ public class ActorImpl extends PhysicalAssetImpl implements Actor {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getRole() {
 		return role;
 	}
@@ -77,6 +78,7 @@ public class ActorImpl extends PhysicalAssetImpl implements Actor {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRole(String newRole) {
 		String oldRole = role;
 		role = newRole;
@@ -151,7 +153,7 @@ public class ActorImpl extends PhysicalAssetImpl implements Actor {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (role: ");
 		result.append(role);
 		result.append(')');

@@ -197,6 +197,7 @@ public class EnvironmentDiagramImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Asset> getAsset() {
 		if (asset == null) {
 			asset = new EObjectContainmentEList<Asset>(Asset.class, this, CyberPhysicalSystemPackage.ENVIRONMENT_DIAGRAM__ASSET);
@@ -243,6 +244,7 @@ public class EnvironmentDiagramImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Connection> getConnection() {
 		if (connection == null) {
 			connection = new EObjectContainmentEList<Connection>(Connection.class, this, CyberPhysicalSystemPackage.ENVIRONMENT_DIAGRAM__CONNECTION);
@@ -255,6 +257,7 @@ public class EnvironmentDiagramImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Port> getPort() {
 		if (port == null) {
 			port = new EObjectContainmentEList<Port>(Port.class, this, CyberPhysicalSystemPackage.ENVIRONMENT_DIAGRAM__PORT);
@@ -267,6 +270,7 @@ public class EnvironmentDiagramImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Property> getProperty() {
 		if (property == null) {
 			property = new EObjectContainmentEList<Property>(Property.class, this, CyberPhysicalSystemPackage.ENVIRONMENT_DIAGRAM__PROPERTY);
@@ -279,6 +283,7 @@ public class EnvironmentDiagramImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Credential> getCredential() {
 		if (credential == null) {
 			credential = new EObjectContainmentEList<Credential>(Credential.class, this, CyberPhysicalSystemPackage.ENVIRONMENT_DIAGRAM__CREDENTIAL);
@@ -291,6 +296,7 @@ public class EnvironmentDiagramImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Action> getAction() {
 		if (action == null) {
 			action = new EObjectContainmentEList<Action>(Action.class, this, CyberPhysicalSystemPackage.ENVIRONMENT_DIAGRAM__ACTION);
@@ -303,6 +309,7 @@ public class EnvironmentDiagramImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return name;
 	}
@@ -312,6 +319,7 @@ public class EnvironmentDiagramImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(String newName) {
 		String oldName = name;
 		name = newName;
@@ -477,7 +485,7 @@ public class EnvironmentDiagramImpl extends MinimalEObjectImpl.Container impleme
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (name: ");
 		result.append(name);
 		result.append(')');

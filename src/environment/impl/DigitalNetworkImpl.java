@@ -89,6 +89,7 @@ public class DigitalNetworkImpl extends DigitalAssetImpl implements DigitalNetwo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getProtocol() {
 		return protocol;
 	}
@@ -98,6 +99,7 @@ public class DigitalNetworkImpl extends DigitalAssetImpl implements DigitalNetwo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setProtocol(String newProtocol) {
 		String oldProtocol = protocol;
 		protocol = newProtocol;
@@ -110,6 +112,7 @@ public class DigitalNetworkImpl extends DigitalAssetImpl implements DigitalNetwo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getEncryption() {
 		return encryption;
 	}
@@ -119,6 +122,7 @@ public class DigitalNetworkImpl extends DigitalAssetImpl implements DigitalNetwo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEncryption(String newEncryption) {
 		String oldEncryption = encryption;
 		encryption = newEncryption;
@@ -203,7 +207,7 @@ public class DigitalNetworkImpl extends DigitalAssetImpl implements DigitalNetwo
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (Protocol: ");
 		result.append(protocol);
 		result.append(", encryption: ");

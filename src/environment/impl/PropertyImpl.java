@@ -111,6 +111,7 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return name;
 	}
@@ -120,6 +121,7 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(String newName) {
 		String oldName = name;
 		name = newName;
@@ -132,6 +134,7 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getValue() {
 		return value;
 	}
@@ -141,6 +144,7 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValue(String newValue) {
 		String oldValue = value;
 		value = newValue;
@@ -153,6 +157,7 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isAbstractable() {
 		return abstractable;
 	}
@@ -162,6 +167,7 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAbstractable(boolean newAbstractable) {
 		boolean oldAbstractable = abstractable;
 		abstractable = newAbstractable;
@@ -256,7 +262,7 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (name: ");
 		result.append(name);
 		result.append(", value: ");

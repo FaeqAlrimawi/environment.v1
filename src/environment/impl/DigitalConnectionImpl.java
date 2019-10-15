@@ -65,6 +65,7 @@ public class DigitalConnectionImpl extends ConnectionImpl implements DigitalConn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getProtocol() {
 		return protocol;
 	}
@@ -74,6 +75,7 @@ public class DigitalConnectionImpl extends ConnectionImpl implements DigitalConn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setProtocol(String newProtocol) {
 		String oldProtocol = protocol;
 		protocol = newProtocol;
@@ -148,7 +150,7 @@ public class DigitalConnectionImpl extends ConnectionImpl implements DigitalConn
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (protocol: ");
 		result.append(protocol);
 		result.append(')');

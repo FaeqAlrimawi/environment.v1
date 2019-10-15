@@ -254,6 +254,7 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return name;
 	}
@@ -263,6 +264,7 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(String newName) {
 		String oldName = name;
 		name = newName;
@@ -275,6 +277,7 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Property> getProperty() {
 		if (property == null) {
 			property = new EObjectContainmentEList<Property>(Property.class, this, CyberPhysicalSystemPackage.ASSET__PROPERTY);
@@ -287,6 +290,7 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getValue() {
 		return value;
 	}
@@ -296,6 +300,7 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValue(int newValue) {
 		int oldValue = value;
 		value = newValue;
@@ -308,6 +313,7 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Type getType() {
 		return type;
 	}
@@ -332,6 +338,7 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(Type newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;
@@ -351,6 +358,7 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getDescription() {
 		return description;
 	}
@@ -360,6 +368,7 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDescription(String newDescription) {
 		String oldDescription = description;
 		description = newDescription;
@@ -372,6 +381,7 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Vulnerability> getVulnerabilities() {
 		if (vulnerabilities == null) {
 			vulnerabilities = new EObjectResolvingEList<Vulnerability>(Vulnerability.class, this, CyberPhysicalSystemPackage.ASSET__VULNERABILITIES);
@@ -384,6 +394,7 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Mobility getMobility() {
 		return mobility;
 	}
@@ -393,6 +404,7 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMobility(Mobility newMobility) {
 		Mobility oldMobility = mobility;
 		mobility = newMobility == null ? MOBILITY_EDEFAULT : newMobility;
@@ -1217,7 +1229,7 @@ public abstract class AssetImpl extends MinimalEObjectImpl.Container implements 
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (name: ");
 		result.append(name);
 		result.append(", value: ");

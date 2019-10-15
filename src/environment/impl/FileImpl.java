@@ -99,6 +99,7 @@ public class FileImpl extends DigitalAssetImpl implements File {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public FileStatus getStatus() {
 		return status;
 	}
@@ -108,6 +109,7 @@ public class FileImpl extends DigitalAssetImpl implements File {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStatus(FileStatus newStatus) {
 		FileStatus oldStatus = status;
 		status = newStatus == null ? STATUS_EDEFAULT : newStatus;
@@ -120,6 +122,7 @@ public class FileImpl extends DigitalAssetImpl implements File {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getUrl() {
 		return url;
 	}
@@ -129,6 +132,7 @@ public class FileImpl extends DigitalAssetImpl implements File {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUrl(String newUrl) {
 		String oldUrl = url;
 		url = newUrl;
@@ -213,7 +217,7 @@ public class FileImpl extends DigitalAssetImpl implements File {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (status: ");
 		result.append(status);
 		result.append(", url: ");
